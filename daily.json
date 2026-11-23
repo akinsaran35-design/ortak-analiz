@@ -2,6 +2,8 @@
   "date": "2026-11-23",
   "decision": "PAS",
   "picks": [],
-  "reason": "Otomatik analiz bağlantısı henüz kurulmadı. Doğrulanmış güncel seçim yok.",
-  "updatedAt": "2026-11-23"
+  "reason": "0 bugünkü fikstür satırı tarandı; 0 istatistiksel aday bulundu. Ancak oranların güncel zaman damgası ve başlama saati doğrulanamadığı için otomatik bahis seçimi yapılmadı. Ücretsiz kaynak kapsamı sınırlıdır.",
+  "updatedAt": "2026-11-23T21:15:56+03:00",
+  "source": "https://www.football-data.co.uk/data.php",
+  "method": "Basit Poisson taraması; bağımsız doğrulama veya Dixon-Coles değildir."
 }
