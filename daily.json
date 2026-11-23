@@ -2,10 +2,10 @@
   "date": "2026-11-23",
   "decision": "PAS",
   "picks": [],
-  "updatedAt": "2026-11-23T21:43:47+03:00",
+  "updatedAt": "2026-11-23T21:59:03+03:00",
+  "version": "1.5",
   "source": "https://github.com/openfootball/football.json",
-  "method": "Açık fikstür taraması; oran ve olasılık doğrulaması yapılmadı.",
-  "version": "1.4",
+  "method": "Son 8 iç/dış saha maçından basit Poisson; kalibrasyon ve oran doğrulaması yok.",
   "leaguesChecked": 6,
   "leaguesLoaded": 6,
   "fixturesToday": 2,
@@ -16,6 +16,8 @@
       "status": "ok",
       "today": 0,
       "next7": 10,
+      "completedMatches": 45,
+      "candidates": 0,
       "matchesInFile": 380
     },
     {
@@ -23,6 +25,8 @@
       "status": "ok",
       "today": 0,
       "next7": 24,
+      "completedMatches": 88,
+      "candidates": 0,
       "matchesInFile": 552
     },
     {
@@ -30,6 +34,8 @@
       "status": "ok",
       "today": 0,
       "next7": 9,
+      "completedMatches": 33,
+      "candidates": 0,
       "matchesInFile": 306
     },
     {
@@ -37,6 +43,8 @@
       "status": "ok",
       "today": 0,
       "next7": 10,
+      "completedMatches": 64,
+      "candidates": 0,
       "matchesInFile": 380
     },
     {
@@ -44,6 +52,8 @@
       "status": "ok",
       "today": 2,
       "next7": 12,
+      "completedMatches": 50,
+      "candidates": 0,
       "matchesInFile": 380
     },
     {
@@ -51,10 +61,22 @@
       "status": "ok",
       "today": 0,
       "next7": 9,
+      "completedMatches": 41,
+      "candidates": 0,
       "matchesInFile": 306
     }
   ],
   "upcoming": [
+    {
+      "date": "2026-11-23",
+      "league": "İtalya Serie A",
+      "match": "AC Monza – ACF Fiorentina"
+    },
+    {
+      "date": "2026-11-23",
+      "league": "İtalya Serie A",
+      "match": "Juventus FC – Venezia FC"
+    },
     {
       "date": "2026-11-24",
       "league": "İngiltere Championship",
@@ -117,8 +139,43 @@
     },
     {
       "date": "2026-11-27",
+      "league": "Almanya Bundesliga",
+      "match": "SV Werder Bremen – Borussia Mönchengladbach"
+    },
+    {
+      "date": "2026-11-27",
       "league": "İngiltere Championship",
       "match": "Southampton FC – Middlesbrough FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Almanya Bundesliga",
+      "match": "1. FC Köln – SV 07 Elversberg"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Almanya Bundesliga",
+      "match": "1. FSV Mainz 05 – 1. FC Union Berlin"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Almanya Bundesliga",
+      "match": "Hamburger SV – FC Bayern München"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Almanya Bundesliga",
+      "match": "SC Paderborn 07 – FC Schalke 04"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Almanya Bundesliga",
+      "match": "VfB Stuttgart – Eintracht Frankfurt"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Birmingham City FC – Bolton Wanderers FC"
     },
     {
       "date": "2026-11-28",
@@ -128,7 +185,42 @@
     {
       "date": "2026-11-28",
       "league": "İngiltere Championship",
+      "match": "Derby County FC – Watford FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
       "match": "Lincoln City FC – Wolverhampton Wanderers FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Millwall FC – Burnley FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Preston North End FC – Norwich City FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Queens Park Rangers FC – Sheffield United FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "West Bromwich Albion FC – Bristol City FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "West Ham United FC – Stoke City FC"
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Wrexham AFC – Portsmouth FC"
     },
     {
       "date": "2026-11-28",
@@ -179,7 +271,110 @@
       "date": "2026-11-28",
       "league": "İngiltere Premier Lig",
       "match": "Sunderland AFC – Tottenham Hotspur FC"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Almanya Bundesliga",
+      "match": "Borussia Dortmund – Bayer 04 Leverkusen"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Almanya Bundesliga",
+      "match": "SC Freiburg – RB Leipzig"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Almanya Bundesliga",
+      "match": "TSG 1899 Hoffenheim – FC Augsburg"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İngiltere Championship",
+      "match": "Swansea City AFC – Cardiff City FC"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Elche CF – Club Atlético de Madrid"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Levante UD – Real Racing Club de Santander"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Málaga CF – Athletic Club"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "RC Celta de Vigo – Villarreal CF"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "RC Deportivo La Coruña – FC Barcelona"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "RCD Espanyol de Barcelona – Getafe CF"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Real Betis Balompié – Rayo Vallecano de Madrid"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Real Madrid CF – Deportivo Alavés"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Real Sociedad de Fútbol – Sevilla FC"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Valencia CF – CA Osasuna"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "AS Roma – AC Monza"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Cagliari Calcio – AC Milan"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Como 1907 – Juventus FC"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Frosinone Calcio – Parma Calcio 1913"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "US Sassuolo Calcio – SSC Napoli"
     }
   ],
-  "reason": "6/6 lig kaynağı okundu. Bugün 2, önümüzdeki 7 günde 74 fikstür satırı bulundu. Başlama saatleri ve güncel uluslararası bahis oranları doğrulanmadığı için otomatik seçim yapılmadı. Kaynak verisi eksik veya eski olabilir."
+  "candidates": [],
+  "candidateCount": 0,
+  "dataQuality": {
+    "verifiedOdds": false,
+    "verifiedKickoffTimes": false,
+    "modelCalibrated": false,
+    "bettingRecommendation": false
+  },
+  "reason": "PAS — 6/6 lig okundu; bugün 2, 7 günde 74 fikstür; 0 istatistiksel aday. Yüzdeler kalibre edilmemiş model tahminidir; güncel uluslararası oranlar, başlama saatleri ve model başarısı doğrulanmadığı için bahis seçimi yapılmadı."
 }
