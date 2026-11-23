@@ -1,7 +1,9 @@
-"""Ortak Analiz V1.5 — reproducible statistical candidates, never unverified bets.
-Source: community OpenFootball football.json. No odds or kickoff-time claims.
+"""Ortak Analiz V1.6 — transparent historical football model diagnostics.
+OpenFootball community data; statistical candidates are NOT betting selections.
 """
-import json, math, urllib.request
+import json
+import math
+import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -9,130 +11,204 @@ TR = timezone(timedelta(hours=3))
 now = datetime.now(TR)
 today = now.date()
 year = today.year if today.month >= 7 else today.year - 1
-season = f"{year}-{str(year+1)[-2:]}"
+seasons = [f"{y}-{str(y+1)[-2:]}" for y in (year, year-1)]
 LEAGUES = {
-    "İngiltere Premier Lig":"en.1", "İngiltere Championship":"en.2",
-    "Almanya Bundesliga":"de.1", "İspanya La Liga":"es.1",
-    "İtalya Serie A":"it.1", "Fransa Ligue 1":"fr.1"
+    "İngiltere Premier Lig": "en.1", "İngiltere Championship": "en.2",
+    "Almanya Bundesliga": "de.1", "İspanya La Liga": "es.1",
+    "İtalya Serie A": "it.1", "Fransa Ligue 1": "fr.1",
 }
-BASE="https://raw.githubusercontent.com/openfootball/football.json/master"
-def date_of(s):
-    try: return datetime.strptime(str(s)[:10],"%Y-%m-%d").date()
-    except (ValueError,TypeError): return None
-def name(v):
-    return v if isinstance(v,str) else (v.get("name","") if isinstance(v,dict) else "")
-def flatten(data):
-    if isinstance(data,list): return data
-    if not isinstance(data,dict): return []
-    if isinstance(data.get("matches"),list): return data["matches"]
-    return [m for r in data.get("rounds",[]) if isinstance(r,dict)
-            for m in r.get("matches",[]) if isinstance(m,dict)]
-def goals(m):
-    """Only accept explicit full-time goals, never half-time or penalty results."""
-    score=m.get("score")
-    if isinstance(score,dict):
-        ft=score.get("ft") or score.get("fulltime") or score.get("fullTime")
-        if isinstance(ft,list) and len(ft)==2 and all(type(x)==int and x>=0 for x in ft):
-            return tuple(ft)
-        if isinstance(ft,dict):
-            h=ft.get("home")
-            a=ft.get("away")
-            if type(h)==int and type(a)==int and h>=0 and a>=0: return h,a
-    # football.json commonly stores score.ft as [home, away].
-    return None
-def poisson_over(lam,threshold):
-    # P(total goals > threshold) with Poisson(lambda)
-    return 1-sum(math.exp(-lam)*lam**k/math.factorial(k) for k in range(threshold+1))
-def btts(lh,la):
-    return (1-math.exp(-lh))*(1-math.exp(-la))
-def safe_pct(x): return round(100*max(0,min(1,x)),1)
-def summarize(hist,team,home):
-    games=[(d,gf,ga) for d,h,a,gh,gaway in hist
-           if (h==team if home else a==team)
-           for gf,ga in [(gh,gaway) if home else (gaway,gh)]]
-    games.sort(key=lambda x:x[0],reverse=True)
-    recent=games[:8]
-    if len(recent)<5: return None
-    return {"n":len(recent),"gf":sum(x[1] for x in recent)/len(recent),
-            "ga":sum(x[2] for x in recent)/len(recent)}
-report={
- "date":today.isoformat(),"decision":"PAS","picks":[],
- "updatedAt":now.isoformat(timespec="seconds"),
- "version":"1.5","source":"https://github.com/openfootball/football.json",
- "method":"Son 8 iç/dış saha maçından basit Poisson; kalibrasyon ve oran doğrulaması yok.",
- "leaguesChecked":len(LEAGUES),"leaguesLoaded":0,
- "fixturesToday":0,"fixturesNext7Days":0,"leagueDiagnostics":[],
- "upcoming":[],"candidates":[],"candidateCount":0,
- "dataQuality":{"verifiedOdds":False,"verifiedKickoffTimes":False,
-                "modelCalibrated":False,"bettingRecommendation":False}
-}
-for league,code in LEAGUES.items():
-    diag={"league":league,"status":"unavailable","today":0,"next7":0,
-          "completedMatches":0,"candidates":0}
+BASE = "https://raw.githubusercontent.com/openfootball/football.json/master"
+
+
+def parse_date(value):
     try:
-        req=urllib.request.Request(f"{BASE}/{season}/{code}.json",
-                                  headers={"User-Agent":"OrtakAnaliz/1.5"})
-        with urllib.request.urlopen(req,timeout=15) as resp:
-            raw=json.loads(resp.read(3_000_000).decode("utf-8"))
-        matches=flatten(raw)
-        report["leaguesLoaded"]+=1
-        diag["status"]="ok" if matches else "empty"
-        diag["matchesInFile"]=len(matches)
-        history=[]
-        upcoming=[]
-        for m in matches:
-            if not isinstance(m,dict): continue
-            d=date_of(m.get("date") or m.get("datetime"))
-            h=name(m.get("team1") or m.get("home") or m.get("homeTeam"))
-            a=name(m.get("team2") or m.get("away") or m.get("awayTeam"))
-            if not d or not h or not a: continue
-            result=goals(m)
-            if d<today and result is not None:
-                history.append((d,h,a,result[0],result[1]))
-            if d==today:
-                diag["today"]+=1
-                report["fixturesToday"]+=1
-            if today<=d<=today+timedelta(days=7):
-                diag["next7"]+=1
-                report["fixturesNext7Days"]+=1
-                upcoming.append((d,h,a,result))
-        diag["completedMatches"]=len(history)
-        for d,h,a,result in upcoming:
-            # Do not analyze fixtures already showing final scores.
-            if result is not None: continue
-            if len(report["upcoming"])<60:
-                report["upcoming"].append({"date":d.isoformat(),"league":league,
-                                            "match":f"{h} – {a}"})
-            hs=summarize(history,h,True)
-            aws=summarize(history,a,False)
-            if not hs or not aws: continue
-            # Simple home/away means. These are uncalibrated illustrative estimates.
-            lh=max(.15,min(4,(hs["gf"]+aws["ga"])/2))
-            la=max(.15,min(4,(aws["gf"]+hs["ga"])/2))
-            probs={"1.5 Üst":safe_pct(poisson_over(lh+la,1)),
-                   "2.5 Üst":safe_pct(poisson_over(lh+la,2)),
-                   "KG Var":safe_pct(btts(lh,la))}
-            report["candidates"].append({
-                "date":d.isoformat(),"league":league,"match":f"{h} – {a}",
-                "markets":probs,"sample":{"home":hs["n"],"away":aws["n"]},
-                "expectedGoals":{"home":round(lh,2),"away":round(la,2)},
-                "status":"İstatistiksel ön eleme; bahis önerisi değil",
-                "odds":None,"edge":None})
-            diag["candidates"]+=1
-    except Exception as exc:
-        diag["error"]=f"{type(exc).__name__}: {str(exc)[:100]}"
-    report["leagueDiagnostics"].append(diag)
-report["upcoming"].sort(key=lambda x:(x["date"],x["league"],x["match"]))
-report["candidates"].sort(key=lambda x:(x["date"],-x["markets"]["1.5 Üst"],x["match"]))
-report["candidateCount"]=len(report["candidates"])
-report["candidates"]=report["candidates"][:20]
-report["reason"]=(
- f"PAS — {report['leaguesLoaded']}/{report['leaguesChecked']} lig okundu; "
- f"bugün {report['fixturesToday']}, 7 günde {report['fixturesNext7Days']} fikstür; "
- f"{report['candidateCount']} istatistiksel aday. "
- "Yüzdeler kalibre edilmemiş model tahminidir; güncel uluslararası oranlar, "
- "başlama saatleri ve model başarısı doğrulanmadığı için bahis seçimi yapılmadı."
+        return datetime.strptime(str(value)[:10], "%Y-%m-%d").date()
+    except (ValueError, TypeError):
+        return None
+
+
+def team_name(value):
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, dict):
+        return str(value.get("name") or value.get("code") or "").strip()
+    return ""
+
+
+def matches_in(data):
+    if isinstance(data, list):
+        return data
+    if not isinstance(data, dict):
+        return []
+    if isinstance(data.get("matches"), list):
+        return data["matches"]
+    return [match for rnd in data.get("rounds", []) if isinstance(rnd, dict)
+            for match in rnd.get("matches", []) if isinstance(match, dict)]
+
+
+def final_score(match):
+    score = match.get("score")
+    if not isinstance(score, dict):
+        return None
+    # Check keys for presence, not truthiness: 0-0 is a valid result.
+    for key in ("ft", "fulltime", "fullTime"):
+        if key not in score or score[key] is None:
+            continue
+        value = score[key]
+        if isinstance(value, list) and len(value) == 2 and all(type(n) is int and n >= 0 for n in value):
+            return tuple(value)
+        if isinstance(value, dict):
+            home, away = value.get("home"), value.get("away")
+            if type(home) is int and type(away) is int and home >= 0 and away >= 0:
+                return home, away
+    return None
+
+
+def fetch(season, code):
+    url = f"{BASE}/{season}/{code}.json"
+    req = urllib.request.Request(url, headers={"User-Agent": "OrtakAnaliz/1.6"})
+    with urllib.request.urlopen(req, timeout=15) as response:
+        return matches_in(json.loads(response.read(4_000_000).decode("utf-8")))
+
+
+def recent_stats(history, team, home_only):
+    selected = []
+    for d, home, away, hg, ag in history:
+        if home_only and home == team:
+            selected.append((d, hg, ag))
+        elif not home_only and away == team:
+            selected.append((d, ag, hg))
+    selected.sort(key=lambda item: item[0], reverse=True)
+    # Prefer home/away data, but transparently fall back to all venues.
+    venue_count = len(selected)
+    if venue_count < 5:
+        selected = []
+        for d, home, away, hg, ag in history:
+            if home == team:
+                selected.append((d, hg, ag))
+            elif away == team:
+                selected.append((d, ag, hg))
+        selected.sort(key=lambda item: item[0], reverse=True)
+        mode = "all_venues_fallback"
+    else:
+        mode = "venue_specific"
+    recent = selected[:10]
+    if len(recent) < 5:
+        return None, {"availableVenue": venue_count, "availableAll": len(selected)}
+    return {
+        "n": len(recent), "gf": sum(x[1] for x in recent) / len(recent),
+        "ga": sum(x[2] for x in recent) / len(recent), "mode": mode,
+        "venueMatchesAvailable": venue_count,
+    }, None
+
+
+def over_probability(expected, threshold):
+    return 1 - sum(math.exp(-expected) * expected ** k / math.factorial(k)
+                   for k in range(threshold + 1))
+
+
+def percentage(probability):
+    return round(100 * min(1, max(0, probability)), 1)
+
+
+report = {
+    "date": today.isoformat(), "decision": "PAS", "picks": [],
+    "version": "1.6", "updatedAt": now.isoformat(timespec="seconds"),
+    "source": "https://github.com/openfootball/football.json",
+    "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
+    "leaguesChecked": len(LEAGUES), "leaguesLoaded": 0,
+    "fixturesToday": 0, "fixturesNext7Days": 0,
+    "leagueDiagnostics": [], "upcoming": [], "candidates": [], "candidateCount": 0,
+    "dataQuality": {"verifiedOdds": False, "verifiedKickoffTimes": False,
+                    "modelCalibrated": False, "bettingRecommendation": False},
+}
+
+for league, code in LEAGUES.items():
+    diagnostic = {"league": league, "status": "unavailable", "today": 0,
+                  "next7": 0, "completedMatches": 0, "candidates": 0,
+                  "excluded": {"alreadyScored": 0, "insufficientHistory": 0},
+                  "seasonsLoaded": [], "seasonErrors": {}}
+    all_matches = []
+    for season in seasons:
+        try:
+            matches = fetch(season, code)
+            all_matches.extend(matches)
+            diagnostic["seasonsLoaded"].append(season)
+        except Exception as exc:
+            diagnostic["seasonErrors"][season] = f"{type(exc).__name__}: {str(exc)[:90]}"
+    if not diagnostic["seasonsLoaded"]:
+        report["leagueDiagnostics"].append(diagnostic)
+        continue
+    report["leaguesLoaded"] += 1
+    diagnostic["status"] = "ok"
+    history = []
+    fixtures = []
+    seen = set()
+    for match in all_matches:
+        if not isinstance(match, dict):
+            continue
+        d = parse_date(match.get("date") or match.get("datetime"))
+        home = team_name(match.get("team1") or match.get("home") or match.get("homeTeam"))
+        away = team_name(match.get("team2") or match.get("away") or match.get("awayTeam"))
+        if not d or not home or not away:
+            continue
+        identity = (d, home, away)
+        if identity in seen:
+            continue
+        seen.add(identity)
+        score = final_score(match)
+        if d < today and score is not None:
+            history.append((d, home, away, score[0], score[1]))
+        if today <= d <= today + timedelta(days=7):
+            fixtures.append((d, home, away, score))
+            diagnostic["next7"] += 1
+            report["fixturesNext7Days"] += 1
+            if d == today:
+                diagnostic["today"] += 1
+                report["fixturesToday"] += 1
+    diagnostic["completedMatches"] = len(history)
+    for d, home, away, score in fixtures:
+        if score is not None:
+            diagnostic["excluded"]["alreadyScored"] += 1
+            continue
+        if len(report["upcoming"]) < 60:
+            report["upcoming"].append({"date": d.isoformat(), "league": league,
+                                        "match": f"{home} – {away}"})
+        home_stats, home_error = recent_stats(history, home, True)
+        away_stats, away_error = recent_stats(history, away, False)
+        if home_error or away_error:
+            diagnostic["excluded"]["insufficientHistory"] += 1
+            continue
+        home_expected = max(0.15, min(4.0, (home_stats["gf"] + away_stats["ga"]) / 2))
+        away_expected = max(0.15, min(4.0, (away_stats["gf"] + home_stats["ga"]) / 2))
+        markets = {
+            "1.5 Üst": percentage(over_probability(home_expected + away_expected, 1)),
+            "2.5 Üst": percentage(over_probability(home_expected + away_expected, 2)),
+            "KG Var": percentage((1 - math.exp(-home_expected)) * (1 - math.exp(-away_expected))),
+        }
+        report["candidates"].append({
+            "date": d.isoformat(), "league": league, "match": f"{home} – {away}",
+            "markets": markets, "sample": {"home": home_stats["n"], "away": away_stats["n"]},
+            "sampleMode": {"home": home_stats["mode"], "away": away_stats["mode"]},
+            "expectedGoals": {"home": round(home_expected, 2), "away": round(away_expected, 2)},
+            "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+            "odds": None, "edge": None,
+        })
+        diagnostic["candidates"] += 1
+    report["leagueDiagnostics"].append(diagnostic)
+
+report["upcoming"].sort(key=lambda item: (item["date"], item["league"], item["match"]))
+report["candidates"].sort(key=lambda item: (item["date"], -item["markets"]["1.5 Üst"], item["match"]))
+report["candidateCount"] = len(report["candidates"])
+report["candidates"] = report["candidates"][:30]
+report["reason"] = (
+    f"PAS — {report['leaguesLoaded']}/{report['leaguesChecked']} lig okundu; "
+    f"bugün {report['fixturesToday']}, 7 günde {report['fixturesNext7Days']} fikstür; "
+    f"{report['candidateCount']} istatistiksel aday. "
+    "Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından "
+    "otomatik bahis seçimi yapılmadı."
 )
-Path("daily.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+Path("daily.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(report["reason"])
-for d in report["leagueDiagnostics"]: print(d)
+for diagnostic in report["leagueDiagnostics"]:
+    print(json.dumps(diagnostic, ensure_ascii=False))
