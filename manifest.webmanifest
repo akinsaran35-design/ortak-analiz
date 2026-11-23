@@ -1,7 +1,7 @@
 {
-  "name": "Ortak Analiz V1.1",
+  "name": "Ortak Analiz V1.2",
   "short_name": "Ortak Analiz",
-  "description": "Futbol analiz ve oran hareketleri takip paneli",
+  "description": "Günlük analiz kartları ve maç kayıtları",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
