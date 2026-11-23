@@ -1,0 +1,1 @@
+Ortak Analiz Python dosyaları 
