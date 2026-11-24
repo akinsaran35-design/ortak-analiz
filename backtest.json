@@ -128,5 +128,202 @@
       "tested": 203,
       "errors": []
     }
-  ]
+  ],
+  "experimentalV41": {
+    "1.5 Üst": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-07",
+          "tested": 216,
+          "oldBrier": 0.154359,
+          "weightedBrier": 0.152301,
+          "ensembleBrier": 0.153086,
+          "oldCalibratedBrier": 0.152037,
+          "weightedCalibratedBrier": 0.15084,
+          "ensembleCalibratedBrier": 0.152209,
+          "baselineBrier": 0.151093
+        },
+        {
+          "start": "2026-04-07",
+          "endExclusive": "2026-04-28",
+          "tested": 179,
+          "oldBrier": 0.137746,
+          "weightedBrier": 0.136201,
+          "ensembleBrier": 0.136769,
+          "oldCalibratedBrier": 0.132191,
+          "weightedCalibratedBrier": 0.131846,
+          "ensembleCalibratedBrier": 0.132066,
+          "baselineBrier": 0.13226
+        },
+        {
+          "start": "2026-04-28",
+          "endExclusive": "2026-05-23",
+          "tested": 165,
+          "oldBrier": 0.138986,
+          "weightedBrier": 0.139668,
+          "ensembleBrier": 0.139072,
+          "oldCalibratedBrier": 0.136464,
+          "weightedCalibratedBrier": 0.137136,
+          "ensembleCalibratedBrier": 0.136718,
+          "baselineBrier": 0.136919
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-02",
+          "tested": 121,
+          "oldBrier": 0.150879,
+          "weightedBrier": 0.148088,
+          "ensembleBrier": 0.149198,
+          "oldCalibratedBrier": 0.149049,
+          "weightedCalibratedBrier": 0.149783,
+          "ensembleCalibratedBrier": 0.148829,
+          "baselineBrier": 0.148889
+        },
+        {
+          "start": "2026-09-02",
+          "endExclusive": "2026-11-24",
+          "tested": 145,
+          "oldBrier": 0.142336,
+          "weightedBrier": 0.142628,
+          "ensembleBrier": 0.142215,
+          "oldCalibratedBrier": 0.142114,
+          "weightedCalibratedBrier": 0.142418,
+          "ensembleCalibratedBrier": 0.141327,
+          "baselineBrier": 0.142688
+        }
+      ],
+      "status": "research_only"
+    },
+    "2.5 Üst": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-07",
+          "tested": 216,
+          "oldBrier": 0.246421,
+          "weightedBrier": 0.247972,
+          "ensembleBrier": 0.24672,
+          "oldCalibratedBrier": 0.249151,
+          "weightedCalibratedBrier": 0.249531,
+          "ensembleCalibratedBrier": 0.249437,
+          "baselineBrier": 0.250517
+        },
+        {
+          "start": "2026-04-07",
+          "endExclusive": "2026-04-28",
+          "tested": 179,
+          "oldBrier": 0.234512,
+          "weightedBrier": 0.232652,
+          "ensembleBrier": 0.233175,
+          "oldCalibratedBrier": 0.237334,
+          "weightedCalibratedBrier": 0.237407,
+          "ensembleCalibratedBrier": 0.238066,
+          "baselineBrier": 0.241524
+        },
+        {
+          "start": "2026-04-28",
+          "endExclusive": "2026-05-23",
+          "tested": 165,
+          "oldBrier": 0.236321,
+          "weightedBrier": 0.237082,
+          "ensembleBrier": 0.236214,
+          "oldCalibratedBrier": 0.238518,
+          "weightedCalibratedBrier": 0.241432,
+          "ensembleCalibratedBrier": 0.239527,
+          "baselineBrier": 0.245185
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-02",
+          "tested": 121,
+          "oldBrier": 0.249877,
+          "weightedBrier": 0.2429,
+          "ensembleBrier": 0.245821,
+          "oldCalibratedBrier": 0.243963,
+          "weightedCalibratedBrier": 0.238729,
+          "ensembleCalibratedBrier": 0.240946,
+          "baselineBrier": 0.241936
+        },
+        {
+          "start": "2026-09-02",
+          "endExclusive": "2026-11-24",
+          "tested": 145,
+          "oldBrier": 0.231204,
+          "weightedBrier": 0.226824,
+          "ensembleBrier": 0.228494,
+          "oldCalibratedBrier": 0.230082,
+          "weightedCalibratedBrier": 0.229637,
+          "ensembleCalibratedBrier": 0.228818,
+          "baselineBrier": 0.231974
+        }
+      ],
+      "status": "research_only"
+    },
+    "KG Var": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-07",
+          "tested": 216,
+          "oldBrier": 0.246326,
+          "weightedBrier": 0.240968,
+          "ensembleBrier": 0.243202,
+          "oldCalibratedBrier": 0.238841,
+          "weightedCalibratedBrier": 0.238518,
+          "ensembleCalibratedBrier": 0.237939,
+          "baselineBrier": 0.238685
+        },
+        {
+          "start": "2026-04-07",
+          "endExclusive": "2026-04-28",
+          "tested": 179,
+          "oldBrier": 0.235152,
+          "weightedBrier": 0.232411,
+          "ensembleBrier": 0.233484,
+          "oldCalibratedBrier": 0.237143,
+          "weightedCalibratedBrier": 0.234519,
+          "ensembleCalibratedBrier": 0.237007,
+          "baselineBrier": 0.236769
+        },
+        {
+          "start": "2026-04-28",
+          "endExclusive": "2026-05-23",
+          "tested": 165,
+          "oldBrier": 0.230389,
+          "weightedBrier": 0.235901,
+          "ensembleBrier": 0.232753,
+          "oldCalibratedBrier": 0.242566,
+          "weightedCalibratedBrier": 0.240632,
+          "ensembleCalibratedBrier": 0.243397,
+          "baselineBrier": 0.242284
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-02",
+          "tested": 121,
+          "oldBrier": 0.249441,
+          "weightedBrier": 0.242525,
+          "ensembleBrier": 0.245518,
+          "oldCalibratedBrier": 0.24703,
+          "weightedCalibratedBrier": 0.2456,
+          "ensembleCalibratedBrier": 0.24598,
+          "baselineBrier": 0.245463
+        },
+        {
+          "start": "2026-09-02",
+          "endExclusive": "2026-11-24",
+          "tested": 145,
+          "oldBrier": 0.23544,
+          "weightedBrier": 0.231874,
+          "ensembleBrier": 0.233289,
+          "oldCalibratedBrier": 0.227438,
+          "weightedCalibratedBrier": 0.22665,
+          "ensembleCalibratedBrier": 0.227618,
+          "baselineBrier": 0.226684
+        }
+      ],
+      "status": "research_only"
+    }
+  }
 }
