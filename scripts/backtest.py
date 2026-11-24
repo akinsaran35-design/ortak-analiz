@@ -69,7 +69,27 @@ def predict(history, home, away):
         (1-math.exp(-h))*(1-math.exp(-a))
     ]
 
+def predict_weighted(history, home, away):
+    if not history:
+        return None
+    recent = history[-200:]
+    lh = max(0.2, sum(x[3] for x in recent)/len(recent))
+    la = max(0.2, sum(x[4] for x in recent)/len(recent))
+    def rates(name, venue, prior_for, prior_against):
+        rows = [(d, hg, ag) if venue else (d, ag, hg)
+                for d,h,a,hg,ag in history
+                if (h == name if venue else a == name)][-15:]
+        weights = [0.9**i for i in range(len(rows)-1,-1,-1)]
+        return ((sum(w*x[1] for w,x in zip(weights,rows))+5*prior_for)/(sum(weights)+5),
+                (sum(w*x[2] for w,x in zip(weights,rows))+5*prior_against)/(sum(weights)+5))
+    hf, hc = rates(home, True, lh, la)
+    af, ac = rates(away, False, la, lh)
+    h = max(0.15,min(4,hf*ac/lh))
+    a = max(0.15,min(4,af*hc/la))
+    return [over(h+a,1),over(h+a,2),(1-math.exp(-h))*(1-math.exp(-a))]
+
 results = {m: [] for m in MARKETS}
+experimental = {m: [] for m in MARKETS}
 diagnostics = []
 
 for league in LEAGUES:
@@ -114,6 +134,8 @@ for league in LEAGUES:
         ]
         for market, p, y in zip(MARKETS, probabilities, actual):
             results[market].append((d, p, y))
+        for market, p, y in zip(MARKETS, predict_weighted(past,h,a), actual):
+            experimental[market].append((d,p,y))
         tested += 1
 
     diagnostics.append({
@@ -177,6 +199,28 @@ for market, dated_rows in results.items():
         "status":"experimental_holdout"
     }
 
+report["experimentalV39"] = {}
+for market, rows in experimental.items():
+    folds = []
+    dates = sorted({d for d,p,y in rows})
+    for fraction in (0.5, 0.65, 0.8):
+        if not dates:
+            continue
+        start = dates[int(len(dates)*fraction)]
+        end = dates[min(len(dates)-1,int(len(dates)*(fraction+0.15)))]
+        train = [y for d,p,y in rows if d < start]
+        test = [(p,y) for d,p,y in rows if start <= d < end]
+        old = [(p,y) for d,p,y in results[market] if start <= d < end]
+        if len(train)<100 or len(test)<50 or len(old)!=len(test):
+            continue
+        base = sum(train)/len(train)
+        def brier(values):
+            return round(sum((p-y)**2 for p,y in values)/len(values),6)
+        folds.append({"start":start.isoformat(),"endExclusive":end.isoformat(),
+                      "tested":len(test),"weightedBrier":brier(test),
+                      "oldBrier":brier(old),"baselineBrier":brier([(base,y) for p,y in test])})
+    report["experimentalV39"][market] = {"folds":folds,"status":"research_only"}
+    
 output = Path(__file__).resolve().parent.parent / "backtest.json"
 output.write_text(
     json.dumps(report, ensure_ascii=False, indent=2),
