@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 from datetime import datetime
+from statistics import median
 
 def archive(previous, report, odds):
     events = {e["id"]: e for e in odds["events"]}
@@ -12,7 +13,7 @@ def archive(previous, report, odds):
         record = previous.setdefault(row["eventId"], {"match":row["match"],"kickoff":event["kickoff"],"observations":[]})
         if any(x["observedAt"] == observed for x in record["observations"]):
             continue
-        record["observations"].append({"observedAt":observed,"marketProbability":row["marketProbability"],"modelProbabilityUncalibrated":row["modelProbabilityUncalibrated"],"bookCount":row["bookCount"]})
+        record["observations"].append({"observedAt":observed,"marketProbability":row["marketProbability"],"modelProbabilityUncalibrated":row["modelProbabilityUncalibrated"],"bookCount":row["bookCount"],"bookProbabilities":row.get("bookProbabilities",{})})
         record["observations"].sort(key=lambda x:x["observedAt"])
     return previous
 
@@ -31,7 +32,14 @@ def main():
                                     "unchanged" if record["distinctProbabilityCount"] == 1 else
                                     "observed_change")
         record["observationSpanMinutes"] = round((datetime.fromisoformat(obs[-1]["observedAt"].replace("Z","+00:00")) - datetime.fromisoformat(obs[0]["observedAt"].replace("Z","+00:00"))).total_seconds()/60,2) if obs else 0
-    path.write_text(json.dumps({"version":"3.3","decision":"PAS","events":events},ensure_ascii=False,indent=2),encoding="utf-8")
+        comparable = [x for x in obs if x.get("bookProbabilities")]
+        first = comparable[0]["bookProbabilities"] if len(comparable)>=2 else {}
+        last = comparable[-1]["bookProbabilities"] if len(comparable)>=2 else {}
+        common = sorted(first.keys() & last.keys())
+        record["commonBookCount"] = len(common)
+        record["sameBookProbabilityChange"] = round(median(last[k]-first[k] for k in common),6) if len(common)>=3 else None
+        record["sameBookStatus"] = "comparable" if len(common)>=3 else "insufficient_data"
+    path.write_text(json.dumps({"version":"3.4","decision":"PAS","events":events},ensure_ascii=False,indent=2),encoding="utf-8")
     print("Archived events:",len(events))
 
 if __name__ == "__main__":
