@@ -128,5 +128,94 @@
       "tested": 203,
       "errors": []
     }
-  ]
+  ],
+  "experimentalV39": {
+    "1.5 Üst": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-19",
+          "tested": 302,
+          "weightedBrier": 0.15311,
+          "oldBrier": 0.151584,
+          "baselineBrier": 0.149076
+        },
+        {
+          "start": "2026-04-19",
+          "endExclusive": "2026-05-23",
+          "tested": 258,
+          "weightedBrier": 0.137293,
+          "oldBrier": 0.136249,
+          "baselineBrier": 0.131358
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-12",
+          "tested": 172,
+          "weightedBrier": 0.151892,
+          "oldBrier": 0.149699,
+          "baselineBrier": 0.147844
+        }
+      ],
+      "status": "research_only"
+    },
+    "2.5 Üst": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-19",
+          "tested": 302,
+          "weightedBrier": 0.241741,
+          "oldBrier": 0.240672,
+          "baselineBrier": 0.250681
+        },
+        {
+          "start": "2026-04-19",
+          "endExclusive": "2026-05-23",
+          "tested": 258,
+          "weightedBrier": 0.239678,
+          "oldBrier": 0.238428,
+          "baselineBrier": 0.241205
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-12",
+          "tested": 172,
+          "weightedBrier": 0.246518,
+          "oldBrier": 0.244944,
+          "baselineBrier": 0.239221
+        }
+      ],
+      "status": "research_only"
+    },
+    "KG Var": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-19",
+          "tested": 302,
+          "weightedBrier": 0.246785,
+          "oldBrier": 0.244528,
+          "baselineBrier": 0.242638
+        },
+        {
+          "start": "2026-04-19",
+          "endExclusive": "2026-05-23",
+          "tested": 258,
+          "weightedBrier": 0.231394,
+          "oldBrier": 0.230485,
+          "baselineBrier": 0.235225
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-12",
+          "tested": 172,
+          "weightedBrier": 0.247703,
+          "oldBrier": 0.24521,
+          "baselineBrier": 0.239257
+        }
+      ],
+      "status": "research_only"
+    }
+  }
 }

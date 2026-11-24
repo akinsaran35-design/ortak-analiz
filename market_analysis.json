@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-24T12:17:27.625178+00:00",
+  "updatedAt": "2026-11-24T12:47:10.980465+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -12,15 +12,15 @@
       "eventId": "031162fd89aa3c1fd39e523b3c82d35a",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.571053,
+        "grosvenor": 0.577428,
         "leovegas": 0.566234,
         "williamhill": 0.575916
       },
-      "marketProbability": 0.5711,
+      "marketProbability": 0.5759,
       "modelProbabilityUncalibrated": 0.66,
-      "difference": 0.0889,
-      "bookProbabilitySpread": 0.0097,
-      "marketFairOdds": 1.7512,
+      "difference": 0.0841,
+      "bookProbabilitySpread": 0.0112,
+      "marketFairOdds": 1.7364,
       "medianMargin": 0.0718
     },
     {
@@ -79,12 +79,12 @@
         "grosvenor": 0.452128,
         "leovegas": 0.433766,
         "williamhill": 0.453333,
-        "matchbook": 0.419355
+        "matchbook": 0.422886
       },
       "marketProbability": 0.4429,
       "modelProbabilityUncalibrated": 0.48200000000000004,
       "difference": 0.0391,
-      "bookProbabilitySpread": 0.034,
+      "bookProbabilitySpread": 0.0304,
       "marketFairOdds": 2.2576,
       "medianMargin": 0.0656
     },
@@ -93,16 +93,16 @@
       "eventId": "6d21b6408d1f1c42def270b7f1ae5b21",
       "bookCount": 4,
       "bookProbabilities": {
-        "grosvenor": 0.459893,
+        "grosvenor": 0.461333,
         "leovegas": 0.447368,
-        "matchbook": 0.443038,
+        "matchbook": 0.444444,
         "williamhill": 0.48
       },
-      "marketProbability": 0.4536,
+      "marketProbability": 0.4544,
       "modelProbabilityUncalibrated": 0.38299999999999995,
-      "difference": -0.0706,
-      "bookProbabilitySpread": 0.037,
-      "marketFairOdds": 2.2044,
+      "difference": -0.0714,
+      "bookProbabilitySpread": 0.0356,
+      "marketFairOdds": 2.2009,
       "medianMargin": 0.0664
     },
     {
@@ -145,16 +145,16 @@
       "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.564644,
-        "leovegas": 0.554974,
+        "leovegas": 0.552632,
         "williamhill": 0.557029,
         "matchbook": 0.544529
       },
-      "marketProbability": 0.556,
+      "marketProbability": 0.5548,
       "modelProbabilityUncalibrated": 0.536,
-      "difference": -0.02,
+      "difference": -0.0188,
       "bookProbabilitySpread": 0.0201,
-      "marketFairOdds": 1.7986,
-      "medianMargin": 0.0666
+      "marketFairOdds": 1.8024,
+      "medianMargin": 0.0689
     },
     {
       "match": "Watford FC – Blackburn Rovers FC",
