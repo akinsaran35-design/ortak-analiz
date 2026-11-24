@@ -66,6 +66,8 @@ jobs:
         run: python scripts/track_performance.py
       - name: V4.5 Veri kalite kontrolu
         run: python scripts/data_quality.py
+      - name: V4.6 Karar motoru
+        run: python scripts/decision_engine.py
       - name: Raporlari kaydet
         if: github.ref == 'refs/heads/main'
         run: |
