@@ -1,7 +1,7 @@
 {
-  "version": "3.1",
+  "version": "3.2",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-24T09:54:04.877062+00:00",
+  "updatedAt": "2026-11-24T09:57:19.407608+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -14,6 +14,8 @@
       "marketProbability": 0.5711,
       "modelProbabilityUncalibrated": 0.66,
       "difference": 0.0889,
+      "bookProbabilitySpread": 0.0097,
+      "marketFairOdds": 1.7512,
       "medianMargin": 0.0718
     },
     {
@@ -23,6 +25,8 @@
       "marketProbability": 0.5401,
       "modelProbabilityUncalibrated": 0.643,
       "difference": 0.1029,
+      "bookProbabilitySpread": 0.0137,
+      "marketFairOdds": 1.8515,
       "medianMargin": 0.076
     },
     {
@@ -32,6 +36,8 @@
       "marketProbability": 0.5759,
       "modelProbabilityUncalibrated": 0.617,
       "difference": 0.0411,
+      "bookProbabilitySpread": 0.0208,
+      "marketFairOdds": 1.7364,
       "medianMargin": 0.0718
     },
     {
@@ -41,6 +47,8 @@
       "marketProbability": 0.5759,
       "modelProbabilityUncalibrated": 0.599,
       "difference": 0.0231,
+      "bookProbabilitySpread": 0.0077,
+      "marketFairOdds": 1.7364,
       "medianMargin": 0.0718
     },
     {
@@ -50,6 +58,8 @@
       "marketProbability": 0.4429,
       "modelProbabilityUncalibrated": 0.48200000000000004,
       "difference": 0.0391,
+      "bookProbabilitySpread": 0.0389,
+      "marketFairOdds": 2.2576,
       "medianMargin": 0.0656
     },
     {
@@ -59,6 +69,8 @@
       "marketProbability": 0.4536,
       "modelProbabilityUncalibrated": 0.38299999999999995,
       "difference": -0.0706,
+      "bookProbabilitySpread": 0.0364,
+      "marketFairOdds": 2.2044,
       "medianMargin": 0.0664
     },
     {
@@ -68,6 +80,8 @@
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.1569,
+      "bookProbabilitySpread": 0.0219,
+      "marketFairOdds": 2.0656,
       "medianMargin": 0.0593
     },
     {
@@ -77,6 +91,8 @@
       "marketProbability": 0.557,
       "modelProbabilityUncalibrated": 0.578,
       "difference": 0.021,
+      "bookProbabilitySpread": 0.0318,
+      "marketFairOdds": 1.7952,
       "medianMargin": 0.075
     },
     {
@@ -86,6 +102,8 @@
       "marketProbability": 0.5527,
       "modelProbabilityUncalibrated": 0.536,
       "difference": -0.0167,
+      "bookProbabilitySpread": 0.0201,
+      "marketFairOdds": 1.8094,
       "medianMargin": 0.0638
     },
     {
@@ -95,6 +113,8 @@
       "marketProbability": 0.5093,
       "modelProbabilityUncalibrated": 0.531,
       "difference": 0.0217,
+      "bookProbabilitySpread": 0.0295,
+      "marketFairOdds": 1.9635,
       "medianMargin": 0.078
     },
     {
@@ -104,6 +124,8 @@
       "marketProbability": 0.5281,
       "modelProbabilityUncalibrated": 0.599,
       "difference": 0.0709,
+      "bookProbabilitySpread": 0.0328,
+      "marketFairOdds": 1.8936,
       "medianMargin": 0.0732
     },
     {
@@ -113,6 +135,8 @@
       "marketProbability": 0.6059,
       "modelProbabilityUncalibrated": 0.706,
       "difference": 0.1001,
+      "bookProbabilitySpread": 0.0209,
+      "marketFairOdds": 1.6504,
       "medianMargin": 0.0612
     },
     {
@@ -122,6 +146,8 @@
       "marketProbability": 0.5943,
       "modelProbabilityUncalibrated": 0.6809999999999999,
       "difference": 0.0867,
+      "bookProbabilitySpread": 0.0113,
+      "marketFairOdds": 1.6826,
       "medianMargin": 0.0717
     },
     {
@@ -131,6 +157,8 @@
       "marketProbability": 0.5759,
       "modelProbabilityUncalibrated": 0.66,
       "difference": 0.0841,
+      "bookProbabilitySpread": 0.0205,
+      "marketFairOdds": 1.7364,
       "medianMargin": 0.0718
     },
     {
@@ -140,6 +168,8 @@
       "marketProbability": 0.48,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.161,
+      "bookProbabilitySpread": 0.024,
+      "marketFairOdds": 2.0833,
       "medianMargin": 0.0684
     },
     {
@@ -149,6 +179,8 @@
       "marketProbability": 0.5979,
       "modelProbabilityUncalibrated": 0.611,
       "difference": 0.0131,
+      "bookProbabilitySpread": 0.0144,
+      "marketFairOdds": 1.6724,
       "medianMargin": 0.0721
     },
     {
@@ -158,6 +190,8 @@
       "marketProbability": 0.5707,
       "modelProbabilityUncalibrated": 0.5770000000000001,
       "difference": 0.0063,
+      "bookProbabilitySpread": 0.0239,
+      "marketFairOdds": 1.7523,
       "medianMargin": 0.0718
     },
     {
@@ -167,6 +201,8 @@
       "marketProbability": 0.5707,
       "modelProbabilityUncalibrated": 0.5710000000000001,
       "difference": 0.0003,
+      "bookProbabilitySpread": 0.0358,
+      "marketFairOdds": 1.7523,
       "medianMargin": 0.0718
     },
     {
@@ -176,6 +212,8 @@
       "marketProbability": 0.5249,
       "modelProbabilityUncalibrated": 0.5539999999999999,
       "difference": 0.0291,
+      "bookProbabilitySpread": 0.0268,
+      "marketFairOdds": 1.905,
       "medianMargin": 0.0783
     }
   ]

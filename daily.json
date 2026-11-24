@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-24T12:54:03+03:00",
+  "updatedAt": "2026-11-24T12:57:17+03:00",
   "source": "https://github.com/openfootball/football.json",
   "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
   "leaguesChecked": 6,

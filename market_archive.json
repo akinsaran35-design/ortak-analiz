@@ -17,6 +17,12 @@
           "marketProbability": 0.5711,
           "modelProbabilityUncalibrated": 0.66,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5711,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 3
         }
       ],
       "probabilityChange": 0.0
@@ -33,6 +39,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.5401,
+          "modelProbabilityUncalibrated": 0.643,
+          "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.5401,
           "modelProbabilityUncalibrated": 0.643,
           "bookCount": 3
@@ -55,6 +67,12 @@
           "marketProbability": 0.5759,
           "modelProbabilityUncalibrated": 0.617,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.617,
+          "bookCount": 3
         }
       ],
       "probabilityChange": 0.0
@@ -71,6 +89,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.5759,
           "modelProbabilityUncalibrated": 0.599,
           "bookCount": 3
@@ -93,6 +117,12 @@
           "marketProbability": 0.4429,
           "modelProbabilityUncalibrated": 0.48200000000000004,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.4429,
+          "modelProbabilityUncalibrated": 0.48200000000000004,
+          "bookCount": 4
         }
       ],
       "probabilityChange": 0.0
@@ -109,6 +139,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.4536,
+          "modelProbabilityUncalibrated": 0.38299999999999995,
+          "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.4536,
           "modelProbabilityUncalibrated": 0.38299999999999995,
           "bookCount": 4
@@ -131,6 +167,12 @@
           "marketProbability": 0.4841,
           "modelProbabilityUncalibrated": 0.6409999999999999,
           "bookCount": 5
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.4841,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 5
         }
       ],
       "probabilityChange": 0.0
@@ -147,6 +189,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.557,
+          "modelProbabilityUncalibrated": 0.578,
+          "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.557,
           "modelProbabilityUncalibrated": 0.578,
           "bookCount": 3
@@ -169,6 +217,12 @@
           "marketProbability": 0.5527,
           "modelProbabilityUncalibrated": 0.536,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5527,
+          "modelProbabilityUncalibrated": 0.536,
+          "bookCount": 4
         }
       ],
       "probabilityChange": 0.0
@@ -185,6 +239,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.5093,
+          "modelProbabilityUncalibrated": 0.531,
+          "bookCount": 5
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.5093,
           "modelProbabilityUncalibrated": 0.531,
           "bookCount": 5
@@ -207,6 +267,12 @@
           "marketProbability": 0.5281,
           "modelProbabilityUncalibrated": 0.599,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5281,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 4
         }
       ],
       "probabilityChange": 0.0
@@ -223,6 +289,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.6059,
+          "modelProbabilityUncalibrated": 0.706,
+          "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.6059,
           "modelProbabilityUncalibrated": 0.706,
           "bookCount": 3
@@ -245,6 +317,12 @@
           "marketProbability": 0.5943,
           "modelProbabilityUncalibrated": 0.6809999999999999,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5943,
+          "modelProbabilityUncalibrated": 0.6809999999999999,
+          "bookCount": 3
         }
       ],
       "probabilityChange": 0.0
@@ -261,6 +339,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.5759,
           "modelProbabilityUncalibrated": 0.66,
           "bookCount": 3
@@ -283,6 +367,12 @@
           "marketProbability": 0.48,
           "modelProbabilityUncalibrated": 0.6409999999999999,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.48,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 3
         }
       ],
       "probabilityChange": 0.0
@@ -299,6 +389,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.5979,
+          "modelProbabilityUncalibrated": 0.611,
+          "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.5979,
           "modelProbabilityUncalibrated": 0.611,
           "bookCount": 3
@@ -321,6 +417,12 @@
           "marketProbability": 0.5707,
           "modelProbabilityUncalibrated": 0.5770000000000001,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5707,
+          "modelProbabilityUncalibrated": 0.5770000000000001,
+          "bookCount": 3
         }
       ],
       "probabilityChange": 0.0
@@ -340,6 +442,12 @@
           "marketProbability": 0.5707,
           "modelProbabilityUncalibrated": 0.5710000000000001,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
+          "marketProbability": 0.5707,
+          "modelProbabilityUncalibrated": 0.5710000000000001,
+          "bookCount": 3
         }
       ],
       "probabilityChange": 0.0
@@ -356,6 +464,12 @@
         },
         {
           "observedAt": "2026-11-24T09:54:01.696717+00:00",
+          "marketProbability": 0.5249,
+          "modelProbabilityUncalibrated": 0.5539999999999999,
+          "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T09:57:14.912420+00:00",
           "marketProbability": 0.5249,
           "modelProbabilityUncalibrated": 0.5539999999999999,
           "bookCount": 4
