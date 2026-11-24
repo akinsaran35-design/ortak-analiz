@@ -39,6 +39,9 @@ jobs:
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py
 
+      - name: Mac eslestirme kontrolu
+        run: python scripts/match_odds.py
+
       - name: Gecmis maclari test et
         run: python scripts/backtest.py
 
@@ -49,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily.json backtest.json prediction_archive.json performance.json odds.json
+          git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json
           if ! git diff --cached --quiet; then
             git commit -m "Update daily analysis and backtest"
             git push
