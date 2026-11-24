@@ -1,15 +1,15 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-23T22:14:07+03:00",
+  "updatedAt": "2026-11-24T08:48:46+03:00",
   "source": "https://github.com/openfootball/football.json",
   "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
   "leaguesChecked": 6,
   "leaguesLoaded": 6,
-  "fixturesToday": 2,
-  "fixturesNext7Days": 74,
+  "fixturesToday": 8,
+  "fixturesNext7Days": 72,
   "leagueDiagnostics": [
     {
       "league": "İngiltere Premier Lig",
@@ -31,7 +31,7 @@
     {
       "league": "İngiltere Championship",
       "status": "ok",
-      "today": 0,
+      "today": 8,
       "next7": 24,
       "completedMatches": 609,
       "candidates": 24,
@@ -82,10 +82,10 @@
     {
       "league": "İtalya Serie A",
       "status": "ok",
-      "today": 2,
-      "next7": 12,
+      "today": 0,
+      "next7": 10,
       "completedMatches": 394,
-      "candidates": 12,
+      "candidates": 10,
       "excluded": {
         "alreadyScored": 0,
         "insufficientHistory": 0
@@ -115,16 +115,6 @@
     }
   ],
   "upcoming": [
-    {
-      "date": "2026-11-23",
-      "league": "İtalya Serie A",
-      "match": "AC Monza – ACF Fiorentina"
-    },
-    {
-      "date": "2026-11-23",
-      "league": "İtalya Serie A",
-      "match": "Juventus FC – Venezia FC"
-    },
     {
       "date": "2026-11-24",
       "league": "İngiltere Championship",
@@ -413,60 +403,20 @@
     {
       "date": "2026-11-29",
       "league": "İtalya Serie A",
+      "match": "Torino FC – SS Lazio"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
       "match": "US Sassuolo Calcio – SSC Napoli"
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Venezia FC – Bologna FC 1909"
     }
   ],
   "candidates": [
-    {
-      "date": "2026-11-23",
-      "league": "İtalya Serie A",
-      "match": "AC Monza – ACF Fiorentina",
-      "markets": {
-        "1.5 Üst": 87.9,
-        "2.5 Üst": 70.6,
-        "KG Var": 70.1
-      },
-      "sample": {
-        "home": 5,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.7,
-        "away": 1.95
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-23",
-      "league": "İtalya Serie A",
-      "match": "Juventus FC – Venezia FC",
-      "markets": {
-        "1.5 Üst": 76.9,
-        "2.5 Üst": 53.1,
-        "KG Var": 46.0
-      },
-      "sample": {
-        "home": 10,
-        "away": 5
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "all_venues_fallback"
-      },
-      "expectedGoals": {
-        "home": 2.05,
-        "away": 0.75
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
     {
       "date": "2026-11-24",
       "league": "İngiltere Championship",
@@ -1166,14 +1116,64 @@
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Everton FC – Liverpool FC",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 58.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 1.4
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "West Bromwich Albion FC – Bristol City FC",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 57.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.65,
+        "away": 1.25
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
     }
   ],
-  "candidateCount": 70,
+  "candidateCount": 68,
   "dataQuality": {
     "verifiedOdds": false,
     "verifiedKickoffTimes": false,
     "modelCalibrated": false,
     "bettingRecommendation": false
   },
-  "reason": "PAS — 6/6 lig okundu; bugün 2, 7 günde 74 fikstür; 70 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
+  "reason": "PAS — 6/6 lig okundu; bugün 8, 7 günde 72 fikstür; 68 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
 }
