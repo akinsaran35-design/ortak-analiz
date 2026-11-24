@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-24T10:31:46.924781+00:00",
+  "updatedAt": "2026-11-24T11:22:57.470361+00:00",
   "decision": "PAS",
   "matchedCount": 29,
   "unmatchedCount": 1,
@@ -135,7 +135,7 @@
       "match": "Wrexham AFC – Portsmouth FC",
       "eventId": "9cd8c682c6864b59a7f1a58964083e08",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "Ipswich Town FC – Aston Villa FC",
