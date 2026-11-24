@@ -1,12 +1,12 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-24T23:45:02.397960+03:00",
+  "updatedAt": "2026-11-25T01:37:51.359978+03:00",
   "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
   "errors": [],
   "overall": {
-    "recorded": 22,
+    "recorded": 30,
     "settled": 0,
-    "pending": 22,
+    "pending": 30,
     "markets": {
       "1.5 Üst": {
         "tested": 0,
@@ -27,9 +27,9 @@
   },
   "leagues": {
     "İngiltere Premier Lig": {
-      "recorded": 3,
+      "recorded": 7,
       "settled": 0,
-      "pending": 3,
+      "pending": 7,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -49,9 +49,9 @@
       }
     },
     "İngiltere Championship": {
-      "recorded": 12,
+      "recorded": 14,
       "settled": 0,
-      "pending": 12,
+      "pending": 14,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -137,9 +137,9 @@
       }
     },
     "Fransa Ligue 1": {
-      "recorded": 3,
+      "recorded": 5,
       "settled": 0,
-      "pending": 3,
+      "pending": 5,
       "markets": {
         "1.5 Üst": {
           "tested": 0,

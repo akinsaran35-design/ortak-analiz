@@ -718,5 +718,113 @@
     "candidate": 0.6489880352993637,
     "baseline": 0.5820433436532507,
     "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"AFC Bournemouth\", \"Brighton & Hove Albion FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "AFC Bournemouth",
+    "away": "Brighton & Hove Albion FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5655150159955756,
+    "candidate": 0.5847353035730057,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Aston Villa FC\", \"Everton FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Aston Villa FC",
+    "away": "Everton FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5540368014428194,
+    "candidate": 0.5667156441704836,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Brentford FC\", \"Arsenal FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Brentford FC",
+    "away": "Arsenal FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.506375508926538,
+    "candidate": 0.5325335162277336,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Chelsea FC\", \"Crystal Palace FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Chelsea FC",
+    "away": "Crystal Palace FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6304333316038996,
+    "candidate": 0.6544486349112866,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Coventry City FC\", \"Ipswich Town FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Coventry City FC",
+    "away": "Ipswich Town FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5540368014428194,
+    "candidate": 0.6010431913527545,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Liverpool FC\", \"Sunderland AFC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Liverpool FC",
+    "away": "Sunderland AFC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6602601118038804,
+    "candidate": 0.6198358855570786,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Manchester City FC\", \"Leeds United FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Manchester City FC",
+    "away": "Leeds United FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6200962589216268,
+    "candidate": 0.5858702654546402,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Newcastle United FC\", \"Manchester United FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Newcastle United FC",
+    "away": "Manchester United FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6304333316038996,
+    "candidate": 0.6260332214268031,
+    "baseline": 0.5904522613065326,
+    "result": null
+  },
+  "[\"2026-12-02\", \"en.1\", \"Tottenham Hotspur FC\", \"Fulham FC\"]": {
+    "date": "2026-12-02",
+    "league": "en.1",
+    "home": "Tottenham Hotspur FC",
+    "away": "Fulham FC",
+    "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5423791164789342,
+    "candidate": 0.5285550139707837,
+    "baseline": 0.5904522613065326,
+    "result": null
   }
 }

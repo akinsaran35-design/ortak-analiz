@@ -1,6 +1,6 @@
 {
   "version": "4.5",
-  "updatedAt": "2026-11-24T20:45:02.429842+00:00",
+  "updatedAt": "2026-11-24T22:37:51.395035+00:00",
   "status": "healthy",
   "qualityGate": "PASS",
   "dataAgeHours": {
@@ -8,9 +8,9 @@
     "odds": 0.0,
     "validation": 0.0
   },
-  "archiveRecords": 60,
+  "archiveRecords": 69,
   "settled": 0,
-  "pending": 60,
+  "pending": 69,
   "duplicates": 0,
   "invalidRecords": 0,
   "overdueResults": 0,

@@ -1,11 +1,11 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-24T20:44:58.946916+00:00",
+  "updatedAt": "2026-11-24T22:37:47.175272+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
-  "comparedCount": 14,
+  "comparedCount": 16,
   "rows": [
     {
       "match": "Stoke City FC – Millwall FC",
@@ -16,7 +16,7 @@
         "leovegas": 0.484127,
         "casumo": 0.472973,
         "williamhill": 0.5,
-        "matchbook": 0.475827
+        "matchbook": 0.47449
       },
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.6409999999999999,
@@ -67,12 +67,12 @@
         "leovegas": 0.496042,
         "casumo": 0.489305,
         "williamhill": 0.5,
-        "matchbook": 0.484694
+        "matchbook": 0.494949
       },
       "marketProbability": 0.496,
       "modelProbabilityUncalibrated": 0.531,
       "difference": 0.035,
-      "bookProbabilitySpread": 0.022,
+      "bookProbabilitySpread": 0.0174,
       "marketFairOdds": 2.016,
       "medianMargin": 0.0555
     },
@@ -100,13 +100,13 @@
       "bookProbabilities": {
         "grosvenor": 0.59949,
         "williamhill": 0.625,
-        "matchbook": 0.610577
+        "matchbook": 0.614286
       },
-      "marketProbability": 0.6106,
+      "marketProbability": 0.6143,
       "modelProbabilityUncalibrated": 0.706,
-      "difference": 0.0954,
+      "difference": 0.0917,
       "bookProbabilitySpread": 0.0255,
-      "marketFairOdds": 1.6378,
+      "marketFairOdds": 1.6279,
       "medianMargin": 0.0625
     },
     {
@@ -147,16 +147,16 @@
       "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.456,
-        "leovegas": 0.464191,
+        "leovegas": 0.466667,
         "williamhill": 0.48,
         "matchbook": 0.4375
       },
-      "marketProbability": 0.4601,
+      "marketProbability": 0.4613,
       "modelProbabilityUncalibrated": 0.6409999999999999,
-      "difference": 0.1809,
+      "difference": 0.1797,
       "bookProbabilitySpread": 0.0425,
-      "marketFairOdds": 2.1735,
-      "medianMargin": 0.0674
+      "marketFairOdds": 2.1676,
+      "medianMargin": 0.0699
     },
     {
       "match": "Birmingham City FC – Bolton Wanderers FC",
@@ -180,15 +180,15 @@
       "bookCount": 3,
       "bookProbabilities": {
         "grosvenor": 0.613811,
-        "williamhill": 0.64532,
+        "williamhill": 0.608696,
         "matchbook": 0.602041
       },
-      "marketProbability": 0.6138,
+      "marketProbability": 0.6087,
       "modelProbabilityUncalibrated": 0.588,
-      "difference": -0.0258,
-      "bookProbabilitySpread": 0.0433,
-      "marketFairOdds": 1.6292,
-      "medianMargin": 0.0761
+      "difference": -0.0207,
+      "bookProbabilitySpread": 0.0118,
+      "marketFairOdds": 1.6429,
+      "medianMargin": 0.0738
     },
     {
       "match": "Queens Park Rangers FC – Sheffield United FC",
@@ -196,16 +196,16 @@
       "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.552,
-        "leovegas": 0.562827,
-        "williamhill": 0.575916,
-        "matchbook": 0.532982
+        "leovegas": 0.559367,
+        "williamhill": 0.546667,
+        "matchbook": 0.540107
       },
-      "marketProbability": 0.5574,
+      "marketProbability": 0.5493,
       "modelProbabilityUncalibrated": 0.5770000000000001,
-      "difference": 0.0196,
-      "bookProbabilitySpread": 0.0429,
-      "marketFairOdds": 1.794,
-      "medianMargin": 0.0679
+      "difference": 0.0277,
+      "bookProbabilitySpread": 0.0193,
+      "marketFairOdds": 1.8204,
+      "medianMargin": 0.0762
     },
     {
       "match": "Millwall FC – Burnley FC",
@@ -239,6 +239,41 @@
       "bookProbabilitySpread": 0.0268,
       "marketFairOdds": 1.905,
       "medianMargin": 0.0783
+    },
+    {
+      "match": "Lincoln City FC – Wolverhampton Wanderers FC",
+      "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
+      "bookCount": 5,
+      "bookProbabilities": {
+        "grosvenor": 0.52957,
+        "leovegas": 0.533333,
+        "casumo": 0.521858,
+        "williamhill": 0.536193,
+        "matchbook": 0.526455
+      },
+      "marketProbability": 0.5296,
+      "modelProbabilityUncalibrated": 0.544,
+      "difference": 0.0144,
+      "bookProbabilitySpread": 0.0143,
+      "marketFairOdds": 1.8883,
+      "medianMargin": 0.078
+    },
+    {
+      "match": "Derby County FC – Watford FC",
+      "eventId": "82ef491ed2f8399e4ccec9f5d8315cee",
+      "bookCount": 4,
+      "bookProbabilities": {
+        "grosvenor": 0.518817,
+        "leovegas": 0.516129,
+        "casumo": 0.506849,
+        "williamhill": 0.536193
+      },
+      "marketProbability": 0.5175,
+      "modelProbabilityUncalibrated": 0.469,
+      "difference": -0.0485,
+      "bookProbabilitySpread": 0.0293,
+      "marketFairOdds": 1.9325,
+      "medianMargin": 0.0774
     }
   ]
 }

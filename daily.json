@@ -1,26 +1,26 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-24T23:44:57+03:00",
+  "updatedAt": "2026-11-25T01:37:45+03:00",
   "source": "https://github.com/openfootball/football.json",
   "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
   "leaguesChecked": 6,
   "leaguesLoaded": 6,
-  "fixturesToday": 8,
-  "fixturesNext7Days": 72,
+  "fixturesToday": 4,
+  "fixturesNext7Days": 74,
   "leagueDiagnostics": [
     {
       "league": "İngiltere Premier Lig",
       "status": "ok",
       "today": 0,
-      "next7": 10,
+      "next7": 20,
       "completedMatches": 398,
-      "candidates": 9,
+      "candidates": 18,
       "excluded": {
         "alreadyScored": 0,
-        "insufficientHistory": 1
+        "insufficientHistory": 2
       },
       "seasonsLoaded": [
         "2026-27",
@@ -31,10 +31,10 @@
     {
       "league": "İngiltere Championship",
       "status": "ok",
-      "today": 8,
-      "next7": 24,
+      "today": 4,
+      "next7": 16,
       "completedMatches": 609,
-      "candidates": 24,
+      "candidates": 16,
       "excluded": {
         "alreadyScored": 0,
         "insufficientHistory": 0
@@ -115,46 +115,6 @@
     }
   ],
   "upcoming": [
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Bristol City FC – Wrexham AFC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Cardiff City FC – Preston North End FC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Charlton Athletic FC – Lincoln City FC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Middlesbrough FC – Swansea City AFC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Norwich City FC – Queens Park Rangers FC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Portsmouth FC – West Ham United FC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Sheffield United FC – Southampton FC"
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Wolverhampton Wanderers FC – Derby County FC"
-    },
     {
       "date": "2026-11-25",
       "league": "İngiltere Championship",
@@ -403,220 +363,60 @@
     {
       "date": "2026-11-29",
       "league": "İtalya Serie A",
-      "match": "Torino FC – SS Lazio"
-    },
-    {
-      "date": "2026-11-29",
-      "league": "İtalya Serie A",
       "match": "US Sassuolo Calcio – SSC Napoli"
     },
     {
-      "date": "2026-11-29",
-      "league": "İtalya Serie A",
-      "match": "Venezia FC – Bologna FC 1909"
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "AFC Bournemouth – Brighton & Hove Albion FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Aston Villa FC – Everton FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Brentford FC – Arsenal FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Chelsea FC – Crystal Palace FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Coventry City FC – Ipswich Town FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Hull City AFC – Nottingham Forest FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Liverpool FC – Sunderland AFC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Manchester City FC – Leeds United FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Newcastle United FC – Manchester United FC"
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Tottenham Hotspur FC – Fulham FC"
     }
   ],
   "candidates": [
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Sheffield United FC – Southampton FC",
-      "markets": {
-        "1.5 Üst": 85.3,
-        "2.5 Üst": 66.0,
-        "KG Var": 64.5
-      },
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.35,
-        "away": 2.05
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Portsmouth FC – West Ham United FC",
-      "markets": {
-        "1.5 Üst": 84.3,
-        "2.5 Üst": 64.3,
-        "KG Var": 62.8
-      },
-      "sample": {
-        "home": 10,
-        "away": 8
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "all_venues_fallback"
-      },
-      "expectedGoals": {
-        "home": 1.29,
-        "away": 2.02
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Wolverhampton Wanderers FC – Derby County FC",
-      "markets": {
-        "1.5 Üst": 82.7,
-        "2.5 Üst": 61.7,
-        "KG Var": 61.9
-      },
-      "sample": {
-        "home": 7,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.87,
-        "away": 1.31
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Middlesbrough FC – Swansea City AFC",
-      "markets": {
-        "1.5 Üst": 81.5,
-        "2.5 Üst": 59.9,
-        "KG Var": 62.0
-      },
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.6,
-        "away": 1.5
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Norwich City FC – Queens Park Rangers FC",
-      "markets": {
-        "1.5 Üst": 81.5,
-        "2.5 Üst": 59.9,
-        "KG Var": 61.2
-      },
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.75,
-        "away": 1.35
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Cardiff City FC – Preston North End FC",
-      "markets": {
-        "1.5 Üst": 78.9,
-        "2.5 Üst": 56.0,
-        "KG Var": 58.7
-      },
-      "sample": {
-        "home": 8,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.57,
-        "away": 1.35
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Bristol City FC – Wrexham AFC",
-      "markets": {
-        "1.5 Üst": 73.3,
-        "2.5 Üst": 48.2,
-        "KG Var": 52.9
-      },
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.35,
-        "away": 1.25
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-24",
-      "league": "İngiltere Championship",
-      "match": "Charlton Athletic FC – Lincoln City FC",
-      "markets": {
-        "1.5 Üst": 65.1,
-        "2.5 Üst": 38.3,
-        "KG Var": 44.9
-      },
-      "sample": {
-        "home": 10,
-        "away": 7
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "all_venues_fallback"
-      },
-      "expectedGoals": {
-        "home": 1.07,
-        "away": 1.15
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
     {
       "date": "2026-11-25",
       "league": "İngiltere Championship",
@@ -1166,14 +966,214 @@
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Lincoln City FC – Wolverhampton Wanderers FC",
+      "markets": {
+        "1.5 Üst": 77.8,
+        "2.5 Üst": 54.4,
+        "KG Var": 56.7
+      },
+      "sample": {
+        "home": 7,
+        "away": 7
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 1.21,
+        "away": 1.64
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Fransa Ligue 1",
+      "match": "Le Mans FC – Lille OSC",
+      "markets": {
+        "1.5 Üst": 76.9,
+        "2.5 Üst": 53.1,
+        "KG Var": 55.2
+      },
+      "sample": {
+        "home": 5,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.15,
+        "away": 1.65
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Arsenal FC – Manchester City FC",
+      "markets": {
+        "1.5 Üst": 76.0,
+        "2.5 Üst": 51.9,
+        "KG Var": 55.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Nottingham Forest FC – Chelsea FC",
+      "markets": {
+        "1.5 Üst": 76.0,
+        "2.5 Üst": 51.9,
+        "KG Var": 55.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Fransa Ligue 1",
+      "match": "Angers SCO – Racing Club de Lens",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 53.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.15,
+        "away": 1.55
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Fulham FC – AFC Bournemouth",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 54.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.25,
+        "away": 1.45
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Brighton & Hove Albion FC – Newcastle United FC",
+      "markets": {
+        "1.5 Üst": 74.2,
+        "2.5 Üst": 49.4,
+        "KG Var": 49.0
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.75,
+        "away": 0.9
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Derby County FC – Watford FC",
+      "markets": {
+        "1.5 Üst": 72.3,
+        "2.5 Üst": 46.9,
+        "KG Var": 46.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 0.85
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
     }
   ],
-  "candidateCount": 68,
+  "candidateCount": 69,
   "dataQuality": {
     "verifiedOdds": false,
     "verifiedKickoffTimes": false,
     "modelCalibrated": false,
     "bettingRecommendation": false
   },
-  "reason": "PAS — 6/6 lig okundu; bugün 8, 7 günde 72 fikstür; 68 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
+  "reason": "PAS — 6/6 lig okundu; bugün 4, 7 günde 74 fikstür; 69 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
 }

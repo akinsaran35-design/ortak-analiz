@@ -1,9 +1,9 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-24T20:44:58.906275+00:00",
+  "updatedAt": "2026-11-24T22:37:47.129606+00:00",
   "decision": "PAS",
-  "matchedCount": 21,
-  "unmatchedCount": 9,
+  "matchedCount": 23,
+  "unmatchedCount": 7,
   "matched": [
     {
       "match": "Stoke City FC – Millwall FC",
@@ -130,43 +130,47 @@
       "eventId": "b67372e7107fdd259a978e614711e657",
       "kickoff": "2026-11-28T15:00:00+00:00",
       "freshLineCount": 4
+    },
+    {
+      "match": "Lincoln City FC – Wolverhampton Wanderers FC",
+      "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "freshLineCount": 5
+    },
+    {
+      "match": "Derby County FC – Watford FC",
+      "eventId": "82ef491ed2f8399e4ccec9f5d8315cee",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "freshLineCount": 4
     }
   ],
   "unmatched": [
     {
-      "match": "Sheffield United FC – Southampton FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Portsmouth FC – West Ham United FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Wolverhampton Wanderers FC – Derby County FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Middlesbrough FC – Swansea City AFC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Norwich City FC – Queens Park Rangers FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Cardiff City FC – Preston North End FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Bristol City FC – Wrexham AFC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Charlton Athletic FC – Lincoln City FC",
-      "reason": "no_exact_match"
-    },
-    {
       "match": "Everton FC – Liverpool FC",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "Le Mans FC – Lille OSC",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "Arsenal FC – Manchester City FC",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "Nottingham Forest FC – Chelsea FC",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "Angers SCO – Racing Club de Lens",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "Fulham FC – AFC Bournemouth",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "Brighton & Hove Albion FC – Newcastle United FC",
       "reason": "no_exact_match"
     }
   ],
