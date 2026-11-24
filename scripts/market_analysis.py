@@ -50,8 +50,8 @@ def main():
             continue
         market = median(x[1] for x in books.values())
         spread = max(x[1] for x in books.values()) - min(x[1] for x in books.values())
-        rows.append({"match":m["match"],"eventId":m["eventId"],"bookCount":len(books),"marketProbability":round(market,4),"modelProbabilityUncalibrated":p,"difference":round(p-market,4),"bookProbabilitySpread":round(spread,4),"marketFairOdds":round(1/market,4),"medianMargin":round(median(x[0] for x in books.values()),4)})
-    report = {"version":"3.2","snapshotFresh":fresh,"updatedAt":now.isoformat(),"decision":"PAS","modelCalibrated":False,"market":"2.5","comparedCount":len(rows),"rows":rows}
+        rows.append({"match":m["match"],"eventId":m["eventId"],"bookCount":len(books),"bookProbabilities":{k:round(v[1],6) for k,v in books.items()},"marketProbability":round(market,4),"modelProbabilityUncalibrated":p,"difference":round(p-market,4),"bookProbabilitySpread":round(spread,4),"marketFairOdds":round(1/market,4),"medianMargin":round(median(x[0] for x in books.values()),4)})
+    report = {"version":"3.4","snapshotFresh":fresh,"updatedAt":now.isoformat(),"decision":"PAS","modelCalibrated":False,"market":"2.5","comparedCount":len(rows),"rows":rows}
     Path("market_analysis.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
     print("Market comparisons:",len(rows))
 
