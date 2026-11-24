@@ -1,5 +1,5 @@
 {
-  "version": "2.1",
+  "version": "2.2-experimental",
   "date": "2026-11-24",
   "modelCalibrated": false,
   "markets": {
@@ -128,5 +128,94 @@
       "tested": 203,
       "errors": []
     }
-  ]
+  ],
+  "experimentalV22": {
+    "1.5 Üst": {
+      "matchedSample": 1637,
+      "windows": [
+        {
+          "from": "2026-02-14",
+          "untilExclusive": "2026-03-22",
+          "tested": 332,
+          "oldBrier": 0.157008,
+          "newBrier": 0.157408,
+          "baselineBrier": 0.15426
+        },
+        {
+          "from": "2026-03-22",
+          "untilExclusive": "2026-05-10",
+          "tested": 330,
+          "oldBrier": 0.134672,
+          "newBrier": 0.136804,
+          "baselineBrier": 0.127135
+        },
+        {
+          "from": "2026-05-10",
+          "untilExclusive": "2026-11-24",
+          "tested": 335,
+          "oldBrier": 0.142634,
+          "newBrier": 0.144298,
+          "baselineBrier": 0.143183
+        }
+      ]
+    },
+    "2.5 Üst": {
+      "matchedSample": 1637,
+      "windows": [
+        {
+          "from": "2026-02-14",
+          "untilExclusive": "2026-03-22",
+          "tested": 332,
+          "oldBrier": 0.253361,
+          "newBrier": 0.252662,
+          "baselineBrier": 0.248467
+        },
+        {
+          "from": "2026-03-22",
+          "untilExclusive": "2026-05-10",
+          "tested": 330,
+          "oldBrier": 0.234565,
+          "newBrier": 0.236615,
+          "baselineBrier": 0.240987
+        },
+        {
+          "from": "2026-05-10",
+          "untilExclusive": "2026-11-24",
+          "tested": 335,
+          "oldBrier": 0.237388,
+          "newBrier": 0.239142,
+          "baselineBrier": 0.23984
+        }
+      ]
+    },
+    "KG Var": {
+      "matchedSample": 1637,
+      "windows": [
+        {
+          "from": "2026-02-14",
+          "untilExclusive": "2026-03-22",
+          "tested": 332,
+          "oldBrier": 0.253214,
+          "newBrier": 0.254774,
+          "baselineBrier": 0.244829
+        },
+        {
+          "from": "2026-03-22",
+          "untilExclusive": "2026-05-10",
+          "tested": 330,
+          "oldBrier": 0.232953,
+          "newBrier": 0.236083,
+          "baselineBrier": 0.235845
+        },
+        {
+          "from": "2026-05-10",
+          "untilExclusive": "2026-11-24",
+          "tested": 335,
+          "oldBrier": 0.237935,
+          "newBrier": 0.239007,
+          "baselineBrier": 0.236841
+        }
+      ]
+    }
+  }
 }
