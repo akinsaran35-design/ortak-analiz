@@ -69,6 +69,40 @@ def predict(history, home, away):
         (1-math.exp(-h))*(1-math.exp(-a))
     ]
 
+# V4.0: experimental league-normalized Poisson and Dixon-Coles.
+def dc_rates(past, home, away):
+    recent = past[-380:]
+    if len(recent) < 50:
+        return None
+    lh = max(0.2, sum(x[3] for x in recent)/len(recent))
+    la = max(0.2, sum(x[4] for x in recent)/len(recent))
+    hh = [x for x in recent if x[1] == home][-15:]
+    aa = [x for x in recent if x[2] == away][-15:]
+    def ratio(rows, idx, mean):
+        return (sum(x[idx] for x in rows)+5*mean)/((len(rows)+5)*mean)
+    h = lh*ratio(hh,3,lh)*ratio(aa,3,lh)
+    a = la*ratio(aa,4,la)*ratio(hh,4,la)
+    return max(.15,min(4,h)), max(.15,min(4,a))
+
+def tau(h,a,x,y,rho):
+    if (x,y)==(0,0): return 1-h*a*rho
+    if (x,y)==(0,1): return 1+h*rho
+    if (x,y)==(1,0): return 1+a*rho
+    if (x,y)==(1,1): return 1-rho
+    return 1.0
+
+def fit_rho(records):
+    if len(records)<50: return 0.0
+    grid = [i/100 for i in range(-15,7)]
+    return max(grid,key=lambda r: sum(math.log(tau(h,a,x,y,r)) for _,h,a,x,y in records)-10*r*r)
+
+def dc_probs(h,a,rho):
+    delta = math.exp(-h-a)*h*a*rho
+    return [over(h+a,1)-delta,over(h+a,2),
+            (1-math.exp(-h))*(1-math.exp(-a))-delta]
+
+experimental = {m: [] for m in MARKETS}
+
 results = {m: [] for m in MARKETS}
 diagnostics = []
 
@@ -100,6 +134,7 @@ for league in LEAGUES:
         for (d, h, a), s in matches.items()
     )
     tested = 0
+    dc_history = []
     for d, h, a, hg, ag in history:
         if d < today - timedelta(days=365):
             continue
@@ -114,6 +149,15 @@ for league in LEAGUES:
         ]
         for market, p, y in zip(MARKETS, probabilities, actual):
             results[market].append((d, p, y))
+        rates = dc_rates(past,h,a)
+        if rates is not None:
+            rh,ra = rates
+            rho = fit_rho([x for x in dc_history if x[0]<d])
+            independent = dc_probs(rh,ra,0)
+            corrected = dc_probs(rh,ra,rho)
+            for market,p,q,c,y in zip(MARKETS,probabilities,independent,corrected,actual):
+                experimental[market].append((d,p,q,c,y))
+            dc_history.append((d,rh,ra,hg,ag))
         tested += 1
 
     diagnostics.append({
@@ -176,6 +220,27 @@ for market, dated_rows in results.items():
         "trainingBinProbabilities":bins,
         "status":"experimental_holdout"
     }
+
+report["experimentalV40"] = {}
+for market, rows in experimental.items():
+    rows.sort()
+    dates = sorted(set(x[0] for x in rows))
+    folds = []
+    if len(dates)>=10:
+        for k in range(5,10):
+            start = dates[len(dates)*k//10]
+            end = dates[len(dates)*(k+1)//10] if k<9 else today
+            train = [x for x in rows if x[0]<start]
+            test = [x for x in rows if start<=x[0]<end]
+            if not train or not test: continue
+            base = sum(x[4] for x in train)/len(train)
+            def brier(idx):
+                return round(sum((x[idx]-x[4])**2 for x in test)/len(test),6)
+            folds.append({"start":start.isoformat(),"endExclusive":end.isoformat(),
+                          "tested":len(test),"oldBrier":brier(1),
+                          "normalizedBrier":brier(2),"dixonColesBrier":brier(3),
+                          "baselineBrier":round(sum((base-x[4])**2 for x in test)/len(test),6)})
+    report["experimentalV40"][market] = {"folds":folds,"status":"research_only"}
 
 output = Path(__file__).resolve().parent.parent / "backtest.json"
 output.write_text(
