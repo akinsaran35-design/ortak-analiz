@@ -29,6 +29,7 @@ jobs:
         run: python scripts/odds_probe.py
 
       - name: Uluslararasi oranlari al
+        if: github.ref != 'refs/heads/ortak-analiz-v2-8'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/fetch_odds.py
@@ -38,6 +39,9 @@ jobs:
 
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py
+
+      - name: Takim isimleri birim testi
+        run: python scripts/test_match_odds.py
 
       - name: Mac eslestirme kontrolu
         run: python scripts/match_odds.py
