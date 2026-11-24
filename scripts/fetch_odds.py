@@ -10,7 +10,21 @@ LEAGUES = ["soccer_epl", "soccer_efl_champ", "soccer_germany_bundesliga",
            "soccer_spain_la_liga", "soccer_italy_serie_a", "soccer_france_ligue_one"]
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
-report = {"version": "2.6", "updatedAt": now.isoformat(), "source": "The Odds API",
+# Reuse only a complete, recent snapshot; never change its original timestamp.
+cache_path = Path("odds.json")
+try:
+    cached = json.loads(cache_path.read_text(encoding="utf-8"))
+    stamp = datetime.fromisoformat(cached["updatedAt"].replace("Z", "+00:00"))
+    age = (now - stamp).total_seconds()
+    if (0 <= age < 1200 and cached.get("source") == "The Odds API"
+            and cached.get("region") == "uk" and cached.get("market") == "totals"
+            and cached.get("errors") == [] and isinstance(cached.get("events"), list)
+            and cached["events"]):
+        print("Reusing recent odds snapshot; no API requests.")
+        raise SystemExit(0)
+except (OSError, ValueError, TypeError, KeyError, AttributeError):
+    pass
+report = {"version": "3.7", "updatedAt": now.isoformat(), "source": "The Odds API",
           "region": "uk", "market": "totals", "events": [], "errors": [],
           "remainingCredits": None, "decision": "PAS"}
 def request(path, params):
