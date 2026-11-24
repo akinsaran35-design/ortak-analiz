@@ -22,6 +22,12 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Odds API baglanti testi
+        if: github.ref == 'refs/heads/ortak-analiz-v2-5'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/odds_probe.py
+
       - name: Performans motoru birim testi
         run: python scripts/test_track_performance.py
 
