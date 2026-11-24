@@ -214,7 +214,7 @@ for market, rows in experimental.items():
         lo = rows[int(len(rows)*start)][0]
         hi = rows[int(len(rows)*end)][0] if end<1 else today
         train = [y for d,p,q,y,l in rows if d<lo]
-        test = [(p,q,y) for d,p,q,y in rows if lo<=d<hi]
+        test = [(p,q,y) for d,p,q,y,l in rows if lo<=d<hi]
         if not train or not test:
             continue
         base = sum(train)/len(train)
