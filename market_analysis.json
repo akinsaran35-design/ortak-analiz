@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-24T15:00:57.665512+00:00",
+  "updatedAt": "2026-11-24T15:30:41.352378+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -10,18 +10,19 @@
     {
       "match": "Sheffield United FC – Southampton FC",
       "eventId": "031162fd89aa3c1fd39e523b3c82d35a",
-      "bookCount": 3,
+      "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.577428,
-        "leovegas": 0.566234,
+        "leovegas": 0.562827,
+        "matchbook": 0.556391,
         "williamhill": 0.575916
       },
-      "marketProbability": 0.5759,
+      "marketProbability": 0.5694,
       "modelProbabilityUncalibrated": 0.66,
-      "difference": 0.0841,
-      "bookProbabilitySpread": 0.0112,
-      "marketFairOdds": 1.7364,
-      "medianMargin": 0.0718
+      "difference": 0.0906,
+      "bookProbabilitySpread": 0.021,
+      "marketFairOdds": 1.7563,
+      "medianMargin": 0.0679
     },
     {
       "match": "Portsmouth FC – West Ham United FC",
@@ -79,12 +80,12 @@
         "grosvenor": 0.446809,
         "leovegas": 0.433766,
         "williamhill": 0.453333,
-        "matchbook": 0.422111
+        "matchbook": 0.41791
       },
       "marketProbability": 0.4403,
       "modelProbabilityUncalibrated": 0.48200000000000004,
       "difference": 0.0417,
-      "bookProbabilitySpread": 0.0312,
+      "bookProbabilitySpread": 0.0354,
       "marketFairOdds": 2.2712,
       "medianMargin": 0.0668
     },
@@ -95,13 +96,13 @@
       "bookProbabilities": {
         "grosvenor": 0.461333,
         "leovegas": 0.447368,
-        "matchbook": 0.443038,
+        "matchbook": 0.435768,
         "williamhill": 0.463807
       },
       "marketProbability": 0.4544,
       "modelProbabilityUncalibrated": 0.38299999999999995,
       "difference": -0.0714,
-      "bookProbabilitySpread": 0.0208,
+      "bookProbabilitySpread": 0.028,
       "marketFairOdds": 2.2009,
       "medianMargin": 0.0688
     },
@@ -114,13 +115,13 @@
         "leovegas": 0.484127,
         "casumo": 0.478142,
         "williamhill": 0.5,
-        "matchbook": 0.485861
+        "matchbook": 0.484536
       },
-      "marketProbability": 0.4859,
+      "marketProbability": 0.4845,
       "modelProbabilityUncalibrated": 0.6409999999999999,
-      "difference": 0.1551,
+      "difference": 0.1565,
       "bookProbabilitySpread": 0.0219,
-      "marketFairOdds": 2.0582,
+      "marketFairOdds": 2.0638,
       "medianMargin": 0.0593
     },
     {
@@ -165,7 +166,7 @@
         "leovegas": 0.515873,
         "casumo": 0.506849,
         "williamhill": 0.536193,
-        "matchbook": 0.51928
+        "matchbook": 0.516624
       },
       "marketProbability": 0.5159,
       "modelProbabilityUncalibrated": 0.531,
@@ -198,13 +199,13 @@
       "bookProbabilities": {
         "grosvenor": 0.59949,
         "williamhill": 0.625,
-        "matchbook": 0.610169
+        "matchbook": 0.612048
       },
-      "marketProbability": 0.6102,
+      "marketProbability": 0.612,
       "modelProbabilityUncalibrated": 0.706,
-      "difference": 0.0958,
+      "difference": 0.094,
       "bookProbabilitySpread": 0.0255,
-      "marketFairOdds": 1.6389,
+      "marketFairOdds": 1.6339,
       "medianMargin": 0.0625
     },
     {
