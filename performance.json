@@ -1,0 +1,208 @@
+{
+  "version": "2.4",
+  "updatedAt": "2026-11-24T11:27:23.341623+03:00",
+  "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
+  "errors": [],
+  "overall": {
+    "recorded": 22,
+    "settled": 0,
+    "pending": 22,
+    "markets": {
+      "1.5 Üst": {
+        "tested": 0,
+        "brier": null,
+        "actualRate": null
+      },
+      "2.5 Üst": {
+        "tested": 0,
+        "brier": null,
+        "actualRate": null
+      },
+      "KG Var": {
+        "tested": 0,
+        "brier": null,
+        "actualRate": null
+      }
+    }
+  },
+  "leagues": {
+    "İngiltere Premier Lig": {
+      "recorded": 3,
+      "settled": 0,
+      "pending": 3,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "İngiltere Championship": {
+      "recorded": 12,
+      "settled": 0,
+      "pending": 12,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Almanya Bundesliga": {
+      "recorded": 4,
+      "settled": 0,
+      "pending": 4,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "İspanya La Liga": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "İtalya Serie A": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Fransa Ligue 1": {
+      "recorded": 3,
+      "settled": 0,
+      "pending": 3,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    }
+  },
+  "periods": {
+    "30": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "90": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    }
+  }
+}
