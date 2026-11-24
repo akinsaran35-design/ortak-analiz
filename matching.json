@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-24T14:35:27.428952+00:00",
+  "updatedAt": "2026-11-24T15:00:57.620281+00:00",
   "decision": "PAS",
   "matchedCount": 29,
   "unmatchedCount": 1,
@@ -9,7 +9,7 @@
       "match": "Sheffield United FC – Southampton FC",
       "eventId": "031162fd89aa3c1fd39e523b3c82d35a",
       "kickoff": "2026-11-24T19:45:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 3
     },
     {
       "match": "Portsmouth FC – West Ham United FC",
