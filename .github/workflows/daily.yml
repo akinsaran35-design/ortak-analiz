@@ -57,18 +57,19 @@ jobs:
       - name: Piyasa gecmisini arsivle
         run: python scripts/archive_market.py
 
-      - name: Gecmis maclari test et
-        run: python scripts/backtest.py
+      - name: V4.3 Backtest ve model dogrulama
+        run: python scripts/validate_model.py
 
       - name: Tahmin performansini takip et
         run: python scripts/track_performance.py
 
       - name: Raporlari kaydet
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json market_analysis.json market_archive.json
+          git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json market_analysis.json market_archive.json validation.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update daily analysis and backtest"
+            git commit -m "Update daily analysis and validation"
             git push
           fi
