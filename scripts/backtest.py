@@ -113,7 +113,7 @@ for league in LEAGUES:
             int(hg > 0 and ag > 0)
         ]
         for market, p, y in zip(MARKETS, probabilities, actual):
-            results[market].append((p, y))
+            results[market].append((d, p, y))
         tested += 1
 
     diagnostics.append({
@@ -124,14 +124,15 @@ for league in LEAGUES:
     })
 
 report = {
-    "version": "2.0",
+    "version": "2.1",
     "date": today.isoformat(),
     "modelCalibrated": False,
     "markets": {},
     "diagnostics": diagnostics
 }
 
-for market, rows in results.items():
+for market, dated_rows in results.items():
+    rows = [(p,y) for d,p,y in dated_rows]
     n = len(rows)
     if not n:
         report["markets"][market] = {"tested": 0}
@@ -150,6 +151,30 @@ for market, rows in results.items():
         "brierScore": round(
             sum((p-y)**2 for p, y in rows) / n, 4
         )
+    }
+
+    ordered = sorted(dated_rows)
+    cutoff = ordered[int(n*0.7)][0]
+    train = [(p,y) for d,p,y in ordered if d < cutoff]
+    test = [(p,y) for d,p,y in ordered if d >= cutoff]
+    if len(train) < 100 or len(test) < 50:
+        report["markets"][market]["validation"] = {"status":"insufficient_data"}
+        continue
+    base = sum(y for p,y in train)/len(train)
+    bins = []
+    for k in range(10):
+        group = [(p,y) for p,y in train if min(9,int(p*10)) == k]
+        bins.append((sum(y for p,y in group)+20*base)/(len(group)+20))
+    raw = sum((p-y)**2 for p,y in test)/len(test)
+    calibrated = sum((bins[min(9,int(p*10))]-y)**2 for p,y in test)/len(test)
+    baseline = sum((base-y)**2 for p,y in test)/len(test)
+    report["markets"][market]["validation"] = {
+        "cutoff": cutoff.isoformat(), "train":len(train), "test":len(test),
+        "rawBrier":round(raw,6), "calibratedBrier":round(calibrated,6),
+        "baselineBrier":round(baseline,6),
+        "improvesBoth":calibrated < min(raw,baseline),
+        "trainingBinProbabilities":bins,
+        "status":"experimental_holdout"
     }
 
 output = Path(__file__).resolve().parent.parent / "backtest.json"
