@@ -128,5 +128,157 @@
       "tested": 203,
       "errors": []
     }
-  ]
+  ],
+  "experimentalV40": {
+    "1.5 Üst": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-07",
+          "tested": 216,
+          "oldBrier": 0.154359,
+          "normalizedBrier": 0.155223,
+          "dixonColesBrier": 0.155941,
+          "baselineBrier": 0.151093
+        },
+        {
+          "start": "2026-04-07",
+          "endExclusive": "2026-04-28",
+          "tested": 179,
+          "oldBrier": 0.137746,
+          "normalizedBrier": 0.138112,
+          "dixonColesBrier": 0.139098,
+          "baselineBrier": 0.13226
+        },
+        {
+          "start": "2026-04-28",
+          "endExclusive": "2026-05-23",
+          "tested": 165,
+          "oldBrier": 0.138986,
+          "normalizedBrier": 0.146033,
+          "dixonColesBrier": 0.146964,
+          "baselineBrier": 0.136919
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-02",
+          "tested": 121,
+          "oldBrier": 0.150879,
+          "normalizedBrier": 0.149278,
+          "dixonColesBrier": 0.149873,
+          "baselineBrier": 0.148889
+        },
+        {
+          "start": "2026-09-02",
+          "endExclusive": "2026-11-24",
+          "tested": 145,
+          "oldBrier": 0.142336,
+          "normalizedBrier": 0.145792,
+          "dixonColesBrier": 0.146551,
+          "baselineBrier": 0.142688
+        }
+      ],
+      "status": "research_only"
+    },
+    "2.5 Üst": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-07",
+          "tested": 216,
+          "oldBrier": 0.246421,
+          "normalizedBrier": 0.248695,
+          "dixonColesBrier": 0.248695,
+          "baselineBrier": 0.250517
+        },
+        {
+          "start": "2026-04-07",
+          "endExclusive": "2026-04-28",
+          "tested": 179,
+          "oldBrier": 0.234512,
+          "normalizedBrier": 0.232098,
+          "dixonColesBrier": 0.232098,
+          "baselineBrier": 0.241524
+        },
+        {
+          "start": "2026-04-28",
+          "endExclusive": "2026-05-23",
+          "tested": 165,
+          "oldBrier": 0.236321,
+          "normalizedBrier": 0.243667,
+          "dixonColesBrier": 0.243667,
+          "baselineBrier": 0.245185
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-02",
+          "tested": 121,
+          "oldBrier": 0.249877,
+          "normalizedBrier": 0.246281,
+          "dixonColesBrier": 0.246281,
+          "baselineBrier": 0.241936
+        },
+        {
+          "start": "2026-09-02",
+          "endExclusive": "2026-11-24",
+          "tested": 145,
+          "oldBrier": 0.231204,
+          "normalizedBrier": 0.241113,
+          "dixonColesBrier": 0.241113,
+          "baselineBrier": 0.231974
+        }
+      ],
+      "status": "research_only"
+    },
+    "KG Var": {
+      "folds": [
+        {
+          "start": "2026-03-07",
+          "endExclusive": "2026-04-07",
+          "tested": 216,
+          "oldBrier": 0.246326,
+          "normalizedBrier": 0.24888,
+          "dixonColesBrier": 0.249903,
+          "baselineBrier": 0.238685
+        },
+        {
+          "start": "2026-04-07",
+          "endExclusive": "2026-04-28",
+          "tested": 179,
+          "oldBrier": 0.235152,
+          "normalizedBrier": 0.235393,
+          "dixonColesBrier": 0.236352,
+          "baselineBrier": 0.236769
+        },
+        {
+          "start": "2026-04-28",
+          "endExclusive": "2026-05-23",
+          "tested": 165,
+          "oldBrier": 0.230389,
+          "normalizedBrier": 0.233506,
+          "dixonColesBrier": 0.234096,
+          "baselineBrier": 0.242284
+        },
+        {
+          "start": "2026-05-23",
+          "endExclusive": "2026-09-02",
+          "tested": 121,
+          "oldBrier": 0.249441,
+          "normalizedBrier": 0.253043,
+          "dixonColesBrier": 0.253353,
+          "baselineBrier": 0.245463
+        },
+        {
+          "start": "2026-09-02",
+          "endExclusive": "2026-11-24",
+          "tested": 145,
+          "oldBrier": 0.23544,
+          "normalizedBrier": 0.244937,
+          "dixonColesBrier": 0.246689,
+          "baselineBrier": 0.226684
+        }
+      ],
+      "status": "research_only"
+    }
+  }
 }

@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-24T12:17:27.440336+00:00",
+  "updatedAt": "2026-11-24T12:50:02.146673+00:00",
   "decision": "PAS",
   "matchedCount": 29,
   "unmatchedCount": 1,
@@ -27,7 +27,7 @@
       "match": "Middlesbrough FC – Swansea City AFC",
       "eventId": "e239a6d57b2cf15091f673c2448fbf4f",
       "kickoff": "2026-11-24T19:45:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 1
     },
     {
       "match": "Norwich City FC – Queens Park Rangers FC",
