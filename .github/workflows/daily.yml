@@ -28,6 +28,11 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/odds_probe.py
 
+      - name: Uluslararasi oranlari al
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_odds.py
+
       - name: Performans motoru birim testi
         run: python scripts/test_track_performance.py
 
@@ -44,7 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily.json backtest.json prediction_archive.json performance.json
+          git add daily.json backtest.json prediction_archive.json performance.json odds.json
           if ! git diff --cached --quiet; then
             git commit -m "Update daily analysis and backtest"
             git push
