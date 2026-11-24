@@ -2,8 +2,13 @@ name: Ortak Analiz Gunluk
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    # 08:00 and 18:00 Europe/Istanbul; up to 12 odds credits/day.
+    - cron: '0 5,15 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: ortak-analiz-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
