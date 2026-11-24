@@ -8,17 +8,5 @@
   "minimumMatches": 500,
   "liveEnabled": false,
   "status": "collecting_data",
-  "errors": [
-    "en.1/2025-26: 'list' object has no attribute 'get'",
-    "en.1/2026-27: 'list' object has no attribute 'get'",
-    "en.2/2025-26: 'list' object has no attribute 'get'",
-    "en.2/2026-27: 'list' object has no attribute 'get'",
-    "de.1/2025-26: 'list' object has no attribute 'get'",
-    "de.1/2026-27: 'list' object has no attribute 'get'",
-    "es.1/2025-26: 'list' object has no attribute 'get'",
-    "es.1/2026-27: 'list' object has no attribute 'get'",
-    "it.1/2025-26: 'list' object has no attribute 'get'",
-    "fr.1/2025-26: 'list' object has no attribute 'get'",
-    "fr.1/2026-27: 'list' object has no attribute 'get'"
-  ]
+  "errors": []
 }
