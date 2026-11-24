@@ -25,7 +25,13 @@ def main():
     for record in events.values():
         obs = record["observations"]
         record["probabilityChange"] = round(obs[-1]["marketProbability"]-obs[0]["marketProbability"],4) if len(obs)>1 else None
-    path.write_text(json.dumps({"version":"3.0","decision":"PAS","events":events},ensure_ascii=False,indent=2),encoding="utf-8")
+        record["observationCount"] = len(obs)
+        record["distinctProbabilityCount"] = len({x["marketProbability"] for x in obs})
+        record["movementStatus"] = ("insufficient_observations" if len(obs)<2 else
+                                    "unchanged" if record["distinctProbabilityCount"] == 1 else
+                                    "observed_change")
+        record["observationSpanMinutes"] = round((datetime.fromisoformat(obs[-1]["observedAt"].replace("Z","+00:00")) - datetime.fromisoformat(obs[0]["observedAt"].replace("Z","+00:00"))).total_seconds()/60,2) if obs else 0
+    path.write_text(json.dumps({"version":"3.3","decision":"PAS","events":events},ensure_ascii=False,indent=2),encoding="utf-8")
     print("Archived events:",len(events))
 
 if __name__ == "__main__":
