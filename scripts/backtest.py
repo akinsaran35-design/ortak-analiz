@@ -69,6 +69,29 @@ def predict(history, home, away):
         (1-math.exp(-h))*(1-math.exp(-a))
     ]
 
+def predict_v22(history, home, away):
+    if len(history) < 40:
+        return None
+    recent = sorted(history, reverse=True)[:300]
+    lh = max(0.3, sum(x[3] for x in recent)/len(recent))
+    la = max(0.3, sum(x[4] for x in recent)/len(recent))
+    def strength(name, at_home):
+        games = sorted([x for x in history if (x[1] if at_home else x[2]) == name], reverse=True)[:12]
+        if len(games) < 5:
+            return None
+        weights = [0.9**i for i in range(len(games))]
+        gf = sum(w*x[3 if at_home else 4] for w,x in zip(weights,games))
+        ga = sum(w*x[4 if at_home else 3] for w,x in zip(weights,games))
+        n = sum(weights)
+        return ((gf+5*(lh if at_home else la))/(n+5), (ga+5*(la if at_home else lh))/(n+5))
+    hs, aws = strength(home, True), strength(away, False)
+    if hs is None or aws is None:
+        return None
+    h = max(0.15,min(4,hs[0]*aws[1]/lh))
+    a = max(0.15,min(4,aws[0]*hs[1]/la))
+    return [over(h+a,1),over(h+a,2),(1-math.exp(-h))*(1-math.exp(-a))]
+
+experimental = {m: [] for m in MARKETS}
 results = {m: [] for m in MARKETS}
 diagnostics = []
 
@@ -114,6 +137,10 @@ for league in LEAGUES:
         ]
         for market, p, y in zip(MARKETS, probabilities, actual):
             results[market].append((d, p, y))
+        new = predict_v22(past,h,a)
+        if new is not None:
+            for market,p,q,y in zip(MARKETS,probabilities,new,actual):
+                experimental[market].append((d,p,q,y))
         tested += 1
 
     diagnostics.append({
@@ -124,7 +151,7 @@ for league in LEAGUES:
     })
 
 report = {
-    "version": "2.1",
+    "version": "2.2-experimental",
     "date": today.isoformat(),
     "modelCalibrated": False,
     "markets": {},
@@ -177,6 +204,25 @@ for market, dated_rows in results.items():
         "status":"experimental_holdout"
     }
 
+report["experimentalV22"] = {}
+for market, rows in experimental.items():
+    rows.sort()
+    windows = []
+    for start,end in [(0.4,0.6),(0.6,0.8),(0.8,1.0)]:
+        if len(rows)<200:
+            break
+        lo = rows[int(len(rows)*start)][0]
+        hi = rows[int(len(rows)*end)][0] if end<1 else today
+        train = [y for d,p,q,y in rows if d<lo]
+        test = [(p,q,y) for d,p,q,y in rows if lo<=d<hi]
+        if not train or not test:
+            continue
+        base = sum(train)/len(train)
+        windows.append({"from":lo.isoformat(),"untilExclusive":hi.isoformat(),"tested":len(test),
+            "oldBrier":round(sum((p-y)**2 for p,q,y in test)/len(test),6),
+            "newBrier":round(sum((q-y)**2 for p,q,y in test)/len(test),6),
+            "baselineBrier":round(sum((base-y)**2 for p,q,y in test)/len(test),6)})
+    report["experimentalV22"][market] = {"matchedSample":len(rows),"windows":windows}
 output = Path(__file__).resolve().parent.parent / "backtest.json"
 output.write_text(
     json.dumps(report, ensure_ascii=False, indent=2),
