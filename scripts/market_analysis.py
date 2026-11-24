@@ -13,7 +13,12 @@ def metrics(over, under):
 def main():
     now = datetime.now(timezone.utc)
     daily, odds, matching = [json.loads(Path(p).read_text(encoding="utf-8")) for p in ("daily.json","odds.json","matching.json")]
-    events = {e["id"]: e for e in odds["events"]}
+    try:
+        snapshot_age = now - datetime.fromisoformat(odds["updatedAt"].replace("Z","+00:00"))
+        fresh = timedelta(0) <= snapshot_age <= timedelta(minutes=30)
+    except (KeyError, ValueError, TypeError):
+        fresh = False
+    events = {e["id"]: e for e in odds["events"]} if fresh else {}
     candidates = {}
     for c in daily["candidates"]:
         candidates.setdefault(c["match"], []).append(c)
@@ -43,7 +48,7 @@ def main():
         p = cs[0]["markets"]["2.5 Üst"]/100
         market = median(x[1] for x in books.values())
         rows.append({"match":m["match"],"eventId":m["eventId"],"bookCount":len(books),"marketProbability":round(market,4),"modelProbabilityUncalibrated":p,"difference":round(p-market,4),"medianMargin":round(median(x[0] for x in books.values()),4)})
-    report = {"version":"2.9","updatedAt":now.isoformat(),"decision":"PAS","modelCalibrated":False,"market":"2.5","comparedCount":len(rows),"rows":rows}
+    report = {"version":"3.1","snapshotFresh":fresh,"updatedAt":now.isoformat(),"decision":"PAS","modelCalibrated":False,"market":"2.5","comparedCount":len(rows),"rows":rows}
     Path("market_analysis.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
     print("Market comparisons:",len(rows))
 
