@@ -46,9 +46,12 @@ def main():
         if len(books) < 3:
             continue
         p = cs[0]["markets"]["2.5 Üst"]/100
+        if not math.isfinite(p) or not 0 <= p <= 1:
+            continue
         market = median(x[1] for x in books.values())
-        rows.append({"match":m["match"],"eventId":m["eventId"],"bookCount":len(books),"marketProbability":round(market,4),"modelProbabilityUncalibrated":p,"difference":round(p-market,4),"medianMargin":round(median(x[0] for x in books.values()),4)})
-    report = {"version":"3.1","snapshotFresh":fresh,"updatedAt":now.isoformat(),"decision":"PAS","modelCalibrated":False,"market":"2.5","comparedCount":len(rows),"rows":rows}
+        spread = max(x[1] for x in books.values()) - min(x[1] for x in books.values())
+        rows.append({"match":m["match"],"eventId":m["eventId"],"bookCount":len(books),"marketProbability":round(market,4),"modelProbabilityUncalibrated":p,"difference":round(p-market,4),"bookProbabilitySpread":round(spread,4),"marketFairOdds":round(1/market,4),"medianMargin":round(median(x[0] for x in books.values()),4)})
+    report = {"version":"3.2","snapshotFresh":fresh,"updatedAt":now.isoformat(),"decision":"PAS","modelCalibrated":False,"market":"2.5","comparedCount":len(rows),"rows":rows}
     Path("market_analysis.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
     print("Market comparisons:",len(rows))
 
