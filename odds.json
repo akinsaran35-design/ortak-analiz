@@ -1,0 +1,5258 @@
+{
+  "version": "2.6",
+  "updatedAt": "2026-11-24T09:32:24.040609+00:00",
+  "source": "The Odds API",
+  "region": "uk",
+  "market": "totals",
+  "events": [
+    {
+      "id": "40d95e660c301c2d8a5a7a6317017b65",
+      "league": "soccer_epl",
+      "home": "Nottingham Forest",
+      "away": "Chelsea",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.77,
+              "under": 2.02,
+              "marketOverProbability": 0.532982,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.81,
+              "under": 2.16,
+              "marketOverProbability": 0.544081,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ab87184803a63f7b679f1d12b01c3271",
+      "league": "soccer_epl",
+      "home": "Manchester United",
+      "away": "Brentford",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.56,
+              "under": 2.38,
+              "marketOverProbability": 0.604061,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.61,
+              "under": 2.5,
+              "marketOverProbability": 0.608273,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0bc17a3c7d8153e72b94688960cc603a",
+      "league": "soccer_epl",
+      "home": "Leeds United",
+      "away": "Coventry City",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.18,
+              "marketOverProbability": 0.570681,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.12,
+              "marketOverProbability": 0.554974,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.65,
+              "under": 2.24,
+              "marketOverProbability": 0.575835,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9d23f6ad21946dd258869ebc22236cf0",
+      "league": "soccer_epl",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f45e9062c2f755b977c98d496c22697b",
+      "league": "soccer_epl",
+      "home": "Everton",
+      "away": "Liverpool",
+      "kickoff": "2026-11-29T12:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.15,
+              "marketOverProbability": 0.567282,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.66,
+              "under": 2.2,
+              "marketOverProbability": 0.569948,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.74,
+              "under": 2.24,
+              "marketOverProbability": 0.562814,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "56ea91809ff11d3a67557a21b3371cb9",
+      "league": "soccer_epl",
+      "home": "Fulham",
+      "away": "Bournemouth",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.08,
+              "marketOverProbability": 0.550265,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.71,
+              "under": 2.12,
+              "marketOverProbability": 0.553525,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.81,
+              "under": 2.12,
+              "marketOverProbability": 0.53944,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e9c2b74ecaafd494e3b2d8521b52216a",
+      "league": "soccer_epl",
+      "home": "Brighton and Hove Albion",
+      "away": "Newcastle United",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e12585885a7f135127f276b7f1ecdf89",
+      "league": "soccer_epl",
+      "home": "Crystal Palace",
+      "away": "Hull City",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.1,
+              "marketOverProbability": 0.555556,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.71,
+              "under": 2.12,
+              "marketOverProbability": 0.553525,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 2.14,
+              "marketOverProbability": 0.543147,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09bb0ba9a9025d64fed410375c0c8f80",
+      "league": "soccer_epl",
+      "home": "Sunderland",
+      "away": "Tottenham Hotspur",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.9,
+              "under": 1.83,
+              "marketOverProbability": 0.490617,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.75,
+              "marketOverProbability": 0.478142,
+              "lastUpdate": "2026-11-24T09:32:20Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.89,
+              "under": 1.88,
+              "marketOverProbability": 0.498674,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.06,
+              "under": 1.88,
+              "marketOverProbability": 0.477157,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d20ede55e54ed7b55fdc36ca373727c0",
+      "league": "soccer_epl",
+      "home": "Arsenal",
+      "away": "Manchester City",
+      "kickoff": "2026-11-29T16:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.08,
+              "marketOverProbability": 0.550265,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.72,
+              "under": 2.1,
+              "marketOverProbability": 0.549738,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.78,
+              "under": 2.16,
+              "marketOverProbability": 0.548223,
+              "lastUpdate": "2026-11-24T09:32:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7aff6bfea3ca1c4b177694977831b85",
+      "league": "soccer_epl",
+      "home": "Coventry City",
+      "away": "Ipswich Town",
+      "kickoff": "2026-12-01T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.15,
+              "marketOverProbability": 0.570292,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.25,
+              "marketOverProbability": 0.584416,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.14,
+              "marketOverProbability": 0.560209,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "836ad618789e171f7357649ce8e62b49",
+      "league": "soccer_epl",
+      "home": "Chelsea",
+      "away": "Crystal Palace",
+      "kickoff": "2026-12-02T19:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4bd9a6fe4abb6774b3e8700b3dbe8d00",
+      "league": "soccer_epl",
+      "home": "Hull City",
+      "away": "Nottingham Forest",
+      "kickoff": "2026-12-02T19:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.83,
+              "marketOverProbability": 0.497283,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.8,
+              "marketOverProbability": 0.493151,
+              "lastUpdate": "2026-11-24T09:32:20Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.85,
+              "marketOverProbability": 0.492021,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10abd18165c999264777913e42c9f96c",
+      "league": "soccer_epl",
+      "home": "Manchester City",
+      "away": "Leeds United",
+      "kickoff": "2026-12-02T19:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9629fcc970336d106d144eaa25cec853",
+      "league": "soccer_epl",
+      "home": "Liverpool",
+      "away": "Sunderland",
+      "kickoff": "2026-12-02T19:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.2,
+              "marketOverProbability": 0.583554,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.25,
+              "marketOverProbability": 0.581395,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5f5235df01a384e23ff224101ff175e1",
+      "league": "soccer_epl",
+      "home": "Brentford",
+      "away": "Arsenal",
+      "kickoff": "2026-12-02T20:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 1.92,
+              "marketOverProbability": 0.523161,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.79,
+              "under": 1.97,
+              "marketOverProbability": 0.523936,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2198fb9aab762e9e1c8c6af4113a1d31",
+      "league": "soccer_epl",
+      "home": "Aston Villa",
+      "away": "Everton",
+      "kickoff": "2026-12-02T20:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.05,
+              "marketOverProbability": 0.551075,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.71,
+              "under": 2.1,
+              "marketOverProbability": 0.551181,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28546d4aefd5efb320c2d2ceee11b66d",
+      "league": "soccer_epl",
+      "home": "Bournemouth",
+      "away": "Brighton and Hove Albion",
+      "kickoff": "2026-12-02T20:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.05,
+              "marketOverProbability": 0.555556,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.12,
+              "marketOverProbability": 0.554974,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0c405290d0f977236962e55ba90c2c04",
+      "league": "soccer_epl",
+      "home": "Newcastle United",
+      "away": "Manchester United",
+      "kickoff": "2026-12-02T20:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0c1ccc010b185ada698661a21316696c",
+      "league": "soccer_epl",
+      "home": "Tottenham Hotspur",
+      "away": "Fulham",
+      "kickoff": "2026-12-03T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 1.98,
+              "marketOverProbability": 0.538043,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.06,
+              "marketOverProbability": 0.543536,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "92c74d2f4a4275568feff8072ed15e73",
+      "league": "soccer_efl_champ",
+      "home": "Bristol City",
+      "away": "Wrexham AFC",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.06,
+              "under": 1.7,
+              "marketOverProbability": 0.452128,
+              "lastUpdate": "2026-11-24T09:32:01Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.18,
+              "under": 1.67,
+              "marketOverProbability": 0.433766,
+              "lastUpdate": "2026-11-24T09:32:22Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.05,
+              "under": 1.7,
+              "marketOverProbability": 0.453333,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.36,
+              "under": 1.67,
+              "marketOverProbability": 0.414392,
+              "lastUpdate": "2026-11-24T09:32:21Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae887a08eef3ff58053488dbddde28a3",
+      "league": "soccer_efl_champ",
+      "home": "Cardiff City",
+      "away": "Preston North End",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.36,
+              "under": 3.0,
+              "marketOverProbability": 0.688073,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6d21b6408d1f1c42def270b7f1ae5b21",
+      "league": "soccer_efl_champ",
+      "home": "Charlton Athletic",
+      "away": "Lincoln City",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.02,
+              "under": 1.72,
+              "marketOverProbability": 0.459893,
+              "lastUpdate": "2026-11-24T09:32:01Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.1,
+              "under": 1.7,
+              "marketOverProbability": 0.447368,
+              "lastUpdate": "2026-11-24T09:32:22Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.22,
+              "under": 1.76,
+              "marketOverProbability": 0.442211,
+              "lastUpdate": "2026-11-24T09:32:21Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.8,
+              "marketOverProbability": 0.48,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e239a6d57b2cf15091f673c2448fbf4f",
+      "league": "soccer_efl_champ",
+      "home": "Middlesbrough",
+      "away": "Swansea City",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.51,
+              "under": 2.4,
+              "marketOverProbability": 0.613811,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cbb9284b5d072d869a395ba3ffb8bbff",
+      "league": "soccer_efl_champ",
+      "home": "Norwich City",
+      "away": "Queens Park Rangers",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.18,
+              "marketOverProbability": 0.573684,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.25,
+              "marketOverProbability": 0.581395,
+              "lastUpdate": "2026-11-24T09:32:22Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2ca2ce56eb3bccf1a5de2d0ccc2207f",
+      "league": "soccer_efl_champ",
+      "home": "Portsmouth",
+      "away": "West Ham United",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.72,
+              "under": 2.02,
+              "marketOverProbability": 0.540107,
+              "lastUpdate": "2026-11-24T09:32:01Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.77,
+              "under": 2.02,
+              "marketOverProbability": 0.532982,
+              "lastUpdate": "2026-11-24T09:32:22Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "031162fd89aa3c1fd39e523b3c82d35a",
+      "league": "soccer_efl_champ",
+      "home": "Sheffield United",
+      "away": "Southampton",
+      "kickoff": "2026-11-24T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.63,
+              "under": 2.17,
+              "marketOverProbability": 0.571053,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.18,
+              "marketOverProbability": 0.566234,
+              "lastUpdate": "2026-11-24T09:32:22Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "018856cb75135463eb1972d978339023",
+      "league": "soccer_efl_champ",
+      "home": "Wolverhampton Wanderers",
+      "away": "Derby County",
+      "kickoff": "2026-11-24T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.56,
+              "under": 2.28,
+              "marketOverProbability": 0.59375,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.2,
+              "marketOverProbability": 0.572917,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.65,
+              "under": 2.14,
+              "marketOverProbability": 0.564644,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.1,
+              "marketOverProbability": 0.548303,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.79,
+              "under": 2.14,
+              "marketOverProbability": 0.544529,
+              "lastUpdate": "2026-11-24T09:32:21Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.83,
+              "under": 1.88,
+              "marketOverProbability": 0.506739,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.92,
+              "marketOverProbability": 0.509284,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.85,
+              "marketOverProbability": 0.506849,
+              "lastUpdate": "2026-11-24T09:31:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.89,
+              "under": 2.0,
+              "marketOverProbability": 0.514139,
+              "lastUpdate": "2026-11-24T09:32:21Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 1.97,
+              "marketOverProbability": 0.52957,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.15,
+              "marketOverProbability": 0.561358,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "77dfddf6dea97d5ecb5e2463b29fe67e",
+      "league": "soccer_efl_champ",
+      "home": "Stoke City",
+      "away": "Millwall",
+      "kickoff": "2026-11-25T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.87,
+              "under": 1.85,
+              "marketOverProbability": 0.497312,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.83,
+              "marketOverProbability": 0.484127,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.75,
+              "marketOverProbability": 0.478142,
+              "lastUpdate": "2026-11-24T09:31:24Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.02,
+              "under": 1.89,
+              "marketOverProbability": 0.483376,
+              "lastUpdate": "2026-11-24T09:32:21Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32b8e3ea76d9d8b2b36577063d40862e",
+      "league": "soccer_efl_champ",
+      "home": "Southampton",
+      "away": "Middlesbrough",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1d96ec37a8b7022ef39a7755a655243",
+      "league": "soccer_efl_champ",
+      "home": "Blackburn Rovers",
+      "away": "Charlton Athletic",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.89,
+              "under": 1.82,
+              "marketOverProbability": 0.490566,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.88,
+              "under": 1.85,
+              "marketOverProbability": 0.495979,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.83,
+              "under": 1.83,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:31:24Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.8,
+              "marketOverProbability": 0.48,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d2bc2d3b4a81177cb6b86f4add6ff81f",
+      "league": "soccer_efl_champ",
+      "home": "Lincoln City",
+      "away": "Wolverhampton Wanderers",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.74,
+              "under": 2.0,
+              "marketOverProbability": 0.534759,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.08,
+              "marketOverProbability": 0.550265,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d47bc722be164b3a733434e89f224654",
+      "league": "soccer_efl_champ",
+      "home": "Preston North End",
+      "away": "Norwich City",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.51,
+              "under": 2.4,
+              "marketOverProbability": 0.613811,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15fc58a442321c2a85f7a814466c0ab9",
+      "league": "soccer_efl_champ",
+      "home": "Birmingham City",
+      "away": "Bolton Wanderers",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.56,
+              "under": 2.32,
+              "marketOverProbability": 0.597938,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b67372e7107fdd259a978e614711e657",
+      "league": "soccer_efl_champ",
+      "home": "West Bromwich Albion",
+      "away": "Bristol City",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.82,
+              "under": 1.89,
+              "marketOverProbability": 0.509434,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.77,
+              "under": 1.98,
+              "marketOverProbability": 0.528,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 1.91,
+              "marketOverProbability": 0.521858,
+              "lastUpdate": "2026-11-24T09:31:24Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3f93526d7c8e0ca84734aea60c13900a",
+      "league": "soccer_efl_champ",
+      "home": "Millwall",
+      "away": "Burnley",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.72,
+              "under": 2.02,
+              "marketOverProbability": 0.540107,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.18,
+              "marketOverProbability": 0.570681,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "82ef491ed2f8399e4ccec9f5d8315cee",
+      "league": "soccer_efl_champ",
+      "home": "Derby County",
+      "away": "Watford",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.79,
+              "under": 1.93,
+              "marketOverProbability": 0.518817,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.92,
+              "marketOverProbability": 0.516129,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.85,
+              "marketOverProbability": 0.506849,
+              "lastUpdate": "2026-11-24T09:31:24Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9cd8c682c6864b59a7f1a58964083e08",
+      "league": "soccer_efl_champ",
+      "home": "Wrexham AFC",
+      "away": "Portsmouth",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.04,
+              "under": 1.71,
+              "marketOverProbability": 0.456,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.8,
+              "marketOverProbability": 0.48,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.8,
+              "marketOverProbability": 0.48,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dc42f49649c5329c2c47f94fc4ca0c89",
+      "league": "soccer_efl_champ",
+      "home": "Queens Park Rangers",
+      "away": "Sheffield United",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.07,
+              "marketOverProbability": 0.552,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.18,
+              "marketOverProbability": 0.570681,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c836236766f7859e3c1d61caa581abe1",
+      "league": "soccer_efl_champ",
+      "home": "West Ham United",
+      "away": "Stoke City",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.54,
+              "under": 2.35,
+              "marketOverProbability": 0.604113,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.58,
+              "under": 2.3,
+              "marketOverProbability": 0.592784,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bcf1bfc44adf70bf134bd132c4a5ba87",
+      "league": "soccer_efl_champ",
+      "home": "Swansea City",
+      "away": "Cardiff City",
+      "kickoff": "2026-11-29T12:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:32:02Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "698f4a7967ead89e10205a68ceb4bda4",
+      "league": "soccer_germany_bundesliga",
+      "home": "Werder Bremen",
+      "away": "Borussia Monchengladbach",
+      "kickoff": "2026-11-27T19:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2c30e2ebaf6c30aaa4e3fb56cffa6a29",
+      "league": "soccer_germany_bundesliga",
+      "home": "1. FC Köln",
+      "away": "Elversberg",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.35,
+              "marketOverProbability": 0.59949,
+              "lastUpdate": "2026-11-24T09:32:20Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.63,
+              "under": 2.46,
+              "marketOverProbability": 0.601467,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3b025a029f51fbeb9580a178d0612f50",
+      "league": "soccer_germany_bundesliga",
+      "home": "Hamburger SV",
+      "away": "Bayern Munich",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.22,
+              "under": 4.0,
+              "marketOverProbability": 0.766284,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f84a9da7eedd0ca11a28a1a7a8edddc7",
+      "league": "soccer_germany_bundesliga",
+      "home": "SC Paderborn",
+      "away": "FC Schalke 04",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.02,
+              "marketOverProbability": 0.538667,
+              "lastUpdate": "2026-11-24T09:32:20Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.14,
+              "marketOverProbability": 0.560209,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.82,
+              "under": 2.1,
+              "marketOverProbability": 0.535714,
+              "lastUpdate": "2026-11-24T09:32:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "365e1a00908ab1cd5a51a53ede2b86b2",
+      "league": "soccer_germany_bundesliga",
+      "home": "FSV Mainz 05",
+      "away": "Union Berlin",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5d838190a8f5932d7fcfbcc26bacdd9c",
+      "league": "soccer_germany_bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.25,
+              "under": 3.75,
+              "marketOverProbability": 0.75,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2aa9aa95157eb36fed45135c995cdd80",
+      "league": "soccer_germany_bundesliga",
+      "home": "SC Freiburg",
+      "away": "RB Leipzig",
+      "kickoff": "2026-11-29T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "98dc79e39433bb4c59bf9753e35a5cdf",
+      "league": "soccer_germany_bundesliga",
+      "home": "TSG Hoffenheim",
+      "away": "Augsburg",
+      "kickoff": "2026-11-29T16:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.3,
+              "under": 3.4,
+              "marketOverProbability": 0.723404,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "98415e21c147d701bd81e70b1af0f3a7",
+      "league": "soccer_germany_bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "Bayer Leverkusen",
+      "kickoff": "2026-11-29T18:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4535d59d6670cc8342d5e6b40ce76fb4",
+      "league": "soccer_germany_bundesliga",
+      "home": "Bayern Munich",
+      "away": "SC Paderborn",
+      "kickoff": "2026-12-04T19:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.12,
+              "under": 5.5,
+              "marketOverProbability": 0.830816,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5089643216359c9456d425930e6c57d9",
+      "league": "soccer_germany_bundesliga",
+      "home": "Augsburg",
+      "away": "1. FC Köln",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.4,
+              "under": 2.75,
+              "marketOverProbability": 0.662651,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a7ef7acc0225e0ff03816f515299f248",
+      "league": "soccer_germany_bundesliga",
+      "home": "Bayer Leverkusen",
+      "away": "Borussia Monchengladbach",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.29,
+              "under": 3.5,
+              "marketOverProbability": 0.730689,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cd71180a378c01105112f52d2764b922",
+      "league": "soccer_germany_bundesliga",
+      "home": "RB Leipzig",
+      "away": "FSV Mainz 05",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.3,
+              "under": 3.4,
+              "marketOverProbability": 0.723404,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08bc048e18105e5b3e41fae5d67a0500",
+      "league": "soccer_germany_bundesliga",
+      "home": "Union Berlin",
+      "away": "Hamburger SV",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.12,
+              "marketOverProbability": 0.566845,
+              "lastUpdate": "2026-11-24T09:32:20Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2d1c66b6eb335336d2dd0739e090ed37",
+      "league": "soccer_germany_bundesliga",
+      "home": "SC Freiburg",
+      "away": "TSG Hoffenheim",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "550c0c298df8a95f8c64eba817ec8f55",
+      "league": "soccer_germany_bundesliga",
+      "home": "Eintracht Frankfurt",
+      "away": "Werder Bremen",
+      "kickoff": "2026-12-05T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.36,
+              "under": 3.0,
+              "marketOverProbability": 0.688073,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cd4d6b19f7f06ffc538fbbb6984fb4c4",
+      "league": "soccer_germany_bundesliga",
+      "home": "FC Schalke 04",
+      "away": "Borussia Dortmund",
+      "kickoff": "2026-12-06T14:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.55,
+              "under": 2.25,
+              "marketOverProbability": 0.592105,
+              "lastUpdate": "2026-11-24T09:32:20Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1b1684ab8d51cc6692d6337106459ce",
+      "league": "soccer_germany_bundesliga",
+      "home": "Elversberg",
+      "away": "VfB Stuttgart",
+      "kickoff": "2026-12-06T16:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.33,
+              "under": 3.25,
+              "marketOverProbability": 0.709607,
+              "lastUpdate": "2026-11-24T09:31:40Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80c92a163a81b69fef76530221e2edd0",
+      "league": "soccer_spain_la_liga",
+      "home": "Levante",
+      "away": "Real Racing Club de Santander",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c81520b9a9794749cfdab57f89bdeb16",
+      "league": "soccer_spain_la_liga",
+      "home": "Real Betis",
+      "away": "Rayo Vallecano",
+      "kickoff": "2026-11-28T13:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.38,
+              "marketOverProbability": 0.602532,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33d92dabbd2606dfe9d31058f7b20cc8",
+      "league": "soccer_spain_la_liga",
+      "home": "Málaga",
+      "away": "Athletic Bilbao",
+      "kickoff": "2026-11-28T15:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.91,
+              "marketOverProbability": 0.507979,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.88,
+              "marketOverProbability": 0.504021,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.83,
+              "under": 1.83,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:32:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.85,
+              "marketOverProbability": 0.492021,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.99,
+              "marketOverProbability": 0.505076,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40236ab976955345ebd1edb72abf6b22",
+      "league": "soccer_spain_la_liga",
+      "home": "Elche CF",
+      "away": "Atlético Madrid",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.55,
+              "under": 2.4,
+              "marketOverProbability": 0.607595,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.54,
+              "under": 2.4,
+              "marketOverProbability": 0.609137,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c99772cba1418e72f2eded26e4afeb59",
+      "league": "soccer_spain_la_liga",
+      "home": "Real Madrid",
+      "away": "Alavés",
+      "kickoff": "2026-11-28T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.3,
+              "under": 3.3,
+              "marketOverProbability": 0.717391,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1ab9541320cecbe9f043565fd4a141e0",
+      "league": "soccer_spain_la_liga",
+      "home": "Valencia",
+      "away": "CA Osasuna",
+      "kickoff": "2026-11-29T13:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.2,
+              "under": 1.65,
+              "marketOverProbability": 0.428571,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.18,
+              "under": 1.64,
+              "marketOverProbability": 0.429319,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.1,
+              "under": 1.7,
+              "marketOverProbability": 0.447368,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.3,
+              "under": 1.67,
+              "marketOverProbability": 0.420655,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "69fc06d019491be2aa1bf69b8f8041e3",
+      "league": "soccer_spain_la_liga",
+      "home": "Deportivo La Coruña",
+      "away": "Barcelona",
+      "kickoff": "2026-11-29T15:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.22,
+              "under": 3.9,
+              "marketOverProbability": 0.761719,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20c78c2ef75c4a6d7f4af81dd32e97cd",
+      "league": "soccer_spain_la_liga",
+      "home": "Celta Vigo",
+      "away": "Villarreal",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.83,
+              "under": 1.95,
+              "marketOverProbability": 0.515873,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 2.02,
+              "marketOverProbability": 0.535809,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.77,
+              "under": 2.0,
+              "marketOverProbability": 0.530504,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.79,
+              "under": 2.12,
+              "marketOverProbability": 0.542199,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f892ea6d5eca105c36ca9468b12857f2",
+      "league": "soccer_spain_la_liga",
+      "home": "Real Sociedad",
+      "away": "Sevilla",
+      "kickoff": "2026-11-29T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 2.05,
+              "marketOverProbability": 0.539474,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 2.0,
+              "marketOverProbability": 0.533333,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.76,
+              "under": 2.02,
+              "marketOverProbability": 0.534392,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.83,
+              "under": 2.1,
+              "marketOverProbability": 0.534351,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b648a7246af1d3a839b0fcd212849a7c",
+      "league": "soccer_spain_la_liga",
+      "home": "Espanyol",
+      "away": "Getafe",
+      "kickoff": "2026-11-30T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.4,
+              "under": 1.53,
+              "marketOverProbability": 0.389313,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.4,
+              "under": 1.53,
+              "marketOverProbability": 0.389313,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.43,
+              "under": 1.53,
+              "marketOverProbability": 0.386364,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.54,
+              "under": 1.59,
+              "marketOverProbability": 0.384988,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dc10f5ff4125d724e0fbfe7efe6d86aa",
+      "league": "soccer_spain_la_liga",
+      "home": "Real Sociedad",
+      "away": "Real Madrid",
+      "kickoff": "2026-12-02T18:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.29,
+              "under": 3.5,
+              "marketOverProbability": 0.730689,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b8a455b28ca30fd95640228161c7c5c5",
+      "league": "soccer_spain_la_liga",
+      "home": "Barcelona",
+      "away": "Atlético Madrid",
+      "kickoff": "2026-12-02T20:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.29,
+              "under": 3.5,
+              "marketOverProbability": 0.730689,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae879dadcd548f1a496b6751b4d85bff",
+      "league": "soccer_spain_la_liga",
+      "home": "Alavés",
+      "away": "Espanyol",
+      "kickoff": "2026-12-04T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.98,
+              "under": 1.7,
+              "marketOverProbability": 0.461957,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.05,
+              "under": 1.74,
+              "marketOverProbability": 0.459103,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48c892928774ec33befa04f76c52cb4a",
+      "league": "soccer_spain_la_liga",
+      "home": "Real Racing Club de Santander",
+      "away": "Deportivo La Coruña",
+      "kickoff": "2026-12-05T13:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.58,
+              "under": 2.18,
+              "marketOverProbability": 0.579787,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.15,
+              "marketOverProbability": 0.562827,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "188e30796d25595e117480df1cfb19b8",
+      "league": "soccer_spain_la_liga",
+      "home": "Rayo Vallecano",
+      "away": "Levante",
+      "kickoff": "2026-12-05T15:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.05,
+              "marketOverProbability": 0.551075,
+              "lastUpdate": "2026-11-24T09:32:04Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.12,
+              "marketOverProbability": 0.557895,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "378d4432ce400c83859123281c1189de",
+      "league": "soccer_spain_la_liga",
+      "home": "Villarreal",
+      "away": "Real Sociedad",
+      "kickoff": "2026-12-05T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.4,
+              "under": 2.75,
+              "marketOverProbability": 0.662651,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a6378d2226c38068085412dcfe6ed2c9",
+      "league": "soccer_spain_la_liga",
+      "home": "Barcelona",
+      "away": "Celta Vigo",
+      "kickoff": "2026-12-05T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.17,
+              "under": 4.5,
+              "marketOverProbability": 0.793651,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3ecf4f05571a5c613459857c9b3f7b0",
+      "league": "soccer_spain_la_liga",
+      "home": "CA Osasuna",
+      "away": "Elche CF",
+      "kickoff": "2026-12-06T13:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.8,
+              "marketOverProbability": 0.493151,
+              "lastUpdate": "2026-11-24T09:32:25Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.95,
+              "marketOverProbability": 0.52,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.83,
+              "marketOverProbability": 0.497283,
+              "lastUpdate": "2026-11-24T09:32:05Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.89,
+              "under": 1.87,
+              "marketOverProbability": 0.49734,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "59e9722830fbf906910c1526eddf110c",
+      "league": "soccer_spain_la_liga",
+      "home": "Athletic Bilbao",
+      "away": "Real Madrid",
+      "kickoff": "2026-12-06T15:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "93deed2cc6f80d75270abbb13437c51c",
+      "league": "soccer_spain_la_liga",
+      "home": "Getafe",
+      "away": "Valencia",
+      "kickoff": "2026-12-06T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 1.5,
+              "over": 1.5,
+              "under": 2.38,
+              "marketOverProbability": 0.613402,
+              "lastUpdate": "2026-11-24T09:32:05Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.38,
+              "under": 1.53,
+              "marketOverProbability": 0.391304,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 1.5,
+              "over": 1.53,
+              "under": 2.45,
+              "marketOverProbability": 0.615578,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24d5861f7f820bd4e070deaaa063fac9",
+      "league": "soccer_spain_la_liga",
+      "home": "Atlético Madrid",
+      "away": "Real Betis",
+      "kickoff": "2026-12-06T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dce7c3c907eb304c1884dc9f87ecda2f",
+      "league": "soccer_spain_la_liga",
+      "home": "Sevilla",
+      "away": "Málaga",
+      "kickoff": "2026-12-07T20:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 1.95,
+              "marketOverProbability": 0.529891,
+              "lastUpdate": "2026-11-24T09:32:05Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.76,
+              "under": 2.02,
+              "marketOverProbability": 0.534392,
+              "lastUpdate": "2026-11-24T09:32:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e9a663f13e7503c0ac20a54804338b60",
+      "league": "soccer_italy_serie_a",
+      "home": "Venezia",
+      "away": "Bologna",
+      "kickoff": "2026-11-27T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.8,
+              "marketOverProbability": 0.48,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.73,
+              "marketOverProbability": 0.470109,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.8,
+              "marketOverProbability": 0.48,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.1,
+              "under": 1.84,
+              "marketOverProbability": 0.467005,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "af3432ca724da03d38f0ff4e62045e4c",
+      "league": "soccer_italy_serie_a",
+      "home": "Frosinone",
+      "away": "Parma",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.36,
+              "under": 3.0,
+              "marketOverProbability": 0.688073,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aec86b479e922f437ba228b9a9d74da1",
+      "league": "soccer_italy_serie_a",
+      "home": "Torino",
+      "away": "Lazio",
+      "kickoff": "2026-11-28T17:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.83,
+              "under": 1.9,
+              "marketOverProbability": 0.509383,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.8,
+              "marketOverProbability": 0.493151,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.91,
+              "marketOverProbability": 0.507979,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.95,
+              "marketOverProbability": 0.52,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.92,
+              "under": 1.99,
+              "marketOverProbability": 0.508951,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f128c19fa7af43e30dbe3c373e7bc27e",
+      "league": "soccer_italy_serie_a",
+      "home": "Inter Milan",
+      "away": "Genoa",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.55,
+              "under": 2.35,
+              "marketOverProbability": 0.602564,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.23,
+              "marketOverProbability": 0.579221,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.63,
+              "under": 2.52,
+              "marketOverProbability": 0.607229,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3d47b94324eb7cde85bd93993437d1c",
+      "league": "soccer_italy_serie_a",
+      "home": "Udinese",
+      "away": "Fiorentina",
+      "kickoff": "2026-11-29T11:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.12,
+              "marketOverProbability": 0.559367,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.12,
+              "marketOverProbability": 0.554974,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.71,
+              "under": 2.24,
+              "marketOverProbability": 0.567089,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dc63586a1b1d938a461d71bf5b36d982",
+      "league": "soccer_italy_serie_a",
+      "home": "Sassuolo",
+      "away": "Napoli",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c979bd4559d2d81a8e2fe8f2d4aec376",
+      "league": "soccer_italy_serie_a",
+      "home": "AS Roma",
+      "away": "Monza",
+      "kickoff": "2026-11-29T17:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.3,
+              "under": 3.4,
+              "marketOverProbability": 0.723404,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3876ad367184af2f8fc04a544fc894aa",
+      "league": "soccer_italy_serie_a",
+      "home": "Como",
+      "away": "Juventus",
+      "kickoff": "2026-11-29T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.77,
+              "under": 1.98,
+              "marketOverProbability": 0.528,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 1.91,
+              "marketOverProbability": 0.521858,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 2.04,
+              "marketOverProbability": 0.538259,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.86,
+              "under": 2.06,
+              "marketOverProbability": 0.52551,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f1d2a6064d1452074570bbc656d36a20",
+      "league": "soccer_italy_serie_a",
+      "home": "Lecce",
+      "away": "Atalanta BC",
+      "kickoff": "2026-11-30T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.58,
+              "under": 2.25,
+              "marketOverProbability": 0.587467,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.3,
+              "marketOverProbability": 0.589744,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.61,
+              "under": 2.36,
+              "marketOverProbability": 0.594458,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3d57da6bdb20b65145bc2479ee5f2ae7",
+      "league": "soccer_italy_serie_a",
+      "home": "Cagliari",
+      "away": "AC Milan",
+      "kickoff": "2026-11-30T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.92,
+              "marketOverProbability": 0.516129,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.75,
+              "under": 1.91,
+              "marketOverProbability": 0.521858,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.82,
+              "under": 1.94,
+              "marketOverProbability": 0.515957,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.84,
+              "under": 2.0,
+              "marketOverProbability": 0.520833,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7a3763ed676aa657abff78f841bb851c",
+      "league": "soccer_italy_serie_a",
+      "home": "Bologna",
+      "away": "AS Roma",
+      "kickoff": "2026-12-04T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.1,
+              "marketOverProbability": 0.564516,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.76,
+              "under": 2.02,
+              "marketOverProbability": 0.534392,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a57d8cacc423d2a63545b240790dcdba",
+      "league": "soccer_italy_serie_a",
+      "home": "Monza",
+      "away": "Como",
+      "kickoff": "2026-12-05T14:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.5,
+              "under": 2.5,
+              "marketOverProbability": 0.625,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11e1b8546651036ec5c70eb8e91bb622",
+      "league": "soccer_italy_serie_a",
+      "home": "Frosinone",
+      "away": "Inter Milan",
+      "kickoff": "2026-12-05T17:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.22,
+              "under": 4.0,
+              "marketOverProbability": 0.766284,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7d32e6e9bbd769e7d505467971c4d7ca",
+      "league": "soccer_italy_serie_a",
+      "home": "Napoli",
+      "away": "Lecce",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.55,
+              "under": 2.25,
+              "marketOverProbability": 0.592105,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.25,
+              "marketOverProbability": 0.584416,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.32,
+              "marketOverProbability": 0.596401,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "388c70bbc3bc49af4a2245b4caebd730",
+      "league": "soccer_italy_serie_a",
+      "home": "Genoa",
+      "away": "Torino",
+      "kickoff": "2026-12-06T11:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.05,
+              "under": 1.7,
+              "marketOverProbability": 0.453333,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.08,
+              "under": 1.64,
+              "marketOverProbability": 0.44086,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.2,
+              "under": 1.65,
+              "marketOverProbability": 0.428571,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7b643abf36a551631acaae1f1a8e01f6",
+      "league": "soccer_italy_serie_a",
+      "home": "Lazio",
+      "away": "Atalanta BC",
+      "kickoff": "2026-12-06T14:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7c5bfc26c8bcf7406d9ef8aa7dda19f1",
+      "league": "soccer_italy_serie_a",
+      "home": "Juventus",
+      "away": "Udinese",
+      "kickoff": "2026-12-06T17:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.05,
+              "marketOverProbability": 0.551075,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.12,
+              "marketOverProbability": 0.557895,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c392b1fa1b32963c5daf3a415a0dfc2a",
+      "league": "soccer_italy_serie_a",
+      "home": "AC Milan",
+      "away": "Parma",
+      "kickoff": "2026-12-06T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.58,
+              "under": 2.18,
+              "marketOverProbability": 0.579787,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.25,
+              "marketOverProbability": 0.584416,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.63,
+              "under": 2.23,
+              "marketOverProbability": 0.57772,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b179b898dfd55412a2e75dfe42752adc",
+      "league": "soccer_italy_serie_a",
+      "home": "Venezia",
+      "away": "Sassuolo",
+      "kickoff": "2026-12-07T17:30:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.15,
+              "marketOverProbability": 0.573333,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.65,
+              "under": 2.2,
+              "marketOverProbability": 0.571429,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e14f8c52d44db0f33abb0c108145fb09",
+      "league": "soccer_italy_serie_a",
+      "home": "Fiorentina",
+      "away": "Cagliari",
+      "kickoff": "2026-12-07T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.64,
+              "under": 2.08,
+              "marketOverProbability": 0.55914,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.68,
+              "under": 2.12,
+              "marketOverProbability": 0.557895,
+              "lastUpdate": "2026-11-24T09:31:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02ff879cf54f6d1fec2664efee0431db",
+      "league": "soccer_france_ligue_one",
+      "home": "Brest",
+      "away": "Paris FC",
+      "kickoff": "2026-11-27T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.95,
+              "marketOverProbability": 0.52,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.8,
+              "under": 1.85,
+              "marketOverProbability": 0.506849,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.74,
+              "under": 2.04,
+              "marketOverProbability": 0.539683,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24b99950496c624f7124922fc1bda8bd",
+      "league": "soccer_france_ligue_one",
+      "home": "Angers",
+      "away": "RC Lens",
+      "kickoff": "2026-11-28T16:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.28,
+              "marketOverProbability": 0.587629,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.25,
+              "marketOverProbability": 0.584416,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f96c1137c9d3f7e2e691275a2988fa1d",
+      "league": "soccer_france_ligue_one",
+      "home": "Le Havre",
+      "away": "Strasbourg",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.32,
+              "marketOverProbability": 0.596401,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aaa86a483888836242da663a46957894",
+      "league": "soccer_france_ligue_one",
+      "home": "Le Mans FC",
+      "away": "Lille",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.98,
+              "under": 1.77,
+              "marketOverProbability": 0.472,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 2.02,
+              "under": 1.76,
+              "marketOverProbability": 0.465608,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12002f6f804a122db48271ff05be03c0",
+      "league": "soccer_france_ligue_one",
+      "home": "Paris Saint Germain",
+      "away": "Lorient",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.4,
+              "under": 2.75,
+              "marketOverProbability": 0.662651,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e9a1243fbfbc6f58d0e0522eb07ea9a1",
+      "league": "soccer_france_ligue_one",
+      "home": "Nice",
+      "away": "Troyes",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.65,
+              "under": 2.18,
+              "marketOverProbability": 0.569191,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.2,
+              "marketOverProbability": 0.575916,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a370db12aaff183a94f8e9a6acb6d4c9",
+      "league": "soccer_france_ligue_one",
+      "home": "Auxerre",
+      "away": "Marseille",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.58,
+              "under": 2.3,
+              "marketOverProbability": 0.592784,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.56,
+              "under": 2.38,
+              "marketOverProbability": 0.604061,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "71c08940a73e9f42d503449f052a1bdf",
+      "league": "soccer_france_ligue_one",
+      "home": "Toulouse",
+      "away": "Rennes",
+      "kickoff": "2026-11-29T16:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.25,
+              "marketOverProbability": 0.584416,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.43,
+              "marketOverProbability": 0.613636,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.57,
+              "under": 2.3,
+              "marketOverProbability": 0.594315,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca8aa566e27e1d05b47e8151b2066f9a",
+      "league": "soccer_france_ligue_one",
+      "home": "Lyon",
+      "away": "AS Monaco",
+      "kickoff": "2026-11-29T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.83,
+              "marketOverProbability": 0.489305,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.85,
+              "under": 1.75,
+              "marketOverProbability": 0.486111,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.82,
+              "under": 1.93,
+              "marketOverProbability": 0.514667,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2d7a5b011f0c4376e6b5ecf66eb23c38",
+      "league": "soccer_france_ligue_one",
+      "home": "Toulouse",
+      "away": "Paris Saint Germain",
+      "kickoff": "2026-12-04T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.4,
+              "under": 2.75,
+              "marketOverProbability": 0.662651,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0664eb46841c1e73a465bfca504b9b54",
+      "league": "soccer_france_ligue_one",
+      "home": "Lille",
+      "away": "Auxerre",
+      "kickoff": "2026-12-05T16:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 1.95,
+              "marketOverProbability": 0.529891,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 2.0,
+              "marketOverProbability": 0.536193,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.81,
+              "under": 1.95,
+              "marketOverProbability": 0.518617,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2d7cee4a6e6a6632dd46f252c9e379f2",
+      "league": "soccer_france_ligue_one",
+      "home": "AS Monaco",
+      "away": "Angers",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.44,
+              "under": 2.62,
+              "marketOverProbability": 0.64532,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "162927041eba2297840966c6f7955053",
+      "league": "soccer_france_ligue_one",
+      "home": "RC Lens",
+      "away": "Le Havre",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.52,
+              "under": 2.3,
+              "marketOverProbability": 0.602094,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ebe354c9e9e99226e30939d97baeca99",
+      "league": "soccer_france_ligue_one",
+      "home": "Paris FC",
+      "away": "Le Mans FC",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.55,
+              "under": 2.25,
+              "marketOverProbability": 0.592105,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.28,
+              "marketOverProbability": 0.587629,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "219b1f7a6a968c14cb9777d7b994cdb9",
+      "league": "soccer_france_ligue_one",
+      "home": "Strasbourg",
+      "away": "Lorient",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.77,
+              "marketOverProbability": 0.480978,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.95,
+              "under": 1.73,
+              "marketOverProbability": 0.470109,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.91,
+              "under": 1.91,
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.93,
+              "under": 1.82,
+              "marketOverProbability": 0.485333,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f518a80f5839eb0ed1dbb7a3a786b5ce",
+      "league": "soccer_france_ligue_one",
+      "home": "Troyes",
+      "away": "Lyon",
+      "kickoff": "2026-12-06T14:00:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 1.95,
+              "marketOverProbability": 0.529891,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "casumo",
+          "name": "Casumo",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.73,
+              "under": 1.91,
+              "marketOverProbability": 0.524725,
+              "lastUpdate": "2026-11-24T09:31:25Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.7,
+              "under": 2.05,
+              "marketOverProbability": 0.546667,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.77,
+              "under": 2.0,
+              "marketOverProbability": 0.530504,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3160c4ebce077755037d4ff63025fca5",
+      "league": "soccer_france_ligue_one",
+      "home": "Rennes",
+      "away": "Brest",
+      "kickoff": "2026-12-06T16:15:00+00:00",
+      "bookmakers": [
+        {
+          "key": "leovegas",
+          "name": "LeoVegas",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.15,
+              "marketOverProbability": 0.573333,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.6,
+              "under": 2.25,
+              "marketOverProbability": 0.584416,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        },
+        {
+          "key": "grosvenor",
+          "name": "Grosvenor",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.63,
+              "under": 2.23,
+              "marketOverProbability": 0.57772,
+              "lastUpdate": "2026-11-24T09:31:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2c07c0c3ca22cd045e140f4054b91323",
+      "league": "soccer_france_ligue_one",
+      "home": "Marseille",
+      "away": "Nice",
+      "kickoff": "2026-12-06T19:45:00+00:00",
+      "bookmakers": [
+        {
+          "key": "williamhill",
+          "name": "William Hill",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.53,
+              "under": 2.38,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-24T09:32:23Z"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "remainingCredits": 494,
+  "decision": "PAS",
+  "eventCount": 122
+}
