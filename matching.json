@@ -1,9 +1,9 @@
 {
-  "version": "2.7",
-  "updatedAt": "2026-11-24T09:37:15.778220+00:00",
+  "version": "2.8",
+  "updatedAt": "2026-11-24T09:40:48.906468+00:00",
   "decision": "PAS",
-  "matchedCount": 24,
-  "unmatchedCount": 6,
+  "matchedCount": 29,
+  "unmatchedCount": 1,
   "matched": [
     {
       "match": "Sheffield United FC – Southampton FC",
@@ -78,9 +78,27 @@
       "freshLineCount": 5
     },
     {
+      "match": "SV Werder Bremen – Borussia Mönchengladbach",
+      "eventId": "698f4a7967ead89e10205a68ceb4bda4",
+      "kickoff": "2026-11-27T19:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
       "match": "Southampton FC – Middlesbrough FC",
       "eventId": "32b8e3ea76d9d8b2b36577063d40862e",
       "kickoff": "2026-11-27T20:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Stade Brestois 29 – Paris FC",
+      "eventId": "02ff879cf54f6d1fec2664efee0431db",
+      "kickoff": "2026-11-27T19:45:00+00:00",
+      "freshLineCount": 4
+    },
+    {
+      "match": "Hamburger SV – FC Bayern München",
+      "eventId": "3b025a029f51fbeb9580a178d0612f50",
+      "kickoff": "2026-11-28T14:30:00+00:00",
       "freshLineCount": 1
     },
     {
@@ -88,6 +106,12 @@
       "eventId": "ab87184803a63f7b679f1d12b01c3271",
       "kickoff": "2026-11-28T15:00:00+00:00",
       "freshLineCount": 3
+    },
+    {
+      "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
+      "eventId": "365e1a00908ab1cd5a51a53ede2b86b2",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "freshLineCount": 1
     },
     {
       "match": "West Ham United FC – Stoke City FC",
@@ -100,6 +124,12 @@
       "eventId": "5d838190a8f5932d7fcfbcc26bacdd9c",
       "kickoff": "2026-11-28T17:30:00+00:00",
       "freshLineCount": 1
+    },
+    {
+      "match": "Le Havre AC – RC Strasbourg Alsace",
+      "eventId": "f96c1137c9d3f7e2e691275a2988fa1d",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "freshLineCount": 3
     },
     {
       "match": "Wrexham AFC – Portsmouth FC",
@@ -151,26 +181,6 @@
     }
   ],
   "unmatched": [
-    {
-      "match": "SV Werder Bremen – Borussia Mönchengladbach",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Stade Brestois 29 – Paris FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Hamburger SV – FC Bayern München",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Le Havre AC – RC Strasbourg Alsace",
-      "reason": "no_exact_match"
-    },
     {
       "match": "Everton FC – Liverpool FC",
       "reason": "no_exact_match"
