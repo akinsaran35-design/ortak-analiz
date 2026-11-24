@@ -1,5 +1,5 @@
 {
-  "version": "3.0",
+  "version": "3.3",
   "decision": "PAS",
   "events": {
     "031162fd89aa3c1fd39e523b3c82d35a": {
@@ -23,9 +23,19 @@
           "marketProbability": 0.5711,
           "modelProbabilityUncalibrated": 0.66,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5686,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 4
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": -0.0025,
+      "observationCount": 4,
+      "distinctProbabilityCount": 2,
+      "movementStatus": "observed_change",
+      "observationSpanMinutes": 27.58
     },
     "c2ca2ce56eb3bccf1a5de2d0ccc2207f": {
       "match": "Portsmouth FC – West Ham United FC",
@@ -48,9 +58,19 @@
           "marketProbability": 0.5401,
           "modelProbabilityUncalibrated": 0.643,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5401,
+          "modelProbabilityUncalibrated": 0.643,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "018856cb75135463eb1972d978339023": {
       "match": "Wolverhampton Wanderers FC – Derby County FC",
@@ -73,9 +93,19 @@
           "marketProbability": 0.5759,
           "modelProbabilityUncalibrated": 0.617,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.617,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "cbb9284b5d072d869a395ba3ffb8bbff": {
       "match": "Norwich City FC – Queens Park Rangers FC",
@@ -98,9 +128,19 @@
           "marketProbability": 0.5759,
           "modelProbabilityUncalibrated": 0.599,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "92c74d2f4a4275568feff8072ed15e73": {
       "match": "Bristol City FC – Wrexham AFC",
@@ -123,9 +163,19 @@
           "marketProbability": 0.4429,
           "modelProbabilityUncalibrated": 0.48200000000000004,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.4429,
+          "modelProbabilityUncalibrated": 0.48200000000000004,
+          "bookCount": 4
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "6d21b6408d1f1c42def270b7f1ae5b21": {
       "match": "Charlton Athletic FC – Lincoln City FC",
@@ -148,9 +198,19 @@
           "marketProbability": 0.4536,
           "modelProbabilityUncalibrated": 0.38299999999999995,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.4536,
+          "modelProbabilityUncalibrated": 0.38299999999999995,
+          "bookCount": 4
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "77dfddf6dea97d5ecb5e2463b29fe67e": {
       "match": "Stoke City FC – Millwall FC",
@@ -173,9 +233,19 @@
           "marketProbability": 0.4841,
           "modelProbabilityUncalibrated": 0.6409999999999999,
           "bookCount": 5
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.4845,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 5
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0004,
+      "observationCount": 4,
+      "distinctProbabilityCount": 2,
+      "movementStatus": "observed_change",
+      "observationSpanMinutes": 27.58
     },
     "9dfe9df3ad88c453e3572872bf500488": {
       "match": "Bolton Wanderers FC – West Bromwich Albion FC",
@@ -198,9 +268,19 @@
           "marketProbability": 0.557,
           "modelProbabilityUncalibrated": 0.578,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.557,
+          "modelProbabilityUncalibrated": 0.578,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "61d1126751ba67227ac2819624e98342": {
       "match": "Burnley FC – Birmingham City FC",
@@ -223,9 +303,19 @@
           "marketProbability": 0.5527,
           "modelProbabilityUncalibrated": 0.536,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5527,
+          "modelProbabilityUncalibrated": 0.536,
+          "bookCount": 4
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d": {
       "match": "Watford FC – Blackburn Rovers FC",
@@ -248,9 +338,19 @@
           "marketProbability": 0.5093,
           "modelProbabilityUncalibrated": 0.531,
           "bookCount": 5
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5093,
+          "modelProbabilityUncalibrated": 0.531,
+          "bookCount": 5
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "02ff879cf54f6d1fec2664efee0431db": {
       "match": "Stade Brestois 29 – Paris FC",
@@ -273,9 +373,19 @@
           "marketProbability": 0.5281,
           "modelProbabilityUncalibrated": 0.599,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5281,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 4
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "ab87184803a63f7b679f1d12b01c3271": {
       "match": "Manchester United FC – Brentford FC",
@@ -298,9 +408,19 @@
           "marketProbability": 0.6059,
           "modelProbabilityUncalibrated": 0.706,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.6059,
+          "modelProbabilityUncalibrated": 0.706,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": -0.0024
+      "probabilityChange": -0.0024,
+      "observationCount": 4,
+      "distinctProbabilityCount": 2,
+      "movementStatus": "observed_change",
+      "observationSpanMinutes": 27.58
     },
     "c836236766f7859e3c1d61caa581abe1": {
       "match": "West Ham United FC – Stoke City FC",
@@ -323,9 +443,19 @@
           "marketProbability": 0.5943,
           "modelProbabilityUncalibrated": 0.6809999999999999,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5943,
+          "modelProbabilityUncalibrated": 0.6809999999999999,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "f96c1137c9d3f7e2e691275a2988fa1d": {
       "match": "Le Havre AC – RC Strasbourg Alsace",
@@ -348,9 +478,19 @@
           "marketProbability": 0.5759,
           "modelProbabilityUncalibrated": 0.66,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "9cd8c682c6864b59a7f1a58964083e08": {
       "match": "Wrexham AFC – Portsmouth FC",
@@ -373,9 +513,19 @@
           "marketProbability": 0.48,
           "modelProbabilityUncalibrated": 0.6409999999999999,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.48,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "15fc58a442321c2a85f7a814466c0ab9": {
       "match": "Birmingham City FC – Bolton Wanderers FC",
@@ -398,9 +548,19 @@
           "marketProbability": 0.5979,
           "modelProbabilityUncalibrated": 0.611,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5979,
+          "modelProbabilityUncalibrated": 0.611,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "dc42f49649c5329c2c47f94fc4ca0c89": {
       "match": "Queens Park Rangers FC – Sheffield United FC",
@@ -423,9 +583,19 @@
           "marketProbability": 0.5707,
           "modelProbabilityUncalibrated": 0.5770000000000001,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5707,
+          "modelProbabilityUncalibrated": 0.5770000000000001,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "3f93526d7c8e0ca84734aea60c13900a": {
       "match": "Millwall FC – Burnley FC",
@@ -448,9 +618,19 @@
           "marketProbability": 0.5707,
           "modelProbabilityUncalibrated": 0.5710000000000001,
           "bookCount": 3
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5707,
+          "modelProbabilityUncalibrated": 0.5710000000000001,
+          "bookCount": 3
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     },
     "b67372e7107fdd259a978e614711e657": {
       "match": "West Bromwich Albion FC – Bristol City FC",
@@ -473,9 +653,19 @@
           "marketProbability": 0.5249,
           "modelProbabilityUncalibrated": 0.5539999999999999,
           "bookCount": 4
+        },
+        {
+          "observedAt": "2026-11-24T10:04:47.167298+00:00",
+          "marketProbability": 0.5249,
+          "modelProbabilityUncalibrated": 0.5539999999999999,
+          "bookCount": 4
         }
       ],
-      "probabilityChange": 0.0
+      "probabilityChange": 0.0,
+      "observationCount": 4,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 27.58
     }
   }
 }
