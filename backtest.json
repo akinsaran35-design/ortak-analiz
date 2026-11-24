@@ -1,0 +1,66 @@
+{
+  "version": "2.0",
+  "date": "2026-11-24",
+  "modelCalibrated": false,
+  "markets": {
+    "1.5 Üst": {
+      "tested": 1674,
+      "accuracy": 82.74,
+      "averagePrediction": 77.85,
+      "actualRate": 82.86,
+      "brierScore": 0.1461
+    },
+    "2.5 Üst": {
+      "tested": 1674,
+      "accuracy": 56.39,
+      "averagePrediction": 55.03,
+      "actualRate": 57.53,
+      "brierScore": 0.2469
+    },
+    "KG Var": {
+      "tested": 1674,
+      "accuracy": 56.63,
+      "averagePrediction": 55.98,
+      "actualRate": 59.62,
+      "brierScore": 0.2442
+    }
+  },
+  "diagnostics": [
+    {
+      "league": "en.1",
+      "completed": 398,
+      "tested": 273,
+      "errors": []
+    },
+    {
+      "league": "en.2",
+      "completed": 609,
+      "tested": 403,
+      "errors": []
+    },
+    {
+      "league": "de.1",
+      "completed": 327,
+      "tested": 224,
+      "errors": []
+    },
+    {
+      "league": "es.1",
+      "completed": 429,
+      "tested": 292,
+      "errors": []
+    },
+    {
+      "league": "it.1",
+      "completed": 394,
+      "tested": 279,
+      "errors": []
+    },
+    {
+      "league": "fr.1",
+      "completed": 323,
+      "tested": 203,
+      "errors": []
+    }
+  ]
+}
