@@ -69,6 +69,29 @@ def predict(history, home, away):
         (1-math.exp(-h))*(1-math.exp(-a))
     ]
 
+def predict_v22(history, home, away):
+    if len(history) < 40:
+        return None
+    recent = sorted(history, reverse=True)[:300]
+    lh = max(0.3, sum(x[3] for x in recent)/len(recent))
+    la = max(0.3, sum(x[4] for x in recent)/len(recent))
+    def strength(name, at_home):
+        games = sorted([x for x in history if (x[1] if at_home else x[2]) == name], reverse=True)[:12]
+        if len(games) < 5:
+            return None
+        weights = [0.9**i for i in range(len(games))]
+        gf = sum(w*x[3 if at_home else 4] for w,x in zip(weights,games))
+        ga = sum(w*x[4 if at_home else 3] for w,x in zip(weights,games))
+        n = sum(weights)
+        return ((gf+5*(lh if at_home else la))/(n+5), (ga+5*(la if at_home else lh))/(n+5))
+    hs, aws = strength(home, True), strength(away, False)
+    if hs is None or aws is None:
+        return None
+    h = max(0.15,min(4,hs[0]*aws[1]/lh))
+    a = max(0.15,min(4,aws[0]*hs[1]/la))
+    return [over(h+a,1),over(h+a,2),(1-math.exp(-h))*(1-math.exp(-a))]
+
+experimental = {m: [] for m in MARKETS}
 results = {m: [] for m in MARKETS}
 diagnostics = []
 
@@ -114,6 +137,10 @@ for league in LEAGUES:
         ]
         for market, p, y in zip(MARKETS, probabilities, actual):
             results[market].append((d, p, y))
+        new = predict_v22(past,h,a)
+        if new is not None:
+            for market,p,q,y in zip(MARKETS,probabilities,new,actual):
+                experimental[market].append((d,p,q,y,league))
         tested += 1
 
     diagnostics.append({
@@ -124,7 +151,7 @@ for league in LEAGUES:
     })
 
 report = {
-    "version": "2.1",
+    "version": "2.3-experimental",
     "date": today.isoformat(),
     "modelCalibrated": False,
     "markets": {},
@@ -177,6 +204,67 @@ for market, dated_rows in results.items():
         "status":"experimental_holdout"
     }
 
+report["experimentalV22"] = {}
+for market, rows in experimental.items():
+    rows.sort()
+    windows = []
+    for start,end in [(0.4,0.6),(0.6,0.8),(0.8,1.0)]:
+        if len(rows)<200:
+            break
+        lo = rows[int(len(rows)*start)][0]
+        hi = rows[int(len(rows)*end)][0] if end<1 else today
+        train = [y for d,p,q,y,l in rows if d<lo]
+        test = [(p,q,y) for d,p,q,y in rows if lo<=d<hi]
+        if not train or not test:
+            continue
+        base = sum(train)/len(train)
+        windows.append({"from":lo.isoformat(),"untilExclusive":hi.isoformat(),"tested":len(test),
+            "oldBrier":round(sum((p-y)**2 for p,q,y in test)/len(test),6),
+            "newBrier":round(sum((q-y)**2 for p,q,y in test)/len(test),6),
+            "baselineBrier":round(sum((base-y)**2 for p,q,y in test)/len(test),6)})
+    report["experimentalV22"][market] = {"matchedSample":len(rows),"windows":windows}
+# Nested chronological selection: fit on early history, select on later
+# validation dates, then evaluate the selected method on unseen dates.
+report["experimentalV23"] = {}
+for market, rows in experimental.items():
+    rows = sorted(rows)
+    if len(rows) < 300:
+        continue
+    def fit(data, alpha, shrink):
+        global_rate = sum(r[3] for r in data)/len(data)
+        rates = {}
+        for league in LEAGUES:
+            group = [r for r in data if r[4] == league]
+            rates[league] = (sum(r[3] for r in group)+50*global_rate)/(len(group)+50)
+        def forecast(r):
+            return (1-shrink)*((1-alpha)*r[1]+alpha*r[2])+shrink*rates[r[4]]
+        return forecast
+    def score(data, fn):
+        return sum((fn(r)-r[3])**2 for r in data)/len(data)
+    windows = []
+    for start,end in [(0.6,0.8),(0.8,1.0)]:
+        lo = rows[int(len(rows)*start)][0]
+        hi = rows[int(len(rows)*end)][0] if end<1 else today
+        prior = [r for r in rows if r[0]<lo]
+        split = prior[int(len(prior)*0.7)][0]
+        train = [r for r in prior if r[0]<split]
+        valid = [r for r in prior if r[0]>=split]
+        test = [r for r in rows if lo<=r[0]<hi]
+        if min(len(train),len(valid),len(test))<50:
+            continue
+        options = [(a,k) for a in (0,0.25,0.5,0.75,1) for k in (0,0.25,0.5,0.75,1)]
+        a,k = min(options,key=lambda pair:score(valid,fit(train,*pair)))
+        fn = fit(prior,a,k)
+        base = sum(r[3] for r in prior)/len(prior)
+        windows.append({"from":lo.isoformat(),"untilExclusive":hi.isoformat(),
+            "fit":len(train),"selection":len(valid),"tested":len(test),
+            "newModelWeight":a,"leagueShrinkage":k,
+            "selectedBrier":round(score(test,fn),6),
+            "oldBrier":round(score(test,lambda r:r[1]),6),
+            "newBrier":round(score(test,lambda r:r[2]),6),
+            "globalBaselineBrier":round(score(test,lambda r:base),6),
+            "leagueBaselineBrier":round(score(test,fit(prior,0,1)),6)})
+    report["experimentalV23"][market] = {"windows":windows,"status":"exploratory_reused_history"}
 output = Path(__file__).resolve().parent.parent / "backtest.json"
 output.write_text(
     json.dumps(report, ensure_ascii=False, indent=2),
