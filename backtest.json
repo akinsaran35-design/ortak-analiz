@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "date": "2026-11-24",
   "modelCalibrated": false,
   "markets": {
@@ -8,21 +8,87 @@
       "accuracy": 82.74,
       "averagePrediction": 77.85,
       "actualRate": 82.86,
-      "brierScore": 0.1461
+      "brierScore": 0.1461,
+      "validation": {
+        "cutoff": "2026-04-21",
+        "train": 1167,
+        "test": 507,
+        "rawBrier": 0.143608,
+        "calibratedBrier": 0.140697,
+        "baselineBrier": 0.140859,
+        "improvesBoth": true,
+        "trainingBinProbabilities": [
+          0.8277634961439588,
+          0.8277634961439588,
+          0.8277634961439588,
+          0.8277634961439588,
+          0.8434213601308717,
+          0.8290488431876606,
+          0.7969328960198564,
+          0.8228873043641917,
+          0.8412339331619537,
+          0.8501225563460274
+        ],
+        "status": "experimental_holdout"
+      }
     },
     "2.5 Üst": {
       "tested": 1674,
       "accuracy": 56.39,
       "averagePrediction": 55.03,
       "actualRate": 57.53,
-      "brierScore": 0.2469
+      "brierScore": 0.2469,
+      "validation": {
+        "cutoff": "2026-04-21",
+        "train": 1167,
+        "test": 507,
+        "rawBrier": 0.239829,
+        "calibratedBrier": 0.237544,
+        "baselineBrier": 0.239755,
+        "improvesBoth": true,
+        "trainingBinProbabilities": [
+          0.5561268209083119,
+          0.5561268209083119,
+          0.5705450616594017,
+          0.5279281107653452,
+          0.5019889342433427,
+          0.5596930534467178,
+          0.5962457714918684,
+          0.6214441749037498,
+          0.5884390174235933,
+          0.5561268209083119
+        ],
+        "status": "experimental_holdout"
+      }
     },
     "KG Var": {
       "tested": 1674,
       "accuracy": 56.63,
       "averagePrediction": 55.98,
       "actualRate": 59.62,
-      "brierScore": 0.2442
+      "brierScore": 0.2442,
+      "validation": {
+        "cutoff": "2026-04-21",
+        "train": 1167,
+        "test": 507,
+        "rawBrier": 0.237446,
+        "calibratedBrier": 0.236402,
+        "baselineBrier": 0.236314,
+        "improvesBoth": false,
+        "trainingBinProbabilities": [
+          0.5844044558697515,
+          0.6041947198759539,
+          0.5951343094519579,
+          0.5533680272535373,
+          0.5634827024211571,
+          0.594752258208086,
+          0.5802752784918594,
+          0.5978884739131137,
+          0.6041947198759539,
+          0.5844044558697515
+        ],
+        "status": "experimental_holdout"
+      }
     }
   },
   "diagnostics": [
