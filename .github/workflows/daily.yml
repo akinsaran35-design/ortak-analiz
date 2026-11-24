@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Performans motoru birim testi
+        run: python scripts/test_track_performance.py
+
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py
 
