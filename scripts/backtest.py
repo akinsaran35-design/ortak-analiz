@@ -235,3 +235,73 @@ output.write_text(
     encoding="utf-8"
 )
 print(json.dumps(report, ensure_ascii=False, indent=2))
+# V4.2 - Automatic research model selection
+report["modelSelectionV42"] = {}
+
+model_keys = [
+    "oldBrier",
+    "weightedBrier",
+    "ensembleBrier",
+    "oldCalibratedBrier",
+    "weightedCalibratedBrier",
+    "ensembleCalibratedBrier"
+]
+
+for market, data in report.get("experimentalV41", {}).items():
+    folds = data.get("folds", [])
+    total = sum(f["tested"] for f in folds)
+
+    if len(folds) < 5 or total < 500:
+        report["modelSelectionV42"][market] = {
+            "status": "insufficient_data",
+            "liveEnabled": False
+        }
+        continue
+
+    scores = {
+        key: sum(f[key] * f["tested"] for f in folds) / total
+        for key in model_keys
+    }
+
+    baseline = sum(
+        f["baselineBrier"] * f["tested"]
+        for f in folds
+    ) / total
+
+    best = min(scores, key=scores.get)
+
+    wins = sum(
+        f[best] < f["baselineBrier"]
+        for f in folds
+    )
+
+    improvement = baseline - scores[best]
+
+    eligible = (
+        improvement >= 0.001
+        and wins >= 4
+        and scores[best] < scores["oldBrier"]
+    )
+
+    report["modelSelectionV42"][market] = {
+        "tested": total,
+        "folds": len(folds),
+        "bestModel": best,
+        "bestBrier": round(scores[best], 6),
+        "baselineBrier": round(baseline, 6),
+        "improvement": round(improvement, 6),
+        "winningFolds": wins,
+        "scores": {
+            k: round(v, 6)
+            for k, v in scores.items()
+        },
+        "status": "candidate" if eligible else "research_only",
+        "liveEnabled": False
+    }
+
+output.write_text(
+    json.dumps(report, ensure_ascii=False, indent=2),
+    encoding="utf-8"
+)
+
+print("V4.2 model selection completed")
