@@ -1,113 +1,12 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-24T19:36:21.308095+00:00",
+  "updatedAt": "2026-11-24T20:44:58.946916+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
-  "comparedCount": 19,
+  "comparedCount": 14,
   "rows": [
-    {
-      "match": "Sheffield United FC – Southampton FC",
-      "eventId": "031162fd89aa3c1fd39e523b3c82d35a",
-      "bookCount": 5,
-      "bookProbabilities": {
-        "grosvenor": 0.538667,
-        "leovegas": 0.515873,
-        "casumo": 0.5,
-        "matchbook": 0.507653,
-        "williamhill": 0.536193
-      },
-      "marketProbability": 0.5159,
-      "modelProbabilityUncalibrated": 0.66,
-      "difference": 0.1441,
-      "bookProbabilitySpread": 0.0387,
-      "marketFairOdds": 1.9385,
-      "medianMargin": 0.0593
-    },
-    {
-      "match": "Portsmouth FC – West Ham United FC",
-      "eventId": "c2ca2ce56eb3bccf1a5de2d0ccc2207f",
-      "bookCount": 4,
-      "bookProbabilities": {
-        "grosvenor": 0.552,
-        "leovegas": 0.515873,
-        "casumo": 0.507979,
-        "williamhill": 0.536193
-      },
-      "marketProbability": 0.526,
-      "modelProbabilityUncalibrated": 0.643,
-      "difference": 0.117,
-      "bookProbabilitySpread": 0.044,
-      "marketFairOdds": 1.901,
-      "medianMargin": 0.0711
-    },
-    {
-      "match": "Wolverhampton Wanderers FC – Derby County FC",
-      "eventId": "018856cb75135463eb1972d978339023",
-      "bookCount": 3,
-      "bookProbabilities": {
-        "grosvenor": 0.582245,
-        "leovegas": 0.589744,
-        "williamhill": 0.594315
-      },
-      "marketProbability": 0.5897,
-      "modelProbabilityUncalibrated": 0.617,
-      "difference": 0.0273,
-      "bookProbabilitySpread": 0.0121,
-      "marketFairOdds": 1.6957,
-      "medianMargin": 0.0717
-    },
-    {
-      "match": "Norwich City FC – Queens Park Rangers FC",
-      "eventId": "cbb9284b5d072d869a395ba3ffb8bbff",
-      "bookCount": 3,
-      "bookProbabilities": {
-        "grosvenor": 0.577428,
-        "leovegas": 0.581395,
-        "williamhill": 0.594315
-      },
-      "marketProbability": 0.5814,
-      "modelProbabilityUncalibrated": 0.599,
-      "difference": 0.0176,
-      "bookProbabilitySpread": 0.0169,
-      "marketFairOdds": 1.72,
-      "medianMargin": 0.0717
-    },
-    {
-      "match": "Bristol City FC – Wrexham AFC",
-      "eventId": "92c74d2f4a4275568feff8072ed15e73",
-      "bookCount": 4,
-      "bookProbabilities": {
-        "grosvenor": 0.439153,
-        "leovegas": 0.418605,
-        "williamhill": 0.424084,
-        "matchbook": 0.415233
-      },
-      "marketProbability": 0.4213,
-      "modelProbabilityUncalibrated": 0.48200000000000004,
-      "difference": 0.0607,
-      "bookProbabilitySpread": 0.0239,
-      "marketFairOdds": 2.3734,
-      "medianMargin": 0.0668
-    },
-    {
-      "match": "Charlton Athletic FC – Lincoln City FC",
-      "eventId": "6d21b6408d1f1c42def270b7f1ae5b21",
-      "bookCount": 4,
-      "bookProbabilities": {
-        "grosvenor": 0.459893,
-        "leovegas": 0.433766,
-        "matchbook": 0.427861,
-        "williamhill": 0.442971
-      },
-      "marketProbability": 0.4384,
-      "modelProbabilityUncalibrated": 0.38299999999999995,
-      "difference": -0.0554,
-      "bookProbabilitySpread": 0.032,
-      "marketFairOdds": 2.2812,
-      "medianMargin": 0.0663
-    },
     {
       "match": "Stoke City FC – Millwall FC",
       "eventId": "77dfddf6dea97d5ecb5e2463b29fe67e",
@@ -115,14 +14,14 @@
       "bookProbabilities": {
         "grosvenor": 0.497312,
         "leovegas": 0.484127,
-        "casumo": 0.470109,
+        "casumo": 0.472973,
         "williamhill": 0.5,
         "matchbook": 0.475827
       },
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.1569,
-      "bookProbabilitySpread": 0.0299,
+      "bookProbabilitySpread": 0.027,
       "marketFairOdds": 2.0656,
       "medianMargin": 0.0593
     },
@@ -147,17 +46,17 @@
       "eventId": "61d1126751ba67227ac2819624e98342",
       "bookCount": 4,
       "bookProbabilities": {
-        "grosvenor": 0.567282,
+        "grosvenor": 0.553191,
         "leovegas": 0.554974,
         "williamhill": 0.557029,
-        "matchbook": 0.536709
+        "matchbook": 0.534351
       },
-      "marketProbability": 0.556,
+      "marketProbability": 0.5541,
       "modelProbabilityUncalibrated": 0.536,
-      "difference": -0.02,
-      "bookProbabilitySpread": 0.0306,
-      "marketFairOdds": 1.7986,
-      "medianMargin": 0.0674
+      "difference": -0.0181,
+      "bookProbabilitySpread": 0.0227,
+      "marketFairOdds": 1.8048,
+      "medianMargin": 0.0675
     },
     {
       "match": "Watford FC – Blackburn Rovers FC",
@@ -166,15 +65,15 @@
       "bookProbabilities": {
         "grosvenor": 0.506739,
         "leovegas": 0.496042,
-        "casumo": 0.497283,
+        "casumo": 0.489305,
         "williamhill": 0.5,
-        "matchbook": 0.482234
+        "matchbook": 0.484694
       },
-      "marketProbability": 0.4973,
+      "marketProbability": 0.496,
       "modelProbabilityUncalibrated": 0.531,
-      "difference": 0.0337,
-      "bookProbabilitySpread": 0.0245,
-      "marketFairOdds": 2.0109,
+      "difference": 0.035,
+      "bookProbabilitySpread": 0.022,
+      "marketFairOdds": 2.016,
       "medianMargin": 0.0555
     },
     {
@@ -183,14 +82,14 @@
       "bookCount": 4,
       "bookProbabilities": {
         "leovegas": 0.52,
-        "casumo": 0.506849,
+        "casumo": 0.502717,
         "grosvenor": 0.539683,
         "williamhill": 0.536193
       },
       "marketProbability": 0.5281,
       "modelProbabilityUncalibrated": 0.599,
       "difference": 0.0709,
-      "bookProbabilitySpread": 0.0328,
+      "bookProbabilitySpread": 0.037,
       "marketFairOdds": 1.8936,
       "medianMargin": 0.0732
     },
@@ -249,15 +148,15 @@
       "bookProbabilities": {
         "grosvenor": 0.456,
         "leovegas": 0.464191,
-        "casumo": 0.470109,
-        "williamhill": 0.48
+        "williamhill": 0.48,
+        "matchbook": 0.4375
       },
-      "marketProbability": 0.4671,
+      "marketProbability": 0.4601,
       "modelProbabilityUncalibrated": 0.6409999999999999,
-      "difference": 0.1739,
-      "bookProbabilitySpread": 0.024,
-      "marketFairOdds": 2.1406,
-      "medianMargin": 0.0717
+      "difference": 0.1809,
+      "bookProbabilitySpread": 0.0425,
+      "marketFairOdds": 2.1735,
+      "medianMargin": 0.0674
     },
     {
       "match": "Birmingham City FC – Bolton Wanderers FC",
@@ -276,20 +175,37 @@
       "medianMargin": 0.0721
     },
     {
-      "match": "Queens Park Rangers FC – Sheffield United FC",
-      "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
+      "match": "Preston North End FC – Norwich City FC",
+      "eventId": "d47bc722be164b3a733434e89f224654",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.552,
-        "leovegas": 0.570681,
-        "williamhill": 0.575916
+        "grosvenor": 0.613811,
+        "williamhill": 0.64532,
+        "matchbook": 0.602041
       },
-      "marketProbability": 0.5707,
+      "marketProbability": 0.6138,
+      "modelProbabilityUncalibrated": 0.588,
+      "difference": -0.0258,
+      "bookProbabilitySpread": 0.0433,
+      "marketFairOdds": 1.6292,
+      "medianMargin": 0.0761
+    },
+    {
+      "match": "Queens Park Rangers FC – Sheffield United FC",
+      "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
+      "bookCount": 4,
+      "bookProbabilities": {
+        "grosvenor": 0.552,
+        "leovegas": 0.562827,
+        "williamhill": 0.575916,
+        "matchbook": 0.532982
+      },
+      "marketProbability": 0.5574,
       "modelProbabilityUncalibrated": 0.5770000000000001,
-      "difference": 0.0063,
-      "bookProbabilitySpread": 0.0239,
-      "marketFairOdds": 1.7523,
-      "medianMargin": 0.0718
+      "difference": 0.0196,
+      "bookProbabilitySpread": 0.0429,
+      "marketFairOdds": 1.794,
+      "medianMargin": 0.0679
     },
     {
       "match": "Millwall FC – Burnley FC",
