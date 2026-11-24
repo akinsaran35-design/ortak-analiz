@@ -69,6 +69,28 @@ def predict(history, home, away):
         (1-math.exp(-h))*(1-math.exp(-a))
     ]
 
+# V4.1 experimental weighted form; fixed parameters, no future results.
+def weighted_stats(past,name,home):
+    rows=[]
+    for d,h,a,hg,ag in past:
+        if h==name: rows.append((d,hg,ag,h==name and home))
+        elif a==name: rows.append((d,ag,hg,not home))
+    rows=rows[-30:]
+    if len(rows)<5: return None
+    weights=[math.exp(-math.log(2)*(len(rows)-1-i)/10)*(1 if x[3] else .5) for i,x in enumerate(rows)]
+    total=sum(weights)
+    return tuple(sum(w*x[j] for w,x in zip(weights,rows))/total for j in (1,2))
+
+def weighted_predict(past,h,a):
+    hs=weighted_stats(past,h,True)
+    aws=weighted_stats(past,a,False)
+    if hs is None or aws is None: return None
+    x=max(.15,min(4,(hs[0]+aws[1])/2))
+    y=max(.15,min(4,(aws[0]+hs[1])/2))
+    return [over(x+y,1),over(x+y,2),(1-math.exp(-x))*(1-math.exp(-y))]
+
+experiments={m:[] for m in MARKETS}
+
 results = {m: [] for m in MARKETS}
 diagnostics = []
 
@@ -114,6 +136,10 @@ for league in LEAGUES:
         ]
         for market, p, y in zip(MARKETS, probabilities, actual):
             results[market].append((d, p, y))
+        weighted=weighted_predict(past,h,a)
+        if weighted is not None:
+            for market,p,q,y in zip(MARKETS,probabilities,weighted,actual):
+                experiments[market].append((d,p,q,(p+q)/2,y))
         tested += 1
 
     diagnostics.append({
@@ -176,6 +202,32 @@ for market, dated_rows in results.items():
         "trainingBinProbabilities":bins,
         "status":"experimental_holdout"
     }
+
+report["experimentalV41"]={}
+for market,rows in experiments.items():
+    rows.sort()
+    dates=sorted(set(x[0] for x in rows))
+    folds=[]
+    if len(dates)>=10:
+        for k in range(5,10):
+            start=dates[len(dates)*k//10]
+            end=dates[len(dates)*(k+1)//10] if k<9 else today
+            train=[x for x in rows if x[0]<start]
+            test=[x for x in rows if start<=x[0]<end]
+            if len(train)<100 or len(test)<50: continue
+            base=sum(x[4] for x in train)/len(train)
+            def score(idx,calibrate=False):
+                bins=[]
+                for b in range(10):
+                    group=[x for x in train if min(9,int(x[idx]*10))==b]
+                    bins.append((sum(x[4] for x in group)+20*base)/(len(group)+20))
+                return round(sum(((bins[min(9,int(x[idx]*10))] if calibrate else x[idx])-x[4])**2 for x in test)/len(test),6)
+            folds.append({"start":start.isoformat(),"endExclusive":end.isoformat(),"tested":len(test),
+                "oldBrier":score(1),"weightedBrier":score(2),"ensembleBrier":score(3),
+                "oldCalibratedBrier":score(1,True),"weightedCalibratedBrier":score(2,True),
+                "ensembleCalibratedBrier":score(3,True),
+                "baselineBrier":round(sum((base-x[4])**2 for x in test)/len(test),6)})
+    report["experimentalV41"][market]={"folds":folds,"status":"research_only"}
 
 output = Path(__file__).resolve().parent.parent / "backtest.json"
 output.write_text(
