@@ -11,7 +11,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
 
     steps:
       - name: Dosyalari al
@@ -25,12 +25,15 @@ jobs:
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py
 
-      - name: Raporu kaydet
+      - name: Gecmis maclari test et
+        run: python scripts/backtest.py
+
+      - name: Raporlari kaydet
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily.json
+          git add daily.json backtest.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update daily analysis"
+            git commit -m "Update daily analysis and backtest"
             git push
           fi
