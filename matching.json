@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-24T19:03:49.501704+00:00",
+  "updatedAt": "2026-11-24T19:36:21.209963+00:00",
   "decision": "PAS",
   "matchedCount": 29,
   "unmatchedCount": 1,
@@ -15,7 +15,7 @@
       "match": "Portsmouth FC – West Ham United FC",
       "eventId": "c2ca2ce56eb3bccf1a5de2d0ccc2207f",
       "kickoff": "2026-11-24T19:45:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "Wolverhampton Wanderers FC – Derby County FC",

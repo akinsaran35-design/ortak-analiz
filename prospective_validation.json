@@ -1,0 +1,13 @@
+{
+  "version": "4.4",
+  "market": "2.5 Ust",
+  "candidate": "weightedBrier",
+  "updatedAt": "2026-11-24T22:36:25.349101+03:00",
+  "recorded": 60,
+  "tested": 0,
+  "pending": 60,
+  "minimumMatches": 500,
+  "liveEnabled": false,
+  "status": "collecting_data",
+  "errors": []
+}
