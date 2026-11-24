@@ -12,6 +12,23 @@ def normalize(name):
     name = unicodedata.normalize("NFKD", name.casefold())
     name = "".join(c for c in name if not unicodedata.combining(c))
     return " ".join(t for t in re.findall(r"[a-z0-9]+", name) if t not in {"fc", "cf", "afc", "sc"})
+ALIASES = {
+    "soccer_germany_bundesliga": {
+        "sv werder bremen": "werder bremen",
+        "bayern munchen": "bayern munich",
+        "1 fsv mainz 05": "fsv mainz 05",
+        "1 union berlin": "union berlin",
+    },
+    "soccer_france_ligue_one": {
+        "stade brestois 29": "brest",
+        "le havre ac": "le havre",
+        "rc strasbourg alsace": "strasbourg",
+    },
+}
+def canonical(name, league):
+    normalized = normalize(name)
+    return ALIASES.get(league, {}).get(normalized, normalized)
+
 def parse_time(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
 def main():
@@ -28,8 +45,8 @@ def main():
                 kickoff = parse_time(event["kickoff"])
                 if (event["league"] == league and kickoff > now
                     and kickoff.astimezone(ZoneInfo("Europe/Istanbul")).date().isoformat() == candidate["date"]
-                    and normalize(event["home"]) == normalize(teams[0])
-                    and normalize(event["away"]) == normalize(teams[1])):
+                    and canonical(event["home"], league) == canonical(teams[0], league)
+                    and canonical(event["away"], league) == canonical(teams[1], league)):
                     matches.append(event)
         if len(matches) != 1:
             unmatched.append({"match": candidate.get("match"), "reason": "ambiguous" if matches else "no_exact_match"})
@@ -45,7 +62,7 @@ def main():
                 except (ValueError, TypeError, KeyError, AttributeError):
                     pass
         matched.append({"match": candidate["match"], "eventId": event["id"], "kickoff": event["kickoff"], "freshLineCount": fresh})
-    report = {"version": "2.7", "updatedAt": now.isoformat(), "decision": "PAS",
+    report = {"version": "2.8", "updatedAt": now.isoformat(), "decision": "PAS",
               "matchedCount": len(matched), "unmatchedCount": len(unmatched),
               "matched": matched, "unmatched": unmatched, "modelCalibrated": False}
     Path("matching.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
