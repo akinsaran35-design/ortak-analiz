@@ -24,7 +24,8 @@ for league in LEAGUES:
                 d = date.fromisoformat(m["date"][:10])
                 h = team(m.get("team1"))
                 a = team(m.get("team2"))
-                ft = (m.get("score") or {}).get("ft")
+                score = m.get("score")
+                ft = score.get("ft") if isinstance(score, dict) else None
 
                 if (
                     d < date.today()
