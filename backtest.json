@@ -325,5 +325,64 @@
       ],
       "status": "research_only"
     }
+  },
+  "modelSelectionV42": {
+    "1.5 Üst": {
+      "tested": 826,
+      "folds": 5,
+      "bestModel": "ensembleCalibratedBrier",
+      "bestBrier": 0.142344,
+      "baselineBrier": 0.142382,
+      "improvement": 3.8e-05,
+      "winningFolds": 4,
+      "scores": {
+        "oldBrier": 0.145068,
+        "weightedBrier": 0.143973,
+        "ensembleBrier": 0.144273,
+        "oldCalibratedBrier": 0.142446,
+        "weightedCalibratedBrier": 0.142353,
+        "ensembleCalibratedBrier": 0.142344
+      },
+      "status": "research_only",
+      "liveEnabled": false
+    },
+    "2.5 Üst": {
+      "tested": 826,
+      "folds": 5,
+      "bestModel": "weightedBrier",
+      "bestBrier": 0.238021,
+      "baselineBrier": 0.242991,
+      "improvement": 0.00497,
+      "winningFolds": 4,
+      "scores": {
+        "oldBrier": 0.239658,
+        "weightedBrier": 0.238021,
+        "ensembleBrier": 0.238355,
+        "oldCalibratedBrier": 0.240359,
+        "weightedCalibratedBrier": 0.240211,
+        "ensembleCalibratedBrier": 0.24013
+      },
+      "status": "candidate",
+      "liveEnabled": false
+    },
+    "KG Var": {
+      "tested": 826,
+      "folds": 5,
+      "bestModel": "weightedBrier",
+      "bestBrier": 0.236733,
+      "baselineBrier": 0.237875,
+      "improvement": 0.001142,
+      "winningFolds": 3,
+      "scores": {
+        "oldBrier": 0.239266,
+        "weightedBrier": 0.236733,
+        "ensembleBrier": 0.237608,
+        "oldCalibratedBrier": 0.238415,
+        "weightedCalibratedBrier": 0.237028,
+        "ensembleCalibratedBrier": 0.238193
+      },
+      "status": "research_only",
+      "liveEnabled": false
+    }
   }
 }
