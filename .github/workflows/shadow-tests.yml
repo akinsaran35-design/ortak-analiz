@@ -3,6 +3,8 @@ name: V4.8 Shadow Tests
 on:
   push:
     branches: [ortak-analiz-v4-8]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
