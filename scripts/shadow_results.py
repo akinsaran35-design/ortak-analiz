@@ -5,7 +5,9 @@ from shadow_performance import load, save, stamp
 
 LEAGUES = {"soccer_epl":"en.1","soccer_efl_champ":"en.2","soccer_germany_bundesliga":"de.1","soccer_spain_la_liga":"es.1","soccer_italy_serie_a":"it.1","soccer_france_ligue_one":"fr.1"}
 def norm(s):
-    return " ".join(s.casefold().split())
+    if isinstance(s, dict):
+        s = s.get("name") or s.get("code") or ""
+    return " ".join(s.casefold().split()) if isinstance(s, str) else ""
 
 def fetch(season, league):
     url = f"https://raw.githubusercontent.com/openfootball/football.json/master/{season}/{league}.json"
@@ -38,14 +40,17 @@ def resolve(records, results, now, fetcher=fetch):
                 if key not in cache:
                     cache[key] = fetcher(*key)
                 matches = [m for m in cache[key] if str(m.get("date",""))[:10]==day.isoformat()
-                           and isinstance(m.get("team1"),str) and isinstance(m.get("team2"),str)
+                           and norm(m.get("team1")) and norm(m.get("team2"))
                            and [norm(m["team1"]),norm(m["team2"])]==[norm(n) for n in names]]
                 if len(matches)!=1:
+                    errors.append({"eventId":eid,"error":"ambiguous_fixture" if matches else "fixture_not_found"})
                     continue
                 ft = (matches[0].get("score") or {}).get("ft")
                 if isinstance(ft,list) and len(ft)==2 and all(type(x) is int and x>=0 for x in ft):
                     results[eid] = {"status":"final","score":ft,"source":"OpenFootball","verifiedAt":now.isoformat()}
-            except (OSError,ValueError,KeyError,TypeError) as exc:
+                else:
+                    errors.append({"eventId":eid,"error":"final_score_unavailable"})
+            except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
                 errors.append({"eventId":eid,"error":type(exc).__name__})
     return errors
 

@@ -35,6 +35,17 @@ class ShadowTests(unittest.TestCase):
         self.assertEqual(results,{})
         resolve(records,results,now,lambda *args:[fixture])
         self.assertEqual(results["a"]["score"],[2,1])
+        results.clear()
+        fixture["team1"] = {"name":"Home FC"}
+        fixture["team2"] = {"name":"Away FC"}
+        self.assertEqual(resolve(records,results,now,lambda *args:[fixture]),[])
+        self.assertEqual(results["a"]["score"],[2,1])
+        results.clear()
+        self.assertEqual(resolve(records,results,now,lambda *args:[fixture,fixture])[0]["error"],"ambiguous_fixture")
+        self.assertEqual(results,{})
+        fixture["score"] = {}
+        self.assertEqual(resolve(records,results,now,lambda *args:[fixture])[0]["error"],"final_score_unavailable")
+        self.assertEqual(results,{})
 
 if __name__ == "__main__":
     unittest.main()
