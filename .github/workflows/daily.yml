@@ -85,7 +85,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json
+          git add daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json
           if ! git diff --cached --quiet; then
             git commit -m "Update V4.8 shadow reports"
             git push
