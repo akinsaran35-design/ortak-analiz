@@ -95,12 +95,17 @@ jobs:
         run: |
           python scripts/test_calibration.py
           python scripts/calibration.py
+      - name: V4.20 Model research
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/test_model_research.py
+          python scripts/model_research.py
       - name: Raporlari kaydet
         if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json market_analysis.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json calibration.json
+          git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json market_analysis.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json calibration.json model_research.json
           if ! git diff --cached --quiet; then
             git commit -m "Update daily analysis and validation"
             git push
