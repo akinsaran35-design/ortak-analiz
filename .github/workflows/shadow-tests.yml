@@ -88,3 +88,6 @@ jobs:
 
       - name: Test V4.21 score probabilities
         run: python scripts/test_score_model.py
+
+      - name: Test V4.22 historical archive
+        run: python scripts/test_historical_data.py
