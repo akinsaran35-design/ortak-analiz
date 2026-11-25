@@ -91,3 +91,6 @@ jobs:
 
       - name: Test V4.22 historical archive
         run: python scripts/test_historical_data.py
+
+      - name: Test source discovery
+        run: python scripts/test_source_discovery.py
