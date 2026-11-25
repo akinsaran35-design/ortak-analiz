@@ -94,3 +94,6 @@ jobs:
 
       - name: Test source discovery
         run: python scripts/test_source_discovery.py
+
+      - name: Test historical conflict audit
+        run: python scripts/test_history_audit.py

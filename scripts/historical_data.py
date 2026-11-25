@@ -54,6 +54,7 @@ def collect(today, fetch=get):
     report=dict(version="4.22",status="research_only",realBettingEnabled=False,asOf=today.isoformat(),matches=[],errors=[],filesLoaded=0)
     records={}
     conflicts=set()
+    audit=[]
     y=today.year
     seasons=sorted({str(n) for n in (y-1,y)} | {f"{n}-{str(n+1)[-2:]}" for n in (y-2,y-1,y)})
     for season in seasons:
@@ -75,6 +76,7 @@ def collect(today, fetch=get):
                     old=records.get(k)
                     if old and (old["ft"]!=row["ft"] or (old["ht"] is not None and row["ht"] is not None and old["ht"]!=row["ht"])):
                         conflicts.add(k)
+                        audit.append(dict(reason='within_league_score_conflict', records=[old,row]))
                     elif not old or old["ht"] is None:
                         records[k]=row
             except Exception as exc:
@@ -91,12 +93,14 @@ def collect(today, fetch=get):
     for group in grouped.values():
         if len({tuple(x["ft"]) for x in group})>1 or len({tuple(x["ht"]) for x in group if x["ht"] is not None})>1:
             cross_conflicts+=len(group)
+            audit.append(dict(reason="cross_file_score_conflict",records=group))
             continue
         row=dict(next((x for x in group if x["ht"] is not None),group[0]))
         row["leagueAliases"]=sorted({x["league"] for x in group})
         row["sources"]=sorted({x["source"] for x in group})
         clean.append(row)
         duplicate_count+=len(group)-1
+    report["conflictAudit"]=audit
     report["rawMatchCount"]=len(report["matches"])
     report["matches"]=clean
     report["duplicatesRemoved"]=duplicate_count
