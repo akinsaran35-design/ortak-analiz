@@ -33,3 +33,6 @@ jobs:
           python -m py_compile scripts/fetch_extra_markets.py
           ODDS_API_KEY="" python scripts/fetch_extra_markets.py
           python -c 'import json; r=json.load(open("extra_markets.json")); assert r["decision"] == "PAS" and r["eventCount"] == 0 and "missing_key" in r["errors"]'
+
+      - name: Test V4.9 simulated API
+        run: python scripts/test_extra_markets.py
