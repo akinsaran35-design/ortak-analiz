@@ -2,7 +2,7 @@ name: Historical archive V4.22
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/history.yml', 'scripts/historical_data.py', 'scripts/source_discovery.py']
+    paths: ['.github/workflows/history.yml', 'scripts/historical_data.py', 'scripts/source_discovery.py', 'scripts/historical_text.py']
   schedule:
     - cron: '30 4 * * *'
   workflow_dispatch:
@@ -23,10 +23,13 @@ jobs:
           python -c 'import json; r=json.load(open("historical_data.json")); print({k:v for k,v in r.items() if k!="matches"})' >> "$GITHUB_STEP_SUMMARY"
       - run: python scripts/test_source_discovery.py
       - run: python scripts/source_discovery.py
+      - run: python scripts/test_historical_text.py
+      - run: python scripts/historical_text.py
       - uses: actions/upload-artifact@v4
         with:
           name: historical-data
           path: |
             historical_data.json
             source_discovery.json
+            historical_text.json
           retention-days: 7
