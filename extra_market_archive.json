@@ -1,0 +1,1567 @@
+{
+  "version": "4.10",
+  "records": {
+    "61d1126751ba67227ac2819624e98342|over15|virginbet": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "virginbet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:17Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.9
+          },
+          "marketProbability": 0.766208
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Over": 1.19,
+          "Under": 3.9
+        },
+        "marketProbability": 0.766208
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Over": 1.19,
+          "Under": 3.9
+        },
+        "marketProbability": 0.766208
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|over15|livescorebet": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "livescorebet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:39Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.9
+          },
+          "marketProbability": 0.766208
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Over": 1.19,
+          "Under": 3.9
+        },
+        "marketProbability": 0.766208
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Over": 1.19,
+          "Under": 3.9
+        },
+        "marketProbability": 0.766208
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|over15|leovegas": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "leovegas",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:38Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 4.0
+          },
+          "marketProbability": 0.764818
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Over": 1.23,
+          "Under": 4.0
+        },
+        "marketProbability": 0.764818
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Over": 1.23,
+          "Under": 4.0
+        },
+        "marketProbability": 0.764818
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|over15|williamhill": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "williamhill",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 4.0
+          },
+          "marketProbability": 0.766284
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 4.0
+        },
+        "marketProbability": 0.766284
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 4.0
+        },
+        "marketProbability": 0.766284
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|over15|coral": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "coral",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:16Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.9
+          },
+          "marketProbability": 0.761719
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 3.9
+        },
+        "marketProbability": 0.761719
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 3.9
+        },
+        "marketProbability": 0.761719
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|over15|ladbrokes_uk": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "ladbrokes_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.9
+          },
+          "marketProbability": 0.761719
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 3.9
+        },
+        "marketProbability": 0.761719
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 3.9
+        },
+        "marketProbability": 0.761719
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|virginbet": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "virginbet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:17Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|livescorebet": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "livescorebet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:39Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|leovegas": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "leovegas",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:38Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.25
+        },
+        "marketProbability": 0.584416
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.25
+        },
+        "marketProbability": 0.584416
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|betfred_uk": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "betfred_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:15Z",
+          "prices": {
+            "Yes": 1.57,
+            "No": 2.25
+          },
+          "marketProbability": 0.589005
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:15Z",
+        "prices": {
+          "Yes": 1.57,
+          "No": 2.25
+        },
+        "marketProbability": 0.589005
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:15Z",
+        "prices": {
+          "Yes": 1.57,
+          "No": 2.25
+        },
+        "marketProbability": 0.589005
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|williamhill": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "williamhill",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.25
+        },
+        "marketProbability": 0.584416
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.25
+        },
+        "marketProbability": 0.584416
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|coral": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "coral",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:16Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|ladbrokes_uk": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "ladbrokes_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.2
+        },
+        "marketProbability": 0.578947
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "61d1126751ba67227ac2819624e98342|btts|matchbook": {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "league": "soccer_efl_champ",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "matchbook",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.36
+          },
+          "marketProbability": 0.585608
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.36
+        },
+        "marketProbability": 0.585608
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.36
+        },
+        "marketProbability": 0.585608
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|over15|virginbet": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "virginbet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:17Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 3.55
+          },
+          "marketProbability": 0.742678
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Over": 1.23,
+          "Under": 3.55
+        },
+        "marketProbability": 0.742678
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Over": 1.23,
+          "Under": 3.55
+        },
+        "marketProbability": 0.742678
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|over15|livescorebet": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "livescorebet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:39Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 3.55
+          },
+          "marketProbability": 0.742678
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Over": 1.23,
+          "Under": 3.55
+        },
+        "marketProbability": 0.742678
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Over": 1.23,
+          "Under": 3.55
+        },
+        "marketProbability": 0.742678
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|over15|leovegas": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "leovegas",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:38Z",
+          "prices": {
+            "Over": 1.32,
+            "Under": 3.3
+          },
+          "marketProbability": 0.714286
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Over": 1.32,
+          "Under": 3.3
+        },
+        "marketProbability": 0.714286
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Over": 1.32,
+          "Under": 3.3
+        },
+        "marketProbability": 0.714286
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|over15|williamhill": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "williamhill",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Over": 1.3,
+            "Under": 3.4
+          },
+          "marketProbability": 0.723404
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.3,
+          "Under": 3.4
+        },
+        "marketProbability": 0.723404
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.3,
+          "Under": 3.4
+        },
+        "marketProbability": 0.723404
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|over15|coral": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "coral",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:16Z",
+          "prices": {
+            "Over": 1.3,
+            "Under": 3.25
+          },
+          "marketProbability": 0.714286
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Over": 1.3,
+          "Under": 3.25
+        },
+        "marketProbability": 0.714286
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Over": 1.3,
+          "Under": 3.25
+        },
+        "marketProbability": 0.714286
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|virginbet": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "virginbet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:17Z",
+          "prices": {
+            "Yes": 1.66,
+            "No": 2.1
+          },
+          "marketProbability": 0.558511
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Yes": 1.66,
+          "No": 2.1
+        },
+        "marketProbability": 0.558511
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Yes": 1.66,
+          "No": 2.1
+        },
+        "marketProbability": 0.558511
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|livescorebet": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "livescorebet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:39Z",
+          "prices": {
+            "Yes": 1.66,
+            "No": 2.1
+          },
+          "marketProbability": 0.558511
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Yes": 1.66,
+          "No": 2.1
+        },
+        "marketProbability": 0.558511
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Yes": 1.66,
+          "No": 2.1
+        },
+        "marketProbability": 0.558511
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|leovegas": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "leovegas",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:38Z",
+          "prices": {
+            "Yes": 1.77,
+            "No": 1.98
+          },
+          "marketProbability": 0.528
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Yes": 1.77,
+          "No": 1.98
+        },
+        "marketProbability": 0.528
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Yes": 1.77,
+          "No": 1.98
+        },
+        "marketProbability": 0.528
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|betfred_uk": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "betfred_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:15Z",
+          "prices": {
+            "Yes": 1.73,
+            "No": 2.0
+          },
+          "marketProbability": 0.536193
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:15Z",
+        "prices": {
+          "Yes": 1.73,
+          "No": 2.0
+        },
+        "marketProbability": 0.536193
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:15Z",
+        "prices": {
+          "Yes": 1.73,
+          "No": 2.0
+        },
+        "marketProbability": 0.536193
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|williamhill": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "williamhill",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.73,
+            "No": 2.0
+          },
+          "marketProbability": 0.536193
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.73,
+          "No": 2.0
+        },
+        "marketProbability": 0.536193
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.73,
+          "No": 2.0
+        },
+        "marketProbability": 0.536193
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|coral": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "coral",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:16Z",
+          "prices": {
+            "Yes": 1.75,
+            "No": 1.95
+          },
+          "marketProbability": 0.527027
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Yes": 1.75,
+          "No": 1.95
+        },
+        "marketProbability": 0.527027
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Yes": 1.75,
+          "No": 1.95
+        },
+        "marketProbability": 0.527027
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "0eb7f35d744c1cebeb53be32f50e1e2d|btts|matchbook": {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "league": "soccer_efl_champ",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "matchbook",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.84,
+            "No": 2.08
+          },
+          "marketProbability": 0.530612
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.84,
+          "No": 2.08
+        },
+        "marketProbability": 0.530612
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.84,
+          "No": 2.08
+        },
+        "marketProbability": 0.530612
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|over15|leovegas": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "leovegas",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:38Z",
+          "prices": {
+            "Over": 1.24,
+            "Under": 3.95
+          },
+          "marketProbability": 0.761079
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Over": 1.24,
+          "Under": 3.95
+        },
+        "marketProbability": 0.761079
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Over": 1.24,
+          "Under": 3.95
+        },
+        "marketProbability": 0.761079
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|over15|williamhill": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "williamhill",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 4.0
+          },
+          "marketProbability": 0.766284
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 4.0
+        },
+        "marketProbability": 0.766284
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.22,
+          "Under": 4.0
+        },
+        "marketProbability": 0.766284
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|over15|coral": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "coral",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:16Z",
+          "prices": {
+            "Over": 1.25,
+            "Under": 3.8
+          },
+          "marketProbability": 0.752475
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Over": 1.25,
+          "Under": 3.8
+        },
+        "marketProbability": 0.752475
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Over": 1.25,
+          "Under": 3.8
+        },
+        "marketProbability": 0.752475
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|over15|ladbrokes_uk": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmaker": "ladbrokes_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Over": 1.25,
+            "Under": 3.8
+          },
+          "marketProbability": 0.752475
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.25,
+          "Under": 3.8
+        },
+        "marketProbability": 0.752475
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Over": 1.25,
+          "Under": 3.8
+        },
+        "marketProbability": 0.752475
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|virginbet": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "virginbet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:17Z",
+          "prices": {
+            "Yes": 1.62,
+            "No": 2.16
+          },
+          "marketProbability": 0.571429
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Yes": 1.62,
+          "No": 2.16
+        },
+        "marketProbability": 0.571429
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:17Z",
+        "prices": {
+          "Yes": 1.62,
+          "No": 2.16
+        },
+        "marketProbability": 0.571429
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|livescorebet": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "livescorebet",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:39Z",
+          "prices": {
+            "Yes": 1.62,
+            "No": 2.16
+          },
+          "marketProbability": 0.571429
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Yes": 1.62,
+          "No": 2.16
+        },
+        "marketProbability": 0.571429
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:39Z",
+        "prices": {
+          "Yes": 1.62,
+          "No": 2.16
+        },
+        "marketProbability": 0.571429
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|leovegas": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "leovegas",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:38Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.15
+          },
+          "marketProbability": 0.562827
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.15
+        },
+        "marketProbability": 0.562827
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:38Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.15
+        },
+        "marketProbability": 0.562827
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|betfred_uk": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "betfred_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:15Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:15Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.1
+        },
+        "marketProbability": 0.557029
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:15Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.1
+        },
+        "marketProbability": 0.557029
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|williamhill": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "williamhill",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.25
+        },
+        "marketProbability": 0.584416
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.6,
+          "No": 2.25
+        },
+        "marketProbability": 0.584416
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|matchbook": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "matchbook",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.75,
+            "No": 2.22
+          },
+          "marketProbability": 0.559194
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.75,
+          "No": 2.22
+        },
+        "marketProbability": 0.559194
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.75,
+          "No": 2.22
+        },
+        "marketProbability": 0.559194
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|coral": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "coral",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:16Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.1
+        },
+        "marketProbability": 0.557029
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:16Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.1
+        },
+        "marketProbability": 0.557029
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    },
+    "9dfe9df3ad88c453e3572872bf500488|btts|ladbrokes_uk": {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "league": "soccer_efl_champ",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmaker": "ladbrokes_uk",
+      "history": [
+        {
+          "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+          "lastUpdate": "2026-11-25T17:42:37Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
+        }
+      ],
+      "firstObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.1
+        },
+        "marketProbability": 0.557029
+      },
+      "latestObserved": {
+        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
+        "lastUpdate": "2026-11-25T17:42:37Z",
+        "prices": {
+          "Yes": 1.67,
+          "No": 2.1
+        },
+        "marketProbability": 0.557029
+      },
+      "oddsChangePct": 0.0,
+      "probabilityChangePP": 0.0,
+      "movementReady": false
+    }
+  },
+  "updatedAt": "2026-11-25T17:42:44.726744+00:00",
+  "mode": "research_only",
+  "decision": "PAS",
+  "recordCount": 38
+}
