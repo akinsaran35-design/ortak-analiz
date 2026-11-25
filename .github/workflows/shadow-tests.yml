@@ -59,3 +59,7 @@ jobs:
         run: |
           python -m py_compile scripts/market_movement.py
           python scripts/test_market_movement.py
+      - name: Test V4.12 model market
+        run: |
+          python -m py_compile scripts/model_market.py
+          python scripts/test_model_market.py
