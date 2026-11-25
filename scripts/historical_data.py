@@ -80,9 +80,31 @@ def collect(today, fetch=get):
             except Exception as exc:
                 report["errors"].append(dict(source=url,error=type(exc).__name__))
     report["matches"]=[records[k] for k in sorted(records) if k not in conflicts]
+    # Cross-file duplicates: exact team names only, never fuzzy merge.
+    grouped={}
+    for row in report["matches"]:
+        key=(row["date"],row["home"].casefold(),row["away"].casefold())
+        grouped.setdefault(key,[]).append(row)
+    clean=[]
+    duplicate_count=0
+    cross_conflicts=0
+    for group in grouped.values():
+        if len({tuple(x["ft"]) for x in group})>1 or len({tuple(x["ht"]) for x in group if x["ht"] is not None})>1:
+            cross_conflicts+=len(group)
+            continue
+        row=dict(next((x for x in group if x["ht"] is not None),group[0]))
+        row["leagueAliases"]=sorted({x["league"] for x in group})
+        row["sources"]=sorted({x["source"] for x in group})
+        clean.append(row)
+        duplicate_count+=len(group)-1
+    report["rawMatchCount"]=len(report["matches"])
+    report["matches"]=clean
+    report["duplicatesRemoved"]=duplicate_count
+    report["crossFileConflictRecords"]=cross_conflicts
     report["conflictsExcluded"]=len(conflicts)
     report["matchCount"]=len(report["matches"])
-    report["leagueCount"]=len({m["league"] for m in report["matches"]})
+    report["leagueCodeCount"]=len({c for m in report["matches"] for c in m["leagueAliases"]})
+    report["leagueCountVerified"]=False
     report["halfTimeCount"]=sum(m["ht"] is not None for m in report["matches"])
     return report
 
