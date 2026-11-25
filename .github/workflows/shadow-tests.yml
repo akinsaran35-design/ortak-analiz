@@ -63,3 +63,7 @@ jobs:
         run: |
           python -m py_compile scripts/model_market.py
           python scripts/test_model_market.py
+      - name: Test V4.13 unified decision
+        run: |
+          python -m py_compile scripts/unified_decision.py
+          python scripts/test_unified_decision.py
