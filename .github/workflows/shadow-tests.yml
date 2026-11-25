@@ -76,3 +76,6 @@ jobs:
 
       - name: Test V4.17 calibration
         run: python scripts/test_calibration.py
+
+      - name: Test V4.18 Dixon Coles
+        run: python scripts/test_dixon_coles.py
