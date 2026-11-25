@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-25T17:53:44.068945+00:00",
+  "updatedAt": "2026-11-25T18:55:45.049001+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -15,12 +15,12 @@
         "grosvenor": 0.493261,
         "leovegas": 0.467018,
         "williamhill": 0.48,
-        "matchbook": 0.456853
+        "matchbook": 0.459596
       },
       "marketProbability": 0.4735,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.1675,
-      "bookProbabilitySpread": 0.0364,
+      "bookProbabilitySpread": 0.0337,
       "marketFairOdds": 2.1119,
       "medianMargin": 0.0642
     },
@@ -29,15 +29,15 @@
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.52957,
+        "grosvenor": 0.536193,
         "leovegas": 0.532982,
         "williamhill": 0.546667
       },
-      "marketProbability": 0.533,
+      "marketProbability": 0.5362,
       "modelProbabilityUncalibrated": 0.578,
-      "difference": 0.045,
-      "bookProbabilitySpread": 0.0171,
-      "marketFairOdds": 1.8762,
+      "difference": 0.0418,
+      "bookProbabilitySpread": 0.0137,
+      "marketFairOdds": 1.865,
       "medianMargin": 0.076
     },
     {
@@ -46,34 +46,33 @@
       "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.540107,
-        "leovegas": 0.539474,
+        "leovegas": 0.532982,
         "williamhill": 0.546667,
-        "matchbook": 0.541772
+        "matchbook": 0.526582
       },
-      "marketProbability": 0.5409,
+      "marketProbability": 0.5365,
       "modelProbabilityUncalibrated": 0.536,
-      "difference": -0.0049,
-      "bookProbabilitySpread": 0.0072,
-      "marketFairOdds": 1.8486,
-      "medianMargin": 0.0676
+      "difference": -0.0005,
+      "bookProbabilitySpread": 0.0201,
+      "marketFairOdds": 1.8638,
+      "medianMargin": 0.068
     },
     {
       "match": "Watford FC – Blackburn Rovers FC",
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
-      "bookCount": 5,
+      "bookCount": 4,
       "bookProbabilities": {
-        "grosvenor": 0.506739,
-        "leovegas": 0.467018,
-        "casumo": 0.470109,
-        "williamhill": 0.48,
-        "matchbook": 0.465995
+        "grosvenor": 0.485255,
+        "leovegas": 0.460526,
+        "williamhill": 0.463807,
+        "matchbook": 0.473146
       },
-      "marketProbability": 0.4701,
+      "marketProbability": 0.4685,
       "modelProbabilityUncalibrated": 0.531,
-      "difference": 0.0609,
-      "bookProbabilitySpread": 0.0407,
-      "marketFairOdds": 2.1272,
-      "medianMargin": 0.0684
+      "difference": 0.0625,
+      "bookProbabilitySpread": 0.0247,
+      "marketFairOdds": 2.1346,
+      "medianMargin": 0.0663
     },
     {
       "match": "Stade Brestois 29 – Paris FC",
@@ -100,12 +99,12 @@
         "grosvenor": 0.59375,
         "leovegas": 0.592784,
         "williamhill": 0.594315,
-        "matchbook": 0.588832
+        "matchbook": 0.587342
       },
       "marketProbability": 0.5933,
       "modelProbabilityUncalibrated": 0.6809999999999999,
       "difference": 0.0877,
-      "bookProbabilitySpread": 0.0055,
+      "bookProbabilitySpread": 0.007,
       "marketFairOdds": 1.6856,
       "medianMargin": 0.0697
     },
@@ -180,14 +179,14 @@
       "bookCount": 3,
       "bookProbabilities": {
         "grosvenor": 0.552,
-        "leovegas": 0.555556,
+        "leovegas": 0.533333,
         "williamhill": 0.546667
       },
-      "marketProbability": 0.552,
+      "marketProbability": 0.5467,
       "modelProbabilityUncalibrated": 0.5770000000000001,
-      "difference": 0.025,
-      "bookProbabilitySpread": 0.0089,
-      "marketFairOdds": 1.8116,
+      "difference": 0.0303,
+      "bookProbabilitySpread": 0.0187,
+      "marketFairOdds": 1.8293,
       "medianMargin": 0.076
     },
     {

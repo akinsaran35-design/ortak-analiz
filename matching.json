@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-25T17:53:44.021665+00:00",
+  "updatedAt": "2026-11-25T18:55:44.988345+00:00",
   "decision": "PAS",
   "matchedCount": 23,
   "unmatchedCount": 7,
@@ -27,7 +27,7 @@
       "match": "Watford FC – Blackburn Rovers FC",
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
       "kickoff": "2026-11-25T19:45:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "SV Werder Bremen – Borussia Mönchengladbach",
