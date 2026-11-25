@@ -1,0 +1,26 @@
+{
+  "version": "4.13",
+  "updatedAt": "2026-11-25T19:05:50.612519+00:00",
+  "mode": "research_only",
+  "decision": "PAS",
+  "realBettingEnabled": false,
+  "maximumSelections": 3,
+  "minimumValidatedMatches": 500,
+  "testedMatches": 0,
+  "modelCalibrated": false,
+  "researchCandidates": [],
+  "selections": [],
+  "rejected": {
+    "low_probability": 7,
+    "low_ev": 3
+  },
+  "reasons": [
+    "insufficient_validated_matches",
+    "validation_not_approved",
+    "model_not_calibrated",
+    "real_betting_locked",
+    "no_eligible_candidates"
+  ],
+  "errors": [],
+  "candidateCount": 0
+}

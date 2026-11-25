@@ -68,6 +68,28 @@ jobs:
         run: python scripts/data_quality.py
       - name: V4.6 Karar motoru
         run: python scripts/decision_engine.py
+      - name: V4.8 Shadow tests
+        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: python scripts/test_shadow_performance.py
+      - name: V4.8 Shadow pipeline
+        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/shadow_coupon.py
+          python scripts/shadow_results.py
+          python scripts/shadow_performance.py
+      - name: V4.9 Research 1.5 totals
+        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: python scripts/market_analysis_15.py
+      - name: V4.8 Save shadow reports
+        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.8 shadow reports"
+            git push
+          fi
       - name: Raporlari kaydet
         if: github.ref == 'refs/heads/main'
         run: |
@@ -76,5 +98,72 @@ jobs:
           git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json market_analysis.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json
           if ! git diff --cached --quiet; then
             git commit -m "Update daily analysis and validation"
+            git push
+          fi
+
+      - name: V4.9 Live Extra Markets Pilot
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python scripts/test_extra_markets.py
+          python scripts/fetch_extra_markets.py
+          cat extra_markets.json
+
+      - name: Upload V4.9 Live Report
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        uses: actions/upload-artifact@v4
+        with:
+          name: extra-markets-pilot
+          path: extra_markets.json
+          retention-days: 7
+
+      - name: V4.10 Archive Extra Markets
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_archive_extra_markets.py
+          python scripts/archive_extra_markets.py
+
+          if [ -f extra_market_archive.json ]; then
+            git add extra_market_archive.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Update V4.10 extra market archive"
+              git push
+            fi
+          fi
+      - name: V4.11 Market Movement
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_market_movement.py
+          python scripts/market_movement.py
+          cat market_movement.json
+
+          git add market_movement.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.11 market movement"
+            git push
+          fi
+      - name: V4.12 Model Market Comparison
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_model_market.py
+          python scripts/model_market.py
+          cat model_market.json
+
+          git add model_market.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.12 model market report"
+            git push
+          fi
+      - name: V4.13 Unified Decision
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_unified_decision.py
+          python scripts/unified_decision.py
+          cat unified_decision.json
+
+          git add unified_decision.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.13 unified decision"
             git push
           fi

@@ -1,0 +1,73 @@
+name: V4.8 Shadow Tests
+
+on:
+  push:
+    branches: [ortak-analiz-v4-8]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile shadow modules
+        run: python -m py_compile scripts/shadow_coupon.py scripts/shadow_results.py scripts/shadow_performance.py
+      - name: Test settlement
+        run: python scripts/test_shadow_performance.py
+
+      - name: Test research market report
+        run: |
+          python -m py_compile scripts/market_analysis_15.py
+          python scripts/market_analysis_15.py
+          python -c 'import json; r=json.load(open("market_analysis_15.json")); assert r["market"] == "1.5" and r["modelCalibrated"] is False and r["decision"] == "PAS" and r["comparedCount"] == len(r["rows"])'
+
+      - name: Test V4.9 extra markets
+        run: |
+          python -m py_compile scripts/fetch_extra_markets.py
+          ODDS_API_KEY="" python scripts/fetch_extra_markets.py
+          python -c 'import json; r=json.load(open("extra_markets.json")); assert r["decision"] == "PAS" and r["eventCount"] == 0 and "missing_key" in r["errors"]'
+
+      - name: Test V4.9 simulated API
+        run: python scripts/test_extra_markets.py
+
+      - name: V4.9 controlled live pilot
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_extra_markets.py
+
+      - name: Upload V4.9 pilot report
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        uses: actions/upload-artifact@v4
+        with:
+          name: extra-markets-pilot
+          path: extra_markets.json
+          retention-days: 7
+
+      - name: Test V4.10 odds archive
+        run: |
+          python -m py_compile scripts/archive_extra_markets.py
+          python scripts/test_archive_extra_markets.py
+      - name: Test V4.11 market movement
+        run: |
+          python -m py_compile scripts/market_movement.py
+          python scripts/test_market_movement.py
+      - name: Test V4.12 model market
+        run: |
+          python -m py_compile scripts/model_market.py
+          python scripts/test_model_market.py
+      - name: Test V4.13 unified decision
+        run: |
+          python -m py_compile scripts/unified_decision.py
+          python scripts/test_unified_decision.py
+      - name: Test V4.14 dashboard
+        run: |
+          node --check dashboard-v414.js
+          grep -F 'src="./dashboard-v414.js"' index.html

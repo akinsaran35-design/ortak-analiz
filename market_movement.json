@@ -1,0 +1,147 @@
+{
+  "version": "4.11",
+  "updatedAt": "2026-11-25T19:05:47.323804+00:00",
+  "mode": "research_only",
+  "decision": "PAS",
+  "eventCount": 3,
+  "markets": [
+    {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmakers": 6,
+      "movementBookmakers": 6,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 0.0,
+        "livescorebet": 0.0,
+        "leovegas": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.0,
+        "ladbrokes_uk": 0.0
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmakers": 8,
+      "movementBookmakers": 8,
+      "rising": 2,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 1.0058000000000011,
+        "livescorebet": 1.0058000000000011,
+        "leovegas": 0.3050999999999915,
+        "betfred_uk": 0.0,
+        "williamhill": 0.0,
+        "coral": -0.1518999999999937,
+        "ladbrokes_uk": -0.1518999999999937,
+        "matchbook": -0.6400000000000072
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmakers": 5,
+      "movementBookmakers": 5,
+      "rising": 0,
+      "falling": 3,
+      "medianChangePP": -1.3797,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": -1.4416999999999902,
+        "livescorebet": -1.8993999999999955,
+        "leovegas": -0.7884000000000002,
+        "williamhill": -1.379700000000006,
+        "coral": -0.3174999999999928
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmakers": 7,
+      "movementBookmakers": 7,
+      "rising": 0,
+      "falling": 3,
+      "medianChangePP": -0.8,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": -2.0877000000000034,
+        "livescorebet": -2.0877000000000034,
+        "leovegas": -0.8000000000000007,
+        "betfred_uk": -2.1368000000000054,
+        "williamhill": 0.0,
+        "coral": -0.7027000000000005,
+        "matchbook": 0.8431000000000077
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmakers": 6,
+      "movementBookmakers": 6,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "leovegas": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.4496999999999973,
+        "ladbrokes_uk": 0.4496999999999973,
+        "virginbet": 0.0,
+        "livescorebet": 0.0
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmakers": 8,
+      "movementBookmakers": 8,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": -0.2645999999999926,
+        "livescorebet": -0.2645999999999926,
+        "leovegas": 0.0,
+        "betfred_uk": 0.0,
+        "williamhill": 0.0,
+        "matchbook": 0.2831000000000028,
+        "coral": 0.0,
+        "ladbrokes_uk": 0.0
+      },
+      "decision": "PAS"
+    }
+  ],
+  "errors": [],
+  "marketCount": 6
+}

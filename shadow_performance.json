@@ -1,0 +1,48 @@
+{
+  "version": "4.8",
+  "mode": "shadow",
+  "liveEnabled": false,
+  "updatedAt": "2026-11-25T19:05:41.587785+00:00",
+  "overall": {
+    "recorded": 0,
+    "settled": 0,
+    "pending": 0,
+    "won": 0,
+    "lost": 0,
+    "winRate": null,
+    "profit": 0,
+    "roi": null
+  },
+  "bySize": {
+    "1": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "won": 0,
+      "lost": 0,
+      "winRate": null,
+      "profit": 0,
+      "roi": null
+    },
+    "2": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "won": 0,
+      "lost": 0,
+      "winRate": null,
+      "profit": 0,
+      "roi": null
+    },
+    "3": {
+      "recorded": 0,
+      "settled": 0,
+      "pending": 0,
+      "won": 0,
+      "lost": 0,
+      "winRate": null,
+      "profit": 0,
+      "roi": null
+    }
+  }
+}
