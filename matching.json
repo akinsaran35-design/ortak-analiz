@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-25T05:46:06.397452+00:00",
+  "updatedAt": "2026-11-25T15:12:23.735626+00:00",
   "decision": "PAS",
   "matchedCount": 23,
   "unmatchedCount": 7,
@@ -9,7 +9,7 @@
       "match": "Stoke City FC – Millwall FC",
       "eventId": "77dfddf6dea97d5ecb5e2463b29fe67e",
       "kickoff": "2026-11-25T20:00:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "Bolton Wanderers FC – West Bromwich Albion FC",
@@ -57,7 +57,7 @@
       "match": "Manchester United FC – Brentford FC",
       "eventId": "ab87184803a63f7b679f1d12b01c3271",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 2
     },
     {
       "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
@@ -69,7 +69,7 @@
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "VfB Stuttgart – Eintracht Frankfurt",
@@ -117,25 +117,25 @@
       "match": "Queens Park Rangers FC – Sheffield United FC",
       "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 3
     },
     {
       "match": "Millwall FC – Burnley FC",
       "eventId": "3f93526d7c8e0ca84734aea60c13900a",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "West Bromwich Albion FC – Bristol City FC",
       "eventId": "b67372e7107fdd259a978e614711e657",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 5
     },
     {
       "match": "Lincoln City FC – Wolverhampton Wanderers FC",
       "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
       "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "Derby County FC – Watford FC",
