@@ -3,7 +3,7 @@
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
   "validationStart": "2026-11-25",
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-25",
   "tested": 0,
   "minimumMatches": 500,
   "liveEnabled": false,
