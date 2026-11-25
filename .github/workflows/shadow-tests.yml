@@ -27,3 +27,9 @@ jobs:
           python -m py_compile scripts/market_analysis_15.py
           python scripts/market_analysis_15.py
           python -c 'import json; r=json.load(open("market_analysis_15.json")); assert r["market"] == "1.5" and r["modelCalibrated"] is False and r["decision"] == "PAS" and r["comparedCount"] == len(r["rows"])'
+
+      - name: Test V4.9 extra markets
+        run: |
+          python -m py_compile scripts/fetch_extra_markets.py
+          ODDS_API_KEY="" python scripts/fetch_extra_markets.py
+          python -c 'import json; r=json.load(open("extra_markets.json")); assert r["decision"] == "PAS" and r["eventCount"] == 0 and "missing_key" in r["errors"]'
