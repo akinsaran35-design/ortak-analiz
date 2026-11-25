@@ -1,0 +1,23 @@
+name: V4.8 Shadow Tests
+
+on:
+  push:
+    branches: [ortak-analiz-v4-8]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile shadow modules
+        run: python -m py_compile scripts/shadow_coupon.py scripts/shadow_results.py scripts/shadow_performance.py
+      - name: Test settlement
+        run: python scripts/test_shadow_performance.py
