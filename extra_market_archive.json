@@ -18,6 +18,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.766208
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:11Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.9
+          },
+          "marketProbability": 0.766208
         }
       ],
       "firstObserved": {
@@ -30,8 +39,8 @@
         "marketProbability": 0.766208
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:17Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:11Z",
         "prices": {
           "Over": 1.19,
           "Under": 3.9
@@ -40,7 +49,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|over15|livescorebet": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -59,6 +68,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.766208
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.9
+          },
+          "marketProbability": 0.766208
         }
       ],
       "firstObserved": {
@@ -71,8 +89,8 @@
         "marketProbability": 0.766208
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:39Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Over": 1.19,
           "Under": 3.9
@@ -81,7 +99,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|over15|leovegas": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -100,6 +118,15 @@
             "Under": 4.0
           },
           "marketProbability": 0.764818
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 4.0
+          },
+          "marketProbability": 0.764818
         }
       ],
       "firstObserved": {
@@ -112,8 +139,8 @@
         "marketProbability": 0.764818
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:38Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Over": 1.23,
           "Under": 4.0
@@ -122,7 +149,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|over15|williamhill": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -141,6 +168,15 @@
             "Under": 4.0
           },
           "marketProbability": 0.766284
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 4.0
+          },
+          "marketProbability": 0.766284
         }
       ],
       "firstObserved": {
@@ -153,8 +189,8 @@
         "marketProbability": 0.766284
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Over": 1.22,
           "Under": 4.0
@@ -163,7 +199,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|over15|coral": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -182,6 +218,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.761719
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:34Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.9
+          },
+          "marketProbability": 0.761719
         }
       ],
       "firstObserved": {
@@ -194,8 +239,8 @@
         "marketProbability": 0.761719
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:16Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:34Z",
         "prices": {
           "Over": 1.22,
           "Under": 3.9
@@ -204,7 +249,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|over15|ladbrokes_uk": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -223,6 +268,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.761719
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.9
+          },
+          "marketProbability": 0.761719
         }
       ],
       "firstObserved": {
@@ -235,8 +289,8 @@
         "marketProbability": 0.761719
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Over": 1.22,
           "Under": 3.9
@@ -245,7 +299,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|virginbet": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -264,6 +318,15 @@
             "No": 2.2
           },
           "marketProbability": 0.578947
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:11Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
         }
       ],
       "firstObserved": {
@@ -276,8 +339,8 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:17Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:11Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.2
@@ -286,7 +349,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|livescorebet": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -305,6 +368,15 @@
             "No": 2.2
           },
           "marketProbability": 0.578947
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
         }
       ],
       "firstObserved": {
@@ -317,8 +389,8 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:39Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.2
@@ -327,7 +399,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|leovegas": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -346,6 +418,15 @@
             "No": 2.25
           },
           "marketProbability": 0.584416
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
         }
       ],
       "firstObserved": {
@@ -358,8 +439,8 @@
         "marketProbability": 0.584416
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:38Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.25
@@ -368,7 +449,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|betfred_uk": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -387,6 +468,15 @@
             "No": 2.25
           },
           "marketProbability": 0.589005
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Yes": 1.57,
+            "No": 2.25
+          },
+          "marketProbability": 0.589005
         }
       ],
       "firstObserved": {
@@ -399,8 +489,8 @@
         "marketProbability": 0.589005
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:15Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Yes": 1.57,
           "No": 2.25
@@ -409,7 +499,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|williamhill": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -428,6 +518,15 @@
             "No": 2.25
           },
           "marketProbability": 0.584416
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
         }
       ],
       "firstObserved": {
@@ -440,8 +539,8 @@
         "marketProbability": 0.584416
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.25
@@ -450,7 +549,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|coral": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -469,6 +568,15 @@
             "No": 2.2
           },
           "marketProbability": 0.578947
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:34Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
         }
       ],
       "firstObserved": {
@@ -481,8 +589,8 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:16Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:34Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.2
@@ -491,7 +599,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|ladbrokes_uk": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -510,6 +618,15 @@
             "No": 2.2
           },
           "marketProbability": 0.578947
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.2
+          },
+          "marketProbability": 0.578947
         }
       ],
       "firstObserved": {
@@ -522,8 +639,8 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.2
@@ -532,7 +649,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|matchbook": {
       "eventId": "61d1126751ba67227ac2819624e98342",
@@ -551,6 +668,15 @@
             "No": 2.36
           },
           "marketProbability": 0.585608
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:37Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.38
+          },
+          "marketProbability": 0.587654
         }
       ],
       "firstObserved": {
@@ -563,17 +689,17 @@
         "marketProbability": 0.585608
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:37Z",
         "prices": {
           "Yes": 1.67,
-          "No": 2.36
+          "No": 2.38
         },
-        "marketProbability": 0.585608
+        "marketProbability": 0.587654
       },
       "oddsChangePct": 0.0,
-      "probabilityChangePP": 0.0,
-      "movementReady": false
+      "probabilityChangePP": 0.2046,
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|virginbet": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -592,6 +718,15 @@
             "Under": 3.55
           },
           "marketProbability": 0.742678
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:11Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 3.55
+          },
+          "marketProbability": 0.742678
         }
       ],
       "firstObserved": {
@@ -604,8 +739,8 @@
         "marketProbability": 0.742678
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:17Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:11Z",
         "prices": {
           "Over": 1.23,
           "Under": 3.55
@@ -614,7 +749,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|livescorebet": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -633,6 +768,15 @@
             "Under": 3.55
           },
           "marketProbability": 0.742678
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 3.55
+          },
+          "marketProbability": 0.742678
         }
       ],
       "firstObserved": {
@@ -645,8 +789,8 @@
         "marketProbability": 0.742678
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:39Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Over": 1.23,
           "Under": 3.55
@@ -655,7 +799,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|leovegas": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -674,6 +818,15 @@
             "Under": 3.3
           },
           "marketProbability": 0.714286
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Over": 1.32,
+            "Under": 3.3
+          },
+          "marketProbability": 0.714286
         }
       ],
       "firstObserved": {
@@ -686,8 +839,8 @@
         "marketProbability": 0.714286
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:38Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Over": 1.32,
           "Under": 3.3
@@ -696,7 +849,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|williamhill": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -715,6 +868,15 @@
             "Under": 3.4
           },
           "marketProbability": 0.723404
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Over": 1.3,
+            "Under": 3.4
+          },
+          "marketProbability": 0.723404
         }
       ],
       "firstObserved": {
@@ -727,8 +889,8 @@
         "marketProbability": 0.723404
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Over": 1.3,
           "Under": 3.4
@@ -737,7 +899,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|coral": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -756,6 +918,15 @@
             "Under": 3.25
           },
           "marketProbability": 0.714286
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:34Z",
+          "prices": {
+            "Over": 1.3,
+            "Under": 3.25
+          },
+          "marketProbability": 0.714286
         }
       ],
       "firstObserved": {
@@ -768,8 +939,8 @@
         "marketProbability": 0.714286
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:16Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:34Z",
         "prices": {
           "Over": 1.3,
           "Under": 3.25
@@ -778,7 +949,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|virginbet": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -797,6 +968,15 @@
             "No": 2.1
           },
           "marketProbability": 0.558511
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:11Z",
+          "prices": {
+            "Yes": 1.66,
+            "No": 2.1
+          },
+          "marketProbability": 0.558511
         }
       ],
       "firstObserved": {
@@ -809,8 +989,8 @@
         "marketProbability": 0.558511
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:17Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:11Z",
         "prices": {
           "Yes": 1.66,
           "No": 2.1
@@ -819,7 +999,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|livescorebet": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -838,6 +1018,15 @@
             "No": 2.1
           },
           "marketProbability": 0.558511
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Yes": 1.66,
+            "No": 2.1
+          },
+          "marketProbability": 0.558511
         }
       ],
       "firstObserved": {
@@ -850,8 +1039,8 @@
         "marketProbability": 0.558511
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:39Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Yes": 1.66,
           "No": 2.1
@@ -860,7 +1049,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|leovegas": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -879,6 +1068,15 @@
             "No": 1.98
           },
           "marketProbability": 0.528
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Yes": 1.77,
+            "No": 1.98
+          },
+          "marketProbability": 0.528
         }
       ],
       "firstObserved": {
@@ -891,8 +1089,8 @@
         "marketProbability": 0.528
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:38Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Yes": 1.77,
           "No": 1.98
@@ -901,7 +1099,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|betfred_uk": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -920,6 +1118,15 @@
             "No": 2.0
           },
           "marketProbability": 0.536193
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Yes": 1.73,
+            "No": 2.0
+          },
+          "marketProbability": 0.536193
         }
       ],
       "firstObserved": {
@@ -932,8 +1139,8 @@
         "marketProbability": 0.536193
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:15Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Yes": 1.73,
           "No": 2.0
@@ -942,7 +1149,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|williamhill": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -961,6 +1168,15 @@
             "No": 2.0
           },
           "marketProbability": 0.536193
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Yes": 1.73,
+            "No": 2.0
+          },
+          "marketProbability": 0.536193
         }
       ],
       "firstObserved": {
@@ -973,8 +1189,8 @@
         "marketProbability": 0.536193
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Yes": 1.73,
           "No": 2.0
@@ -983,7 +1199,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|coral": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -1002,6 +1218,15 @@
             "No": 1.95
           },
           "marketProbability": 0.527027
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:34Z",
+          "prices": {
+            "Yes": 1.75,
+            "No": 1.95
+          },
+          "marketProbability": 0.527027
         }
       ],
       "firstObserved": {
@@ -1014,8 +1239,8 @@
         "marketProbability": 0.527027
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:16Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:34Z",
         "prices": {
           "Yes": 1.75,
           "No": 1.95
@@ -1024,7 +1249,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|matchbook": {
       "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
@@ -1043,6 +1268,15 @@
             "No": 2.08
           },
           "marketProbability": 0.530612
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:37Z",
+          "prices": {
+            "Yes": 1.84,
+            "No": 2.08
+          },
+          "marketProbability": 0.530612
         }
       ],
       "firstObserved": {
@@ -1055,8 +1289,8 @@
         "marketProbability": 0.530612
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:37Z",
         "prices": {
           "Yes": 1.84,
           "No": 2.08
@@ -1065,7 +1299,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|over15|leovegas": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1084,6 +1318,15 @@
             "Under": 3.95
           },
           "marketProbability": 0.761079
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Over": 1.24,
+            "Under": 3.95
+          },
+          "marketProbability": 0.761079
         }
       ],
       "firstObserved": {
@@ -1096,8 +1339,8 @@
         "marketProbability": 0.761079
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:38Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Over": 1.24,
           "Under": 3.95
@@ -1106,7 +1349,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|over15|williamhill": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1125,6 +1368,15 @@
             "Under": 4.0
           },
           "marketProbability": 0.766284
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 4.0
+          },
+          "marketProbability": 0.766284
         }
       ],
       "firstObserved": {
@@ -1137,8 +1389,8 @@
         "marketProbability": 0.766284
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Over": 1.22,
           "Under": 4.0
@@ -1147,7 +1399,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|over15|coral": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1166,6 +1418,15 @@
             "Under": 3.8
           },
           "marketProbability": 0.752475
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:34Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.8
+          },
+          "marketProbability": 0.756972
         }
       ],
       "firstObserved": {
@@ -1178,17 +1439,17 @@
         "marketProbability": 0.752475
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:16Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:34Z",
         "prices": {
-          "Over": 1.25,
+          "Over": 1.22,
           "Under": 3.8
         },
-        "marketProbability": 0.752475
+        "marketProbability": 0.756972
       },
-      "oddsChangePct": 0.0,
-      "probabilityChangePP": 0.0,
-      "movementReady": false
+      "oddsChangePct": -2.4,
+      "probabilityChangePP": 0.4497,
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|over15|ladbrokes_uk": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1207,6 +1468,15 @@
             "Under": 3.8
           },
           "marketProbability": 0.752475
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.8
+          },
+          "marketProbability": 0.756972
         }
       ],
       "firstObserved": {
@@ -1219,17 +1489,17 @@
         "marketProbability": 0.752475
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
-          "Over": 1.25,
+          "Over": 1.22,
           "Under": 3.8
         },
-        "marketProbability": 0.752475
+        "marketProbability": 0.756972
       },
-      "oddsChangePct": 0.0,
-      "probabilityChangePP": 0.0,
-      "movementReady": false
+      "oddsChangePct": -2.4,
+      "probabilityChangePP": 0.4497,
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|virginbet": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1248,6 +1518,15 @@
             "No": 2.16
           },
           "marketProbability": 0.571429
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:11Z",
+          "prices": {
+            "Yes": 1.62,
+            "No": 2.16
+          },
+          "marketProbability": 0.571429
         }
       ],
       "firstObserved": {
@@ -1260,8 +1539,8 @@
         "marketProbability": 0.571429
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:17Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:11Z",
         "prices": {
           "Yes": 1.62,
           "No": 2.16
@@ -1270,7 +1549,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|livescorebet": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1289,6 +1568,15 @@
             "No": 2.16
           },
           "marketProbability": 0.571429
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Yes": 1.62,
+            "No": 2.16
+          },
+          "marketProbability": 0.571429
         }
       ],
       "firstObserved": {
@@ -1301,8 +1589,8 @@
         "marketProbability": 0.571429
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:39Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Yes": 1.62,
           "No": 2.16
@@ -1311,7 +1599,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|leovegas": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1330,6 +1618,15 @@
             "No": 2.15
           },
           "marketProbability": 0.562827
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.15
+          },
+          "marketProbability": 0.562827
         }
       ],
       "firstObserved": {
@@ -1342,8 +1639,8 @@
         "marketProbability": 0.562827
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:38Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.15
@@ -1352,7 +1649,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|betfred_uk": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1371,6 +1668,15 @@
             "No": 2.1
           },
           "marketProbability": 0.557029
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:13Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
         }
       ],
       "firstObserved": {
@@ -1383,8 +1689,8 @@
         "marketProbability": 0.557029
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:15Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:13Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.1
@@ -1393,7 +1699,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|williamhill": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1412,6 +1718,15 @@
             "No": 2.25
           },
           "marketProbability": 0.584416
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:14Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
         }
       ],
       "firstObserved": {
@@ -1424,8 +1739,8 @@
         "marketProbability": 0.584416
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:14Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.25
@@ -1434,7 +1749,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|matchbook": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1453,6 +1768,15 @@
             "No": 2.22
           },
           "marketProbability": 0.559194
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:37Z",
+          "prices": {
+            "Yes": 1.75,
+            "No": 2.22
+          },
+          "marketProbability": 0.559194
         }
       ],
       "firstObserved": {
@@ -1465,8 +1789,8 @@
         "marketProbability": 0.559194
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:37Z",
         "prices": {
           "Yes": 1.75,
           "No": 2.22
@@ -1475,7 +1799,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|coral": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1494,6 +1818,15 @@
             "No": 2.1
           },
           "marketProbability": 0.557029
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:34Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
         }
       ],
       "firstObserved": {
@@ -1506,8 +1839,8 @@
         "marketProbability": 0.557029
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:16Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:34Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.1
@@ -1516,7 +1849,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|btts|ladbrokes_uk": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -1535,6 +1868,15 @@
             "No": 2.1
           },
           "marketProbability": 0.557029
+        },
+        {
+          "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+          "lastUpdate": "2026-11-25T17:53:12Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
         }
       ],
       "firstObserved": {
@@ -1547,8 +1889,8 @@
         "marketProbability": 0.557029
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T17:42:43.065614+00:00",
-        "lastUpdate": "2026-11-25T17:42:37Z",
+        "capturedAt": "2026-11-25T17:53:50.290405+00:00",
+        "lastUpdate": "2026-11-25T17:53:12Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.1
@@ -1557,10 +1899,10 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     }
   },
-  "updatedAt": "2026-11-25T17:42:44.726744+00:00",
+  "updatedAt": "2026-11-25T17:53:51.995816+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "recordCount": 38
