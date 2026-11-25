@@ -131,3 +131,15 @@ jobs:
               git push
             fi
           fi
+      - name: V4.11 Market Movement
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_market_movement.py
+          python scripts/market_movement.py
+          cat market_movement.json
+
+          git add market_movement.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.11 market movement"
+            git push
+          fi
