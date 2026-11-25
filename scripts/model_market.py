@@ -124,7 +124,11 @@ def main():
         daily = load("daily.json")
         matching = load("matching.json")
         odds = load("odds.json")
-        extra = load("extra_markets.json")
+        try:
+            extra = load("extra_markets.json")
+        except (OSError, ValueError):
+            extra = {}
+            reject("extra_report_unavailable")
         movement = load("market_movement.json")
 
         candidates = {}

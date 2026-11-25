@@ -69,19 +69,19 @@ jobs:
       - name: V4.6 Karar motoru
         run: python scripts/decision_engine.py
       - name: V4.8 Shadow tests
-        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: python scripts/test_shadow_performance.py
       - name: V4.8 Shadow pipeline
-        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: |
           python scripts/shadow_coupon.py
           python scripts/shadow_results.py
           python scripts/shadow_performance.py
       - name: V4.9 Research 1.5 totals
-        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: python scripts/market_analysis_15.py
       - name: V4.8 Save shadow reports
-        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -132,7 +132,7 @@ jobs:
             fi
           fi
       - name: V4.11 Market Movement
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
         run: |
           python scripts/test_market_movement.py
           python scripts/market_movement.py
@@ -144,7 +144,7 @@ jobs:
             git push
           fi
       - name: V4.12 Model Market Comparison
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
         run: |
           python scripts/test_model_market.py
           python scripts/model_market.py
@@ -156,7 +156,7 @@ jobs:
             git push
           fi
       - name: V4.13 Unified Decision
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
         run: |
           python scripts/test_unified_decision.py
           python scripts/unified_decision.py
