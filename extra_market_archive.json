@@ -36,6 +36,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.766208
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.9
+          },
+          "marketProbability": 0.766208
         }
       ],
       "firstObserved": {
@@ -48,8 +57,8 @@
         "marketProbability": 0.766208
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Over": 1.19,
           "Under": 3.9
@@ -154,6 +163,15 @@
             "Under": 4.0
           },
           "marketProbability": 0.764818
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:14Z",
+          "prices": {
+            "Over": 1.23,
+            "Under": 4.0
+          },
+          "marketProbability": 0.764818
         }
       ],
       "firstObserved": {
@@ -166,8 +184,8 @@
         "marketProbability": 0.764818
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:14Z",
         "prices": {
           "Over": 1.23,
           "Under": 4.0
@@ -213,6 +231,15 @@
             "Under": 4.0
           },
           "marketProbability": 0.766284
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:36Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 4.0
+          },
+          "marketProbability": 0.766284
         }
       ],
       "firstObserved": {
@@ -225,8 +252,8 @@
         "marketProbability": 0.766284
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:54:46Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:36Z",
         "prices": {
           "Over": 1.22,
           "Under": 4.0
@@ -272,6 +299,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.761719
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.9
+          },
+          "marketProbability": 0.761719
         }
       ],
       "firstObserved": {
@@ -284,8 +320,8 @@
         "marketProbability": 0.761719
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Over": 1.22,
           "Under": 3.9
@@ -331,6 +367,15 @@
             "Under": 3.9
           },
           "marketProbability": 0.761719
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.9
+          },
+          "marketProbability": 0.761719
         }
       ],
       "firstObserved": {
@@ -343,8 +388,8 @@
         "marketProbability": 0.761719
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Over": 1.22,
           "Under": 3.9
@@ -390,6 +435,15 @@
             "No": 2.2
           },
           "marketProbability": 0.578947
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.57,
+            "No": 2.25
+          },
+          "marketProbability": 0.589005
         }
       ],
       "firstObserved": {
@@ -402,16 +456,16 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
-          "Yes": 1.6,
-          "No": 2.2
+          "Yes": 1.57,
+          "No": 2.25
         },
-        "marketProbability": 0.578947
+        "marketProbability": 0.589005
       },
-      "oddsChangePct": 0.0,
-      "probabilityChangePP": 0.0,
+      "oddsChangePct": -1.875,
+      "probabilityChangePP": 1.0058,
       "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|livescorebet": {
@@ -449,6 +503,15 @@
             "No": 2.2
           },
           "marketProbability": 0.578947
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.57,
+            "No": 2.25
+          },
+          "marketProbability": 0.589005
         }
       ],
       "firstObserved": {
@@ -461,16 +524,16 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
-          "Yes": 1.6,
-          "No": 2.2
+          "Yes": 1.57,
+          "No": 2.25
         },
-        "marketProbability": 0.578947
+        "marketProbability": 0.589005
       },
-      "oddsChangePct": 0.0,
-      "probabilityChangePP": 0.0,
+      "oddsChangePct": -1.875,
+      "probabilityChangePP": 1.0058,
       "movementReady": true
     },
     "61d1126751ba67227ac2819624e98342|btts|leovegas": {
@@ -508,6 +571,15 @@
             "No": 2.25
           },
           "marketProbability": 0.587467
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:14Z",
+          "prices": {
+            "Yes": 1.58,
+            "No": 2.25
+          },
+          "marketProbability": 0.587467
         }
       ],
       "firstObserved": {
@@ -520,8 +592,8 @@
         "marketProbability": 0.584416
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:14Z",
         "prices": {
           "Yes": 1.58,
           "No": 2.25
@@ -567,6 +639,15 @@
             "No": 2.25
           },
           "marketProbability": 0.589005
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:34Z",
+          "prices": {
+            "Yes": 1.57,
+            "No": 2.25
+          },
+          "marketProbability": 0.589005
         }
       ],
       "firstObserved": {
@@ -579,8 +660,8 @@
         "marketProbability": 0.589005
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:34Z",
         "prices": {
           "Yes": 1.57,
           "No": 2.25
@@ -626,6 +707,15 @@
             "No": 2.25
           },
           "marketProbability": 0.584416
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:36Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
         }
       ],
       "firstObserved": {
@@ -638,8 +728,8 @@
         "marketProbability": 0.584416
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:54:46Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:36Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.25
@@ -685,6 +775,15 @@
             "No": 2.2
           },
           "marketProbability": 0.577428
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Yes": 1.61,
+            "No": 2.2
+          },
+          "marketProbability": 0.577428
         }
       ],
       "firstObserved": {
@@ -697,8 +796,8 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Yes": 1.61,
           "No": 2.2
@@ -744,6 +843,15 @@
             "No": 2.2
           },
           "marketProbability": 0.577428
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.61,
+            "No": 2.2
+          },
+          "marketProbability": 0.577428
         }
       ],
       "firstObserved": {
@@ -756,8 +864,8 @@
         "marketProbability": 0.578947
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Yes": 1.61,
           "No": 2.2
@@ -803,6 +911,15 @@
             "No": 2.34
           },
           "marketProbability": 0.577778
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:34Z",
+          "prices": {
+            "Yes": 1.7,
+            "No": 2.34
+          },
+          "marketProbability": 0.579208
         }
       ],
       "firstObserved": {
@@ -815,16 +932,16 @@
         "marketProbability": 0.585608
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:34Z",
         "prices": {
-          "Yes": 1.71,
+          "Yes": 1.7,
           "No": 2.34
         },
-        "marketProbability": 0.577778
+        "marketProbability": 0.579208
       },
-      "oddsChangePct": 2.3952,
-      "probabilityChangePP": -0.783,
+      "oddsChangePct": 1.7964,
+      "probabilityChangePP": -0.64,
       "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|virginbet": {
@@ -921,6 +1038,15 @@
             "Under": 3.35
           },
           "marketProbability": 0.728261
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Over": 1.26,
+            "Under": 3.3
+          },
+          "marketProbability": 0.723684
         }
       ],
       "firstObserved": {
@@ -933,16 +1059,16 @@
         "marketProbability": 0.742678
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
-          "Over": 1.25,
-          "Under": 3.35
+          "Over": 1.26,
+          "Under": 3.3
         },
-        "marketProbability": 0.728261
+        "marketProbability": 0.723684
       },
-      "oddsChangePct": 1.626,
-      "probabilityChangePP": -1.4417,
+      "oddsChangePct": 2.439,
+      "probabilityChangePP": -1.8994,
       "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|over15|leovegas": {
@@ -980,6 +1106,15 @@
             "Under": 3.2
           },
           "marketProbability": 0.706402
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Over": 1.33,
+            "Under": 3.2
+          },
+          "marketProbability": 0.706402
         }
       ],
       "firstObserved": {
@@ -992,8 +1127,8 @@
         "marketProbability": 0.714286
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Over": 1.33,
           "Under": 3.2
@@ -1039,6 +1174,15 @@
             "Under": 3.25
           },
           "marketProbability": 0.709607
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:36Z",
+          "prices": {
+            "Over": 1.33,
+            "Under": 3.25
+          },
+          "marketProbability": 0.709607
         }
       ],
       "firstObserved": {
@@ -1051,8 +1195,8 @@
         "marketProbability": 0.723404
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:54:46Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:36Z",
         "prices": {
           "Over": 1.33,
           "Under": 3.25
@@ -1098,6 +1242,15 @@
             "Under": 3.2
           },
           "marketProbability": 0.711111
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Over": 1.3,
+            "Under": 3.2
+          },
+          "marketProbability": 0.711111
         }
       ],
       "firstObserved": {
@@ -1110,8 +1263,8 @@
         "marketProbability": 0.714286
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Over": 1.3,
           "Under": 3.2
@@ -1157,6 +1310,15 @@
             "No": 2.02
           },
           "marketProbability": 0.541555
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.72,
+            "No": 2.0
+          },
+          "marketProbability": 0.537634
         }
       ],
       "firstObserved": {
@@ -1169,16 +1331,16 @@
         "marketProbability": 0.558511
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
-          "Yes": 1.71,
-          "No": 2.02
+          "Yes": 1.72,
+          "No": 2.0
         },
-        "marketProbability": 0.541555
+        "marketProbability": 0.537634
       },
-      "oddsChangePct": 3.012,
-      "probabilityChangePP": -1.6956,
+      "oddsChangePct": 3.6145,
+      "probabilityChangePP": -2.0877,
       "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|livescorebet": {
@@ -1216,6 +1378,15 @@
             "No": 2.02
           },
           "marketProbability": 0.541555
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.72,
+            "No": 2.0
+          },
+          "marketProbability": 0.537634
         }
       ],
       "firstObserved": {
@@ -1228,16 +1399,16 @@
         "marketProbability": 0.558511
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
-          "Yes": 1.71,
-          "No": 2.02
+          "Yes": 1.72,
+          "No": 2.0
         },
-        "marketProbability": 0.541555
+        "marketProbability": 0.537634
       },
-      "oddsChangePct": 3.012,
-      "probabilityChangePP": -1.6956,
+      "oddsChangePct": 3.6145,
+      "probabilityChangePP": -2.0877,
       "movementReady": true
     },
     "0eb7f35d744c1cebeb53be32f50e1e2d|btts|leovegas": {
@@ -1275,6 +1446,15 @@
             "No": 1.95
           },
           "marketProbability": 0.52
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:14Z",
+          "prices": {
+            "Yes": 1.8,
+            "No": 1.95
+          },
+          "marketProbability": 0.52
         }
       ],
       "firstObserved": {
@@ -1287,8 +1467,8 @@
         "marketProbability": 0.528
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:14Z",
         "prices": {
           "Yes": 1.8,
           "No": 1.95
@@ -1334,6 +1514,15 @@
             "No": 1.91
           },
           "marketProbability": 0.514825
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:34Z",
+          "prices": {
+            "Yes": 1.8,
+            "No": 1.91
+          },
+          "marketProbability": 0.514825
         }
       ],
       "firstObserved": {
@@ -1346,8 +1535,8 @@
         "marketProbability": 0.536193
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:34Z",
         "prices": {
           "Yes": 1.8,
           "No": 1.91
@@ -1393,6 +1582,15 @@
             "No": 2.0
           },
           "marketProbability": 0.536193
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:36Z",
+          "prices": {
+            "Yes": 1.73,
+            "No": 2.0
+          },
+          "marketProbability": 0.536193
         }
       ],
       "firstObserved": {
@@ -1405,8 +1603,8 @@
         "marketProbability": 0.536193
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:54:46Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:36Z",
         "prices": {
           "Yes": 1.73,
           "No": 2.0
@@ -1452,6 +1650,15 @@
             "No": 1.95
           },
           "marketProbability": 0.52
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Yes": 1.8,
+            "No": 1.95
+          },
+          "marketProbability": 0.52
         }
       ],
       "firstObserved": {
@@ -1464,8 +1671,8 @@
         "marketProbability": 0.527027
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Yes": 1.8,
           "No": 1.95
@@ -1511,6 +1718,15 @@
             "No": 2.12
           },
           "marketProbability": 0.534005
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:34Z",
+          "prices": {
+            "Yes": 1.83,
+            "No": 2.14
+          },
+          "marketProbability": 0.539043
         }
       ],
       "firstObserved": {
@@ -1523,16 +1739,16 @@
         "marketProbability": 0.530612
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:34Z",
         "prices": {
-          "Yes": 1.85,
-          "No": 2.12
+          "Yes": 1.83,
+          "No": 2.14
         },
-        "marketProbability": 0.534005
+        "marketProbability": 0.539043
       },
-      "oddsChangePct": 0.5435,
-      "probabilityChangePP": 0.3393,
+      "oddsChangePct": -0.5435,
+      "probabilityChangePP": 0.8431,
       "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|over15|leovegas": {
@@ -1570,6 +1786,15 @@
             "Under": 3.95
           },
           "marketProbability": 0.761079
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:14Z",
+          "prices": {
+            "Over": 1.24,
+            "Under": 3.95
+          },
+          "marketProbability": 0.761079
         }
       ],
       "firstObserved": {
@@ -1582,8 +1807,8 @@
         "marketProbability": 0.761079
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:14Z",
         "prices": {
           "Over": 1.24,
           "Under": 3.95
@@ -1629,6 +1854,15 @@
             "Under": 4.0
           },
           "marketProbability": 0.766284
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:36Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 4.0
+          },
+          "marketProbability": 0.766284
         }
       ],
       "firstObserved": {
@@ -1641,8 +1875,8 @@
         "marketProbability": 0.766284
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:54:46Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:36Z",
         "prices": {
           "Over": 1.22,
           "Under": 4.0
@@ -1688,6 +1922,15 @@
             "Under": 3.8
           },
           "marketProbability": 0.756972
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.8
+          },
+          "marketProbability": 0.756972
         }
       ],
       "firstObserved": {
@@ -1700,8 +1943,8 @@
         "marketProbability": 0.752475
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Over": 1.22,
           "Under": 3.8
@@ -1747,6 +1990,15 @@
             "Under": 3.8
           },
           "marketProbability": 0.756972
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Over": 1.22,
+            "Under": 3.8
+          },
+          "marketProbability": 0.756972
         }
       ],
       "firstObserved": {
@@ -1759,8 +2011,8 @@
         "marketProbability": 0.752475
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Over": 1.22,
           "Under": 3.8
@@ -1806,6 +2058,15 @@
             "No": 2.15
           },
           "marketProbability": 0.568783
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.63,
+            "No": 2.15
+          },
+          "marketProbability": 0.568783
         }
       ],
       "firstObserved": {
@@ -1818,8 +2079,8 @@
         "marketProbability": 0.571429
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Yes": 1.63,
           "No": 2.15
@@ -1865,6 +2126,15 @@
             "No": 2.15
           },
           "marketProbability": 0.568783
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.63,
+            "No": 2.15
+          },
+          "marketProbability": 0.568783
         }
       ],
       "firstObserved": {
@@ -1877,8 +2147,8 @@
         "marketProbability": 0.571429
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Yes": 1.63,
           "No": 2.15
@@ -1924,6 +2194,15 @@
             "No": 2.15
           },
           "marketProbability": 0.562827
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:14Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.15
+          },
+          "marketProbability": 0.562827
         }
       ],
       "firstObserved": {
@@ -1936,8 +2215,8 @@
         "marketProbability": 0.562827
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:14Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.15
@@ -1983,6 +2262,15 @@
             "No": 2.1
           },
           "marketProbability": 0.557029
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:34Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
         }
       ],
       "firstObserved": {
@@ -1995,8 +2283,8 @@
         "marketProbability": 0.557029
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:34Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.1
@@ -2042,6 +2330,15 @@
             "No": 2.25
           },
           "marketProbability": 0.584416
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:36Z",
+          "prices": {
+            "Yes": 1.6,
+            "No": 2.25
+          },
+          "marketProbability": 0.584416
         }
       ],
       "firstObserved": {
@@ -2054,8 +2351,8 @@
         "marketProbability": 0.584416
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:54:46Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:36Z",
         "prices": {
           "Yes": 1.6,
           "No": 2.25
@@ -2101,6 +2398,15 @@
             "No": 2.22
           },
           "marketProbability": 0.562025
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:34Z",
+          "prices": {
+            "Yes": 1.73,
+            "No": 2.22
+          },
+          "marketProbability": 0.562025
         }
       ],
       "firstObserved": {
@@ -2113,8 +2419,8 @@
         "marketProbability": 0.559194
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:34Z",
         "prices": {
           "Yes": 1.73,
           "No": 2.22
@@ -2160,6 +2466,15 @@
             "No": 2.1
           },
           "marketProbability": 0.557029
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:15Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
         }
       ],
       "firstObserved": {
@@ -2172,8 +2487,8 @@
         "marketProbability": 0.557029
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:15Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.1
@@ -2219,6 +2534,15 @@
             "No": 2.1
           },
           "marketProbability": 0.557029
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Yes": 1.67,
+            "No": 2.1
+          },
+          "marketProbability": 0.557029
         }
       ],
       "firstObserved": {
@@ -2231,8 +2555,8 @@
         "marketProbability": 0.557029
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:35Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Yes": 1.67,
           "No": 2.1
@@ -2260,6 +2584,15 @@
             "Under": 3.85
           },
           "marketProbability": 0.763889
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.85
+          },
+          "marketProbability": 0.763889
         }
       ],
       "firstObserved": {
@@ -2272,8 +2605,8 @@
         "marketProbability": 0.763889
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Over": 1.19,
           "Under": 3.85
@@ -2282,7 +2615,7 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     },
     "9dfe9df3ad88c453e3572872bf500488|over15|livescorebet": {
       "eventId": "9dfe9df3ad88c453e3572872bf500488",
@@ -2301,6 +2634,15 @@
             "Under": 3.85
           },
           "marketProbability": 0.763889
+        },
+        {
+          "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+          "lastUpdate": "2026-11-25T19:05:13Z",
+          "prices": {
+            "Over": 1.19,
+            "Under": 3.85
+          },
+          "marketProbability": 0.763889
         }
       ],
       "firstObserved": {
@@ -2313,8 +2655,8 @@
         "marketProbability": 0.763889
       },
       "latestObserved": {
-        "capturedAt": "2026-11-25T18:55:52.157677+00:00",
-        "lastUpdate": "2026-11-25T18:55:34Z",
+        "capturedAt": "2026-11-25T19:05:43.839760+00:00",
+        "lastUpdate": "2026-11-25T19:05:13Z",
         "prices": {
           "Over": 1.19,
           "Under": 3.85
@@ -2323,10 +2665,10 @@
       },
       "oddsChangePct": 0.0,
       "probabilityChangePP": 0.0,
-      "movementReady": false
+      "movementReady": true
     }
   },
-  "updatedAt": "2026-11-25T18:55:54.134466+00:00",
+  "updatedAt": "2026-11-25T19:05:45.847494+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "recordCount": 40
