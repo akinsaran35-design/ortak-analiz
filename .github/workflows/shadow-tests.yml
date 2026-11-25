@@ -85,3 +85,6 @@ jobs:
 
       - name: Test V4.20 research report
         run: python scripts/test_model_research.py
+
+      - name: Test V4.21 score probabilities
+        run: python scripts/test_score_model.py
