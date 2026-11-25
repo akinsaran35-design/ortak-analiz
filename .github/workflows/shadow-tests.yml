@@ -55,3 +55,7 @@ jobs:
         run: |
           python -m py_compile scripts/archive_extra_markets.py
           python scripts/test_archive_extra_markets.py
+      - name: Test V4.11 market movement
+        run: |
+          python -m py_compile scripts/market_movement.py
+          python scripts/test_market_movement.py
