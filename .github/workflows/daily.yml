@@ -143,3 +143,15 @@ jobs:
             git commit -m "Update V4.11 market movement"
             git push
           fi
+      - name: V4.12 Model Market Comparison
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_model_market.py
+          python scripts/model_market.py
+          cat model_market.json
+
+          git add model_market.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.12 model market report"
+            git push
+          fi
