@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from dixon_coles import markets
 from monte_carlo import simulate
+from score_model import score_report
 
 def build(data):
     rows=[]
@@ -16,10 +17,11 @@ def build(data):
                          "expectedGoals":{"home":h,"away":a},
                          "poisson":markets(h,a,0),
                          "experimentalDixonColes":markets(h,a,-0.05),
+                         "scoreProbabilities":score_report(h,a,-0.05),
                          "simulation":simulate(h,a,-0.05)})
         except (KeyError,TypeError,ValueError,OverflowError):
             rejected+=1
-    return {"version":"4.20","mode":"research_only","updatedAt":datetime.now(timezone.utc).isoformat(),
+    return {"version":"4.21","mode":"research_only","updatedAt":datetime.now(timezone.utc).isoformat(),
             "sourceUpdatedAt":data.get("updatedAt"),"rho":-0.05,"rhoFitted":False,
             "modelCalibrated":False,"realBettingEnabled":False,"rejected":rejected,"rows":rows}
 
