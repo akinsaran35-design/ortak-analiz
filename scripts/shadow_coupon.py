@@ -9,7 +9,7 @@ def stamp(value):
 def select(analysis, odds, now):
     result = {"version":"4.8","mode":"shadow","liveEnabled":False,
               "updatedAt":now.isoformat(),"decision":"PAS","selections":[]}
-        if analysis.get("snapshotFresh") is not True or odds.get("errors") != [] or analysis.get("market") != "2.5":
+    if analysis.get("snapshotFresh") is not True or odds.get("errors") != [] or analysis.get("market") != "2.5":
         return result
     try:
         if any(not timedelta(0) <= now-stamp(d["updatedAt"]) <= timedelta(minutes=30)
