@@ -67,3 +67,7 @@ jobs:
         run: |
           python -m py_compile scripts/unified_decision.py
           python scripts/test_unified_decision.py
+      - name: Test V4.14 dashboard
+        run: |
+          node --check dashboard-v414.js
+          grep -F 'src="./dashboard-v414.js"' index.html
