@@ -50,3 +50,8 @@ jobs:
           name: extra-markets-pilot
           path: extra_markets.json
           retention-days: 7
+
+      - name: Test V4.10 odds archive
+        run: |
+          python -m py_compile scripts/archive_extra_markets.py
+          python scripts/test_archive_extra_markets.py
