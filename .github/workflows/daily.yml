@@ -155,3 +155,15 @@ jobs:
             git commit -m "Update V4.12 model market report"
             git push
           fi
+      - name: V4.13 Unified Decision
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_unified_decision.py
+          python scripts/unified_decision.py
+          cat unified_decision.json
+
+          git add unified_decision.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update V4.13 unified decision"
+            git push
+          fi
