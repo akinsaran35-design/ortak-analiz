@@ -38,7 +38,7 @@ def select(analysis, odds, now):
             price, name = max(books.values())
             ev = p*price-1
             if ev >= .05:
-                candidates.append("eventId":event["id"],"league":event["league"],"match":row["match"],"kickoff":event["kickoff"],"market":"2.5 Over","rawProbability":p,"odds":price,"bookmaker":name,"estimatedEV":ev,"calibrated":False,"teams":[event["home"],event["away"]]})
+                candidates.append({"eventId":event["id"],"league":event["league"],"match":row["match"],"kickoff":event["kickoff"],"market":"2.5 Over","rawProbability":p,"odds":price,"bookmaker":name,"estimatedEV":ev,"calibrated":False,"teams":[event["home"],event["away"]]})
         except (KeyError, ValueError, TypeError):
             continue
     used = set()
