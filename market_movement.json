@@ -1,0 +1,145 @@
+{
+  "version": "4.11",
+  "updatedAt": "2026-11-25T17:53:53.318363+00:00",
+  "mode": "research_only",
+  "decision": "PAS",
+  "eventCount": 3,
+  "markets": [
+    {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmakers": 6,
+      "movementBookmakers": 6,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 0.0,
+        "livescorebet": 0.0,
+        "leovegas": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.0,
+        "ladbrokes_uk": 0.0
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "61d1126751ba67227ac2819624e98342",
+      "home": "Burnley",
+      "away": "Birmingham City",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmakers": 8,
+      "movementBookmakers": 8,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 0.0,
+        "livescorebet": 0.0,
+        "leovegas": 0.0,
+        "betfred_uk": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.0,
+        "ladbrokes_uk": 0.0,
+        "matchbook": 0.20459999999999923
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmakers": 5,
+      "movementBookmakers": 5,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 0.0,
+        "livescorebet": 0.0,
+        "leovegas": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.0
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "0eb7f35d744c1cebeb53be32f50e1e2d",
+      "home": "Watford",
+      "away": "Blackburn Rovers",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmakers": 7,
+      "movementBookmakers": 7,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 0.0,
+        "livescorebet": 0.0,
+        "leovegas": 0.0,
+        "betfred_uk": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.0,
+        "matchbook": 0.0
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "over15",
+      "bookmakers": 4,
+      "movementBookmakers": 4,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.2248,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "leovegas": 0.0,
+        "williamhill": 0.0,
+        "coral": 0.4496999999999973,
+        "ladbrokes_uk": 0.4496999999999973
+      },
+      "decision": "PAS"
+    },
+    {
+      "eventId": "9dfe9df3ad88c453e3572872bf500488",
+      "home": "Bolton Wanderers",
+      "away": "West Bromwich Albion",
+      "kickoff": "2026-11-25T19:45:00+00:00",
+      "market": "btts",
+      "bookmakers": 8,
+      "movementBookmakers": 8,
+      "rising": 0,
+      "falling": 0,
+      "medianChangePP": 0.0,
+      "direction": "MIXED_OR_STABLE",
+      "bookmakerChangesPP": {
+        "virginbet": 0.0,
+        "livescorebet": 0.0,
+        "leovegas": 0.0,
+        "betfred_uk": 0.0,
+        "williamhill": 0.0,
+        "matchbook": 0.0,
+        "coral": 0.0,
+        "ladbrokes_uk": 0.0
+      },
+      "decision": "PAS"
+    }
+  ],
+  "errors": [],
+  "marketCount": 6
+}
