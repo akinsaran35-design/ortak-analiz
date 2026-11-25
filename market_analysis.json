@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-25T17:26:50.608577+00:00",
+  "updatedAt": "2026-11-25T17:42:37.198094+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -13,16 +13,16 @@
       "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.493261,
-        "leovegas": 0.460526,
+        "leovegas": 0.467018,
         "williamhill": 0.48,
         "matchbook": 0.456853
       },
-      "marketProbability": 0.4703,
+      "marketProbability": 0.4735,
       "modelProbabilityUncalibrated": 0.6409999999999999,
-      "difference": 0.1707,
+      "difference": 0.1675,
       "bookProbabilitySpread": 0.0364,
-      "marketFairOdds": 2.1265,
-      "medianMargin": 0.0638
+      "marketFairOdds": 2.1119,
+      "medianMargin": 0.0642
     },
     {
       "match": "Bolton Wanderers FC – West Bromwich Albion FC",
@@ -66,12 +66,12 @@
         "leovegas": 0.467018,
         "casumo": 0.470109,
         "williamhill": 0.48,
-        "matchbook": 0.463659
+        "matchbook": 0.465995
       },
       "marketProbability": 0.4701,
       "modelProbabilityUncalibrated": 0.531,
       "difference": 0.0609,
-      "bookProbabilitySpread": 0.0431,
+      "bookProbabilitySpread": 0.0407,
       "marketFairOdds": 2.1272,
       "medianMargin": 0.0684
     },
