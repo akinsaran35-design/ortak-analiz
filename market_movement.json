@@ -1,6 +1,6 @@
 {
   "version": "4.11",
-  "updatedAt": "2026-11-25T17:53:53.318363+00:00",
+  "updatedAt": "2026-11-25T18:55:55.556081+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "eventCount": 3,
@@ -42,12 +42,12 @@
       "bookmakerChangesPP": {
         "virginbet": 0.0,
         "livescorebet": 0.0,
-        "leovegas": 0.0,
+        "leovegas": 0.3050999999999915,
         "betfred_uk": 0.0,
         "williamhill": 0.0,
-        "coral": 0.0,
-        "ladbrokes_uk": 0.0,
-        "matchbook": 0.20459999999999923
+        "coral": -0.1518999999999937,
+        "ladbrokes_uk": -0.1518999999999937,
+        "matchbook": -0.7830000000000004
       },
       "decision": "PAS"
     },
@@ -60,15 +60,15 @@
       "bookmakers": 5,
       "movementBookmakers": 5,
       "rising": 0,
-      "falling": 0,
-      "medianChangePP": 0.0,
+      "falling": 3,
+      "medianChangePP": -1.3797,
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
-        "virginbet": 0.0,
-        "livescorebet": 0.0,
-        "leovegas": 0.0,
-        "williamhill": 0.0,
-        "coral": 0.0
+        "virginbet": -1.4416999999999902,
+        "livescorebet": -1.4416999999999902,
+        "leovegas": -0.7884000000000002,
+        "williamhill": -1.379700000000006,
+        "coral": -0.3174999999999928
       },
       "decision": "PAS"
     },
@@ -81,17 +81,17 @@
       "bookmakers": 7,
       "movementBookmakers": 7,
       "rising": 0,
-      "falling": 0,
-      "medianChangePP": 0.0,
+      "falling": 3,
+      "medianChangePP": -0.8,
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
-        "virginbet": 0.0,
-        "livescorebet": 0.0,
-        "leovegas": 0.0,
-        "betfred_uk": 0.0,
+        "virginbet": -1.695599999999997,
+        "livescorebet": -1.695599999999997,
+        "leovegas": -0.8000000000000007,
+        "betfred_uk": -2.1368000000000054,
         "williamhill": 0.0,
-        "coral": 0.0,
-        "matchbook": 0.0
+        "coral": -0.7027000000000005,
+        "matchbook": 0.33929999999999794
       },
       "decision": "PAS"
     },
@@ -101,7 +101,7 @@
       "away": "West Bromwich Albion",
       "kickoff": "2026-11-25T19:45:00+00:00",
       "market": "over15",
-      "bookmakers": 4,
+      "bookmakers": 6,
       "movementBookmakers": 4,
       "rising": 0,
       "falling": 0,
@@ -128,12 +128,12 @@
       "medianChangePP": 0.0,
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
-        "virginbet": 0.0,
-        "livescorebet": 0.0,
+        "virginbet": -0.2645999999999926,
+        "livescorebet": -0.2645999999999926,
         "leovegas": 0.0,
         "betfred_uk": 0.0,
         "williamhill": 0.0,
-        "matchbook": 0.0,
+        "matchbook": 0.2831000000000028,
         "coral": 0.0,
         "ladbrokes_uk": 0.0
       },
