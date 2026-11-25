@@ -1,0 +1,42 @@
+
+name: V4.9 Extra Markets Pilot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: extra-markets-pilot
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run simulated tests
+        run: python scripts/test_extra_markets.py
+
+      - name: Run live extra markets pilot
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_extra_markets.py
+
+      - name: Validate pilot report
+        run: |
+          python -c 'import json; r=json.load(open("extra_markets.json")); assert r["decision"] == "PAS"; assert r["eventCount"] <= 3; print(json.dumps(r, indent=2))'
+
+      - name: Upload pilot report
+        uses: actions/upload-artifact@v4
+        with:
+          name: extra-markets-pilot
+          path: extra_markets.json
+          retention-days: 7
