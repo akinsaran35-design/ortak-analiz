@@ -79,3 +79,6 @@ jobs:
 
       - name: Test V4.18 Dixon Coles
         run: python scripts/test_dixon_coles.py
+
+      - name: Test V4.19 Monte Carlo
+        run: python scripts/test_monte_carlo.py
