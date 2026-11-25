@@ -10,6 +10,19 @@ def fake(url):
         return [{"name":"en.1.json","type":"file"}]
     return {"matches":[m]}
 r=collect(today,fake)
-assert r["matchCount"]==1 and r["leagueCount"]==1 and r["halfTimeCount"]==1
+assert r["matchCount"]==1 and r["leagueCodeCount"]==1 and r["halfTimeCount"]==1
 assert not r["realBettingEnabled"]
 print("Historical archive tests passed")
+
+def aliases(url):
+    if "contents" in url:
+        return [{"name":"en.1.json","type":"file"},{"name":"eng.1.json","type":"file"}]
+    return {"matches":[m]}
+r=collect(today,aliases)
+assert r["matchCount"]==1 and r["duplicatesRemoved"]==1 and r["leagueCodeCount"]==2
+assert r["matches"][0]["leagueAliases"]==["en.1","eng.1"]
+def conflict(url):
+    if "contents" in url:
+        return aliases(url)
+    return {"matches":[dict(m,score={"ft":[1,0]}) if "eng.1" in url else m]}
+assert collect(today,conflict)["matchCount"]==0
