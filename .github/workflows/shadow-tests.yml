@@ -82,3 +82,6 @@ jobs:
 
       - name: Test V4.19 Monte Carlo
         run: python scripts/test_monte_carlo.py
+
+      - name: Test V4.20 research report
+        run: python scripts/test_model_research.py
