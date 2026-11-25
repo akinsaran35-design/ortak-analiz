@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-25T15:12:23.788025+00:00",
+  "updatedAt": "2026-11-25T15:47:12.062597+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -15,12 +15,12 @@
         "grosvenor": 0.493261,
         "leovegas": 0.460526,
         "williamhill": 0.48,
-        "matchbook": 0.458228
+        "matchbook": 0.459596
       },
       "marketProbability": 0.4703,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.1707,
-      "bookProbabilitySpread": 0.035,
+      "bookProbabilitySpread": 0.0337,
       "marketFairOdds": 2.1265,
       "medianMargin": 0.0638
     },
@@ -48,12 +48,12 @@
         "grosvenor": 0.540107,
         "leovegas": 0.539474,
         "williamhill": 0.546667,
-        "matchbook": 0.536709
+        "matchbook": 0.537688
       },
       "marketProbability": 0.5398,
       "modelProbabilityUncalibrated": 0.536,
       "difference": -0.0038,
-      "bookProbabilitySpread": 0.01,
+      "bookProbabilitySpread": 0.009,
       "marketFairOdds": 1.8526,
       "medianMargin": 0.0676
     },
@@ -63,16 +63,16 @@
       "bookCount": 5,
       "bookProbabilities": {
         "grosvenor": 0.506739,
-        "leovegas": 0.48,
+        "leovegas": 0.47619,
         "casumo": 0.472973,
         "williamhill": 0.48,
-        "matchbook": 0.456853
+        "matchbook": 0.462312
       },
-      "marketProbability": 0.48,
+      "marketProbability": 0.4762,
       "modelProbabilityUncalibrated": 0.531,
-      "difference": 0.051,
-      "bookProbabilitySpread": 0.0499,
-      "marketFairOdds": 2.0833,
+      "difference": 0.0548,
+      "bookProbabilitySpread": 0.0444,
+      "marketFairOdds": 2.1,
       "medianMargin": 0.0684
     },
     {

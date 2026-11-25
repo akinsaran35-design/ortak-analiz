@@ -1127,13 +1127,25 @@
             "williamhill": 0.48,
             "matchbook": 0.458228
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.4703,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.493261,
+            "leovegas": 0.460526,
+            "williamhill": 0.48,
+            "matchbook": 0.459596
+          }
         }
       ],
       "probabilityChange": -0.0138,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 6,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.021801,
       "sameBookStatus": "comparable"
@@ -1319,13 +1331,24 @@
             "leovegas": 0.532982,
             "williamhill": 0.546667
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.533,
+          "modelProbabilityUncalibrated": 0.578,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.52957,
+            "leovegas": 0.532982,
+            "williamhill": 0.546667
+          }
         }
       ],
       "probabilityChange": -0.024,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 3,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": -0.010362,
       "sameBookStatus": "comparable"
@@ -1525,13 +1548,25 @@
             "williamhill": 0.546667,
             "matchbook": 0.536709
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5398,
+          "modelProbabilityUncalibrated": 0.536,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.540107,
+            "leovegas": 0.539474,
+            "williamhill": 0.546667,
+            "matchbook": 0.537688
+          }
         }
       ],
       "probabilityChange": -0.0129,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 6,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.009595,
       "sameBookStatus": "comparable"
@@ -1745,13 +1780,26 @@
             "williamhill": 0.48,
             "matchbook": 0.456853
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.4762,
+          "modelProbabilityUncalibrated": 0.531,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "grosvenor": 0.506739,
+            "leovegas": 0.47619,
+            "casumo": 0.472973,
+            "williamhill": 0.48,
+            "matchbook": 0.462312
+          }
         }
       ],
-      "probabilityChange": -0.0293,
-      "observationCount": 18,
-      "distinctProbabilityCount": 7,
+      "probabilityChange": -0.0331,
+      "observationCount": 19,
+      "distinctProbabilityCount": 8,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 5,
       "sameBookProbabilityChange": -0.033876,
       "sameBookStatus": "comparable"
@@ -1951,13 +1999,25 @@
             "grosvenor": 0.538259,
             "williamhill": 0.52
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5181,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "leovegas": 0.516129,
+            "casumo": 0.514825,
+            "grosvenor": 0.538259,
+            "williamhill": 0.52
+          }
         }
       ],
       "probabilityChange": -0.01,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.002648,
       "sameBookStatus": "comparable"
@@ -2325,13 +2385,25 @@
             "williamhill": 0.594315,
             "matchbook": 0.590909
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5933,
+          "modelProbabilityUncalibrated": 0.6809999999999999,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.59375,
+            "leovegas": 0.592784,
+            "williamhill": 0.594315,
+            "matchbook": 0.590909
+          }
         }
       ],
       "probabilityChange": -0.001,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 4,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -2517,13 +2589,24 @@
             "grosvenor": 0.596401,
             "williamhill": 0.575916
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.567282,
+            "grosvenor": 0.596401,
+            "williamhill": 0.575916
+          }
         }
       ],
       "probabilityChange": 0.0,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 1,
       "movementStatus": "unchanged",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -2721,13 +2804,25 @@
             "williamhill": 0.48,
             "matchbook": 0.432911
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.4568,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.456,
+            "leovegas": 0.457672,
+            "williamhill": 0.48,
+            "matchbook": 0.432911
+          }
         }
       ],
       "probabilityChange": -0.0232,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 6,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -2913,13 +3008,24 @@
             "leovegas": 0.594315,
             "williamhill": 0.608696
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5979,
+          "modelProbabilityUncalibrated": 0.611,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.597938,
+            "leovegas": 0.594315,
+            "williamhill": 0.608696
+          }
         }
       ],
       "probabilityChange": 0.0,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 1,
       "movementStatus": "unchanged",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -3108,13 +3214,24 @@
             "leovegas": 0.555556,
             "williamhill": 0.546667
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.552,
+          "modelProbabilityUncalibrated": 0.5770000000000001,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.552,
+            "leovegas": 0.555556,
+            "williamhill": 0.546667
+          }
         }
       ],
       "probabilityChange": -0.0187,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 4,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": -0.015125,
       "sameBookStatus": "comparable"
@@ -3300,13 +3417,24 @@
             "leovegas": 0.570681,
             "williamhill": 0.575916
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5707,
+          "modelProbabilityUncalibrated": 0.5710000000000001,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.544,
+            "leovegas": 0.570681,
+            "williamhill": 0.575916
+          }
         }
       ],
       "probabilityChange": 0.0,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 1,
       "movementStatus": "unchanged",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -3507,13 +3635,26 @@
             "williamhill": 0.536193,
             "matchbook": 0.511429
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5219,
+          "modelProbabilityUncalibrated": 0.5539999999999999,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "grosvenor": 0.521505,
+            "leovegas": 0.528,
+            "casumo": 0.521858,
+            "williamhill": 0.536193,
+            "matchbook": 0.511429
+          }
         }
       ],
       "probabilityChange": -0.003,
-      "observationCount": 18,
+      "observationCount": 19,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1775.14,
+      "observationSpanMinutes": 1809.95,
       "commonBookCount": 4,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -3565,13 +3706,24 @@
             "leovegas": 0.602564,
             "williamhill": 0.608696
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.6087,
+          "modelProbabilityUncalibrated": 0.588,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.613811,
+            "leovegas": 0.602564,
+            "williamhill": 0.608696
+          }
         }
       ],
       "probabilityChange": -0.0051,
-      "observationCount": 4,
+      "observationCount": 5,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 1107.42,
+      "observationSpanMinutes": 1142.23,
       "commonBookCount": 2,
       "sameBookProbabilityChange": null,
       "sameBookStatus": "insufficient_data"
@@ -3617,13 +3769,25 @@
             "williamhill": 0.546667,
             "matchbook": 0.537084
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5359,
+          "modelProbabilityUncalibrated": 0.544,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.534759,
+            "leovegas": 0.533333,
+            "williamhill": 0.546667,
+            "matchbook": 0.537084
+          }
         }
       ],
       "probabilityChange": 0.0063,
-      "observationCount": 3,
+      "observationCount": 4,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 994.61,
+      "observationSpanMinutes": 1029.42,
       "commonBookCount": 4,
       "sameBookProbabilityChange": 0.007831,
       "sameBookStatus": "comparable"
@@ -3667,13 +3831,25 @@
             "casumo": 0.502717,
             "williamhill": 0.536193
           }
+        },
+        {
+          "observedAt": "2026-11-25T15:47:09.486312+00:00",
+          "marketProbability": 0.5202,
+          "modelProbabilityUncalibrated": 0.469,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.524194,
+            "leovegas": 0.516129,
+            "casumo": 0.502717,
+            "williamhill": 0.536193
+          }
         }
       ],
       "probabilityChange": 0.0027,
-      "observationCount": 3,
+      "observationCount": 4,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 994.61,
+      "observationSpanMinutes": 1029.42,
       "commonBookCount": 4,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
