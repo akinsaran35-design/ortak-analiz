@@ -1,0 +1,28 @@
+name: Historical archive V4.22
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/history.yml', 'scripts/historical_data.py']
+  schedule:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_historical_data.py
+      - run: python scripts/historical_data.py
+      - run: |
+          python -c 'import json; r=json.load(open("historical_data.json")); print({k:v for k,v in r.items() if k!="matches"})' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-data
+          path: historical_data.json
+          retention-days: 7
