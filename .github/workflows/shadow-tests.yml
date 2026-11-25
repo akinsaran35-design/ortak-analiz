@@ -36,3 +36,17 @@ jobs:
 
       - name: Test V4.9 simulated API
         run: python scripts/test_extra_markets.py
+
+      - name: V4.9 controlled live pilot
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_extra_markets.py
+
+      - name: Upload V4.9 pilot report
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        uses: actions/upload-artifact@v4
+        with:
+          name: extra-markets-pilot
+          path: extra_markets.json
+          retention-days: 7
