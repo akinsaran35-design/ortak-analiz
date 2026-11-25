@@ -117,3 +117,17 @@ jobs:
           name: extra-markets-pilot
           path: extra_markets.json
           retention-days: 7
+
+      - name: V4.10 Archive Extra Markets
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        run: |
+          python scripts/test_archive_extra_markets.py
+          python scripts/archive_extra_markets.py
+
+          if [ -f extra_market_archive.json ]; then
+            git add extra_market_archive.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Update V4.10 extra market archive"
+              git push
+            fi
+          fi
