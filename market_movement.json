@@ -1,6 +1,6 @@
 {
   "version": "4.11",
-  "updatedAt": "2026-11-25T18:55:55.556081+00:00",
+  "updatedAt": "2026-11-25T19:05:47.323804+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "eventCount": 3,
@@ -35,19 +35,19 @@
       "market": "btts",
       "bookmakers": 8,
       "movementBookmakers": 8,
-      "rising": 0,
+      "rising": 2,
       "falling": 0,
       "medianChangePP": 0.0,
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
-        "virginbet": 0.0,
-        "livescorebet": 0.0,
+        "virginbet": 1.0058000000000011,
+        "livescorebet": 1.0058000000000011,
         "leovegas": 0.3050999999999915,
         "betfred_uk": 0.0,
         "williamhill": 0.0,
         "coral": -0.1518999999999937,
         "ladbrokes_uk": -0.1518999999999937,
-        "matchbook": -0.7830000000000004
+        "matchbook": -0.6400000000000072
       },
       "decision": "PAS"
     },
@@ -65,7 +65,7 @@
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
         "virginbet": -1.4416999999999902,
-        "livescorebet": -1.4416999999999902,
+        "livescorebet": -1.8993999999999955,
         "leovegas": -0.7884000000000002,
         "williamhill": -1.379700000000006,
         "coral": -0.3174999999999928
@@ -85,13 +85,13 @@
       "medianChangePP": -0.8,
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
-        "virginbet": -1.695599999999997,
-        "livescorebet": -1.695599999999997,
+        "virginbet": -2.0877000000000034,
+        "livescorebet": -2.0877000000000034,
         "leovegas": -0.8000000000000007,
         "betfred_uk": -2.1368000000000054,
         "williamhill": 0.0,
         "coral": -0.7027000000000005,
-        "matchbook": 0.33929999999999794
+        "matchbook": 0.8431000000000077
       },
       "decision": "PAS"
     },
@@ -102,16 +102,18 @@
       "kickoff": "2026-11-25T19:45:00+00:00",
       "market": "over15",
       "bookmakers": 6,
-      "movementBookmakers": 4,
+      "movementBookmakers": 6,
       "rising": 0,
       "falling": 0,
-      "medianChangePP": 0.2248,
+      "medianChangePP": 0.0,
       "direction": "MIXED_OR_STABLE",
       "bookmakerChangesPP": {
         "leovegas": 0.0,
         "williamhill": 0.0,
         "coral": 0.4496999999999973,
-        "ladbrokes_uk": 0.4496999999999973
+        "ladbrokes_uk": 0.4496999999999973,
+        "virginbet": 0.0,
+        "livescorebet": 0.0
       },
       "decision": "PAS"
     },
