@@ -12,6 +12,7 @@ MODULE = Path(__file__).resolve().with_name(
     "fetch_extra_markets.py"
 )
 
+
 class ExtraMarketsTests(unittest.TestCase):
 
     def setUp(self):
@@ -105,7 +106,9 @@ class ExtraMarketsTests(unittest.TestCase):
         scope = run.__globals__
 
         snapshot = {
-            "updatedAt": self.now.isoformat(),
+            "updatedAt": (
+                scope["now"] - timedelta(seconds=1)
+            ).isoformat(),
             "source": "The Odds API",
             "region": "uk",
             "errors": [],
@@ -120,9 +123,12 @@ class ExtraMarketsTests(unittest.TestCase):
             }]
         }
 
-        Path("odds.json").write_text(json.dumps(snapshot))
-        scope["report"]["errors"] = []
+        Path("odds.json").write_text(
+            json.dumps(snapshot),
+            encoding="utf-8"
+        )
 
+        scope["report"]["errors"] = []
         calls = []
 
         def fake_request(path, params):
@@ -137,7 +143,10 @@ class ExtraMarketsTests(unittest.TestCase):
             run()
 
         self.assertEqual(calls, ["sports/"])
-        self.assertIn("quota_guard", scope["report"]["errors"])
+        self.assertIn(
+            "quota_guard", scope["report"]["errors"]
+        )
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
