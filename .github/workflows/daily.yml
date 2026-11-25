@@ -100,3 +100,20 @@ jobs:
             git commit -m "Update daily analysis and validation"
             git push
           fi
+
+      - name: V4.9 Live Extra Markets Pilot
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          python scripts/test_extra_markets.py
+          python scripts/fetch_extra_markets.py
+          cat extra_markets.json
+
+      - name: Upload V4.9 Live Report
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
+        uses: actions/upload-artifact@v4
+        with:
+          name: extra-markets-pilot
+          path: extra_markets.json
+          retention-days: 7
