@@ -109,3 +109,6 @@ jobs:
 
       - name: Test historical baseline
         run: python scripts/test_historical_baseline.py
+
+      - name: Test source freshness
+        run: python scripts/test_historical_freshness.py

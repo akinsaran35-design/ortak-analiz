@@ -31,6 +31,8 @@ jobs:
       - run: python scripts/historical_reconcile.py
       - run: python scripts/test_historical_baseline.py
       - run: python scripts/historical_baseline.py
+      - run: python scripts/test_historical_freshness.py
+      - run: python scripts/historical_freshness.py
       - uses: actions/upload-artifact@v4
         with:
           name: historical-data
@@ -41,4 +43,5 @@ jobs:
             historical_split.json
             historical_reconcile.json
             historical_baseline.json
+            historical_freshness.json
           retention-days: 7
