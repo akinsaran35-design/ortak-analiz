@@ -28,7 +28,7 @@ class TrackingTest(unittest.TestCase):
             archive.write_text(json.dumps({k:old}),encoding="utf-8")
             daily=root/"daily.json"
             daily.write_text(json.dumps({"version":"test","candidates":[candidate(future),candidate(today.isoformat())]}),encoding="utf-8")
-            payload=json.dumps({"matches":[{"date":past,"team1":"A","team2":"B","score":{"ft":[2,1]}}]}).encode()
+            payload=json.dumps([{"date":past,"team1":"A","team2":"B","score":{"ft":[2,1]}}]).encode()
             with patch("urllib.request.urlopen",side_effect=lambda *a,**kw:BytesIO(payload)):
                 runpy.run_path(str(script))
                 report=json.loads((root/"performance.json").read_text())
