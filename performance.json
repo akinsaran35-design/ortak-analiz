@@ -1,9 +1,9 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-26T17:14:33.961382+03:00",
+  "updatedAt": "2026-11-26T17:20:58.273628+03:00",
   "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
   "errors": [],
-  "verifiedFallbackSettled": 4,
+  "verifiedFallbackSettled": 0,
   "overall": {
     "recorded": 90,
     "settled": 4,

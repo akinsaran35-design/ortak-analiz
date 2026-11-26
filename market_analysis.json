@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-26T14:14:25.726805+00:00",
+  "updatedAt": "2026-11-26T14:20:45.545221+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -12,17 +12,17 @@
       "eventId": "02ff879cf54f6d1fec2664efee0431db",
       "bookCount": 4,
       "bookProbabilities": {
-        "leovegas": 0.506667,
+        "leovegas": 0.504021,
         "casumo": 0.5,
         "grosvenor": 0.523936,
         "williamhill": 0.52
       },
-      "marketProbability": 0.5133,
+      "marketProbability": 0.512,
       "modelProbabilityUncalibrated": 0.599,
-      "difference": 0.0857,
+      "difference": 0.087,
       "bookProbabilitySpread": 0.0239,
-      "marketFairOdds": 1.9481,
-      "medianMargin": 0.0676
+      "marketFairOdds": 1.9531,
+      "medianMargin": 0.0704
     },
     {
       "match": "CS Marítimo – CD Nacional",
@@ -131,12 +131,12 @@
         "leovegas": 0.524194,
         "casumo": 0.527027,
         "williamhill": 0.536193,
-        "matchbook": 0.523077
+        "matchbook": 0.518135
       },
       "marketProbability": 0.527,
       "modelProbabilityUncalibrated": 0.5770000000000001,
       "difference": 0.05,
-      "bookProbabilitySpread": 0.0289,
+      "bookProbabilitySpread": 0.0339,
       "marketFairOdds": 1.8974,
       "medianMargin": 0.078
     },
@@ -402,12 +402,12 @@
         "casumo": 0.521858,
         "grosvenor": 0.543536,
         "williamhill": 0.536193,
-        "matchbook": 0.524173
+        "matchbook": 0.521739
       },
       "marketProbability": 0.528,
       "modelProbabilityUncalibrated": 0.66,
       "difference": 0.132,
-      "bookProbabilitySpread": 0.0217,
+      "bookProbabilitySpread": 0.0218,
       "marketFairOdds": 1.8939,
       "medianMargin": 0.07
     },
@@ -530,14 +530,14 @@
       "eventId": "61b7d270b965f9804d2d2ed500f41214",
       "bookCount": 3,
       "bookProbabilities": {
-        "casumo": 0.488827,
+        "casumo": 0.48324,
         "williamhill": 0.5,
         "grosvenor": 0.509434
       },
       "marketProbability": 0.5,
       "modelProbabilityUncalibrated": 0.5660000000000001,
       "difference": 0.066,
-      "bookProbabilitySpread": 0.0206,
+      "bookProbabilitySpread": 0.0262,
       "marketFairOdds": 2.0,
       "medianMargin": 0.0786
     },
@@ -600,13 +600,13 @@
         "leovegas": 0.550265,
         "williamhill": 0.557029,
         "grosvenor": 0.551181,
-        "matchbook": 0.55527
+        "matchbook": 0.553846
       },
-      "marketProbability": 0.5532,
+      "marketProbability": 0.5525,
       "modelProbabilityUncalibrated": 0.5539999999999999,
-      "difference": 0.0008,
+      "difference": 0.0015,
       "bookProbabilitySpread": 0.0068,
-      "marketFairOdds": 1.8076,
+      "marketFairOdds": 1.8099,
       "medianMargin": 0.065
     },
     {
