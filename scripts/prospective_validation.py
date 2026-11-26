@@ -4,6 +4,7 @@ from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
 
 from backtest import LEAGUES, fetch, team, predict, weighted_predict
+from prospective_markets import capture, summarize
 
 ROOT = Path(__file__).resolve().parent.parent
 NOW = datetime.now(timezone(timedelta(hours=3)))
@@ -113,6 +114,7 @@ for league in LEAGUES:
             "old": old[1],
             "candidate": new[1],
             "baseline": baseline,
+            "prospectiveMarkets": capture(history,old,new),
             "result": None
         }
 
@@ -143,7 +145,9 @@ report = {
     "minimumMatches": 500,
     "liveEnabled": False,
     "status": "collecting_data",
-    "errors": errors
+    "errors": errors,
+    "marketResearchVersion": "4.85",
+    "marketResearch": summarize(records,NOW)
 }
 
 if n:
