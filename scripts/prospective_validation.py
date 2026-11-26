@@ -14,6 +14,9 @@ records = json.loads(
     ARCHIVE.read_text(encoding="utf-8")
 ) if ARCHIVE.exists() else {}
 
+from calendar_duplicate_guard import load_guard
+blocked = load_guard(ROOT, records, "prospective", NOW)
+calendar_duplicate_prevented = 0
 errors = []
 
 year = TODAY.year if TODAY.month >= 7 else TODAY.year - 1
@@ -91,6 +94,10 @@ for league in LEAGUES:
         if d > TODAY + timedelta(days=7):
             continue
 
+        if (league,h,a,d.isoformat()) in blocked:
+            calendar_duplicate_prevented += 1
+            continue
+
         old = predict(history, h, a)
         new = weighted_predict(history, h, a)
 
@@ -136,6 +143,7 @@ report = {
     "updatedAt": NOW.isoformat(),
     "recorded": len(records),
     "verifiedFallbackSettled": verified_count,
+    "calendarDuplicatePrevented": calendar_duplicate_prevented,
     "tested": n,
     "pending": len(records) - n,
     "minimumMatches": 500,
