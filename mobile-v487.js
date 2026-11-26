@@ -168,6 +168,47 @@ function closeDetail(){
  if(opened===null)return;
  opened=null;by("match-detail-screen").hidden=true;document.body.classList.remove("detail-active");by("view-matches").hidden=false;window.scrollTo(0,listScroll);
 }
+function historyForm(r){return scheduleBound(data,"daily",Date.now())&&r.formResearch?.version==="5.06"?r.formResearch:null;}
+function resultChip(v){const chip=node("span",({W:"G",D:"B",L:"M"})[v]||"—","history-result "+(({W:"win",D:"draw",L:"loss"})[v]||""));chip.title=({W:"Galibiyet",D:"Beraberlik",L:"Mağlubiyet"})[v]||"Sonuç yok";return chip;}
+function historyPanel(title){const b=node("article",undefined,"panel history-panel");b.append(node("h3",title));return b;}
+function historyNote(b,message){b.append(node("p",message,"subtle"));}
+function h2hPanel(r){
+ const b=historyPanel("Karşılıklı maçlar · H2H"),f=historyForm(r),names=r.match.split(" – "),seen=new Set(),matches=arr(f?.h2h).filter(y=>{
+ if(!y||typeof y.date!=="string"||y.date>=r.date||!names.includes(y.home)||!names.includes(y.away)||y.home===y.away||!Array.isArray(y.score)||y.score.length!==2||!y.score.every(v=>Number.isInteger(v)&&v>=0))return false;
+ const k=JSON.stringify([y.date,y.home,y.away]);if(seen.has(k))return false;seen.add(k);return true;
+ }).sort((a,b)=>b.date.localeCompare(a.date));
+ if(!matches.length){historyNote(b,"Doğrulanmış tarihli geçmiş kayıt yok.");return b;}
+ let w=0,d=0,l=0,gf=0,ga=0,over=0,btts=0;
+ for(const y of matches){const [h,a]=y.home===names[0]?y.score:[y.score[1],y.score[0]];gf+=h;ga+=a;if(h>a)w++;else if(h<a)l++;else d++;if(h+a>=3)over++;if(h&&a)btts++;}
+ b.append(node("p",matches.length+" kayıtlı lig karşılaşması","history-count"),metrics([[names[0]+" galibiyet",String(w)],["Beraberlik",String(d)],[names[1]+" galibiyet",String(l)]]),metrics([["Gol · "+names[0],String(gf)],["2.5 Üst",over+"/"+matches.length],["Gol · "+names[1],String(ga)]]),node("p","KG Var: "+btts+"/"+matches.length+" maç","history-count"));
+ for(const y of matches){const card=node("div",undefined,"history-match");card.append(node("span",y.date,"history-date"),teamTitle(y.home+" – "+y.away,r.league),node("strong",y.score.join(" – "),"history-score"));b.append(card);}
+ historyNote(b,"Sadece erişilebilen lig geçmişi; kupa ve diğer organizasyonlar dahil değil. Sayılar tarihsel örneklemdir, gelecek maç olasılığı değildir.");return b;
+}
+function formPanels(r){
+ const b=historyPanel("Son 5 kayıtlı lig maçı"),f=historyForm(r),names=r.match.split(" – ");
+ if(!f){historyNote(b,"Güncel form raporu yok.");return b;}
+ for(const [i,side] of [f.home,f.away].entries()){
+ if(!side)continue;
+ const card=node("section",undefined,"form-team"),header=node("div",undefined,"form-team-head");
+ header.append(node("strong",names[i]||"Takım"),node("span",String(side.sample)+" maç","history-count"));card.append(header);
+ const strip=node("div",undefined,"form-strip");for(const y of arr(side.rows))strip.append(resultChip(y.result));card.append(strip,metrics([["Galibiyet",num(side.wins)],["Beraberlik",num(side.draws)],["Mağlubiyet",num(side.losses)]]),metrics([["Attığı gol",num(side.goalsFor)],["Yediği gol",num(side.goalsAgainst)],["Puan",Number.isInteger(side.wins)&&Number.isInteger(side.draws)?String(side.wins*3+side.draws):"—"]]));
+ for(const y of arr(side.rows)){const line=node("div",undefined,"form-match"),left=node("div",undefined,"form-opponent");left.append(node("strong",y.opponent),node("small",y.date+" · "+(y.venue==="home"?"İç saha":"Dış saha")));line.append(resultChip(y.result),left,node("strong",num(y.gf)+" – "+num(y.ga),"form-score"));card.append(line);}
+ const latest=arr(side.rows)[0]?.date;if(latest)historyNote(card,"Son kayıt: "+latest+" · Daha yeni maçlar kaynakta eksik olabilir.");b.append(card);
+ }
+ historyNote(b,"G = galibiyet, B = beraberlik, M = mağlubiyet. Mevcut lig geçmişi; kadro ve sakatlık verileri dahil değil.");return b;
+}
+function historicalComparison(r,title,fields){
+ const b=historyPanel(title),stats=historicalStatsFor(r,data,Date.now()),names=r.match.split(" – ");
+ if(!stats){historyNote(b,"Güncel ve bütünlüğü doğrulanmış istatistik kaynağı yok.");return b;}
+ const head=node("div",undefined,"history-compare-head");head.append(node("strong",names[0]||"Ev sahibi"),node("span","ORTALAMA"),node("strong",names[1]||"Deplasman"));b.append(head);
+ for(const [label,k,which] of fields){
+ const h=stats.home?.metrics?.[k],a=stats.away?.metrics?.[k],line=node("div",undefined,"history-compare-row");
+ line.append(node("strong",h?.sample>0?displayNumber(h[which]):"—"),node("div",label,"history-compare-label"),node("strong",a?.sample>0?displayNumber(a[which]):"—"));b.append(line);
+ const samples=node("div",undefined,"history-samples");samples.append(node("span",num(h?.sample)+" maç"),node("span",num(a?.sample)+" maç"));b.append(samples);
+ }
+ historyNote(b,"Kaynak: football-data.co.uk · Son en fazla 10 lig maçı. Gözlem ortalamaları, tahmin değildir.");return b;
+}
+function modelPending(title,description){const b=historyPanel(title);historyNote(b,description);return b;}
 function detail(r){if(r.confirmed){
  const box=node("div",undefined,"detail");
  box.append(node("p","ESPN ve uluslararası oran kaynağında aynı başlama saati.","subtle"));
@@ -184,10 +225,10 @@ const views={
 "Oranlar":()=>{out.append(unavailablePanel("Açılış / güncel oran / düşüş",["Açılış","Güncel","Düşüş %"],"Açılış ve düşüş yüzdesi için eşleşmiş oran geçmişi gerekiyor."));if(!r.event){out.append(node("p","Kesin eşleşen güncel oran kaydı yok.","subtle"));return;}for(const p of [1.5,2.5]){const v=arr(r.event.bookmakers).flatMap(b=>arr(b.lines).filter(l=>l.point===p&&fresh(l.lastUpdate,Date.now())&&typeof l.over==="number"&&l.over>1).map(l=>l.over));out.append(node("p",p+" Üst: "+(v.length?v.length+" kaynak · "+Math.min(...v).toFixed(2)+"–"+Math.max(...v).toFixed(2):"Veri yok")));}const movement=movementFor(r,data,Date.now());for(const m of movement)out.append(node("p",m.market+" · "+m.movementBookmakers+" kaynak · "+displayNumber(m.medianChangePP)+" yüzde puan"));if(!movement.length)out.append(node("p","Doğrulanmış oran hareketi yok.","subtle"));},
 "Para akışı":()=>out.append(volumePanel()),
 "İstatistik":()=>{renderHistoricalStats(out,r);const model=researchFor(r,data,Date.now());out.append(node("h3","Gol modeli karşılaştırması"));if(!model){out.append(node("p","Bütünlüğü kontrol edilmiş model raporu yok.","subtle"));return;}out.append(node("p","Aynı gol beklentisinden üretilen deneysel dağılımlar. Bağımsız tahminler veya doğrulanmış kazanma olasılıkları değildir.","subtle"));for(const [name,k] of [["1.5 Üst","over15"],["2.5 Üst","over25"],["KG Var","btts"]]){out.append(node("h3",name),metrics([["Poisson",pct(100*model.poisson?.[k])],["Dixon-Coles",pct(100*model.experimentalDixonColes?.[k])],["Monte Carlo",pct(100*model.simulation?.markets?.[k]?.probability)]]));}out.append(node("p","Dixon-Coles katsayısı sabit deneysel değerdir; Monte Carlo aynı dağılımın 20.000 örnekli sayısal kontrolüdür. Kadro ve sakatlık verileri henüz bağlı değil.","subtle"));},
-"H2H":()=>{const f=scheduleBound(data,"daily",Date.now())&&r.formResearch?.version==="5.06"?r.formResearch:null;out.append(node("h3","Son karşılaşmalar"));if(!f||!arr(f.h2h).length)out.append(node("p","Doğrulanmış tarihli geçmiş kayıt yok.","subtle"));else for(const y of f.h2h)out.append(node("p",y.date+" · "+y.home+" "+y.score.join("–")+" "+y.away));out.append(node("p","Yalnızca mevcut lig geçmişi; tüm organizasyonları kapsamaz.","subtle"));},
-"Form":()=>{const f=scheduleBound(data,"daily",Date.now())&&r.formResearch?.version==="5.06"?r.formResearch:null;out.append(node("h3","Son 5 lig maçı"));if(!f){out.append(node("p","Güncel form raporu yok.","subtle"));return;}for(const [label,side] of [["Ev sahibi",f.home],["Deplasman",f.away]]){out.append(node("h3",label+" · "+side.sample+" maç"),metrics([["Galibiyet",num(side.wins)],["Beraberlik",num(side.draws)],["Mağlubiyet",num(side.losses)]]));for(const y of arr(side.rows))out.append(node("p",y.date+" · "+y.opponent+" · "+y.gf+"–"+y.ga+" · "+(y.venue==="home"?"İç saha":"Dış saha"),"subtle"));}out.append(node("p","Lig geçmişi; kadro ve sakatlık verileri bağlı değil.","subtle"));},
-"İlk yarı":()=>out.append(unavailablePanel("İlk yarı analizi",["İY 0.5 Üst","İY 1.5 Üst","İY KG Var","İY/MS","İki yarı KG Var"],"Bu pazarlar için doğrulanmış model yok.")),
-"Korner / kart":()=>{out.append(unavailablePanel("Korner ve kart tahmini",["Korner","Sarı kart","Kırmızı kart"],"Tahmin modeli doğrulanmadı."));renderHistoricalStats(out,r);},
+"H2H":()=>out.append(h2hPanel(r)),
+"Form":()=>out.append(formPanels(r)),
+"İlk yarı":()=>out.append(historicalComparison(r,"İlk yarı · tarihsel gol ortalamaları",[["Atılan gol","halfTimeGoals","forAverage"],["Yenilen gol","halfTimeGoals","againstAverage"]]),modelPending("İlk yarı tahminleri","İY 0.5 Üst, İY 1.5 Üst, İY KG Var, İY/MS ve iki yarı KG Var modelleri doğrulanmadı.")),
+"Korner / kart":()=>out.append(historicalComparison(r,"Korner ve kart · tarihsel ortalamalar",[["Kullanılan korner","corners","forAverage"],["Verilen korner","corners","againstAverage"],["Sarı kart","yellowCards","forAverage"],["Rakip sarı kart","yellowCards","againstAverage"],["Kırmızı kart","redCards","forAverage"],["Rakip kırmızı kart","redCards","againstAverage"]]),modelPending("Korner ve kart tahmini","Bu pazarlar için doğrulanmış tahmin modeli henüz yok.")),
 "Sinyaller":()=>out.append(signalPanel(null)),
 "Diğer":()=>out.append(returnCalculator(),unavailablePanel("Model güvenilirliği",["Kalibrasyon","Canlı doğrulama","Örneklem"],"Doğrulanmış canlı model henüz yok."))};
 for(const name of Object.keys(views)){const b=node("button",name);b.type="button";b.setAttribute("aria-pressed","false");b.dataset.detailTab=name;b.onclick=()=>{for(const t of tabs.children)t.setAttribute("aria-pressed",String(t===b));out.replaceChildren();views[name]();};tabs.append(b);}const check=fixtureCheck(r,data,Date.now());if(check?.status==="date_difference")x.append(node("p","Tarih uyuşmazlığı: mevcut liste "+r.date+" / ESPN "+check.sourceDate+". Orijinal kayıt değiştirilmedi.","subtle"));else if(check?.status==="same_date")x.append(node("p","Fikstür tarihi ESPN ile eşleşiyor.","subtle"));else if(check)x.append(node("p","İkinci kaynakta kesin fikstür eşleşmesi yok.","subtle"));x.append(tabs,out);tabs.firstChild.click();return x;}
