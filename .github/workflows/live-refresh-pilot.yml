@@ -1,7 +1,9 @@
-name: V5.18 live snapshot publication pilot
+name: V5.19 live observation and performance research
 on:
   pull_request:
     paths:
+      - 'scripts/live_performance_research.py'
+      - 'scripts/test_live_performance_research.py'
       - 'scripts/live_rate_link.py'
       - 'scripts/test_live_rate_link.py'
       - 'scripts/live_score_scenario.py'
@@ -35,6 +37,7 @@ jobs:
       - run: python scripts/test_live_analysis_quality.py
       - run: python scripts/test_live_score_scenario.py
       - run: python scripts/test_live_rate_link.py
+      - run: python scripts/test_live_performance_research.py
       - run: python scripts/live_refresh_snapshot.py
       - run: python scripts/live_analysis_quality.py
       - run: python scripts/live_rate_link.py
@@ -59,17 +62,26 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: live-data
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: research-code
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - uses: actions/download-artifact@v4
         with:
           name: live-refresh-snapshot
           path: /tmp/oa-live
-      - name: Publish only source observations to dedicated branch
+      - name: Update observation and research archive on dedicated branch
         run: |
           cp /tmp/oa-live/live_analysis_quality.json live_analysis_quality.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add live_analysis_quality.json
+          python research-code/scripts/live_performance_research.py /tmp/oa-live/live_rate_link.json live_scenario_archive.json research-code/verified_results.json live_performance_research.json
+          git add live_analysis_quality.json live_scenario_archive.json live_performance_research.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update live observation snapshot"
+            git commit -m "Update live observations and research archive"
             git push origin HEAD:live-data
           fi
