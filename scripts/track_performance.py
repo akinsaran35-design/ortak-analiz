@@ -9,7 +9,7 @@ today = now.date()
 daily = json.loads((root/"daily.json").read_text(encoding="utf-8"))
 archive = root/"prediction_archive.json"
 records = json.loads(archive.read_text(encoding="utf-8")) if archive.exists() else {}
-from fixture_schema import matches_in
+from fixture_schema import matches_in, final_score
 from league_config import FIXTURE_CODES as leagues
 markets = ["1.5 Üst","2.5 Üst","KG Var"]
 def key(d,l,m):
@@ -46,7 +46,7 @@ for league,season in sorted(needed):
             if d>=today.isoformat():
                 continue
             k = key(d,league,f"{team(m.get('team1'))} – {team(m.get('team2'))}")
-            ft = (m.get("score") or {}).get("ft")
+            ft = final_score(m)
             if k in records and records[k]["result"] is None and isinstance(ft,list) and len(ft)==2 and all(type(x) is int and x>=0 for x in ft):
                 records[k]["result"] = ft
                 records[k]["settledAt"] = now.isoformat()
