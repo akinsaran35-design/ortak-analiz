@@ -3,6 +3,7 @@ import json,time
 from datetime import date,timedelta
 from pathlib import Path
 from urllib.request import urlopen
+from urllib.parse import quote
 from historical_baseline import evaluate
 
 def normalize(rows,league,today):
@@ -51,10 +52,10 @@ def run(today):
     try: pairs.update(discover_leagues(today))
     except Exception as e: errors.append(dict(stage="discovery",error=type(e).__name__))
     ordered=sorted(pairs,key=lambda x:(x[0] not in ("bl1","bl2","bl3"),x))
-    for league,year in ordered[:60]:
+    for league,year in ordered[:100]:
         if True:
             try:
-                with urlopen(f"https://api.openligadb.de/getmatchdata/{league}/{year}",timeout=20) as f:
+                with urlopen(f"https://api.openligadb.de/getmatchdata/{quote(league,safe='')}/{year}",timeout=20) as f:
                     rows.extend(normalize(json.load(f),league,today))
             except Exception as e: errors.append(dict(league=league,year=year,error=type(e).__name__))
             time.sleep(2)
@@ -64,7 +65,7 @@ def run(today):
         if k in unique and unique[k]!=row: conflicts.add(k)
         unique[k]=row
     rows=[v for k,v in unique.items() if k not in conflicts]
-    print("Football catalog:",len(pairs),"requested:",min(60,len(pairs)),"conflicts:",len(conflicts),"league codes:",len({r["league"] for r in rows}))
+    print("Football catalog:",len(pairs),"requested:",min(100,len(pairs)),"conflicts:",len(conflicts),"league codes:",len({r["league"] for r in rows}))
     result=dict(status="research_only",realBettingEnabled=False,license="ODbL-1.0",attribution="Data from OpenLigaDB (www.openligadb.de)",asOf=today.isoformat(),matches=rows,errors=errors)
     Path("openliga_pilot.json").write_text(json.dumps(result,indent=2))
     report=evaluate(rows,today)
