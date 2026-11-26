@@ -89,3 +89,12 @@ assert.equal(liveRows({...liveReport,rows:[liveRow,liveRow]},now).length,0);
 assert.equal(liveRows({...liveReport,predictionsEnabled:true},now).length,0);
 assert.equal(liveRows({...liveReport,rows:[{...liveRow,quality:"stale_receipt"}]},now).length,0);
 console.log("Live observation freshness and duplicate guards passed");
+
+const {matchOverview,movementFor}=require("../mobile-v487.js");
+const overview={...modelRow,expectedGoals:{home:1.5,away:1},scoreProbabilities:{homeWin:.48,draw:.26,awayWin:.26}};
+const overviewData={...modelData,model_research:{...modelData.model_research,rows:[overview]}};
+assert.deepEqual(matchOverview(row,overviewData,now),{result:[48,26,26],goals:[1.5,1]});
+assert.deepEqual(matchOverview(row,overviewData,now+86400001),{result:null,goals:null});
+assert.equal(matchOverview(row,{...overviewData,model_research:{...overviewData.model_research,rows:[{...overview,scoreProbabilities:{homeWin:.9,draw:.9,awayWin:.9}}]}},now).result,null);
+assert.deepEqual(movementFor(row,d,now),[]);
+console.log("Research overview and unavailable market movement guards passed");
