@@ -174,3 +174,6 @@ jobs:
           name: fixture-reconciliation
           path: fixture_reconciliation.json
           retention-days: 7
+
+      - name: V4.62 verified result settlement tests
+        run: python scripts/test_verified_results.py
