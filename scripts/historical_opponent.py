@@ -57,7 +57,7 @@ def compare(rows, as_of):
     groups, meta = split(rows, as_of)
     model = Strength()
     history = defaultdict(list)
-    scores = defaultdict(lambda: [[], [], []])
+    scores = defaultdict(lambda: [[], [], [], []])
     skipped = 0
     for day, batch in groupby(sorted(sum(groups.values(), []), key=lambda r: (r["date"],str(r["matchID"]))), key=lambda r:r["date"]):
         batch = list(batch)
@@ -76,7 +76,7 @@ def compare(rows, as_of):
             venue = venue_rates(hh, ah, *model.means(l))
             if venue is None:
                 venue = base
-            forecasts = [markets(*p) for p in (base, venue, model.expected(r))]
+            forecasts = [markets(*p) for p in (base, venue, model.expected(r), tuple(clip(x) for x in model.means(l)))]
             x,y = r["ft"]
             for k,o in (("over15",x+y>=2),("over25",x+y>=3),("btts",x>0 and y>0)):
                 for series,p in zip(scores[k],forecasts):
@@ -88,7 +88,7 @@ def compare(rows, as_of):
             x,y = r["ft"]
             history[(l,h)].append((x,y,"home"))
             history[(l,a)].append((y,x,"away"))
-    return dict(skipped=skipped, metrics={k:{name:market_metrics(v) for name,v in zip(("baseline","venue","opponent"),series)} for k,series in scores.items()})
+    return dict(skipped=skipped, metrics={k:{name:market_metrics(v) for name,v in zip(("baseline","venue","opponent","leagueReference"),series)} for k,series in scores.items()})
 
 def multiyear(rows, today):
     windows = []
@@ -98,13 +98,14 @@ def multiyear(rows, today):
     aggregate = {}
     for k in ("over15","over25","btts"):
         aggregate[k] = {}
-        for name in ("baseline","venue","opponent"):
+        for name in ("baseline","venue","opponent","leagueReference"):
             ms = [w["metrics"][k][name] for w in windows if k in w["metrics"]]
             n = sum(m["n"] for m in ms)
             s = sum(m["selected"] for m in ms)
             h = sum(m["hits"] for m in ms)
             aggregate[k][name] = dict(n=n,selected=s,hits=h,hitRate=h/s if s else None,brier=sum(m["n"]*m["brier"] for m in ms)/n if n else None)
         a = aggregate[k]
+        a["referenceImprovement"] = a["leagueReference"]["brier"]-a["opponent"]["brier"] if a["leagueReference"]["n"] else None
         a["brierImprovement"] = a["baseline"]["brier"]-a["opponent"]["brier"] if a["baseline"]["n"] else None
     return dict(status="research_only",realBettingEnabled=False,independentHoldout=False,matchCount=len(rows),aggregate=aggregate,windows=windows)
 
