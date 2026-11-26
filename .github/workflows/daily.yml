@@ -192,7 +192,7 @@ jobs:
         run: |
           python scripts/test_archive_calendar_result_replay.py
           python scripts/archive_calendar_result_replay.py
-      - name: V4.79 score provenance audit
+      - name: V4.80 score provenance and conflict audit
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_score_provenance.py
