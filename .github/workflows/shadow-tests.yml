@@ -122,3 +122,6 @@ jobs:
 
       - name: Historical tuning tests
         run: python scripts/test_historical_tuning.py
+
+      - name: League strength tests
+        run: python scripts/test_historical_strength.py
