@@ -22,3 +22,9 @@ const leagueData={prospective_leagues:{version:"4.88",updatedAt,mode:"research_o
 assert.equal(leagueReport(leagueData,now)["en.1"].recorded,1);
 assert.equal(leagueReport(leagueData,now+1800001),null);
 assert.equal(leagueReport({...leagueData,prospective_leagues:{...leagueData.prospective_leagues,recorded:2}},now),null);
+
+const {fixtureCheck}=require("../mobile-v487.js");
+const fixtureData={...d,fixture_coverage_audit:{version:"4.92",updatedAt,dailyUpdatedAt:updatedAt,mode:"research_only",decision:"PAS",archivesModified:false,dates:[row.date],rows:[{status:"date_difference",published:[row],espn:[{date:"2026-11-28"}]}]},snapshot_integrity:{...d.snapshot_integrity,reportTimestamps:{...d.snapshot_integrity.reportTimestamps,"fixture_coverage_audit.json":updatedAt}}};
+assert.equal(fixtureCheck(row,fixtureData,now).sourceDate,"2026-11-28");
+assert.equal(fixtureCheck(row,fixtureData,now+1800001),null);
+assert.equal(fixtureCheck(row,{...fixtureData,fixture_coverage_audit:{...fixtureData.fixture_coverage_audit,dailyUpdatedAt:"wrong"}},now),null);
