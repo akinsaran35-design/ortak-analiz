@@ -23,3 +23,11 @@ jobs:
           python3 -m http.server 8765 > /tmp/oa-browser-server.log 2>&1 &
           for i in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8765/index.html >/dev/null && break; sleep 1; done
           node scripts/test_mobile_browser.js
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mobile-reference-preview
+          path: mobile-reference-detail.png
+          if-no-files-found: ignore
+          retention-days: 7
