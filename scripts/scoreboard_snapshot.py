@@ -38,8 +38,9 @@ def parse(payload,day):
         except (KeyError,ValueError,TypeError,AttributeError): invalid+=1
     return [v for k,v in rows.items() if k not in blocked],invalid+len(blocked)
 
-def build(now,reader=read):
-    day=now.astimezone(TR).date().isoformat()
+def build(now,reader=read,query_date=None):
+    day=query_date or now.astimezone(TR).date().isoformat()
+    date.fromisoformat(day)
     def group(item):
         name,code,_=item
         url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+SOURCES[code][1]+"/scoreboard?dates="+day.replace("-","")
@@ -50,7 +51,7 @@ def build(now,reader=read):
         return result
     with ThreadPoolExecutor(max_workers=4) as pool:
         groups=list(pool.map(group,LEAGUES))
-    return dict(version="4.90",updatedAt=now.isoformat(),date=day,mode="scoreboard_snapshot",source="ESPN",groups=groups,loadedLeagues=sum(g["error"] is None for g in groups),eventCount=sum(len(g["rows"]) for g in groups),inProgress=sum(r["state"]=="in" for g in groups for r in g["rows"]),realTime=False,usedForSettlement=False,usedForPredictions=False)
+    return dict(version="4.90",updatedAt=now.isoformat(),date=day,mode="scoreboard_snapshot" if query_date is None else "source_probe",source="ESPN",groups=groups,loadedLeagues=sum(g["error"] is None for g in groups),eventCount=sum(len(g["rows"]) for g in groups),inProgress=sum(r["state"]=="in" for g in groups for r in g["rows"]),realTime=False,usedForSettlement=False,usedForPredictions=False)
 
 def main():
     report=build(datetime.now(TR))

@@ -22,9 +22,11 @@ function filterRows(rows,q,d,l,t){const s=String(q||"").trim().toLocaleLowerCase
 if(typeof module!=="undefined"&&module.exports)module.exports={topScores,eventFor,rowsFor,filterRows,bound,leagueReport};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
-let data={},rows=[],loadedAt=0;
+let data={},rows=[],loadedAt=0,refreshing=false;
+function expirySignature(data,now){return FILES.map(k=>fresh(data[k]?.updatedAt,now)?1:0).join('')+dateTR(now);}
+function expireView(){if(!refreshing&&loadedAt&&expirySignature(data,loadedAt)!==expirySignature(data,Date.now()))render();}
 function metrics(values){const box=node("div",undefined,"metrics");for(const [label,value] of values){const c=node("div",undefined,"metric");c.append(node("b",value),node("small",label));box.append(c);}return box;}
-function detail(r){const x=node("div",undefined,"detail"),tabs=node("div",undefined,"detail-tabs"),out=node("div"),c=r.candidate;
+function detail(r){r={...r,event:eventFor(r,data,Date.now())};const x=node("div",undefined,"detail"),tabs=node("div",undefined,"detail-tabs"),out=node("div"),c=r.candidate;
 const views={
 "Goller":()=>{if(!c){out.append(node("p","Model tahmini yok.","subtle"));return;}out.append(node("p","Kalibre edilmemiş model olasılığı; kazanma garantisi değildir.","subtle"),metrics(MARKETS.map(m=>[m,pct(c.markets?.[m])])));},
 "Skor":()=>{const s=topScores(c?.expectedGoals?.home,c?.expectedGoals?.away);out.append(node("p",s.length?"Bağımsız Poisson modelinin en olası 3 skor senaryosu.":"Skor modeli verisi yok.","subtle"));for(const y of s)out.append(node("p",y.score+" · "+pct(y.p)));},
@@ -57,10 +59,11 @@ function render(){loadedAt=Date.now();rows=rowsFor(data,loadedAt);const current=
  const c=by("coupon-summary");c.replaceChildren();panel(c,"PAS",[node("p","Onaylanmış otomatik kupon yok."),node("p","Kazanma olasılığı: doğrulanmadı. Model kalibrasyonu tamamlanmadı.","subtle")]);
  const s=by("settings-summary");s.replaceChildren(node("p","Son bildirilen API kredisi: "+num(data.odds?.remainingCredits)),node("p","Bütünlük: "+(current?"PASS":"Güncel doğrulama yok")),node("p","Ücretsiz araştırma • Türkiye dışı oran kaynakları","subtle"));
 }
-async function refresh(){by("refresh").disabled=true;by("connection").textContent="Raporlar okunuyor…";const next={};await Promise.all(FILES.map(async k=>{try{const r=await fetch("./"+k+".json?ts="+Date.now(),{cache:"no-store"});if(r.ok)next[k]=await r.json();}catch(_){}}));data=next;try{render();}catch(_){by("connection").textContent="Rapor biçimi doğrulanamadı · PAS";}finally{by("refresh").disabled=false;}}
+async function refresh(){if(refreshing)return;refreshing=true;by("refresh").disabled=true;by("connection").textContent="Raporlar okunuyor…";const next={};await Promise.all(FILES.map(async k=>{try{const r=await fetch("./"+k+".json?ts="+Date.now(),{cache:"no-store"});if(r.ok)next[k]=await r.json();}catch(_){}}));data=next;try{render();}catch(_){by("connection").textContent="Rapor biçimi doğrulanamadı · PAS";}finally{refreshing=false;by("refresh").disabled=false;}}
 for(const id of ["search","date-filter","league-filter","time-filter"])by(id).addEventListener(id==="search"?"input":"change",renderList);
 const buttons=[...document.querySelectorAll("[data-tab]")];for(const b of buttons)b.onclick=()=>{for(const t of buttons){const active=t===b;by("view-"+t.dataset.tab).hidden=!active;if(active)t.setAttribute("aria-current","page");else t.removeAttribute("aria-current");}window.scrollTo(0,0);};
 function theme(value){const resolved=value==="system"?(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark"):value;document.documentElement.dataset.theme=resolved;try{localStorage.setItem("oa_theme",value);}catch(_){}}
 let pref="dark";try{pref=localStorage.getItem("oa_theme")||"dark";}catch(_){}if(!["dark","light","system"].includes(pref))pref="dark";by("theme").value=pref;theme(pref);by("theme").onchange=e=>theme(e.target.value);
+setInterval(expireView,15000);document.addEventListener("visibilitychange",()=>{if(!document.hidden){expireView();refresh();}});
 by("refresh").onclick=refresh;if("serviceWorker"in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});refresh();
 })();
