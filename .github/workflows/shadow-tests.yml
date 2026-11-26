@@ -125,3 +125,6 @@ jobs:
 
       - name: League strength tests
         run: python scripts/test_historical_strength.py
+
+      - name: Historical ROI tests
+        run: python scripts/test_historical_roi.py
