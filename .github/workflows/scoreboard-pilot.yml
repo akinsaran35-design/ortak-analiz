@@ -4,6 +4,7 @@ on:
     paths:
       - 'scripts/scoreboard_snapshot.py'
       - 'scripts/test_scoreboard_snapshot.py'
+      - 'scripts/scoreboard_source_probe.py'
       - '.github/workflows/scoreboard-pilot.yml'
 jobs:
   pilot:
@@ -15,8 +16,11 @@ jobs:
           python-version: '3.12'
       - run: python scripts/test_scoreboard_snapshot.py
       - run: python scripts/scoreboard_snapshot.py
+      - run: python scripts/scoreboard_source_probe.py
       - uses: actions/upload-artifact@v4
         with:
           name: scoreboard-snapshot
-          path: scoreboard_snapshot.json
+          path: |
+            scoreboard_snapshot.json
+            scoreboard_source_probe.json
           retention-days: 7
