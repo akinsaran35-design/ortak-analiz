@@ -150,3 +150,8 @@ jobs:
         run: python scripts/test_turkey_source.py
       - name: V4.51 Turkey public result source smoke
         run: python scripts/turkey_source.py
+
+      - name: V4.54 fixture schema tests
+        run: |
+          python scripts/test_fixture_schema.py
+          python scripts/test_track_performance.py
