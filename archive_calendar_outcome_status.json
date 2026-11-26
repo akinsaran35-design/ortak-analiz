@@ -1,0 +1,16 @@
+{
+  "version": "4.82",
+  "updatedAt": "2026-11-26T18:19:30.664493+03:00",
+  "mode": "research_only",
+  "observations": 0,
+  "newObservations": 0,
+  "archiveIdentities": 0,
+  "uniqueEligibleEvents": 0,
+  "counts": {},
+  "metrics": {
+    "prospective": {},
+    "performance": {}
+  },
+  "decision": "PAS",
+  "includedInMainValidation": false
+}

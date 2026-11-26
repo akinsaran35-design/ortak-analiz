@@ -1,8 +1,8 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-26T15:17:27.665908+00:00",
-  "sourceUpdatedAt": "2026-11-26T18:17:08+03:00",
+  "updatedAt": "2026-11-26T15:19:29.819802+00:00",
+  "sourceUpdatedAt": "2026-11-26T18:19:13+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
