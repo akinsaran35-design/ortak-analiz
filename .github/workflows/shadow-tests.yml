@@ -117,3 +117,5 @@ jobs:
         run: python scripts/test_openliga_pilot.py
       - name: Weighted research tests
         run: python scripts/test_historical_weighted.py
+      - name: Historical comparison tests
+        run: python scripts/test_historical_comparison.py
