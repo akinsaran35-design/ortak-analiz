@@ -61,6 +61,25 @@ def build(now,reader=read):
         respondingCompetitions=sum(g["error"] is None for g in groups),
         eventCount=sum(len(g["rows"]) for g in groups),coverageComplete=False,
         predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
+def audit_report(r):
+    try:
+        stamp=datetime.fromisoformat(r["updatedAt"])
+        if stamp.tzinfo is None:return False
+        days=[(stamp.astimezone(TR).date()+timedelta(days=i)).isoformat() for i in range(4)]
+        if r["dates"]!=days or r["version"]!="5.08" or r["source"]!="ESPN" or r["mode"]!="fixture_discovery_only" or r["coverageComplete"] is not False or r["predictionsEnabled"] is not False or r["realBettingEnabled"] is not False or r["decision"]!="PAS":return False
+        groups=r["groups"]
+        if len(groups)!=len(COMPETITIONS) or {(g["leagueName"],g["league"]) for g in groups}!=set(COMPETITIONS):return False
+        for g in groups:
+            if g["sources"]!=[BASE+g["league"]+"/scoreboard?dates="+d.replace("-","") for d in days]:return False
+            if not 0<=g["respondedDays"]<=4 or len(g["errors"])!=4-g["respondedDays"]:return False
+            if (g["error"] is None)!=(g["respondedDays"]==4):return False
+            ids=set()
+            for row in g["rows"]:
+                t=datetime.fromisoformat(row["kickoff"])
+                if t.tzinfo is None or row["date"] not in days or t.astimezone(TR).date().isoformat()!=row["date"] or row["eventId"] in ids:return False
+                ids.add(row["eventId"])
+        return r["configuredCompetitions"]==len(groups) and r["respondingCompetitions"]==sum(g["error"] is None for g in groups) and r["eventCount"]==sum(len(g["rows"]) for g in groups)
+    except (KeyError,TypeError,ValueError,AttributeError):return False
 def main():
     r=build(datetime.now(TR))
     Path("football_coverage_pilot.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
