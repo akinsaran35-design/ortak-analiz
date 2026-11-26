@@ -9,6 +9,7 @@ today = now.date()
 daily = json.loads((root/"daily.json").read_text(encoding="utf-8"))
 archive = root/"prediction_archive.json"
 records = json.loads(archive.read_text(encoding="utf-8")) if archive.exists() else {}
+from fixture_schema import matches_in
 from league_config import FIXTURE_CODES as leagues
 markets = ["1.5 Üst","2.5 Üst","KG Var"]
 def key(d,l,m):
@@ -39,7 +40,7 @@ for league,season in sorted(needed):
             matches=turkey_fetch(season,include_fixtures=False)
         else:
             with urllib.request.urlopen(url,timeout=20) as response:
-                matches = json.load(response).get("matches",[])
+                matches = matches_in(json.load(response))
         for m in matches:
             d = str(m.get("date",""))[:10]
             if d>=today.isoformat():

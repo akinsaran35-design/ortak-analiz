@@ -3,6 +3,7 @@ import urllib.request
 from datetime import datetime, timezone, timedelta
 from shadow_performance import load, save, stamp
 
+from fixture_schema import matches_in
 from league_config import RESULT_CODES as LEAGUES
 def norm(s):
     if isinstance(s, dict):
@@ -15,7 +16,7 @@ def fetch(season, league):
         return turkey_fetch(season,include_fixtures=False)
     url = f"https://raw.githubusercontent.com/openfootball/football.json/master/{season}/{league}.json"
     with urllib.request.urlopen(url,timeout=20) as response:
-        return json.load(response)["matches"]
+        return matches_in(json.load(response))
 
 def resolve(records, results, now, fetcher=fetch):
     errors = []
