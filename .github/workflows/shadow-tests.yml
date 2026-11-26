@@ -275,3 +275,6 @@ jobs:
           node --check money-v497.js
           node scripts/test_money_v497.js
           grep -F 'src="./mobile-v487.js"' index.html
+
+      - name: V5.06 football historical form tests
+        run: python scripts/test_football_form.py

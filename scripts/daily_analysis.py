@@ -32,6 +32,7 @@ def team_name(value):
 
 
 from fixture_schema import matches_in
+from football_form import form
 
 def final_score(match):
     score = match.get("score")
@@ -134,6 +135,7 @@ for league, code in LEAGUES.items():
     report["leaguesLoaded"] += 1
     diagnostic["status"] = "ok" if len(diagnostic["seasonsLoaded"]) == len(seasons) else "partial"
     history = []
+    form_history = []
     fixtures = []
     seen = set()
     for match in all_matches:
@@ -145,6 +147,9 @@ for league, code in LEAGUES.items():
         if not d or not home or not away:
             continue
         identity = (d, home, away)
+        score = final_score(match)
+        if d < today and score is not None:
+            form_history.append((d, home, away, score[0], score[1]))
         if identity in seen:
             continue
         seen.add(identity)
@@ -167,7 +172,8 @@ for league, code in LEAGUES.items():
             diagnostic["excluded"]["alreadyScored"] += 1
             continue
         report["upcoming"].append({"date": d.isoformat(), "league": league,
-                                    "match": f"{home} – {away}"})
+                                    "match": f"{home} – {away}",
+                                    "formResearch": form(form_history,home,away,today)})
         home_stats, home_error = recent_stats(history, home, True)
         away_stats, away_error = recent_stats(history, away, False)
         if home_error or away_error:
