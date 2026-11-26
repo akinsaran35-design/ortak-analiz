@@ -40,7 +40,7 @@
   out.setAttribute("aria-live","polite");
   const button=document.createElement("button");
   button.type="button";
-  button.textContent="Durumu yenile";
+  button.textContent="Yayımlanan durumu yenile";
   panel.append(h,out,button);
   const target=document.getElementById("marketPanel");
   if(target) target.before(panel); else document.body.prepend(panel);
@@ -77,6 +77,7 @@
       line("Karar: PAS • Gerçek bahis kapalı. Geçmiş araştırma bağımsız ileriye dönük doğrulama değildir.","note");
       if(r.missing.length) line("Okunamayan: "+r.missing.join(", "),"muted");
       if(r.stale.length) line("30 dakikayı aşan veya zamanı belirsiz: "+r.stale.join(", "),"muted");
+      line("Bu düğme yayımlanan raporları okur; yeni API çağrısı başlatmaz. Hafta sonu planlanan veri saatleri TSİ 08:00, 11:10, 14:10, 16:10, 18:00, 21:10. GitHub çalışması gecikebilir; 30 dakika sonrası arşiv olarak işaretlenir.","note");
       line("Kapsam tüm dünya ligleri veya basketbol değildir. Veri yoksa seçim oluşturulmaz.","note");
     } catch (_) {
       out.replaceChildren();
