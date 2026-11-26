@@ -24,13 +24,14 @@ def build(daily,reader=read):
         wanted={n for r in daily.get("upcoming",[]) if r.get("league")==label for n in r.get("match","").split(" – ") if n}
         try:
             payload=json.loads(reader(url))
-            entries=[x["team"] for s in payload["sports"] for l in s["leagues"] if l.get("slug")==SOURCES[code][1] or l.get("abbreviation") is not None for x in l["teams"]]
+            league,=[l for s in payload["sports"] for l in s["leagues"]]
+            entries=[x["team"] for x in league["teams"]]
             if not entries:raise ValueError("empty teams")
             found=defaultdict(dict)
             for t in entries:
                 v=logo(t)
                 if not v:continue
-                for n in (t.get("displayName"),t.get("name"),t.get("shortDisplayName"),t.get("location")):
+                for n in (t.get("displayName"),t.get("shortDisplayName")):
                     if isinstance(n,str) and n.strip():
                         k=result_key(n,code,sport)
                         if k:found[k][v["id"]]=v
