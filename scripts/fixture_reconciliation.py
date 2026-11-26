@@ -47,7 +47,9 @@ def load_calendar(now):
 
 def reconcile(daily,odds,calendar,now,source_stamp):
     stamp=datetime.fromisoformat(odds["updatedAt"].replace("Z","+00:00"))
-    fresh=timedelta(0)<=now-stamp<=timedelta(minutes=30)
+    fresh=(timedelta(0)<=now-stamp<=timedelta(minutes=30) and odds.get("source")=="The Odds API" and odds.get("region")=="uk" and not odds.get("errors"))
+    source_time=datetime.fromisoformat(source_stamp.replace("Z","+00:00"))
+    fresh=fresh and timedelta(0)<=now-source_time<=timedelta(hours=36)
     original=build_report(daily,odds,now)
     corrected=[]
     proposals=[]
@@ -55,7 +57,7 @@ def reconcile(daily,odds,calendar,now,source_stamp):
         row=dict(candidate)
         league=LEAGUES.get(row.get("league"))
         names=row.get("match","").split(" – ")
-        if fresh and league in calendar and len(names)==2:
+        if fresh and league in calendar and league in odds.get("queriedLeagues",[]) and len(names)==2:
             h,a=map(lambda n:key(n,league),names)
             day=date.fromisoformat(row["date"])
             events=[]
