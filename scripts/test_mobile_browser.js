@@ -18,7 +18,7 @@ const {chromium}=require("playwright");
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
-  await page.getByText("FOOTBALL INTELLIGENCE · UI 524",{exact:true}).waitFor();
+  await page.getByText("FOOTBALL INTELLIGENCE · UI 525",{exact:true}).waitFor();
   for(const width of [320,360,393,412,540,690,980]){
     await page.setViewportSize({width,height:850});
     const sizes=await page.evaluate(()=>({body:document.body.getBoundingClientRect().width,nav:document.querySelector(".bottom-nav").getBoundingClientRect().width,main:document.querySelector("main").getBoundingClientRect().width,viewport:innerWidth,scroll:document.documentElement.scrollWidth}));
@@ -71,6 +71,13 @@ const {chromium}=require("playwright");
   await page.getByText("Bağlı değil",{exact:true}).waitFor();
   await page.getByRole("button",{name:"Skor",exact:true}).click();
   await page.getByText("Bağımsız Poisson modelinin en olası 3 skor senaryosu.").waitFor();
+  assert.equal(await page.locator(".score-scenario").count(),3);
+  for(const width of [320,393,690,980]){await page.setViewportSize({width,height:Math.round(width*2.16)});const sizes=await page.locator(".score-value").first().evaluate(e=>({font:parseFloat(getComputedStyle(e).fontSize),width:innerWidth,scroll:document.documentElement.scrollWidth}));assert.ok(sizes.font>=Math.max(30,width*.065)&&sizes.scroll<=sizes.width+1,JSON.stringify(sizes));}
+  await page.setViewportSize({width:393,height:852});
+  await page.screenshot({path:"mobile-reference-score.png",fullPage:true});
+  await page.setViewportSize({width:980,height:2120});
+  await page.screenshot({path:"mobile-reference-score-wide.png"});
+  await page.setViewportSize({width:393,height:852});
   await page.locator("#detail-back").click();
   assert.equal(await page.locator("#view-matches").isVisible(),true);
   const nav=await page.locator(".bottom-nav").boundingBox();
