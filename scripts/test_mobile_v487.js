@@ -1,5 +1,5 @@
 const assert=require("node:assert/strict");
-const {topScores,eventFor,rowsFor,filterRows,bound}=require("../mobile-v487.js");
+const {topScores,eventFor,rowsFor,filterRows,bound,leagueReport}=require("../mobile-v487.js");
 const now=Date.parse("2026-11-26T15:00:00Z"),updatedAt=new Date(now).toISOString();
 const row={date:"2026-11-27",league:"İngiltere Premier Lig",match:"A – B"};
 const event={id:"1",league:"soccer_epl",kickoff:"2026-11-27T18:00:00Z"};
@@ -18,3 +18,7 @@ const fs=require("node:fs"),html=fs.readFileSync("index.html","utf8");
 for(const x of ["matches","live","performance","settings","coupons"]){assert.ok(html.includes('id="view-'+x+'"'));assert.ok(html.includes('data-tab="'+x+'"'));}
 assert.ok(html.includes("./legacy.html"));
 console.log("Clean mobile tab, fixture identity and score tests passed");
+const leagueData={prospective_leagues:{version:"4.88",updatedAt,mode:"research_only",decision:"PAS",realBettingEnabled:false,recorded:1,leagues:{"en.1":{recorded:1}}},prospective_validation:{updatedAt,recorded:1},snapshot_integrity:{updatedAt,status:"PASS",errors:[],reportTimestamps:{"prospective_leagues.json":updatedAt,"prospective_validation.json":updatedAt}}};
+assert.equal(leagueReport(leagueData,now)["en.1"].recorded,1);
+assert.equal(leagueReport(leagueData,now+1800001),null);
+assert.equal(leagueReport({...leagueData,prospective_leagues:{...leagueData.prospective_leagues,recorded:2}},now),null);
