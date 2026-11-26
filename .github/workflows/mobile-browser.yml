@@ -1,0 +1,24 @@
+name: V4.96 Mobile Browser
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'mobile-v487.js'
+      - 'mobile-v487.css'
+      - 'scripts/test_mobile_browser.js'
+      - '.github/workflows/mobile-browser.yml'
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false playwright@1.58.2
+      - run: npx playwright install --with-deps chromium
+      - run: |
+          python3 -m http.server 8765 > /tmp/oa-browser-server.log 2>&1 &
+          for i in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8765/index.html >/dev/null && break; sleep 1; done
+          node scripts/test_mobile_browser.js
