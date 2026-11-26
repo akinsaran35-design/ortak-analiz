@@ -58,6 +58,7 @@ def compare(rows, as_of):
     model = Strength()
     history = defaultdict(list)
     scores = defaultdict(lambda: [[], [], [], []])
+    league_scores = defaultdict(lambda: defaultdict(lambda: [[], [], [], []]))
     skipped = 0
     for day, batch in groupby(sorted(sum(groups.values(), []), key=lambda r: (r["date"],str(r["matchID"]))), key=lambda r:r["date"]):
         batch = list(batch)
@@ -79,8 +80,10 @@ def compare(rows, as_of):
             forecasts = [markets(*p) for p in (base, venue, model.expected(r), tuple(clip(x) for x in model.means(l)))]
             x,y = r["ft"]
             for k,o in (("over15",x+y>=2),("over25",x+y>=3),("btts",x>0 and y>0)):
-                for series,p in zip(scores[k],forecasts):
-                    series.append((p[k],int(o)))
+                for i,p in enumerate(forecasts):
+                    value = (p[k],int(o))
+                    scores[k][i].append(value)
+                    league_scores[l][k][i].append(value)
         # Freeze every exposure before recording any same-day result.
         for r, e in pending:
             model.update(r,e)
@@ -88,7 +91,9 @@ def compare(rows, as_of):
             x,y = r["ft"]
             history[(l,h)].append((x,y,"home"))
             history[(l,a)].append((y,x,"away"))
-    return dict(skipped=skipped, metrics={k:{name:market_metrics(v) for name,v in zip(("baseline","venue","opponent","leagueReference"),series)} for k,series in scores.items()})
+    def summarize(values):
+        return {k:{name:market_metrics(v) for name,v in zip(("baseline","venue","opponent","leagueReference"),series)} for k,series in values.items()}
+    return dict(skipped=skipped, metrics=summarize(scores), leagueMetrics={l:summarize(v) for l,v in sorted(league_scores.items())})
 
 def multiyear(rows, today):
     windows = []
@@ -107,7 +112,22 @@ def multiyear(rows, today):
         a = aggregate[k]
         a["referenceImprovement"] = a["leagueReference"]["brier"]-a["opponent"]["brier"] if a["leagueReference"]["n"] else None
         a["brierImprovement"] = a["baseline"]["brier"]-a["opponent"]["brier"] if a["baseline"]["n"] else None
-    return dict(status="research_only",realBettingEnabled=False,independentHoldout=False,matchCount=len(rows),aggregate=aggregate,windows=windows)
+    league_aggregate = {}
+    leagues = sorted({l for w in windows for l in w["leagueMetrics"]})
+    for league in leagues:
+        league_aggregate[league] = {}
+        for k in ("over15","over25","btts"):
+            reports = [w["leagueMetrics"][league][k] for w in windows if k in w["leagueMetrics"].get(league,{})]
+            models = {}
+            for name in ("baseline","venue","opponent","leagueReference"):
+                ms = [v[name] for v in reports]
+                n = sum(m["n"] for m in ms)
+                s = sum(m["selected"] for m in ms)
+                h = sum(m["hits"] for m in ms)
+                models[name] = dict(n=n,selected=s,hits=h,hitRate=h/s if s else None,brier=sum(m["n"]*m["brier"] for m in ms)/n if n else None)
+            n = models["opponent"]["n"]
+            league_aggregate[league][k] = dict(models=models,windows=len(reports),sampleAdequateForDescription=n>=100 and len(reports)>=3,referenceImprovement=models["leagueReference"]["brier"]-models["opponent"]["brier"] if n else None)
+    return dict(status="research_only",realBettingEnabled=False,independentHoldout=False,matchCount=len(rows),aggregate=aggregate,leagueAggregate=league_aggregate,leagueSampleRule=dict(minMatches=100,minWindows=3,descriptiveOnly=True),windows=windows)
 
 if __name__ == "__main__":
     import json
