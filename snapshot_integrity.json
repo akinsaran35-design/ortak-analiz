@@ -1,18 +1,18 @@
 {
   "version": "4.76",
-  "updatedAt": "2026-11-26T14:53:39.454404+00:00",
+  "updatedAt": "2026-11-26T15:01:20.201831+00:00",
   "status": "PASS",
   "errors": [],
   "mode": "research_only",
   "reportTimestamps": {
-    "daily.json": "2026-11-26T17:53:20+03:00",
+    "daily.json": "2026-11-26T18:01:03+03:00",
     "odds.json": "2026-11-26T14:43:23.446702+00:00",
-    "matching.json": "2026-11-26T14:53:23.601421+00:00",
-    "prospective_validation.json": "2026-11-26T17:53:34.735429+03:00",
-    "performance.json": "2026-11-26T17:53:37.438071+03:00",
-    "data_quality.json": "2026-11-26T14:53:37.473338+00:00",
-    "archive_calendar_evidence_status.json": "2026-11-26T14:53:39.268309+00:00",
-    "archive_calendar_result_replay.json": "2026-11-26T17:53:39.382836+03:00",
-    "unified_decision.json": "2026-11-26T14:53:39.166841+00:00"
+    "matching.json": "2026-11-26T15:01:07.458816+00:00",
+    "prospective_validation.json": "2026-11-26T18:01:15.499215+03:00",
+    "performance.json": "2026-11-26T18:01:18.008008+03:00",
+    "data_quality.json": "2026-11-26T15:01:18.057605+00:00",
+    "archive_calendar_evidence_status.json": "2026-11-26T15:01:19.999230+00:00",
+    "archive_calendar_result_replay.json": "2026-11-26T18:01:20.123753+03:00",
+    "unified_decision.json": "2026-11-26T15:01:19.893811+00:00"
   }
 }
