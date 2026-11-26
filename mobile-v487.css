@@ -204,3 +204,6 @@ main{padding-inline:clamp(10px,3vw,20px)}
 #detail-content .signal-line strong{font-size:calc(12 * var(--ui))}
 #detail-content .personal-line{font-size:calc(14 * var(--ui))}
 @media(min-width:500px) and (pointer:coarse){body{font-size:calc(16 * var(--ui))}.brand h1{font-size:calc(20 * var(--ui))}.brand .eyebrow,.status{font-size:calc(10 * var(--ui))}.match-open .team-label{font-size:calc(14 * var(--ui))}.match-open .team-crest{width:calc(42 * var(--ui));height:calc(42 * var(--ui));flex-basis:calc(42 * var(--ui))}.match-meta,.match-time,.odds-summary{font-size:calc(12 * var(--ui))}.quick-markets strong{font-size:calc(17 * var(--ui))}.quick-markets small,.bottom-nav button{font-size:calc(11 * var(--ui))}.bottom-nav button{min-height:calc(52 * var(--ui))}.bottom-nav button svg{width:calc(22 * var(--ui));height:calc(22 * var(--ui))}}
+
+/* A wide embedded browser may report a fine pointer even on a phone. */
+@media(min-width:500px){body.detail-active{--ui:clamp(1px,.245vw,2.5px)}}
