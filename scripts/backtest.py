@@ -6,6 +6,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 BASE = "https://raw.githubusercontent.com/openfootball/football.json/master"
+from fixture_schema import matches_in
 from league_config import FIXTURE_CODES
 LEAGUES = list(FIXTURE_CODES.values())
 MARKETS = ["1.5 Üst", "2.5 Üst", "KG Var"]
@@ -24,7 +25,7 @@ def fetch(season, league):
     )
     with urllib.request.urlopen(req, timeout=20) as response:
         data = json.load(response)
-    return data.get("matches", [])
+    return matches_in(data)
 
 def team(value):
     if isinstance(value, dict):
