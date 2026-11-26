@@ -13,13 +13,13 @@ def build(archive,now):
     leagues={}
     for code in sorted(set(FIXTURE_CODES.values())|set(groups)):
         rows=groups.get(code,{})
-        markets=summarize(rows,now)
+        markets=summarize(rows,now,include_calibration=True)
         for x in markets.values():
             x["sampleAdequate"]=x["tested"]>=500 and x["invalid"]==0
             x["candidateMinusClassic"]=x["scores"]["candidate"]-x["scores"]["old"] if x["tested"] else None
             x["candidateMinusBaseline"]=x["scores"]["candidate"]-x["scores"]["baseline"] if x["tested"] else None
         leagues[code]={"recorded":len(rows),"markets":markets}
-    return {"version":"4.88","updatedAt":now.isoformat(),"mode":"research_only","decision":"PAS","realBettingEnabled":False,"recorded":len(archive),"leagues":leagues}
+    return {"version":"4.88","updatedAt":now.isoformat(),"mode":"research_only","decision":"PAS","realBettingEnabled":False,"recorded":len(archive),"calibrationVersion":"5.03","overallCalibration":{m:x["calibration"] for m,x in summarize(archive,now,include_calibration=True).items()},"leagues":leagues}
 
 def main():
     root=Path(__file__).resolve().parent.parent
