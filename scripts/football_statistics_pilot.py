@@ -77,5 +77,5 @@ def main():
     Path("football_statistics_pilot.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("Historical statistics:",json.dumps([{k:v for k,v in g.items() if k not in ("rows","source")} for g in r["groups"]],ensure_ascii=False))
     print("Source leagues:",r["respondingLeagues"],"fixture rows:",r["fixtureCount"])
-    if not r["respondingLeagues"]:raise SystemExit("No source response")
+    if not r["respondingLeagues"] and "--allow-empty" not in __import__("sys").argv:raise SystemExit("No source response")
 if __name__=="__main__":main()
