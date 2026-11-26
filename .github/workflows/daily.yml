@@ -74,7 +74,7 @@ jobs:
         run: |
           python scripts/test_automatic_results.py
           python scripts/automatic_results.py
-      - name: V4.67 multi league automatic results
+      - name: V4.69 nine league automatic results
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_multi_league_results.py
