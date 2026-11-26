@@ -1,5 +1,5 @@
 import unittest,copy
-from live_statistics_pilot import parse_summary
+from live_statistics_pilot import parse_summary,select_candidates
 class Tests(unittest.TestCase):
     def test_identity_and_missing(self):
         f=dict(eventId="123",kickoff="2026-11-26T15:00:00+00:00",home="A",away="B")
@@ -12,4 +12,15 @@ class Tests(unittest.TestCase):
         with self.assertRaises(ValueError):parse_summary(p,dict(f,eventId="124"))
         bad=copy.deepcopy(p);bad["boxscore"]["teams"][0]["team"]["id"]="3"
         with self.assertRaises(ValueError):parse_summary(bad,f)
+    def test_diverse_sample(self):
+        def row(league,event,state="post",kickoff="2026-11-26T15:00:00+00:00"):
+            return dict(league=league,eventId=event,state=state,kickoff=kickoff)
+        rows=[row("a",str(i)) for i in range(10)]+[row("b","20"),row("c","30")]
+        selected=select_candidates(rows,3)
+        self.assertEqual({x["league"] for x in selected},{"a","b","c"})
+        self.assertEqual(len(selected),3)
+        self.assertEqual(select_candidates(rows+[row("a","live","in")],1)[0]["eventId"],"live")
+        duplicate=row("d","40","in")
+        self.assertNotIn("40",[x["eventId"] for x in select_candidates(rows+[duplicate,duplicate],12)])
+        self.assertEqual(select_candidates(rows,0),[])
 if __name__=="__main__":unittest.main()

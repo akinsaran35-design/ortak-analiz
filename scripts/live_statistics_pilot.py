@@ -49,6 +49,24 @@ def parse_summary(payload,fixture):
         if not raw.isascii() or not raw.isdigit():raise ValueError("score")
         score.append(int(raw))
     return dict(state=status["state"],status=status["name"],clock=str(comp["status"].get("displayClock") or ""),score=score,metrics=paired)
+def select_candidates(candidates,max_events):
+    """Prefer in-progress fixtures, then round-robin leagues within each state."""
+    counts={}
+    for x in candidates:
+        k=(x["league"],x["eventId"]);counts[k]=counts.get(k,0)+1
+    unique=[x for x in candidates if counts[(x["league"],x["eventId"])]==1]
+    selected=[]
+    for state in ("in","post"):
+        groups={}
+        for row in sorted(unique,key=lambda x:(x["kickoff"],x["league"],x["eventId"]),reverse=True):
+            if row["state"]==state:groups.setdefault(row["league"],[]).append(row)
+        while groups and len(selected)<max_events:
+            for league in list(groups):
+                if len(selected)>=max_events:break
+                selected.append(groups[league].pop(0))
+                if not groups[league]:del groups[league]
+    return selected
+
 def build(now,reader=read,board_reader=board,max_events=12):
     day=now.astimezone(TR).date()
     candidates=[]
@@ -59,12 +77,8 @@ def build(now,reader=read,board_reader=board,max_events=12):
             for row in group["rows"]:
                 if row["state"]=="in" or row["state"]=="post" and row["status"]=="STATUS_FULL_TIME":
                     candidates.append(dict(row,league=group["league"]))
-        if len(candidates)>=max_events and i>=1:break
-    candidates.sort(key=lambda x:(x["state"]=="in",x["kickoff"]),reverse=True)
-    counts={}
-    for x in candidates:
-        k=(x["league"],x["eventId"]);counts[k]=counts.get(k,0)+1
-    candidates=[x for x in candidates if counts[(x["league"],x["eventId"])]==1][:max_events]
+        if i>=1 and len(candidates)>=max_events and set(x["league"] for x in candidates)>=set(SOURCES):break
+    candidates=select_candidates(candidates,max_events)
     def fetch(row):
         url=BASE+SOURCES[row["league"]][1]+"/summary?event="+row["eventId"]
         out=dict(league=row["league"],eventId=row["eventId"],home=row["home"],away=row["away"],kickoff=row["kickoff"],source=url,observation=None,error=None)
@@ -72,7 +86,7 @@ def build(now,reader=read,board_reader=board,max_events=12):
         except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:out["error"]=type(exc).__name__
         return out
     with ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(fetch,candidates))
-    return dict(version="5.11",updatedAt=now.isoformat(),mode="source_observation_only",source="ESPN",rows=rows,requested=len(rows),responding=sum(x["error"] is None for x in rows),withMetrics=sum(bool((x["observation"] or {}).get("metrics")) for x in rows),realTime=False,predictionsEnabled=False,usedForSettlement=False,decision="PAS")
+    return dict(version="5.12",updatedAt=now.isoformat(),mode="source_observation_only",source="ESPN",rows=rows,requested=len(rows),responding=sum(x["error"] is None for x in rows),withMetrics=sum(bool((x["observation"] or {}).get("metrics")) for x in rows),sampledLeagues=sorted({x["league"] for x in rows}),metricLeagues=sorted({x["league"] for x in rows if (x["observation"] or {}).get("metrics")}),liveObserved=sum((x["observation"] or {}).get("state")=="in" for x in rows),realTime=False,predictionsEnabled=False,usedForSettlement=False,decision="PAS")
 def main():
     r=build(datetime.now(TR))
     Path("live_statistics_pilot.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
