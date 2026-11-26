@@ -1,0 +1,28 @@
+name: V5.11 football live statistics pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/live_statistics_pilot.py'
+      - 'scripts/test_live_statistics_pilot.py'
+      - '.github/workflows/live-statistics-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_live_statistics_pilot.py
+      - run: python scripts/live_statistics_pilot.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-statistics-pilot
+          path: live_statistics_pilot.json
+          if-no-files-found: ignore
+          retention-days: 7
