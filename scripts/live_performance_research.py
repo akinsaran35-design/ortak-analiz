@@ -83,7 +83,9 @@ def main():
     records=archive(load(args.report),records,now)
     verified=load(args.verified)["records"]
     if args.archive.parent.joinpath("live_result_evidence.json").exists():
-        verified=verified+load(args.archive.parent/"live_result_evidence.json").get("verified",[])
+        evidence=load(args.archive.parent/"live_result_evidence.json")
+        blocked={tuple(x) for x in evidence.get("blocked",[])}
+        verified=[r for r in verified+evidence.get("verified",[]) if tuple(r.get(k) for k in ("date","league","home","away")) not in blocked]
     result=evaluate(records,verified,now)
     result["updatedAt"]=now.isoformat()
     for path,value in ((args.archive,records),(args.output,result)):
