@@ -1,23 +1,23 @@
 {
   "version": "4.81",
-  "updatedAt": "2026-11-26T15:42:41.758964+00:00",
+  "updatedAt": "2026-11-26T15:47:16.900786+00:00",
   "status": "PASS",
   "errors": [],
   "mode": "research_only",
   "reportTimestamps": {
-    "daily.json": "2026-11-26T18:42:24+03:00",
+    "daily.json": "2026-11-26T18:47:03+03:00",
     "odds.json": "2026-11-26T15:30:21.790461+00:00",
-    "matching.json": "2026-11-26T15:42:28.323865+00:00",
-    "prospective_validation.json": "2026-11-26T18:42:36.305556+03:00",
-    "performance.json": "2026-11-26T18:42:38.862656+03:00",
-    "data_quality.json": "2026-11-26T15:42:38.909932+00:00",
-    "archive_calendar_evidence_status.json": "2026-11-26T15:42:41.234148+00:00",
-    "archive_calendar_result_replay.json": "2026-11-26T18:42:41.374601+03:00",
-    "unified_decision.json": "2026-11-26T15:42:41.106854+00:00",
-    "score_provenance.json": "2026-11-26T18:42:41.661732+03:00",
-    "multi_league_results.json": "2026-11-26T18:42:35.272839+03:00",
-    "fixture_reconciliation.json": "2026-11-26T15:42:39.318831+00:00",
-    "archive_calendar_outcome_status.json": "2026-11-26T18:42:41.520229+03:00",
-    "prospective_leagues.json": "2026-11-26T18:42:36.305556+03:00"
+    "matching.json": "2026-11-26T15:47:06.038653+00:00",
+    "prospective_validation.json": "2026-11-26T18:47:12.345081+03:00",
+    "performance.json": "2026-11-26T18:47:14.028042+03:00",
+    "data_quality.json": "2026-11-26T15:47:14.093252+00:00",
+    "archive_calendar_evidence_status.json": "2026-11-26T15:47:16.330808+00:00",
+    "archive_calendar_result_replay.json": "2026-11-26T18:47:16.487617+03:00",
+    "unified_decision.json": "2026-11-26T15:47:16.196043+00:00",
+    "score_provenance.json": "2026-11-26T18:47:16.795004+03:00",
+    "multi_league_results.json": "2026-11-26T18:47:11.450020+03:00",
+    "fixture_reconciliation.json": "2026-11-26T15:47:14.540438+00:00",
+    "archive_calendar_outcome_status.json": "2026-11-26T18:47:16.643209+03:00",
+    "prospective_leagues.json": "2026-11-26T18:47:12.345081+03:00"
   }
 }
