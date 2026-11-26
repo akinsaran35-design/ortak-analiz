@@ -1,6 +1,6 @@
 {
   "version": "3.7",
-  "updatedAt": "2026-11-26T16:02:47.309721+00:00",
+  "updatedAt": "2026-11-26T17:38:34.746705+00:00",
   "source": "The Odds API",
   "region": "uk",
   "market": "totals",
@@ -21,7 +21,7 @@
               "over": 1.73,
               "under": 2.02,
               "marketOverProbability": 0.538667,
-              "lastUpdate": "2026-11-26T16:02:06Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -34,7 +34,7 @@
               "over": 1.75,
               "under": 1.91,
               "marketOverProbability": 0.521858,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -44,10 +44,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.78,
-              "under": 2.02,
-              "marketOverProbability": 0.531579,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "over": 1.79,
+              "under": 2.0,
+              "marketOverProbability": 0.527704,
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -60,7 +60,7 @@
               "over": 1.7,
               "under": 2.05,
               "marketOverProbability": 0.546667,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -70,10 +70,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.85,
+              "over": 1.87,
               "under": 2.12,
-              "marketOverProbability": 0.534005,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "marketOverProbability": 0.531328,
+              "lastUpdate": "2026-11-26T17:38:25Z"
             }
           ]
         }
@@ -95,7 +95,7 @@
               "over": 1.56,
               "under": 2.38,
               "marketOverProbability": 0.604061,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -108,7 +108,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -130,7 +130,7 @@
               "over": 1.64,
               "under": 2.18,
               "marketOverProbability": 0.570681,
-              "lastUpdate": "2026-11-26T16:02:06Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -143,7 +143,7 @@
               "over": 1.71,
               "under": 2.12,
               "marketOverProbability": 0.553525,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -156,7 +156,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -166,10 +166,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.74,
+              "over": 1.75,
               "under": 2.3,
-              "marketOverProbability": 0.569307,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "marketOverProbability": 0.567901,
+              "lastUpdate": "2026-11-26T17:38:25Z"
             }
           ]
         }
@@ -191,7 +191,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -213,7 +213,7 @@
               "over": 1.64,
               "under": 2.2,
               "marketOverProbability": 0.572917,
-              "lastUpdate": "2026-11-26T16:02:07Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -226,7 +226,7 @@
               "over": 1.65,
               "under": 2.2,
               "marketOverProbability": 0.571429,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -239,7 +239,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -250,9 +250,9 @@
             {
               "point": 2.5,
               "over": 1.72,
-              "under": 2.32,
-              "marketOverProbability": 0.574257,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "under": 2.34,
+              "marketOverProbability": 0.576355,
+              "lastUpdate": "2026-11-26T17:38:25Z"
             }
           ]
         }
@@ -274,7 +274,7 @@
               "over": 1.73,
               "under": 2.05,
               "marketOverProbability": 0.542328,
-              "lastUpdate": "2026-11-26T16:02:07Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -287,7 +287,7 @@
               "over": 1.72,
               "under": 2.1,
               "marketOverProbability": 0.549738,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -300,7 +300,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -313,7 +313,7 @@
               "over": 1.83,
               "under": 2.14,
               "marketOverProbability": 0.539043,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -335,7 +335,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -357,7 +357,7 @@
               "over": 1.68,
               "under": 2.1,
               "marketOverProbability": 0.555556,
-              "lastUpdate": "2026-11-26T16:02:07Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -370,7 +370,7 @@
               "over": 1.71,
               "under": 2.12,
               "marketOverProbability": 0.553525,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -383,7 +383,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -396,7 +396,7 @@
               "over": 1.83,
               "under": 2.16,
               "marketOverProbability": 0.541353,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -418,7 +418,7 @@
               "over": 1.92,
               "under": 1.83,
               "marketOverProbability": 0.488,
-              "lastUpdate": "2026-11-26T16:02:08Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -431,7 +431,7 @@
               "over": 1.95,
               "under": 1.75,
               "marketOverProbability": 0.472973,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -441,10 +441,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.88,
-              "under": 1.88,
-              "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "over": 1.91,
+              "under": 1.87,
+              "marketOverProbability": 0.494709,
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -457,7 +457,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -467,10 +467,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 2.08,
-              "under": 1.9,
-              "marketOverProbability": 0.477387,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "over": 2.1,
+              "under": 1.89,
+              "marketOverProbability": 0.473684,
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -492,7 +492,7 @@
               "over": 1.7,
               "under": 2.08,
               "marketOverProbability": 0.550265,
-              "lastUpdate": "2026-11-26T16:02:08Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -502,10 +502,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.72,
-              "under": 2.1,
-              "marketOverProbability": 0.549738,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "over": 1.68,
+              "under": 2.15,
+              "marketOverProbability": 0.561358,
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -518,7 +518,7 @@
               "over": 1.7,
               "under": 2.05,
               "marketOverProbability": 0.546667,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -531,7 +531,7 @@
               "over": 1.81,
               "under": 2.18,
               "marketOverProbability": 0.546366,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -553,7 +553,7 @@
               "over": 1.64,
               "under": 2.18,
               "marketOverProbability": 0.570681,
-              "lastUpdate": "2026-11-26T16:02:08Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -566,7 +566,7 @@
               "over": 1.6,
               "under": 2.25,
               "marketOverProbability": 0.584416,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -579,7 +579,7 @@
               "over": 1.68,
               "under": 2.14,
               "marketOverProbability": 0.560209,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -592,7 +592,7 @@
               "over": 1.75,
               "under": 2.22,
               "marketOverProbability": 0.559194,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -614,7 +614,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -636,7 +636,7 @@
               "over": 1.9,
               "under": 1.85,
               "marketOverProbability": 0.493333,
-              "lastUpdate": "2026-11-26T16:02:09Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -649,7 +649,7 @@
               "over": 1.85,
               "under": 1.8,
               "marketOverProbability": 0.493151,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -662,7 +662,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -675,7 +675,7 @@
               "over": 1.92,
               "under": 1.85,
               "marketOverProbability": 0.490716,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -688,7 +688,7 @@
               "over": 2.0,
               "under": 1.91,
               "marketOverProbability": 0.488491,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -710,7 +710,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -723,7 +723,7 @@
               "over": 1.55,
               "under": 2.35,
               "marketOverProbability": 0.602564,
-              "lastUpdate": "2026-11-26T16:02:09Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -736,7 +736,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -749,7 +749,7 @@
               "over": 1.6,
               "under": 2.46,
               "marketOverProbability": 0.605911,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         }
@@ -771,7 +771,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -784,7 +784,7 @@
               "over": 1.55,
               "under": 2.35,
               "marketOverProbability": 0.602564,
-              "lastUpdate": "2026-11-26T16:02:09Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -797,7 +797,7 @@
               "over": 1.56,
               "under": 2.35,
               "marketOverProbability": 0.601023,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -810,7 +810,7 @@
               "over": 1.64,
               "under": 2.4,
               "marketOverProbability": 0.594059,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:26Z"
             }
           ]
         }
@@ -832,7 +832,7 @@
               "over": 1.77,
               "under": 1.98,
               "marketOverProbability": 0.528,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -845,7 +845,7 @@
               "over": 1.75,
               "under": 1.91,
               "marketOverProbability": 0.521858,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -858,7 +858,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -871,7 +871,7 @@
               "over": 1.8,
               "under": 1.97,
               "marketOverProbability": 0.522546,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -881,10 +881,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.69,
+              "over": 1.84,
               "under": 2.04,
-              "marketOverProbability": 0.546917,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "marketOverProbability": 0.525773,
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         }
@@ -906,7 +906,7 @@
               "over": 1.7,
               "under": 2.08,
               "marketOverProbability": 0.550265,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -919,7 +919,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -932,7 +932,7 @@
               "over": 1.71,
               "under": 2.1,
               "marketOverProbability": 0.551181,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -942,10 +942,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.74,
+              "over": 1.73,
               "under": 2.16,
-              "marketOverProbability": 0.553846,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "marketOverProbability": 0.55527,
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         }
@@ -967,7 +967,7 @@
               "over": 1.68,
               "under": 2.1,
               "marketOverProbability": 0.555556,
-              "lastUpdate": "2026-11-26T16:02:09Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -980,7 +980,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -993,7 +993,7 @@
               "over": 1.7,
               "under": 2.12,
               "marketOverProbability": 0.554974,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         },
@@ -1006,7 +1006,7 @@
               "over": 1.77,
               "under": 2.18,
               "marketOverProbability": 0.551899,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         }
@@ -1028,7 +1028,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -1050,7 +1050,7 @@
               "over": 1.73,
               "under": 1.98,
               "marketOverProbability": 0.533693,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -1063,7 +1063,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -1076,7 +1076,7 @@
               "over": 1.74,
               "under": 2.05,
               "marketOverProbability": 0.540897,
-              "lastUpdate": "2026-11-26T16:01:47Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         }
@@ -1098,7 +1098,7 @@
               "over": 1.58,
               "under": 2.35,
               "marketOverProbability": 0.597964,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1111,7 +1111,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         }
@@ -1133,7 +1133,7 @@
               "over": 1.88,
               "under": 1.83,
               "marketOverProbability": 0.493261,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1146,7 +1146,7 @@
               "over": 1.92,
               "under": 1.85,
               "marketOverProbability": 0.490716,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1159,7 +1159,7 @@
               "over": 1.85,
               "under": 1.8,
               "marketOverProbability": 0.493151,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:55Z"
             }
           ]
         },
@@ -1172,7 +1172,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1183,9 +1183,9 @@
             {
               "point": 2.5,
               "over": 1.99,
-              "under": 1.91,
-              "marketOverProbability": 0.489744,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "under": 1.9,
+              "marketOverProbability": 0.488432,
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1207,7 +1207,7 @@
               "over": 1.73,
               "under": 2.02,
               "marketOverProbability": 0.538667,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1220,7 +1220,7 @@
               "over": 1.77,
               "under": 2.02,
               "marketOverProbability": 0.532982,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1233,7 +1233,7 @@
               "over": 1.7,
               "under": 2.05,
               "marketOverProbability": 0.546667,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1246,7 +1246,7 @@
               "over": 1.81,
               "under": 2.12,
               "marketOverProbability": 0.53944,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1268,7 +1268,7 @@
               "over": 1.51,
               "under": 2.4,
               "marketOverProbability": 0.613811,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1281,7 +1281,7 @@
               "over": 1.57,
               "under": 2.38,
               "marketOverProbability": 0.602532,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1294,7 +1294,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         }
@@ -1316,7 +1316,7 @@
               "over": 1.55,
               "under": 2.33,
               "marketOverProbability": 0.600515,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1329,7 +1329,7 @@
               "over": 1.58,
               "under": 2.35,
               "marketOverProbability": 0.597964,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1342,7 +1342,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1355,7 +1355,7 @@
               "over": 1.62,
               "under": 2.44,
               "marketOverProbability": 0.600985,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1377,7 +1377,7 @@
               "over": 1.78,
               "under": 1.94,
               "marketOverProbability": 0.521505,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1390,7 +1390,7 @@
               "over": 1.88,
               "under": 1.9,
               "marketOverProbability": 0.502646,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1403,7 +1403,7 @@
               "over": 1.83,
               "under": 1.85,
               "marketOverProbability": 0.502717,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:55Z"
             }
           ]
         },
@@ -1416,7 +1416,7 @@
               "over": 1.8,
               "under": 1.95,
               "marketOverProbability": 0.52,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1426,10 +1426,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.94,
+              "over": 1.95,
               "under": 1.95,
-              "marketOverProbability": 0.501285,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1451,7 +1451,7 @@
               "over": 1.72,
               "under": 2.04,
               "marketOverProbability": 0.542553,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1464,7 +1464,7 @@
               "over": 1.68,
               "under": 2.15,
               "marketOverProbability": 0.561358,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1477,7 +1477,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         }
@@ -1499,7 +1499,7 @@
               "over": 1.82,
               "under": 1.89,
               "marketOverProbability": 0.509434,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1512,7 +1512,7 @@
               "over": 1.95,
               "under": 1.83,
               "marketOverProbability": 0.484127,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1525,7 +1525,7 @@
               "over": 1.91,
               "under": 1.75,
               "marketOverProbability": 0.478142,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:55Z"
             }
           ]
         },
@@ -1538,7 +1538,7 @@
               "over": 1.95,
               "under": 1.8,
               "marketOverProbability": 0.48,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1548,10 +1548,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 2.0,
+              "over": 2.02,
               "under": 1.88,
-              "marketOverProbability": 0.484536,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "marketOverProbability": 0.482051,
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1573,7 +1573,7 @@
               "over": 2.04,
               "under": 1.71,
               "marketOverProbability": 0.456,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1586,7 +1586,7 @@
               "over": 2.2,
               "under": 1.64,
               "marketOverProbability": 0.427083,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1599,7 +1599,7 @@
               "over": 2.1,
               "under": 1.67,
               "marketOverProbability": 0.442971,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1612,7 +1612,7 @@
               "over": 2.32,
               "under": 1.71,
               "marketOverProbability": 0.424318,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1634,7 +1634,7 @@
               "over": 1.68,
               "under": 2.07,
               "marketOverProbability": 0.552,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1647,7 +1647,7 @@
               "over": 1.8,
               "under": 1.98,
               "marketOverProbability": 0.52381,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1660,7 +1660,7 @@
               "over": 1.75,
               "under": 1.91,
               "marketOverProbability": 0.521858,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:55Z"
             }
           ]
         },
@@ -1673,7 +1673,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         },
@@ -1683,10 +1683,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.86,
-              "under": 2.02,
-              "marketOverProbability": 0.520619,
-              "lastUpdate": "2026-11-26T16:02:35Z"
+              "over": 1.85,
+              "under": 2.06,
+              "marketOverProbability": 0.526854,
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         }
@@ -1705,10 +1705,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.61,
-              "under": 2.2,
-              "marketOverProbability": 0.577428,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "over": 1.67,
+              "under": 2.1,
+              "marketOverProbability": 0.557029,
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         },
@@ -1721,7 +1721,7 @@
               "over": 1.68,
               "under": 2.15,
               "marketOverProbability": 0.561358,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -1734,7 +1734,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         }
@@ -1756,7 +1756,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:01:49Z"
+              "lastUpdate": "2026-11-26T17:38:19Z"
             }
           ]
         }
@@ -1778,7 +1778,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -1800,7 +1800,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -1813,7 +1813,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -1835,7 +1835,7 @@
               "over": 1.29,
               "under": 3.5,
               "marketOverProbability": 0.730689,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -1857,7 +1857,7 @@
               "over": 1.75,
               "under": 2.02,
               "marketOverProbability": 0.535809,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -1867,10 +1867,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.7,
-              "under": 2.12,
-              "marketOverProbability": 0.554974,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "over": 1.71,
+              "under": 2.1,
+              "marketOverProbability": 0.551181,
+              "lastUpdate": "2026-11-26T17:37:29Z"
             }
           ]
         },
@@ -1883,7 +1883,7 @@
               "over": 1.7,
               "under": 2.05,
               "marketOverProbability": 0.546667,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -1893,10 +1893,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.84,
-              "under": 2.12,
-              "marketOverProbability": 0.535354,
-              "lastUpdate": "2026-11-26T16:02:14Z"
+              "over": 1.85,
+              "under": 2.14,
+              "marketOverProbability": 0.536341,
+              "lastUpdate": "2026-11-26T17:38:15Z"
             }
           ]
         }
@@ -1918,7 +1918,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -1940,7 +1940,7 @@
               "over": 1.25,
               "under": 3.75,
               "marketOverProbability": 0.75,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -1962,7 +1962,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -1984,7 +1984,7 @@
               "over": 1.3,
               "under": 3.4,
               "marketOverProbability": 0.723404,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2006,7 +2006,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2028,7 +2028,7 @@
               "over": 1.15,
               "under": 4.75,
               "marketOverProbability": 0.805085,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2050,7 +2050,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2072,7 +2072,7 @@
               "over": 1.29,
               "under": 3.5,
               "marketOverProbability": 0.730689,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2094,7 +2094,7 @@
               "over": 1.3,
               "under": 3.4,
               "marketOverProbability": 0.723404,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2116,7 +2116,7 @@
               "over": 1.62,
               "under": 2.12,
               "marketOverProbability": 0.566845,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -2129,7 +2129,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -2142,7 +2142,7 @@
               "over": 1.75,
               "under": 2.04,
               "marketOverProbability": 0.538259,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:29Z"
             }
           ]
         }
@@ -2164,7 +2164,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2186,7 +2186,7 @@
               "over": 1.36,
               "under": 3.0,
               "marketOverProbability": 0.688073,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2208,7 +2208,7 @@
               "over": 1.55,
               "under": 2.25,
               "marketOverProbability": 0.592105,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -2221,7 +2221,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -2234,7 +2234,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:02:33Z"
+              "lastUpdate": "2026-11-26T17:37:29Z"
             }
           ]
         }
@@ -2256,7 +2256,7 @@
               "over": 1.33,
               "under": 3.25,
               "marketOverProbability": 0.709607,
-              "lastUpdate": "2026-11-26T16:02:10Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -2278,7 +2278,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2300,7 +2300,7 @@
               "over": 1.57,
               "under": 2.38,
               "marketOverProbability": 0.602532,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2313,7 +2313,7 @@
               "over": 1.55,
               "under": 2.35,
               "marketOverProbability": 0.602564,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2324,9 +2324,9 @@
             {
               "point": 2.5,
               "over": 1.61,
-              "under": 2.54,
-              "marketOverProbability": 0.612048,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "under": 2.56,
+              "marketOverProbability": 0.613909,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2348,7 +2348,7 @@
               "over": 1.85,
               "under": 1.91,
               "marketOverProbability": 0.507979,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2361,7 +2361,7 @@
               "over": 1.77,
               "under": 1.98,
               "marketOverProbability": 0.528,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2374,7 +2374,7 @@
               "over": 1.8,
               "under": 1.91,
               "marketOverProbability": 0.514825,
-              "lastUpdate": "2026-11-26T16:02:19Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2387,7 +2387,7 @@
               "over": 1.88,
               "under": 1.88,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -2397,10 +2397,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.89,
-              "under": 2.1,
-              "marketOverProbability": 0.526316,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "over": 1.9,
+              "under": 2.06,
+              "marketOverProbability": 0.520202,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2422,7 +2422,7 @@
               "over": 1.55,
               "under": 2.4,
               "marketOverProbability": 0.607595,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2435,7 +2435,20 @@
               "over": 1.53,
               "under": 2.45,
               "marketOverProbability": 0.615578,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
+            }
+          ]
+        },
+        {
+          "key": "matchbook",
+          "name": "Matchbook",
+          "lines": [
+            {
+              "point": 2.5,
+              "over": 1.62,
+              "under": 2.52,
+              "marketOverProbability": 0.608696,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2457,7 +2470,7 @@
               "over": 1.3,
               "under": 3.3,
               "marketOverProbability": 0.717391,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2479,7 +2492,7 @@
               "over": 2.2,
               "under": 1.65,
               "marketOverProbability": 0.428571,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2492,7 +2505,7 @@
               "over": 2.18,
               "under": 1.64,
               "marketOverProbability": 0.429319,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2505,7 +2518,7 @@
               "over": 2.12,
               "under": 1.7,
               "marketOverProbability": 0.445026,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -2515,10 +2528,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 2.38,
+              "over": 2.36,
               "under": 1.67,
-              "marketOverProbability": 0.412346,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "marketOverProbability": 0.414392,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2540,7 +2553,7 @@
               "over": 1.22,
               "under": 3.9,
               "marketOverProbability": 0.761719,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2562,7 +2575,7 @@
               "over": 1.83,
               "under": 1.95,
               "marketOverProbability": 0.515873,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2575,7 +2588,7 @@
               "over": 1.75,
               "under": 2.02,
               "marketOverProbability": 0.535809,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2588,7 +2601,7 @@
               "over": 1.76,
               "under": 2.02,
               "marketOverProbability": 0.534392,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -2598,10 +2611,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.79,
+              "over": 1.81,
               "under": 2.16,
-              "marketOverProbability": 0.546835,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "marketOverProbability": 0.544081,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2623,7 +2636,7 @@
               "over": 1.75,
               "under": 2.05,
               "marketOverProbability": 0.539474,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2636,7 +2649,7 @@
               "over": 1.75,
               "under": 2.02,
               "marketOverProbability": 0.535809,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2649,7 +2662,7 @@
               "over": 1.76,
               "under": 2.02,
               "marketOverProbability": 0.534392,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -2659,10 +2672,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.82,
+              "over": 1.83,
               "under": 2.14,
-              "marketOverProbability": 0.540404,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "marketOverProbability": 0.539043,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2684,7 +2697,7 @@
               "over": 2.4,
               "under": 1.53,
               "marketOverProbability": 0.389313,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2697,7 +2710,7 @@
               "over": 2.4,
               "under": 1.53,
               "marketOverProbability": 0.389313,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2710,7 +2723,7 @@
               "over": 2.3,
               "under": 1.57,
               "marketOverProbability": 0.405685,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         },
@@ -2720,10 +2733,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 2.54,
+              "over": 2.56,
               "under": 1.6,
-              "marketOverProbability": 0.386473,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "marketOverProbability": 0.384615,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -2745,7 +2758,7 @@
               "over": 1.29,
               "under": 3.5,
               "marketOverProbability": 0.730689,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2767,7 +2780,7 @@
               "over": 1.29,
               "under": 3.5,
               "marketOverProbability": 0.730689,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2789,7 +2802,7 @@
               "over": 1.98,
               "under": 1.7,
               "marketOverProbability": 0.461957,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2802,7 +2815,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2815,7 +2828,7 @@
               "over": 1.97,
               "under": 1.8,
               "marketOverProbability": 0.477454,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         }
@@ -2837,7 +2850,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2850,7 +2863,7 @@
               "over": 1.62,
               "under": 2.25,
               "marketOverProbability": 0.581395,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         }
@@ -2872,7 +2885,7 @@
               "over": 1.67,
               "under": 2.05,
               "marketOverProbability": 0.551075,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2885,7 +2898,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2898,7 +2911,7 @@
               "over": 1.63,
               "under": 2.23,
               "marketOverProbability": 0.57772,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:56Z"
             }
           ]
         }
@@ -2920,7 +2933,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2942,7 +2955,7 @@
               "over": 1.17,
               "under": 4.5,
               "marketOverProbability": 0.793651,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -2964,7 +2977,7 @@
               "over": 1.83,
               "under": 1.83,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:02:19Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -2977,7 +2990,7 @@
               "over": 1.8,
               "under": 1.95,
               "marketOverProbability": 0.52,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -2990,7 +3003,7 @@
               "over": 1.85,
               "under": 1.83,
               "marketOverProbability": 0.497283,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3003,7 +3016,7 @@
               "over": 1.85,
               "under": 1.92,
               "marketOverProbability": 0.509284,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -3025,7 +3038,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -3047,7 +3060,7 @@
               "over": 1.5,
               "under": 2.38,
               "marketOverProbability": 0.613402,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3060,7 +3073,7 @@
               "over": 2.38,
               "under": 1.53,
               "marketOverProbability": 0.391304,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -3073,7 +3086,7 @@
               "over": 1.49,
               "under": 2.55,
               "marketOverProbability": 0.631188,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -3095,7 +3108,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         }
@@ -3117,7 +3130,7 @@
               "over": 1.73,
               "under": 1.95,
               "marketOverProbability": 0.529891,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3130,7 +3143,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -3143,7 +3156,7 @@
               "over": 1.7,
               "under": 2.12,
               "marketOverProbability": 0.554974,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -3165,7 +3178,7 @@
               "over": 2.0,
               "under": 1.75,
               "marketOverProbability": 0.466667,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3178,7 +3191,7 @@
               "over": 1.95,
               "under": 1.81,
               "marketOverProbability": 0.481383,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3191,7 +3204,7 @@
               "over": 1.95,
               "under": 1.8,
               "marketOverProbability": 0.48,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3204,7 +3217,7 @@
               "over": 2.18,
               "under": 1.82,
               "marketOverProbability": 0.455,
-              "lastUpdate": "2026-11-26T16:02:40Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -3226,7 +3239,7 @@
               "over": 1.36,
               "under": 3.0,
               "marketOverProbability": 0.688073,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3248,7 +3261,7 @@
               "over": 1.83,
               "under": 1.9,
               "marketOverProbability": 0.509383,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3261,7 +3274,7 @@
               "over": 1.85,
               "under": 1.83,
               "marketOverProbability": 0.497283,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         },
@@ -3274,7 +3287,7 @@
               "over": 1.85,
               "under": 1.89,
               "marketOverProbability": 0.505348,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3287,7 +3300,7 @@
               "over": 1.8,
               "under": 1.95,
               "marketOverProbability": 0.52,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3297,10 +3310,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.95,
+              "over": 1.94,
               "under": 2.0,
-              "marketOverProbability": 0.506329,
-              "lastUpdate": "2026-11-26T16:02:40Z"
+              "marketOverProbability": 0.507614,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -3322,7 +3335,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3335,7 +3348,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3357,7 +3370,7 @@
               "over": 1.67,
               "under": 2.12,
               "marketOverProbability": 0.559367,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3370,7 +3383,7 @@
               "over": 1.68,
               "under": 2.12,
               "marketOverProbability": 0.557895,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3383,7 +3396,7 @@
               "over": 1.7,
               "under": 2.05,
               "marketOverProbability": 0.546667,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3405,7 +3418,7 @@
               "over": 1.55,
               "under": 2.35,
               "marketOverProbability": 0.602564,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3418,7 +3431,7 @@
               "over": 1.51,
               "under": 2.45,
               "marketOverProbability": 0.618687,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3431,7 +3444,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3453,7 +3466,7 @@
               "over": 1.3,
               "under": 3.4,
               "marketOverProbability": 0.723404,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3475,7 +3488,7 @@
               "over": 1.77,
               "under": 1.98,
               "marketOverProbability": 0.528,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3488,7 +3501,7 @@
               "over": 1.75,
               "under": 1.91,
               "marketOverProbability": 0.521858,
-              "lastUpdate": "2026-11-26T16:01:54Z"
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         },
@@ -3501,7 +3514,7 @@
               "over": 1.73,
               "under": 2.06,
               "marketOverProbability": 0.543536,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3514,7 +3527,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3527,7 +3540,7 @@
               "over": 1.87,
               "under": 2.06,
               "marketOverProbability": 0.524173,
-              "lastUpdate": "2026-11-26T16:02:40Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -3549,7 +3562,7 @@
               "over": 1.6,
               "under": 2.25,
               "marketOverProbability": 0.584416,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3562,7 +3575,7 @@
               "over": 1.6,
               "under": 2.3,
               "marketOverProbability": 0.589744,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3575,7 +3588,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3586,9 +3599,9 @@
             {
               "point": 2.5,
               "over": 1.64,
-              "under": 2.34,
-              "marketOverProbability": 0.58794,
-              "lastUpdate": "2026-11-26T16:02:40Z"
+              "under": 2.36,
+              "marketOverProbability": 0.59,
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -3610,7 +3623,7 @@
               "over": 1.8,
               "under": 1.92,
               "marketOverProbability": 0.516129,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3623,7 +3636,7 @@
               "over": 1.8,
               "under": 1.85,
               "marketOverProbability": 0.506849,
-              "lastUpdate": "2026-11-26T16:01:54Z"
+              "lastUpdate": "2026-11-26T17:38:27Z"
             }
           ]
         },
@@ -3636,7 +3649,7 @@
               "over": 1.83,
               "under": 1.93,
               "marketOverProbability": 0.513298,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         },
@@ -3649,7 +3662,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3662,7 +3675,7 @@
               "over": 1.91,
               "under": 1.98,
               "marketOverProbability": 0.508997,
-              "lastUpdate": "2026-11-26T16:02:40Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         }
@@ -3684,7 +3697,7 @@
               "over": 1.67,
               "under": 2.05,
               "marketOverProbability": 0.551075,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3697,7 +3710,7 @@
               "over": 1.7,
               "under": 2.05,
               "marketOverProbability": 0.546667,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3710,7 +3723,7 @@
               "over": 1.78,
               "under": 2.0,
               "marketOverProbability": 0.529101,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -3732,7 +3745,7 @@
               "over": 1.5,
               "under": 2.5,
               "marketOverProbability": 0.625,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3754,7 +3767,7 @@
               "over": 1.22,
               "under": 4.0,
               "marketOverProbability": 0.766284,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3776,7 +3789,7 @@
               "over": 1.55,
               "under": 2.25,
               "marketOverProbability": 0.592105,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3789,7 +3802,7 @@
               "over": 1.6,
               "under": 2.25,
               "marketOverProbability": 0.584416,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         }
@@ -3811,7 +3824,7 @@
               "over": 2.05,
               "under": 1.7,
               "marketOverProbability": 0.453333,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3824,7 +3837,7 @@
               "over": 2.1,
               "under": 1.62,
               "marketOverProbability": 0.435484,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3837,7 +3850,7 @@
               "over": 2.23,
               "under": 1.63,
               "marketOverProbability": 0.42228,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -3859,7 +3872,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3872,7 +3885,7 @@
               "over": 1.54,
               "under": 2.43,
               "marketOverProbability": 0.612091,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -3894,7 +3907,7 @@
               "over": 1.67,
               "under": 2.05,
               "marketOverProbability": 0.551075,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3907,7 +3920,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3920,7 +3933,7 @@
               "over": 1.68,
               "under": 2.12,
               "marketOverProbability": 0.557895,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -3942,7 +3955,7 @@
               "over": 1.58,
               "under": 2.18,
               "marketOverProbability": 0.579787,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3955,7 +3968,7 @@
               "over": 1.6,
               "under": 2.25,
               "marketOverProbability": 0.584416,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -3968,7 +3981,7 @@
               "over": 1.63,
               "under": 2.23,
               "marketOverProbability": 0.57772,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -3990,7 +4003,7 @@
               "over": 1.6,
               "under": 2.15,
               "marketOverProbability": 0.573333,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -4003,7 +4016,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -4016,7 +4029,7 @@
               "over": 1.65,
               "under": 2.2,
               "marketOverProbability": 0.571429,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -4038,7 +4051,7 @@
               "over": 1.67,
               "under": 2.05,
               "marketOverProbability": 0.551075,
-              "lastUpdate": "2026-11-26T16:01:53Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -4051,7 +4064,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:02:39Z"
+              "lastUpdate": "2026-11-26T17:37:58Z"
             }
           ]
         },
@@ -4064,7 +4077,7 @@
               "over": 1.68,
               "under": 2.12,
               "marketOverProbability": 0.557895,
-              "lastUpdate": "2026-11-26T16:02:17Z"
+              "lastUpdate": "2026-11-26T17:38:22Z"
             }
           ]
         }
@@ -4083,10 +4096,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.85,
+              "over": 1.88,
               "under": 1.88,
-              "marketOverProbability": 0.504021,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "marketOverProbability": 0.5,
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4099,7 +4112,7 @@
               "over": 1.85,
               "under": 1.85,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         },
@@ -4112,7 +4125,7 @@
               "over": 1.79,
               "under": 1.97,
               "marketOverProbability": 0.523936,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4125,7 +4138,7 @@
               "over": 1.8,
               "under": 1.95,
               "marketOverProbability": 0.52,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4147,7 +4160,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4160,7 +4173,7 @@
               "over": 1.6,
               "under": 2.3,
               "marketOverProbability": 0.589744,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4173,7 +4186,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4195,7 +4208,7 @@
               "over": 1.67,
               "under": 2.12,
               "marketOverProbability": 0.559367,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4205,10 +4218,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.57,
-              "under": 2.32,
-              "marketOverProbability": 0.596401,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "over": 1.61,
+              "under": 2.25,
+              "marketOverProbability": 0.582902,
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4221,7 +4234,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4243,7 +4256,7 @@
               "over": 2.02,
               "under": 1.75,
               "marketOverProbability": 0.464191,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4256,7 +4269,7 @@
               "over": 2.0,
               "under": 1.78,
               "marketOverProbability": 0.470899,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4269,7 +4282,7 @@
               "over": 1.95,
               "under": 1.8,
               "marketOverProbability": 0.48,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4291,7 +4304,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4313,7 +4326,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4326,7 +4339,7 @@
               "over": 1.66,
               "under": 2.17,
               "marketOverProbability": 0.56658,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4339,7 +4352,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4361,7 +4374,7 @@
               "over": 1.58,
               "under": 2.3,
               "marketOverProbability": 0.592784,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4374,7 +4387,7 @@
               "over": 1.56,
               "under": 2.35,
               "marketOverProbability": 0.601023,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4387,7 +4400,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4409,7 +4422,7 @@
               "over": 1.64,
               "under": 2.18,
               "marketOverProbability": 0.570681,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4422,7 +4435,7 @@
               "over": 1.6,
               "under": 2.28,
               "marketOverProbability": 0.587629,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4435,7 +4448,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4457,7 +4470,7 @@
               "over": 1.92,
               "under": 1.8,
               "marketOverProbability": 0.483871,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:37:59Z"
             }
           ]
         },
@@ -4470,7 +4483,7 @@
               "over": 1.91,
               "under": 1.75,
               "marketOverProbability": 0.478142,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         },
@@ -4483,7 +4496,7 @@
               "over": 1.83,
               "under": 1.93,
               "marketOverProbability": 0.513298,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         },
@@ -4496,7 +4509,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4518,7 +4531,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4540,7 +4553,7 @@
               "over": 1.73,
               "under": 1.95,
               "marketOverProbability": 0.529891,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:38:00Z"
             }
           ]
         },
@@ -4553,7 +4566,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         },
@@ -4566,7 +4579,7 @@
               "over": 1.8,
               "under": 1.95,
               "marketOverProbability": 0.52,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         }
@@ -4588,7 +4601,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4610,7 +4623,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         },
@@ -4623,7 +4636,7 @@
               "over": 1.54,
               "under": 2.4,
               "marketOverProbability": 0.609137,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         }
@@ -4645,7 +4658,7 @@
               "over": 1.55,
               "under": 2.25,
               "marketOverProbability": 0.592105,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:38:00Z"
             }
           ]
         },
@@ -4658,7 +4671,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         },
@@ -4671,7 +4684,7 @@
               "over": 1.6,
               "under": 2.28,
               "marketOverProbability": 0.587629,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         }
@@ -4693,7 +4706,7 @@
               "over": 1.91,
               "under": 1.77,
               "marketOverProbability": 0.480978,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:38:00Z"
             }
           ]
         },
@@ -4706,7 +4719,7 @@
               "over": 1.91,
               "under": 1.75,
               "marketOverProbability": 0.478142,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         },
@@ -4719,7 +4732,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         },
@@ -4732,7 +4745,7 @@
               "over": 1.93,
               "under": 1.82,
               "marketOverProbability": 0.485333,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         }
@@ -4754,7 +4767,7 @@
               "over": 1.73,
               "under": 1.95,
               "marketOverProbability": 0.529891,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:38:00Z"
             }
           ]
         },
@@ -4767,7 +4780,7 @@
               "over": 1.75,
               "under": 1.91,
               "marketOverProbability": 0.521858,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:24Z"
             }
           ]
         },
@@ -4780,7 +4793,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         },
@@ -4793,7 +4806,7 @@
               "over": 1.78,
               "under": 1.97,
               "marketOverProbability": 0.525333,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         }
@@ -4815,7 +4828,7 @@
               "over": 1.6,
               "under": 2.15,
               "marketOverProbability": 0.573333,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:38:00Z"
             }
           ]
         },
@@ -4828,7 +4841,7 @@
               "over": 1.62,
               "under": 2.2,
               "marketOverProbability": 0.575916,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         },
@@ -4841,7 +4854,7 @@
               "over": 1.62,
               "under": 2.23,
               "marketOverProbability": 0.579221,
-              "lastUpdate": "2026-11-26T16:02:38Z"
+              "lastUpdate": "2026-11-26T17:37:33Z"
             }
           ]
         }
@@ -4863,7 +4876,7 @@
               "over": 1.53,
               "under": 2.25,
               "marketOverProbability": 0.595238,
-              "lastUpdate": "2026-11-26T16:02:18Z"
+              "lastUpdate": "2026-11-26T17:38:00Z"
             }
           ]
         },
@@ -4876,7 +4889,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:01:52Z"
+              "lastUpdate": "2026-11-26T17:38:21Z"
             }
           ]
         }
@@ -4898,7 +4911,7 @@
               "over": 1.44,
               "under": 2.62,
               "marketOverProbability": 0.64532,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -4920,7 +4933,7 @@
               "over": 1.56,
               "under": 2.33,
               "marketOverProbability": 0.598972,
-              "lastUpdate": "2026-11-26T16:02:12Z"
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         },
@@ -4933,7 +4946,7 @@
               "over": 1.67,
               "under": 2.1,
               "marketOverProbability": 0.557029,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -4955,7 +4968,7 @@
               "over": 1.17,
               "under": 4.5,
               "marketOverProbability": 0.793651,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -4977,7 +4990,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -4999,7 +5012,7 @@
               "over": 1.6,
               "under": 2.3,
               "marketOverProbability": 0.589744,
-              "lastUpdate": "2026-11-26T16:02:12Z"
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         },
@@ -5012,7 +5025,7 @@
               "over": 1.57,
               "under": 2.3,
               "marketOverProbability": 0.594315,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5034,7 +5047,7 @@
               "over": 1.33,
               "under": 3.25,
               "marketOverProbability": 0.709607,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5056,7 +5069,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5078,7 +5091,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5100,7 +5113,7 @@
               "over": 1.36,
               "under": 3.0,
               "marketOverProbability": 0.688073,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5122,7 +5135,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5144,7 +5157,7 @@
               "over": 1.25,
               "under": 3.75,
               "marketOverProbability": 0.75,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5166,7 +5179,7 @@
               "over": 1.4,
               "under": 2.75,
               "marketOverProbability": 0.662651,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5188,7 +5201,7 @@
               "over": 1.25,
               "under": 3.75,
               "marketOverProbability": 0.75,
-              "lastUpdate": "2026-11-26T16:02:16Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5210,7 +5223,7 @@
               "over": 1.57,
               "under": 2.32,
               "marketOverProbability": 0.596401,
-              "lastUpdate": "2026-11-26T16:02:12Z"
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         },
@@ -5223,7 +5236,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:02:16Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5245,7 +5258,7 @@
               "over": 1.33,
               "under": 3.25,
               "marketOverProbability": 0.709607,
-              "lastUpdate": "2026-11-26T16:02:16Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5267,7 +5280,7 @@
               "over": 1.25,
               "under": 3.75,
               "marketOverProbability": 0.75,
-              "lastUpdate": "2026-11-26T16:02:16Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5289,7 +5302,7 @@
               "over": 1.33,
               "under": 3.25,
               "marketOverProbability": 0.709607,
-              "lastUpdate": "2026-11-26T16:02:16Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5309,9 +5322,9 @@
             {
               "point": 2.5,
               "over": 1.66,
-              "under": 2.17,
-              "marketOverProbability": 0.56658,
-              "lastUpdate": "2026-11-26T16:02:12Z"
+              "under": 2.16,
+              "marketOverProbability": 0.565445,
+              "lastUpdate": "2026-11-26T17:38:18Z"
             }
           ]
         },
@@ -5324,7 +5337,7 @@
               "over": 1.53,
               "under": 2.38,
               "marketOverProbability": 0.608696,
-              "lastUpdate": "2026-11-26T16:02:16Z"
+              "lastUpdate": "2026-11-26T17:37:32Z"
             }
           ]
         }
@@ -5346,7 +5359,7 @@
               "over": 1.97,
               "under": 1.75,
               "marketOverProbability": 0.47043,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -5359,7 +5372,7 @@
               "over": 2.0,
               "under": 1.73,
               "marketOverProbability": 0.463807,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5372,7 +5385,7 @@
               "over": 2.12,
               "under": 1.78,
               "marketOverProbability": 0.45641,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         }
@@ -5394,7 +5407,7 @@
               "over": 1.85,
               "under": 1.75,
               "marketOverProbability": 0.486111,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:38:17Z"
             }
           ]
         },
@@ -5407,7 +5420,7 @@
               "over": 1.76,
               "under": 1.96,
               "marketOverProbability": 0.526882,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -5420,7 +5433,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5433,7 +5446,7 @@
               "over": 1.93,
               "under": 1.9,
               "marketOverProbability": 0.496084,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         }
@@ -5455,7 +5468,7 @@
               "over": 2.2,
               "under": 1.6,
               "marketOverProbability": 0.421053,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -5468,7 +5481,7 @@
               "over": 2.3,
               "under": 1.57,
               "marketOverProbability": 0.405685,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5478,10 +5491,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 2.42,
-              "under": 1.61,
-              "marketOverProbability": 0.399504,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "over": 2.4,
+              "under": 1.62,
+              "marketOverProbability": 0.402985,
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         }
@@ -5503,7 +5516,7 @@
               "over": 1.95,
               "under": 1.67,
               "marketOverProbability": 0.461326,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:38:17Z"
             }
           ]
         },
@@ -5516,7 +5529,7 @@
               "over": 1.89,
               "under": 1.82,
               "marketOverProbability": 0.490566,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -5529,7 +5542,7 @@
               "over": 1.95,
               "under": 1.8,
               "marketOverProbability": 0.48,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5542,7 +5555,7 @@
               "over": 2.04,
               "under": 1.84,
               "marketOverProbability": 0.474227,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         }
@@ -5564,7 +5577,7 @@
               "over": 1.75,
               "under": 1.85,
               "marketOverProbability": 0.513889,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:38:17Z"
             }
           ]
         },
@@ -5577,7 +5590,7 @@
               "over": 1.73,
               "under": 2.0,
               "marketOverProbability": 0.536193,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5590,7 +5603,7 @@
               "over": 1.78,
               "under": 1.93,
               "marketOverProbability": 0.520216,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         },
@@ -5601,9 +5614,9 @@
             {
               "point": 2.5,
               "over": 1.8,
-              "under": 2.02,
-              "marketOverProbability": 0.528796,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "under": 2.04,
+              "marketOverProbability": 0.53125,
+              "lastUpdate": "2026-11-26T17:38:16Z"
             }
           ]
         }
@@ -5625,7 +5638,7 @@
               "over": 1.83,
               "under": 1.75,
               "marketOverProbability": 0.488827,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "lastUpdate": "2026-11-26T17:38:17Z"
             }
           ]
         },
@@ -5638,7 +5651,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5651,7 +5664,7 @@
               "over": 1.97,
               "under": 1.75,
               "marketOverProbability": 0.47043,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -5670,10 +5683,10 @@
           "lines": [
             {
               "point": 2.5,
-              "over": 1.83,
+              "over": 1.8,
               "under": 1.75,
-              "marketOverProbability": 0.488827,
-              "lastUpdate": "2026-11-26T16:01:50Z"
+              "marketOverProbability": 0.492958,
+              "lastUpdate": "2026-11-26T17:38:17Z"
             }
           ]
         },
@@ -5686,7 +5699,7 @@
               "over": 1.8,
               "under": 1.95,
               "marketOverProbability": 0.52,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5699,7 +5712,7 @@
               "over": 1.88,
               "under": 1.83,
               "marketOverProbability": 0.493261,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -5721,7 +5734,7 @@
               "over": 1.36,
               "under": 3.0,
               "marketOverProbability": 0.688073,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         }
@@ -5743,7 +5756,7 @@
               "over": 1.85,
               "under": 1.73,
               "marketOverProbability": 0.48324,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:38:17Z"
             }
           ]
         },
@@ -5756,7 +5769,7 @@
               "over": 1.91,
               "under": 1.91,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:02:34Z"
+              "lastUpdate": "2026-11-26T17:37:30Z"
             }
           ]
         },
@@ -5769,7 +5782,7 @@
               "over": 1.82,
               "under": 1.89,
               "marketOverProbability": 0.509434,
-              "lastUpdate": "2026-11-26T16:01:48Z"
+              "lastUpdate": "2026-11-26T17:37:53Z"
             }
           ]
         }
@@ -5791,7 +5804,7 @@
               "over": 2.06,
               "under": 1.66,
               "marketOverProbability": 0.446237,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -5813,7 +5826,7 @@
               "over": 1.68,
               "under": 2.02,
               "marketOverProbability": 0.545946,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -5835,7 +5848,7 @@
               "over": 1.76,
               "under": 1.92,
               "marketOverProbability": 0.521739,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         },
@@ -5848,7 +5861,7 @@
               "over": 1.8,
               "under": 1.85,
               "marketOverProbability": 0.506849,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:34Z"
             }
           ]
         }
@@ -5870,7 +5883,7 @@
               "over": 1.67,
               "under": 2.06,
               "marketOverProbability": 0.552279,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -5892,7 +5905,7 @@
               "over": 1.83,
               "under": 1.83,
               "marketOverProbability": 0.5,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         },
@@ -5905,7 +5918,7 @@
               "over": 1.85,
               "under": 1.8,
               "marketOverProbability": 0.493151,
-              "lastUpdate": "2026-11-26T16:02:15Z"
+              "lastUpdate": "2026-11-26T17:37:34Z"
             }
           ]
         }
@@ -5927,7 +5940,7 @@
               "over": 1.57,
               "under": 2.2,
               "marketOverProbability": 0.583554,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -5949,7 +5962,7 @@
               "over": 1.54,
               "under": 2.28,
               "marketOverProbability": 0.596859,
-              "lastUpdate": "2026-11-26T16:01:51Z"
+              "lastUpdate": "2026-11-26T17:37:57Z"
             }
           ]
         }
@@ -5957,7 +5970,7 @@
     }
   ],
   "errors": [],
-  "remainingCredits": 197,
+  "remainingCredits": 188,
   "decision": "PAS",
   "configuredLeagues": [
     "soccer_epl",
