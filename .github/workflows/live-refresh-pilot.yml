@@ -1,4 +1,4 @@
-name: V5.13 live refresh snapshot pilot
+name: V5.14 periodic football source snapshot pilot
 on:
   pull_request:
     paths:
@@ -8,8 +8,14 @@ on:
       - 'scripts/scoreboard_snapshot.py'
       - '.github/workflows/live-refresh-pilot.yml'
   workflow_dispatch:
+  schedule:
+    # Staggered 15-minute pilot during European football hours (13:07-02:52 TRT).
+    - cron: '7,22,37,52 10-23 * * *'
 permissions:
   contents: read
+concurrency:
+  group: live-refresh-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   source:
     runs-on: ubuntu-24.04
@@ -27,4 +33,4 @@ jobs:
           name: live-refresh-snapshot
           path: live_refresh_snapshot.json
           if-no-files-found: warn
-          retention-days: 3
+          retention-days: 1
