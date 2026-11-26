@@ -20,6 +20,8 @@ class SnapshotTests(unittest.TestCase):
             "score_provenance":dict(version="4.80",settledArchiveRecords=0,uniqueSettledMatches=0,rows=[],counts={"prospective":{},"performance":{}}),
             "multi_league_results":dict(version="4.69"),
             "fixture_reconciliation":dict(status="unavailable"),
+            "archive_calendar_outcomes":{},
+            "archive_calendar_outcome_status":dict(version="4.83",observations=0,conflictObservations=0,archiveIdentities=0,quarantinedIdentities=0,counts={},uniqueEligibleEvents=0,includedInMainValidation=False,decision="PAS"),
             "unified_decision":dict(testedMatches=0,decision="PAS",realBettingEnabled=False,selections=[]),
         }
         data["daily"]["updatedAt"]="2026-11-26T14:00:00Z"
@@ -27,6 +29,8 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("archive_calendar_outcome_status","conflictObservations",1,"outcome_observation_count"),
+            ("archive_calendar_outcome_status","includedInMainValidation",True,"outcome_research_lock"),
             ("score_provenance","settledArchiveRecords",1,"score_provenance_identity"),
             ("score_provenance","uniqueSettledMatches",1,"score_provenance_unique_count"),
             ("multi_league_results","version","wrong","score_report_version"),
