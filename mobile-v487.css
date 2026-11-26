@@ -87,3 +87,5 @@ main{width:100%;padding:8px 12px calc(88px + env(safe-area-inset-bottom))}
 .money-tabs button[aria-pressed=true]{background:linear-gradient(150deg,#15734435,var(--panel));box-shadow:inset 0 0 12px #54ed751a}
 .ledger-chart{background:repeating-linear-gradient(0deg,transparent,transparent 24px,#7290a31c 25px),repeating-linear-gradient(90deg,transparent,transparent 34px,#7290a31c 35px),var(--panel)}
 @media(max-width:350px){.match-open{padding:9px}.detail-hero .team-name{font-size:13px}.detail-hero .team-crest{width:45px;height:51px}#money-performance .money-tile strong{font-size:18px}}
+
+.odds-summary{font-size:11px;color:var(--muted);padding:1px 3px}.personal-line{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}.personal-line strong{font-variant-numeric:tabular-nums;text-align:right}.personal-detail .action{border-color:var(--good);background:linear-gradient(140deg,#15734435,var(--panel));color:var(--good)}
