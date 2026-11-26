@@ -1,0 +1,18 @@
+const assert=require("node:assert/strict");
+const {cents,totals,summary,periodRecords,valid,empty}=require("../money-v497.js");
+assert.equal(cents(""),null);assert.equal(cents("-1"),null);assert.equal(cents("200.25"),20025);
+const records=[{id:"a",date:"2026-11-26",label:"A",stake:20000,returned:37200},{id:"b",date:"2026-11-26",label:"B",stake:10000,returned:null},{id:"c",date:"2026-11-20",label:"C",stake:10000,returned:0}];
+const s={budget:500000,limit:10,records};
+assert.equal(valid(s),true);
+assert.equal(valid({...s,records:[records[0],records[0]]}),false);
+assert.equal(valid({...s,records:[{...records[0],stake:-1}]}),false);
+assert.equal(summary(empty(),"2026-11-26").balance,null);
+assert.equal(summary(s,"2026-11-26").balance,497200);
+assert.equal(summary(s,"2026-11-26").spent,30000);
+assert.equal(summary(s,"2026-11-26").dailyCap,50000);
+assert.equal(totals(records).net,7200);assert.equal(totals(records).settledStake,30000);assert.equal(totals(records).roi,24);
+assert.equal(totals(records).open,1);assert.equal(totals(records).won,1);assert.equal(totals(records).lost,1);
+assert.equal(periodRecords(records,"day","2026-11-26").length,2);
+assert.equal(periodRecords(records,"week","2026-11-26").length,2);
+assert.equal(periodRecords(records,"month","2026-11-26").length,3);
+console.log("Personal stake ledger, realized ROI and period tests passed");
