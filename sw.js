@@ -1,5 +1,5 @@
 /* V4.74: dynamic research reports are network-only; static shell may work offline. */
-const CACHE="ortak-analiz-v499-static-1";
+const CACHE="ortak-analiz-v500-static-1";
 const ASSETS=["./","./index.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./mobile-v487.js","./money-v497.js","./mobile-v487.css","./legacy.html"];
 function networkOnly(request, origin) {
   const url=new URL(request.url);
