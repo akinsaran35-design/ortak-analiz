@@ -27,9 +27,9 @@ def archive(report,records,now):
         ident=(r.get("league"),r.get("eventId"))
         if counts[ident]!=1 or r.get("status")!="conditional_scenario":continue
         if not all(isinstance(x,str) and x for x in ident):continue
-        kickoff=stamp(r.get("kickoff"));received=stamp(r.get("receivedAt"));prematch=stamp(report.get("prematchUpdatedAt"))
+        kickoff=stamp(r.get("kickoff"));received=stamp(r.get("receivedAt"));prematch=stamp(r.get("prematchUpdatedAt",report.get("prematchUpdatedAt")))
         if not kickoff or not received or not prematch or not prematch<kickoff<=received<=generated:continue
-        if (generated-received).total_seconds()>120:continue
+        if (now-received).total_seconds()>120:continue
         p=probs(r.get("scenario"))
         if not p:continue
         key=":".join(ident)
@@ -81,7 +81,12 @@ def main():
     records=load(args.archive) if args.archive.exists() else {}
     if not isinstance(records,dict):raise ValueError("invalid archive")
     records=archive(load(args.report),records,now)
-    result=evaluate(records,load(args.verified)["records"],now)
+    verified=load(args.verified)["records"]
+    if args.archive.parent.joinpath("live_result_evidence.json").exists():
+        evidence=load(args.archive.parent/"live_result_evidence.json")
+        blocked={tuple(x) for x in evidence.get("blocked",[])}
+        verified=[r for r in verified+evidence.get("verified",[]) if tuple(r.get(k) for k in ("date","league","home","away")) not in blocked]
+    result=evaluate(records,verified,now)
     result["updatedAt"]=now.isoformat()
     for path,value in ((args.archive,records),(args.output,result)):
         tmp=path.with_suffix(".tmp")
