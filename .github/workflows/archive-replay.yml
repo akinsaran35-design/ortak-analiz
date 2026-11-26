@@ -1,0 +1,77 @@
+name: V4.45 Archive Replay
+on:
+  pull_request:
+    branches: [main]
+    paths: ['scripts/historical_*.py', 'scripts/test_historical_*.py', 'scripts/dixon_coles.py', '.github/workflows/archive-replay.yml']
+  workflow_dispatch:
+    inputs:
+      source_run:
+        description: 'Successful main historical archive run ID'
+        required: true
+        default: '45813544561'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify archived source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN: ${{ inputs.source_run || '45813544561' }}
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_RUN" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$SOURCE_RUN" > source_run.json
+          python -c 'import json; x=json.load(open("source_run.json")); assert x["conclusion"]=="success" and x["head_branch"]=="main" and x["path"].split("@")[0]==".github/workflows/history.yml"'
+      - uses: actions/download-artifact@v4
+        with:
+          name: historical-data
+          run-id: ${{ inputs.source_run || '45813544561' }}
+          github-token: ${{ github.token }}
+          path: replay-input
+      - name: Validate snapshot and record provenance
+        env:
+          SOURCE_RUN: ${{ inputs.source_run || '45813544561' }}
+        run: |
+          cp replay-input/openliga_archive.json openliga_archive.json
+          python - <<'PY'
+          import json, hashlib, os
+          from datetime import date
+          from pathlib import Path
+          raw=Path("openliga_archive.json").read_bytes()
+          a=json.loads(raw)
+          assert a["matches"] and a["license"]=="ODbL-1.0"
+          assert len({str(r["matchID"]) for r in a["matches"]})==len(a["matches"])
+          assert all(date.fromisoformat(r["date"])<date.fromisoformat(a["asOf"]) for r in a["matches"])
+          source=json.loads(Path("source_run.json").read_text())
+          Path("replay_provenance.json").write_text(json.dumps(dict(sourceRun=os.environ["SOURCE_RUN"],sourceCommit=source["head_sha"],snapshotSha256=hashlib.sha256(raw).hexdigest(),asOf=a["asOf"],matchCount=len(a["matches"]),attribution=a["attribution"],license=a["license"],researchOnly=True,independentHoldout=False),indent=2))
+          PY
+      - run: python scripts/test_historical_opponent.py
+      - run: python scripts/historical_opponent.py
+      - name: Verify paired results
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open("opponent_strength_report.json"))
+          assert r["realBettingEnabled"] is False and r["independentHoldout"] is False
+          for k in ("over15","over25","btts"):
+              a=r["aggregate"][k]
+              assert a["baseline"]["n"]>0
+              assert len({a[n]["n"] for n in ("baseline","venue","opponent","leagueReference")})==1
+          print(json.dumps(r["aggregate"],indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: archive-replay-report
+          path: |
+            opponent_strength_report.json
+            replay_provenance.json
+          retention-days: 30
