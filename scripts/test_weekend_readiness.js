@@ -39,3 +39,17 @@ assert.equal(summarize(calData,now).reconciliation.corrections,1);
 assert.equal(summarize(calData,now+1800001).reconciliation.current,false);
 assert.equal(summarize({...calData,"odds.json":{updatedAt:new Date(now-1000).toISOString()}},now).reconciliation.current,false);
 assert.equal(summarize(matchData,now).reconciliation.current,false);
+
+const auditData={...calData,"archive_calendar_evidence_status.json":{version:"4.71",updatedAt,mode:"research_only",observations:2,archiveIdentities:2},"archive_calendar_result_replay.json":{version:"4.72",updatedAt,mode:"research_only",counts:{awaiting_match:2},rows:[{},{}],sourceErrors:[]},"multi_league_results.json":{version:"4.69",updatedAt,approvedLeagues:["en.1","en.2"],automaticVerifiedCount:4,groups:[]}};
+const ar=summarize(auditData,now).archiveAudit;
+assert.equal(ar.evidenceCurrent,true);
+assert.equal(ar.replayCurrent,true);
+assert.equal(ar.awaiting,2);
+assert.equal(ar.verified,0);
+assert.equal(ar.leagues,2);
+assert.equal(ar.automaticVerified,4);
+assert.equal(summarize(auditData,now+1800001).archiveAudit.awaiting,null);
+assert.equal(summarize({...auditData,"archive_calendar_result_replay.json":{...auditData["archive_calendar_result_replay.json"],rows:[]}},now).archiveAudit.replayCurrent,false);
+assert.equal(summarize({...auditData,"archive_calendar_result_replay.json":{...auditData["archive_calendar_result_replay.json"],updatedAt:new Date(now-1000).toISOString()}},now).archiveAudit.replayCurrent,false);
+assert.equal(summarize({},now).archiveAudit.observations,null);
+console.log("Archive readiness checks passed");
