@@ -19,15 +19,16 @@ def market_metrics(values):
                 hitRate=hits/len(selected) if selected else None)
 
 def evaluate(rows,as_of,weighted=False, window=10, rho=0.0, phase="test", strength=False):
-    if phase not in ("validation","test") or window not in (5,10,20): raise ValueError("invalid configuration")
+    if phase not in ("validation","test") or window not in (5,10,20,30): raise ValueError("invalid configuration")
     groups,meta=split(rows,as_of)
     history=defaultdict(list)
     from historical_strength import rates as strength_rates
     league_totals=defaultdict(lambda:[0,0,0])
     scores=defaultdict(list)
     skipped=0
+    first=min((r["date"] for r in groups["train"]),default=meta["asOf"])
     for day,batch in groupby(sorted(groups["train"]+groups["validation"]+groups["test"],key=lambda r:r["date"]),key=lambda r:r["date"]):
-        if not meta["asOf"]>day>=min((r["date"] for r in groups["train"]),default=meta["asOf"]): continue
+        if not meta["asOf"]>day>=first: continue
         batch=list(batch)
         for r in batch:
             h=history[(r["league"],r["home"])]
