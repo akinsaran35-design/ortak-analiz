@@ -1,4 +1,4 @@
-name: V5.17 live rate link and source pilot
+name: V5.18 live snapshot publication pilot
 on:
   pull_request:
     paths:
@@ -48,3 +48,28 @@ jobs:
             live_rate_link.json
           if-no-files-found: warn
           retention-days: 1
+  publish:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: source
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: live-data
+      - uses: actions/download-artifact@v4
+        with:
+          name: live-refresh-snapshot
+          path: /tmp/oa-live
+      - name: Publish only source observations to dedicated branch
+        run: |
+          cp /tmp/oa-live/live_analysis_quality.json live_analysis_quality.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add live_analysis_quality.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update live observation snapshot"
+            git push origin HEAD:live-data
+          fi
