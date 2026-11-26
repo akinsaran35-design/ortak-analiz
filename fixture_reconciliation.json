@@ -1,17 +1,45 @@
 {
   "version": "4.59",
-  "updatedAt": "2026-11-26T14:26:17.940635+00:00",
+  "updatedAt": "2026-11-26T14:32:00.797783+00:00",
   "source": "https://github.com/oladeeayo/open-matchday",
   "sourceUpdatedAt": "2026-11-26T07:40:37+00:00",
   "oddsUpdatedAt": "2026-11-26T14:20:39.819478+00:00",
-  "dailyUpdatedAt": "2026-11-26T17:25:52+03:00",
+  "dailyUpdatedAt": "2026-11-26T17:31:47+03:00",
   "oddsFresh": true,
   "status": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "originalMatched": 60,
-  "reconciledMatched": 75,
+  "originalMatched": 66,
+  "reconciledMatched": 86,
   "proposedCorrections": [
+    {
+      "league": "İngiltere Premier Lig",
+      "match": "Everton FC – Liverpool FC",
+      "originalDate": "2026-11-28",
+      "corroboratedDate": "2026-11-29",
+      "eventId": "f45e9062c2f755b977c98d496c22697b"
+    },
+    {
+      "league": "İngiltere Premier Lig",
+      "match": "Arsenal FC – Manchester City FC",
+      "originalDate": "2026-11-28",
+      "corroboratedDate": "2026-11-29",
+      "eventId": "d20ede55e54ed7b55fdc36ca373727c0"
+    },
+    {
+      "league": "İngiltere Premier Lig",
+      "match": "Nottingham Forest FC – Chelsea FC",
+      "originalDate": "2026-11-28",
+      "corroboratedDate": "2026-11-27",
+      "eventId": "40d95e660c301c2d8a5a7a6317017b65"
+    },
+    {
+      "league": "İngiltere Premier Lig",
+      "match": "Fulham FC – AFC Bournemouth",
+      "originalDate": "2026-11-28",
+      "corroboratedDate": "2026-11-29",
+      "eventId": "56ea91809ff11d3a67557a21b3371cb9"
+    },
     {
       "league": "İngiltere Premier Lig",
       "match": "Brighton & Hove Albion FC – Newcastle United FC",
@@ -21,10 +49,10 @@
     },
     {
       "league": "İngiltere Premier Lig",
-      "match": "Arsenal FC – Manchester City FC",
+      "match": "Sunderland AFC – Tottenham Hotspur FC",
       "originalDate": "2026-11-28",
       "corroboratedDate": "2026-11-29",
-      "eventId": "d20ede55e54ed7b55fdc36ca373727c0"
+      "eventId": "09bb0ba9a9025d64fed410375c0c8f80"
     },
     {
       "league": "İspanya La Liga",
@@ -116,15 +144,23 @@
       "originalDate": "2026-12-02",
       "corroboratedDate": "2026-12-01",
       "eventId": "c7aff6bfea3ca1c4b177694977831b85"
+    },
+    {
+      "league": "İngiltere Premier Lig",
+      "match": "Tottenham Hotspur FC – Fulham FC",
+      "originalDate": "2026-12-02",
+      "corroboratedDate": "2026-12-03",
+      "eventId": "0c1ccc010b185ada698661a21316696c"
     }
   ],
   "unresolved": [],
   "candidateCountsByDate": {
-    "2026-11-27": 8,
-    "2026-11-28": 33,
-    "2026-11-29": 25,
+    "2026-11-27": 9,
+    "2026-11-28": 35,
+    "2026-11-29": 28,
     "2026-11-30": 5,
-    "2026-12-02": 3,
-    "2026-12-01": 1
+    "2026-12-02": 7,
+    "2026-12-01": 1,
+    "2026-12-03": 1
   }
 }

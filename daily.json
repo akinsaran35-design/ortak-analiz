@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-26T17:25:52+03:00",
+  "updatedAt": "2026-11-26T17:31:47+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -19,21 +19,20 @@
   "leagueDiagnostics": [
     {
       "league": "İngiltere Premier Lig",
-      "status": "partial",
+      "status": "ok",
       "today": 0,
       "next7": 20,
-      "completedMatches": 45,
-      "candidates": 7,
+      "completedMatches": 398,
+      "candidates": 18,
       "excluded": {
         "alreadyScored": 0,
-        "insufficientHistory": 13
+        "insufficientHistory": 2
       },
       "seasonsLoaded": [
-        "2026-27"
+        "2026-27",
+        "2025-26"
       ],
-      "seasonErrors": {
-        "2025-26": "HTTPError: HTTP Error 429: Too Many Requests"
-      }
+      "seasonErrors": {}
     },
     {
       "league": "İngiltere Championship",
@@ -853,31 +852,6 @@
     },
     {
       "date": "2026-11-28",
-      "league": "İngiltere Premier Lig",
-      "match": "Brighton & Hove Albion FC – Newcastle United FC",
-      "markets": {
-        "1.5 Üst": 90.1,
-        "2.5 Üst": 74.7,
-        "KG Var": 69.2
-      },
-      "sample": {
-        "home": 5,
-        "away": 5
-      },
-      "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "all_venues_fallback"
-      },
-      "expectedGoals": {
-        "home": 2.5,
-        "away": 1.4
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-28",
       "league": "Almanya Bundesliga",
       "match": "Hamburger SV – FC Bayern München",
       "markets": {
@@ -896,6 +870,31 @@
       "expectedGoals": {
         "home": 1.3,
         "away": 2.4
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Manchester United FC – Brentford FC",
+      "markets": {
+        "1.5 Üst": 87.9,
+        "2.5 Üst": 70.6,
+        "KG Var": 69.1
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.1,
+        "away": 1.55
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
@@ -1028,6 +1027,31 @@
     },
     {
       "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Ipswich Town FC – Aston Villa FC",
+      "markets": {
+        "1.5 Üst": 83.5,
+        "2.5 Üst": 63.0,
+        "KG Var": 64.4
+      },
+      "sample": {
+        "home": 5,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.7
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
       "league": "İngiltere Championship",
       "match": "Birmingham City FC – Bolton Wanderers FC",
       "markets": {
@@ -1070,56 +1094,6 @@
       },
       "expectedGoals": {
         "home": 1.25,
-        "away": 1.8
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-28",
-      "league": "İngiltere Premier Lig",
-      "match": "Arsenal FC – Manchester City FC",
-      "markets": {
-        "1.5 Üst": 80.1,
-        "2.5 Üst": 57.7,
-        "KG Var": 59.5
-      },
-      "sample": {
-        "home": 5,
-        "away": 5
-      },
-      "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "all_venues_fallback"
-      },
-      "expectedGoals": {
-        "home": 1.3,
-        "away": 1.7
-      },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-28",
-      "league": "İngiltere Premier Lig",
-      "match": "Manchester United FC – Brentford FC",
-      "markets": {
-        "1.5 Üst": 80.1,
-        "2.5 Üst": 57.7,
-        "KG Var": 58.3
-      },
-      "sample": {
-        "home": 5,
-        "away": 5
-      },
-      "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "all_venues_fallback"
-      },
-      "expectedGoals": {
-        "home": 1.2,
         "away": 1.8
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
@@ -1221,6 +1195,31 @@
       "expectedGoals": {
         "home": 1.8,
         "away": 1.15
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Everton FC – Liverpool FC",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 58.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 1.4
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
@@ -1353,6 +1352,31 @@
     },
     {
       "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Arsenal FC – Manchester City FC",
+      "markets": {
+        "1.5 Üst": 76.0,
+        "2.5 Üst": 51.9,
+        "KG Var": 55.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
       "league": "Portekiz Primeira Liga",
       "match": "FC Arouca – Rio Ave FC",
       "markets": {
@@ -1378,6 +1402,31 @@
     },
     {
       "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Nottingham Forest FC – Chelsea FC",
+      "markets": {
+        "1.5 Üst": 76.0,
+        "2.5 Üst": 51.9,
+        "KG Var": 55.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
       "league": "Fransa Ligue 1",
       "match": "Angers SCO – Racing Club de Lens",
       "markets": {
@@ -1396,6 +1445,56 @@
       "expectedGoals": {
         "home": 1.15,
         "away": 1.55
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Fulham FC – AFC Bournemouth",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 54.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.25,
+        "away": 1.45
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Brighton & Hove Albion FC – Newcastle United FC",
+      "markets": {
+        "1.5 Üst": 74.2,
+        "2.5 Üst": 49.4,
+        "KG Var": 49.0
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.75,
+        "away": 0.9
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
@@ -1453,6 +1552,31 @@
     },
     {
       "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Sunderland AFC – Tottenham Hotspur FC",
+      "markets": {
+        "1.5 Üst": 72.3,
+        "2.5 Üst": 46.9,
+        "KG Var": 51.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.2
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
       "league": "Portekiz Primeira Liga",
       "match": "Académico de Viseu FC – FC Alverca",
       "markets": {
@@ -1496,6 +1620,31 @@
       "expectedGoals": {
         "home": 1.4,
         "away": 1.05
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Leeds United FC – Coventry City FC",
+      "markets": {
+        "1.5 Üst": 69.2,
+        "2.5 Üst": 43.0,
+        "KG Var": 37.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 5
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 0.6
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
@@ -2429,23 +2578,48 @@
     {
       "date": "2026-12-02",
       "league": "İngiltere Premier Lig",
-      "match": "AFC Bournemouth – Brighton & Hove Albion FC",
+      "match": "Liverpool FC – Sunderland AFC",
       "markets": {
-        "1.5 Üst": 86.4,
-        "2.5 Üst": 67.9,
-        "KG Var": 60.7
+        "1.5 Üst": 85.3,
+        "2.5 Üst": 66.0,
+        "KG Var": 65.1
       },
       "sample": {
-        "home": 5,
-        "away": 5
+        "home": 10,
+        "away": 10
       },
       "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "all_venues_fallback"
+        "home": "venue_specific",
+        "away": "venue_specific"
       },
       "expectedGoals": {
-        "home": 1.1,
-        "away": 2.4
+        "home": 2.0,
+        "away": 1.4
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Chelsea FC – Crystal Palace FC",
+      "markets": {
+        "1.5 Üst": 83.5,
+        "2.5 Üst": 63.0,
+        "KG Var": 64.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.55
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
@@ -2456,21 +2630,96 @@
       "league": "İngiltere Premier Lig",
       "match": "Newcastle United FC – Manchester United FC",
       "markets": {
-        "1.5 Üst": 85.3,
-        "2.5 Üst": 66.0,
-        "KG Var": 66.8
+        "1.5 Üst": 83.5,
+        "2.5 Üst": 63.0,
+        "KG Var": 64.5
       },
       "sample": {
-        "home": 5,
-        "away": 5
+        "home": 10,
+        "away": 10
       },
       "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "all_venues_fallback"
+        "home": "venue_specific",
+        "away": "venue_specific"
       },
       "expectedGoals": {
-        "home": 1.7,
-        "away": 1.7
+        "home": 1.6,
+        "away": 1.65
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Manchester City FC – Leeds United FC",
+      "markets": {
+        "1.5 Üst": 82.9,
+        "2.5 Üst": 62.0,
+        "KG Var": 60.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.0,
+        "away": 1.2
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "AFC Bournemouth – Brighton & Hove Albion FC",
+      "markets": {
+        "1.5 Üst": 79.3,
+        "2.5 Üst": 56.6,
+        "KG Var": 59.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Aston Villa FC – Everton FC",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 58.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.45
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
@@ -2504,30 +2753,55 @@
     {
       "date": "2026-12-02",
       "league": "İngiltere Premier Lig",
-      "match": "Brentford FC – Arsenal FC",
+      "match": "Tottenham Hotspur FC – Fulham FC",
       "markets": {
-        "1.5 Üst": 73.3,
-        "2.5 Üst": 48.2,
-        "KG Var": 52.6
+        "1.5 Üst": 77.7,
+        "2.5 Üst": 54.2,
+        "KG Var": 57.5
       },
       "sample": {
-        "home": 5,
-        "away": 5
+        "home": 10,
+        "away": 10
       },
       "sampleMode": {
-        "home": "all_venues_fallback",
-        "away": "all_venues_fallback"
+        "home": "venue_specific",
+        "away": "venue_specific"
       },
       "expectedGoals": {
-        "home": 1.4,
-        "away": 1.2
+        "home": 1.35,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Brentford FC – Arsenal FC",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 54.9
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.35
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
     }
   ],
-  "candidateCount": 75,
+  "candidateCount": 86,
   "fixtureWindowDays": 7,
   "upcomingCount": 95,
   "upcomingCountsByDate": {
@@ -2546,5 +2820,5 @@
   "fixtureCoverageComplete": false,
   "candidateListLimit": null,
   "candidateListComplete": true,
-  "reason": "PAS — 9/9 lig okundu; bugün 0, 7 günde 95 fikstür; 75 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
+  "reason": "PAS — 9/9 lig okundu; bugün 0, 7 günde 95 fikstür; 86 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
 }
