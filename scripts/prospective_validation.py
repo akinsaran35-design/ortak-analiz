@@ -164,7 +164,7 @@ if n:
         scores["baseline"] - scores["candidate"]
     )
 
-    if n >= 500 and not errors:
+    if n >= 500 and not errors and all(x["invalid"]==0 for x in report["marketResearch"].values()):
         eligible = (
             scores["candidate"] < scores["old"]
             and report["improvement"] >= 0.001
