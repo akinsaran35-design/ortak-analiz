@@ -66,5 +66,5 @@ def main():
     Path("football_coverage_pilot.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("Source diagnostics:",json.dumps([{k:v for k,v in g.items() if k in ("league","respondedDays","errors","invalid")} for g in r["groups"]],ensure_ascii=False))
     print("Football discovery:",r["respondingCompetitions"],"/",r["configuredCompetitions"],"responding;",r["eventCount"],"events")
-    if not r["respondingCompetitions"]:raise SystemExit("No source response")
+    if not r["respondingCompetitions"] and "--allow-empty" not in __import__("sys").argv:raise SystemExit("No source response")
 if __name__=="__main__":main()
