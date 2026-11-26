@@ -1,7 +1,10 @@
 import copy
+import json
+import tempfile
+from pathlib import Path
 import unittest
 from datetime import datetime, timezone, timedelta
-from verified_results import settle_verified
+from verified_results import settle_verified,load_verified
 
 class VerifiedResultsTests(unittest.TestCase):
     def setUp(self):
@@ -25,5 +28,19 @@ class VerifiedResultsTests(unittest.TestCase):
     def test_tracking_schema(self):
         archive={"key":dict(self.record,league="Championship",match="A – B")}
         self.assertEqual(settle_verified(archive,[self.result],self.now,{"Championship":"en.2"}),1)
+
+    def test_distinct_hosts_and_conflict_veto(self):
+        from multi_league_results import source_urls
+        archive={"key":copy.deepcopy(self.record)}
+        self.assertEqual(settle_verified(archive,[dict(self.result,sources=["https://example.org/a","https://example.org/b"])],self.now),0)
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)
+            (p/"verified_results.json").write_text(json.dumps({"records":[self.result]}))
+            day=self.result["date"]
+            feed={"version":"4.69","updatedAt":self.now.isoformat(),"groups":[{"league":"en.2","date":day,"sources":list(source_urls("en.2",day)),"errors":[],"rows":[{"date":day,"home":"A","away":"B","status":"conflict","csv":[2,1],"espn":[1,1]}]}]}
+            (p/"multi_league_results.json").write_text(json.dumps(feed))
+            self.assertEqual(load_verified(p,self.now),[])
+            self.assertEqual(settle_verified(archive,load_verified(p,self.now),self.now),0)
+            self.assertIsNone(archive["key"]["result"])
 
 if __name__=="__main__": unittest.main()
