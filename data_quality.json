@@ -1,11 +1,11 @@
 {
   "version": "4.5",
-  "updatedAt": "2026-11-26T15:01:18.057605+00:00",
+  "updatedAt": "2026-11-26T15:06:55.678523+00:00",
   "status": "healthy",
   "qualityGate": "PASS",
   "dataAgeHours": {
     "daily": 0.0,
-    "odds": 0.3,
+    "odds": 0.01,
     "validation": 0.0
   },
   "archiveRecords": 90,
