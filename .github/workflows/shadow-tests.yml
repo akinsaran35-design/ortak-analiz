@@ -233,3 +233,8 @@ jobs:
         run: |
           node --check sw.js
           node scripts/test_sw.js
+
+      - name: V4.75 snapshot integrity tests and published snapshot check
+        run: |
+          python scripts/test_snapshot_integrity.py
+          python scripts/snapshot_integrity.py
