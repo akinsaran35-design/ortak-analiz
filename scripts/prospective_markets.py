@@ -5,11 +5,20 @@ MARKETS=("1.5 Üst","2.5 Üst","KG Var")
 MODELS=("old","candidate","baseline")
 def actual(h,a): return (int(h+a>=2),int(h+a>=3),int(h>0 and a>0))
 def valid(p): return type(p) in (float,int) and math.isfinite(p) and 0<=p<=1
+def coherent(markets,legacy=None):
+    """Nested forecasts must agree with the original 2.5 market and set inclusion."""
+    try:
+        if not isinstance(markets,dict) or set(markets)!=set(MARKETS):return False
+        if any(not isinstance(markets[m],dict) or set(markets[m])!=set(MODELS) for m in MARKETS):return False
+        if not all(valid(markets[m][k]) for m in MARKETS for k in MODELS):return False
+        if legacy is not None and any(not valid(legacy[k]) or abs(markets["2.5 Üst"][k]-legacy[k])>1e-12 for k in MODELS):return False
+        return all(markets["1.5 Üst"][k]+1e-12>=max(markets["2.5 Üst"][k],markets["KG Var"][k]) for k in MODELS)
+    except (KeyError,TypeError,ValueError):return False
 def capture(history,old,new):
     if not history or len(old)!=3 or len(new)!=3: raise ValueError("invalid input")
     base=[sum(actual(x[3],x[4])[i] for x in history)/len(history) for i in range(3)]
     out={m:dict(old=old[i],candidate=new[i],baseline=base[i]) for i,m in enumerate(MARKETS)}
-    if not all(valid(v) for row in out.values() for v in row.values()): raise ValueError("invalid probability")
+    if not coherent(out): raise ValueError("incoherent probabilities")
     return out
 def summarize(records,now):
     out={}
@@ -20,7 +29,9 @@ def summarize(records,now):
                 if "prospectiveMarkets" not in r:
                     if i!=1: legacy+=1;continue
                     p={k:r[k] for k in MODELS}
-                else: p=r["prospectiveMarkets"][m]
+                else:
+                    if not coherent(r["prospectiveMarkets"],r):raise ValueError("incoherent forecast")
+                    p=r["prospectiveMarkets"][m]
                 recorded=datetime.fromisoformat(r["recordedAt"])
                 if recorded.tzinfo is None or recorded>now or recorded.astimezone(now.tzinfo).date()>=date.fromisoformat(r["date"]): raise ValueError("late")
                 if not all(valid(p[k]) for k in MODELS): raise ValueError("probability")

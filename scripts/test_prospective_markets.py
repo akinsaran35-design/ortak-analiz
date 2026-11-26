@@ -22,4 +22,17 @@ class MarketTests(unittest.TestCase):
         self.assertAlmostEqual(out["KG Var"]["scores"]["candidate"],.36)
         self.assertTrue(all(not x["liveEnabled"] for x in out.values()))
         with self.assertRaises(ValueError): capture(history,[.8,.6,.5],[.7,float("nan"),.4])
+    def test_incoherent_capture_and_archived_forecast(self):
+        now=datetime(2026,11,30,18,tzinfo=timezone(timedelta(hours=3)))
+        history=[(date(2026,11,20),"A","B",2,1)]
+        with self.assertRaises(ValueError):capture(history,[.4,.6,.2],[.7,.55,.4])
+        with self.assertRaises(ValueError):capture(history,[.6,.5,.7],[.7,.55,.4])
+        p=capture(history,[.8,.6,.5],[.7,.55,.4])
+        row=dict(date="2026-11-28",recordedAt="2026-11-26T12:00:00+03:00",result=[2,1],old=.6,candidate=.55,baseline=1,prospectiveMarkets=p)
+        bad=copy.deepcopy(row);bad["prospectiveMarkets"]["2.5 Üst"]["old"]=.61
+        impossible=copy.deepcopy(row);impossible["prospectiveMarkets"]["KG Var"]["candidate"]=.9
+        out=summarize({"good":row,"divergence":bad,"impossible":impossible},now)
+        for m in MARKETS:
+            self.assertEqual(out[m]["tested"],1)
+            self.assertEqual(out[m]["invalid"],2)
 if __name__=="__main__": unittest.main()

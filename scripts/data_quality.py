@@ -170,6 +170,11 @@ if validation.get("pending") != len(archive) - settled:
 if validation.get("errors"):
     errors.append("Model validation source errors")
 
+from prospective_markets import coherent
+incoherent = sum(1 for r in archive.values() if isinstance(r,dict) and "prospectiveMarkets" in r and not coherent(r["prospectiveMarkets"],r))
+if incoherent:
+    errors.append(f"Incoherent three-market forecasts: {incoherent}")
+
 event_ids = set()
 valid_events = 0
 
@@ -241,6 +246,7 @@ report = {
     "pending": len(archive) - settled,
     "duplicates": duplicates,
     "invalidRecords": invalid,
+    "incoherentMarketRecords": incoherent,
     "overdueResults": overdue,
     "validOddsEvents": valid_events,
     "minimumMatches": 500,
