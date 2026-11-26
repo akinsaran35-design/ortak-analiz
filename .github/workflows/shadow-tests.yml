@@ -279,7 +279,7 @@ jobs:
           node scripts/test_mobile_v487.js
           node --check money-v497.js
           node scripts/test_money_v497.js
-          grep -F 'src="./mobile-v487.js"' index.html
+          grep -E 'src="\./mobile-v487\.js(\?ui=[0-9]+)?"' index.html
 
       - name: V5.06 football historical form tests
         run: python scripts/test_football_form.py
