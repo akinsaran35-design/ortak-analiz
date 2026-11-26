@@ -28,7 +28,7 @@ class FixtureCoverageTest(unittest.TestCase):
                 with patch("urllib.request.urlopen", side_effect=fake), patch.object(Path,"write_text",write):
                     runpy.run_path(str(SCRIPT))
                 report=json.loads(target.read_text())
-            self.assertEqual(report["upcomingCount"], 60 if partial else 72)
+            self.assertEqual(report["upcomingCount"], 84 if partial else 96)
             self.assertEqual(report["upcomingCount"],len(report["upcoming"]))
             self.assertEqual(report["upcomingCountsByDate"][date],report["upcomingCount"])
             self.assertEqual(report["fixtureCoverageComplete"],not partial)
