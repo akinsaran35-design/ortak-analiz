@@ -115,3 +115,5 @@ jobs:
 
       - name: Test OpenLigaDB pilot
         run: python scripts/test_openliga_pilot.py
+      - name: Weighted research tests
+        run: python scripts/test_historical_weighted.py
