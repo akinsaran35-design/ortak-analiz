@@ -216,7 +216,7 @@ jobs:
         run: |
           python scripts/test_fixture_coverage_audit.py
           python scripts/fixture_coverage_audit.py
-      - name: V4.89 18-file release and league integrity
+      - name: V4.93 20-file release and source integrity
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_snapshot_integrity.py
