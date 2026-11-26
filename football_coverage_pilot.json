@@ -1,0 +1,1540 @@
+{
+  "version": "5.08",
+  "updatedAt": "2026-11-26T20:54:14.478858+03:00",
+  "mode": "fixture_discovery_only",
+  "source": "ESPN",
+  "dates": [
+    "2026-11-26",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
+  ],
+  "groups": [
+    {
+      "league": "uefa.champions",
+      "leagueName": "UEFA Şampiyonlar Ligi",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=20261129"
+      ],
+      "rows": [],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "uefa.europa",
+      "leagueName": "UEFA Avrupa Ligi",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401915506",
+          "home": "Besiktas",
+          "away": "Hapoel Be'er",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915519",
+          "home": "Celta Vigo",
+          "away": "AFC Bournemouth",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915517",
+          "home": "Dinamo Zagreb",
+          "away": "Bayer Leverkusen",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915507",
+          "home": "Marseille",
+          "away": "Levski Sofia",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915521",
+          "home": "Olympiacos",
+          "away": "AC Milan",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915520",
+          "home": "RB Salzburg",
+          "away": "Ararat-Armenia",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915508",
+          "home": "Union St.-Gilloise",
+          "away": "Lech Poznan",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915518",
+          "home": "Viktoria Plzen",
+          "away": "Benfica",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915504",
+          "home": "Crystal Palace",
+          "away": "Real Sociedad",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915516",
+          "home": "Ferencvaros",
+          "away": "NK Celje",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915502",
+          "home": "Juventus",
+          "away": "Omonia Nicosia",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915501",
+          "home": "Lyon",
+          "away": "Lillestrom",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915505",
+          "home": "NEC Nijmegen",
+          "away": "Stade Rennais",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915503",
+          "home": "OFI Crete",
+          "away": "Anderlecht",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915514",
+          "home": "Sparta Prague",
+          "away": "AZ Alkmaar",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915513",
+          "home": "Sunderland",
+          "away": "Jagiellonia Bialystok",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915512",
+          "home": "Torreense",
+          "away": "Celtic",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915515",
+          "home": "TSG Hoffenheim",
+          "away": "SK Sturm Graz",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "uefa.europa.conf",
+      "leagueName": "UEFA Konferans Ligi",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa.conf/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401915816",
+          "home": "Kairat Almaty",
+          "away": "Mjällby AIF",
+          "kickoff": "2026-11-26T15:30:00+00:00",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+4'",
+          "score": [
+            1,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915815",
+          "home": "Ajax Amsterdam",
+          "away": "FC Thun",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            1,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915814",
+          "home": "Brighton & Hove Albion",
+          "away": "CSU Craiova",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            1,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915810",
+          "home": "Egnatia",
+          "away": "Lincoln Red Imps",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915811",
+          "home": "Heart of Midlothian",
+          "away": "AS Monaco",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_IN_PROGRESS",
+          "clock": "5'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915813",
+          "home": "Iberia 1999",
+          "away": "Getafe",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "7'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915812",
+          "home": "Jablonec",
+          "away": "FC Lugano",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915739",
+          "home": "Kauno Zalgiris",
+          "away": "Riga FC",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915809",
+          "home": "Pafos",
+          "away": "FC Midtjylland",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915808",
+          "home": "SK Brann",
+          "away": "AGF",
+          "kickoff": "2026-11-26T17:45:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915806",
+          "home": "Borac Banja Luka",
+          "away": "Atalanta",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915802",
+          "home": "Braga",
+          "away": "KuPS Kuopio",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915803",
+          "home": "CSKA Sofia",
+          "away": "Trabzonspor",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915807",
+          "home": "FC Nordsjælland",
+          "away": "Panathinaikos",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915805",
+          "home": "Hajduk Split",
+          "away": "Sint-Truidense",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915738",
+          "home": "Inter D'Escaldes",
+          "away": "F.C. København",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915804",
+          "home": "KAA Gent",
+          "away": "Red Star Belgrade",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401915801",
+          "home": "SC Freiburg",
+          "away": "FC Twente",
+          "kickoff": "2026-11-26T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-26"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "sco.1",
+      "leagueName": "İskoçya Premiership",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sco.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sco.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sco.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sco.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401878332",
+          "home": "Aberdeen",
+          "away": "Dundee",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878331",
+          "home": "Dundee United",
+          "away": "St Johnstone",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878328",
+          "home": "Rangers",
+          "away": "Falkirk",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878327",
+          "home": "St Mirren",
+          "away": "Kilmarnock",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878329",
+          "home": "Motherwell",
+          "away": "Hibernian",
+          "kickoff": "2026-11-28T17:45:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878330",
+          "home": "Heart of Midlothian",
+          "away": "Celtic",
+          "kickoff": "2026-11-29T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "bel.1",
+      "leagueName": "Belçika Pro League",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bel.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bel.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bel.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bel.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401878930",
+          "home": "OH Leuven",
+          "away": "KV Kortrijk",
+          "kickoff": "2026-11-27T19:45:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401878929",
+          "home": "KVC Westerlo",
+          "away": "RAAL La Louvière",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878932",
+          "home": "Cercle Brugge KSV",
+          "away": "KV Mechelen",
+          "kickoff": "2026-11-28T17:15:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878931",
+          "home": "Lommel SK",
+          "away": "Zulte-Waregem",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878933",
+          "home": "Royal Charleroi SC",
+          "away": "Waasland-Beveren",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401878926",
+          "home": "Sint-Truidense",
+          "away": "Racing Genk",
+          "kickoff": "2026-11-29T12:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401878928",
+          "home": "Antwerp",
+          "away": "Anderlecht",
+          "kickoff": "2026-11-29T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401878927",
+          "home": "Standard Liege",
+          "away": "Club Brugge",
+          "kickoff": "2026-11-29T17:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401878925",
+          "home": "Union St.-Gilloise",
+          "away": "KAA Gent",
+          "kickoff": "2026-11-29T18:15:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "aut.1",
+      "leagueName": "Avusturya Bundesliga",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aut.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aut.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aut.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aut.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401881739",
+          "home": "Grazer AK",
+          "away": "SC Rheindorf Altach",
+          "kickoff": "2026-11-27T18:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401881740",
+          "home": "Austria Vienna",
+          "away": "Wolfsberger",
+          "kickoff": "2026-11-28T16:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401881738",
+          "home": "Austria Lustenau",
+          "away": "Rapid Vienna",
+          "kickoff": "2026-11-28T18:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401881743",
+          "home": "SK Sturm Graz",
+          "away": "WSG Swarovski Tirol",
+          "kickoff": "2026-11-29T13:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401881741",
+          "home": "SV Josko Ried",
+          "away": "TSV Hartberg",
+          "kickoff": "2026-11-29T13:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401881742",
+          "home": "RB Salzburg",
+          "away": "LASK Linz",
+          "kickoff": "2026-11-29T16:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "sui.1",
+      "leagueName": "İsviçre Süper Lig",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sui.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sui.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sui.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/sui.1/scoreboard?dates=20261129"
+      ],
+      "rows": [],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "den.1",
+      "leagueName": "Danimarka Superliga",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/den.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401874563",
+          "home": "Sønderjyske Fodbold",
+          "away": "Brøndby IF",
+          "kickoff": "2026-11-27T18:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401874500",
+          "home": "Lyngby Boldklub",
+          "away": "Viborg FF",
+          "kickoff": "2026-11-29T13:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401874725",
+          "home": "Randers FC",
+          "away": "AC Horsens",
+          "kickoff": "2026-11-29T13:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401874552",
+          "home": "F.C. København",
+          "away": "FC Midtjylland",
+          "kickoff": "2026-11-29T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401874727",
+          "home": "Silkeborg IF",
+          "away": "AGF",
+          "kickoff": "2026-11-29T17:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "nor.1",
+      "leagueName": "Norveç Eliteserien",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/nor.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/nor.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/nor.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/nor.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401843492",
+          "home": "Bodo/Glimt",
+          "away": "KFUM Oslo",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401843497",
+          "home": "Rosenborg",
+          "away": "Molde",
+          "kickoff": "2026-11-28T17:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401843495",
+          "home": "Fredrikstad",
+          "away": "Aalesund",
+          "kickoff": "2026-11-29T13:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401843491",
+          "home": "IK Start",
+          "away": "Sarpsborg FK",
+          "kickoff": "2026-11-29T16:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401843498",
+          "home": "Sandefjord",
+          "away": "Tromso",
+          "kickoff": "2026-11-29T16:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401843494",
+          "home": "SK Brann",
+          "away": "Kristiansund BK",
+          "kickoff": "2026-11-29T16:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401843493",
+          "home": "Viking FK",
+          "away": "Vålerenga",
+          "kickoff": "2026-11-29T18:15:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "swe.1",
+      "leagueName": "İsveç Allsvenskan",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/swe.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401842890",
+          "home": "Degerfors IF",
+          "away": "Örgryte IS",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842896",
+          "home": "Djurgården",
+          "away": "BK Häcken",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842894",
+          "home": "Halmstads BK",
+          "away": "Mjällby AIF",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842895",
+          "home": "IF Elfsborg",
+          "away": "GAIS",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842893",
+          "home": "IFK Göteborg",
+          "away": "IK Sirius",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842892",
+          "home": "Kalmar FF",
+          "away": "AIK",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842891",
+          "home": "Malmö FF",
+          "away": "IF Brommapojkarna",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401842897",
+          "home": "Västerås SK",
+          "away": "Hammarby IF",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "bra.1",
+      "leagueName": "Brezilya Serie A",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401841333",
+          "home": "Coritiba",
+          "away": "Flamengo",
+          "kickoff": "2026-11-29T19:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401841332",
+          "home": "Vitória",
+          "away": "Santos",
+          "kickoff": "2026-11-29T19:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "arg.1",
+      "leagueName": "Arjantin Primera División",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/arg.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/arg.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/arg.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/arg.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401936373",
+          "home": "Rosario Central",
+          "away": "Barracas Central",
+          "kickoff": "2026-11-29T20:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "usa.1",
+      "leagueName": "ABD MLS",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401933737",
+          "home": "Charlotte FC",
+          "away": "Chicago Fire FC",
+          "kickoff": "2026-11-28T17:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401933724",
+          "home": "Houston Dynamo FC",
+          "away": "San Jose Earthquakes",
+          "kickoff": "2026-11-28T19:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "mex.1",
+      "leagueName": "Meksika Liga MX",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard?dates=20261129"
+      ],
+      "rows": [],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "ksa.1",
+      "leagueName": "Suudi Arabistan Pro League",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ksa.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401900874",
+          "home": "Al Fateh",
+          "away": "Al Riyadh",
+          "kickoff": "2026-11-26T14:25:00+00:00",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+7'",
+          "score": [
+            1,
+            0
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401900443",
+          "home": "Abha",
+          "away": "Al Shabab",
+          "kickoff": "2026-11-26T15:05:00+00:00",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
+          "score": [
+            0,
+            1
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401900871",
+          "home": "Al Faisaly",
+          "away": "Al Diriyah",
+          "kickoff": "2026-11-26T17:30:00+00:00",
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "23'",
+          "score": [
+            0,
+            1
+          ],
+          "date": "2026-11-26"
+        },
+        {
+          "eventId": "401900872",
+          "home": "Al Kholood",
+          "away": "Al Khaleej",
+          "kickoff": "2026-11-27T12:15:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401900870",
+          "home": "Al Qadsiah",
+          "away": "Al Fayha",
+          "kickoff": "2026-11-27T14:20:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401900873",
+          "home": "Al Ittihad",
+          "away": "Neom SC",
+          "kickoff": "2026-11-27T17:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401900442",
+          "home": "Al Hazem",
+          "away": "Al Nassr",
+          "kickoff": "2026-11-28T12:15:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401900875",
+          "home": "Al Ettifaq",
+          "away": "Al Hilal",
+          "kickoff": "2026-11-28T14:20:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401900876",
+          "home": "Al Ahli",
+          "away": "Al Taawoun",
+          "kickoff": "2026-11-28T17:30:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "jpn.1",
+      "leagueName": "Japonya J1 League",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/jpn.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/jpn.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/jpn.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/jpn.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401877537",
+          "home": "Kyoto Sanga",
+          "away": "Cerezo Osaka",
+          "kickoff": "2026-11-28T05:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401877539",
+          "home": "Shimizu S-Pulse",
+          "away": "Urawa Red Diamonds",
+          "kickoff": "2026-11-28T05:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401877542",
+          "home": "Kashima Antlers",
+          "away": "Fagiano Okayama",
+          "kickoff": "2026-11-28T06:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401877516",
+          "home": "Vissel Kobe",
+          "away": "JEF United Ichihara-Chiba",
+          "kickoff": "2026-11-28T06:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401877525",
+          "home": "Kashiwa Reysol",
+          "away": "Sanfrecce Hiroshima",
+          "kickoff": "2026-11-28T07:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        },
+        {
+          "eventId": "401877541",
+          "home": "Mito Hollyhock",
+          "away": "V-Varen Nagasaki",
+          "kickoff": "2026-11-29T05:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401877523",
+          "home": "Yokohama F. Marinos",
+          "away": "FC Tokyo",
+          "kickoff": "2026-11-29T05:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401877540",
+          "home": "Kawasaki Frontale",
+          "away": "Gamba Osaka",
+          "kickoff": "2026-11-29T06:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401877538",
+          "home": "Nagoya Grampus",
+          "away": "Avispa Fukuoka",
+          "kickoff": "2026-11-29T06:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        },
+        {
+          "eventId": "401877524",
+          "home": "Machida Zelvia",
+          "away": "Tokyo Verdy 1969",
+          "kickoff": "2026-11-29T07:00:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-29"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    },
+    {
+      "league": "kor.1",
+      "leagueName": "Güney Kore K League 1",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/kor.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/kor.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/kor.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/kor.1/scoreboard?dates=20261129"
+      ],
+      "rows": [],
+      "error": "incomplete_source",
+      "errors": [
+        {
+          "date": "2026-11-26",
+          "type": "HTTPError",
+          "httpStatus": 400
+        },
+        {
+          "date": "2026-11-27",
+          "type": "HTTPError",
+          "httpStatus": 400
+        },
+        {
+          "date": "2026-11-28",
+          "type": "HTTPError",
+          "httpStatus": 400
+        },
+        {
+          "date": "2026-11-29",
+          "type": "HTTPError",
+          "httpStatus": 400
+        }
+      ],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 0
+    },
+    {
+      "league": "aus.1",
+      "leagueName": "Avustralya A-League",
+      "sources": [
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aus.1/scoreboard?dates=20261126",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aus.1/scoreboard?dates=20261127",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aus.1/scoreboard?dates=20261128",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/aus.1/scoreboard?dates=20261129"
+      ],
+      "rows": [
+        {
+          "eventId": "401892133",
+          "home": "Macarthur FC",
+          "away": "Melbourne City FC",
+          "kickoff": "2026-11-27T08:40:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-27"
+        },
+        {
+          "eventId": "401892132",
+          "home": "Central Coast Mariners FC",
+          "away": "Auckland FC",
+          "kickoff": "2026-11-28T08:40:00+00:00",
+          "state": "pre",
+          "status": "STATUS_SCHEDULED",
+          "clock": "0'",
+          "score": null,
+          "date": "2026-11-28"
+        }
+      ],
+      "error": null,
+      "errors": [],
+      "invalid": 0,
+      "truncated": false,
+      "respondedDays": 4
+    }
+  ],
+  "configuredCompetitions": 18,
+  "respondingCompetitions": 17,
+  "eventCount": 103,
+  "coverageComplete": false,
+  "predictionsEnabled": false,
+  "realBettingEnabled": false,
+  "decision": "PAS"
+}
