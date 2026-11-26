@@ -53,7 +53,9 @@ class Strength:
         totals[1] += y
         totals[2] += 1
 
-def compare(rows, as_of):
+def compare(rows, as_of, phase="test"):
+    if phase not in ("validation","test"):
+        raise ValueError("invalid evaluation phase")
     groups, meta = split(rows, as_of)
     model = Strength()
     history = defaultdict(list)
@@ -66,7 +68,9 @@ def compare(rows, as_of):
         for r, _ in pending:
             l, h, a = r["league"], r["home"], r["away"]
             hh, ah = history[(l,h)], history[(l,a)]
-            if day < meta["testStart"]:
+            if day < meta["validationStart" if phase=="validation" else "testStart"]:
+                continue
+            if phase=="validation" and day>=meta["testStart"]:
                 continue
             if min(len(hh), len(ah)) < 5:
                 skipped += 1
@@ -99,7 +103,15 @@ def multiyear(rows, today):
     windows = []
     for offset in range(0,1096,61):
         end = today-timedelta(days=offset)
-        windows.append(dict(asOf=end.isoformat(), **compare(rows,end)))
+        test=compare(rows,end)
+        validation=compare(rows,end,phase="validation")
+        selection={}
+        for k, models in test["metrics"].items():
+            prior=validation["metrics"].get(k,{})
+            candidates={name:m for name,m in prior.items() if m["n"]>=100}
+            chosen=min(candidates,key=lambda name:(candidates[name]["brier"],name)) if candidates else "leagueReference"
+            selection[k]=dict(model=chosen,validationN=prior.get(chosen,{}).get("n",0),test=models[chosen])
+        windows.append(dict(asOf=end.isoformat(), validationSelection=selection, **test))
     aggregate = {}
     for k in ("over15","over25","btts"):
         aggregate[k] = {}
@@ -127,7 +139,15 @@ def multiyear(rows, today):
                 models[name] = dict(n=n,selected=s,hits=h,hitRate=h/s if s else None,brier=sum(m["n"]*m["brier"] for m in ms)/n if n else None)
             n = models["opponent"]["n"]
             league_aggregate[league][k] = dict(models=models,windows=len(reports),sampleAdequateForDescription=n>=100 and len(reports)>=3,referenceImprovement=models["leagueReference"]["brier"]-models["opponent"]["brier"] if n else None)
-    return dict(status="research_only",realBettingEnabled=False,independentHoldout=False,matchCount=len(rows),aggregate=aggregate,leagueAggregate=league_aggregate,leagueSampleRule=dict(minMatches=100,minWindows=3,descriptiveOnly=True),windows=windows)
+    selected_aggregate={}
+    for k in ("over15","over25","btts"):
+        chosen=[w["validationSelection"][k] for w in windows if k in w["validationSelection"]]
+        ms=[x["test"] for x in chosen]
+        n=sum(m["n"] for m in ms)
+        s=sum(m["selected"] for m in ms)
+        h=sum(m["hits"] for m in ms)
+        selected_aggregate[k]=dict(n=n,selected=s,hits=h,hitRate=h/s if s else None,brier=sum(m["n"]*m["brier"] for m in ms)/n if n else None,modelWindowCounts={name:sum(x["model"]==name for x in chosen) for name in ("baseline","venue","opponent","leagueReference")})
+    return dict(status="research_only",realBettingEnabled=False,independentHoldout=False,matchCount=len(rows),aggregate=aggregate,validationSelectedAggregate=selected_aggregate,validationSelectionRule=dict(minMatches=100,fallback="leagueReference",metric="brier",descriptiveOnly=True),leagueAggregate=league_aggregate,leagueSampleRule=dict(minMatches=100,minWindows=3,descriptiveOnly=True),windows=windows)
 
 if __name__ == "__main__":
     import json
@@ -136,3 +156,4 @@ if __name__ == "__main__":
     result = multiyear(archive["matches"],date.fromisoformat(archive["asOf"]))
     Path("opponent_strength_report.json").write_text(json.dumps(result,indent=2))
     print(json.dumps(result["aggregate"]))
+    print("Validation-only selection:",json.dumps(result["validationSelectedAggregate"]))

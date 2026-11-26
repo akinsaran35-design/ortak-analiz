@@ -57,6 +57,21 @@ class OpponentTest(unittest.TestCase):
             self.assertFalse(report["leagueAggregate"]["L"][k]["sampleAdequateForDescription"])
         self.assertTrue(report["leagueSampleRule"]["descriptiveOnly"])
 
+    def test_validation_only_selection(self):
+        rows=fixture()
+        end=date(2026,11,26)
+        v=compare(rows,end,phase="validation")
+        start=end-timedelta(days=61)
+        changed=[dict(r,ft=[9,9]) if r["date"]>=start.isoformat() else r for r in rows]
+        self.assertEqual(v,compare(changed,end,phase="validation"))
+        report=multiyear(rows,end)
+        for k,a in report["validationSelectedAggregate"].items():
+            self.assertEqual(a["n"],report["aggregate"][k]["baseline"]["n"])
+            self.assertEqual(a["brier"],report["aggregate"][k]["leagueReference"]["brier"])
+            self.assertEqual(a["modelWindowCounts"]["leagueReference"],sum(k in w["validationSelection"] for w in report["windows"]))
+        with self.assertRaises(ValueError):
+            compare(rows,end,phase="unknown")
+
     def test_empty(self):
         report=multiyear([],date(2026,11,26))
         self.assertFalse(report["realBettingEnabled"])
