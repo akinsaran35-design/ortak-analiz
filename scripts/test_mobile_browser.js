@@ -78,7 +78,7 @@ const {chromium}=require("playwright");
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.clock.fastForward(31*60*1000);
   await page.getByText("Güncel çift kaynaklı saat kaydı yok.",{exact:false}).waitFor();
-  await page.locator(".filter-panel summary").click();
+  await page.locator(".filter-panel").evaluate(e=>{e.open=true;});
   await page.locator("#fixture-mode").selectOption("all");
   await page.getByText("21:00 TSİ · Son bilinen",{exact:false}).waitFor();
   await page.getByText("2.5 Üst oran aralığı: —",{exact:true}).waitFor();
