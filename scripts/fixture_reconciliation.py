@@ -78,7 +78,7 @@ def reconcile(daily,odds,calendar,now,source_stamp):
         corrected=daily["candidates"]
         proposals=[]
     replay=build_report(dict(daily,candidates=corrected),odds,now)
-    return {"version":"4.59","updatedAt":now.isoformat(),"source":"https://github.com/oladeeayo/open-matchday","sourceUpdatedAt":source_stamp,"oddsUpdatedAt":odds["updatedAt"],"oddsFresh":fresh,"status":"research_only","decision":"PAS","realBettingEnabled":False,"originalMatched":original["matchedCount"],"reconciledMatched":replay["matchedCount"],"proposedCorrections":proposals,"unresolved":replay["unmatched"],"candidateCountsByDate":dict(Counter(r["date"] for r in corrected))}
+    return {"version":"4.59","updatedAt":now.isoformat(),"source":"https://github.com/oladeeayo/open-matchday","sourceUpdatedAt":source_stamp,"oddsUpdatedAt":odds["updatedAt"],"dailyUpdatedAt":daily.get("updatedAt"),"oddsFresh":fresh,"status":"research_only","decision":"PAS","realBettingEnabled":False,"originalMatched":original["matchedCount"],"reconciledMatched":replay["matchedCount"],"proposedCorrections":proposals,"unresolved":replay["unmatched"],"candidateCountsByDate":dict(Counter(r["date"] for r in corrected))}
 
 def main():
     now=datetime.now(timezone.utc)
