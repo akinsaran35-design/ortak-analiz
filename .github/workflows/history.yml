@@ -37,6 +37,7 @@ jobs:
       - run: python scripts/test_historical_tuning.py
       - run: python scripts/test_historical_strength.py
       - run: python scripts/openliga_pilot.py
+      - run: python scripts/historical_multiyear.py
       - uses: actions/upload-artifact@v4
         with:
           name: historical-data
@@ -53,5 +54,6 @@ jobs:
             openliga_comparison.json
             openliga_tuning.json
             openliga_market_tuning.json
+            openliga_multiyear.json
             openliga_strength.json
           retention-days: 7

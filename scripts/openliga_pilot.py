@@ -6,14 +6,14 @@ from urllib.request import urlopen
 from urllib.parse import quote
 from historical_baseline import evaluate
 
-def normalize(rows,league,today):
+def normalize(rows,league,today,days=365):
     out={}
     conflicts=set()
     for m in rows:
         try:
             if m["matchIsFinished"] is not True: continue
             d=date.fromisoformat(m["matchDateTime"][:10])
-            if not today-timedelta(days=365)<=d<today: continue
+            if not today-timedelta(days=days)<=d<today: continue
             scores={}
             for s in m["matchResults"]:
                 k=s["resultTypeID"]
