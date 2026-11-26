@@ -3,14 +3,14 @@ import json
 from pathlib import Path
 from datetime import datetime,timezone
 
-FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation")
+FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status")
 
 def audit(data):
     errors=[]
     def check(ok,label):
         if not ok: errors.append(label)
     try:
-        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar=(data[k] for k in FILES)
+        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status=(data[k] for k in FILES)
         check(d["candidateCount"]==len(d["candidates"]),"candidate_count")
         check(d["upcomingCount"]==len(d["upcoming"]),"fixture_count")
         check(o["eventCount"]==len(o["events"]),"odds_count")
@@ -40,6 +40,15 @@ def audit(data):
         check(all(prov["counts"][kind]==dict(Counter(x["status"] for x in prov["rows"] if x["archive"]==kind)) for kind in ("prospective","performance")),"score_provenance_status_count")
         check(prov["version"]=="4.80" and feeds["version"]=="4.69","score_report_version")
         check(calendar.get("status")!="research_only" or (calendar["dailyUpdatedAt"]==d["updatedAt"] and calendar["oddsUpdatedAt"]==o["updatedAt"]),"calendar_snapshot_identity")
+        score_rows=[x for x in outcomes.values() if x.get("observationType")!="conflict"]
+        conflict_rows=[x for x in outcomes.values() if x.get("observationType")=="conflict"]
+        outcome_identity=lambda x:(x["archive"],x["league"],x["home"],x["away"],x["archivedDate"],x["recordedAt"])
+        check(all(outcome_identity(x) in identities for x in outcomes.values()),"outcome_evidence_identity")
+        check(outcome_status["version"]=="4.83" and outcome_status["includedInMainValidation"] is False and outcome_status["decision"]=="PAS","outcome_research_lock")
+        check(outcome_status["observations"]==len(score_rows) and outcome_status["conflictObservations"]==len(conflict_rows),"outcome_observation_count")
+        check(outcome_status["archiveIdentities"]==len({outcome_identity(x) for x in score_rows}) and outcome_status["quarantinedIdentities"]==len({outcome_identity(x) for x in conflict_rows}),"outcome_identity_count")
+        check(sum(outcome_status["counts"].values())==outcome_status["archiveIdentities"],"outcome_status_count")
+        check(0<=outcome_status["uniqueEligibleEvents"]<=outcome_status["counts"].get("eligible_research",0),"outcome_event_count")
         check(u["testedMatches"]==n,"decision_validation_count")
         check(u["decision"]=="PAS" and u["realBettingEnabled"] is False and u["selections"]==[] and v["liveEnabled"] is False,"research_lock")
     except (KeyError,TypeError,ValueError,AttributeError) as exc:
