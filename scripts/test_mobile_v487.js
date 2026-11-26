@@ -1,0 +1,20 @@
+const assert=require("node:assert/strict");
+const {topScores,eventFor,rowsFor,filterRows,bound}=require("../mobile-v487.js");
+const now=Date.parse("2026-11-26T15:00:00Z"),updatedAt=new Date(now).toISOString();
+const row={date:"2026-11-27",league:"İngiltere Premier Lig",match:"A – B"};
+const event={id:"1",league:"soccer_epl",kickoff:"2026-11-27T18:00:00Z"};
+const d={daily:{updatedAt,upcoming:[row,row],candidates:[{...row,markets:{"1.5 Üst":80}}]},matching:{updatedAt,matched:[{match:row.match,eventId:"1",kickoff:event.kickoff}]},odds:{updatedAt,events:[event]},snapshot_integrity:{updatedAt,status:"PASS",errors:[],reportTimestamps:Object.fromEntries(["daily","matching","odds"].map(k=>[k+".json",updatedAt]))}};
+assert.equal(rowsFor(d,now).length,1);
+assert.equal(eventFor(row,d,now).id,"1");
+assert.equal(eventFor(row,d,now+1800001),null);
+assert.equal(eventFor({...row,league:"Almanya Bundesliga"},d,now),null);
+assert.equal(eventFor(row,{...d,odds:{...d.odds,updatedAt:"2026-11-26T14:59:00Z"}},now),null);
+assert.equal(filterRows(rowsFor(d,now),"a",row.date,row.league,"evening").length,1);
+assert.equal(filterRows(rowsFor(d,now),"","",row.league,"day").length,0);
+assert.equal(topScores(0,0)[0].score,"0–0");
+assert.equal(topScores(1.5,1)[0].score,"1–0");
+assert.equal(topScores(null,1).length,0);
+const fs=require("node:fs"),html=fs.readFileSync("index.html","utf8");
+for(const x of ["matches","live","performance","settings","coupons"]){assert.ok(html.includes('id="view-'+x+'"'));assert.ok(html.includes('data-tab="'+x+'"'));}
+assert.ok(html.includes("./legacy.html"));
+console.log("Clean mobile tab, fixture identity and score tests passed");
