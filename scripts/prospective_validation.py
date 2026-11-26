@@ -115,6 +115,13 @@ for league in LEAGUES:
             "result": None
         }
 
+from verified_results import load_verified, settle_verified
+try:
+    verified_count = settle_verified(records, load_verified(ROOT), NOW)
+except (OSError, ValueError, KeyError, TypeError) as exc:
+    verified_count = 0
+    errors.append(f"verified_results: {exc}")
+
 settled = [
     r for r in records.values()
     if r["result"] is not None
@@ -128,6 +135,7 @@ report = {
     "candidate": "weightedBrier",
     "updatedAt": NOW.isoformat(),
     "recorded": len(records),
+    "verifiedFallbackSettled": verified_count,
     "tested": n,
     "pending": len(records) - n,
     "minimumMatches": 500,
