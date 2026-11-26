@@ -28,6 +28,6 @@ jobs:
         if: always()
         with:
           name: mobile-reference-preview
-          path: mobile-reference-detail.png
+          path: mobile-reference-*.png
           if-no-files-found: ignore
           retention-days: 7
