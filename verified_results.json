@@ -1,0 +1,66 @@
+{
+  "version": "4.62",
+  "method": "Manually corroborated completed scores; exact archived identity only",
+  "records": [
+    {
+      "date": "2026-11-25",
+      "league": "en.2",
+      "home": "Bolton Wanderers FC",
+      "away": "West Bromwich Albion FC",
+      "result": [
+        1,
+        3
+      ],
+      "sources": [
+        "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+        "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+        "https://www.footballwebpages.co.uk/championship/20261125"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "league": "en.2",
+      "home": "Burnley FC",
+      "away": "Birmingham City FC",
+      "result": [
+        0,
+        2
+      ],
+      "sources": [
+        "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+        "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+        "https://www.footballwebpages.co.uk/championship/20261125"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "league": "en.2",
+      "home": "Stoke City FC",
+      "away": "Millwall FC",
+      "result": [
+        2,
+        1
+      ],
+      "sources": [
+        "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+        "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+        "https://www.footballwebpages.co.uk/championship/20261125"
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "league": "en.2",
+      "home": "Watford FC",
+      "away": "Blackburn Rovers FC",
+      "result": [
+        0,
+        1
+      ],
+      "sources": [
+        "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+        "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+        "https://www.footballwebpages.co.uk/championship/20261125"
+      ]
+    }
+  ]
+}
