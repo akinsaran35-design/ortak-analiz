@@ -35,6 +35,7 @@ jobs:
       - run: python scripts/historical_freshness.py
       - run: python scripts/test_openliga_pilot.py
       - run: python scripts/test_historical_tuning.py
+      - run: python scripts/test_historical_strength.py
       - run: python scripts/openliga_pilot.py
       - uses: actions/upload-artifact@v4
         with:
@@ -51,4 +52,5 @@ jobs:
             openliga_baseline.json
             openliga_comparison.json
             openliga_tuning.json
+            openliga_strength.json
           retention-days: 7
