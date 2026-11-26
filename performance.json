@@ -1,14 +1,14 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-26T08:45:30.559361+03:00",
+  "updatedAt": "2026-11-26T16:34:26.690674+03:00",
   "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
   "errors": [
     "İngiltere Championship/2026-27: 'list' object has no attribute 'get'"
   ],
   "overall": {
-    "recorded": 34,
+    "recorded": 43,
     "settled": 0,
-    "pending": 34,
+    "pending": 43,
     "markets": {
       "1.5 Üst": {
         "tested": 0,
@@ -142,6 +142,72 @@
       "recorded": 5,
       "settled": 0,
       "pending": 5,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Hollanda Eredivisie": {
+      "recorded": 4,
+      "settled": 0,
+      "pending": 4,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Portekiz Primeira Liga": {
+      "recorded": 3,
+      "settled": 0,
+      "pending": 3,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Türkiye Süper Lig": {
+      "recorded": 2,
+      "settled": 0,
+      "pending": 2,
       "markets": {
         "1.5 Üst": {
           "tested": 0,

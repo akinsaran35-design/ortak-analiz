@@ -1,6 +1,6 @@
 {
   "version": "4.5",
-  "updatedAt": "2026-11-26T05:45:30.673363+00:00",
+  "updatedAt": "2026-11-26T13:34:26.829094+00:00",
   "status": "healthy",
   "qualityGate": "PASS",
   "dataAgeHours": {
@@ -8,13 +8,13 @@
     "odds": 0.0,
     "validation": 0.0
   },
-  "archiveRecords": 69,
+  "archiveRecords": 90,
   "settled": 0,
-  "pending": 69,
+  "pending": 90,
   "duplicates": 0,
   "invalidRecords": 0,
   "overdueResults": 0,
-  "validOddsEvents": 110,
+  "validOddsEvents": 141,
   "minimumMatches": 500,
   "validationProgress": 0.0,
   "liveEnabled": false,
