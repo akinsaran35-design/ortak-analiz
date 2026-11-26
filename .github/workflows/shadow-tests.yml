@@ -228,3 +228,8 @@ jobs:
         run: |
           python scripts/test_archive_calendar_result_replay.py
           python scripts/archive_calendar_result_replay.py
+
+      - name: V4.74 mobile cache safety
+        run: |
+          node --check sw.js
+          node scripts/test_sw.js
