@@ -35,4 +35,21 @@ class MarketTests(unittest.TestCase):
         for m in MARKETS:
             self.assertEqual(out[m]["tested"],1)
             self.assertEqual(out[m]["invalid"],2)
+    def test_calibration_diagnostics(self):
+        now=datetime(2026,11,30,18,tzinfo=timezone(timedelta(hours=3)))
+        r=dict(date="2026-11-28",recordedAt="2026-11-26T12:00:00+03:00",result=[2,1],old=.6,candidate=.8,baseline=.5)
+        records={"a":r,"b":dict(r,result=[0,0],candidate=.4),"pending":dict(r,result=None)}
+        normal=summarize(records,now)
+        enriched=summarize(records,now,include_calibration=True)
+        x=enriched["2.5 Üst"]["calibration"]
+        self.assertEqual(x["sample"],2)
+        self.assertEqual(x["observedRate"],.5)
+        self.assertAlmostEqual(x["meanPrediction"]["candidate"],.6)
+        self.assertAlmostEqual(x["gapPP"]["candidate"],10)
+        self.assertFalse(x["sampleAdequate"])
+        self.assertTrue(x["descriptiveOnly"])
+        self.assertIsNone(enriched["KG Var"]["calibration"]["observedRate"])
+        self.assertEqual(enriched["KG Var"]["calibration"]["meanPrediction"],{})
+        for m in MARKETS:
+            self.assertEqual({k:v for k,v in enriched[m].items() if k!="calibration"},normal[m])
 if __name__=="__main__": unittest.main()
