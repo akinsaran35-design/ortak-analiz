@@ -61,9 +61,7 @@ def compare(records,primary,secondary):
 def read(url):
     with urlopen(Request(url,headers={"User-Agent":"OrtakAnaliz research source check"}),timeout=20) as f:
         return f.read(4_000_000)
-def main():
-    now=datetime.now(TR)
-    archive=json.loads(Path("prospective_archive.json").read_text())
+def build_report(archive,now):
     records=[r for r in archive.values() if r["league"]=="en.2" and now.date()-timedelta(days=14)<=date.fromisoformat(r["date"])<now.date()]
     y=now.year if now.month>=7 else now.year-1
     url=f"https://football-data.co.uk/mmz4281/{y%100:02d}{(y+1)%100:02d}/E1.csv"
@@ -77,6 +75,12 @@ def main():
         except (OSError,ValueError,TypeError,KeyError) as exc: errors.append(day+": "+type(exc).__name__)
     rows=compare(records,primary,secondary)
     report={"version":"4.63","updatedAt":now.isoformat(),"mode":"research_only","decision":"PAS","records":len(rows),"corroborated":sum(r["status"]=="corroborated" for r in rows),"errors":errors,"sources":sources,"rows":rows}
+    return report
+
+def main():
+    now=datetime.now(TR)
+    archive=json.loads(Path("prospective_archive.json").read_text())
+    report=build_report(archive,now)
     Path("results_source_pilot.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(report,ensure_ascii=False))
 if __name__=="__main__": main()
