@@ -251,3 +251,8 @@ jobs:
         run: |
           python scripts/test_score_provenance.py
           python scripts/score_provenance.py
+
+      - name: V4.82 persistent calendar outcome research
+        run: |
+          python scripts/test_archive_calendar_outcomes.py
+          python scripts/archive_calendar_outcomes.py
