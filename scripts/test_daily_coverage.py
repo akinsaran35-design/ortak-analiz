@@ -15,6 +15,7 @@ class FixtureCoverageTest(unittest.TestCase):
         tr = timezone(timedelta(hours=3))
         date = (datetime.now(tr).date()+timedelta(days=2)).isoformat()
         rows = [{"date":date,"team1":f"Home {i}","team2":f"Away {i}"} for i in range(12)]
+        rows += [{"date":(datetime.now(tr).date()-timedelta(days=j+1)).isoformat(),"team1":f"Home {i}","team2":f"Away {i}","score":{"ft":[2,1]}} for i in range(12) for j in range(5)]
         for partial in (False, True):
             def fake(req, timeout):
                 if partial and "/de.1.json" in req.full_url:
@@ -32,6 +33,10 @@ class FixtureCoverageTest(unittest.TestCase):
             self.assertEqual(report["upcomingCount"],len(report["upcoming"]))
             self.assertEqual(report["upcomingCountsByDate"][date],report["upcomingCount"])
             self.assertFalse(report["fixtureCoverageComplete"])
+            self.assertEqual(report["candidateCount"],96 if partial else 108)
+            self.assertEqual(len(report["candidates"]),report["candidateCount"])
+            self.assertTrue(report["candidateListComplete"])
+            self.assertIsNone(report["candidateListLimit"])
             self.assertEqual(report["decision"],"PAS")
             self.assertEqual(report["picks"],[])
 

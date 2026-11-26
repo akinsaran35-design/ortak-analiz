@@ -197,10 +197,10 @@ for fixture in report["upcoming"]:
     day = fixture["date"]
     report["upcomingCountsByDate"][day] = report["upcomingCountsByDate"].get(day, 0) + 1
 report["fixtureCoverageComplete"] = all(d["status"] == "ok" for d in report["leagueDiagnostics"])
-report["candidateListLimit"] = 30
+report["candidateListLimit"] = None
 report["candidates"].sort(key=lambda item: (item["date"], -item["markets"]["1.5 Üst"], item["match"]))
 report["candidateCount"] = len(report["candidates"])
-report["candidates"] = report["candidates"][:30]
+report["candidateListComplete"] = True
 report["reason"] = (
     f"PAS — {report['leaguesLoaded']}/{report['leaguesChecked']} lig okundu; "
     f"bugün {report['fixturesToday']}, 7 günde {report['fixturesNext7Days']} fikstür; "
