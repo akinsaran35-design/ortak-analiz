@@ -119,6 +119,7 @@ report = {
     "leaguesChecked": len(LEAGUES), "leaguesLoaded": 0,
     "fixturesToday": 0, "fixturesNext7Days": 0,
     "leagueDiagnostics": [], "upcoming": [], "candidates": [], "candidateCount": 0,
+    "fixtureWindowDays": 7, "upcomingCount": 0, "upcomingCountsByDate": {},
     "dataQuality": {"verifiedOdds": False, "verifiedKickoffTimes": False,
                     "modelCalibrated": False, "bettingRecommendation": False},
 }
@@ -140,7 +141,7 @@ for league, code in LEAGUES.items():
         report["leagueDiagnostics"].append(diagnostic)
         continue
     report["leaguesLoaded"] += 1
-    diagnostic["status"] = "ok"
+    diagnostic["status"] = "ok" if len(diagnostic["seasonsLoaded"]) == len(seasons) else "partial"
     history = []
     fixtures = []
     seen = set()
@@ -171,9 +172,8 @@ for league, code in LEAGUES.items():
         if score is not None:
             diagnostic["excluded"]["alreadyScored"] += 1
             continue
-        if len(report["upcoming"]) < 60:
-            report["upcoming"].append({"date": d.isoformat(), "league": league,
-                                        "match": f"{home} – {away}"})
+        report["upcoming"].append({"date": d.isoformat(), "league": league,
+                                    "match": f"{home} – {away}"})
         home_stats, home_error = recent_stats(history, home, True)
         away_stats, away_error = recent_stats(history, away, False)
         if home_error or away_error:
@@ -198,6 +198,12 @@ for league, code in LEAGUES.items():
     report["leagueDiagnostics"].append(diagnostic)
 
 report["upcoming"].sort(key=lambda item: (item["date"], item["league"], item["match"]))
+report["upcomingCount"] = len(report["upcoming"])
+for fixture in report["upcoming"]:
+    day = fixture["date"]
+    report["upcomingCountsByDate"][day] = report["upcomingCountsByDate"].get(day, 0) + 1
+report["fixtureCoverageComplete"] = all(d["status"] == "ok" for d in report["leagueDiagnostics"])
+report["candidateListLimit"] = 30
 report["candidates"].sort(key=lambda item: (item["date"], -item["markets"]["1.5 Üst"], item["match"]))
 report["candidateCount"] = len(report["candidates"])
 report["candidates"] = report["candidates"][:30]
