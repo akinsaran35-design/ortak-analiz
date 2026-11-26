@@ -131,3 +131,9 @@ jobs:
 
       - name: V4.42 Opponent strength tests
         run: python scripts/test_historical_opponent.py
+
+      - name: V4.47 weekend readiness tests
+        run: |
+          node --check weekend-readiness.js
+          node scripts/test_weekend_readiness.js
+          grep -F 'src="./weekend-readiness.js"' index.html
