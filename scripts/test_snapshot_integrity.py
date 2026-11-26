@@ -6,7 +6,7 @@ class SnapshotTests(unittest.TestCase):
     def test_integrity(self):
         ident=dict(archive="prospective",league="en.1",home="A",away="B",archivedDate="2026-11-28",recordedAt="2026-11-25T10:00:00Z")
         data={
-            "daily":dict(candidateCount=1,candidates=[{}],upcomingCount=1,upcoming=[{}]),
+            "daily":dict(candidateCount=1,candidates=[{}],upcomingCount=1,upcoming=[{"date":"2026-11-27","league":"İngiltere Premier Lig","match":"A – B"}]),
             "odds":dict(eventCount=1,events=[{}]),
             "matching":dict(matchedCount=1,matched=[{}],unmatchedCount=0,unmatched=[]),
             "prospective_archive":{"a":{"result":None}},
@@ -33,10 +33,17 @@ class SnapshotTests(unittest.TestCase):
         data["prospective_leagues"]=build(data["prospective_archive"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         data["prospective_validation"]["marketResearch"]=summarize(data["prospective_archive"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         data["daily"]["updatedAt"]="2026-11-26T14:00:00Z"
+        from league_config import FIXTURE_CODES
+        data["scoreboard_snapshot"]=dict(version="4.90",mode="scoreboard_snapshot",updatedAt="2026-11-26T14:00:00Z",date="2026-11-26",realTime=False,usedForSettlement=False,usedForPredictions=False,groups=[dict(league=x,rows=[],error=None) for x in FIXTURE_CODES.values()],loadedLeagues=9,eventCount=0,inProgress=0)
+        data["fixture_coverage_audit"]=dict(version="4.92",mode="research_only",updatedAt="2026-11-26T14:00:00Z",dailyUpdatedAt=data["daily"]["updatedAt"],archivesModified=False,decision="PAS",dates=["2026-11-27","2026-11-28","2026-11-29"],sourceGroups=27,healthyGroups=27,counts={"published_only":1},rows=[dict(league="en.1",status="published_only",published=data["daily"]["upcoming"],espn=[])])
         self.assertEqual(audit(data)["status"],"PASS")
-        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00"})
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("scoreboard_snapshot","eventCount",1,"scoreboard_counts"),
+            ("scoreboard_snapshot","usedForPredictions",True,"scoreboard_lock"),
+            ("fixture_coverage_audit","counts",{},"fixture_audit_counts"),
+            ("fixture_coverage_audit","dailyUpdatedAt","wrong","fixture_audit_lock"),
             ("prospective_leagues","recorded",2,"prospective_league_recompute"),
             ("prospective_validation","marketResearch",{},"prospective_market_recompute"),
             ("archive_calendar_outcome_status","conflictObservations",1,"outcome_observation_count"),
