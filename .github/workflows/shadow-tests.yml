@@ -106,3 +106,6 @@ jobs:
 
       - name: Test archive reconciliation
         run: python scripts/test_historical_reconcile.py
+
+      - name: Test historical baseline
+        run: python scripts/test_historical_baseline.py
