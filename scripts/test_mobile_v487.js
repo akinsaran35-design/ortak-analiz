@@ -28,3 +28,13 @@ const fixtureData={...d,fixture_coverage_audit:{version:"4.92",updatedAt,dailyUp
 assert.equal(fixtureCheck(row,fixtureData,now).sourceDate,"2026-11-28");
 assert.equal(fixtureCheck(row,fixtureData,now+1800001),null);
 assert.equal(fixtureCheck(row,{...fixtureData,fixture_coverage_audit:{...fixtureData.fixture_coverage_audit,dailyUpdatedAt:"wrong"}},now),null);
+
+const {confirmedRows}=require("../mobile-v487.js");
+const confirmed={...fixtureData,kickoff_confirmation:{version:"4.94",available:true,mode:"research_only",archivesModified:false,decision:"PAS",updatedAt,dailyUpdatedAt:updatedAt,coverageUpdatedAt:updatedAt,oddsUpdatedAt:updatedAt,rows:[{league:"en.1",match:"A – B",date:row.date,kickoff:event.kickoff,oddsEventId:event.id,status:"agreed",published:[{...row,date:"2026-11-26"}]}]},snapshot_integrity:{...fixtureData.snapshot_integrity,reportTimestamps:{...fixtureData.snapshot_integrity.reportTimestamps,"kickoff_confirmation.json":updatedAt}}};
+const cr=confirmedRows(confirmed,now);
+assert.equal(cr.length,1);assert.equal(cr[0].originalDate,"2026-11-26");assert.equal(cr[0].candidate,null);
+assert.equal(confirmedRows(confirmed,now+1800001).length,0);
+assert.equal(confirmedRows({...confirmed,kickoff_confirmation:{...confirmed.kickoff_confirmation,coverageUpdatedAt:"wrong"}},now).length,0);
+assert.equal(confirmedRows({...confirmed,kickoff_confirmation:{...confirmed.kickoff_confirmation,rows:[...confirmed.kickoff_confirmation.rows,...confirmed.kickoff_confirmation.rows]}},now).length,0);
+assert.ok(html.includes('id="fixture-mode"'));
+console.log("Corroborated fixture view and duplicate/stale guards passed");
