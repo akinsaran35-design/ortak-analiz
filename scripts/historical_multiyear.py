@@ -46,7 +46,15 @@ def run(today):
         end=today-timedelta(days=offset)
         report=evaluate(data,end)
         windows.append(dict(asOf=end.isoformat(),metrics=report["metrics"],skipped=report["skipped"]))
-    result=dict(status="research_only",realBettingEnabled=False,independentHoldout=False,attribution="Data from OpenLigaDB (www.openligadb.de)",license="ODbL-1.0",matchCount=len(data),catalogPairs=len(pairs),requestedPairs=len(requested),batchIndex=batch_index,batches=batches,leagueCodeCount=len({r['league'] for r in data}),errors=errors,conflicts=len(conflicts),windows=windows)
+    aggregate={}
+    for k in ("over15","over25","btts"):
+        ms=[w["metrics"][k] for w in windows if k in w["metrics"]]
+        n=sum(m["n"] for m in ms)
+        selected=sum(m["selected"] for m in ms)
+        hits=sum(m["hits"] for m in ms)
+        aggregate[k]=dict(n=n,selected=selected,hits=hits,hitRate=hits/selected if selected else None,brier=sum(m["n"]*m["brier"] for m in ms)/n if n else None,referenceBrier=sum(m["n"]*m["referenceBrier"] for m in ms)/n if n else None)
+    print("Multiyear aggregate:",json.dumps(aggregate))
+    result=dict(aggregate=aggregate,status="research_only",realBettingEnabled=False,independentHoldout=False,attribution="Data from OpenLigaDB (www.openligadb.de)",license="ODbL-1.0",matchCount=len(data),catalogPairs=len(pairs),requestedPairs=len(requested),batchIndex=batch_index,batches=batches,leagueCodeCount=len({r['league'] for r in data}),errors=errors,conflicts=len(conflicts),windows=windows)
     Path("openliga_multiyear.json").write_text(json.dumps(result,indent=2))
     print("Multiyear catalog:",len(pairs),"requested:",len(requested),"batch:",batch_index,"of",batches)
     print("Multiyear archive:",len(data),"errors:",errors,"test counts:",{k:sum(w["metrics"].get(k,{}).get("n",0) for w in windows) for k in ("over15","over25","btts")})
