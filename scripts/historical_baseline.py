@@ -18,10 +18,12 @@ def market_metrics(values):
                 selectionThreshold=0.70,selected=len(selected),hits=hits,
                 hitRate=hits/len(selected) if selected else None)
 
-def evaluate(rows,as_of,weighted=False, window=10, rho=0.0, phase="test"):
+def evaluate(rows,as_of,weighted=False, window=10, rho=0.0, phase="test", strength=False):
     if phase not in ("validation","test") or window not in (5,10,20): raise ValueError("invalid configuration")
     groups,meta=split(rows,as_of)
     history=defaultdict(list)
+    from historical_strength import rates as strength_rates
+    league_totals=defaultdict(lambda:[0,0,0])
     scores=defaultdict(list)
     skipped=0
     for day,batch in groupby(sorted(groups["train"]+groups["validation"]+groups["test"],key=lambda r:r["date"]),key=lambda r:r["date"]):
@@ -42,12 +44,18 @@ def evaluate(rows,as_of,weighted=False, window=10, rho=0.0, phase="test"):
             mu=max(.15,min(4,(avg(a,0)+avg(h,1))/2))
             if weighted_rates is not None:
                 lam,mu=weighted_rates
+            if strength:
+                gh,ga,n=league_totals[r['league']]
+                sr=strength_rates(history[(r['league'],r['home'])],history[(r['league'],r['away'])],(gh+15)/(n+10),(ga+12)/(n+10))
+                if sr is not None: lam,mu=sr
             p=markets(lam,mu,rho)
             x,y=r["ft"]
             for k,o in (("over15",x+y>=2),("over25",x+y>=3),("btts",x>0 and y>0)):
                 scores[k].append((p[k],int(o)))
         for r in batch:
             x,y=r["ft"]
+            totals=league_totals[r["league"]]
+            totals[0]+=x;totals[1]+=y;totals[2]+=1
             history[(r["league"],r["home"])].append((x,y,"home"))
             history[(r["league"],r["away"])].append((y,x,"away"))
     return dict(status="research_only",realBettingEnabled=False,modelCalibrated=False,skipped=skipped,metrics={k:market_metrics(v) for k,v in scores.items()})

@@ -45,6 +45,9 @@ def run(today):
     Path("openliga_pilot.json").write_text(json.dumps(result,indent=2))
     report=evaluate(rows,today)
     weighted=evaluate(rows,today,weighted=True)
+    strength=evaluate(rows,today,strength=True)
+    print("League strength comparison:",strength)
+    Path("openliga_strength.json").write_text(json.dumps(strength,indent=2))
     from historical_tuning import tune
     tuning=tune(rows,today)
     Path("openliga_tuning.json").write_text(json.dumps(tuning,indent=2))
