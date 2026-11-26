@@ -1,5 +1,6 @@
 import unittest
-from match_odds import canonical
+from match_odds import canonical, build_report
+from datetime import datetime, timezone
 class AliasTests(unittest.TestCase):
     def test_aliases(self):
         for a,b in [("FC Bayern München","Bayern Munich"),("SV Werder Bremen","Werder Bremen"),("1. FC Union Berlin","Union Berlin"),("1. FSV Mainz 05","FSV Mainz 05")]:
@@ -22,6 +23,20 @@ class ObservedAliases(unittest.TestCase):
         ]:
             self.assertEqual(canonical(a,league),canonical(b,league))
         self.assertNotEqual(canonical("Sporting Lisbon","soccer_portugal_primeira_liga"),canonical("Braga","soccer_portugal_primeira_liga"))
+
+class ReplayTests(unittest.TestCase):
+    def test_exact_date_and_ambiguity(self):
+        now=datetime(2026,11,26,13,tzinfo=timezone.utc)
+        daily={"candidates":[{"league":"İngiltere Premier Lig","date":"2026-11-28","match":"Everton FC – Liverpool FC"}]}
+        event={"league":"soccer_epl","home":"Everton","away":"Liverpool","kickoff":"2026-11-28T19:00:00Z","id":"one"}
+        self.assertEqual(build_report(daily,{"events":[event]},now)["matchedCount"],1)
+        late=dict(event,kickoff="2026-11-28T22:00:00Z")
+        result=build_report(daily,{"events":[late]},now)
+        self.assertEqual(result["matchedCount"],0)
+        self.assertEqual(result["unmatched"][0]["reason"],"date_mismatch")
+        self.assertEqual(result["unmatched"][0]["providerDates"],["2026-11-29"])
+        self.assertEqual(build_report(daily,{"events":[event,dict(event,id="two")]},now)["unmatched"][0]["reason"],"ambiguous")
+        self.assertEqual(build_report(daily,{"events":[dict(event,league="soccer_efl_champ")]},now)["matchedCount"],0)
 
 if __name__ == "__main__":
     unittest.main()
