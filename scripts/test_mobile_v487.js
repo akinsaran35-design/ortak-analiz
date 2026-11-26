@@ -38,3 +38,17 @@ assert.equal(confirmedRows({...confirmed,kickoff_confirmation:{...confirmed.kick
 assert.equal(confirmedRows({...confirmed,kickoff_confirmation:{...confirmed.kickoff_confirmation,rows:[...confirmed.kickoff_confirmation.rows,...confirmed.kickoff_confirmation.rows]}},now).length,0);
 assert.ok(html.includes('id="fixture-mode"'));
 console.log("Corroborated fixture view and duplicate/stale guards passed");
+
+const {lastKnownSchedule,timeLabel}=require("../mobile-v487.js");
+const history={...d,odds:{...d.odds,source:"The Odds API",region:"uk",errors:[]}};
+const staleNow=now+3600000;
+assert.equal(eventFor(row,history,staleNow),null);
+assert.equal(lastKnownSchedule(row,history,staleNow).kickoff,event.kickoff);
+assert.equal(timeLabel(rowsFor(history,staleNow)[0]),"21:00 TSİ · Son bilinen");
+assert.equal(filterRows(rowsFor(history,staleNow),"","","","evening").length,1);
+assert.equal(lastKnownSchedule(row,history,now+86400001),null);
+assert.equal(lastKnownSchedule(row,history,Date.parse(event.kickoff)),null);
+assert.equal(lastKnownSchedule(row,{...history,odds:{...history.odds,events:[event,event]}},staleNow),null);
+assert.equal(lastKnownSchedule(row,{...history,odds:{...history.odds,errors:["source failed"]}},staleNow),null);
+assert.equal(lastKnownSchedule(row,{...history,odds:{...history.odds,updatedAt:"2026-11-26T14:59:00Z"}},staleNow),null);
+console.log("Last known schedule: stale odds separation, time filters, identity and expiry passed");
