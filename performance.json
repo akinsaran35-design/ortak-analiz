@@ -1,10 +1,8 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-26T16:53:31.851056+03:00",
+  "updatedAt": "2026-11-26T16:56:32.613829+03:00",
   "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
-  "errors": [
-    "İngiltere Championship/2026-27: 'list' object has no attribute 'get'"
-  ],
+  "errors": [],
   "overall": {
     "recorded": 90,
     "settled": 0,

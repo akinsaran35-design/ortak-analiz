@@ -2035,13 +2035,25 @@
             "grosvenor": 0.523936,
             "williamhill": 0.52
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5133,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "leovegas": 0.506667,
+            "casumo": 0.5,
+            "grosvenor": 0.523936,
+            "williamhill": 0.52
+          }
         }
       ],
       "probabilityChange": -0.0148,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 3,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.01454,
       "sameBookStatus": "comparable"
@@ -2444,13 +2456,24 @@
             "leovegas": 0.570681,
             "williamhill": 0.575916
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.6809999999999999,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.577428,
+            "leovegas": 0.562827,
+            "williamhill": 0.575916
+          }
         }
       ],
       "probabilityChange": -0.0184,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 6,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 3,
       "sameBookProbabilityChange": -0.018399,
       "sameBookStatus": "comparable"
@@ -2669,13 +2692,24 @@
             "grosvenor": 0.596401,
             "williamhill": 0.557029
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5594,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.559367,
+            "grosvenor": 0.596401,
+            "williamhill": 0.557029
+          }
         }
       ],
       "probabilityChange": -0.0165,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 3,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 3,
       "sameBookProbabilityChange": -0.016549,
       "sameBookStatus": "comparable"
@@ -2909,13 +2943,25 @@
             "williamhill": 0.442971,
             "matchbook": 0.422886
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4361,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.456,
+            "leovegas": 0.429319,
+            "williamhill": 0.442971,
+            "matchbook": 0.422886
+          }
         }
       ],
       "probabilityChange": -0.0439,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 8,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 3,
       "sameBookProbabilityChange": -0.037029,
       "sameBookStatus": "comparable"
@@ -3136,13 +3182,25 @@
             "williamhill": 0.608696,
             "matchbook": 0.600985
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.6008,
+          "modelProbabilityUncalibrated": 0.611,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.600515,
+            "leovegas": 0.594315,
+            "williamhill": 0.608696,
+            "matchbook": 0.600985
+          }
         }
       ],
       "probabilityChange": 0.0029,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 3,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -3366,13 +3424,26 @@
             "williamhill": 0.536193,
             "matchbook": 0.523077
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.527,
+          "modelProbabilityUncalibrated": 0.5770000000000001,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "grosvenor": 0.552,
+            "leovegas": 0.524194,
+            "casumo": 0.527027,
+            "williamhill": 0.536193,
+            "matchbook": 0.523077
+          }
         }
       ],
       "probabilityChange": -0.0437,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 6,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 3,
       "sameBookProbabilityChange": -0.039723,
       "sameBookStatus": "comparable"
@@ -3591,13 +3662,24 @@
             "leovegas": 0.559367,
             "williamhill": 0.575916
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5594,
+          "modelProbabilityUncalibrated": 0.5710000000000001,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.542553,
+            "leovegas": 0.559367,
+            "williamhill": 0.575916
+          }
         }
       ],
       "probabilityChange": -0.0113,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 3,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -3837,13 +3919,26 @@
             "williamhill": 0.52,
             "matchbook": 0.502577
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.504,
+          "modelProbabilityUncalibrated": 0.5539999999999999,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "grosvenor": 0.521505,
+            "leovegas": 0.504021,
+            "casumo": 0.502717,
+            "williamhill": 0.52,
+            "matchbook": 0.502577
+          }
         }
       ],
       "probabilityChange": -0.0209,
-      "observationCount": 21,
+      "observationCount": 22,
       "distinctProbabilityCount": 4,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 3116.97,
+      "observationSpanMinutes": 3139.06,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.017667,
       "sameBookStatus": "comparable"
@@ -3928,13 +4023,24 @@
             "leovegas": 0.602532,
             "williamhill": 0.608696
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.6087,
+          "modelProbabilityUncalibrated": 0.588,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.613811,
+            "leovegas": 0.602532,
+            "williamhill": 0.608696
+          }
         }
       ],
       "probabilityChange": -0.0051,
-      "observationCount": 7,
+      "observationCount": 8,
       "distinctProbabilityCount": 2,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 2449.25,
+      "observationSpanMinutes": 2471.34,
       "commonBookCount": 2,
       "sameBookProbabilityChange": null,
       "sameBookStatus": "insufficient_data"
@@ -4016,13 +4122,25 @@
             "williamhill": 0.546667,
             "matchbook": 0.53944
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5391,
+          "modelProbabilityUncalibrated": 0.544,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "grosvenor": 0.538667,
+            "leovegas": 0.532982,
+            "williamhill": 0.546667,
+            "matchbook": 0.53944
+          }
         }
       ],
       "probabilityChange": 0.0095,
-      "observationCount": 6,
+      "observationCount": 7,
       "distinctProbabilityCount": 4,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 2336.43,
+      "observationSpanMinutes": 2358.53,
       "commonBookCount": 4,
       "sameBookProbabilityChange": 0.009786,
       "sameBookStatus": "comparable"
@@ -4104,13 +4222,26 @@
             "williamhill": 0.48,
             "matchbook": 0.484536
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4839,
+          "modelProbabilityUncalibrated": 0.469,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "grosvenor": 0.509434,
+            "leovegas": 0.483871,
+            "casumo": 0.478142,
+            "williamhill": 0.48,
+            "matchbook": 0.484536
+          }
         }
       ],
       "probabilityChange": -0.0336,
-      "observationCount": 6,
+      "observationCount": 7,
       "distinctProbabilityCount": 3,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 2336.43,
+      "observationSpanMinutes": 2358.53,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.030482,
       "sameBookStatus": "comparable"
@@ -4144,13 +4275,26 @@
             "williamhill": 0.5,
             "matchbook": 0.488432
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4932,
+          "modelProbabilityUncalibrated": 0.44299999999999995,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "grosvenor": 0.493261,
+            "leovegas": 0.490716,
+            "casumo": 0.493151,
+            "williamhill": 0.5,
+            "matchbook": 0.488432
+          }
         }
       ],
       "probabilityChange": 0.0,
-      "observationCount": 2,
+      "observationCount": 3,
       "distinctProbabilityCount": 1,
       "movementStatus": "unchanged",
-      "observationSpanMinutes": 468.78,
+      "observationSpanMinutes": 490.88,
       "commonBookCount": 5,
       "sameBookProbabilityChange": 0.0,
       "sameBookStatus": "comparable"
@@ -4182,13 +4326,25 @@
             "williamhill": 0.575916,
             "matchbook": 0.567164
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.57,
+          "modelProbabilityUncalibrated": 0.43,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "leovegas": 0.570681,
+            "grosvenor": 0.553525,
+            "williamhill": 0.575916,
+            "matchbook": 0.569307
+          }
         }
       ],
-      "probabilityChange": -0.017,
-      "observationCount": 2,
-      "distinctProbabilityCount": 2,
+      "probabilityChange": -0.0159,
+      "observationCount": 3,
+      "distinctProbabilityCount": 3,
       "movementStatus": "observed_change",
-      "observationSpanMinutes": 468.78,
+      "observationSpanMinutes": 490.88,
       "commonBookCount": 4,
       "sameBookProbabilityChange": -0.012643,
       "sameBookStatus": "comparable"
@@ -4208,16 +4364,28 @@
             "williamhill": 0.5,
             "matchbook": 0.496084
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.498,
+          "modelProbabilityUncalibrated": 0.519,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "casumo": 0.486111,
+            "grosvenor": 0.526882,
+            "williamhill": 0.5,
+            "matchbook": 0.496084
+          }
         }
       ],
-      "probabilityChange": null,
-      "observationCount": 1,
+      "probabilityChange": 0.0,
+      "observationCount": 2,
       "distinctProbabilityCount": 1,
-      "movementStatus": "insufficient_observations",
-      "observationSpanMinutes": 0.0,
-      "commonBookCount": 0,
-      "sameBookProbabilityChange": null,
-      "sameBookStatus": "insufficient_data"
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 4,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
     },
     "ee7e0fb3eb049d403134cefaf634c7d5": {
       "match": "Académico de Viseu FC – FC Alverca",
@@ -4234,16 +4402,28 @@
             "williamhill": 0.48,
             "matchbook": 0.474227
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4771,
+          "modelProbabilityUncalibrated": 0.45299999999999996,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "casumo": 0.461326,
+            "grosvenor": 0.490566,
+            "williamhill": 0.48,
+            "matchbook": 0.474227
+          }
         }
       ],
-      "probabilityChange": null,
-      "observationCount": 1,
+      "probabilityChange": 0.0,
+      "observationCount": 2,
       "distinctProbabilityCount": 1,
-      "movementStatus": "insufficient_observations",
-      "observationSpanMinutes": 0.0,
-      "commonBookCount": 0,
-      "sameBookProbabilityChange": null,
-      "sameBookStatus": "insufficient_data"
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 4,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
     },
     "1ab9541320cecbe9f043565fd4a141e0": {
       "match": "Valencia CF – CA Osasuna",
@@ -4260,16 +4440,28 @@
             "grosvenor": 0.447368,
             "matchbook": 0.412346
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4289,
+          "modelProbabilityUncalibrated": 0.6409999999999999,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "williamhill": 0.428571,
+            "leovegas": 0.429319,
+            "grosvenor": 0.447368,
+            "matchbook": 0.412346
+          }
         }
       ],
-      "probabilityChange": null,
-      "observationCount": 1,
+      "probabilityChange": 0.0,
+      "observationCount": 2,
       "distinctProbabilityCount": 1,
-      "movementStatus": "insufficient_observations",
-      "observationSpanMinutes": 0.0,
-      "commonBookCount": 0,
-      "sameBookProbabilityChange": null,
-      "sameBookStatus": "insufficient_data"
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 4,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
     },
     "9629fcc970336d106d144eaa25cec853": {
       "match": "Liverpool FC – Sunderland AFC",
@@ -4286,16 +4478,28 @@
             "grosvenor": 0.601023,
             "matchbook": 0.594059
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5977,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "williamhill": 0.594315,
+            "leovegas": 0.602564,
+            "grosvenor": 0.601023,
+            "matchbook": 0.594059
+          }
         }
       ],
-      "probabilityChange": null,
-      "observationCount": 1,
+      "probabilityChange": 0.0,
+      "observationCount": 2,
       "distinctProbabilityCount": 1,
-      "movementStatus": "insufficient_observations",
-      "observationSpanMinutes": 0.0,
-      "commonBookCount": 0,
-      "sameBookProbabilityChange": null,
-      "sameBookStatus": "insufficient_data"
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 4,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
     },
     "10abd18165c999264777913e42c9f96c": {
       "match": "Manchester City FC – Leeds United FC",
@@ -4312,16 +4516,28 @@
             "grosvenor": 0.594315,
             "matchbook": 0.605911
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5984,
+          "modelProbabilityUncalibrated": 0.62,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "williamhill": 0.594315,
+            "leovegas": 0.602564,
+            "grosvenor": 0.594315,
+            "matchbook": 0.605911
+          }
         }
       ],
-      "probabilityChange": null,
-      "observationCount": 1,
+      "probabilityChange": 0.0,
+      "observationCount": 2,
       "distinctProbabilityCount": 1,
-      "movementStatus": "insufficient_observations",
-      "observationSpanMinutes": 0.0,
-      "commonBookCount": 0,
-      "sameBookProbabilityChange": null,
-      "sameBookStatus": "insufficient_data"
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 4,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
     },
     "2198fb9aab762e9e1c8c6af4113a1d31": {
       "match": "Aston Villa FC – Everton FC",
@@ -4338,16 +4554,28 @@
             "grosvenor": 0.551181,
             "matchbook": 0.55527
           }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5532,
+          "modelProbabilityUncalibrated": 0.5539999999999999,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "leovegas": 0.550265,
+            "williamhill": 0.557029,
+            "grosvenor": 0.551181,
+            "matchbook": 0.55527
+          }
         }
       ],
-      "probabilityChange": null,
-      "observationCount": 1,
+      "probabilityChange": 0.0,
+      "observationCount": 2,
       "distinctProbabilityCount": 1,
-      "movementStatus": "insufficient_observations",
-      "observationSpanMinutes": 0.0,
-      "commonBookCount": 0,
-      "sameBookProbabilityChange": null,
-      "sameBookStatus": "insufficient_data"
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 4,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
     },
     "5f5235df01a384e23ff224101ff175e1": {
       "match": "Brentford FC – Arsenal FC",
@@ -4364,6 +4592,451 @@
             "williamhill": 0.536193,
             "grosvenor": 0.522546,
             "matchbook": 0.545455
+          }
+        },
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.528,
+          "modelProbabilityUncalibrated": 0.506,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "leovegas": 0.528,
+            "casumo": 0.521858,
+            "williamhill": 0.536193,
+            "grosvenor": 0.522546,
+            "matchbook": 0.545455
+          }
+        }
+      ],
+      "probabilityChange": 0.0,
+      "observationCount": 2,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "unchanged",
+      "observationSpanMinutes": 22.09,
+      "commonBookCount": 5,
+      "sameBookProbabilityChange": 0.0,
+      "sameBookStatus": "comparable"
+    },
+    "abfc6851b152aecbb4bf84a348967f69": {
+      "match": "CS Marítimo – CD Nacional",
+      "kickoff": "2026-11-27T20:15:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4638,
+          "modelProbabilityUncalibrated": 0.46299999999999997,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.47043,
+            "williamhill": 0.463807,
+            "matchbook": 0.45641
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "aaa86a483888836242da663a46957894": {
+      "match": "Le Mans FC – Lille OSC",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4709,
+          "modelProbabilityUncalibrated": 0.531,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.464191,
+            "grosvenor": 0.470899,
+            "williamhill": 0.48
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "3348c02fd713356ec319779bd5edc561": {
+      "match": "Vitória Guimarães – CF Estrela da Amadora",
+      "kickoff": "2026-11-28T20:30:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5245,
+          "modelProbabilityUncalibrated": 0.531,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "casumo": 0.513889,
+            "williamhill": 0.536193,
+            "grosvenor": 0.520216,
+            "matchbook": 0.528796
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "24b99950496c624f7124922fc1bda8bd": {
+      "match": "Angers SCO – Racing Club de Lens",
+      "kickoff": "2026-11-28T16:15:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.506,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.575916,
+            "grosvenor": 0.589744,
+            "williamhill": 0.575916
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "4adcfcfea85a2d5dbbd487aa2a9fd9c3": {
+      "match": "Moreirense FC – CD Santa Clara",
+      "kickoff": "2026-11-28T15:30:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4057,
+          "modelProbabilityUncalibrated": 0.469,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "grosvenor": 0.421053,
+            "williamhill": 0.405685,
+            "matchbook": 0.402985
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "ca8aa566e27e1d05b47e8151b2066f9a": {
+      "match": "Olympique Lyonnais – AS Monaco FC",
+      "kickoff": "2026-11-29T19:45:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4919,
+          "modelProbabilityUncalibrated": 0.706,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "leovegas": 0.483871,
+            "casumo": 0.478142,
+            "grosvenor": 0.513298,
+            "williamhill": 0.5
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "71c08940a73e9f42d503449f052a1bdf": {
+      "match": "Toulouse FC – Stade Rennais FC 1901",
+      "kickoff": "2026-11-29T16:15:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5759,
+          "modelProbabilityUncalibrated": 0.688,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.570681,
+            "grosvenor": 0.587629,
+            "williamhill": 0.575916
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "f892ea6d5eca105c36ca9468b12857f2": {
+      "match": "Real Sociedad de Fútbol – Sevilla FC",
+      "kickoff": "2026-11-29T20:00:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5376,
+          "modelProbabilityUncalibrated": 0.679,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "williamhill": 0.539474,
+            "leovegas": 0.535809,
+            "grosvenor": 0.534392,
+            "matchbook": 0.540404
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "3876ad367184af2f8fc04a544fc894aa": {
+      "match": "Como 1907 – Juventus FC",
+      "kickoff": "2026-11-29T19:45:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.528,
+          "modelProbabilityUncalibrated": 0.66,
+          "bookCount": 5,
+          "bookProbabilities": {
+            "leovegas": 0.528,
+            "casumo": 0.521858,
+            "grosvenor": 0.543536,
+            "williamhill": 0.536193,
+            "matchbook": 0.524173
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "dc63586a1b1d938a461d71bf5b36d982": {
+      "match": "US Sassuolo Calcio – SSC Napoli",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.6187,
+          "modelProbabilityUncalibrated": 0.599,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.602564,
+            "grosvenor": 0.618687,
+            "williamhill": 0.625
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "20c78c2ef75c4a6d7f4af81dd32e97cd": {
+      "match": "RC Celta de Vigo – Villarreal CF",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5351,
+          "modelProbabilityUncalibrated": 0.5770000000000001,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "williamhill": 0.515873,
+            "leovegas": 0.535809,
+            "grosvenor": 0.534392,
+            "matchbook": 0.546835
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "e2c82af8f115ac10036b905eb29e4f37": {
+      "match": "FC Porto – Sporting Clube de Portugal",
+      "kickoff": "2026-11-29T20:30:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4933,
+          "modelProbabilityUncalibrated": 0.5539999999999999,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "casumo": 0.488827,
+            "williamhill": 0.52,
+            "grosvenor": 0.493261
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "a370db12aaff183a94f8e9a6acb6d4c9": {
+      "match": "AJ Auxerre – Olympique de Marseille",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5943,
+          "modelProbabilityUncalibrated": 0.542,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.592784,
+            "grosvenor": 0.601023,
+            "williamhill": 0.594315
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "d3d47b94324eb7cde85bd93993437d1c": {
+      "match": "Udinese Calcio – ACF Fiorentina",
+      "kickoff": "2026-11-29T11:30:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5579,
+          "modelProbabilityUncalibrated": 0.469,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "leovegas": 0.559367,
+            "grosvenor": 0.557895,
+            "williamhill": 0.546667
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "588984eaf08b356b49055b534cef52e6": {
+      "match": "Gil Vicente FC – GD Estoril Praia",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.4888,
+          "modelProbabilityUncalibrated": 0.41700000000000004,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "casumo": 0.488827,
+            "williamhill": 0.5,
+            "grosvenor": 0.47043
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "61b7d270b965f9804d2d2ed500f41214": {
+      "match": "Casa Pia AC – Sporting Clube de Braga",
+      "kickoff": "2026-11-30T20:15:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5,
+          "modelProbabilityUncalibrated": 0.5660000000000001,
+          "bookCount": 3,
+          "bookProbabilities": {
+            "casumo": 0.488827,
+            "williamhill": 0.5,
+            "grosvenor": 0.509434
+          }
+        }
+      ],
+      "probabilityChange": null,
+      "observationCount": 1,
+      "distinctProbabilityCount": 1,
+      "movementStatus": "insufficient_observations",
+      "observationSpanMinutes": 0.0,
+      "commonBookCount": 0,
+      "sameBookProbabilityChange": null,
+      "sameBookStatus": "insufficient_data"
+    },
+    "28546d4aefd5efb320c2d2ceee11b66d": {
+      "match": "AFC Bournemouth – Brighton & Hove Albion FC",
+      "kickoff": "2026-12-02T20:15:00+00:00",
+      "observations": [
+        {
+          "observedAt": "2026-11-26T13:56:16.095781+00:00",
+          "marketProbability": 0.5553,
+          "modelProbabilityUncalibrated": 0.5660000000000001,
+          "bookCount": 4,
+          "bookProbabilities": {
+            "leovegas": 0.555556,
+            "williamhill": 0.557029,
+            "grosvenor": 0.554974,
+            "matchbook": 0.551899
           }
         }
       ],
