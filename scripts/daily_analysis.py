@@ -31,16 +31,7 @@ def team_name(value):
     return ""
 
 
-def matches_in(data):
-    if isinstance(data, list):
-        return data
-    if not isinstance(data, dict):
-        return []
-    if isinstance(data.get("matches"), list):
-        return data["matches"]
-    return [match for rnd in data.get("rounds", []) if isinstance(rnd, dict)
-            for match in rnd.get("matches", []) if isinstance(match, dict)]
-
+from fixture_schema import matches_in
 
 def final_score(match):
     score = match.get("score")
