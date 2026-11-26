@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  const files = ["daily.json","odds.json","data_quality.json","prospective_validation.json","unified_decision.json"];
+  const files = ["daily.json","odds.json","data_quality.json","prospective_validation.json","unified_decision.json","matching.json"];
   const integer = n => Number.isInteger(n) && n >= 0 ? n : null;
   const fresh = (v, now) => {
     const t = Date.parse(v);
@@ -8,7 +8,7 @@
   };
   const dateTR = t => new Intl.DateTimeFormat("sv-SE",{timeZone:"Europe/Istanbul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date(t));
   function summarize(data, now) {
-    const [daily, odds, quality, validation, decision] = files.map(f=>data[f] || {});
+    const [daily, odds, quality, validation, decision, matching] = files.map(f=>data[f] || {});
     const today = dateTR(now);
     const upcoming = Array.isArray(daily.upcoming) ? daily.upcoming : [];
     const weekend = {"2026-11-28":0,"2026-11-29":0};
@@ -27,7 +27,11 @@
     const trEvents=trQueried&&Array.isArray(odds.events)?odds.events.filter(x=>x?.league===sport).length:null;
     const turkey={results:integer(trDiagnostic?.completedMatches),fixtureScope:trDiagnostic?.fixtureScope||null,oddsEvents:trEvents,
       oddsStatus:trInactive?"inactive":!trQueried?"unverified":!fresh(odds.updatedAt,now)?"stale":"snapshot"};
-    return {today, weekend, missing, stale, healthy, turkey, dailyDate:daily.date || null,
+    const matched=integer(matching.matchedCount), unmatched=integer(matching.unmatchedCount);
+    const mismatch=Array.isArray(matching.unmatched)?matching.unmatched.filter(x=>x?.reason==="date_mismatch"):[];
+    const matchConsistent=matched!==null && unmatched!==null && matched+unmatched===integer(daily.candidateCount) && Array.isArray(matching.unmatched) && matching.unmatched.length===unmatched;
+    const coverage={matched,unmatched,mismatch,consistent:matchConsistent,current:matchConsistent&&fresh(matching.updatedAt,now)&&fresh(odds.updatedAt,now)};
+    return {today, weekend, missing, stale, healthy, turkey, coverage, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
       fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
@@ -42,7 +46,7 @@
   panel.className="card";
   panel.id="weekendReadiness";
   const h=document.createElement("h2");
-  h.textContent="Ortak Analiz V4.47 — Hafta sonu hazırlığı";
+  h.textContent="Ortak Analiz V4.58 — Hafta sonu hazırlığı";
   const out=document.createElement("div");
   out.setAttribute("aria-live","polite");
   const button=document.createElement("button");
@@ -79,6 +83,20 @@
       line("Fikstür kaynağı: "+val(r.leagues)+" lig • Bugün: "+val(r.fixtures));
       line(r.fixtureCoverageComplete?"Yapılandırılan kaynakların iki sezonu okundu.":"Fikstür kapsamı eksik veya henüz doğrulanmadı.","note");
       line("Oran raporu: "+val(r.events)+" etkinlik • Son bildirilen API kredisi: "+val(r.credits));
+      const cov=r.coverage;
+      line("Eşleşen aday: "+val(cov.matched)+" • Eşleşmeyen: "+val(cov.unmatched)+" • "+(cov.current?"Güncel rapor":"Eski veya doğrulanmamış rapor"));
+      if(cov.consistent && cov.mismatch.length){
+        const detail=document.createElement("details");
+        const summary=document.createElement("summary");
+        summary.textContent="Tarih uyuşmazlığı: "+cov.mismatch.length+" maç (analiz dışında)";
+        detail.append(summary);
+        for(const m of cov.mismatch){
+          const item=document.createElement("p");
+          item.textContent=(m.match||"")+" · "+(m.league||"")+" · Fikstür: "+(m.date||"?")+" · Oran kaynağı: "+(Array.isArray(m.providerDates)?m.providerDates.join(", "):"?");
+          detail.append(item);
+        }
+        out.append(detail);
+      }
       const tr=r.turkey;
       const labels={inactive:"Sağlayıcıda etkin değil",unverified:"Henüz doğrulanmadı",stale:"Eski veri",snapshot:"Güncel anlık görüntü"};
       line("Türkiye Süper Lig: "+val(tr.results)+" geçmiş sonuç • Oran kaydı: "+val(tr.oddsEvents)+" • "+labels[tr.oddsStatus]);
