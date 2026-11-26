@@ -31,7 +31,10 @@
     const mismatch=Array.isArray(matching.unmatched)?matching.unmatched.filter(x=>x?.reason==="date_mismatch"):[];
     const matchConsistent=matched!==null && unmatched!==null && matched+unmatched===integer(daily.candidateCount) && Array.isArray(matching.unmatched) && matching.unmatched.length===unmatched;
     const coverage={matched,unmatched,mismatch,consistent:matchConsistent,current:matchConsistent&&fresh(matching.updatedAt,now)&&fresh(odds.updatedAt,now)};
-    return {today, weekend, missing, stale, healthy, turkey, coverage, dailyDate:daily.date || null,
+    const calendar=data["fixture_reconciliation.json"]||{};
+    const calendarCurrent=calendar.status==="research_only" && calendar.oddsFresh===true && fresh(calendar.updatedAt,now) && fresh(odds.updatedAt,now) && calendar.oddsUpdatedAt===odds.updatedAt && calendar.dailyUpdatedAt===daily.updatedAt && typeof daily.updatedAt==="string" && typeof odds.updatedAt==="string";
+    const reconciliation={current:calendarCurrent,matched:calendarCurrent?integer(calendar.reconciledMatched):null,corrections:calendarCurrent&&Array.isArray(calendar.proposedCorrections)?calendar.proposedCorrections.length:null,dates:calendarCurrent?calendar.candidateCountsByDate||{}:{}};
+    return {today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
       fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
@@ -46,7 +49,7 @@
   panel.className="card";
   panel.id="weekendReadiness";
   const h=document.createElement("h2");
-  h.textContent="Ortak Analiz V4.58 — Hafta sonu hazırlığı";
+  h.textContent="Ortak Analiz V4.60 — Hafta sonu hazırlığı";
   const out=document.createElement("div");
   out.setAttribute("aria-live","polite");
   const button=document.createElement("button");
@@ -67,7 +70,7 @@
     line("Raporlar kontrol ediliyor…");
     const data={};
     try {
-      await Promise.all(files.map(async f=>{
+      await Promise.all([...files,"fixture_reconciliation.json"].map(async f=>{
         try {
           const response=await fetch("./"+f+"?ts="+Date.now(),{cache:"no-store"});
           if(!response.ok) return;
@@ -97,6 +100,12 @@
         }
         out.append(detail);
       }
+      const cal=r.reconciliation;
+      if(cal.current){
+        line("Tarih düzeltme araştırması: "+val(cal.matched)+" eşleşen aday • "+val(cal.corrections)+" önerilen düzeltme");
+        line("Düzeltilmiş araştırma adayları: 28 Kasım "+val(integer(cal.dates["2026-11-28"]??0))+" • 29 Kasım "+val(integer(cal.dates["2026-11-29"]??0))+" (fikstür toplamı değildir)","note");
+      } else line("Tarih düzeltme araştırması: güncel ve aynı veri setine ait rapor bekleniyor.","note");
+      line("Araştırma tarihleri ana fikstür veya arşive uygulanmadı.","note");
       const tr=r.turkey;
       const labels={inactive:"Sağlayıcıda etkin değil",unverified:"Henüz doğrulanmadı",stale:"Eski veri",snapshot:"Güncel anlık görüntü"};
       line("Türkiye Süper Lig: "+val(tr.results)+" geçmiş sonuç • Oran kaydı: "+val(tr.oddsEvents)+" • "+labels[tr.oddsStatus]);

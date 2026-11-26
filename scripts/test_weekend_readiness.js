@@ -32,3 +32,10 @@ assert.equal(summarize(matchData,now).coverage.current,true);
 assert.equal(summarize(matchData,now+1800001).coverage.current,false);
 assert.equal(summarize({...matchData,"daily.json":{...matchData["daily.json"],candidateCount:3}},now).coverage.consistent,false);
 assert.equal(summarize({},now).coverage.matched,null);
+
+const calData={...matchData,"fixture_reconciliation.json":{updatedAt,status:"research_only",oddsFresh:true,dailyUpdatedAt:updatedAt,oddsUpdatedAt:updatedAt,reconciledMatched:2,proposedCorrections:[{}],candidateCountsByDate:{"2026-11-29":2}}};
+assert.equal(summarize(calData,now).reconciliation.matched,2);
+assert.equal(summarize(calData,now).reconciliation.corrections,1);
+assert.equal(summarize(calData,now+1800001).reconciliation.current,false);
+assert.equal(summarize({...calData,"odds.json":{updatedAt:new Date(now-1000).toISOString()}},now).reconciliation.current,false);
+assert.equal(summarize(matchData,now).reconciliation.current,false);
