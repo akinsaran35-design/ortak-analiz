@@ -1,7 +1,9 @@
-name: V5.14 periodic football source snapshot pilot
+name: V5.15 live observation quality pilot
 on:
   pull_request:
     paths:
+      - 'scripts/live_analysis_quality.py'
+      - 'scripts/test_live_analysis_quality.py'
       - 'scripts/live_refresh_snapshot.py'
       - 'scripts/test_live_refresh_snapshot.py'
       - 'scripts/live_statistics_pilot.py'
@@ -26,11 +28,15 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/test_live_refresh_snapshot.py
+      - run: python scripts/test_live_analysis_quality.py
       - run: python scripts/live_refresh_snapshot.py
+      - run: python scripts/live_analysis_quality.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: live-refresh-snapshot
-          path: live_refresh_snapshot.json
+          path: |
+            live_refresh_snapshot.json
+            live_analysis_quality.json
           if-no-files-found: warn
           retention-days: 1
