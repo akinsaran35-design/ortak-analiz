@@ -1,6 +1,7 @@
 """Apply corroborated results only to existing, strictly pre-match records."""
 import json
-from datetime import date,datetime
+from datetime import date,datetime,timedelta
+from urllib.parse import urlparse
 from pathlib import Path
 
 def load_verified(root,now=None):
@@ -15,7 +16,18 @@ def load_verified(root,now=None):
     multi=Path(root)/"multi_league_results.json"
     if now is not None and multi.exists():
         from multi_league_results import verified_rows as multi_verified_rows
-        rows=rows+multi_verified_rows(json.loads(multi.read_text(encoding="utf-8")),now)
+        report=json.loads(multi.read_text(encoding="utf-8"))
+        rows=rows+multi_verified_rows(report,now)
+        from multi_league_results import APPROVED,source_urls
+        blocked=set()
+        if report.get("version")=="4.69" and timedelta(0)<=now-datetime.fromisoformat(report["updatedAt"])<=timedelta(minutes=30):
+            for g in report["groups"]:
+                code,day=g["league"],g["date"]
+                if code not in APPROVED or g["errors"] or g["sources"]!=list(source_urls(code,day)): continue
+                for item in g["rows"]:
+                    if item["date"]==day and item["status"] in ("conflict","archive_conflict","ambiguous"):
+                        blocked.add((day,code,item["home"],item["away"]))
+        rows=[row for row in rows if (row["date"],row["league"],row["home"],row["away"]) not in blocked]
     return rows
 
 def settle_verified(records,rows,now,league_codes=None):
@@ -29,10 +41,11 @@ def settle_verified(records,rows,now,league_codes=None):
             result=row["result"]
             sources=row["sources"]
             if not isinstance(result,list) or len(result)!=2 or not all(type(x) is int and x>=0 for x in result): continue
-            if not isinstance(sources,list) or len(set(sources))<2 or not all(isinstance(s,str) and s.startswith("https://") for s in sources): continue
+            if not isinstance(sources,list) or not all(isinstance(s,str) and s.startswith("https://") and urlparse(s).hostname for s in sources): continue
+            if len({urlparse(s).hostname for s in sources})<2: continue
             if ident in found and found[ident]["result"]!=result: conflicts.add(ident)
             found[ident]=row
-        except (ValueError,TypeError,KeyError): continue
+        except (ValueError,TypeError,KeyError,AttributeError): continue
     settled=0
     for record in records.values():
         try:
@@ -49,5 +62,5 @@ def settle_verified(records,rows,now,league_codes=None):
             record["settledAt"]=now.isoformat()
             record["resultSources"]=list(row["sources"])
             settled+=1
-        except (ValueError,TypeError,KeyError): continue
+        except (ValueError,TypeError,KeyError,AttributeError): continue
     return settled
