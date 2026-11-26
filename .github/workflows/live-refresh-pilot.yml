@@ -1,4 +1,4 @@
-name: V5.19 live observation and performance research
+name: V5.20 live publication verification
 on:
   pull_request:
     paths:
@@ -16,6 +16,11 @@ on:
       - 'scripts/scoreboard_snapshot.py'
       - '.github/workflows/live-refresh-pilot.yml'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-refresh-pilot.yml'
+      - 'scripts/live_*py'
   schedule:
     # Staggered 15-minute pilot during European football hours (13:07-02:52 TRT).
     - cron: '7,22,37,52 10-23 * * *'
@@ -41,6 +46,11 @@ jobs:
       - run: python scripts/live_refresh_snapshot.py
       - run: python scripts/live_analysis_quality.py
       - run: python scripts/live_rate_link.py
+      - name: Exercise publication archive CLI without writing remote data
+        run: |
+          mkdir -p /tmp/oa-publication-check
+          python scripts/live_performance_research.py live_rate_link.json /tmp/oa-publication-check/archive.json verified_results.json /tmp/oa-publication-check/performance.json
+          python -c 'import json; from pathlib import Path; p=Path("/tmp/oa-publication-check"); a=json.loads((p/"archive.json").read_text()); r=json.loads((p/"performance.json").read_text()); assert r["recorded"]==len(a) and r["predictionsEnabled"] is False and r["modelCalibrated"] is False'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -49,7 +59,7 @@ jobs:
             live_refresh_snapshot.json
             live_analysis_quality.json
             live_rate_link.json
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 1
   publish:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -85,3 +95,9 @@ jobs:
             git commit -m "Update live observations and research archive"
             git push origin HEAD:live-data
           fi
+          git fetch origin live-data
+          test "$(git rev-parse HEAD)" = "$(git rev-parse FETCH_HEAD)"
+          for f in live_analysis_quality.json live_scenario_archive.json live_performance_research.json; do
+            git show FETCH_HEAD:"$f" | cmp - "$f"
+          done
+          echo "Verified remote publication: $(git rev-parse FETCH_HEAD)"
