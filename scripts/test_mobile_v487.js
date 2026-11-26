@@ -71,3 +71,10 @@ assert.equal(researchFor(row,modelData,now+86400001),null);
 assert.equal(researchFor(row,{...modelData,model_research:{...modelData.model_research,sourceUpdatedAt:"wrong"}},now),null);
 assert.equal(researchFor(row,{...modelData,model_research:{...modelData.model_research,rows:[modelRow,modelRow]}},now),null);
 console.log("Manifest-bound model research lookup passed");
+
+const {historicalStatsFor}=require("../mobile-v487.js");
+const statsRow={...row,home:{sample:0},away:{sample:0}};
+const statsData={...history,football_statistics_pilot:{version:"5.09",updatedAt,dailyUpdatedAt:updatedAt,source:"football-data.co.uk",mode:"descriptive_research",predictionsEnabled:false,realBettingEnabled:false,groups:[{leagueName:row.league,error:null,rows:[statsRow]}]},snapshot_integrity:{...history.snapshot_integrity,reportTimestamps:{...history.snapshot_integrity.reportTimestamps,"football_statistics_pilot.json":updatedAt}}};
+assert.deepEqual(historicalStatsFor(row,statsData,now),statsRow);
+assert.equal(historicalStatsFor(row,statsData,now+86400001),null);
+assert.equal(historicalStatsFor(row,{...statsData,football_statistics_pilot:{...statsData.football_statistics_pilot,dailyUpdatedAt:"wrong"}},now),null);

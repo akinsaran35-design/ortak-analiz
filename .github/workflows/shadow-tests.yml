@@ -262,6 +262,10 @@ jobs:
           python scripts/test_kickoff_confirmation.py
           python scripts/kickoff_confirmation.py
           python scripts/model_research.py
+          python scripts/test_football_statistics_pilot.py
+          python scripts/test_football_coverage_pilot.py
+          python scripts/football_statistics_pilot.py --allow-empty
+          python scripts/football_coverage_pilot.py --allow-empty
           python scripts/snapshot_integrity.py
 
       - name: V4.85 prospective three-market research

@@ -3,14 +3,14 @@ import json
 from pathlib import Path
 from datetime import datetime,timezone
 
-FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research")
+FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot","football_coverage_pilot")
 
 def audit(data):
     errors=[]
     def check(ok,label):
         if not ok: errors.append(label)
     try:
-        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status,league_report,board,fixture_audit,kickoff,models=(data[k] for k in FILES)
+        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status,league_report,board,fixture_audit,kickoff,models,statistics,coverage=(data[k] for k in FILES)
         check(d["candidateCount"]==len(d["candidates"]),"candidate_count")
         check(d["upcomingCount"]==len(d["upcoming"]),"fixture_count")
         check(o["eventCount"]==len(o["events"]),"odds_count")
@@ -60,6 +60,10 @@ def audit(data):
         check(kickoff==build_kickoff(d,fixture_audit,o,datetime.fromisoformat(kickoff["updatedAt"])),"kickoff_recompute")
         from model_research import build as build_models
         check(models==build_models(d,datetime.fromisoformat(models["updatedAt"])),"model_research_recompute")
+        from football_statistics_pilot import audit_report as audit_statistics
+        from football_coverage_pilot import audit_report as audit_coverage
+        check(audit_statistics(d,statistics),"football_statistics_integrity")
+        check(audit_coverage(coverage),"football_coverage_integrity")
         check(u["testedMatches"]==n,"decision_validation_count")
         check(u["decision"]=="PAS" and u["realBettingEnabled"] is False and u["selections"]==[] and v["liveEnabled"] is False,"research_lock")
     except (KeyError,TypeError,ValueError,AttributeError) as exc:
