@@ -1,0 +1,1646 @@
+{
+  "version": "4.92",
+  "updatedAt": "2026-11-26T19:07:29.079324+03:00",
+  "dailyUpdatedAt": "2026-11-26T19:07:13+03:00",
+  "mode": "research_only",
+  "dates": [
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
+  ],
+  "source": "ESPN",
+  "sourceGroups": 27,
+  "healthyGroups": 27,
+  "counts": {
+    "published_only": 15,
+    "same_date": 52,
+    "espn_only": 13,
+    "date_difference": 15
+  },
+  "rows": [
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "1. FC Köln – SV 07 Elversberg"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "Borussia Dortmund – Bayer 04 Leverkusen"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401884727",
+          "kickoff": "2026-11-29T18:30:00+00:00",
+          "match": "Borussia Dortmund – Bayer Leverkusen"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "de.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401884721",
+          "kickoff": "2026-11-28T14:30:00+00:00",
+          "match": "FC Cologne – SV Elversberg"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "SC Freiburg – RB Leipzig"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401884724",
+          "kickoff": "2026-11-29T14:30:00+00:00",
+          "match": "SC Freiburg – RB Leipzig"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "1. FSV Mainz 05 – 1. FC Union Berlin"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "de.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401884722",
+          "kickoff": "2026-11-28T14:30:00+00:00",
+          "match": "Hamburg SV – Bayern Munich"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "Hamburger SV – FC Bayern München"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "de.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401884723",
+          "kickoff": "2026-11-28T14:30:00+00:00",
+          "match": "Mainz – 1. FC Union Berlin"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "SC Paderborn 07 – FC Schalke 04"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401884719",
+          "kickoff": "2026-11-28T14:30:00+00:00",
+          "match": "SC Paderborn 07 – Schalke 04"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "TSG 1899 Hoffenheim – FC Augsburg"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401884725",
+          "kickoff": "2026-11-29T16:30:00+00:00",
+          "match": "TSG Hoffenheim – FC Augsburg"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "VfB Stuttgart – Eintracht Frankfurt"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401884726",
+          "kickoff": "2026-11-28T17:30:00+00:00",
+          "match": "VfB Stuttgart – Eintracht Frankfurt"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "de.1",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Almanya Bundesliga",
+          "match": "SV Werder Bremen – Borussia Mönchengladbach"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401884720",
+          "kickoff": "2026-11-27T19:30:00+00:00",
+          "match": "Werder Bremen – Borussia Mönchengladbach"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Arsenal FC – Manchester City FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401878753",
+          "kickoff": "2026-11-29T16:30:00+00:00",
+          "match": "Arsenal – Manchester City"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Brighton & Hove Albion FC – Newcastle United FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401879231",
+          "kickoff": "2026-11-29T14:05:00+00:00",
+          "match": "Brighton & Hove Albion – Newcastle United"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Crystal Palace FC – Hull City AFC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401879230",
+          "kickoff": "2026-11-29T14:05:00+00:00",
+          "match": "Crystal Palace – Hull City"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Everton FC – Liverpool FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401879229",
+          "kickoff": "2026-11-29T12:00:00+00:00",
+          "match": "Everton – Liverpool"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Fulham FC – AFC Bournemouth"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401879228",
+          "kickoff": "2026-11-29T14:05:00+00:00",
+          "match": "Fulham – AFC Bournemouth"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Ipswich Town FC – Aston Villa FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401878752",
+          "kickoff": "2026-11-28T17:30:00+00:00",
+          "match": "Ipswich Town – Aston Villa"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Leeds United FC – Coventry City FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401879227",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Leeds United – Coventry City"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Manchester United FC – Brentford FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401879226",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Manchester United – Brentford"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Nottingham Forest FC – Chelsea FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401879225",
+          "kickoff": "2026-11-27T20:00:00+00:00",
+          "match": "Nottingham Forest – Chelsea"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Sunderland AFC – Tottenham Hotspur FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401879224",
+          "kickoff": "2026-11-29T14:05:00+00:00",
+          "match": "Sunderland – Tottenham Hotspur"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Birmingham City FC – Bolton Wanderers FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880136",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Birmingham City – Bolton Wanderers"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Blackburn Rovers FC – Charlton Athletic FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880135",
+          "kickoff": "2026-11-28T12:30:00+00:00",
+          "match": "Blackburn Rovers – Charlton Athletic"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Derby County FC – Watford FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880134",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Derby County – Watford"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Lincoln City FC – Wolverhampton Wanderers FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880133",
+          "kickoff": "2026-11-28T12:30:00+00:00",
+          "match": "Lincoln City – Wolverhampton Wanderers"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Millwall FC – Burnley FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880132",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Millwall – Burnley"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Preston North End FC – Norwich City FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880131",
+          "kickoff": "2026-11-28T12:30:00+00:00",
+          "match": "Preston North End – Norwich City"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Queens Park Rangers FC – Sheffield United FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880130",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Queens Park Rangers – Sheffield United"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "İngiltere Championship",
+          "match": "Southampton FC – Middlesbrough FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401880129",
+          "kickoff": "2026-11-27T20:00:00+00:00",
+          "match": "Southampton – Middlesbrough"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İngiltere Championship",
+          "match": "Swansea City AFC – Cardiff City FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401880128",
+          "kickoff": "2026-11-29T12:00:00+00:00",
+          "match": "Swansea City – Cardiff City"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "West Bromwich Albion FC – Bristol City FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880127",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "West Bromwich Albion – Bristol City"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "West Ham United FC – Stoke City FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880126",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "West Ham United – Stoke City"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "en.2",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Wrexham AFC – Portsmouth FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401880125",
+          "kickoff": "2026-11-28T15:00:00+00:00",
+          "match": "Wrexham – Portsmouth"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "RC Celta de Vigo – Villarreal CF"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401882795",
+          "kickoff": "2026-11-29T17:30:00+00:00",
+          "match": "Celta Vigo – Villarreal"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "es.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401882794",
+          "kickoff": "2026-11-29T15:15:00+00:00",
+          "match": "Deportivo – Barcelona"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "RC Deportivo La Coruña – FC Barcelona"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Elche CF – Club Atlético de Madrid"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401882793",
+          "kickoff": "2026-11-28T17:30:00+00:00",
+          "match": "Elche – Atlético Madrid"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "RCD Espanyol de Barcelona – Getafe CF"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "es.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401882791",
+          "kickoff": "2026-11-27T20:00:00+00:00",
+          "match": "Levante – Racing Santander"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Levante UD – Real Racing Club de Santander"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Málaga CF – Athletic Club"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401882790",
+          "kickoff": "2026-11-28T15:15:00+00:00",
+          "match": "Málaga – Athletic Club"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Real Betis Balompié – Rayo Vallecano de Madrid"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401882796",
+          "kickoff": "2026-11-28T13:00:00+00:00",
+          "match": "Real Betis – Rayo Vallecano"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Real Madrid CF – Deportivo Alavés"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401882789",
+          "kickoff": "2026-11-28T20:00:00+00:00",
+          "match": "Real Madrid – Alavés"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Real Sociedad de Fútbol – Sevilla FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401882788",
+          "kickoff": "2026-11-29T20:00:00+00:00",
+          "match": "Real Sociedad – Sevilla"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "es.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Valencia CF – CA Osasuna"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "es.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401882787",
+          "kickoff": "2026-11-29T13:00:00+00:00",
+          "match": "Valencia – Osasuna"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "fr.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401876394",
+          "kickoff": "2026-11-28T16:15:00+00:00",
+          "match": "Angers – Lens"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Angers SCO – Racing Club de Lens"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "AJ Auxerre – Olympique de Marseille"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401876393",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "match": "AJ Auxerre – Marseille"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Fransa Ligue 1",
+          "match": "Stade Brestois 29 – Paris FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401876392",
+          "kickoff": "2026-11-27T19:45:00+00:00",
+          "match": "Brest – Paris FC"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Le Havre AC – RC Strasbourg Alsace"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401876391",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "match": "Le Havre AC – Strasbourg"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Le Mans FC – Lille OSC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401876390",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "match": "Le Mans – Lille"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "Olympique Lyonnais – AS Monaco FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401876389",
+          "kickoff": "2026-11-29T19:45:00+00:00",
+          "match": "Lyon – AS Monaco"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "fr.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401876388",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "match": "Nice – Troyes"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "OGC Nice – ES Troyes AC"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Paris Saint-Germain FC – FC Lorient"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401876387",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "match": "Paris Saint-Germain – Lorient"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "fr.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "Toulouse FC – Stade Rennais FC 1901"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401876386",
+          "kickoff": "2026-11-29T16:15:00+00:00",
+          "match": "Toulouse – Stade Rennais"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "AS Roma – AC Monza"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401874769",
+          "kickoff": "2026-11-29T17:00:00+00:00",
+          "match": "AS Roma – Monza"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Cagliari Calcio – AC Milan"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Como 1907 – Juventus FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401874994",
+          "kickoff": "2026-11-29T19:45:00+00:00",
+          "match": "Como – Juventus"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Frosinone Calcio – Parma Calcio 1913"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401875081",
+          "kickoff": "2026-11-28T14:00:00+00:00",
+          "match": "Frosinone – Parma"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "FC Internazionale Milano – Genoa CFC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401874977",
+          "kickoff": "2026-11-28T19:45:00+00:00",
+          "match": "Internazionale – Genoa"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "US Lecce – Atalanta BC"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "US Sassuolo Calcio – SSC Napoli"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401874992",
+          "kickoff": "2026-11-29T14:00:00+00:00",
+          "match": "Sassuolo – Napoli"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Torino FC – SS Lazio"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401874826",
+          "kickoff": "2026-11-28T17:00:00+00:00",
+          "match": "Torino – Lazio"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Udinese Calcio – ACF Fiorentina"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401875031",
+          "kickoff": "2026-11-29T11:30:00+00:00",
+          "match": "Udinese – Fiorentina"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "it.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Venezia FC – Bologna FC 1909"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401875004",
+          "kickoff": "2026-11-27T19:45:00+00:00",
+          "match": "Venezia – Bologna"
+        }
+      ],
+      "status": "date_difference"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "ADO Den Haag – FC Utrecht"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401875538",
+          "kickoff": "2026-11-29T11:15:00+00:00",
+          "match": "ADO Den Haag – FC Utrecht"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "SC Cambuur-Leeuwarden – Sparta Rotterdam"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401875530",
+          "kickoff": "2026-11-28T20:00:00+00:00",
+          "match": "SC Cambuur – Sparta Rotterdam"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "SBV Excelsior – Telstar 1963"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401875537",
+          "kickoff": "2026-11-28T15:30:00+00:00",
+          "match": "Excelsior – Telstar"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "Feyenoord Rotterdam – AFC Ajax"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401875535",
+          "kickoff": "2026-11-29T13:30:00+00:00",
+          "match": "Feyenoord Rotterdam – Ajax Amsterdam"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "Fortuna Sittard – SC Heerenveen"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401875534",
+          "kickoff": "2026-11-29T13:30:00+00:00",
+          "match": "Fortuna Sittard – Heerenveen"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Hollanda Eredivisie",
+          "match": "FC Groningen – Willem II Tilburg"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401875536",
+          "kickoff": "2026-11-27T19:00:00+00:00",
+          "match": "FC Groningen – Willem II"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401875533",
+          "kickoff": "2026-11-29T19:00:00+00:00",
+          "match": "NEC Nijmegen – FC Twente"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "NEC – FC Twente '65"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "PSV – Go Ahead Eagles"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401875531",
+          "kickoff": "2026-11-28T17:45:00+00:00",
+          "match": "PSV Eindhoven – Go Ahead Eagles"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "nl.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "PEC Zwolle – AZ"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401875532",
+          "kickoff": "2026-11-29T15:45:00+00:00",
+          "match": "PEC Zwolle – AZ Alkmaar"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Académico de Viseu FC – FC Alverca"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401885393",
+          "kickoff": "2026-11-28T18:00:00+00:00",
+          "match": "Académico de Viseu – Alverca"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "FC Arouca – Rio Ave FC"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401885392",
+          "kickoff": "2026-11-28T15:30:00+00:00",
+          "match": "Arouca – Rio Ave"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Portekiz Primeira Liga",
+          "match": "CS Marítimo – CD Nacional"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Portekiz Primeira Liga",
+          "match": "Gil Vicente FC – GD Estoril Praia"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401885390",
+          "kickoff": "2026-11-29T18:00:00+00:00",
+          "match": "Gil Vicente – Estoril"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "pt.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401885389",
+          "kickoff": "2026-11-27T20:15:00+00:00",
+          "match": "Maritimo – C.D. Nacional"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Moreirense FC – CD Santa Clara"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401885388",
+          "kickoff": "2026-11-28T15:30:00+00:00",
+          "match": "Moreirense – Santa Clara"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Portekiz Primeira Liga",
+          "match": "FC Porto – Sporting Clube de Portugal"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401885387",
+          "kickoff": "2026-11-29T20:30:00+00:00",
+          "match": "FC Porto – Sporting CP"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "pt.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Vitória Guimarães – CF Estrela da Amadora"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401885385",
+          "kickoff": "2026-11-28T20:30:00+00:00",
+          "match": "Vitória de Guimaraes – Estrela"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "tr.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401888241",
+          "kickoff": "2026-11-27T17:00:00+00:00",
+          "match": "Alanyaspor – Konyaspor"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "tr.1",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Türkiye Süper Lig",
+          "match": "alanyaspor – torku konyaspor"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "tr.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "corum – kocaelispor"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401888367",
+          "kickoff": "2026-11-29T10:30:00+00:00",
+          "match": "Çorum FK – Kocaelispor"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "tr.1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "eyupspor – basaksehir"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401888242",
+          "kickoff": "2026-11-29T13:00:00+00:00",
+          "match": "Eyupspor – Istanbul Basaksehir"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "tr.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-29",
+          "eventId": "401888238",
+          "kickoff": "2026-11-29T16:00:00+00:00",
+          "match": "Fenerbahce – Erzurum BB"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "tr.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401888368",
+          "kickoff": "2026-11-28T16:00:00+00:00",
+          "match": "Gaziantep FK – Amed SFK"
+        }
+      ],
+      "status": "espn_only"
+    },
+    {
+      "league": "tr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Türkiye Süper Lig",
+          "match": "gazisehir gaziantep – amed"
+        }
+      ],
+      "espn": [],
+      "status": "published_only"
+    },
+    {
+      "league": "tr.1",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Türkiye Süper Lig",
+          "match": "rizespor – kasimpasa"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-27",
+          "eventId": "401888240",
+          "kickoff": "2026-11-27T17:00:00+00:00",
+          "match": "Caykur Rizespor – Kasimpasa"
+        }
+      ],
+      "status": "same_date"
+    },
+    {
+      "league": "tr.1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Türkiye Süper Lig",
+          "match": "samsunspor – genclerbirligi"
+        }
+      ],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401888236",
+          "kickoff": "2026-11-28T13:00:00+00:00",
+          "match": "Samsunspor – Genclerbirligi"
+        }
+      ],
+      "status": "same_date"
+    }
+  ],
+  "decision": "PAS",
+  "archivesModified": false
+}
