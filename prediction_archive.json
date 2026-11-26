@@ -388,5 +388,57 @@
       "KG Var": 46.8
     },
     "result": null
+  },
+  "[\"2026-11-28\", \"İngiltere Premier Lig\", \"Sunderland AFC – Tottenham Hotspur FC\"]": {
+    "date": "2026-11-28",
+    "league": "İngiltere Premier Lig",
+    "match": "Sunderland AFC – Tottenham Hotspur FC",
+    "recordedAt": "2026-11-26T08:45:30.559361+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 72.3,
+      "2.5 Üst": 46.9,
+      "KG Var": 51.8
+    },
+    "result": null
+  },
+  "[\"2026-11-28\", \"İngiltere Championship\", \"Blackburn Rovers FC – Charlton Athletic FC\"]": {
+    "date": "2026-11-28",
+    "league": "İngiltere Championship",
+    "match": "Blackburn Rovers FC – Charlton Athletic FC",
+    "recordedAt": "2026-11-26T08:45:30.559361+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 70.2,
+      "2.5 Üst": 44.3,
+      "KG Var": 49.0
+    },
+    "result": null
+  },
+  "[\"2026-11-28\", \"İngiltere Premier Lig\", \"Leeds United FC – Coventry City FC\"]": {
+    "date": "2026-11-28",
+    "league": "İngiltere Premier Lig",
+    "match": "Leeds United FC – Coventry City FC",
+    "recordedAt": "2026-11-26T08:45:30.559361+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 69.2,
+      "2.5 Üst": 43.0,
+      "KG Var": 37.7
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Levante UD – Real Racing Club de Santander\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Levante UD – Real Racing Club de Santander",
+    "recordedAt": "2026-11-26T08:45:30.559361+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 90.7,
+      "2.5 Üst": 76.0,
+      "KG Var": 69.4
+    },
+    "result": null
   }
 }

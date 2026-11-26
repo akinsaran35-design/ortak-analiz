@@ -1,91 +1,91 @@
 {
   "version": "2.1",
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "modelCalibrated": false,
   "markets": {
     "1.5 Üst": {
-      "tested": 1670,
-      "accuracy": 82.75,
-      "averagePrediction": 77.85,
-      "actualRate": 82.87,
-      "brierScore": 0.146,
+      "tested": 1663,
+      "accuracy": 82.68,
+      "averagePrediction": 77.86,
+      "actualRate": 82.8,
+      "brierScore": 0.1464,
       "validation": {
         "cutoff": "2026-04-21",
-        "train": 1163,
+        "train": 1156,
         "test": 507,
         "rawBrier": 0.143608,
-        "calibratedBrier": 0.140719,
-        "baselineBrier": 0.140858,
+        "calibratedBrier": 0.140725,
+        "baselineBrier": 0.140864,
         "improvesBoth": true,
         "trainingBinProbabilities": [
-          0.828030954428203,
-          0.828030954428203,
-          0.828030954428203,
-          0.828030954428203,
-          0.8436645040256391,
-          0.8292545803293869,
-          0.7969697868176833,
-          0.822304873269723,
-          0.8427692390369733,
-          0.8502469555480014
+          0.8269896193771625,
+          0.8269896193771625,
+          0.8269896193771625,
+          0.8269896193771625,
+          0.8427178357974205,
+          0.8284535533670481,
+          0.7954152249134948,
+          0.8210752813236021,
+          0.842017471720949,
+          0.8497626136637966
         ],
         "status": "experimental_holdout"
       }
     },
     "2.5 Üst": {
-      "tested": 1670,
-      "accuracy": 56.35,
-      "averagePrediction": 55.03,
+      "tested": 1663,
+      "accuracy": 56.34,
+      "averagePrediction": 55.04,
       "actualRate": 57.49,
-      "brierScore": 0.247,
+      "brierScore": 0.2469,
       "validation": {
         "cutoff": "2026-04-21",
-        "train": 1163,
+        "train": 1156,
         "test": 507,
         "rawBrier": 0.239829,
-        "calibratedBrier": 0.237617,
-        "baselineBrier": 0.23984,
+        "calibratedBrier": 0.237603,
+        "baselineBrier": 0.239852,
         "improvesBoth": true,
         "trainingBinProbabilities": [
-          0.5554600171969045,
-          0.5554600171969045,
-          0.5699652323451343,
-          0.5277526361044486,
-          0.501946326977438,
-          0.5581713169821966,
-          0.596199304334279,
-          0.6212563428723675,
-          0.5878833476640871,
-          0.5554600171969045
+          0.5553633217993079,
+          0.5553633217993079,
+          0.5698811493907026,
+          0.5214302191464821,
+          0.503548930884571,
+          0.5575242419683522,
+          0.596867601529776,
+          0.6212291047321995,
+          0.5878027681660899,
+          0.5553633217993079
         ],
         "status": "experimental_holdout"
       }
     },
     "KG Var": {
-      "tested": 1670,
-      "accuracy": 56.59,
+      "tested": 1663,
+      "accuracy": 56.58,
       "averagePrediction": 55.98,
-      "actualRate": 59.58,
+      "actualRate": 59.59,
       "brierScore": 0.2442,
       "validation": {
         "cutoff": "2026-04-21",
-        "train": 1163,
+        "train": 1156,
         "test": 507,
         "rawBrier": 0.237446,
-        "calibratedBrier": 0.236424,
-        "baselineBrier": 0.236359,
+        "calibratedBrier": 0.236403,
+        "baselineBrier": 0.236353,
         "improvesBoth": false,
         "trainingBinProbabilities": [
-          0.5838349097162511,
-          0.6036522949678582,
-          0.5946390519271748,
-          0.5530901998615858,
-          0.5634380321346079,
-          0.5936786047441851,
-          0.5802396818572657,
-          0.5976735508363211,
-          0.6036522949678582,
-          0.5838349097162511
+          0.5839100346020761,
+          0.6037238424781678,
+          0.5947043779148489,
+          0.5531268461473542,
+          0.5639454572807965,
+          0.5933075097133814,
+          0.5807490587800047,
+          0.59770189984984,
+          0.6037238424781678,
+          0.5839100346020761
         ],
         "status": "experimental_holdout"
       }
@@ -101,7 +101,7 @@
     {
       "league": "en.2",
       "completed": 609,
-      "tested": 403,
+      "tested": 396,
       "errors": []
     },
     {
@@ -139,34 +139,34 @@
           "oldBrier": 0.154835,
           "weightedBrier": 0.153193,
           "ensembleBrier": 0.153756,
-          "oldCalibratedBrier": 0.152662,
-          "weightedCalibratedBrier": 0.151518,
-          "ensembleCalibratedBrier": 0.152743,
-          "baselineBrier": 0.151986
+          "oldCalibratedBrier": 0.152619,
+          "weightedCalibratedBrier": 0.151493,
+          "ensembleCalibratedBrier": 0.152715,
+          "baselineBrier": 0.151944
         },
         {
           "start": "2026-04-07",
-          "endExclusive": "2026-04-28",
-          "tested": 179,
-          "oldBrier": 0.137746,
-          "weightedBrier": 0.136201,
-          "ensembleBrier": 0.136769,
-          "oldCalibratedBrier": 0.132201,
-          "weightedCalibratedBrier": 0.131823,
-          "ensembleCalibratedBrier": 0.13211,
-          "baselineBrier": 0.13225
+          "endExclusive": "2026-05-01",
+          "tested": 180,
+          "oldBrier": 0.137218,
+          "weightedBrier": 0.135647,
+          "ensembleBrier": 0.136229,
+          "oldCalibratedBrier": 0.13169,
+          "weightedCalibratedBrier": 0.131268,
+          "ensembleCalibratedBrier": 0.131548,
+          "baselineBrier": 0.131726
         },
         {
-          "start": "2026-04-28",
+          "start": "2026-05-01",
           "endExclusive": "2026-05-23",
-          "tested": 165,
-          "oldBrier": 0.138986,
-          "weightedBrier": 0.139668,
-          "ensembleBrier": 0.139072,
-          "oldCalibratedBrier": 0.136435,
-          "weightedCalibratedBrier": 0.137142,
-          "ensembleCalibratedBrier": 0.136635,
-          "baselineBrier": 0.136915
+          "tested": 164,
+          "oldBrier": 0.139572,
+          "weightedBrier": 0.140297,
+          "ensembleBrier": 0.139678,
+          "oldCalibratedBrier": 0.13708,
+          "weightedCalibratedBrier": 0.137863,
+          "ensembleCalibratedBrier": 0.137319,
+          "baselineBrier": 0.137583
         },
         {
           "start": "2026-05-23",
@@ -175,22 +175,22 @@
           "oldBrier": 0.150879,
           "weightedBrier": 0.148088,
           "ensembleBrier": 0.149198,
-          "oldCalibratedBrier": 0.149079,
-          "weightedCalibratedBrier": 0.149871,
-          "ensembleCalibratedBrier": 0.148871,
-          "baselineBrier": 0.148895
+          "oldCalibratedBrier": 0.149067,
+          "weightedCalibratedBrier": 0.149866,
+          "ensembleCalibratedBrier": 0.148851,
+          "baselineBrier": 0.148876
         },
         {
           "start": "2026-09-02",
-          "endExclusive": "2026-11-25",
+          "endExclusive": "2026-11-26",
           "tested": 145,
           "oldBrier": 0.142336,
           "weightedBrier": 0.142628,
           "ensembleBrier": 0.142215,
-          "oldCalibratedBrier": 0.142149,
-          "weightedCalibratedBrier": 0.142381,
-          "ensembleCalibratedBrier": 0.141346,
-          "baselineBrier": 0.142689
+          "oldCalibratedBrier": 0.142139,
+          "weightedCalibratedBrier": 0.142361,
+          "ensembleCalibratedBrier": 0.141321,
+          "baselineBrier": 0.142688
         }
       ],
       "status": "research_only"
@@ -204,34 +204,34 @@
           "oldBrier": 0.249081,
           "weightedBrier": 0.250688,
           "ensembleBrier": 0.249385,
-          "oldCalibratedBrier": 0.249725,
-          "weightedCalibratedBrier": 0.250275,
-          "ensembleCalibratedBrier": 0.250306,
-          "baselineBrier": 0.25102
+          "oldCalibratedBrier": 0.249779,
+          "weightedCalibratedBrier": 0.250203,
+          "ensembleCalibratedBrier": 0.250363,
+          "baselineBrier": 0.251015
         },
         {
           "start": "2026-04-07",
-          "endExclusive": "2026-04-28",
-          "tested": 179,
-          "oldBrier": 0.234512,
-          "weightedBrier": 0.232652,
-          "ensembleBrier": 0.233175,
-          "oldCalibratedBrier": 0.23742,
-          "weightedCalibratedBrier": 0.237367,
-          "ensembleCalibratedBrier": 0.238123,
-          "baselineBrier": 0.241593
+          "endExclusive": "2026-05-01",
+          "tested": 180,
+          "oldBrier": 0.234258,
+          "weightedBrier": 0.232298,
+          "ensembleBrier": 0.232872,
+          "oldCalibratedBrier": 0.237319,
+          "weightedCalibratedBrier": 0.237091,
+          "ensembleCalibratedBrier": 0.237846,
+          "baselineBrier": 0.241358
         },
         {
-          "start": "2026-04-28",
+          "start": "2026-05-01",
           "endExclusive": "2026-05-23",
-          "tested": 165,
-          "oldBrier": 0.236321,
-          "weightedBrier": 0.237082,
-          "ensembleBrier": 0.236214,
-          "oldCalibratedBrier": 0.238525,
-          "weightedCalibratedBrier": 0.241399,
-          "ensembleCalibratedBrier": 0.239486,
-          "baselineBrier": 0.245193
+          "tested": 164,
+          "oldBrier": 0.236611,
+          "weightedBrier": 0.237498,
+          "ensembleBrier": 0.236565,
+          "oldCalibratedBrier": 0.238808,
+          "weightedCalibratedBrier": 0.241763,
+          "ensembleCalibratedBrier": 0.239853,
+          "baselineBrier": 0.245519
         },
         {
           "start": "2026-05-23",
@@ -240,22 +240,22 @@
           "oldBrier": 0.249877,
           "weightedBrier": 0.2429,
           "ensembleBrier": 0.245821,
-          "oldCalibratedBrier": 0.243957,
-          "weightedCalibratedBrier": 0.238739,
-          "ensembleCalibratedBrier": 0.240998,
-          "baselineBrier": 0.241969
+          "oldCalibratedBrier": 0.243958,
+          "weightedCalibratedBrier": 0.238905,
+          "ensembleCalibratedBrier": 0.241005,
+          "baselineBrier": 0.241971
         },
         {
           "start": "2026-09-02",
-          "endExclusive": "2026-11-25",
+          "endExclusive": "2026-11-26",
           "tested": 145,
           "oldBrier": 0.231204,
           "weightedBrier": 0.226824,
           "ensembleBrier": 0.228494,
-          "oldCalibratedBrier": 0.230183,
-          "weightedCalibratedBrier": 0.229719,
-          "ensembleCalibratedBrier": 0.228871,
-          "baselineBrier": 0.232073
+          "oldCalibratedBrier": 0.230073,
+          "weightedCalibratedBrier": 0.229669,
+          "ensembleCalibratedBrier": 0.228703,
+          "baselineBrier": 0.232078
         }
       ],
       "status": "research_only"
@@ -269,34 +269,34 @@
           "oldBrier": 0.246832,
           "weightedBrier": 0.242499,
           "ensembleBrier": 0.2442,
-          "oldCalibratedBrier": 0.240431,
-          "weightedCalibratedBrier": 0.240049,
-          "ensembleCalibratedBrier": 0.239076,
-          "baselineBrier": 0.240181
+          "oldCalibratedBrier": 0.240414,
+          "weightedCalibratedBrier": 0.240099,
+          "ensembleCalibratedBrier": 0.239138,
+          "baselineBrier": 0.240177
         },
         {
           "start": "2026-04-07",
-          "endExclusive": "2026-04-28",
-          "tested": 179,
-          "oldBrier": 0.235152,
-          "weightedBrier": 0.232411,
-          "ensembleBrier": 0.233484,
-          "oldCalibratedBrier": 0.237163,
-          "weightedCalibratedBrier": 0.234546,
-          "ensembleCalibratedBrier": 0.237013,
-          "baselineBrier": 0.236813
+          "endExclusive": "2026-05-01",
+          "tested": 180,
+          "oldBrier": 0.234811,
+          "weightedBrier": 0.231978,
+          "ensembleBrier": 0.233098,
+          "oldCalibratedBrier": 0.236725,
+          "weightedCalibratedBrier": 0.234082,
+          "ensembleCalibratedBrier": 0.236518,
+          "baselineBrier": 0.236448
         },
         {
-          "start": "2026-04-28",
+          "start": "2026-05-01",
           "endExclusive": "2026-05-23",
-          "tested": 165,
-          "oldBrier": 0.230389,
-          "weightedBrier": 0.235901,
-          "ensembleBrier": 0.232753,
-          "oldCalibratedBrier": 0.242498,
-          "weightedCalibratedBrier": 0.240555,
-          "ensembleCalibratedBrier": 0.243319,
-          "baselineBrier": 0.242282
+          "tested": 164,
+          "oldBrier": 0.230734,
+          "weightedBrier": 0.236398,
+          "ensembleBrier": 0.233172,
+          "oldCalibratedBrier": 0.243001,
+          "weightedCalibratedBrier": 0.240843,
+          "ensembleCalibratedBrier": 0.243709,
+          "baselineBrier": 0.242738
         },
         {
           "start": "2026-05-23",
@@ -305,22 +305,22 @@
           "oldBrier": 0.249441,
           "weightedBrier": 0.242525,
           "ensembleBrier": 0.245518,
-          "oldCalibratedBrier": 0.246982,
-          "weightedCalibratedBrier": 0.245627,
-          "ensembleCalibratedBrier": 0.245947,
-          "baselineBrier": 0.245445
+          "oldCalibratedBrier": 0.24697,
+          "weightedCalibratedBrier": 0.24583,
+          "ensembleCalibratedBrier": 0.245883,
+          "baselineBrier": 0.245449
         },
         {
           "start": "2026-09-02",
-          "endExclusive": "2026-11-25",
+          "endExclusive": "2026-11-26",
           "tested": 145,
           "oldBrier": 0.23544,
           "weightedBrier": 0.231874,
           "ensembleBrier": 0.233289,
-          "oldCalibratedBrier": 0.227546,
-          "weightedCalibratedBrier": 0.226734,
-          "ensembleCalibratedBrier": 0.227718,
-          "baselineBrier": 0.226758
+          "oldCalibratedBrier": 0.227562,
+          "weightedCalibratedBrier": 0.226776,
+          "ensembleCalibratedBrier": 0.227755,
+          "baselineBrier": 0.226744
         }
       ],
       "status": "research_only"
@@ -331,17 +331,17 @@
       "tested": 803,
       "folds": 5,
       "bestModel": "ensembleCalibratedBrier",
-      "bestBrier": 0.142192,
+      "bestBrier": 0.142186,
       "baselineBrier": 0.142345,
-      "improvement": 0.000153,
+      "improvement": 0.000159,
       "winningFolds": 4,
       "scores": {
         "oldBrier": 0.144916,
         "weightedBrier": 0.143949,
         "ensembleBrier": 0.144181,
-        "oldCalibratedBrier": 0.142328,
-        "weightedCalibratedBrier": 0.142276,
-        "ensembleCalibratedBrier": 0.142192
+        "oldCalibratedBrier": 0.142326,
+        "weightedCalibratedBrier": 0.142282,
+        "ensembleCalibratedBrier": 0.142186
       },
       "status": "research_only",
       "liveEnabled": false
@@ -351,16 +351,16 @@
       "folds": 5,
       "bestModel": "weightedBrier",
       "bestBrier": 0.238389,
-      "baselineBrier": 0.242936,
-      "improvement": 0.004547,
+      "baselineBrier": 0.242946,
+      "improvement": 0.004556,
       "winningFolds": 4,
       "scores": {
         "oldBrier": 0.240103,
         "weightedBrier": 0.238389,
         "ensembleBrier": 0.238756,
-        "oldCalibratedBrier": 0.240283,
-        "weightedCalibratedBrier": 0.240124,
-        "ensembleCalibratedBrier": 0.240094
+        "oldCalibratedBrier": 0.24031,
+        "weightedCalibratedBrier": 0.24013,
+        "ensembleCalibratedBrier": 0.240089
       },
       "status": "candidate",
       "liveEnabled": false
@@ -370,16 +370,16 @@
       "folds": 5,
       "bestModel": "weightedBrier",
       "bestBrier": 0.23698,
-      "baselineBrier": 0.238231,
-      "improvement": 0.001251,
+      "baselineBrier": 0.238233,
+      "improvement": 0.001253,
       "winningFolds": 3,
       "scores": {
         "oldBrier": 0.239186,
         "weightedBrier": 0.23698,
-        "ensembleBrier": 0.237688,
-        "oldCalibratedBrier": 0.238788,
-        "weightedCalibratedBrier": 0.237362,
-        "ensembleCalibratedBrier": 0.238472
+        "ensembleBrier": 0.237687,
+        "oldCalibratedBrier": 0.238783,
+        "weightedCalibratedBrier": 0.23736,
+        "ensembleCalibratedBrier": 0.238445
       },
       "status": "research_only",
       "liveEnabled": false
