@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-26T05:45:26.448140+00:00",
+  "updatedAt": "2026-11-26T13:34:15.560307+00:00",
   "decision": "PAS",
   "matchedCount": 21,
   "unmatchedCount": 9,
@@ -12,10 +12,16 @@
       "freshLineCount": 1
     },
     {
+      "match": "rizespor – kasimpasa",
+      "eventId": "b50ce64bf9ca7a1a03eb6b9d534e93ce",
+      "kickoff": "2026-11-27T17:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
       "match": "Southampton FC – Middlesbrough FC",
       "eventId": "32b8e3ea76d9d8b2b36577063d40862e",
       "kickoff": "2026-11-27T20:00:00+00:00",
-      "freshLineCount": 1
+      "freshLineCount": 2
     },
     {
       "match": "Stade Brestois 29 – Paris FC",
@@ -45,7 +51,7 @@
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 3
     },
     {
       "match": "VfB Stuttgart – Eintracht Frankfurt",
@@ -93,13 +99,19 @@
       "match": "Queens Park Rangers FC – Sheffield United FC",
       "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 5
     },
     {
       "match": "Millwall FC – Burnley FC",
       "eventId": "3f93526d7c8e0ca84734aea60c13900a",
       "kickoff": "2026-11-28T15:00:00+00:00",
       "freshLineCount": 3
+    },
+    {
+      "match": "samsunspor – genclerbirligi",
+      "eventId": "f0f0492939c4f06ff9a4f1b9334d510f",
+      "kickoff": "2026-11-28T13:00:00+00:00",
+      "freshLineCount": 2
     },
     {
       "match": "West Bromwich Albion FC – Bristol City FC",
@@ -114,27 +126,35 @@
       "freshLineCount": 4
     },
     {
-      "match": "Derby County FC – Watford FC",
-      "eventId": "82ef491ed2f8399e4ccec9f5d8315cee",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 5
-    },
-    {
-      "match": "Blackburn Rovers FC – Charlton Athletic FC",
-      "eventId": "a1d96ec37a8b7022ef39a7755a655243",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 5
-    },
-    {
-      "match": "Leeds United FC – Coventry City FC",
-      "eventId": "0bc17a3c7d8153e72b94688960cc603a",
-      "kickoff": "2026-11-28T15:00:00+00:00",
+      "match": "FC Arouca – Rio Ave FC",
+      "eventId": "d583b1676d961c26794a3ccedf7edffb",
+      "kickoff": "2026-11-28T15:30:00+00:00",
       "freshLineCount": 4
     }
   ],
   "unmatched": [
     {
+      "match": "FC Groningen – Willem II Tilburg",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "CS Marítimo – CD Nacional",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "PSV – Go Ahead Eagles",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "SC Cambuur-Leeuwarden – Sparta Rotterdam",
+      "reason": "no_exact_match"
+    },
+    {
       "match": "Everton FC – Liverpool FC",
+      "reason": "no_exact_match"
+    },
+    {
+      "match": "SBV Excelsior – Telstar 1963",
       "reason": "no_exact_match"
     },
     {
@@ -142,31 +162,11 @@
       "reason": "no_exact_match"
     },
     {
+      "match": "Vitória Guimarães – CF Estrela da Amadora",
+      "reason": "no_exact_match"
+    },
+    {
       "match": "Arsenal FC – Manchester City FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Nottingham Forest FC – Chelsea FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Angers SCO – Racing Club de Lens",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Fulham FC – AFC Bournemouth",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Brighton & Hove Albion FC – Newcastle United FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Sunderland AFC – Tottenham Hotspur FC",
-      "reason": "no_exact_match"
-    },
-    {
-      "match": "Levante UD – Real Racing Club de Santander",
       "reason": "no_exact_match"
     }
   ],
