@@ -72,7 +72,7 @@ jobs:
       - name: Test V4.14 dashboard
         run: |
           node --check dashboard-v414.js
-          grep -F 'src="./dashboard-v414.js"' index.html
+          grep -F 'src="./dashboard-v414.js"' legacy.html
 
       - name: Test V4.17 calibration
         run: python scripts/test_calibration.py
@@ -136,7 +136,7 @@ jobs:
         run: |
           node --check weekend-readiness.js
           node scripts/test_weekend_readiness.js
-          grep -F 'src="./weekend-readiness.js"' index.html
+          grep -F 'src="./weekend-readiness.js"' legacy.html
 
       - name: V4.48 fixture coverage tests
         run: python scripts/test_daily_coverage.py
@@ -262,3 +262,9 @@ jobs:
         run: |
           python scripts/test_prospective_markets.py
           python -m py_compile scripts/prospective_validation.py
+
+      - name: V4.87 clean mobile regression
+        run: |
+          node --check mobile-v487.js
+          node scripts/test_mobile_v487.js
+          grep -F 'src="./mobile-v487.js"' index.html
