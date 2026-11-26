@@ -140,3 +140,8 @@ jobs:
 
       - name: V4.48 fixture coverage tests
         run: python scripts/test_daily_coverage.py
+
+      - name: V4.50 league configuration tests
+        run: |
+          python -m py_compile scripts/league_config.py scripts/daily_analysis.py scripts/fetch_odds.py scripts/match_odds.py scripts/backtest.py scripts/track_performance.py scripts/shadow_results.py
+          python scripts/test_league_config.py

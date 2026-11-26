@@ -9,7 +9,7 @@ today = now.date()
 daily = json.loads((root/"daily.json").read_text(encoding="utf-8"))
 archive = root/"prediction_archive.json"
 records = json.loads(archive.read_text(encoding="utf-8")) if archive.exists() else {}
-leagues = {"İngiltere Premier Lig":"en.1","İngiltere Championship":"en.2","Almanya Bundesliga":"de.1","İspanya La Liga":"es.1","İtalya Serie A":"it.1","Fransa Ligue 1":"fr.1"}
+from league_config import FIXTURE_CODES as leagues
 markets = ["1.5 Üst","2.5 Üst","KG Var"]
 def key(d,l,m):
     return json.dumps([d,l,m],ensure_ascii=False)

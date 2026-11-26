@@ -6,8 +6,8 @@ from urllib.error import HTTPError
 from datetime import datetime, timezone
 from pathlib import Path
 
-LEAGUES = ["soccer_epl", "soccer_efl_champ", "soccer_germany_bundesliga",
-           "soccer_spain_la_liga", "soccer_italy_serie_a", "soccer_france_ligue_one"]
+from league_config import ODDS_CODES
+LEAGUES = list(ODDS_CODES.values())
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
 # Reuse only a complete, recent snapshot; never change its original timestamp.
@@ -18,6 +18,7 @@ try:
     age = (now - stamp).total_seconds()
     if (0 <= age < 1200 and cached.get("source") == "The Odds API"
             and cached.get("region") == "uk" and cached.get("market") == "totals"
+            and cached.get("configuredLeagues") == LEAGUES
             and cached.get("errors") == [] and isinstance(cached.get("events"), list)
             and cached["events"]):
         print("Reusing recent odds snapshot; no API requests.")
@@ -26,7 +27,8 @@ except (OSError, ValueError, TypeError, KeyError, AttributeError):
     pass
 report = {"version": "3.7", "updatedAt": now.isoformat(), "source": "The Odds API",
           "region": "uk", "market": "totals", "events": [], "errors": [],
-          "remainingCredits": None, "decision": "PAS"}
+          "remainingCredits": None, "decision": "PAS",
+          "configuredLeagues": LEAGUES, "queriedLeagues": [], "inactiveLeagues": []}
 def request(path, params):
     url = "https://api.the-odds-api.com/v4/" + path + "?" + urllib.parse.urlencode({"apiKey": key, **params})
     with urllib.request.urlopen(url, timeout=20) as response:
@@ -46,12 +48,14 @@ else:
         report["errors"].append("connection_error")
     for league in LEAGUES:
         if league not in active:
+            report["inactiveLeagues"].append(league)
             continue
         if report["remainingCredits"] is None or report["remainingCredits"] <= 20:
             report["errors"].append("quota_guard")
             break
         try:
             events = request(f"sports/{league}/odds/", {"regions": "uk", "markets": "totals", "oddsFormat": "decimal"})
+            report["queriedLeagues"].append(league)
             for event in events:
                 kickoff = datetime.fromisoformat(event["commence_time"].replace("Z", "+00:00"))
                 if kickoff <= now:

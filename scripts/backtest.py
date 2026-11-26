@@ -6,7 +6,8 @@ from datetime import date, timedelta
 from pathlib import Path
 
 BASE = "https://raw.githubusercontent.com/openfootball/football.json/master"
-LEAGUES = ["en.1", "en.2", "de.1", "es.1", "it.1", "fr.1"]
+from league_config import FIXTURE_CODES
+LEAGUES = list(FIXTURE_CODES.values())
 MARKETS = ["1.5 Üst", "2.5 Üst", "KG Var"]
 
 today = date.today()

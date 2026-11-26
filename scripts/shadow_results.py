@@ -3,7 +3,7 @@ import urllib.request
 from datetime import datetime, timezone, timedelta
 from shadow_performance import load, save, stamp
 
-LEAGUES = {"soccer_epl":"en.1","soccer_efl_champ":"en.2","soccer_germany_bundesliga":"de.1","soccer_spain_la_liga":"es.1","soccer_italy_serie_a":"it.1","soccer_france_ligue_one":"fr.1"}
+from league_config import RESULT_CODES as LEAGUES
 def norm(s):
     if isinstance(s, dict):
         s = s.get("name") or s.get("code") or ""

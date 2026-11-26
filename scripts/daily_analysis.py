@@ -12,11 +12,7 @@ now = datetime.now(TR)
 today = now.date()
 year = today.year if today.month >= 7 else today.year - 1
 seasons = [f"{y}-{str(y+1)[-2:]}" for y in (year, year-1)]
-LEAGUES = {
-    "İngiltere Premier Lig": "en.1", "İngiltere Championship": "en.2",
-    "Almanya Bundesliga": "de.1", "İspanya La Liga": "es.1",
-    "İtalya Serie A": "it.1", "Fransa Ligue 1": "fr.1",
-}
+from league_config import FIXTURE_CODES as LEAGUES
 BASE = "https://raw.githubusercontent.com/openfootball/football.json/master"
 
 
