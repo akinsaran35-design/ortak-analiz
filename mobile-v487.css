@@ -135,3 +135,23 @@ body{max-width:480px}.top{padding:13px 14px;background:var(--bg)}
 .detail-hero .team-crest{width:66px;height:66px}
 .detail-hero .team-label{font-size:clamp(12px,3.5vw,15px);overflow-wrap:anywhere;word-break:normal}
 @media(max-width:350px){.match-open .team-crest{width:34px;height:34px;flex-basis:34px}.detail-hero .team-crest{width:56px;height:56px}}
+
+/* Expanded research center: signals remain neutral until a verified model exists. */
+.sport-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 10px}
+.sport-switch button{min-height:39px;border:1px solid var(--line);border-radius:9px;background:var(--panel);font-size:13px;font-weight:650;color:var(--muted)}
+.sport-switch button[aria-pressed=true]{border-color:var(--accent);color:var(--accent);background:var(--sub)}
+#detail-content .detail-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}
+#detail-content .detail-tabs button{min-width:0;white-space:normal;font-size:11px;padding:6px 2px;line-height:1.2}
+.overview-panel h3:not(:first-child){margin-top:16px}
+.overview-panel .metric b{font-size:20px;font-variant-numeric:tabular-nums}
+.overview-panel .metric small{font-size:11px}
+.radar-signals{border-color:var(--line);background:var(--panel)}
+.radar-signals .signal-line{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:11px 0;font-size:13px}
+.signal-line strong{font-size:11px;text-align:right;color:var(--muted);font-weight:600}
+.signal-line span{display:flex;align-items:center;gap:8px;min-width:0}
+.signal-line span:before{content:"";width:8px;height:8px;border:1px solid var(--muted);border-radius:50%;flex:none}
+.radar-signals .metrics .metric{border:1px solid var(--line)}
+.return-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.return-calc .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.return-calc .metric strong{display:block;font-size:16px;font-variant-numeric:tabular-nums}
+@media(max-width:350px){#detail-content .detail-tabs button{font-size:10px}.overview-panel .metric b{font-size:16px}}
