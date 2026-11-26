@@ -32,32 +32,7 @@ for c in daily.get("candidates",[]):
 def team(x):
     return str(x.get("name") or x.get("code") or "").strip() if isinstance(x,dict) else str(x or "").strip()
 errors = []
-needed = set()
-for r in records.values():
-    if r["result"] is None and r["date"] < today.isoformat():
-        d = date.fromisoformat(r["date"])
-        y = d.year if d.month>=7 else d.year-1
-        needed.add((r["league"],f"{y}-{str(y+1)[-2:]}"))
-for league,season in sorted(needed):
-    try:
-        url = f"https://raw.githubusercontent.com/openfootball/football.json/master/{season}/{leagues[league]}.json"
-        if leagues[league]=="tr.1":
-            from turkey_source import fetch as turkey_fetch
-            matches=turkey_fetch(season,include_fixtures=False)
-        else:
-            with urllib.request.urlopen(url,timeout=20) as response:
-                matches = matches_in(json.load(response))
-        for m in matches:
-            d = str(m.get("date",""))[:10]
-            if d>=today.isoformat():
-                continue
-            k = key(d,league,f"{team(m.get('team1'))} – {team(m.get('team2'))}")
-            ft = final_score(m)
-            if k in records and records[k]["result"] is None and isinstance(ft,list) and len(ft)==2 and all(type(x) is int and x>=0 for x in ft):
-                records[k]["result"] = ft
-                records[k]["settledAt"] = now.isoformat()
-    except Exception as exc:
-        errors.append(f"{league}/{season}: {exc}")
+# No single-source settlement; use corroborated results only.
 from verified_results import load_verified, settle_verified
 try:
     verified_count = settle_verified(records, load_verified(root,now), now, leagues)
@@ -77,7 +52,7 @@ def metrics(rows):
         out["markets"][m]={"tested":n,"brier":round(sum((p-y)**2 for p,y in pairs)/n,6) if n else None,"actualRate":round(100*sum(y for p,y in pairs)/n,2) if n else None}
     return out
 rows=list(records.values())
-report={"version":"2.4","updatedAt":now.isoformat(),"method":"First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.","errors":errors,"verifiedFallbackSettled":verified_count,"calendarDuplicatePrevented":calendar_duplicate_prevented,"overall":metrics(rows),"leagues":{l:metrics([r for r in rows if r["league"]==l]) for l in leagues},"periods":{str(n):metrics([r for r in rows if r["date"] >= (today-timedelta(days=n)).isoformat() and r["date"]<today.isoformat()]) for n in (30,90)}}
+report={"version":"2.4","updatedAt":now.isoformat(),"method":"First recorded future-date candidates; new scores require corroborated sources; kickoff unverified; no profit measurement.","errors":errors,"verifiedFallbackSettled":verified_count,"calendarDuplicatePrevented":calendar_duplicate_prevented,"overall":metrics(rows),"leagues":{l:metrics([r for r in rows if r["league"]==l]) for l in leagues},"periods":{str(n):metrics([r for r in rows if r["date"] >= (today-timedelta(days=n)).isoformat() and r["date"]<today.isoformat()]) for n in (30,90)}}
 archive.write_text(json.dumps(records,ensure_ascii=False,indent=2),encoding="utf-8")
 (root/"performance.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(report,ensure_ascii=False))
