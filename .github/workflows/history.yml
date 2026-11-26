@@ -44,6 +44,8 @@ jobs:
           key: openliga-archive-v1-${{ github.run_id }}
           restore-keys: openliga-archive-v1-
       - run: python scripts/historical_multiyear.py
+      - run: python scripts/test_historical_opponent.py
+      - run: python scripts/historical_opponent.py
       - uses: actions/cache/save@v4
         with:
           path: openliga_archive.json
@@ -67,4 +69,5 @@ jobs:
             openliga_multiyear.json
             openliga_archive.json
             openliga_strength.json
+            opponent_strength_report.json
           retention-days: 90
