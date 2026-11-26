@@ -6,6 +6,7 @@ from urllib.request import urlopen
 from urllib.parse import quote
 from openliga_pilot import normalize
 from historical_baseline import evaluate
+from historical_archive_merge import merge
 def run(today):
     rows={}; conflicts=set(); errors=[]
     pairs={(league,year) for league in ("bl1","bl2","bl3") for year in range(today.year-4,today.year+1)}
@@ -36,7 +37,10 @@ def run(today):
             except Exception as e: errors.append(dict(league=league,year=year,error=type(e).__name__))
             time.sleep(2)
     data=[v for k,v in rows.items() if k not in conflicts]
-    Path("openliga_archive.json").write_text(json.dumps(dict(asOf=today.isoformat(), attribution="Data from OpenLigaDB (www.openligadb.de)", license="ODbL-1.0", matches=data, errors=errors, conflicts=len(conflicts))))
+    archive=Path("openliga_archive.json")
+    previous=json.loads(archive.read_text()) if archive.exists() else {}
+    data,blocked=merge(previous.get("matches",[]),data,[str(k) for k in conflicts]+previous.get("blocked",[]),(today-timedelta(days=1460)).isoformat(),today.isoformat())
+    Path("openliga_archive.json").write_text(json.dumps(dict(asOf=today.isoformat(), attribution="Data from OpenLigaDB (www.openligadb.de)", license="ODbL-1.0", matches=data, blocked=blocked, errors=errors, conflicts=len(blocked))))
     windows=[]
     for offset in range(0,1096,61):
         end=today-timedelta(days=offset)
