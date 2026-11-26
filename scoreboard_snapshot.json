@@ -1,0 +1,87 @@
+{
+  "version": "4.90",
+  "updatedAt": "2026-11-26T19:03:06.301349+03:00",
+  "date": "2026-11-26",
+  "mode": "scoreboard_snapshot",
+  "source": "ESPN",
+  "groups": [
+    {
+      "league": "en.1",
+      "leagueName": "İngiltere Premier Lig",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "en.2",
+      "leagueName": "İngiltere Championship",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "de.1",
+      "leagueName": "Almanya Bundesliga",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "es.1",
+      "leagueName": "İspanya La Liga",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "it.1",
+      "leagueName": "İtalya Serie A",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "fr.1",
+      "leagueName": "Fransa Ligue 1",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "nl.1",
+      "leagueName": "Hollanda Eredivisie",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "pt.1",
+      "leagueName": "Portekiz Primeira Liga",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    },
+    {
+      "league": "tr.1",
+      "leagueName": "Türkiye Süper Lig",
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261126",
+      "rows": [],
+      "invalid": 0,
+      "error": null
+    }
+  ],
+  "loadedLeagues": 9,
+  "eventCount": 0,
+  "inProgress": 0,
+  "realTime": false,
+  "usedForSettlement": false,
+  "usedForPredictions": false
+}
