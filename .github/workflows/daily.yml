@@ -189,7 +189,7 @@ jobs:
         run: |
           python scripts/test_archive_calendar_result_replay.py
           python scripts/archive_calendar_result_replay.py
-      - name: V4.75 snapshot integrity
+      - name: V4.76 snapshot integrity
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_snapshot_integrity.py
