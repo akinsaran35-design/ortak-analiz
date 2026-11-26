@@ -20,7 +20,7 @@ def capture(history,old,new):
     out={m:dict(old=old[i],candidate=new[i],baseline=base[i]) for i,m in enumerate(MARKETS)}
     if not coherent(out): raise ValueError("incoherent probabilities")
     return out
-def summarize(records,now):
+def summarize(records,now,include_calibration=False):
     out={}
     for i,m in enumerate(MARKETS):
         rows=[];pending=0;legacy=0;invalid=0
@@ -43,4 +43,11 @@ def summarize(records,now):
             except (KeyError,TypeError,ValueError,AttributeError): invalid+=1
         scores={k:sum((p[k]-y)**2 for p,y in rows)/len(rows) for k in MODELS} if rows else {}
         out[m]={"tested":len(rows),"pending":pending,"legacyWithoutForecast":legacy,"invalid":invalid,"scores":scores,"minimumMatches":500,"status":"research_only","liveEnabled":False}
+        if include_calibration:
+            n=len(rows)
+            observed=sum(y for _,y in rows)/n if n else None
+            predicted={k:sum(p[k] for p,_ in rows)/n for k in MODELS} if n else {}
+            out[m]["calibration"]={"sample":n,"observedRate":observed,"meanPrediction":predicted,
+                "gapPP":{k:(v-observed)*100 for k,v in predicted.items()} if n else {},
+                "sampleAdequate":n>=500 and invalid==0,"descriptiveOnly":True}
     return out
