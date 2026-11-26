@@ -22,7 +22,7 @@ class TrackingTest(unittest.TestCase):
             (root/"scripts").mkdir()
             script=root/"scripts"/"track_performance.py"
             shutil.copyfile(Path(__file__).with_name("track_performance.py"),script)
-            old=dict(candidate(past),result=None,recordedAt=(today-timedelta(days=2)).isoformat())
+            old=dict(candidate(past),result=None,recordedAt=(today-timedelta(days=2)).isoformat()+"T12:00:00+03:00")
             k=json.dumps([past,league,"A – B"],ensure_ascii=False)
             archive=root/"prediction_archive.json"
             archive.write_text(json.dumps({k:old}),encoding="utf-8")
@@ -34,6 +34,12 @@ class TrackingTest(unittest.TestCase):
                 report=json.loads((root/"performance.json").read_text())
                 self.assertEqual(report["errors"],[])
                 self.assertEqual(report["overall"]["recorded"],2)
+                self.assertEqual(report["overall"]["settled"],0)
+                self.assertEqual(report["overall"]["pending"],2)
+                self.assertIsNone(json.loads(archive.read_text())[k]["result"])
+                (root/"verified_results.json").write_text(json.dumps({"records":[{"date":past,"league":"en.2","home":"A","away":"B","result":[2,1],"sources":["https://example.org/a","https://example.net/b"]}]}),encoding="utf-8")
+                runpy.run_path(str(script))
+                report=json.loads((root/"performance.json").read_text())
                 self.assertEqual(report["overall"]["settled"],1)
                 self.assertEqual(report["overall"]["pending"],1)
                 for market,expected in zip(probs,[0.04,0.16,0.25]):
