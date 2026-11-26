@@ -8,6 +8,7 @@ from multi_league_results import APPROVED,source_urls
 from league_config import FIXTURE_CODES
 
 FIELDS=("archive","league","home","away","archivedDate","recordedAt")
+CONFLICTS=frozenset(("schedule_conflict","duplicate_risk","invalid_evidence","conflict","archive_conflict","ambiguous"))
 def identity(row): return tuple(row[x] for x in FIELDS)
 def score_valid(x): return isinstance(x,list) and len(x)==2 and all(type(v) is int and v>=0 for v in x)
 def probability(x): return type(x) in (int,float) and math.isfinite(x) and 0<=x<=1
@@ -30,8 +31,13 @@ def collect(ledger,replay,archives,now):
     if fresh:
         for row in replay["rows"]:
             try:
-                if row["status"]!="research_score_verified": continue
                 ident=identity(row);kind,code,h,a,old,recorded=ident
+                if row["status"] in CONFLICTS and ident in index:
+                    key=json.dumps(list(ident)+["quarantine",row["status"]],ensure_ascii=False)
+                    if key not in out:
+                        out[key]={**{k:row[k] for k in FIELDS},"observationType":"conflict","reason":row["status"],"observedAt":now.isoformat(),"replayUpdatedAt":replay["updatedAt"]}
+                    continue
+                if row["status"]!="research_score_verified": continue
                 new=row["corroboratedDate"];kick=stamp(row["kickoff"])
                 if code not in APPROVED or row["sources"]!=list(source_urls(code,new)): continue
                 if not score_valid(row["csv"]) or row["csv"]!=row["espn"]: continue
@@ -46,11 +52,12 @@ def collect(ledger,replay,archives,now):
                     out[key]={**{k:row[k] for k in FIELDS},"eventId":row["eventId"],"corroboratedDate":new,"kickoff":row["kickoff"],"result":list(row["csv"]),"sources":list(row["sources"]),"observedAt":now.isoformat(),"replayUpdatedAt":replay["updatedAt"]}
             except (KeyError,TypeError,ValueError,AttributeError): continue
     groups=defaultdict(list)
-    for e in out.values(): groups[identity(e)].append(e)
+    quarantine={identity(e) for e in out.values() if e.get("observationType")=="conflict"}
+    score_observations=[e for e in out.values() if e.get("observationType")!="conflict"]
+    for e in score_observations: groups[identity(e)].append(e)
     event_identities=defaultdict(set)
     for ident,items in groups.items():
         for e in items: event_identities[(ident[0],e["eventId"])].add(ident)
-    current={identity(row):row["status"] for row in replay.get("rows",[])} if fresh else {}
     status=Counter(); pairs=defaultdict(list); eligible_events=set()
     for ident,items in groups.items():
         variants={(x["eventId"],x["corroboratedDate"],x["kickoff"],tuple(x["result"])) for x in items}
@@ -58,8 +65,8 @@ def collect(ledger,replay,archives,now):
         e=items[0];kind=ident[0];rec=index.get(ident,[])
         if len(event_identities[(kind,e["eventId"])])!=1:
             status["duplicate_event"]+=1;continue
-        if current.get(ident) in ("schedule_conflict","duplicate_risk","invalid_evidence","conflict","archive_conflict","ambiguous"):
-            status["current_conflict"]+=1;continue
+        if ident in quarantine:
+            status["quarantined_conflict"]+=1;continue
         if len(rec)!=1 or dates[ident[:4]+(e["corroboratedDate"],)] or rec[0]["result"] is not None:
             status["excluded_archive_state"]+=1;continue
         rec=rec[0];h,a=e["result"]
@@ -78,7 +85,7 @@ def collect(ledger,replay,archives,now):
     metrics={kind:{} for kind in archives}
     for (kind,market),rows in pairs.items():
         metrics[kind][market]={"tested":len(rows),"brier":sum((p-y)**2 for p,y in rows)/len(rows)}
-    return out,{"version":"4.82","updatedAt":now.isoformat(),"mode":"research_only","observations":len(out),"newObservations":len(out)-len(ledger),"archiveIdentities":len(groups),"uniqueEligibleEvents":len(eligible_events),"counts":dict(status),"metrics":metrics,"decision":"PAS","includedInMainValidation":False}
+    return out,{"version":"4.83","updatedAt":now.isoformat(),"mode":"research_only","observations":len(score_observations),"newObservations":len(score_observations)-sum(e.get("observationType")!="conflict" for e in ledger.values()),"conflictObservations":len(out)-len(score_observations),"quarantinedIdentities":len(quarantine),"archiveIdentities":len(groups),"uniqueEligibleEvents":len(eligible_events),"counts":dict(status),"metrics":metrics,"decision":"PAS","includedInMainValidation":False}
 
 def main():
     def load(name): return json.loads(Path(name).read_text(encoding="utf-8"))
