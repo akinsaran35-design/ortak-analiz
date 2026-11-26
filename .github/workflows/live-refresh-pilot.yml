@@ -1,7 +1,10 @@
-name: V5.20 live publication verification
+name: V5.22 frozen evidence and live validation
 on:
   pull_request:
     paths:
+      - 'scripts/live_frozen_evidence.py'
+      - 'scripts/test_live_frozen_evidence.py'
+      - 'scripts/live_result_evidence.py'
       - 'scripts/live_performance_research.py'
       - 'scripts/test_live_performance_research.py'
       - 'scripts/live_rate_link.py'
@@ -35,6 +38,11 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: live-data
+          path: prior-live-data
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -43,9 +51,11 @@ jobs:
       - run: python scripts/test_live_score_scenario.py
       - run: python scripts/test_live_rate_link.py
       - run: python scripts/test_live_performance_research.py
+      - run: python scripts/test_live_frozen_evidence.py
+      - run: python scripts/live_result_evidence.py
       - run: python scripts/live_refresh_snapshot.py
       - run: python scripts/live_analysis_quality.py
-      - run: python scripts/live_rate_link.py
+      - run: python scripts/live_frozen_evidence.py
       - name: Exercise publication archive CLI without writing remote data
         run: |
           mkdir -p /tmp/oa-publication-check
@@ -59,6 +69,8 @@ jobs:
             live_refresh_snapshot.json
             live_analysis_quality.json
             live_rate_link.json
+            live_prematch_frozen.json
+            live_result_evidence.json
           if-no-files-found: error
           retention-days: 1
   publish:
@@ -86,18 +98,18 @@ jobs:
           path: /tmp/oa-live
       - name: Update observation and research archive on dedicated branch
         run: |
-          cp /tmp/oa-live/live_analysis_quality.json live_analysis_quality.json
+          cp /tmp/oa-live/live_analysis_quality.json /tmp/oa-live/live_prematch_frozen.json /tmp/oa-live/live_result_evidence.json .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           python research-code/scripts/live_performance_research.py /tmp/oa-live/live_rate_link.json live_scenario_archive.json research-code/verified_results.json live_performance_research.json
-          git add live_analysis_quality.json live_scenario_archive.json live_performance_research.json
+          git add live_analysis_quality.json live_scenario_archive.json live_performance_research.json live_prematch_frozen.json live_result_evidence.json
           if ! git diff --cached --quiet; then
             git commit -m "Update live observations and research archive"
             git push origin HEAD:live-data
           fi
           git fetch origin live-data
           test "$(git rev-parse HEAD)" = "$(git rev-parse FETCH_HEAD)"
-          for f in live_analysis_quality.json live_scenario_archive.json live_performance_research.json; do
+          for f in live_analysis_quality.json live_scenario_archive.json live_performance_research.json live_prematch_frozen.json live_result_evidence.json; do
             git show FETCH_HEAD:"$f" | cmp - "$f"
           done
           echo "Verified remote publication: $(git rev-parse FETCH_HEAD)"
