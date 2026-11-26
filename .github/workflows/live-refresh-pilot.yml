@@ -1,0 +1,30 @@
+name: V5.13 live refresh snapshot pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/live_refresh_snapshot.py'
+      - 'scripts/test_live_refresh_snapshot.py'
+      - 'scripts/live_statistics_pilot.py'
+      - 'scripts/scoreboard_snapshot.py'
+      - '.github/workflows/live-refresh-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_live_refresh_snapshot.py
+      - run: python scripts/live_refresh_snapshot.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-refresh-snapshot
+          path: live_refresh_snapshot.json
+          if-no-files-found: warn
+          retention-days: 3
