@@ -17,7 +17,7 @@ def freeze(daily,coverage,previous,now):
     for x in coverage.get("rows",[]):
         if x.get("status")!="same_date" or len(x.get("published",[]))!=1 or len(x.get("espn",[]))!=1:continue
         e=x["espn"][0];p=x["published"][0];kickoff=stamp(e.get("kickoff"))
-        if not kickoff or not now<kickoff<=now+timedelta(days=3):continue
+        if not kickoff or not now<kickoff<=now+timedelta(days=3) or kickoff-dt>timedelta(hours=48):continue
         try:h,a=e["match"].split(" – ");key=x["league"]+":"+e["eventId"]
         except (ValueError,KeyError,TypeError):continue
         row=dict(league=x["league"],eventId=e["eventId"],home=h,away=a,kickoff=e["kickoff"])
