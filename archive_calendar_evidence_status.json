@@ -1,11 +1,11 @@
 {
   "version": "4.71",
-  "updatedAt": "2026-11-26T14:38:58.194856+00:00",
+  "updatedAt": "2026-11-26T14:43:40.559856+00:00",
   "mode": "research_only",
   "observations": 40,
   "archiveIdentities": 40,
   "multipleScheduleObservations": 0,
-  "newObservations": 40,
+  "newObservations": 0,
   "auditCounts": {
     "prospective": {
       "review_pending": 20
