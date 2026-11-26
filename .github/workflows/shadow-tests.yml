@@ -119,3 +119,6 @@ jobs:
         run: python scripts/test_historical_weighted.py
       - name: Historical comparison tests
         run: python scripts/test_historical_comparison.py
+
+      - name: Historical tuning tests
+        run: python scripts/test_historical_tuning.py

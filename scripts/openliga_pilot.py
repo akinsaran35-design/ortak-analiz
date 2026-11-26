@@ -45,6 +45,10 @@ def run(today):
     Path("openliga_pilot.json").write_text(json.dumps(result,indent=2))
     report=evaluate(rows,today)
     weighted=evaluate(rows,today,weighted=True)
+    from historical_tuning import tune
+    tuning=tune(rows,today)
+    Path("openliga_tuning.json").write_text(json.dumps(tuning,indent=2))
+    print("Validation tuning:",tuning)
     comparison=dict(status="research_only",realBettingEnabled=False,baseline=report,weighted=weighted,holdoutPreviouslyInspected=True)
     print("Weighted comparison:",comparison)
     Path("openliga_comparison.json").write_text(json.dumps(comparison,indent=2))
