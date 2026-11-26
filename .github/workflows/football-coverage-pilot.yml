@@ -1,0 +1,28 @@
+name: V5.08 football international coverage pilot
+on:
+  pull_request:
+    paths:
+      - 'scripts/football_coverage_pilot.py'
+      - 'scripts/test_football_coverage_pilot.py'
+      - '.github/workflows/football-coverage-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discovery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_football_coverage_pilot.py
+      - run: python scripts/football_coverage_pilot.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: football-coverage-pilot
+          path: football_coverage_pilot.json
+          if-no-files-found: ignore
+          retention-days: 7
