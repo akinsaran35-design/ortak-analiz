@@ -28,12 +28,16 @@ class SnapshotTests(unittest.TestCase):
         from prospective_markets import summarize
         data["prospective_validation"]["updatedAt"]="2026-11-26T14:00:00Z"
         data["prospective_validation"]["marketResearchVersion"]="4.85"
+        from prospective_leagues import build
+        data["prospective_archive"]["a"].update(league="en.1")
+        data["prospective_leagues"]=build(data["prospective_archive"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         data["prospective_validation"]["marketResearch"]=summarize(data["prospective_archive"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         data["daily"]["updatedAt"]="2026-11-26T14:00:00Z"
         self.assertEqual(audit(data)["status"],"PASS")
-        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z"})
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("prospective_leagues","recorded",2,"prospective_league_recompute"),
             ("prospective_validation","marketResearch",{},"prospective_market_recompute"),
             ("archive_calendar_outcome_status","conflictObservations",1,"outcome_observation_count"),
             ("archive_calendar_outcome_status","includedInMainValidation",True,"outcome_research_lock"),

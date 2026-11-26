@@ -256,6 +256,7 @@ jobs:
       - name: V4.83 full 17-file snapshot integrity check
         run: |
           python scripts/test_snapshot_integrity.py
+          python scripts/prospective_leagues.py
           python scripts/snapshot_integrity.py
 
       - name: V4.85 prospective three-market research
