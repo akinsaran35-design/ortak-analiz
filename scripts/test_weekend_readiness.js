@@ -9,7 +9,7 @@ Object.assign(data["prospective_validation.json"],{tested:0,pending:69,minimumMa
 let r=summarize(data,now);
 assert.equal(r.dataCurrent,true);assert.equal(r.decision,"PAS");assert.equal(r.realBettingEnabled,false);assert.equal(r.weekend["2026-11-28"],1);
 assert.equal(summarize(data,now+1800001).dataCurrent,false);
-assert.equal(summarize({},now).missing.length,5);
+assert.equal(summarize({},now).missing.length,6);
 assert.equal(summarize({...data,"daily.json":{...data["daily.json"],date:"2026-11-25"}},now).dataCurrent,false);
 assert.equal(summarize({...data,"data_quality.json":{...data["data_quality.json"],warnings:["bad"]}},now).dataCurrent,false);
 assert.equal(summarize(data,now-1).dataCurrent,false);
@@ -24,3 +24,11 @@ assert.equal(summarize(turkish,now).turkey.oddsEvents,1);
 assert.equal(summarize(turkish,now).turkey.oddsStatus,"snapshot");
 assert.equal(summarize(turkish,now+1800001).turkey.oddsStatus,"stale");
 assert.equal(summarize({...turkish,"odds.json":{updatedAt,inactiveLeagues:[tr]}},now).turkey.oddsStatus,"inactive");
+
+const matchData={...data,"daily.json":{...data["daily.json"],candidateCount:2},"matching.json":{updatedAt,matchedCount:1,unmatchedCount:1,unmatched:[{match:"A – B",league:"Test",date:"2026-11-28",reason:"date_mismatch",providerDates:["2026-11-29"]}]}};
+assert.equal(summarize(matchData,now).coverage.matched,1);
+assert.equal(summarize(matchData,now).coverage.mismatch.length,1);
+assert.equal(summarize(matchData,now).coverage.current,true);
+assert.equal(summarize(matchData,now+1800001).coverage.current,false);
+assert.equal(summarize({...matchData,"daily.json":{...matchData["daily.json"],candidateCount:3}},now).coverage.consistent,false);
+assert.equal(summarize({},now).coverage.matched,null);
