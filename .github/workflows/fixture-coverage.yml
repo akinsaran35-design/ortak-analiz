@@ -1,0 +1,22 @@
+name: V4.92 Fixture Coverage
+on:
+  pull_request:
+    paths:
+      - 'scripts/fixture_coverage_audit.py'
+      - 'scripts/test_fixture_coverage_audit.py'
+      - '.github/workflows/fixture-coverage.yml'
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_fixture_coverage_audit.py
+      - run: python scripts/fixture_coverage_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fixture-coverage-audit
+          path: fixture_coverage_audit.json
+          retention-days: 7
