@@ -58,14 +58,22 @@ def collect(ledger,replay,archives,now):
     event_identities=defaultdict(set)
     for ident,items in groups.items():
         for e in items: event_identities[(ident[0],e["eventId"])].add(ident)
+    event_variants=defaultdict(set)
+    event_quarantine=set()
+    for ident,items in groups.items():
+        for e in items:
+            event_variants[e["eventId"]].add((ident[1],ident[2],ident[3],e["corroboratedDate"],stamp(e["kickoff"]),tuple(e["result"])))
+            if ident in quarantine: event_quarantine.add(e["eventId"])
     status=Counter(); pairs=defaultdict(list); eligible_events=set()
     for ident,items in groups.items():
         variants={(x["eventId"],x["corroboratedDate"],x["kickoff"],tuple(x["result"])) for x in items}
         if len(variants)!=1: status["conflicting_observations"]+=1;continue
         e=items[0];kind=ident[0];rec=index.get(ident,[])
+        if len(event_variants[e["eventId"]])!=1:
+            status["cross_archive_conflict"]+=1;continue
         if len(event_identities[(kind,e["eventId"])])!=1:
             status["duplicate_event"]+=1;continue
-        if ident in quarantine:
+        if ident in quarantine or e["eventId"] in event_quarantine:
             status["quarantined_conflict"]+=1;continue
         if len(rec)!=1 or dates[ident[:4]+(e["corroboratedDate"],)] or rec[0]["result"] is not None:
             status["excluded_archive_state"]+=1;continue
@@ -75,7 +83,8 @@ def collect(ledger,replay,archives,now):
             actual={k:int(h+a>=3) for k in p}
         else:
             labels={"1.5 Üst":int(h+a>=2),"2.5 Üst":int(h+a>=3),"KG Var":int(h>0 and a>0)}
-            p={k:rec["markets"].get(k) for k in labels}
+            markets=rec.get("markets")
+            p={k:markets.get(k) if isinstance(markets,dict) else None for k in labels}
             p={k:v/100 if type(v) in (int,float) else None for k,v in p.items()}
             actual=labels
         if not all(probability(x) for x in p.values()): status["invalid_probability"]+=1;continue
