@@ -43,13 +43,16 @@
     const replayCurrent=evidenceCurrent && replay.version==="4.72" && replay.mode==="research_only" && fresh(replay.updatedAt,now) && Date.parse(replay.updatedAt)>=Date.parse(evidence.updatedAt) && replayTotal===integer(evidence.archiveIdentities) && Array.isArray(replay.rows) && replay.rows.length===replayTotal && Array.isArray(replay.sourceErrors);
     const resultCurrent=results.version==="4.69" && fresh(results.updatedAt,now) && Array.isArray(results.approvedLeagues) && new Set(results.approvedLeagues).size===results.approvedLeagues.length && Array.isArray(results.groups);
     const archiveAudit={evidenceCurrent,replayCurrent,observations:evidenceCurrent?integer(evidence.observations):null,identities:evidenceCurrent?integer(evidence.archiveIdentities):null,awaiting:replayCurrent?integer(counts.awaiting_match??0):null,verified:replayCurrent?integer(counts.research_score_verified??0):null,errors:replayCurrent?replay.sourceErrors.length:null,leagues:resultCurrent?results.approvedLeagues.length:null,automaticVerified:resultCurrent?integer(results.automaticVerifiedCount):null};
-    return {today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, archiveAudit, dailyDate:daily.date || null,
+    const integrity=data["snapshot_integrity.json"]||{};
+    const covered=["daily.json","odds.json","matching.json","prospective_validation.json","data_quality.json","unified_decision.json"];
+    const integrityCurrent=integrity.version==="4.76" && integrity.status==="PASS" && Array.isArray(integrity.errors) && integrity.errors.length===0 && fresh(integrity.updatedAt,now) && covered.every(f=>typeof data[f]?.updatedAt==="string" && integrity.reportTimestamps?.[f]===data[f].updatedAt);
+    return {today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, archiveAudit, integrityCurrent, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
       fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
       tested:integer(validation.tested), pending:integer(validation.pending),
       minimum:integer(validation.minimumMatches), calibrated:decision.modelCalibrated===true,
-      dataCurrent:missing.length===0 && stale.length===0 && healthy && daily.date===today,
+      dataCurrent:missing.length===0 && stale.length===0 && healthy && daily.date===today && integrityCurrent,
       mode:"research_only", decision:"PAS", realBettingEnabled:false};
   }
   if (typeof module !== "undefined" && module.exports) module.exports={summarize,files};
@@ -58,7 +61,7 @@
   panel.className="card";
   panel.id="weekendReadiness";
   const h=document.createElement("h2");
-  h.textContent="Ortak Analiz V4.73 — Hafta sonu hazırlığı";
+  h.textContent="Ortak Analiz V4.76 — Hafta sonu hazırlığı";
   const out=document.createElement("div");
   out.setAttribute("aria-live","polite");
   const button=document.createElement("button");
@@ -79,7 +82,7 @@
     line("Raporlar kontrol ediliyor…");
     const data={};
     try {
-      await Promise.all([...files,"fixture_reconciliation.json","archive_calendar_evidence_status.json","archive_calendar_result_replay.json","multi_league_results.json"].map(async f=>{
+      await Promise.all([...files,"fixture_reconciliation.json","archive_calendar_evidence_status.json","archive_calendar_result_replay.json","multi_league_results.json","snapshot_integrity.json"].map(async f=>{
         try {
           const response=await fetch("./"+f+"?ts="+Date.now(),{cache:"no-store"});
           if(!response.ok) return;
@@ -91,6 +94,7 @@
       const val=x=>x===null?"Bilinmiyor":String(x);
       out.replaceChildren();
       line(r.dataCurrent?"Veri durumu: güncel":"Veri durumu: eksik, eski veya kalite kontrolü başarısız",r.dataCurrent?"good":"bad");
+      line(r.integrityCurrent?"Yayın bütünlüğü: PASS — rapor zamanları eşleşiyor":"Yayın bütünlüğü: eksik, eski veya farklı raporlar","note");
       line("28 Kasım: "+r.weekend["2026-11-28"]+" • 29 Kasım: "+r.weekend["2026-11-29"]+" (yayımlanmış liste; kesin fikstür sayısı değildir)");
       line("Fikstür kaynağı: "+val(r.leagues)+" lig • Bugün: "+val(r.fixtures));
       line(r.fixtureCoverageComplete?"Yapılandırılan kaynakların iki sezonu okundu.":"Fikstür kapsamı eksik veya henüz doğrulanmadı.","note");

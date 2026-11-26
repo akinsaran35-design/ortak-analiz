@@ -32,7 +32,8 @@ def audit(data):
         check(u["decision"]=="PAS" and u["realBettingEnabled"] is False and u["selections"]==[] and v["liveEnabled"] is False,"research_lock")
     except (KeyError,TypeError,ValueError,AttributeError) as exc:
         errors.append("invalid_schema:"+type(exc).__name__)
-    return {"version":"4.75","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"PASS" if not errors else "FAIL","errors":errors,"mode":"research_only"}
+    timestamps={name+".json":data[name]["updatedAt"] for name in FILES if isinstance(data.get(name),dict) and isinstance(data[name].get("updatedAt"),str)}
+    return {"version":"4.76","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"PASS" if not errors else "FAIL","errors":errors,"mode":"research_only","reportTimestamps":timestamps}
 
 def main():
     data={}
@@ -41,7 +42,7 @@ def main():
             data[k]=json.loads(Path(k+".json").read_text(encoding="utf-8"))
         report=audit(data)
     except (OSError,ValueError) as exc:
-        report={"version":"4.75","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"FAIL","errors":[type(exc).__name__],"mode":"research_only"}
+        report={"version":"4.76","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"FAIL","errors":[type(exc).__name__],"mode":"research_only"}
     Path("snapshot_integrity.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False))
     if report["status"]!="PASS": raise SystemExit(1)

@@ -19,7 +19,9 @@ class SnapshotTests(unittest.TestCase):
             "archive_calendar_result_replay":dict(rows=[dict(ident,status="awaiting_match")],counts={"awaiting_match":1}),
             "unified_decision":dict(testedMatches=0,decision="PAS",realBettingEnabled=False,selections=[]),
         }
+        data["daily"]["updatedAt"]="2026-11-26T14:00:00Z"
         self.assertEqual(audit(data)["status"],"PASS")
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
             ("prospective_validation","tested",1,"prospective_count"),
