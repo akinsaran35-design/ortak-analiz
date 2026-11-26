@@ -20,7 +20,14 @@
     const healthy = quality.status==="healthy" && quality.qualityGate==="PASS" &&
       Array.isArray(quality.errors) && quality.errors.length===0 &&
       Array.isArray(quality.warnings) && quality.warnings.length===0;
-    return {today, weekend, missing, stale, healthy, dailyDate:daily.date || null,
+    const sport="soccer_turkey_super_league";
+    const trDiagnostic=Array.isArray(daily.leagueDiagnostics)?daily.leagueDiagnostics.find(x=>x?.league==="Türkiye Süper Lig"):null;
+    const trQueried=Array.isArray(odds.queriedLeagues)&&odds.queriedLeagues.includes(sport);
+    const trInactive=Array.isArray(odds.inactiveLeagues)&&odds.inactiveLeagues.includes(sport);
+    const trEvents=trQueried&&Array.isArray(odds.events)?odds.events.filter(x=>x?.league===sport).length:null;
+    const turkey={results:integer(trDiagnostic?.completedMatches),fixtureScope:trDiagnostic?.fixtureScope||null,oddsEvents:trEvents,
+      oddsStatus:trInactive?"inactive":!trQueried?"unverified":!fresh(odds.updatedAt,now)?"stale":"snapshot"};
+    return {today, weekend, missing, stale, healthy, turkey, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
       fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
@@ -72,6 +79,16 @@
       line("Fikstür kaynağı: "+val(r.leagues)+" lig • Bugün: "+val(r.fixtures));
       line(r.fixtureCoverageComplete?"Yapılandırılan kaynakların iki sezonu okundu.":"Fikstür kapsamı eksik veya henüz doğrulanmadı.","note");
       line("Oran raporu: "+val(r.events)+" etkinlik • Son bildirilen API kredisi: "+val(r.credits));
+      const tr=r.turkey;
+      const labels={inactive:"Sağlayıcıda etkin değil",unverified:"Henüz doğrulanmadı",stale:"Eski veri",snapshot:"Güncel anlık görüntü"};
+      line("Türkiye Süper Lig: "+val(tr.results)+" geçmiş sonuç • Oran kaydı: "+val(tr.oddsEvents)+" • "+labels[tr.oddsStatus]);
+      line("Süper Lig fikstürü yalnızca sağlayıcının kapsadığı maçlarla sınırlıdır.","note");
+      line("TFF 1. Lig: otomatik sonuç/oran entegrasyonu henüz yok.","note");
+      const link=document.createElement("a");
+      link.href="https://www.tff.org/default.aspx?pageID=142";
+      link.textContent="TFF 1. Lig resmî fikstürü";
+      link.target="_blank"; link.rel="noopener noreferrer";
+      out.append(link);
       line("İleriye dönük doğrulama: "+val(r.tested)+" / "+val(r.minimum)+" • Bekleyen: "+val(r.pending));
       line("Kalibrasyon: "+(r.calibrated?"Rapor onaylı":"Onay bekliyor"));
       line("Karar: PAS • Gerçek bahis kapalı. Geçmiş araştırma bağımsız ileriye dönük doğrulama değildir.","note");

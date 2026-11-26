@@ -14,3 +14,13 @@ assert.equal(summarize({...data,"daily.json":{...data["daily.json"],date:"2026-1
 assert.equal(summarize({...data,"data_quality.json":{...data["data_quality.json"],warnings:["bad"]}},now).dataCurrent,false);
 assert.equal(summarize(data,now-1).dataCurrent,false);
 console.log("Weekend readiness checks passed");
+
+assert.equal(r.turkey.oddsStatus,"unverified");
+assert.equal(r.turkey.oddsEvents,null);
+const tr="soccer_turkey_super_league";
+const turkish={...data,"daily.json":{...data["daily.json"],leagueDiagnostics:[{league:"Türkiye Süper Lig",completedMatches:414,fixtureScope:"fresh_odds_events_only"}]},"odds.json":{updatedAt,queriedLeagues:[tr],events:[{league:tr},{league:"soccer_epl"}]}};
+assert.equal(summarize(turkish,now).turkey.results,414);
+assert.equal(summarize(turkish,now).turkey.oddsEvents,1);
+assert.equal(summarize(turkish,now).turkey.oddsStatus,"snapshot");
+assert.equal(summarize(turkish,now+1800001).turkey.oddsStatus,"stale");
+assert.equal(summarize({...turkish,"odds.json":{updatedAt,inactiveLeagues:[tr]}},now).turkey.oddsStatus,"inactive");
