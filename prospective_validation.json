@@ -2,7 +2,7 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-26T18:26:42.840968+03:00",
+  "updatedAt": "2026-11-26T18:30:31.563720+03:00",
   "recorded": 90,
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
@@ -12,6 +12,43 @@
   "liveEnabled": false,
   "status": "collecting_data",
   "errors": [],
+  "marketResearchVersion": "4.85",
+  "marketResearch": {
+    "1.5 Üst": {
+      "tested": 0,
+      "pending": 0,
+      "legacyWithoutForecast": 90,
+      "invalid": 0,
+      "scores": {},
+      "minimumMatches": 500,
+      "status": "research_only",
+      "liveEnabled": false
+    },
+    "2.5 Üst": {
+      "tested": 4,
+      "pending": 86,
+      "legacyWithoutForecast": 0,
+      "invalid": 0,
+      "scores": {
+        "old": 0.21905543725772805,
+        "candidate": 0.23034267436075734,
+        "baseline": 0.2535921225406532
+      },
+      "minimumMatches": 500,
+      "status": "research_only",
+      "liveEnabled": false
+    },
+    "KG Var": {
+      "tested": 0,
+      "pending": 0,
+      "legacyWithoutForecast": 90,
+      "invalid": 0,
+      "scores": {},
+      "minimumMatches": 500,
+      "status": "research_only",
+      "liveEnabled": false
+    }
+  },
   "scores": {
     "old": 0.21905543725772805,
     "candidate": 0.23034267436075734,

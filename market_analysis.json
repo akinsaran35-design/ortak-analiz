@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-26T15:26:37.375665+00:00",
+  "updatedAt": "2026-11-26T15:30:26.039593+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -165,12 +165,12 @@
         "leovegas": 0.502646,
         "casumo": 0.502717,
         "williamhill": 0.52,
-        "matchbook": 0.501285
+        "matchbook": 0.502577
       },
       "marketProbability": 0.5027,
       "modelProbabilityUncalibrated": 0.5539999999999999,
       "difference": 0.0513,
-      "bookProbabilitySpread": 0.0202,
+      "bookProbabilitySpread": 0.0189,
       "marketFairOdds": 1.9892,
       "medianMargin": 0.0684
     },
@@ -266,7 +266,7 @@
         "leovegas": 0.484127,
         "casumo": 0.478142,
         "williamhill": 0.48,
-        "matchbook": 0.484536
+        "matchbook": 0.485788
       },
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.469,
@@ -317,12 +317,12 @@
         "leovegas": 0.490716,
         "casumo": 0.493151,
         "williamhill": 0.5,
-        "matchbook": 0.488432
+        "matchbook": 0.489744
       },
       "marketProbability": 0.4932,
       "modelProbabilityUncalibrated": 0.44299999999999995,
       "difference": -0.0502,
-      "bookProbabilitySpread": 0.0116,
+      "bookProbabilitySpread": 0.0103,
       "marketFairOdds": 2.0278,
       "medianMargin": 0.0614
     },
@@ -418,15 +418,15 @@
       "bookProbabilities": {
         "williamhill": 0.428571,
         "leovegas": 0.429319,
-        "grosvenor": 0.447368,
+        "grosvenor": 0.442105,
         "matchbook": 0.412346
       },
       "marketProbability": 0.4289,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.2121,
-      "bookProbabilitySpread": 0.035,
+      "bookProbabilitySpread": 0.0298,
       "marketFairOdds": 2.3313,
-      "medianMargin": 0.0625
+      "medianMargin": 0.0638
     },
     {
       "match": "US Sassuolo Calcio – SSC Napoli",
