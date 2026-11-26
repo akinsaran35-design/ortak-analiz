@@ -106,10 +106,7 @@ def canonical(name, league):
 
 def parse_time(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
-def main():
-    daily = json.loads(Path("daily.json").read_text(encoding="utf-8"))
-    odds = json.loads(Path("odds.json").read_text(encoding="utf-8"))
-    now = datetime.now(timezone.utc)
+def build_report(daily, odds, now):
     matched, unmatched = [], []
     for candidate in daily.get("candidates", []):
         league = LEAGUES.get(candidate.get("league"))
@@ -146,7 +143,14 @@ def main():
     report = {"version": "2.8", "updatedAt": now.isoformat(), "decision": "PAS",
               "matchedCount": len(matched), "unmatchedCount": len(unmatched),
               "matched": matched, "unmatched": unmatched, "modelCalibrated": False}
+    return report
+
+
+def main():
+    daily = json.loads(Path("daily.json").read_text(encoding="utf-8"))
+    odds = json.loads(Path("odds.json").read_text(encoding="utf-8"))
+    report = build_report(daily, odds, datetime.now(timezone.utc))
     Path("matching.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Matched:", len(matched), "Unmatched:", len(unmatched))
+    print("Matched:", report["matchedCount"], "Unmatched:", report["unmatchedCount"])
 if __name__ == "__main__":
     main()
