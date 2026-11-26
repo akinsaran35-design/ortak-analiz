@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-26T16:34:12+03:00",
+  "updatedAt": "2026-11-26T16:53:13+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -1399,6 +1399,1406 @@
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Nottingham Forest FC – Chelsea FC",
+      "markets": {
+        "1.5 Üst": 76.0,
+        "2.5 Üst": 51.9,
+        "KG Var": 55.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Fransa Ligue 1",
+      "match": "Angers SCO – Racing Club de Lens",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 53.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.15,
+        "away": 1.55
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Fulham FC – AFC Bournemouth",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 54.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.25,
+        "away": 1.45
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Brighton & Hove Albion FC – Newcastle United FC",
+      "markets": {
+        "1.5 Üst": 74.2,
+        "2.5 Üst": 49.4,
+        "KG Var": 49.0
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.75,
+        "away": 0.9
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Derby County FC – Watford FC",
+      "markets": {
+        "1.5 Üst": 72.3,
+        "2.5 Üst": 46.9,
+        "KG Var": 46.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 0.85
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Portekiz Primeira Liga",
+      "match": "Moreirense FC – CD Santa Clara",
+      "markets": {
+        "1.5 Üst": 72.3,
+        "2.5 Üst": 46.9,
+        "KG Var": 51.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.15,
+        "away": 1.4
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Sunderland AFC – Tottenham Hotspur FC",
+      "markets": {
+        "1.5 Üst": 72.3,
+        "2.5 Üst": 46.9,
+        "KG Var": 51.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.2
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Portekiz Primeira Liga",
+      "match": "Académico de Viseu FC – FC Alverca",
+      "markets": {
+        "1.5 Üst": 71.0,
+        "2.5 Üst": 45.3,
+        "KG Var": 50.3
+      },
+      "sample": {
+        "home": 7,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.34,
+        "away": 1.14
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Championship",
+      "match": "Blackburn Rovers FC – Charlton Athletic FC",
+      "markets": {
+        "1.5 Üst": 70.2,
+        "2.5 Üst": 44.3,
+        "KG Var": 49.0
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.4,
+        "away": 1.05
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "İngiltere Premier Lig",
+      "match": "Leeds United FC – Coventry City FC",
+      "markets": {
+        "1.5 Üst": 69.2,
+        "2.5 Üst": 43.0,
+        "KG Var": 37.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 5
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 0.6
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Levante UD – Real Racing Club de Santander",
+      "markets": {
+        "1.5 Üst": 90.7,
+        "2.5 Üst": 76.0,
+        "KG Var": 69.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 7
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 2.6,
+        "away": 1.39
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Hollanda Eredivisie",
+      "match": "ADO Den Haag – FC Utrecht",
+      "markets": {
+        "1.5 Üst": 89.0,
+        "2.5 Üst": 72.5,
+        "KG Var": 71.0
+      },
+      "sample": {
+        "home": 7,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.65,
+        "away": 2.11
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Hollanda Eredivisie",
+      "match": "Fortuna Sittard – SC Heerenveen",
+      "markets": {
+        "1.5 Üst": 88.4,
+        "2.5 Üst": 71.5,
+        "KG Var": 70.7
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 2.0
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Fransa Ligue 1",
+      "match": "Olympique Lyonnais – AS Monaco FC",
+      "markets": {
+        "1.5 Üst": 87.9,
+        "2.5 Üst": 70.6,
+        "KG Var": 70.1
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.95,
+        "away": 1.7
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "AS Roma – AC Monza",
+      "markets": {
+        "1.5 Üst": 87.4,
+        "2.5 Üst": 69.7,
+        "KG Var": 62.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 5
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 2.45,
+        "away": 1.15
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Real Madrid CF – Deportivo Alavés",
+      "markets": {
+        "1.5 Üst": 86.9,
+        "2.5 Üst": 68.8,
+        "KG Var": 64.2
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.3,
+        "away": 1.25
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Fransa Ligue 1",
+      "match": "Toulouse FC – Stade Rennais FC 1901",
+      "markets": {
+        "1.5 Üst": 86.9,
+        "2.5 Üst": 68.8,
+        "KG Var": 69.0
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.75
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Elche CF – Club Atlético de Madrid",
+      "markets": {
+        "1.5 Üst": 86.4,
+        "2.5 Üst": 67.9,
+        "KG Var": 68.1
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.65,
+        "away": 1.85
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Real Sociedad de Fútbol – Sevilla FC",
+      "markets": {
+        "1.5 Üst": 86.4,
+        "2.5 Üst": 67.9,
+        "KG Var": 67.9
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.9,
+        "away": 1.6
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Almanya Bundesliga",
+      "match": "Borussia Dortmund – Bayer 04 Leverkusen",
+      "markets": {
+        "1.5 Üst": 85.9,
+        "2.5 Üst": 67.0,
+        "KG Var": 64.3
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.15,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Hollanda Eredivisie",
+      "match": "NEC – FC Twente '65",
+      "markets": {
+        "1.5 Üst": 85.9,
+        "2.5 Üst": 67.0,
+        "KG Var": 67.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.65,
+        "away": 1.8
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Como 1907 – Juventus FC",
+      "markets": {
+        "1.5 Üst": 85.3,
+        "2.5 Üst": 66.0,
+        "KG Var": 66.1
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.9,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Hollanda Eredivisie",
+      "match": "Feyenoord Rotterdam – AFC Ajax",
+      "markets": {
+        "1.5 Üst": 85.3,
+        "2.5 Üst": 66.0,
+        "KG Var": 66.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.65,
+        "away": 1.75
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Almanya Bundesliga",
+      "match": "SC Freiburg – RB Leipzig",
+      "markets": {
+        "1.5 Üst": 85.3,
+        "2.5 Üst": 66.0,
+        "KG Var": 63.0
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.15,
+        "away": 1.25
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "FC Internazionale Milano – Genoa CFC",
+      "markets": {
+        "1.5 Üst": 84.1,
+        "2.5 Üst": 64.1,
+        "KG Var": 58.2
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.25,
+        "away": 1.05
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Almanya Bundesliga",
+      "match": "TSG 1899 Hoffenheim – FC Augsburg",
+      "markets": {
+        "1.5 Üst": 84.1,
+        "2.5 Üst": 64.1,
+        "KG Var": 64.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.85,
+        "away": 1.45
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Valencia CF – CA Osasuna",
+      "markets": {
+        "1.5 Üst": 84.1,
+        "2.5 Üst": 64.1,
+        "KG Var": 64.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Hollanda Eredivisie",
+      "match": "PEC Zwolle – AZ",
+      "markets": {
+        "1.5 Üst": 82.2,
+        "2.5 Üst": 61.0,
+        "KG Var": 61.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.8
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "US Sassuolo Calcio – SSC Napoli",
+      "markets": {
+        "1.5 Üst": 81.5,
+        "2.5 Üst": 59.9,
+        "KG Var": 62.1
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.55
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "RC Celta de Vigo – Villarreal CF",
+      "markets": {
+        "1.5 Üst": 80.1,
+        "2.5 Üst": 57.7,
+        "KG Var": 60.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "RC Deportivo La Coruña – FC Barcelona",
+      "markets": {
+        "1.5 Üst": 79.9,
+        "2.5 Üst": 57.4,
+        "KG Var": 57.7
+      },
+      "sample": {
+        "home": 7,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.16,
+        "away": 1.82
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Portekiz Primeira Liga",
+      "match": "FC Porto – Sporting Clube de Portugal",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 58.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 1.4
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Málaga CF – Athletic Club",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 57.6
+      },
+      "sample": {
+        "home": 6,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.25,
+        "away": 1.65
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Fransa Ligue 1",
+      "match": "AJ Auxerre – Olympique de Marseille",
+      "markets": {
+        "1.5 Üst": 77.7,
+        "2.5 Üst": 54.2,
+        "KG Var": 53.3
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.85,
+        "away": 1.0
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Venezia FC – Bologna FC 1909",
+      "markets": {
+        "1.5 Üst": 77.7,
+        "2.5 Üst": 54.2,
+        "KG Var": 52.2
+      },
+      "sample": {
+        "home": 5,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 0.95,
+        "away": 1.9
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İngiltere Championship",
+      "match": "Swansea City AFC – Cardiff City FC",
+      "markets": {
+        "1.5 Üst": 77.3,
+        "2.5 Üst": 53.6,
+        "KG Var": 55.2
+      },
+      "sample": {
+        "home": 10,
+        "away": 8
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.12
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "US Lecce – Atalanta BC",
+      "markets": {
+        "1.5 Üst": 76.9,
+        "2.5 Üst": 53.1,
+        "KG Var": 55.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.2,
+        "away": 1.6
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
+      "markets": {
+        "1.5 Üst": 73.3,
+        "2.5 Üst": 48.2,
+        "KG Var": 48.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 0.9
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Torino FC – SS Lazio",
+      "markets": {
+        "1.5 Üst": 73.3,
+        "2.5 Üst": 48.2,
+        "KG Var": 52.9
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.3,
+        "away": 1.3
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Udinese Calcio – ACF Fiorentina",
+      "markets": {
+        "1.5 Üst": 72.3,
+        "2.5 Üst": 46.9,
+        "KG Var": 51.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.2
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Türkiye Süper Lig",
+      "match": "corum – kocaelispor",
+      "markets": {
+        "1.5 Üst": 71.3,
+        "2.5 Üst": 45.6,
+        "KG Var": 50.6
+      },
+      "sample": {
+        "home": 5,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.15,
+        "away": 1.35
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Frosinone Calcio – Parma Calcio 1913",
+      "markets": {
+        "1.5 Üst": 69.2,
+        "2.5 Üst": 43.0,
+        "KG Var": 41.1
+      },
+      "sample": {
+        "home": 5,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 0.7
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "Portekiz Primeira Liga",
+      "match": "Gil Vicente FC – GD Estoril Praia",
+      "markets": {
+        "1.5 Üst": 68.1,
+        "2.5 Üst": 41.7,
+        "KG Var": 44.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 0.85
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İtalya Serie A",
+      "match": "Cagliari Calcio – AC Milan",
+      "markets": {
+        "1.5 Üst": 65.7,
+        "2.5 Üst": 39.1,
+        "KG Var": 45.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.1,
+        "away": 1.15
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-29",
+      "league": "İspanya La Liga",
+      "match": "RCD Espanyol de Barcelona – Getafe CF",
+      "markets": {
+        "1.5 Üst": 62.0,
+        "2.5 Üst": 35.0,
+        "KG Var": 42.2
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.1,
+        "away": 1.0
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-30",
+      "league": "Portekiz Primeira Liga",
+      "match": "Sport Lisboa e Benfica – FC Famalicão",
+      "markets": {
+        "1.5 Üst": 82.9,
+        "2.5 Üst": 62.0,
+        "KG Var": 60.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.0,
+        "away": 1.2
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-30",
+      "league": "Portekiz Primeira Liga",
+      "match": "Casa Pia AC – Sporting Clube de Braga",
+      "markets": {
+        "1.5 Üst": 79.3,
+        "2.5 Üst": 56.6,
+        "KG Var": 56.2
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.1,
+        "away": 1.85
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Liverpool FC – Sunderland AFC",
+      "markets": {
+        "1.5 Üst": 85.3,
+        "2.5 Üst": 66.0,
+        "KG Var": 65.1
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.0,
+        "away": 1.4
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Chelsea FC – Crystal Palace FC",
+      "markets": {
+        "1.5 Üst": 83.5,
+        "2.5 Üst": 63.0,
+        "KG Var": 64.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.55
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Newcastle United FC – Manchester United FC",
+      "markets": {
+        "1.5 Üst": 83.5,
+        "2.5 Üst": 63.0,
+        "KG Var": 64.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.6,
+        "away": 1.65
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Manchester City FC – Leeds United FC",
+      "markets": {
+        "1.5 Üst": 82.9,
+        "2.5 Üst": 62.0,
+        "KG Var": 60.4
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.0,
+        "away": 1.2
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "AFC Bournemouth – Brighton & Hove Albion FC",
+      "markets": {
+        "1.5 Üst": 79.3,
+        "2.5 Üst": 56.6,
+        "KG Var": 59.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Aston Villa FC – Everton FC",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 58.6
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.45
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Coventry City FC – Ipswich Town FC",
+      "markets": {
+        "1.5 Üst": 78.5,
+        "2.5 Üst": 55.4,
+        "KG Var": 57.1
+      },
+      "sample": {
+        "home": 5,
+        "away": 5
+      },
+      "sampleMode": {
+        "home": "all_venues_fallback",
+        "away": "all_venues_fallback"
+      },
+      "expectedGoals": {
+        "home": 1.2,
+        "away": 1.7
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Tottenham Hotspur FC – Fulham FC",
+      "markets": {
+        "1.5 Üst": 77.7,
+        "2.5 Üst": 54.2,
+        "KG Var": 57.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.5
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-02",
+      "league": "İngiltere Premier Lig",
+      "match": "Brentford FC – Arsenal FC",
+      "markets": {
+        "1.5 Üst": 75.1,
+        "2.5 Üst": 50.6,
+        "KG Var": 54.9
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.35
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
     }
   ],
   "candidateCount": 86,
@@ -1418,6 +2818,7 @@
     "bettingRecommendation": false
   },
   "fixtureCoverageComplete": false,
-  "candidateListLimit": 30,
+  "candidateListLimit": null,
+  "candidateListComplete": true,
   "reason": "PAS — 9/9 lig okundu; bugün 0, 7 günde 95 fikstür; 86 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
 }
