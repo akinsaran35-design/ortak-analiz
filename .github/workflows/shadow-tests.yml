@@ -97,3 +97,6 @@ jobs:
 
       - name: Test historical conflict audit
         run: python scripts/test_history_audit.py
+
+      - name: Test historical text pilot
+        run: python scripts/test_historical_text.py
