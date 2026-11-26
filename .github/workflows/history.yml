@@ -33,6 +33,8 @@ jobs:
       - run: python scripts/historical_baseline.py
       - run: python scripts/test_historical_freshness.py
       - run: python scripts/historical_freshness.py
+      - run: python scripts/test_openliga_pilot.py
+      - run: python scripts/openliga_pilot.py
       - uses: actions/upload-artifact@v4
         with:
           name: historical-data
@@ -44,4 +46,6 @@ jobs:
             historical_reconcile.json
             historical_baseline.json
             historical_freshness.json
+            openliga_pilot.json
+            openliga_baseline.json
           retention-days: 7

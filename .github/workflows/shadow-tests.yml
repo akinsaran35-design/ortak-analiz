@@ -112,3 +112,6 @@ jobs:
 
       - name: Test source freshness
         run: python scripts/test_historical_freshness.py
+
+      - name: Test OpenLigaDB pilot
+        run: python scripts/test_openliga_pilot.py
