@@ -98,3 +98,12 @@ assert.deepEqual(matchOverview(row,overviewData,now+86400001),{result:null,goals
 assert.equal(matchOverview(row,{...overviewData,model_research:{...overviewData.model_research,rows:[{...overview,scoreProbabilities:{homeWin:.9,draw:.9,awayWin:.9}}]}},now).result,null);
 assert.deepEqual(movementFor(row,d,now),[]);
 console.log("Research overview and unavailable market movement guards passed");
+
+const {statisticalExpectation}=require("../mobile-v487.js");
+const ex={home:{metrics:{corners:{sample:10,forAverage:4.3,againstAverage:5.4}}},away:{metrics:{corners:{sample:10,forAverage:4.6,againstAverage:5.6}}}};
+const e=statisticalExpectation(ex,"corners");
+assert.ok(Math.abs(e.home-4.95)<1e-9&&Math.abs(e.away-5)<1e-9&&Math.abs(e.total-9.95)<1e-9);
+assert.equal(statisticalExpectation(ex,"yellowCards"),null);
+assert.equal(statisticalExpectation({...ex,away:{metrics:{corners:{...ex.away.metrics.corners,sample:4}}}},"corners"),null);
+assert.equal(statisticalExpectation({...ex,away:{metrics:{corners:{...ex.away.metrics.corners,forAverage:null}}}},"corners"),null);
+console.log("Descriptive match expectation arithmetic and sample safeguards passed");

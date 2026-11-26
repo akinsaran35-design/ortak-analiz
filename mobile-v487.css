@@ -228,3 +228,14 @@ main{padding-inline:clamp(10px,3vw,20px)}
 .history-compare-row strong{font-size:calc(23 * var(--ui));font-variant-numeric:tabular-nums;color:var(--accent)}.history-compare-row strong:last-child{color:var(--good)}
 .history-compare-label{font-size:calc(12 * var(--ui));color:var(--text)}
 .history-samples{display:flex;justify-content:space-between;color:var(--muted);font-size:calc(10 * var(--ui));padding:calc(3 * var(--ui)) calc(10 * var(--ui))}
+
+/* UI 527: descriptive match expectations, separate from forecasts. */
+.expectation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(6 * var(--ui));margin-block:calc(12 * var(--ui))}
+.expectation-card{background:var(--sub);border:1px solid var(--line);border-radius:calc(12 * var(--ui));padding:calc(10 * var(--ui)) calc(6 * var(--ui));display:flex;flex-direction:column;gap:calc(6 * var(--ui));min-width:0;text-align:center}
+.expectation-grid:has(.expectation-card:only-child){grid-template-columns:1fr}
+.expectation-label{font-size:calc(12 * var(--ui));font-weight:650}
+.expectation-total{font-size:calc(25 * var(--ui));font-variant-numeric:tabular-nums;color:var(--accent)}
+.expectation-card.yellow .expectation-total{color:var(--warn)}
+.expectation-card.red .expectation-total{color:#e97480}
+.expectation-split{display:grid;gap:calc(4 * var(--ui));border-top:1px solid var(--line);padding-top:calc(6 * var(--ui));font-size:calc(11 * var(--ui));overflow-wrap:anywhere}
+#detail-content .expectation-card small{font-size:calc(10 * var(--ui))}
