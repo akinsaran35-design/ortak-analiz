@@ -1,0 +1,16 @@
+const assert=require("node:assert/strict");
+const {summarize,files}=require("../weekend-readiness.js");
+const now=Date.parse("2026-11-26T13:00:00Z");
+const updatedAt=new Date(now).toISOString();
+const data=Object.fromEntries(files.map(f=>[f,{updatedAt}]));
+Object.assign(data["daily.json"],{date:"2026-11-26",leaguesLoaded:6,fixturesToday:0,upcoming:[{date:"2026-11-28"},{date:"2026-11-29"}]});
+Object.assign(data["data_quality.json"],{status:"healthy",qualityGate:"PASS",errors:[],warnings:[]});
+Object.assign(data["prospective_validation.json"],{tested:0,pending:69,minimumMatches:500});
+let r=summarize(data,now);
+assert.equal(r.dataCurrent,true);assert.equal(r.decision,"PAS");assert.equal(r.realBettingEnabled,false);assert.equal(r.weekend["2026-11-28"],1);
+assert.equal(summarize(data,now+1800001).dataCurrent,false);
+assert.equal(summarize({},now).missing.length,5);
+assert.equal(summarize({...data,"daily.json":{...data["daily.json"],date:"2026-11-25"}},now).dataCurrent,false);
+assert.equal(summarize({...data,"data_quality.json":{...data["data_quality.json"],warnings:["bad"]}},now).dataCurrent,false);
+assert.equal(summarize(data,now-1).dataCurrent,false);
+console.log("Weekend readiness checks passed");
