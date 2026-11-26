@@ -117,7 +117,16 @@
     "old": 0.5784083108779449,
     "candidate": 0.5411994963390306,
     "baseline": 0.5599343185550082,
-    "result": null
+    "result": [
+      1,
+      3
+    ],
+    "settledAt": "2026-11-26T17:14:32.376411+03:00",
+    "resultSources": [
+      "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+      "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+      "https://www.footballwebpages.co.uk/championship/20261125"
+    ]
   },
   "[\"2026-11-25\", \"en.2\", \"Burnley FC\", \"Birmingham City FC\"]": {
     "date": "2026-11-25",
@@ -129,7 +138,16 @@
     "old": 0.5364843129226772,
     "candidate": 0.5351879214939392,
     "baseline": 0.5599343185550082,
-    "result": null
+    "result": [
+      0,
+      2
+    ],
+    "settledAt": "2026-11-26T17:14:32.376411+03:00",
+    "resultSources": [
+      "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+      "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+      "https://www.footballwebpages.co.uk/championship/20261125"
+    ]
   },
   "[\"2026-11-25\", \"en.2\", \"Stoke City FC\", \"Millwall FC\"]": {
     "date": "2026-11-25",
@@ -141,7 +159,16 @@
     "old": 0.6405735336749161,
     "candidate": 0.6059178715488167,
     "baseline": 0.5599343185550082,
-    "result": null
+    "result": [
+      2,
+      1
+    ],
+    "settledAt": "2026-11-26T17:14:32.376411+03:00",
+    "resultSources": [
+      "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+      "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+      "https://www.footballwebpages.co.uk/championship/20261125"
+    ]
   },
   "[\"2026-11-25\", \"en.2\", \"Watford FC\", \"Blackburn Rovers FC\"]": {
     "date": "2026-11-25",
@@ -153,7 +180,16 @@
     "old": 0.5305463165333173,
     "candidate": 0.5187927910118377,
     "baseline": 0.5599343185550082,
-    "result": null
+    "result": [
+      0,
+      1
+    ],
+    "settledAt": "2026-11-26T17:14:32.376411+03:00",
+    "resultSources": [
+      "https://www.efl.com/news/2026/november/25/hirst-double-returns-stoke-to-second-as-birmingham-and-west-brom-win/",
+      "https://www.rte.ie/sport/results/soccer/championship/38070/results/",
+      "https://www.footballwebpages.co.uk/championship/20261125"
+    ]
   },
   "[\"2026-11-27\", \"en.2\", \"Southampton FC\", \"Middlesbrough FC\"]": {
     "date": "2026-11-27",

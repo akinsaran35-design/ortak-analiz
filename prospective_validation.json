@@ -2,12 +2,19 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-26T17:07:45.316387+03:00",
+  "updatedAt": "2026-11-26T17:14:32.376411+03:00",
   "recorded": 90,
-  "tested": 0,
-  "pending": 90,
+  "verifiedFallbackSettled": 4,
+  "tested": 4,
+  "pending": 86,
   "minimumMatches": 500,
   "liveEnabled": false,
   "status": "collecting_data",
-  "errors": []
+  "errors": [],
+  "scores": {
+    "old": 0.21905543725772805,
+    "candidate": 0.23034267436075734,
+    "baseline": 0.2535921225406532
+  },
+  "improvement": 0.023249448179895882
 }

@@ -1,27 +1,28 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-26T17:07:47.475745+03:00",
+  "updatedAt": "2026-11-26T17:14:33.961382+03:00",
   "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
   "errors": [],
+  "verifiedFallbackSettled": 4,
   "overall": {
     "recorded": 90,
-    "settled": 0,
-    "pending": 90,
+    "settled": 4,
+    "pending": 86,
     "markets": {
       "1.5 Üst": {
-        "tested": 0,
-        "brier": null,
-        "actualRate": null
+        "tested": 4,
+        "brier": 0.176844,
+        "actualRate": 75.0
       },
       "2.5 Üst": {
-        "tested": 0,
-        "brier": null,
-        "actualRate": null
+        "tested": 4,
+        "brier": 0.219056,
+        "actualRate": 50.0
       },
       "KG Var": {
-        "tested": 0,
-        "brier": null,
-        "actualRate": null
+        "tested": 4,
+        "brier": 0.230508,
+        "actualRate": 50.0
       }
     }
   },
@@ -50,23 +51,23 @@
     },
     "İngiltere Championship": {
       "recorded": 16,
-      "settled": 0,
-      "pending": 16,
+      "settled": 4,
+      "pending": 12,
       "markets": {
         "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.176844,
+          "actualRate": 75.0
         },
         "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.219056,
+          "actualRate": 50.0
         },
         "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.230508,
+          "actualRate": 50.0
         }
       }
     },
@@ -228,45 +229,45 @@
   "periods": {
     "30": {
       "recorded": 4,
-      "settled": 0,
-      "pending": 4,
+      "settled": 4,
+      "pending": 0,
       "markets": {
         "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.176844,
+          "actualRate": 75.0
         },
         "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.219056,
+          "actualRate": 50.0
         },
         "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.230508,
+          "actualRate": 50.0
         }
       }
     },
     "90": {
       "recorded": 4,
-      "settled": 0,
-      "pending": 4,
+      "settled": 4,
+      "pending": 0,
       "markets": {
         "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.176844,
+          "actualRate": 75.0
         },
         "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.219056,
+          "actualRate": 50.0
         },
         "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
+          "tested": 4,
+          "brier": 0.230508,
+          "actualRate": 50.0
         }
       }
     }

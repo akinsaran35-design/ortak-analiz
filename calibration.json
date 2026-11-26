@@ -2,10 +2,10 @@
   "version": "4.17",
   "market": "2.5 Over",
   "modelVersion": "4.4",
-  "tested": 0,
+  "tested": 4,
   "minimumMatches": 500,
-  "brier": null,
-  "ece": null,
+  "brier": 0.23034267436075734,
+  "ece": 0.24731558432399775,
   "bins": [
     {
       "lower": 0.0,
@@ -45,16 +45,16 @@
     {
       "lower": 0.5,
       "upper": 0.6,
-      "count": 0,
-      "meanProbability": null,
-      "actualRate": null
+      "count": 3,
+      "meanProbability": 0.5317267362816026,
+      "actualRate": 0.3333333333333333
     },
     {
       "lower": 0.6,
       "upper": 0.7,
-      "count": 0,
-      "meanProbability": null,
-      "actualRate": null
+      "count": 1,
+      "meanProbability": 0.6059178715488167,
+      "actualRate": 1.0
     },
     {
       "lower": 0.7,
@@ -81,5 +81,5 @@
   "status": "collecting_data",
   "modelCalibrated": false,
   "realBettingEnabled": false,
-  "updatedAt": "2026-11-26T14:07:48.669313+00:00"
+  "updatedAt": "2026-11-26T14:14:34.932128+00:00"
 }
