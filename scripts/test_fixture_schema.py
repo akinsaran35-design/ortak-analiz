@@ -1,5 +1,5 @@
 import unittest
-from fixture_schema import matches_in
+from fixture_schema import matches_in, final_score
 
 class FixtureSchemaTest(unittest.TestCase):
     def test_shapes(self):
@@ -10,6 +10,10 @@ class FixtureSchemaTest(unittest.TestCase):
         for payload in ({},{"matches":None},[None],{"rounds":[{}]}):
             with self.assertRaises(ValueError):
                 matches_in(payload)
+    def test_score_shapes(self):
+        self.assertEqual(final_score({"score":{"ft":[0,0]}}),[0,0])
+        for score in (None,[],[1,0],{"ft":[True,0]},{"ft":[-1,0]}):
+            self.assertIsNone(final_score({"score":score}))
     def test_empty(self):
         self.assertEqual(matches_in([]),[])
         self.assertEqual(matches_in({"matches":[]}),[])
