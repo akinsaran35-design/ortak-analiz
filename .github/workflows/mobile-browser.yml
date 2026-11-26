@@ -5,6 +5,7 @@ on:
       - 'index.html'
       - 'mobile-v487.js'
       - 'mobile-v487.css'
+      - 'money-v497.js'
       - 'scripts/test_mobile_browser.js'
       - '.github/workflows/mobile-browser.yml'
 jobs:
