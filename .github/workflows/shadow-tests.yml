@@ -238,3 +238,6 @@ jobs:
         run: |
           python scripts/test_snapshot_integrity.py
           python scripts/snapshot_integrity.py
+
+      - name: V4.77 backtest import and execution regression
+        run: python scripts/test_backtest_import.py

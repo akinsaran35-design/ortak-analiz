@@ -67,7 +67,9 @@ jobs:
         run: python scripts/archive_market.py
 
       - name: V4.3 Backtest ve model dogrulama un
-        run: python scripts/validate_model.py
+        run: |
+          python scripts/backtest.py
+          python scripts/validate_model.py
 
       - name: V4.64 automatic Championship results
         if: github.ref == 'refs/heads/main'
