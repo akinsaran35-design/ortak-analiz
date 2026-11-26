@@ -206,7 +206,7 @@ jobs:
         run: |
           python scripts/test_score_provenance.py
           python scripts/score_provenance.py
-      - name: V4.86 17-file release and market integrity
+      - name: V4.89 18-file release and league integrity
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_snapshot_integrity.py
