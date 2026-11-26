@@ -52,3 +52,13 @@ assert.equal(lastKnownSchedule(row,{...history,odds:{...history.odds,events:[eve
 assert.equal(lastKnownSchedule(row,{...history,odds:{...history.odds,errors:["source failed"]}},staleNow),null);
 assert.equal(lastKnownSchedule(row,{...history,odds:{...history.odds,updatedAt:"2026-11-26T14:59:00Z"}},staleNow),null);
 console.log("Last known schedule: stale odds separation, time filters, identity and expiry passed");
+
+const pastConfirmed=confirmedRows(confirmed,staleNow,true);
+assert.equal(pastConfirmed.length,1);
+assert.equal(pastConfirmed[0].event,null);
+assert.equal(pastConfirmed[0].candidate,null);
+assert.equal(timeLabel(pastConfirmed[0]),"21:00 TSİ · Son bilinen");
+assert.equal(confirmedRows(confirmed,now+86400001,true).length,0);
+assert.equal(confirmedRows({...confirmed,kickoff_confirmation:{...confirmed.kickoff_confirmation,coverageUpdatedAt:"wrong"}},staleNow,true).length,0);
+assert.ok(html.includes('value="last-confirmed"'));
+console.log("Last-known corroborated fixture view passed");
