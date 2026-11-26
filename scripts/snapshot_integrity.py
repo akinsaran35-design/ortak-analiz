@@ -3,14 +3,14 @@ import json
 from pathlib import Path
 from datetime import datetime,timezone
 
-FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision")
+FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation")
 
 def audit(data):
     errors=[]
     def check(ok,label):
         if not ok: errors.append(label)
     try:
-        d,o,m,a,v,p,f,q,e,s,r,u=(data[k] for k in FILES)
+        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar=(data[k] for k in FILES)
         check(d["candidateCount"]==len(d["candidates"]),"candidate_count")
         check(d["upcomingCount"]==len(d["upcoming"]),"fixture_count")
         check(o["eventCount"]==len(o["events"]),"odds_count")
@@ -28,12 +28,24 @@ def audit(data):
         from collections import Counter
         check(len(rows)==len(identities) and dict(Counter(x["status"] for x in rows))==r["counts"],"calendar_replay_count")
         check({(x["archive"],x["league"],x["home"],x["away"],x["archivedDate"],x["recordedAt"]) for x in rows}==identities,"calendar_replay_identity")
+        from league_config import FIXTURE_CODES
+        expected=Counter(("prospective",x["league"],x["date"],x["home"],x["away"],tuple(x["result"])) for x in a.values() if x["result"] is not None)
+        for x in p.values():
+            if x["result"] is not None:
+                h,away=x["match"].split(" – ")
+                expected[("performance",FIXTURE_CODES[x["league"]],x["date"],h,away,tuple(x["result"]))]+=1
+        actual=Counter((x["archive"],x["league"],x["date"],x["home"],x["away"],tuple(x["result"])) for x in prov["rows"])
+        check(expected==actual and prov["settledArchiveRecords"]==n+k,"score_provenance_identity")
+        check(prov["uniqueSettledMatches"]==len({x[1:5] for x in expected}),"score_provenance_unique_count")
+        check(all(prov["counts"][kind]==dict(Counter(x["status"] for x in prov["rows"] if x["archive"]==kind)) for kind in ("prospective","performance")),"score_provenance_status_count")
+        check(prov["version"]=="4.80" and feeds["version"]=="4.69","score_report_version")
+        check(calendar.get("status")!="research_only" or (calendar["dailyUpdatedAt"]==d["updatedAt"] and calendar["oddsUpdatedAt"]==o["updatedAt"]),"calendar_snapshot_identity")
         check(u["testedMatches"]==n,"decision_validation_count")
         check(u["decision"]=="PAS" and u["realBettingEnabled"] is False and u["selections"]==[] and v["liveEnabled"] is False,"research_lock")
     except (KeyError,TypeError,ValueError,AttributeError) as exc:
         errors.append("invalid_schema:"+type(exc).__name__)
     timestamps={name+".json":data[name]["updatedAt"] for name in FILES if isinstance(data.get(name),dict) and isinstance(data[name].get("updatedAt"),str)}
-    return {"version":"4.76","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"PASS" if not errors else "FAIL","errors":errors,"mode":"research_only","reportTimestamps":timestamps}
+    return {"version":"4.81","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"PASS" if not errors else "FAIL","errors":errors,"mode":"research_only","reportTimestamps":timestamps}
 
 def main():
     data={}
@@ -42,7 +54,7 @@ def main():
             data[k]=json.loads(Path(k+".json").read_text(encoding="utf-8"))
         report=audit(data)
     except (OSError,ValueError) as exc:
-        report={"version":"4.76","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"FAIL","errors":[type(exc).__name__],"mode":"research_only"}
+        report={"version":"4.81","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"FAIL","errors":[type(exc).__name__],"mode":"research_only"}
     Path("snapshot_integrity.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(report,ensure_ascii=False))
     if report["status"]!="PASS": raise SystemExit(1)
