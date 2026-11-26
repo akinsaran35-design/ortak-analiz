@@ -218,3 +218,8 @@ jobs:
           name: archive-calendar-audit
           path: archive_calendar_audit.json
           retention-days: 7
+
+      - name: V4.71 immutable date evidence tests and replay
+        run: |
+          python scripts/test_archive_calendar_evidence.py
+          python scripts/archive_calendar_evidence.py
