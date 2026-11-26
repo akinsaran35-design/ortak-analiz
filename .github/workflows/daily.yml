@@ -197,7 +197,7 @@ jobs:
         run: |
           python scripts/test_score_provenance.py
           python scripts/score_provenance.py
-      - name: V4.76 snapshot integrity
+      - name: V4.81 complete release integrity
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_snapshot_integrity.py

@@ -31,28 +31,33 @@
     const mismatch=Array.isArray(matching.unmatched)?matching.unmatched.filter(x=>x?.reason==="date_mismatch"):[];
     const matchConsistent=matched!==null && unmatched!==null && matched+unmatched===integer(daily.candidateCount) && Array.isArray(matching.unmatched) && matching.unmatched.length===unmatched;
     const coverage={matched,unmatched,mismatch,consistent:matchConsistent,current:matchConsistent&&fresh(matching.updatedAt,now)&&fresh(odds.updatedAt,now)};
+    const integrity=data["snapshot_integrity.json"]||{};
+    const manifestCurrent=integrity.version==="4.81" && integrity.status==="PASS" && Array.isArray(integrity.errors) && integrity.errors.length===0 && fresh(integrity.updatedAt,now);
+    const bound=f=>manifestCurrent && typeof data[f]?.updatedAt==="string" && integrity.reportTimestamps?.[f]===data[f].updatedAt && fresh(data[f].updatedAt,now);
     const calendar=data["fixture_reconciliation.json"]||{};
-    const calendarCurrent=calendar.status==="research_only" && calendar.oddsFresh===true && fresh(calendar.updatedAt,now) && fresh(odds.updatedAt,now) && calendar.oddsUpdatedAt===odds.updatedAt && calendar.dailyUpdatedAt===daily.updatedAt && typeof daily.updatedAt==="string" && typeof odds.updatedAt==="string";
+    const calendarCurrent=bound("fixture_reconciliation.json") && calendar.status==="research_only" && calendar.oddsFresh===true && fresh(calendar.updatedAt,now) && fresh(odds.updatedAt,now) && calendar.oddsUpdatedAt===odds.updatedAt && calendar.dailyUpdatedAt===daily.updatedAt && typeof daily.updatedAt==="string" && typeof odds.updatedAt==="string";
     const reconciliation={current:calendarCurrent,matched:calendarCurrent?integer(calendar.reconciledMatched):null,corrections:calendarCurrent&&Array.isArray(calendar.proposedCorrections)?calendar.proposedCorrections.length:null,dates:calendarCurrent?calendar.candidateCountsByDate||{}:{}};
     const evidence=data["archive_calendar_evidence_status.json"]||{};
     const replay=data["archive_calendar_result_replay.json"]||{};
     const results=data["multi_league_results.json"]||{};
-    const evidenceCurrent=evidence.version==="4.71" && evidence.mode==="research_only" && fresh(evidence.updatedAt,now);
+    const evidenceCurrent=bound("archive_calendar_evidence_status.json") && evidence.version==="4.71" && evidence.mode==="research_only" && fresh(evidence.updatedAt,now);
     const counts=replay.counts||{};
     const replayTotal=Object.values(counts).reduce((sum,n)=>integer(n)===null?NaN:sum+n,0);
-    const replayCurrent=evidenceCurrent && replay.version==="4.72" && replay.mode==="research_only" && fresh(replay.updatedAt,now) && Date.parse(replay.updatedAt)>=Date.parse(evidence.updatedAt) && replayTotal===integer(evidence.archiveIdentities) && Array.isArray(replay.rows) && replay.rows.length===replayTotal && Array.isArray(replay.sourceErrors);
-    const resultCurrent=results.version==="4.69" && fresh(results.updatedAt,now) && Array.isArray(results.approvedLeagues) && new Set(results.approvedLeagues).size===results.approvedLeagues.length && Array.isArray(results.groups);
+    const replayCurrent=evidenceCurrent && bound("archive_calendar_result_replay.json") && replay.version==="4.72" && replay.mode==="research_only" && fresh(replay.updatedAt,now) && Date.parse(replay.updatedAt)>=Date.parse(evidence.updatedAt) && replayTotal===integer(evidence.archiveIdentities) && Array.isArray(replay.rows) && replay.rows.length===replayTotal && Array.isArray(replay.sourceErrors);
+    const resultCurrent=bound("multi_league_results.json") && results.version==="4.69" && fresh(results.updatedAt,now) && Array.isArray(results.approvedLeagues) && new Set(results.approvedLeagues).size===results.approvedLeagues.length && Array.isArray(results.groups);
     const archiveAudit={evidenceCurrent,replayCurrent,observations:evidenceCurrent?integer(evidence.observations):null,identities:evidenceCurrent?integer(evidence.archiveIdentities):null,awaiting:replayCurrent?integer(counts.awaiting_match??0):null,verified:replayCurrent?integer(counts.research_score_verified??0):null,errors:replayCurrent?replay.sourceErrors.length:null,leagues:resultCurrent?results.approvedLeagues.length:null,automaticVerified:resultCurrent?integer(results.automaticVerifiedCount):null};
-    const integrity=data["snapshot_integrity.json"]||{};
-    const covered=["daily.json","odds.json","matching.json","prospective_validation.json","data_quality.json","unified_decision.json"];
-    const integrityCurrent=integrity.version==="4.76" && integrity.status==="PASS" && Array.isArray(integrity.errors) && integrity.errors.length===0 && fresh(integrity.updatedAt,now) && covered.every(f=>typeof data[f]?.updatedAt==="string" && integrity.reportTimestamps?.[f]===data[f].updatedAt);
-    return {today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, archiveAudit, integrityCurrent, dailyDate:daily.date || null,
+    const integrityCurrent=manifestCurrent && files.every(bound);
+    const provenance=data["score_provenance.json"]||{};
+    const provenanceCurrent=bound("score_provenance.json") && provenance.version==="4.80" && provenance.mode==="research_only" && Array.isArray(provenance.rows) && Array.isArray(provenance.crossArchiveConflicts) && integer(provenance.feedDisagreements)!==null && provenance.settledArchiveRecords===provenance.rows.length;
+    const scoreAudit={current:provenanceCurrent,unique:provenanceCurrent?integer(provenance.uniqueSettledMatches):null,corroborated:provenanceCurrent?new Set(provenance.rows.filter(x=>x.status==="currently_corroborated").map(x=>JSON.stringify([x.league,x.date,x.home,x.away]))).size:null,conflicts:provenanceCurrent?provenance.crossArchiveConflicts.length:null,feedDisagreements:provenanceCurrent?provenance.feedDisagreements:null,archiveMismatches:provenanceCurrent?provenance.rows.filter(x=>x.status==="source_conflict"||x.status==="invalid_score").length:null};
+    const scoreHealthy=provenanceCurrent && scoreAudit.conflicts===0 && scoreAudit.feedDisagreements===0 && scoreAudit.archiveMismatches===0;
+    return {today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, archiveAudit, integrityCurrent, scoreAudit, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
       fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
       tested:integer(validation.tested), pending:integer(validation.pending),
       minimum:integer(validation.minimumMatches), calibrated:decision.modelCalibrated===true,
-      dataCurrent:missing.length===0 && stale.length===0 && healthy && daily.date===today && integrityCurrent,
+      dataCurrent:missing.length===0 && stale.length===0 && healthy && daily.date===today && integrityCurrent && scoreHealthy,
       mode:"research_only", decision:"PAS", realBettingEnabled:false};
   }
   if (typeof module !== "undefined" && module.exports) module.exports={summarize,files};
@@ -61,7 +66,7 @@
   panel.className="card";
   panel.id="weekendReadiness";
   const h=document.createElement("h2");
-  h.textContent="Ortak Analiz V4.76 — Hafta sonu hazırlığı";
+  h.textContent="Ortak Analiz V4.81 — Hafta sonu hazırlığı";
   const out=document.createElement("div");
   out.setAttribute("aria-live","polite");
   const button=document.createElement("button");
@@ -82,7 +87,7 @@
     line("Raporlar kontrol ediliyor…");
     const data={};
     try {
-      await Promise.all([...files,"fixture_reconciliation.json","archive_calendar_evidence_status.json","archive_calendar_result_replay.json","multi_league_results.json","snapshot_integrity.json"].map(async f=>{
+      await Promise.all([...files,"fixture_reconciliation.json","archive_calendar_evidence_status.json","archive_calendar_result_replay.json","multi_league_results.json","snapshot_integrity.json","score_provenance.json"].map(async f=>{
         try {
           const response=await fetch("./"+f+"?ts="+Date.now(),{cache:"no-store"});
           if(!response.ok) return;
@@ -125,6 +130,11 @@
       if(audit.replayCurrent) line("Tarih değişikliği araştırması: "+val(audit.awaiting)+" sonuç bekleyen kayıt • "+val(audit.verified)+" doğrulanan araştırma kaydı • "+val(audit.errors)+" kaynak hatası.");
       else line("Tarih değişikliği sonuç araştırması: güncel, tutarlı rapor bekleniyor.","note");
       line("Araştırma sonuçları ana performans hesabına dahil edilmez.","note");
+      const sc=r.scoreAudit;
+      if(sc.current){
+        line("Skor kaynağı denetimi: "+val(sc.corroborated)+" / "+val(sc.unique)+" benzersiz maç iki kaynakla doğrulandı.");
+        line("Kaynak çelişkisi: "+val(sc.feedDisagreements)+" • Arşivler arası çelişki: "+val(sc.conflicts)+" • Arşiv skor hatası: "+val(sc.archiveMismatches),sc.feedDisagreements||sc.conflicts||sc.archiveMismatches?"bad":"note");
+      }else line("Skor kaynağı denetimi: güncel ve tutarlı rapor bekleniyor.","note");
       const tr=r.turkey;
       const labels={inactive:"Sağlayıcıda etkin değil",unverified:"Henüz doğrulanmadı",stale:"Eski veri",snapshot:"Güncel anlık görüntü"};
       line("Türkiye Süper Lig: "+val(tr.results)+" geçmiş sonuç • Oran kaydı: "+val(tr.oddsEvents)+" • "+labels[tr.oddsStatus]);
