@@ -1,6 +1,6 @@
 (function(){
 "use strict";
-const FILES=["daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation"];
+const FILES=["daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research"];
 const MARKETS=["1.5 Üst","2.5 Üst","KG Var"];
 const LEAGUES={"İngiltere Premier Lig":"soccer_epl","İngiltere Championship":"soccer_efl_champ","Almanya Bundesliga":"soccer_germany_bundesliga","İspanya La Liga":"soccer_spain_la_liga","İtalya Serie A":"soccer_italy_serie_a","Fransa Ligue 1":"soccer_france_ligue_one","Hollanda Eredivisie":"soccer_netherlands_eredivisie","Portekiz Primeira Liga":"soccer_portugal_primeira_liga","Türkiye Süper Lig":"soccer_turkey_super_league"};
 const arr=x=>Array.isArray(x)?x:[],num=x=>Number.isInteger(x)&&x>=0?String(x):"—";
@@ -37,6 +37,12 @@ function lastKnownSchedule(row,data,now){
  if(events.length!==1||events[0].league!==LEAGUES[row.league]||events[0].kickoff!==m.kickoff||Date.parse(m.kickoff)<=now)return null;
  return {kickoff:m.kickoff,observedAt:data.odds.updatedAt};
 }
+function researchFor(row,data,now){
+ const report=data.model_research;
+ if(!scheduleBound(data,"daily",now)||!scheduleBound(data,"model_research",now)||report?.version!=="4.21"||report.mode!=="research_only"||report.rhoFitted!==false||report.modelCalibrated!==false||report.realBettingEnabled!==false||report.sourceUpdatedAt!==data.daily.updatedAt)return null;
+ const matches=arr(report.rows).filter(x=>key(x)===key(row));
+ return matches.length===1?matches[0]:null;
+}
 function scheduleFor(r){return r.event?.kickoff||r.lastKnown?.kickoff||null;}
 function timeLabel(r){const t=scheduleFor(r);return t?hourTR(t)+" TSİ"+(r.event?"":" · Son bilinen"):"Saat belirsiz";}
 function eventFor(row,data,now){if(!["daily","matching","odds"].every(k=>bound(data,k,now)))return null;const m=arr(data.matching.matched).filter(x=>x.match===row.match&&Number.isFinite(Date.parse(x.kickoff))&&dateTR(x.kickoff)===row.date);if(m.length!==1)return null;const e=arr(data.odds.events).filter(x=>x.id===m[0].eventId&&x.kickoff===m[0].kickoff&&x.league===LEAGUES[row.league]);return e.length===1?e[0]:null;}
@@ -61,7 +67,7 @@ function confirmedRows(data,now,allowLastKnown=false){
  return out.sort((a,b)=>Date.parse(scheduleFor(a))-Date.parse(scheduleFor(b))||a.league.localeCompare(b.league,"tr"));
 }
 function filterRows(rows,q,d,l,t){const s=String(q||"").trim().toLocaleLowerCase("tr");return rows.filter(r=>(!s||r.match.toLocaleLowerCase("tr").includes(s))&&(!d||r.date===d)&&(!l||r.league===l)&&(!t||(scheduleFor(r)&&((hourTR(scheduleFor(r))<"17:00")===(t==="day")))));}
-if(typeof module!=="undefined"&&module.exports)module.exports={topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel};
+if(typeof module!=="undefined"&&module.exports)module.exports={topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
@@ -103,7 +109,7 @@ const views={
 "Skor":()=>{const s=topScores(c?.expectedGoals?.home,c?.expectedGoals?.away);out.append(node("p",s.length?"Bağımsız Poisson modelinin en olası 3 skor senaryosu.":"Skor modeli verisi yok.","subtle"));for(const y of s)out.append(node("p",y.score+" · "+pct(y.p)));},
 "Oranlar":()=>{if(!r.event){out.append(node("p","Kesin eşleşen güncel oran kaydı yok.","subtle"));return;}for(const p of [1.5,2.5]){const v=arr(r.event.bookmakers).flatMap(b=>arr(b.lines).filter(l=>l.point===p&&fresh(l.lastUpdate,Date.now())&&typeof l.over==="number"&&l.over>1).map(l=>l.over));out.append(node("p",p+" Üst: "+(v.length?v.length+" kaynak · "+Math.min(...v).toFixed(2)+"–"+Math.max(...v).toFixed(2):"Veri yok")));}out.append(node("p","Oran hareketleri: ayrıntılı raporlarda. Gerçek para akışı verisi yok.","subtle"));},
 "Para akışı":()=>out.append(volumePanel()),
-"İstatistik":()=>out.append(node("p","Ayrıntılı maç istatistikleri henüz bağlı değil.","subtle")),
+"İstatistik":()=>{const model=researchFor(r,data,Date.now());out.append(node("h3","Gol modeli karşılaştırması"));if(!model){out.append(node("p","Bütünlüğü kontrol edilmiş model raporu yok.","subtle"));return;}out.append(node("p","Aynı gol beklentisinden üretilen deneysel dağılımlar. Bağımsız tahminler veya doğrulanmış kazanma olasılıkları değildir.","subtle"));for(const [name,k] of [["1.5 Üst","over15"],["2.5 Üst","over25"],["KG Var","btts"]]){out.append(node("h3",name),metrics([["Poisson",pct(100*model.poisson?.[k])],["Dixon-Coles",pct(100*model.experimentalDixonColes?.[k])],["Monte Carlo",pct(100*model.simulation?.markets?.[k]?.probability)]]));}out.append(node("p","Dixon-Coles katsayısı sabit deneysel değerdir; Monte Carlo aynı dağılımın 20.000 örnekli sayısal kontrolüdür. Kadro, şut, korner ve kart verileri henüz bağlı değil.","subtle"));},
 "H2H":()=>{const f=scheduleBound(data,"daily",Date.now())&&r.formResearch?.version==="5.06"?r.formResearch:null;out.append(node("h3","Son karşılaşmalar"));if(!f||!arr(f.h2h).length)out.append(node("p","Doğrulanmış tarihli geçmiş kayıt yok.","subtle"));else for(const y of f.h2h)out.append(node("p",y.date+" · "+y.home+" "+y.score.join("–")+" "+y.away));out.append(node("p","Yalnızca mevcut lig geçmişi; tüm organizasyonları kapsamaz.","subtle"));},
 "Form":()=>{const f=scheduleBound(data,"daily",Date.now())&&r.formResearch?.version==="5.06"?r.formResearch:null;out.append(node("h3","Son 5 lig maçı"));if(!f){out.append(node("p","Güncel form raporu yok.","subtle"));return;}for(const [label,side] of [["Ev sahibi",f.home],["Deplasman",f.away]]){out.append(node("h3",label+" · "+side.sample+" maç"),metrics([["Galibiyet",num(side.wins)],["Beraberlik",num(side.draws)],["Mağlubiyet",num(side.losses)]]));for(const y of arr(side.rows))out.append(node("p",y.date+" · "+y.opponent+" · "+y.gf+"–"+y.ga+" · "+(y.venue==="home"?"İç saha":"Dış saha"),"subtle"));}out.append(node("p","Lig geçmişi; kadro ve sakatlık verileri bağlı değil.","subtle"));},
 "Diğer":()=>out.append(node("p","İY/MS, iki yarı KG Var ve kartlar için doğrulanmış veri/model henüz bağlı değil.","subtle"))};
