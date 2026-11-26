@@ -557,5 +557,616 @@
       "KG Var": 52.2
     },
     "result": null
+  },
+  "[\"2026-11-28\", \"Portekiz Primeira Liga\", \"Moreirense FC – CD Santa Clara\"]": {
+    "date": "2026-11-28",
+    "league": "Portekiz Primeira Liga",
+    "match": "Moreirense FC – CD Santa Clara",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 72.3,
+      "2.5 Üst": 46.9,
+      "KG Var": 51.5
+    },
+    "result": null
+  },
+  "[\"2026-11-28\", \"Portekiz Primeira Liga\", \"Académico de Viseu FC – FC Alverca\"]": {
+    "date": "2026-11-28",
+    "league": "Portekiz Primeira Liga",
+    "match": "Académico de Viseu FC – FC Alverca",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 71.0,
+      "2.5 Üst": 45.3,
+      "KG Var": 50.3
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Hollanda Eredivisie\", \"ADO Den Haag – FC Utrecht\"]": {
+    "date": "2026-11-29",
+    "league": "Hollanda Eredivisie",
+    "match": "ADO Den Haag – FC Utrecht",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 89.0,
+      "2.5 Üst": 72.5,
+      "KG Var": 71.0
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Hollanda Eredivisie\", \"Fortuna Sittard – SC Heerenveen\"]": {
+    "date": "2026-11-29",
+    "league": "Hollanda Eredivisie",
+    "match": "Fortuna Sittard – SC Heerenveen",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 88.4,
+      "2.5 Üst": 71.5,
+      "KG Var": 70.7
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Fransa Ligue 1\", \"Olympique Lyonnais – AS Monaco FC\"]": {
+    "date": "2026-11-29",
+    "league": "Fransa Ligue 1",
+    "match": "Olympique Lyonnais – AS Monaco FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 87.9,
+      "2.5 Üst": 70.6,
+      "KG Var": 70.1
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"AS Roma – AC Monza\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "AS Roma – AC Monza",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 87.4,
+      "2.5 Üst": 69.7,
+      "KG Var": 62.4
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Real Madrid CF – Deportivo Alavés\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Real Madrid CF – Deportivo Alavés",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 86.9,
+      "2.5 Üst": 68.8,
+      "KG Var": 64.2
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Fransa Ligue 1\", \"Toulouse FC – Stade Rennais FC 1901\"]": {
+    "date": "2026-11-29",
+    "league": "Fransa Ligue 1",
+    "match": "Toulouse FC – Stade Rennais FC 1901",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 86.9,
+      "2.5 Üst": 68.8,
+      "KG Var": 69.0
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Elche CF – Club Atlético de Madrid\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Elche CF – Club Atlético de Madrid",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 86.4,
+      "2.5 Üst": 67.9,
+      "KG Var": 68.1
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Real Sociedad de Fútbol – Sevilla FC\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Real Sociedad de Fútbol – Sevilla FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 86.4,
+      "2.5 Üst": 67.9,
+      "KG Var": 67.9
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Almanya Bundesliga\", \"Borussia Dortmund – Bayer 04 Leverkusen\"]": {
+    "date": "2026-11-29",
+    "league": "Almanya Bundesliga",
+    "match": "Borussia Dortmund – Bayer 04 Leverkusen",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.9,
+      "2.5 Üst": 67.0,
+      "KG Var": 64.3
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Hollanda Eredivisie\", \"NEC – FC Twente '65\"]": {
+    "date": "2026-11-29",
+    "league": "Hollanda Eredivisie",
+    "match": "NEC – FC Twente '65",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.9,
+      "2.5 Üst": 67.0,
+      "KG Var": 67.4
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"Como 1907 – Juventus FC\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "Como 1907 – Juventus FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.3,
+      "2.5 Üst": 66.0,
+      "KG Var": 66.1
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Hollanda Eredivisie\", \"Feyenoord Rotterdam – AFC Ajax\"]": {
+    "date": "2026-11-29",
+    "league": "Hollanda Eredivisie",
+    "match": "Feyenoord Rotterdam – AFC Ajax",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.3,
+      "2.5 Üst": 66.0,
+      "KG Var": 66.8
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Almanya Bundesliga\", \"SC Freiburg – RB Leipzig\"]": {
+    "date": "2026-11-29",
+    "league": "Almanya Bundesliga",
+    "match": "SC Freiburg – RB Leipzig",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.3,
+      "2.5 Üst": 66.0,
+      "KG Var": 63.0
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"FC Internazionale Milano – Genoa CFC\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "FC Internazionale Milano – Genoa CFC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 84.1,
+      "2.5 Üst": 64.1,
+      "KG Var": 58.2
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Almanya Bundesliga\", \"TSG 1899 Hoffenheim – FC Augsburg\"]": {
+    "date": "2026-11-29",
+    "league": "Almanya Bundesliga",
+    "match": "TSG 1899 Hoffenheim – FC Augsburg",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 84.1,
+      "2.5 Üst": 64.1,
+      "KG Var": 64.5
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Valencia CF – CA Osasuna\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Valencia CF – CA Osasuna",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 84.1,
+      "2.5 Üst": 64.1,
+      "KG Var": 64.8
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Hollanda Eredivisie\", \"PEC Zwolle – AZ\"]": {
+    "date": "2026-11-29",
+    "league": "Hollanda Eredivisie",
+    "match": "PEC Zwolle – AZ",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.2,
+      "2.5 Üst": 61.0,
+      "KG Var": 61.8
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"US Sassuolo Calcio – SSC Napoli\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "US Sassuolo Calcio – SSC Napoli",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 81.5,
+      "2.5 Üst": 59.9,
+      "KG Var": 62.1
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"RC Celta de Vigo – Villarreal CF\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "RC Celta de Vigo – Villarreal CF",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 80.1,
+      "2.5 Üst": 57.7,
+      "KG Var": 60.4
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"RC Deportivo La Coruña – FC Barcelona\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "RC Deportivo La Coruña – FC Barcelona",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 79.9,
+      "2.5 Üst": 57.4,
+      "KG Var": 57.7
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Portekiz Primeira Liga\", \"FC Porto – Sporting Clube de Portugal\"]": {
+    "date": "2026-11-29",
+    "league": "Portekiz Primeira Liga",
+    "match": "FC Porto – Sporting Clube de Portugal",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 78.5,
+      "2.5 Üst": 55.4,
+      "KG Var": 58.5
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Málaga CF – Athletic Club\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Málaga CF – Athletic Club",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 78.5,
+      "2.5 Üst": 55.4,
+      "KG Var": 57.6
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Fransa Ligue 1\", \"AJ Auxerre – Olympique de Marseille\"]": {
+    "date": "2026-11-29",
+    "league": "Fransa Ligue 1",
+    "match": "AJ Auxerre – Olympique de Marseille",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 77.7,
+      "2.5 Üst": 54.2,
+      "KG Var": 53.3
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"Venezia FC – Bologna FC 1909\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "Venezia FC – Bologna FC 1909",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 77.7,
+      "2.5 Üst": 54.2,
+      "KG Var": 52.2
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İngiltere Championship\", \"Swansea City AFC – Cardiff City FC\"]": {
+    "date": "2026-11-29",
+    "league": "İngiltere Championship",
+    "match": "Swansea City AFC – Cardiff City FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 77.3,
+      "2.5 Üst": 53.6,
+      "KG Var": 55.2
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"US Lecce – Atalanta BC\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "US Lecce – Atalanta BC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 76.9,
+      "2.5 Üst": 53.1,
+      "KG Var": 55.8
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"Real Betis Balompié – Rayo Vallecano de Madrid\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 73.3,
+      "2.5 Üst": 48.2,
+      "KG Var": 48.5
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"Torino FC – SS Lazio\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "Torino FC – SS Lazio",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 73.3,
+      "2.5 Üst": 48.2,
+      "KG Var": 52.9
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"Udinese Calcio – ACF Fiorentina\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "Udinese Calcio – ACF Fiorentina",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 72.3,
+      "2.5 Üst": 46.9,
+      "KG Var": 51.8
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Türkiye Süper Lig\", \"corum – kocaelispor\"]": {
+    "date": "2026-11-29",
+    "league": "Türkiye Süper Lig",
+    "match": "corum – kocaelispor",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 71.3,
+      "2.5 Üst": 45.6,
+      "KG Var": 50.6
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"Frosinone Calcio – Parma Calcio 1913\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "Frosinone Calcio – Parma Calcio 1913",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 69.2,
+      "2.5 Üst": 43.0,
+      "KG Var": 41.1
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"Portekiz Primeira Liga\", \"Gil Vicente FC – GD Estoril Praia\"]": {
+    "date": "2026-11-29",
+    "league": "Portekiz Primeira Liga",
+    "match": "Gil Vicente FC – GD Estoril Praia",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 68.1,
+      "2.5 Üst": 41.7,
+      "KG Var": 44.5
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İtalya Serie A\", \"Cagliari Calcio – AC Milan\"]": {
+    "date": "2026-11-29",
+    "league": "İtalya Serie A",
+    "match": "Cagliari Calcio – AC Milan",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 65.7,
+      "2.5 Üst": 39.1,
+      "KG Var": 45.6
+    },
+    "result": null
+  },
+  "[\"2026-11-29\", \"İspanya La Liga\", \"RCD Espanyol de Barcelona – Getafe CF\"]": {
+    "date": "2026-11-29",
+    "league": "İspanya La Liga",
+    "match": "RCD Espanyol de Barcelona – Getafe CF",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 62.0,
+      "2.5 Üst": 35.0,
+      "KG Var": 42.2
+    },
+    "result": null
+  },
+  "[\"2026-11-30\", \"Portekiz Primeira Liga\", \"Sport Lisboa e Benfica – FC Famalicão\"]": {
+    "date": "2026-11-30",
+    "league": "Portekiz Primeira Liga",
+    "match": "Sport Lisboa e Benfica – FC Famalicão",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.9,
+      "2.5 Üst": 62.0,
+      "KG Var": 60.4
+    },
+    "result": null
+  },
+  "[\"2026-11-30\", \"Portekiz Primeira Liga\", \"Casa Pia AC – Sporting Clube de Braga\"]": {
+    "date": "2026-11-30",
+    "league": "Portekiz Primeira Liga",
+    "match": "Casa Pia AC – Sporting Clube de Braga",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 79.3,
+      "2.5 Üst": 56.6,
+      "KG Var": 56.2
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Liverpool FC – Sunderland AFC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Liverpool FC – Sunderland AFC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.3,
+      "2.5 Üst": 66.0,
+      "KG Var": 65.1
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Chelsea FC – Crystal Palace FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Chelsea FC – Crystal Palace FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 83.5,
+      "2.5 Üst": 63.0,
+      "KG Var": 64.4
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Newcastle United FC – Manchester United FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Newcastle United FC – Manchester United FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 83.5,
+      "2.5 Üst": 63.0,
+      "KG Var": 64.5
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Manchester City FC – Leeds United FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Manchester City FC – Leeds United FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.9,
+      "2.5 Üst": 62.0,
+      "KG Var": 60.4
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"AFC Bournemouth – Brighton & Hove Albion FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "AFC Bournemouth – Brighton & Hove Albion FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 79.3,
+      "2.5 Üst": 56.6,
+      "KG Var": 59.5
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Aston Villa FC – Everton FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Aston Villa FC – Everton FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 78.5,
+      "2.5 Üst": 55.4,
+      "KG Var": 58.6
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Coventry City FC – Ipswich Town FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Coventry City FC – Ipswich Town FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 78.5,
+      "2.5 Üst": 55.4,
+      "KG Var": 57.1
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Tottenham Hotspur FC – Fulham FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Tottenham Hotspur FC – Fulham FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 77.7,
+      "2.5 Üst": 54.2,
+      "KG Var": 57.5
+    },
+    "result": null
+  },
+  "[\"2026-12-02\", \"İngiltere Premier Lig\", \"Brentford FC – Arsenal FC\"]": {
+    "date": "2026-12-02",
+    "league": "İngiltere Premier Lig",
+    "match": "Brentford FC – Arsenal FC",
+    "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 75.1,
+      "2.5 Üst": 50.6,
+      "KG Var": 54.9
+    },
+    "result": null
   }
 }

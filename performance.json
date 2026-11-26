@@ -1,14 +1,14 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-26T16:34:26.690674+03:00",
+  "updatedAt": "2026-11-26T16:53:31.851056+03:00",
   "method": "First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.",
   "errors": [
     "İngiltere Championship/2026-27: 'list' object has no attribute 'get'"
   ],
   "overall": {
-    "recorded": 43,
+    "recorded": 90,
     "settled": 0,
-    "pending": 43,
+    "pending": 90,
     "markets": {
       "1.5 Üst": {
         "tested": 0,
@@ -29,6 +29,138 @@
   },
   "leagues": {
     "İngiltere Premier Lig": {
+      "recorded": 18,
+      "settled": 0,
+      "pending": 18,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "İngiltere Championship": {
+      "recorded": 16,
+      "settled": 0,
+      "pending": 16,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Almanya Bundesliga": {
+      "recorded": 7,
+      "settled": 0,
+      "pending": 7,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "İspanya La Liga": {
+      "recorded": 10,
+      "settled": 0,
+      "pending": 10,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "İtalya Serie A": {
+      "recorded": 10,
+      "settled": 0,
+      "pending": 10,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Fransa Ligue 1": {
+      "recorded": 8,
+      "settled": 0,
+      "pending": 8,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "brier": null,
+          "actualRate": null
+        }
+      }
+    },
+    "Hollanda Eredivisie": {
       "recorded": 9,
       "settled": 0,
       "pending": 9,
@@ -50,142 +182,10 @@
         }
       }
     },
-    "İngiltere Championship": {
-      "recorded": 15,
-      "settled": 0,
-      "pending": 15,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        }
-      }
-    },
-    "Almanya Bundesliga": {
-      "recorded": 4,
-      "settled": 0,
-      "pending": 4,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        }
-      }
-    },
-    "İspanya La Liga": {
-      "recorded": 1,
-      "settled": 0,
-      "pending": 1,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        }
-      }
-    },
-    "İtalya Serie A": {
-      "recorded": 0,
-      "settled": 0,
-      "pending": 0,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        }
-      }
-    },
-    "Fransa Ligue 1": {
-      "recorded": 5,
-      "settled": 0,
-      "pending": 5,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        }
-      }
-    },
-    "Hollanda Eredivisie": {
-      "recorded": 4,
-      "settled": 0,
-      "pending": 4,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "brier": null,
-          "actualRate": null
-        }
-      }
-    },
     "Portekiz Primeira Liga": {
-      "recorded": 3,
+      "recorded": 9,
       "settled": 0,
-      "pending": 3,
+      "pending": 9,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -205,9 +205,9 @@
       }
     },
     "Türkiye Süper Lig": {
-      "recorded": 2,
+      "recorded": 3,
       "settled": 0,
-      "pending": 2,
+      "pending": 3,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
