@@ -89,3 +89,69 @@ main{width:100%;padding:8px 12px calc(88px + env(safe-area-inset-bottom))}
 @media(max-width:350px){.match-open{padding:9px}.detail-hero .team-name{font-size:13px}.detail-hero .team-crest{width:45px;height:51px}#money-performance .money-tile strong{font-size:18px}}
 
 .odds-summary{font-size:11px;color:var(--muted);padding:1px 3px}.personal-line{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}.personal-line strong{font-variant-numeric:tabular-nums;text-align:right}.personal-detail .action{border-color:var(--good);background:linear-gradient(140deg,#15734435,var(--panel));color:var(--good)}
+
+/* UI revision: compact match-first phone dashboard. */
+:root[data-theme=dark]{--bg:#080f1c;--panel:#101c2b;--sub:#152438;--line:#25384e;--accent:#48baff;--good:#48e59a;--muted:#9cacc0;--text:#f0f5fc}
+body{max-width:480px}.top{padding:13px 14px;background:var(--bg)}
+.brand h1{font-style:normal;font-weight:850;letter-spacing:-.5px}.brand .eyebrow{font-size:9px;letter-spacing:1.3px;font-weight:750}
+.status{background:transparent;border:0;border-radius:0;padding:5px 2px;font-size:10px}
+.section-head h2,.screen-title{border:0;font-size:23px;letter-spacing:-.5px;padding:0}
+.date-shortcut{border:0;background:var(--sub);color:var(--accent);font-weight:650}
+.bankroll-card{border:1px solid var(--line);border-radius:14px;padding:11px 12px;background:var(--panel);box-shadow:none;margin-bottom:10px}
+.balance-value strong{font-size:26px!important}.coin-icon{font-size:22px}.bankroll-card .money-grid{margin:6px 0 0}.bankroll-card .money-tile:not(.balance-value){padding:7px 4px 2px}
+.match-tools{display:grid;gap:9px;margin:10px 0 8px}
+.search-field{position:relative;display:flex;align-items:center;min-width:0;gap:7px;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:0 11px}
+.search-field>span{font-size:24px;color:var(--muted);line-height:1}
+.search-field input{background:transparent;border:0;margin:0;padding:10px 0;min-height:42px;font-size:14px}
+.search-field:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.date-rail{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding:2px 1px 5px;scroll-snap-type:x proximity}
+.date-chip{scroll-snap-align:start;flex:0 0 68px;min-height:53px;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
+.date-chip small{font-size:9px;text-transform:uppercase;color:var(--muted);letter-spacing:.3px}.date-chip strong{font-size:13px}
+.date-chip[aria-pressed=true]{border-color:var(--good);color:var(--good);background:var(--sub)}.date-chip[aria-pressed=true] small{color:var(--good)}
+.filter-panel{padding:8px 10px;background:transparent;border-color:var(--line);margin:6px 0 10px}
+.date-group{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 2px 0;color:var(--text);font-size:13px;text-transform:capitalize}.date-group small{color:var(--muted);font-size:11px;font-weight:500}
+.match-card{border-radius:13px;background:var(--panel);box-shadow:none}
+.match-open{gap:8px;padding:12px}.match-open:after{font-size:20px;color:var(--muted)}
+.match-meta{font-size:11px;color:var(--muted)}.match-time{font-size:12px;color:var(--text);font-weight:650}
+.match-title{gap:5px}.team-name{font-size:13px;font-weight:750;line-height:1.3}.team-crest{clip-path:none;border-radius:50%;width:31px;height:31px;flex-basis:31px;box-shadow:none;background:var(--sub);border:1px solid var(--line);color:var(--accent)}.team-crest.away{background:var(--sub);color:var(--good);box-shadow:none;border-color:var(--line)}
+.match-open .quick-markets>span{background:var(--sub);border:0;border-radius:8px;gap:4px;padding:7px 5px}
+.quick-markets strong{font-size:17px;line-height:1.1;color:var(--accent)}
+.quick-markets>span:first-child strong{color:var(--good)}
+.quick-track{display:block;height:3px;border-radius:3px;background:var(--line);overflow:hidden}.quick-fill{display:block;height:100%;border-radius:3px;background:var(--accent)}.quick-markets>span:first-child .quick-fill{background:var(--good)}
+.match-open .volume-strip{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:6px 0 0}.volume-strip strong{font-size:13px}
+.match-summary-label{color:var(--muted)!important}.odds-summary{padding:0;color:var(--muted)}
+.detail-hero{background:var(--panel)}.detail-hero .team-crest{width:52px;height:52px}
+.bottom-nav{border-top:1px solid var(--line);background:var(--panel);padding-top:5px}.bottom-nav button[aria-current=page]{background:transparent;box-shadow:none;color:var(--good)}.bottom-nav button[aria-current=page] svg{stroke-width:2.2}
+@media(max-width:350px){.date-chip{flex-basis:61px}.match-open{padding:10px}.team-name{font-size:12px}.team-crest{width:26px;height:26px;flex-basis:26px}.quick-markets strong{font-size:15px}}
+
+/* Real team crests: preserve aspect ratio, no decorative badge around the emblem. */
+.team-crest{position:relative;overflow:hidden}
+.team-crest img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:1px;visibility:hidden}
+.team-crest.has-logo{background:transparent;border:0;box-shadow:none;font-size:0;border-radius:0}
+.team-crest.has-logo img{visibility:visible}
+.match-open .team-name,.match-open .team-name:last-child{flex-direction:column;text-align:center;justify-content:flex-start;gap:5px}
+.match-open .team-crest{width:38px;height:38px;flex:0 0 38px}
+.match-open .team-label{font-size:clamp(11px,3.4vw,13px);font-weight:750;line-height:1.25;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+.detail-hero .team-crest{width:66px;height:66px}
+.detail-hero .team-label{font-size:clamp(12px,3.5vw,15px);overflow-wrap:anywhere;word-break:normal}
+@media(max-width:350px){.match-open .team-crest{width:34px;height:34px;flex-basis:34px}.detail-hero .team-crest{width:56px;height:56px}}
+
+/* Expanded research center: signals remain neutral until a verified model exists. */
+.sport-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 10px}
+.sport-switch button{min-height:39px;border:1px solid var(--line);border-radius:9px;background:var(--panel);font-size:13px;font-weight:650;color:var(--muted)}
+.sport-switch button[aria-pressed=true]{border-color:var(--accent);color:var(--accent);background:var(--sub)}
+#detail-content .detail-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}
+#detail-content .detail-tabs button{min-width:0;white-space:normal;font-size:11px;padding:6px 2px;line-height:1.2}
+.overview-panel h3:not(:first-child){margin-top:16px}
+.overview-panel .metric b{font-size:20px;font-variant-numeric:tabular-nums}
+.overview-panel .metric small{font-size:11px}
+.radar-signals{border-color:var(--line);background:var(--panel)}
+.radar-signals .signal-line{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:11px 0;font-size:13px}
+.signal-line strong{font-size:11px;text-align:right;color:var(--muted);font-weight:600}
+.signal-line span{display:flex;align-items:center;gap:8px;min-width:0}
+.signal-line span:before{content:"";width:8px;height:8px;border:1px solid var(--muted);border-radius:50%;flex:none}
+.radar-signals .metrics .metric{border:1px solid var(--line)}
+.return-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.return-calc .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.return-calc .metric strong{display:block;font-size:16px;font-variant-numeric:tabular-nums}
+@media(max-width:350px){#detail-content .detail-tabs button{font-size:10px}.overview-panel .metric b{font-size:16px}}

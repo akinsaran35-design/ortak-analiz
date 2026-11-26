@@ -7,6 +7,8 @@ on:
       - 'mobile-v487.css'
       - 'money-v497.js'
       - 'scripts/test_mobile_browser.js'
+      - 'scripts/team_logo_catalog.py'
+      - 'team_logos.json'
       - '.github/workflows/mobile-browser.yml'
 jobs:
   browser:
@@ -17,6 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python3 scripts/team_logo_catalog.py
       - run: npm install --no-save --package-lock=false playwright@1.58.2
       - run: npx playwright install --with-deps chromium
       - run: |
@@ -28,6 +31,8 @@ jobs:
         if: always()
         with:
           name: mobile-reference-preview
-          path: mobile-reference-*.png
+          path: |
+            mobile-reference-*.png
+            team_logos.json
           if-no-files-found: ignore
           retention-days: 7
