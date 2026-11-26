@@ -155,3 +155,12 @@ body{max-width:480px}.top{padding:13px 14px;background:var(--bg)}
 .return-calc .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
 .return-calc .metric strong{display:block;font-size:16px;font-variant-numeric:tabular-nums}
 @media(max-width:350px){#detail-content .detail-tabs button{font-size:10px}.overview-panel .metric b{font-size:16px}}
+
+/* Mobile repair: use full viewport even in a wide Android webview. */
+html,body{width:100%;max-width:none;margin:0;min-width:0}
+body{min-height:100dvh}
+.top,main{width:100%;max-width:100%;margin:0}
+.bottom-nav{width:100%;max-width:none;left:0;right:0;margin:0}
+main{padding-inline:clamp(10px,3vw,20px)}
+@media(min-width:600px) and (pointer:fine){main{max-width:900px;margin-inline:auto}.top{max-width:900px;margin-inline:auto}.bottom-nav{max-width:900px;margin-inline:auto}}
+@media(pointer:coarse){html{-webkit-text-size-adjust:100%}body{font-size:16px}.bottom-nav button{font-size:11px}.match-open .team-label{font-size:14px}.match-meta,.match-time,.odds-summary{font-size:12px}}

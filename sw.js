@@ -1,6 +1,6 @@
 /* V4.74: dynamic research reports are network-only; static shell may work offline. */
-const CACHE="ortak-analiz-ui-signals-3";
-const ASSETS=["./","./index.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./mobile-v487.js","./money-v497.js","./mobile-v487.css","./legacy.html"];
+const CACHE="ortak-analiz-ui-fullwidth-524";
+const ASSETS=["./","./index.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./mobile-v487.js?ui=524","./money-v497.js?ui=524","./mobile-v487.css?ui=524","./legacy.html"];
 function networkOnly(request, origin) {
   const url=new URL(request.url);
   return url.origin===origin && (/\.json$/i.test(url.pathname) || request.cache==="no-store" || url.searchParams.has("ts"));
@@ -21,7 +21,7 @@ if(typeof self!=="undefined" && self.addEventListener){
       e.respondWith(fetch(req,{cache:"no-store"}));
       return;
     }
-    e.respondWith(fetch(req).then(async r=>{
+    e.respondWith(fetch(req,{cache:"no-cache"}).then(async r=>{
       if(r.ok){
         try{const c=await caches.open(CACHE);await c.put(req,r.clone());}catch(_){}
       }
