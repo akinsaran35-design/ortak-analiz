@@ -52,4 +52,13 @@ class MarketTests(unittest.TestCase):
         self.assertEqual(enriched["KG Var"]["calibration"]["meanPrediction"],{})
         for m in MARKETS:
             self.assertEqual({k:v for k,v in enriched[m].items() if k!="calibration"},normal[m])
+    def test_turkey_day_boundary_independent_of_report_timezone(self):
+        now=datetime(2026,11,29,22,tzinfo=timezone.utc)
+        row=dict(date="2026-11-29",recordedAt="2026-11-28T19:00:00Z",result=[2,1],old=.6,candidate=.55,baseline=.5)
+        late=dict(row,recordedAt="2026-11-28T22:30:00Z")
+        expected=summarize({"valid":row,"late":late},now,include_calibration=True)
+        self.assertEqual(expected["2.5 Üst"]["tested"],1)
+        self.assertEqual(expected["2.5 Üst"]["invalid"],1)
+        self.assertEqual(expected,summarize({"valid":row,"late":late},now.astimezone(timezone(timedelta(hours=3))),include_calibration=True))
+        with self.assertRaises(ValueError):summarize({},now.replace(tzinfo=None))
 if __name__=="__main__": unittest.main()

@@ -1,6 +1,7 @@
 """Prospective three-market research; never backfill missing historical forecasts."""
 import math
-from datetime import datetime,date
+from datetime import datetime,date,timezone,timedelta
+TURKEY_TZ=timezone(timedelta(hours=3))
 MARKETS=("1.5 Üst","2.5 Üst","KG Var")
 MODELS=("old","candidate","baseline")
 def actual(h,a): return (int(h+a>=2),int(h+a>=3),int(h>0 and a>0))
@@ -21,6 +22,8 @@ def capture(history,old,new):
     if not coherent(out): raise ValueError("incoherent probabilities")
     return out
 def summarize(records,now,include_calibration=False):
+    if now.tzinfo is None or now.utcoffset() is None:raise ValueError("validation requires timezone-aware clock")
+    local_day=now.astimezone(TURKEY_TZ).date()
     out={}
     for i,m in enumerate(MARKETS):
         rows=[];pending=0;legacy=0;invalid=0
@@ -33,12 +36,12 @@ def summarize(records,now,include_calibration=False):
                     if not coherent(r["prospectiveMarkets"],r):raise ValueError("incoherent forecast")
                     p=r["prospectiveMarkets"][m]
                 recorded=datetime.fromisoformat(r["recordedAt"])
-                if recorded.tzinfo is None or recorded>now or recorded.astimezone(now.tzinfo).date()>=date.fromisoformat(r["date"]): raise ValueError("late")
+                if recorded.tzinfo is None or recorded>now or recorded.astimezone(TURKEY_TZ).date()>=date.fromisoformat(r["date"]): raise ValueError("late")
                 if not all(valid(p[k]) for k in MODELS): raise ValueError("probability")
                 result=r["result"]
                 if result is None: pending+=1;continue
                 if not isinstance(result,list) or len(result)!=2 or not all(type(v) is int and v>=0 for v in result): raise ValueError("score")
-                if date.fromisoformat(r["date"])>=now.date(): raise ValueError("unsettled date")
+                if date.fromisoformat(r["date"])>=local_day: raise ValueError("unsettled date")
                 rows.append((p,actual(*result)[i]))
             except (KeyError,TypeError,ValueError,AttributeError): invalid+=1
         scores={k:sum((p[k]-y)**2 for p,y in rows)/len(rows) for k in MODELS} if rows else {}
