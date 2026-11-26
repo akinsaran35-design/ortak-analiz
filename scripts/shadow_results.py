@@ -10,6 +10,9 @@ def norm(s):
     return " ".join(s.casefold().split()) if isinstance(s, str) else ""
 
 def fetch(season, league):
+    if league == "tr.1":
+        from turkey_source import fetch as turkey_fetch
+        return turkey_fetch(season,include_fixtures=False)
     url = f"https://raw.githubusercontent.com/openfootball/football.json/master/{season}/{league}.json"
     with urllib.request.urlopen(url,timeout=20) as response:
         return json.load(response)["matches"]
@@ -39,15 +42,19 @@ def resolve(records, results, now, fetcher=fetch):
                 key = (f"{year}-{str(year+1)[-2:]}",LEAGUES[league])
                 if key not in cache:
                     cache[key] = fetcher(*key)
+                name_key = norm
+                if league == "soccer_turkey_super_league":
+                    from turkey_source import team_key
+                    name_key = team_key
                 matches = [m for m in cache[key] if str(m.get("date",""))[:10]==day.isoformat()
                            and norm(m.get("team1")) and norm(m.get("team2"))
-                           and [norm(m["team1"]),norm(m["team2"])]==[norm(n) for n in names]]
+                           and [name_key(m["team1"]),name_key(m["team2"])]==[name_key(n) for n in names]]
                 if len(matches)!=1:
                     errors.append({"eventId":eid,"error":"ambiguous_fixture" if matches else "fixture_not_found"})
                     continue
                 ft = (matches[0].get("score") or {}).get("ft")
                 if isinstance(ft,list) and len(ft)==2 and all(type(x) is int and x>=0 for x in ft):
-                    results[eid] = {"status":"final","score":ft,"source":"OpenFootball","verifiedAt":now.isoformat()}
+                    results[eid] = {"status":"final","score":ft,"source":"Football-Data.co.uk" if league=="soccer_turkey_super_league" else "OpenFootball","verifiedAt":now.isoformat()}
                 else:
                     errors.append({"eventId":eid,"error":"final_score_unavailable"})
             except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
