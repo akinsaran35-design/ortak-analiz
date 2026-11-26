@@ -177,3 +177,14 @@ jobs:
 
       - name: V4.62 verified result settlement tests
         run: python scripts/test_verified_results.py
+
+      - name: V4.63 automatic result source pilot
+        run: |
+          python scripts/test_results_source_pilot.py
+          python scripts/results_source_pilot.py
+      - name: Upload V4.63 result source report
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-source-pilot
+          path: results_source_pilot.json
+          retention-days: 7
