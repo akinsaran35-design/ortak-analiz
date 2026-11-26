@@ -19,7 +19,7 @@ def score(h,a):
 def add(out,blocked,k,s):
     if k in out and out[k]!=s: blocked.add(k)
     out[k]=s
-def csv_results(raw):
+def csv_results(raw,identity_fn=identity):
     reader=csv.DictReader(io.StringIO(raw.decode("utf-8-sig")))
     if not {"Date","HomeTeam","AwayTeam","FTHG","FTAG"}.issubset(reader.fieldnames or []): raise ValueError("CSV schema")
     out={};blocked=set()
@@ -30,10 +30,10 @@ def csv_results(raw):
                 try: d=datetime.strptime(row["Date"],fmt).date().isoformat(); break
                 except ValueError: pass
             if d is None or not row["HomeTeam"] or not row["AwayTeam"]: continue
-            add(out,blocked,identity(d,row["HomeTeam"],row["AwayTeam"]),score(row["FTHG"],row["FTAG"]))
+            add(out,blocked,identity_fn(d,row["HomeTeam"],row["AwayTeam"]),score(row["FTHG"],row["FTAG"]))
         except (ValueError,TypeError,KeyError): continue
     return {k:v for k,v in out.items() if k not in blocked}
-def espn_results(payload,day):
+def espn_results(payload,day,identity_fn=identity):
     out={};blocked=set()
     if not isinstance(payload.get("events"),list): raise ValueError("ESPN schema")
     for event in payload["events"]:
@@ -46,7 +46,7 @@ def espn_results(payload,day):
             teams={x["homeAway"]:x for x in comp["competitors"]}
             if len(comp["competitors"])!=2 or set(teams)!={"home","away"}: continue
             h,a=teams["home"],teams["away"]
-            add(out,blocked,identity(day,h["team"]["displayName"],a["team"]["displayName"]),score(h["score"],a["score"]))
+            add(out,blocked,identity_fn(day,h["team"]["displayName"],a["team"]["displayName"]),score(h["score"],a["score"]))
         except (ValueError,TypeError,KeyError,AttributeError): continue
     return {k:v for k,v in out.items() if k not in blocked}
 def compare(records,primary,secondary):
