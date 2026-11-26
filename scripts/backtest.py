@@ -15,6 +15,9 @@ year = today.year if today.month >= 7 else today.year - 1
 seasons = [f"{y}-{str(y+1)[-2:]}" for y in (year-1, year)]
 
 def fetch(season, league):
+    if league == "tr.1":
+        from turkey_source import fetch as turkey_fetch
+        return turkey_fetch(season)
     url = f"{BASE}/{season}/{league}.json"
     req = urllib.request.Request(
         url, headers={"User-Agent": "OrtakAnaliz/2.0"}
