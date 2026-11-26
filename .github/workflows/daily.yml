@@ -46,7 +46,7 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/fetch_odds.py
 
-      - name: Performans motoru birim testi
+      - name: V4.84 dual-source settlement tests
         run: |
           python scripts/test_track_performance.py
           python scripts/test_verified_results.py
