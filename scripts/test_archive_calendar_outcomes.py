@@ -22,7 +22,12 @@ class OutcomeTests(unittest.TestCase):
         self.assertEqual(collect({},replay,archives,now+timedelta(hours=1))[1]["observations"],0)
         self.assertEqual(collect(ledger,{},archives,now+timedelta(days=20))[1]["uniqueEligibleEvents"],1)
         conflict=copy.deepcopy(replay);conflict["rows"][0]["status"]="conflict"
-        self.assertEqual(collect(ledger,conflict,archives,now)[1]["counts"],{"current_conflict":1})
+        quarantined,blocked=collect(ledger,conflict,archives,now)
+        self.assertEqual(blocked["counts"],{"quarantined_conflict":1})
+        self.assertEqual(blocked["conflictObservations"],1)
+        self.assertEqual(collect(quarantined,{},archives,now+timedelta(days=20))[1]["uniqueEligibleEvents"],0)
+        self.assertEqual(collect(quarantined,replay,archives,now)[1]["uniqueEligibleEvents"],0)
+        self.assertEqual(collect(quarantined,conflict,archives,now)[1]["conflictObservations"],1)
         revised=copy.deepcopy(replay);revised["rows"][0].update(csv=[1,1],espn=[1,1])
         _,out=collect(ledger,revised,archives,now)
         self.assertEqual(out["counts"],{"conflicting_observations":1})
