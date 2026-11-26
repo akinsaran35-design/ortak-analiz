@@ -24,11 +24,17 @@ class SnapshotTests(unittest.TestCase):
             "archive_calendar_outcome_status":dict(version="4.83",observations=0,conflictObservations=0,archiveIdentities=0,quarantinedIdentities=0,counts={},uniqueEligibleEvents=0,includedInMainValidation=False,decision="PAS"),
             "unified_decision":dict(testedMatches=0,decision="PAS",realBettingEnabled=False,selections=[]),
         }
+        from datetime import datetime
+        from prospective_markets import summarize
+        data["prospective_validation"]["updatedAt"]="2026-11-26T14:00:00Z"
+        data["prospective_validation"]["marketResearchVersion"]="4.85"
+        data["prospective_validation"]["marketResearch"]=summarize(data["prospective_archive"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         data["daily"]["updatedAt"]="2026-11-26T14:00:00Z"
         self.assertEqual(audit(data)["status"],"PASS")
-        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z"})
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("prospective_validation","marketResearch",{},"prospective_market_recompute"),
             ("archive_calendar_outcome_status","conflictObservations",1,"outcome_observation_count"),
             ("archive_calendar_outcome_status","includedInMainValidation",True,"outcome_research_lock"),
             ("score_provenance","settledArchiveRecords",1,"score_provenance_identity"),
