@@ -36,10 +36,14 @@ class SnapshotTests(unittest.TestCase):
         from league_config import FIXTURE_CODES
         data["scoreboard_snapshot"]=dict(version="4.90",mode="scoreboard_snapshot",updatedAt="2026-11-26T14:00:00Z",date="2026-11-26",realTime=False,usedForSettlement=False,usedForPredictions=False,groups=[dict(league=x,rows=[],error=None) for x in FIXTURE_CODES.values()],loadedLeagues=9,eventCount=0,inProgress=0)
         data["fixture_coverage_audit"]=dict(version="4.92",mode="research_only",updatedAt="2026-11-26T14:00:00Z",dailyUpdatedAt=data["daily"]["updatedAt"],archivesModified=False,decision="PAS",dates=["2026-11-27","2026-11-28","2026-11-29"],sourceGroups=27,healthyGroups=27,counts={"published_only":1},rows=[dict(league="en.1",status="published_only",published=data["daily"]["upcoming"],espn=[])])
+        from kickoff_confirmation import build as build_kickoff
+        data["odds"]["updatedAt"]="2026-11-26T14:00:00Z"
+        data["kickoff_confirmation"]=build_kickoff(data["daily"],data["fixture_coverage_audit"],data["odds"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         self.assertEqual(audit(data)["status"],"PASS")
-        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z"})
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z","odds.json":"2026-11-26T14:00:00Z","kickoff_confirmation.json":"2026-11-26T14:00:00+00:00"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("kickoff_confirmation","counts",{"agreed":1},"kickoff_recompute"),
             ("scoreboard_snapshot","eventCount",1,"scoreboard_counts"),
             ("scoreboard_snapshot","usedForPredictions",True,"scoreboard_lock"),
             ("fixture_coverage_audit","counts",{},"fixture_audit_counts"),

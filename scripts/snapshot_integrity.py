@@ -3,14 +3,14 @@ import json
 from pathlib import Path
 from datetime import datetime,timezone
 
-FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit")
+FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation")
 
 def audit(data):
     errors=[]
     def check(ok,label):
         if not ok: errors.append(label)
     try:
-        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status,league_report,board,fixture_audit=(data[k] for k in FILES)
+        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status,league_report,board,fixture_audit,kickoff=(data[k] for k in FILES)
         check(d["candidateCount"]==len(d["candidates"]),"candidate_count")
         check(d["upcomingCount"]==len(d["upcoming"]),"fixture_count")
         check(o["eventCount"]==len(o["events"]),"odds_count")
@@ -56,6 +56,8 @@ def audit(data):
         check(0<=outcome_status["uniqueEligibleEvents"]<=outcome_status["counts"].get("eligible_research",0),"outcome_event_count")
         from source_report_integrity import audit as audit_sources
         errors.extend(audit_sources(d,board,fixture_audit))
+        from kickoff_confirmation import build as build_kickoff
+        check(kickoff==build_kickoff(d,fixture_audit,o,datetime.fromisoformat(kickoff["updatedAt"])),"kickoff_recompute")
         check(u["testedMatches"]==n,"decision_validation_count")
         check(u["decision"]=="PAS" and u["realBettingEnabled"] is False and u["selections"]==[] and v["liveEnabled"] is False,"research_lock")
     except (KeyError,TypeError,ValueError,AttributeError) as exc:

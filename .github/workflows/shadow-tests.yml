@@ -259,6 +259,8 @@ jobs:
           python scripts/prospective_leagues.py
           python scripts/scoreboard_snapshot.py
           python scripts/fixture_coverage_audit.py
+          python scripts/test_kickoff_confirmation.py
+          python scripts/kickoff_confirmation.py
           python scripts/snapshot_integrity.py
 
       - name: V4.85 prospective three-market research
