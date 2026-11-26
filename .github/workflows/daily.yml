@@ -74,6 +74,11 @@ jobs:
         run: |
           python scripts/test_automatic_results.py
           python scripts/automatic_results.py
+      - name: V4.67 multi league automatic results
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/test_multi_league_results.py
+          python scripts/multi_league_results.py
       - name: V4.4 Prospektif model dogrulama
         run: python scripts/prospective_validation.py
 
@@ -179,7 +184,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ "$GITHUB_REF" = "refs/heads/main" ]; then
-            git add daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json fixture_reconciliation.json results_source_pilot.json backtest.json prediction_archive.json performance.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json calibration.json model_research.json
+            git add daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json fixture_reconciliation.json results_source_pilot.json multi_league_results.json backtest.json prediction_archive.json performance.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json calibration.json model_research.json
           fi
           git add market_movement.json model_market.json unified_decision.json
           if ! git diff --cached --quiet; then

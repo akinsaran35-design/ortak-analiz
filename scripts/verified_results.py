@@ -12,6 +12,10 @@ def load_verified(root,now=None):
     if now is not None and auto.exists():
         from automatic_results import verified_rows
         rows=rows+verified_rows(json.loads(auto.read_text(encoding="utf-8")),now)
+    multi=Path(root)/"multi_league_results.json"
+    if now is not None and multi.exists():
+        from multi_league_results import verified_rows as multi_verified_rows
+        rows=rows+multi_verified_rows(json.loads(multi.read_text(encoding="utf-8")),now)
     return rows
 
 def settle_verified(records,rows,now,league_codes=None):
