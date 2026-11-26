@@ -246,3 +246,8 @@ jobs:
         run: |
           python scripts/test_calendar_duplicate_guard.py
           python -m py_compile scripts/prospective_validation.py scripts/track_performance.py
+
+      - name: V4.79 score provenance audit
+        run: |
+          python scripts/test_score_provenance.py
+          python scripts/score_provenance.py
