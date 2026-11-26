@@ -30,30 +30,29 @@ BASE="https://site.api.espn.com/apis/site/v2/sports/soccer/"
 def build(now,reader=read):
     start=now.astimezone(TR).date()
     days=[(start+timedelta(days=i)).isoformat() for i in range(4)]
-    # Query a range, including adjacent source dates around the Turkey window.
-    window=(start-timedelta(days=1)).strftime("%Y%m%d")+"-"+(start+timedelta(days=4)).strftime("%Y%m%d")
+    # Use the same single-day endpoint shape as the existing nine-league integration.
     def group(entry):
         name,code=entry
-        url=BASE+code+"/scoreboard?dates="+window+"&limit=200"
-        g=dict(league=code,leagueName=name,source=url,rows=[],error=None,invalid=0,truncated=False)
-        try:
-            payload=json.loads(reader(url))
-            if not isinstance(payload.get("events"),list):raise ValueError("schema")
-            # Never imply complete coverage if response may have hit the limit.
-            g["truncated"]=len(payload["events"])>=200
-            for day in days:
+        g=dict(league=code,leagueName=name,sources=[],rows=[],error=None,errors=[],invalid=0,truncated=False,respondedDays=0)
+        for day in days:
+            url=BASE+code+"/scoreboard?dates="+day.replace("-","")
+            g["sources"].append(url)
+            try:
+                payload=json.loads(reader(url))
+                if not isinstance(payload.get("events"),list):raise ValueError("schema")
                 rows,bad=parse(payload,day)
+                g["respondedDays"]+=1
                 g["invalid"]+=bad
-                for row in rows:
-                    g["rows"].append(dict(row,date=day))
-            seen=set();dupes=set()
-            for row in g["rows"]:
-                if row["eventId"] in seen:dupes.add(row["eventId"])
-                seen.add(row["eventId"])
-            g["rows"]=[r for r in g["rows"] if r["eventId"] not in dupes]
-            g["invalid"]+=len(dupes)
-        except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
-            g["error"]=type(exc).__name__;g["rows"]=[]
+                g["rows"].extend(dict(row,date=day) for row in rows)
+            except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
+                g["errors"].append(dict(date=day,type=type(exc).__name__,httpStatus=getattr(exc,"code",None)))
+        seen=set();dupes=set()
+        for row in g["rows"]:
+            if row["eventId"] in seen:dupes.add(row["eventId"])
+            seen.add(row["eventId"])
+        g["rows"]=[r for r in g["rows"] if r["eventId"] not in dupes]
+        g["invalid"]+=len(dupes)
+        g["error"]="incomplete_source" if g["errors"] else None
         return g
     with ThreadPoolExecutor(max_workers=4) as pool:
         groups=list(pool.map(group,COMPETITIONS))
@@ -65,6 +64,7 @@ def build(now,reader=read):
 def main():
     r=build(datetime.now(TR))
     Path("football_coverage_pilot.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print("Source diagnostics:",json.dumps([{k:v for k,v in g.items() if k in ("league","respondedDays","errors","invalid")} for g in r["groups"]],ensure_ascii=False))
     print("Football discovery:",r["respondingCompetitions"],"/",r["configuredCompetitions"],"responding;",r["eventCount"],"events")
     if not r["respondingCompetitions"]:raise SystemExit("No source response")
 if __name__=="__main__":main()
