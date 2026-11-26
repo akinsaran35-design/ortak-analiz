@@ -107,3 +107,11 @@ assert.equal(statisticalExpectation(ex,"yellowCards"),null);
 assert.equal(statisticalExpectation({...ex,away:{metrics:{corners:{...ex.away.metrics.corners,sample:4}}}},"corners"),null);
 assert.equal(statisticalExpectation({...ex,away:{metrics:{corners:{...ex.away.metrics.corners,forAverage:null}}}},"corners"),null);
 console.log("Descriptive match expectation arithmetic and sample safeguards passed");
+
+const {formGoalAverages}=require("../mobile-v487.js");
+const formSide={sample:2,goalsFor:3,goalsAgainst:1,rows:[{gf:2,ga:1},{gf:1,ga:0}]};
+assert.deepEqual(formGoalAverages(formSide),{scored:1.5,conceded:.5,total:2,sample:2});
+assert.equal(formGoalAverages({...formSide,sample:0}),null);
+assert.equal(formGoalAverages({...formSide,goalsFor:5}),null);
+assert.equal(formGoalAverages({...formSide,rows:[{gf:3,ga:1}]}),null);
+console.log("Form goal average arithmetic and sample guards passed");
