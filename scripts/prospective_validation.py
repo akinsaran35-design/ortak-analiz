@@ -79,13 +79,7 @@ for league in LEAGUES:
         )
 
         if key in records:
-            if (
-                records[key]["result"] is None
-                and d < TODAY
-                and ft is not None
-            ):
-                records[key]["result"] = ft
-                records[key]["settledAt"] = NOW.isoformat()
+            # New outcomes are written only through verified_results below.
             continue
 
         if d <= TODAY or ft is not None:
