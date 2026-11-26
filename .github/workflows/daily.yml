@@ -11,7 +11,7 @@ on:
   # Report-only commits do not match these paths.
   push:
     branches: [main]
-    paths: ['.github/workflows/daily.yml', 'scripts/league_config.py', 'scripts/fixture_schema.py', 'scripts/daily_analysis.py']
+    paths: ['.github/workflows/daily.yml', 'scripts/league_config.py', 'scripts/fixture_schema.py', 'scripts/daily_analysis.py', 'verified_results.json', 'scripts/verified_results.py']
 
 concurrency:
   group: ortak-analiz-${{ github.ref }}
@@ -47,7 +47,9 @@ jobs:
         run: python scripts/fetch_odds.py
 
       - name: Performans motoru birim testi
-        run: python scripts/test_track_performance.py
+        run: |
+          python scripts/test_track_performance.py
+          python scripts/test_verified_results.py
 
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py
