@@ -1,0 +1,155 @@
+{
+  "version": "4.79",
+  "updatedAt": "2026-11-26T18:09:13.134889+03:00",
+  "mode": "research_only",
+  "uniqueSettledMatches": 4,
+  "settledArchiveRecords": 8,
+  "counts": {
+    "prospective": {
+      "currently_corroborated": 4
+    },
+    "performance": {
+      "currently_corroborated": 4
+    }
+  },
+  "crossArchiveConflicts": [],
+  "rows": [
+    {
+      "archive": "prospective",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Bolton Wanderers FC",
+      "away": "West Bromwich Albion FC",
+      "result": [
+        1,
+        3
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "prospective",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Burnley FC",
+      "away": "Birmingham City FC",
+      "result": [
+        0,
+        2
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "prospective",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Stoke City FC",
+      "away": "Millwall FC",
+      "result": [
+        2,
+        1
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "prospective",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Watford FC",
+      "away": "Blackburn Rovers FC",
+      "result": [
+        0,
+        1
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "performance",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Stoke City FC",
+      "away": "Millwall FC",
+      "result": [
+        2,
+        1
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "performance",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Bolton Wanderers FC",
+      "away": "West Bromwich Albion FC",
+      "result": [
+        1,
+        3
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "performance",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Burnley FC",
+      "away": "Birmingham City FC",
+      "result": [
+        0,
+        2
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    },
+    {
+      "archive": "performance",
+      "league": "en.2",
+      "date": "2026-11-25",
+      "home": "Watford FC",
+      "away": "Blackburn Rovers FC",
+      "result": [
+        0,
+        1
+      ],
+      "status": "currently_corroborated",
+      "recordedSourceDomains": [
+        "www.efl.com",
+        "www.footballwebpages.co.uk",
+        "www.rte.ie"
+      ]
+    }
+  ],
+  "decision": "PAS"
+}
