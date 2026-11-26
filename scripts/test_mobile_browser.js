@@ -16,17 +16,20 @@ const {chromium}=require("playwright");
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
   await page.locator(".volume-strip").getByText("Uluslararası bahis hacmi",{exact:true}).waitFor();
-  await page.locator(".match-card summary").click();
+  await page.setViewportSize({width:393,height:852});
+  await page.screenshot({path:"mobile-reference-matches.png"});
+  await page.locator(".match-open").click();
+  assert.equal(await page.locator("#match-detail-screen").isVisible(),true);
+  assert.equal(await page.locator("#view-matches").isVisible(),false);
   await page.locator(".prob-row").getByText("%80",{exact:true}).waitFor();
   for(const width of [320,360,393,412]){
     await page.setViewportSize({width,height:800});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
-    for(const selector of [".match-card",".prob-row b",".bankroll-card",".bottom-nav"]){
+    for(const selector of [".detail-hero",".prob-row b",".personal-detail",".detail-header"]){
       const boxes=await page.locator(selector).evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return [r.left,r.right]}));
       assert.ok(boxes.length>0&&boxes.every(([l,r])=>l>=-1&&r<=width+1),selector+" clipped at "+width);
     }
-    const nav=await page.locator(".bottom-nav").boundingBox();
-    assert.ok(nav.y>=0&&nav.y+nav.height<=801);
+    assert.equal(await page.locator(".bottom-nav").isVisible(),false);
   }
   await page.setViewportSize({width:393,height:852});
   await page.screenshot({path:"mobile-reference-detail.png"});
@@ -35,14 +38,19 @@ const {chromium}=require("playwright");
   await page.getByText("Bağlı değil",{exact:true}).waitFor();
   await page.getByRole("button",{name:"Skor",exact:true}).click();
   await page.getByText("Bağımsız Poisson modelinin en olası 3 skor senaryosu.").waitFor();
+  await page.locator("#detail-back").click();
+  assert.equal(await page.locator("#view-matches").isVisible(),true);
+  const nav=await page.locator(".bottom-nav").boundingBox();
+  assert.ok(nav&&nav.y>=0&&nav.y+nav.height<=853);
   await page.locator(".filter-panel summary").click();
   await page.locator("#search").fill("ZZZ");
   await page.getByText("Filtreye uygun maç bulunamadı.").waitFor();
   await page.locator("#search").fill("");
   await page.locator("#fixture-mode").selectOption("confirmed");
   await page.getByText(/İki kaynak/).waitFor();
-  await page.locator(".match-card summary").click();
+  await page.locator(".match-open").click();
   await page.getByText("Bu görünüm yalnızca fikstür doğrulamasıdır.",{exact:false}).waitFor();
+  await page.locator("#detail-back").click();
   for(const tab of ["live","performance","coupons","settings","matches"]){
     await page.locator("#tab-"+tab).click();
     assert.equal(await page.locator("#view-"+tab).isVisible(),true);
@@ -56,11 +64,13 @@ const {chromium}=require("playwright");
   await page.locator("#record-label").fill("Test kaydı");
   await page.locator("#record-stake").fill("200");
   await page.getByRole("button",{name:"Geçmiş bahis kaydı ekle"}).click();
+  await page.screenshot({path:"mobile-reference-coupons.png"});
   await page.locator('input[id^="return-"]').fill("372");
   await page.getByRole("button",{name:"Sonucu kaydet"}).click();
   await page.locator("#tab-performance").click();
   await page.locator("#money-performance").getByText("Net sonuç",{exact:true}).waitFor();
   assert.equal(await page.locator("#money-performance .money-tile").filter({hasText:"Net sonuç"}).locator("strong").innerText(),(172).toLocaleString("tr-TR",{style:"currency",currency:"TRY",maximumFractionDigits:2}));
+  await page.screenshot({path:"mobile-reference-performance.png"});
   await page.locator("#tab-settings").click();
   await page.locator("#theme").selectOption("light");
   assert.equal(await page.locator("html").getAttribute("data-theme"),"light");
