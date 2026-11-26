@@ -1,0 +1,1226 @@
+{
+  "de.1:401884726": {
+    "kickoff": "2026-11-28T17:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "VfB Stuttgart – Eintracht Frankfurt",
+          "expectedGoals": {
+            "home": 2.1,
+            "away": 1.35
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "de.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401884726",
+              "kickoff": "2026-11-28T17:30:00+00:00",
+              "match": "VfB Stuttgart – Eintracht Frankfurt"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Almanya Bundesliga",
+              "match": "VfB Stuttgart – Eintracht Frankfurt"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "de.1:401884720": {
+    "kickoff": "2026-11-27T19:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-27",
+          "league": "Almanya Bundesliga",
+          "match": "SV Werder Bremen – Borussia Mönchengladbach",
+          "expectedGoals": {
+            "home": 2.2,
+            "away": 1.25
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "de.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-27",
+              "eventId": "401884720",
+              "kickoff": "2026-11-27T19:30:00+00:00",
+              "match": "Werder Bremen – Borussia Mönchengladbach"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-27",
+              "league": "Almanya Bundesliga",
+              "match": "SV Werder Bremen – Borussia Mönchengladbach"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.1:401878752": {
+    "kickoff": "2026-11-28T17:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Ipswich Town FC – Aston Villa FC",
+          "expectedGoals": {
+            "home": 1.55,
+            "away": 1.7
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401878752",
+              "kickoff": "2026-11-28T17:30:00+00:00",
+              "match": "Ipswich Town – Aston Villa"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Premier Lig",
+              "match": "Ipswich Town FC – Aston Villa FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.1:401879227": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Leeds United FC – Coventry City FC",
+          "expectedGoals": {
+            "home": 1.8,
+            "away": 0.6
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401879227",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Leeds United – Coventry City"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Premier Lig",
+              "match": "Leeds United FC – Coventry City FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.1:401879226": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Manchester United FC – Brentford FC",
+          "expectedGoals": {
+            "home": 2.1,
+            "away": 1.55
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401879226",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Manchester United – Brentford"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Premier Lig",
+              "match": "Manchester United FC – Brentford FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880136": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Birmingham City FC – Bolton Wanderers FC",
+          "expectedGoals": {
+            "home": 1.82,
+            "away": 1.34
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880136",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Birmingham City – Bolton Wanderers"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Birmingham City FC – Bolton Wanderers FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880135": {
+    "kickoff": "2026-11-28T12:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Blackburn Rovers FC – Charlton Athletic FC",
+          "expectedGoals": {
+            "home": 1.4,
+            "away": 1.05
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880135",
+              "kickoff": "2026-11-28T12:30:00+00:00",
+              "match": "Blackburn Rovers – Charlton Athletic"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Blackburn Rovers FC – Charlton Athletic FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880134": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Derby County FC – Watford FC",
+          "expectedGoals": {
+            "home": 1.7,
+            "away": 0.85
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880134",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Derby County – Watford"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Derby County FC – Watford FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880133": {
+    "kickoff": "2026-11-28T12:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Lincoln City FC – Wolverhampton Wanderers FC",
+          "expectedGoals": {
+            "home": 1.21,
+            "away": 1.64
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880133",
+              "kickoff": "2026-11-28T12:30:00+00:00",
+              "match": "Lincoln City – Wolverhampton Wanderers"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Lincoln City FC – Wolverhampton Wanderers FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880132": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Millwall FC – Burnley FC",
+          "expectedGoals": {
+            "home": 1.86,
+            "away": 1.11
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880132",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Millwall – Burnley"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Millwall FC – Burnley FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880131": {
+    "kickoff": "2026-11-28T12:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Preston North End FC – Norwich City FC",
+          "expectedGoals": {
+            "home": 1.25,
+            "away": 1.8
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880131",
+              "kickoff": "2026-11-28T12:30:00+00:00",
+              "match": "Preston North End – Norwich City"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Preston North End FC – Norwich City FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880130": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Queens Park Rangers FC – Sheffield United FC",
+          "expectedGoals": {
+            "home": 1.3,
+            "away": 1.7
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880130",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Queens Park Rangers – Sheffield United"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Queens Park Rangers FC – Sheffield United FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880129": {
+    "kickoff": "2026-11-27T20:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-27",
+          "league": "İngiltere Championship",
+          "match": "Southampton FC – Middlesbrough FC",
+          "expectedGoals": {
+            "home": 1.9,
+            "away": 1.2
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-27",
+              "eventId": "401880129",
+              "kickoff": "2026-11-27T20:00:00+00:00",
+              "match": "Southampton – Middlesbrough"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-27",
+              "league": "İngiltere Championship",
+              "match": "Southampton FC – Middlesbrough FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880127": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "West Bromwich Albion FC – Bristol City FC",
+          "expectedGoals": {
+            "home": 1.65,
+            "away": 1.25
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880127",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "West Bromwich Albion – Bristol City"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "West Bromwich Albion FC – Bristol City FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880126": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "West Ham United FC – Stoke City FC",
+          "expectedGoals": {
+            "home": 2.48,
+            "away": 1.04
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880126",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "West Ham United – Stoke City"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "West Ham United FC – Stoke City FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880125": {
+    "kickoff": "2026-11-28T15:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Wrexham AFC – Portsmouth FC",
+          "expectedGoals": {
+            "home": 1.75,
+            "away": 1.55
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401880125",
+              "kickoff": "2026-11-28T15:00:00+00:00",
+              "match": "Wrexham – Portsmouth"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "İngiltere Championship",
+              "match": "Wrexham AFC – Portsmouth FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fr.1:401876392": {
+    "kickoff": "2026-11-27T19:45:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-27",
+          "league": "Fransa Ligue 1",
+          "match": "Stade Brestois 29 – Paris FC",
+          "expectedGoals": {
+            "home": 1.55,
+            "away": 1.55
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "fr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-27",
+              "eventId": "401876392",
+              "kickoff": "2026-11-27T19:45:00+00:00",
+              "match": "Brest – Paris FC"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-27",
+              "league": "Fransa Ligue 1",
+              "match": "Stade Brestois 29 – Paris FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875537": {
+    "kickoff": "2026-11-28T15:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "SBV Excelsior – Telstar 1963",
+          "expectedGoals": {
+            "home": 1.5,
+            "away": 1.35
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401875537",
+              "kickoff": "2026-11-28T15:30:00+00:00",
+              "match": "Excelsior – Telstar"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Hollanda Eredivisie",
+              "match": "SBV Excelsior – Telstar 1963"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875536": {
+    "kickoff": "2026-11-27T19:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-27",
+          "league": "Hollanda Eredivisie",
+          "match": "FC Groningen – Willem II Tilburg",
+          "expectedGoals": {
+            "home": 2.48,
+            "away": 1.18
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-27",
+              "eventId": "401875536",
+              "kickoff": "2026-11-27T19:00:00+00:00",
+              "match": "FC Groningen – Willem II"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-27",
+              "league": "Hollanda Eredivisie",
+              "match": "FC Groningen – Willem II Tilburg"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875531": {
+    "kickoff": "2026-11-28T17:45:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "PSV – Go Ahead Eagles",
+          "expectedGoals": {
+            "home": 2.75,
+            "away": 1.35
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401875531",
+              "kickoff": "2026-11-28T17:45:00+00:00",
+              "match": "PSV Eindhoven – Go Ahead Eagles"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Hollanda Eredivisie",
+              "match": "PSV – Go Ahead Eagles"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pt.1:401885392": {
+    "kickoff": "2026-11-28T15:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "FC Arouca – Rio Ave FC",
+          "expectedGoals": {
+            "home": 1.75,
+            "away": 1.0
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "pt.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401885392",
+              "kickoff": "2026-11-28T15:30:00+00:00",
+              "match": "Arouca – Rio Ave"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Portekiz Primeira Liga",
+              "match": "FC Arouca – Rio Ave FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pt.1:401885388": {
+    "kickoff": "2026-11-28T15:30:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Moreirense FC – CD Santa Clara",
+          "expectedGoals": {
+            "home": 1.15,
+            "away": 1.4
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "pt.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401885388",
+              "kickoff": "2026-11-28T15:30:00+00:00",
+              "match": "Moreirense – Santa Clara"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Portekiz Primeira Liga",
+              "match": "Moreirense FC – CD Santa Clara"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "tr.1:401888240": {
+    "kickoff": "2026-11-27T17:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-27",
+          "league": "Türkiye Süper Lig",
+          "match": "rizespor – kasimpasa",
+          "expectedGoals": {
+            "home": 1.7,
+            "away": 1.55
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "tr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-27",
+              "eventId": "401888240",
+              "kickoff": "2026-11-27T17:00:00+00:00",
+              "match": "Caykur Rizespor – Kasimpasa"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-27",
+              "league": "Türkiye Süper Lig",
+              "match": "rizespor – kasimpasa"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "tr.1:401888236": {
+    "kickoff": "2026-11-28T13:00:00+00:00",
+    "frozenAt": "2026-11-26T21:15:49.167365+03:00",
+    "daily": {
+      "updatedAt": "2026-11-26T20:53:55+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Türkiye Süper Lig",
+          "match": "samsunspor – genclerbirligi",
+          "expectedGoals": {
+            "home": 1.8,
+            "away": 1.15
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+      "updatedAt": "2026-11-26T20:54:13.526769+03:00",
+      "dates": [
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "rows": [
+        {
+          "league": "tr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401888236",
+              "kickoff": "2026-11-28T13:00:00+00:00",
+              "match": "Samsunspor – Genclerbirligi"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Türkiye Süper Lig",
+              "match": "samsunspor – genclerbirligi"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
