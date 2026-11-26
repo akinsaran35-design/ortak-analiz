@@ -188,3 +188,6 @@ jobs:
           name: results-source-pilot
           path: results_source_pilot.json
           retention-days: 7
+
+      - name: V4.64 automatic results settlement tests
+        run: python scripts/test_automatic_results.py
