@@ -88,11 +88,17 @@ jobs:
       - name: V4.9 Research 1.5 totals
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: python scripts/market_analysis_15.py
+      - name: V4.60 calendar research report
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/test_fixture_reconciliation.py
+          python scripts/fixture_reconciliation.py
       - name: V4.8 Save shadow reports
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f fixture_reconciliation.json ]; then git add fixture_reconciliation.json; fi
           git add daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json
           if ! git diff --cached --quiet; then
             git commit -m "Update V4.8 shadow reports"
