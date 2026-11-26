@@ -9,6 +9,21 @@ from league_config import LEAGUES
 
 SOURCES={"en.1":("E0","eng.1"),"en.2":("E1","eng.2"),"de.1":("D1","ger.1"),"es.1":("SP1","esp.1"),"it.1":("I1","ita.1"),"fr.1":("F1","fra.1"),"nl.1":("N1","ned.1"),"pt.1":("P1","por.1"),"tr.1":("T1","tur.1")}
 
+# Explicit aliases observed in V4.65 artifact 15127106869, scoped to score feeds.
+RESULT_ALIASES={
+    "en.1":{"hull":"hull city","brighton":"brighton and hove albion","man united":"manchester united"},
+    "de.1":{"hamburg":"hamburg sv","leverkusen":"bayer leverkusen","paderborn":"paderborn 07","m gladbach":"borussia monchengladbach","dortmund":"borussia dortmund","ein frankfurt":"eintracht frankfurt","hoffenheim":"tsg hoffenheim","elversberg":"sv elversberg","stuttgart":"vfb stuttgart"},
+    "es.1":{"ath madrid":"atletico madrid","santander":"racing santander","sociedad":"real sociedad"},
+    "it.1":{"milan":"ac milan","inter":"inter milan","internazionale":"inter milan"},
+    "fr.1":{"stade rennais":"rennes","as monaco":"monaco","paris sg":"paris saint germain"},
+    "nl.1":{"ajax amsterdam":"ajax","den haag":"ado den haag","for sittard":"fortuna sittard","nijmegen":"nec nijmegen"},
+    "tr.1":{"buyuksehyr":"basaksehir","erzurum bb":"erzurumspor","goztep":"goztepe"},
+}
+
+def result_key(name,code,sport):
+    n=key(name) if code=="en.2" else canonical(name,sport)
+    return RESULT_ALIASES.get(code,{}).get(n,n)
+
 def compare_day(primary,secondary,day):
     keys={k for k in primary if k[0]==day}|{k for k in secondary if k[0]==day}
     rows=[]
@@ -20,14 +35,14 @@ def compare_day(primary,secondary,day):
 
 def probe(code,sport,now,reader=read):
     csv_code,espn_code=SOURCES[code]
-    identity=lambda d,h,a:(d,key(h),key(a)) if code=="en.2" else (d,canonical(h,sport),canonical(a,sport))
+    identity=lambda d,h,a:(d,result_key(h,code,sport),result_key(a,code,sport))
     y=now.year if now.month>=7 else now.year-1
     url=f"https://football-data.co.uk/mmz4281/{y%100:02d}{(y+1)%100:02d}/{csv_code}.csv"
     report={"league":code,"sources":[url],"errors":[],"rows":[]}
     try: primary=csv_results(reader(url),identity)
     except (OSError,ValueError,TypeError,KeyError) as exc:
         report["errors"].append("CSV: "+type(exc).__name__);return report
-    days=sorted({k[0] for k in primary if now.date()-timedelta(days=14)<=date.fromisoformat(k[0])<now.date()},reverse=True)[:2]
+    days=sorted({k[0] for k in primary if now.date()-timedelta(days=28)<=date.fromisoformat(k[0])<now.date()},reverse=True)[:2]
     report["sampleDates"]=days
     if not days: report["errors"].append("No recent completed CSV scores")
     for day in days:
@@ -48,6 +63,6 @@ def main():
         report["counts"]=dict(Counter(r["status"] for r in report["rows"]))
         leagues.append(report)
         print(json.dumps({"league":code,"counts":report["counts"],"errors":report["errors"],"sampleDates":report.get("sampleDates",[])},ensure_ascii=False))
-    report={"version":"4.65","updatedAt":now.isoformat(),"mode":"research_only","leagues":leagues,"decision":"PAS","realBettingEnabled":False}
+    report={"version":"4.66","updatedAt":now.isoformat(),"mode":"research_only","leagues":leagues,"decision":"PAS","realBettingEnabled":False}
     Path("nine_league_results_pilot.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
 if __name__=="__main__": main()
