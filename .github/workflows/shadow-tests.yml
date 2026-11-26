@@ -202,3 +202,8 @@ jobs:
           name: nine-league-results-pilot
           path: nine_league_results_pilot.json
           retention-days: 7
+
+      - name: V4.67 multi league automatic results regression and replay
+        run: |
+          python scripts/test_multi_league_results.py
+          python scripts/multi_league_results.py
