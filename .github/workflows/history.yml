@@ -2,7 +2,7 @@ name: Historical archive V4.22
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/history.yml', 'scripts/historical_data.py', 'scripts/source_discovery.py', 'scripts/historical_text.py']
+    paths: ['.github/workflows/history.yml', 'scripts/historical_*.py', 'scripts/test_historical_*.py', 'scripts/source_discovery.py', 'scripts/openliga_pilot.py', 'scripts/test_openliga_pilot.py', 'scripts/dixon_coles.py']
   schedule:
     - cron: '30 4 * * *'
   workflow_dispatch:
