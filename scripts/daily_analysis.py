@@ -61,6 +61,9 @@ def final_score(match):
 
 
 def fetch(season, code):
+    if code == "tr.1":
+        from turkey_source import fetch as turkey_fetch
+        return turkey_fetch(season)
     url = f"{BASE}/{season}/{code}.json"
     req = urllib.request.Request(url, headers={"User-Agent": "OrtakAnaliz/1.6"})
     with urllib.request.urlopen(req, timeout=15) as response:
@@ -111,6 +114,7 @@ report = {
     "date": today.isoformat(), "decision": "PAS", "picks": [],
     "version": "1.6", "updatedAt": now.isoformat(timespec="seconds"),
     "source": "https://github.com/openfootball/football.json",
+    "additionalSources": {"tr.1": {"results": "https://football-data.co.uk/turkeym.php", "fixtures": "The Odds API UK snapshot; incomplete coverage possible"}},
     "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
     "leaguesChecked": len(LEAGUES), "leaguesLoaded": 0,
     "fixturesToday": 0, "fixturesNext7Days": 0,
@@ -163,6 +167,9 @@ for league, code in LEAGUES.items():
             if d == today:
                 diagnostic["today"] += 1
                 report["fixturesToday"] += 1
+    if code == "tr.1":
+        diagnostic["fixtureScope"] = "fresh_odds_events_only"
+        diagnostic["status"] = "partial"
     diagnostic["completedMatches"] = len(history)
     for d, home, away, score in fixtures:
         if score is not None:

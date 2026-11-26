@@ -145,3 +145,8 @@ jobs:
         run: |
           python -m py_compile scripts/league_config.py scripts/daily_analysis.py scripts/fetch_odds.py scripts/match_odds.py scripts/backtest.py scripts/track_performance.py scripts/shadow_results.py
           python scripts/test_league_config.py
+
+      - name: V4.51 Turkey adapter tests
+        run: python scripts/test_turkey_source.py
+      - name: V4.51 Turkey public result source smoke
+        run: python scripts/turkey_source.py

@@ -8,6 +8,7 @@ LEAGUES = (
     ("Fransa Ligue 1", "fr.1", "soccer_france_ligue_one"),
     ("Hollanda Eredivisie", "nl.1", "soccer_netherlands_eredivisie"),
     ("Portekiz Primeira Liga", "pt.1", "soccer_portugal_primeira_liga"),
+    ("Türkiye Süper Lig", "tr.1", "soccer_turkey_super_league"),
 )
 FIXTURE_CODES = {name: code for name, code, odds in LEAGUES}
 ODDS_CODES = {name: odds for name, code, odds in LEAGUES}

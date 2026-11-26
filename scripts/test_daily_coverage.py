@@ -25,13 +25,13 @@ class FixtureCoverageTest(unittest.TestCase):
                 original=Path.write_text
                 def write(p, *args, **kwargs):
                     return original(target if p==Path("daily.json") else p,*args,**kwargs)
-                with patch("urllib.request.urlopen", side_effect=fake), patch.object(Path,"write_text",write):
+                with patch("urllib.request.urlopen", side_effect=fake), patch.object(Path,"write_text",write), patch("turkey_source.fetch",return_value=rows):
                     runpy.run_path(str(SCRIPT))
                 report=json.loads(target.read_text())
-            self.assertEqual(report["upcomingCount"], 84 if partial else 96)
+            self.assertEqual(report["upcomingCount"], 96 if partial else 108)
             self.assertEqual(report["upcomingCount"],len(report["upcoming"]))
             self.assertEqual(report["upcomingCountsByDate"][date],report["upcomingCount"])
-            self.assertEqual(report["fixtureCoverageComplete"],not partial)
+            self.assertFalse(report["fixtureCoverageComplete"])
             self.assertEqual(report["decision"],"PAS")
             self.assertEqual(report["picks"],[])
 

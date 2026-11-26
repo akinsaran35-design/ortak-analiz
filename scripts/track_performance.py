@@ -34,8 +34,12 @@ for r in records.values():
 for league,season in sorted(needed):
     try:
         url = f"https://raw.githubusercontent.com/openfootball/football.json/master/{season}/{leagues[league]}.json"
-        with urllib.request.urlopen(url,timeout=20) as response:
-            matches = json.load(response).get("matches",[])
+        if leagues[league]=="tr.1":
+            from turkey_source import fetch as turkey_fetch
+            matches=turkey_fetch(season,include_fixtures=False)
+        else:
+            with urllib.request.urlopen(url,timeout=20) as response:
+                matches = json.load(response).get("matches",[])
         for m in matches:
             d = str(m.get("date",""))[:10]
             if d>=today.isoformat():
