@@ -234,10 +234,6 @@ jobs:
           node --check sw.js
           node scripts/test_sw.js
 
-      - name: V4.75 snapshot integrity tests and published snapshot check
-        run: |
-          python scripts/test_snapshot_integrity.py
-          python scripts/snapshot_integrity.py
 
       - name: V4.77 backtest import and execution regression
         run: python scripts/test_backtest_import.py
@@ -252,7 +248,12 @@ jobs:
           python scripts/test_score_provenance.py
           python scripts/score_provenance.py
 
-      - name: V4.82 persistent calendar outcome research
+      - name: V4.83 persistent calendar outcome quarantine
         run: |
           python scripts/test_archive_calendar_outcomes.py
           python scripts/archive_calendar_outcomes.py
+
+      - name: V4.83 full 17-file snapshot integrity check
+        run: |
+          python scripts/test_snapshot_integrity.py
+          python scripts/snapshot_integrity.py
