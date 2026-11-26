@@ -191,3 +191,14 @@ jobs:
 
       - name: V4.64 automatic results settlement tests
         run: python scripts/test_automatic_results.py
+
+      - name: V4.65 nine league results source pilot
+        run: |
+          python scripts/test_nine_league_results_pilot.py
+          python scripts/nine_league_results_pilot.py
+      - name: Upload V4.65 nine league results audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: nine-league-results-pilot
+          path: nine_league_results_pilot.json
+          retention-days: 7
