@@ -104,6 +104,12 @@ for league in LEAGUES:
             for x in history
         ) / len(history)
 
+        try:
+            market_forecasts = capture(history,old,new)
+        except (ValueError,TypeError,ArithmeticError) as exc:
+            errors.append(f"{league}/{d}/{h}/{a}: invalid prospective forecast ({type(exc).__name__})")
+            continue
+
         records[key] = {
             "date": d.isoformat(),
             "league": league,
@@ -114,7 +120,7 @@ for league in LEAGUES:
             "old": old[1],
             "candidate": new[1],
             "baseline": baseline,
-            "prospectiveMarkets": capture(history,old,new),
+            "prospectiveMarkets": market_forecasts,
             "result": None
         }
 
