@@ -6,6 +6,7 @@ const data=Object.fromEntries(files.map(f=>[f,{updatedAt}]));
 Object.assign(data["daily.json"],{date:"2026-11-26",leaguesLoaded:6,fixturesToday:0,upcoming:[{date:"2026-11-28"},{date:"2026-11-29"}]});
 Object.assign(data["data_quality.json"],{status:"healthy",qualityGate:"PASS",errors:[],warnings:[]});
 Object.assign(data["prospective_validation.json"],{tested:0,pending:69,minimumMatches:500});
+data["snapshot_integrity.json"]={version:"4.76",updatedAt,status:"PASS",errors:[],reportTimestamps:Object.fromEntries(files.map(f=>[f,updatedAt]))};
 let r=summarize(data,now);
 assert.equal(r.dataCurrent,true);assert.equal(r.decision,"PAS");assert.equal(r.realBettingEnabled,false);assert.equal(r.weekend["2026-11-28"],1);
 assert.equal(summarize(data,now+1800001).dataCurrent,false);
@@ -53,3 +54,8 @@ assert.equal(summarize({...auditData,"archive_calendar_result_replay.json":{...a
 assert.equal(summarize({...auditData,"archive_calendar_result_replay.json":{...auditData["archive_calendar_result_replay.json"],updatedAt:new Date(now-1000).toISOString()}},now).archiveAudit.replayCurrent,false);
 assert.equal(summarize({},now).archiveAudit.observations,null);
 console.log("Archive readiness checks passed");
+
+assert.equal(summarize(data,now).integrityCurrent,true);
+assert.equal(summarize({...data,"snapshot_integrity.json":{...data["snapshot_integrity.json"],status:"FAIL"}},now).dataCurrent,false);
+assert.equal(summarize({...data,"odds.json":{updatedAt:new Date(now-1000).toISOString()}},now).dataCurrent,false);
+assert.equal(summarize({...data,"snapshot_integrity.json":undefined},now).integrityCurrent,false);
