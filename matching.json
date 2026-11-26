@@ -1,9 +1,9 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-26T14:20:45.455010+00:00",
+  "updatedAt": "2026-11-26T14:26:03.740931+00:00",
   "decision": "PAS",
-  "matchedCount": 66,
-  "unmatchedCount": 20,
+  "matchedCount": 60,
+  "unmatchedCount": 15,
   "matched": [
     {
       "match": "FC Groningen – Willem II Tilburg",
@@ -60,12 +60,6 @@
       "freshLineCount": 1
     },
     {
-      "match": "Manchester United FC – Brentford FC",
-      "eventId": "ab87184803a63f7b679f1d12b01c3271",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 2
-    },
-    {
       "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
       "eventId": "365e1a00908ab1cd5a51a53ede2b86b2",
       "kickoff": "2026-11-28T14:30:00+00:00",
@@ -96,12 +90,6 @@
       "freshLineCount": 4
     },
     {
-      "match": "Ipswich Town FC – Aston Villa FC",
-      "eventId": "9d23f6ad21946dd258869ebc22236cf0",
-      "kickoff": "2026-11-28T17:30:00+00:00",
-      "freshLineCount": 1
-    },
-    {
       "match": "Birmingham City FC – Bolton Wanderers FC",
       "eventId": "15fc58a442321c2a85f7a814466c0ab9",
       "kickoff": "2026-11-28T15:00:00+00:00",
@@ -112,6 +100,12 @@
       "eventId": "d47bc722be164b3a733434e89f224654",
       "kickoff": "2026-11-28T12:30:00+00:00",
       "freshLineCount": 3
+    },
+    {
+      "match": "Manchester United FC – Brentford FC",
+      "eventId": "ab87184803a63f7b679f1d12b01c3271",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "freshLineCount": 2
     },
     {
       "match": "Paris Saint-Germain FC – FC Lorient",
@@ -202,12 +196,6 @@
       "eventId": "a1d96ec37a8b7022ef39a7755a655243",
       "kickoff": "2026-11-28T12:30:00+00:00",
       "freshLineCount": 5
-    },
-    {
-      "match": "Leeds United FC – Coventry City FC",
-      "eventId": "0bc17a3c7d8153e72b94688960cc603a",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
     },
     {
       "match": "ADO Den Haag – FC Utrecht",
@@ -360,40 +348,16 @@
       "freshLineCount": 3
     },
     {
-      "match": "Liverpool FC – Sunderland AFC",
-      "eventId": "9629fcc970336d106d144eaa25cec853",
-      "kickoff": "2026-12-02T19:30:00+00:00",
-      "freshLineCount": 4
-    },
-    {
-      "match": "Chelsea FC – Crystal Palace FC",
-      "eventId": "836ad618789e171f7357649ce8e62b49",
-      "kickoff": "2026-12-02T19:30:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "Newcastle United FC – Manchester United FC",
-      "eventId": "0c405290d0f977236962e55ba90c2c04",
-      "kickoff": "2026-12-02T20:15:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "Manchester City FC – Leeds United FC",
-      "eventId": "10abd18165c999264777913e42c9f96c",
-      "kickoff": "2026-12-02T19:30:00+00:00",
-      "freshLineCount": 4
-    },
-    {
       "match": "AFC Bournemouth – Brighton & Hove Albion FC",
       "eventId": "28546d4aefd5efb320c2d2ceee11b66d",
       "kickoff": "2026-12-02T20:15:00+00:00",
       "freshLineCount": 4
     },
     {
-      "match": "Aston Villa FC – Everton FC",
-      "eventId": "2198fb9aab762e9e1c8c6af4113a1d31",
+      "match": "Newcastle United FC – Manchester United FC",
+      "eventId": "0c405290d0f977236962e55ba90c2c04",
       "kickoff": "2026-12-02T20:15:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 1
     },
     {
       "match": "Brentford FC – Arsenal FC",
@@ -404,42 +368,6 @@
   ],
   "unmatched": [
     {
-      "match": "Everton FC – Liverpool FC",
-      "league": "İngiltere Premier Lig",
-      "date": "2026-11-28",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-29"
-      ]
-    },
-    {
-      "match": "Arsenal FC – Manchester City FC",
-      "league": "İngiltere Premier Lig",
-      "date": "2026-11-28",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-29"
-      ]
-    },
-    {
-      "match": "Nottingham Forest FC – Chelsea FC",
-      "league": "İngiltere Premier Lig",
-      "date": "2026-11-28",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-27"
-      ]
-    },
-    {
-      "match": "Fulham FC – AFC Bournemouth",
-      "league": "İngiltere Premier Lig",
-      "date": "2026-11-28",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-29"
-      ]
-    },
-    {
       "match": "Brighton & Hove Albion FC – Newcastle United FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
@@ -449,7 +377,7 @@
       ]
     },
     {
-      "match": "Sunderland AFC – Tottenham Hotspur FC",
+      "match": "Arsenal FC – Manchester City FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
       "reason": "date_mismatch",
@@ -572,15 +500,6 @@
       "reason": "date_mismatch",
       "providerDates": [
         "2026-12-01"
-      ]
-    },
-    {
-      "match": "Tottenham Hotspur FC – Fulham FC",
-      "league": "İngiltere Premier Lig",
-      "date": "2026-12-02",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-12-03"
       ]
     }
   ],

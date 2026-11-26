@@ -2,13 +2,13 @@
   "version": "4.8",
   "mode": "shadow",
   "liveEnabled": false,
-  "updatedAt": "2026-11-26T14:20:58.433716+00:00",
+  "updatedAt": "2026-11-26T14:26:17.601690+00:00",
   "decision": "PAS",
   "selections": [],
   "diagnostics": {
-    "rows": 37,
+    "rows": 33,
     "rejected": {
-      "started_or_other_day": 37
+      "started_or_other_day": 33
     },
     "eligible": 0
   }
