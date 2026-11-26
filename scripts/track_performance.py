@@ -52,6 +52,12 @@ for league,season in sorted(needed):
                 records[k]["settledAt"] = now.isoformat()
     except Exception as exc:
         errors.append(f"{league}/{season}: {exc}")
+from verified_results import load_verified, settle_verified
+try:
+    verified_count = settle_verified(records, load_verified(root), now, leagues)
+except (OSError, ValueError, KeyError, TypeError) as exc:
+    verified_count = 0
+    errors.append(f"verified_results: {exc}")
 def metrics(rows):
     settled = [r for r in rows if r["result"] is not None]
     out = {"recorded":len(rows),"settled":len(settled),"pending":len(rows)-len(settled),"markets":{}}
@@ -65,7 +71,7 @@ def metrics(rows):
         out["markets"][m]={"tested":n,"brier":round(sum((p-y)**2 for p,y in pairs)/n,6) if n else None,"actualRate":round(100*sum(y for p,y in pairs)/n,2) if n else None}
     return out
 rows=list(records.values())
-report={"version":"2.4","updatedAt":now.isoformat(),"method":"First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.","errors":errors,"overall":metrics(rows),"leagues":{l:metrics([r for r in rows if r["league"]==l]) for l in leagues},"periods":{str(n):metrics([r for r in rows if r["date"] >= (today-timedelta(days=n)).isoformat() and r["date"]<today.isoformat()]) for n in (30,90)}}
+report={"version":"2.4","updatedAt":now.isoformat(),"method":"First recorded future-date candidates only; kickoff unverified; no odds or profit measurement.","errors":errors,"verifiedFallbackSettled":verified_count,"overall":metrics(rows),"leagues":{l:metrics([r for r in rows if r["league"]==l]) for l in leagues},"periods":{str(n):metrics([r for r in rows if r["date"] >= (today-timedelta(days=n)).isoformat() and r["date"]<today.isoformat()]) for n in (30,90)}}
 archive.write_text(json.dumps(records,ensure_ascii=False,indent=2),encoding="utf-8")
 (root/"performance.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
 print(json.dumps(report,ensure_ascii=False))
