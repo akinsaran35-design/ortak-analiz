@@ -32,15 +32,39 @@ def normalize(rows,league,today):
         except (KeyError,TypeError,ValueError): continue
     return [v for k,v in out.items() if k not in conflicts]
 
+def discover_leagues(today):
+    with urlopen("https://api.openligadb.de/getavailableleagues",timeout=20) as f:
+        catalog=json.load(f)
+    pairs=set()
+    for item in catalog:
+        sport=item.get("sport") or {}
+        if str(sport.get("sportName","")).casefold() not in ("fußball","fussball","football","soccer"): continue
+        shortcut=item.get("leagueShortcut")
+        season=str(item.get("leagueSeason",""))
+        if isinstance(shortcut,str) and shortcut and season in (str(today.year-1),str(today.year)):
+            pairs.add((shortcut,int(season)))
+    return sorted(pairs)
+
 def run(today):
     rows=[];errors=[]
-    for league in ("bl1","bl2","bl3"):
-        for year in (today.year-1,today.year):
+    pairs={(league,year) for league in ("bl1","bl2","bl3") for year in (today.year-1,today.year)}
+    try: pairs.update(discover_leagues(today))
+    except Exception as e: errors.append(dict(stage="discovery",error=type(e).__name__))
+    ordered=sorted(pairs,key=lambda x:(x[0] not in ("bl1","bl2","bl3"),x))
+    for league,year in ordered[:60]:
+        if True:
             try:
                 with urlopen(f"https://api.openligadb.de/getmatchdata/{league}/{year}",timeout=20) as f:
                     rows.extend(normalize(json.load(f),league,today))
             except Exception as e: errors.append(dict(league=league,year=year,error=type(e).__name__))
             time.sleep(2)
+    unique={}; conflicts=set()
+    for row in rows:
+        k=row["matchID"]
+        if k in unique and unique[k]!=row: conflicts.add(k)
+        unique[k]=row
+    rows=[v for k,v in unique.items() if k not in conflicts]
+    print("Football catalog:",len(pairs),"requested:",min(60,len(pairs)),"conflicts:",len(conflicts),"league codes:",len({r["league"] for r in rows}))
     result=dict(status="research_only",realBettingEnabled=False,license="ODbL-1.0",attribution="Data from OpenLigaDB (www.openligadb.de)",asOf=today.isoformat(),matches=rows,errors=errors)
     Path("openliga_pilot.json").write_text(json.dumps(result,indent=2))
     report=evaluate(rows,today)
