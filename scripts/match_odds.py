@@ -24,6 +24,9 @@ ALIASES = {
     },
 }
 def canonical(name, league):
+    if league == "soccer_turkey_super_league":
+        from turkey_source import team_key
+        return team_key(name)
     normalized = normalize(name)
     return ALIASES.get(league, {}).get(normalized, normalized)
 
