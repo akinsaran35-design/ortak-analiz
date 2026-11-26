@@ -115,7 +115,13 @@ function movementFor(row,data,now){
  if(!event||!bound(data,"market_movement",now)||report?.version!=="4.11"||report.mode!=="research_only"||report.decision!=="PAS"||!Array.isArray(report.errors)||report.errors.length)return [];
  return arr(report.markets).filter(x=>x.eventId===event.id&&x.kickoff===event.kickoff&&x.home===event.home&&x.away===event.away&&typeof x.market==="string"&&Number.isInteger(x.movementBookmakers)&&x.movementBookmakers>=3&&Number.isFinite(x.medianChangePP));
 }
-if(typeof module!=="undefined"&&module.exports)module.exports={matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
+function statisticalExpectation(stats,k){
+ const h=stats?.home?.metrics?.[k],a=stats?.away?.metrics?.[k];
+ if(![h,a].every(x=>x&&Number.isInteger(x.sample)&&x.sample>=5&&x.sample<=10&&[x.forAverage,x.againstAverage].every(v=>typeof v==="number"&&Number.isFinite(v)&&v>=0)))return null;
+ const home=(h.forAverage+a.againstAverage)/2,away=(a.forAverage+h.againstAverage)/2;
+ return {home,away,total:home+away,homeSample:h.sample,awaySample:a.sample};
+}
+if(typeof module!=="undefined"&&module.exports)module.exports={statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
@@ -208,6 +214,17 @@ function historicalComparison(r,title,fields){
  }
  historyNote(b,"Kaynak: football-data.co.uk · Son en fazla 10 lig maçı. Gözlem ortalamaları, tahmin değildir.");return b;
 }
+function expectationPanel(r,title,fields){
+ const b=historyPanel(title),stats=historicalStatsFor(r,data,Date.now()),names=r.match.split(" – "),grid=node("div",undefined,"expectation-grid");
+ for(const [label,k,cls] of fields){
+ const v=statisticalExpectation(stats,k),card=node("section",undefined,"expectation-card "+cls);
+ card.append(node("span",label,"expectation-label"),node("strong",displayNumber(v?.total),"expectation-total"));
+ if(v){const details=node("div",undefined,"expectation-split");details.append(node("span",names[0]+" · "+displayNumber(v.home)),node("span",names[1]+" · "+displayNumber(v.away)));card.append(details,node("small",v.homeSample+" / "+v.awaySample+" geçmiş maç","subtle"));}
+ else card.append(node("small","Yeterli veri yok · en az 5 maç/takım","subtle"));
+ grid.append(card);
+ }
+ b.append(grid,node("p","Basit istatistiksel beklenti: takım ortalaması ile rakip ortalamasının aritmetik ortalaması. Kesin sonuç, bahis olasılığı veya kalibre edilmiş tahmin değildir.","subtle"));return b;
+}
 function modelPending(title,description){const b=historyPanel(title);historyNote(b,description);return b;}
 function detail(r){if(r.confirmed){
  const box=node("div",undefined,"detail");
@@ -227,8 +244,8 @@ const views={
 "İstatistik":()=>{renderHistoricalStats(out,r);const model=researchFor(r,data,Date.now());out.append(node("h3","Gol modeli karşılaştırması"));if(!model){out.append(node("p","Bütünlüğü kontrol edilmiş model raporu yok.","subtle"));return;}out.append(node("p","Aynı gol beklentisinden üretilen deneysel dağılımlar. Bağımsız tahminler veya doğrulanmış kazanma olasılıkları değildir.","subtle"));for(const [name,k] of [["1.5 Üst","over15"],["2.5 Üst","over25"],["KG Var","btts"]]){out.append(node("h3",name),metrics([["Poisson",pct(100*model.poisson?.[k])],["Dixon-Coles",pct(100*model.experimentalDixonColes?.[k])],["Monte Carlo",pct(100*model.simulation?.markets?.[k]?.probability)]]));}out.append(node("p","Dixon-Coles katsayısı sabit deneysel değerdir; Monte Carlo aynı dağılımın 20.000 örnekli sayısal kontrolüdür. Kadro ve sakatlık verileri henüz bağlı değil.","subtle"));},
 "H2H":()=>out.append(h2hPanel(r)),
 "Form":()=>out.append(formPanels(r)),
-"İlk yarı":()=>out.append(historicalComparison(r,"İlk yarı · tarihsel gol ortalamaları",[["Atılan gol","halfTimeGoals","forAverage"],["Yenilen gol","halfTimeGoals","againstAverage"]]),modelPending("İlk yarı tahminleri","İY 0.5 Üst, İY 1.5 Üst, İY KG Var, İY/MS ve iki yarı KG Var modelleri doğrulanmadı.")),
-"Korner / kart":()=>out.append(historicalComparison(r,"Korner ve kart · tarihsel ortalamalar",[["Kullanılan korner","corners","forAverage"],["Verilen korner","corners","againstAverage"],["Sarı kart","yellowCards","forAverage"],["Rakip sarı kart","yellowCards","againstAverage"],["Kırmızı kart","redCards","forAverage"],["Rakip kırmızı kart","redCards","againstAverage"]]),modelPending("Korner ve kart tahmini","Bu pazarlar için doğrulanmış tahmin modeli henüz yok.")),
+"İlk yarı":()=>out.append(expectationPanel(r,"İlk yarı gol beklentisi",[["Toplam ilk yarı golü","halfTimeGoals","corners"]]),historicalComparison(r,"İlk yarı · tarihsel gol ortalamaları",[["Atılan gol","halfTimeGoals","forAverage"],["Yenilen gol","halfTimeGoals","againstAverage"]]),modelPending("İlk yarı tahminleri","İY 0.5 Üst, İY 1.5 Üst, İY KG Var, İY/MS ve iki yarı KG Var modelleri doğrulanmadı.")),
+"Korner / kart":()=>out.append(expectationPanel(r,"Maç geneli beklentisi",[["Korner","corners","corners"],["Sarı kart","yellowCards","yellow"],["Kırmızı kart","redCards","red"]]),historicalComparison(r,"Korner ve kart · tarihsel ortalamalar",[["Kullanılan korner","corners","forAverage"],["Verilen korner","corners","againstAverage"],["Sarı kart","yellowCards","forAverage"],["Rakip sarı kart","yellowCards","againstAverage"],["Kırmızı kart","redCards","forAverage"],["Rakip kırmızı kart","redCards","againstAverage"]]),modelPending("Korner ve kart tahmini","Bu pazarlar için doğrulanmış tahmin modeli henüz yok.")),
 "Sinyaller":()=>out.append(signalPanel(null)),
 "Diğer":()=>out.append(returnCalculator(),unavailablePanel("Model güvenilirliği",["Kalibrasyon","Canlı doğrulama","Örneklem"],"Doğrulanmış canlı model henüz yok."))};
 for(const name of Object.keys(views)){const b=node("button",name);b.type="button";b.setAttribute("aria-pressed","false");b.dataset.detailTab=name;b.onclick=()=>{for(const t of tabs.children)t.setAttribute("aria-pressed",String(t===b));out.replaceChildren();views[name]();};tabs.append(b);}const check=fixtureCheck(r,data,Date.now());if(check?.status==="date_difference")x.append(node("p","Tarih uyuşmazlığı: mevcut liste "+r.date+" / ESPN "+check.sourceDate+". Orijinal kayıt değiştirilmedi.","subtle"));else if(check?.status==="same_date")x.append(node("p","Fikstür tarihi ESPN ile eşleşiyor.","subtle"));else if(check)x.append(node("p","İkinci kaynakta kesin fikstür eşleşmesi yok.","subtle"));x.append(tabs,out);tabs.firstChild.click();return x;}
