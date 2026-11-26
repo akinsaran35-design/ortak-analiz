@@ -94,7 +94,7 @@ jobs:
           python scripts/test_fixture_reconciliation.py
           python scripts/fixture_reconciliation.py
       - name: V4.8 Save shadow reports
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ortak-analiz-v4-8'
+        if: github.ref == 'refs/heads/ortak-analiz-v4-8'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -114,17 +114,6 @@ jobs:
         run: |
           python scripts/test_model_research.py
           python scripts/model_research.py
-      - name: Raporlari kaydet
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add daily.json backtest.json prediction_archive.json performance.json odds.json matching.json market_analysis.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json calibration.json model_research.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update daily analysis and validation"
-            git push
-          fi
-
       - name: V4.9 Live Extra Markets Pilot
         if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8'
         env:
@@ -162,11 +151,6 @@ jobs:
           python scripts/market_movement.py
           cat market_movement.json
 
-          git add market_movement.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update V4.11 market movement"
-            git push
-          fi
       - name: V4.12 Model Market Comparison
         if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
         run: |
@@ -174,11 +158,6 @@ jobs:
           python scripts/model_market.py
           cat model_market.json
 
-          git add model_market.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update V4.12 model market report"
-            git push
-          fi
       - name: V4.13 Unified Decision
         if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
         run: |
@@ -186,10 +165,29 @@ jobs:
           python scripts/unified_decision.py
           cat unified_decision.json
 
-          git add unified_decision.json
+
+      - name: V4.61 Publish complete snapshot
+        if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then
+            git add daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json fixture_reconciliation.json backtest.json prediction_archive.json performance.json market_archive.json validation.json prospective_archive.json prospective_validation.json data_quality.json decision.json calibration.json model_research.json
+          fi
+          git add market_movement.json model_market.json unified_decision.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update V4.13 unified decision"
-            git push
+            git commit -m "Publish complete analysis snapshot"
+            for attempt in 1 2 3; do
+              if git push; then exit 0; fi
+              if [ "$attempt" = 3 ]; then exit 1; fi
+              sleep 5
+              git fetch origin "$GITHUB_REF_NAME"
+              # Do not overwrite another run or merge newer code into old reports.
+              if [ "$(git rev-parse FETCH_HEAD)" != "$(git rev-parse HEAD^)" ]; then
+                echo "Remote advanced; refusing to publish stale snapshot"
+                exit 1
+              fi
+            done
           fi
 
       - name: V4.53 Published coverage summary
