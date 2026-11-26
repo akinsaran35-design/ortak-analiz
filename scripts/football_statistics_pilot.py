@@ -71,6 +71,39 @@ def build(daily,now,reader=read):
     with ThreadPoolExecutor(max_workers=4) as pool:groups=list(pool.map(group,LEAGUES))
     return dict(version="5.09",updatedAt=now.isoformat(),dailyUpdatedAt=daily.get("updatedAt"),cutoffExclusive=cutoff.isoformat(),source="football-data.co.uk",mode="descriptive_research",groups=groups,
         respondingLeagues=sum(g["error"] is None for g in groups),fixtureCount=sum(len(g["rows"]) for g in groups),predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
+def audit_report(daily,report):
+    """Check schema, identity, source and sample bounds without refetching mutable feeds."""
+    import math
+    try:
+        if report["version"]!="5.09" or report["dailyUpdatedAt"]!=daily["updatedAt"] or report["mode"]!="descriptive_research" or report["source"]!="football-data.co.uk" or report["predictionsEnabled"] is not False or report["realBettingEnabled"] is not False or report["decision"]!="PAS":return False
+        stamp=datetime.fromisoformat(report["updatedAt"])
+        if stamp.tzinfo is None or report["cutoffExclusive"]!=stamp.astimezone(TR).date().isoformat():return False
+        year=stamp.astimezone(TR).year-(stamp.astimezone(TR).month<7)
+        groups=report["groups"]
+        if len(groups)!=len(LEAGUES) or {g["league"] for g in groups}!={code for _,code,_ in LEAGUES}:return False
+        fixtures={(x["date"],x["league"],x["match"]) for x in daily["upcoming"]}
+        seen=set()
+        for g in groups:
+            label,code,_=next(x for x in LEAGUES if x[1]==g["league"])
+            csv_code,_=SOURCES[code]
+            if g["leagueName"]!=label or g["source"]!=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{csv_code}.csv":return False
+            if not set(g["availableMetrics"])<=set(METRICS) or (g["error"] is not None and g["rows"]):return False
+            for row in g["rows"]:
+                k=(row["date"],row["league"],row["match"])
+                if k not in fixtures or k in seen or row["league"]!=label:return False
+                seen.add(k)
+                for side in ("home","away"):
+                    team=row[side];n=team["sample"]
+                    if type(n) is not int or not 0<=n<=10 or set(team["metrics"])!=set(METRICS):return False
+                    for name,x in team["metrics"].items():
+                        m=x["sample"]
+                        if type(m) is not int or not 0<=m<=n or (m and name not in g["availableMetrics"]):return False
+                        for value in (x["forAverage"],x["againstAverage"]):
+                            if m==0 and value is not None:return False
+                            if m and (type(value) not in (int,float) or not math.isfinite(value) or value<0):return False
+        return report["fixtureCount"]==len(seen) and report["respondingLeagues"]==sum(g["error"] is None for g in groups)
+    except (KeyError,TypeError,ValueError,AttributeError,StopIteration,OverflowError):return False
+
 def main():
     daily=json.loads(Path("daily.json").read_text(encoding="utf-8"))
     r=build(daily,datetime.now(TR))
