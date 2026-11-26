@@ -5,9 +5,7 @@ from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
-LEAGUES = {"İngiltere Championship": "soccer_efl_champ", "İngiltere Premier Lig": "soccer_epl",
-           "Almanya Bundesliga": "soccer_germany_bundesliga", "Fransa Ligue 1": "soccer_france_ligue_one",
-           "İspanya La Liga": "soccer_spain_la_liga", "İtalya Serie A": "soccer_italy_serie_a"}
+from league_config import ODDS_CODES as LEAGUES
 def normalize(name):
     name = unicodedata.normalize("NFKD", name.casefold())
     name = "".join(c for c in name if not unicodedata.combining(c))
