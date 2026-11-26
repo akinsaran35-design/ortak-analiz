@@ -160,3 +160,6 @@ jobs:
         run: |
           python scripts/test_match_odds.py
           python scripts/replay_matching.py
+
+      - name: V4.58 coverage display tests
+        run: node scripts/test_weekend_readiness.js
