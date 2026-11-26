@@ -121,7 +121,14 @@ function statisticalExpectation(stats,k){
  const home=(h.forAverage+a.againstAverage)/2,away=(a.forAverage+h.againstAverage)/2;
  return {home,away,total:home+away,homeSample:h.sample,awaySample:a.sample};
 }
-if(typeof module!=="undefined"&&module.exports)module.exports={statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
+function formGoalAverages(side){
+ const n=side?.sample,rows=side?.rows;
+ if(!Number.isInteger(n)||n<1||n>5||!Array.isArray(rows)||rows.length!==n||!rows.every(x=>x&&Number.isInteger(x.gf)&&x.gf>=0&&Number.isInteger(x.ga)&&x.ga>=0))return null;
+ const gf=rows.reduce((a,x)=>a+x.gf,0),ga=rows.reduce((a,x)=>a+x.ga,0);
+ if(gf!==side.goalsFor||ga!==side.goalsAgainst)return null;
+ return {scored:gf/n,conceded:ga/n,total:(gf+ga)/n,sample:n};
+}
+if(typeof module!=="undefined"&&module.exports)module.exports={formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
@@ -190,9 +197,19 @@ function h2hPanel(r){
  for(const y of matches){const card=node("div",undefined,"history-match");card.append(node("span",y.date,"history-date"),teamTitle(y.home+" – "+y.away,r.league),node("strong",y.score.join(" – "),"history-score"));b.append(card);}
  historyNote(b,"Sadece erişilebilen lig geçmişi; kupa ve diğer organizasyonlar dahil değil. Sayılar tarihsel örneklemdir, gelecek maç olasılığı değildir.");return b;
 }
+function formGoalComparison(f,names){
+ const b=node("section",undefined,"form-team form-goal-comparison"),h=formGoalAverages(f.home),a=formGoalAverages(f.away);
+ b.append(node("h3","Maç başına gol ortalamaları"));
+ const head=node("div",undefined,"history-compare-head");head.append(node("strong",names[0]),node("span","ORTALAMA"),node("strong",names[1]));b.append(head);
+ for(const [label,k] of [["Atılan gol","scored"],["Yenilen gol","conceded"],["Toplam gol","total"]]){
+ const row=node("div",undefined,"history-compare-row");row.append(node("strong",displayNumber(h?.[k])),node("div",label,"history-compare-label"),node("strong",displayNumber(a?.[k])));b.append(row);
+ }
+ const samples=node("div",undefined,"history-samples");samples.append(node("span",h?h.sample+" maç":"Veri yok"),node("span",a?a.sample+" maç":"Veri yok"));b.append(samples);historyNote(b,"Son en fazla 5 kayıtlı lig maçı. Geçmiş gol ortalaması, maç tahmini değildir.");return b;
+}
 function formPanels(r){
  const b=historyPanel("Son 5 kayıtlı lig maçı"),f=historyForm(r),names=r.match.split(" – ");
  if(!f){historyNote(b,"Güncel form raporu yok.");return b;}
+ b.append(formGoalComparison(f,names));
  for(const [i,side] of [f.home,f.away].entries()){
  if(!side)continue;
  const card=node("section",undefined,"form-team"),header=node("div",undefined,"form-team-head");
