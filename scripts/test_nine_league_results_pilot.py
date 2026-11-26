@@ -21,6 +21,7 @@ class NineLeagueTests(unittest.TestCase):
             "it.1":[("Milan","AC Milan"),("Inter","Internazionale"),("Inter","FC Internazionale Milano")],
             "fr.1":[("Rennes","Stade Rennais"),("Monaco","AS Monaco"),("Paris SG","Paris Saint-Germain")],
             "nl.1":[("Ajax","Ajax Amsterdam"),("Den Haag","ADO Den Haag"),("For Sittard","Fortuna Sittard"),("Nijmegen","NEC Nijmegen")],
+            "pt.1":[("C D Nacional","Nacional"),("Academico de Viseu","Academico Viseu"),("Guimaraes","Vitoria de Guimaraes"),("Sp Braga","Braga"),("Sp Lisbon","Sporting CP")],
             "tr.1":[("Buyuksehyr","Başakşehir"),("Erzurum BB","Erzurumspor"),("Goztep","Göztepe")],
         }
         for code,pairs in cases.items():

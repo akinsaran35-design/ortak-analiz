@@ -17,6 +17,7 @@ RESULT_ALIASES={
     "it.1":{"milan":"ac milan","inter":"inter milan","internazionale":"inter milan"},
     "fr.1":{"stade rennais":"rennes","as monaco":"monaco","paris sg":"paris saint germain"},
     "nl.1":{"ajax amsterdam":"ajax","den haag":"ado den haag","for sittard":"fortuna sittard","nijmegen":"nec nijmegen"},
+    "pt.1":{"c d nacional":"nacional","academico de viseu":"academico viseu","guimaraes":"vitoria","vitoria de guimaraes":"vitoria","sp braga":"braga","sp lisbon":"sporting lisbon","sporting cp":"sporting lisbon"},
     "tr.1":{"buyuksehyr":"basaksehir","erzurum bb":"erzurumspor","goztep":"goztepe"},
 }
 
@@ -63,6 +64,6 @@ def main():
         report["counts"]=dict(Counter(r["status"] for r in report["rows"]))
         leagues.append(report)
         print(json.dumps({"league":code,"counts":report["counts"],"errors":report["errors"],"sampleDates":report.get("sampleDates",[])},ensure_ascii=False))
-    report={"version":"4.66","updatedAt":now.isoformat(),"mode":"research_only","leagues":leagues,"decision":"PAS","realBettingEnabled":False}
+    report={"version":"4.68","updatedAt":now.isoformat(),"mode":"research_only","leagues":leagues,"decision":"PAS","realBettingEnabled":False}
     Path("nine_league_results_pilot.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
 if __name__=="__main__": main()
