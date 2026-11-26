@@ -37,7 +37,17 @@ jobs:
       - run: python scripts/test_historical_tuning.py
       - run: python scripts/test_historical_strength.py
       - run: python scripts/openliga_pilot.py
+      - run: python scripts/test_historical_archive_merge.py
+      - uses: actions/cache/restore@v4
+        with:
+          path: openliga_archive.json
+          key: openliga-archive-v1-${{ github.run_id }}
+          restore-keys: openliga-archive-v1-
       - run: python scripts/historical_multiyear.py
+      - uses: actions/cache/save@v4
+        with:
+          path: openliga_archive.json
+          key: openliga-archive-v1-${{ github.run_id }}
       - uses: actions/upload-artifact@v4
         with:
           name: historical-data
