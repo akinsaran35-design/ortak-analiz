@@ -43,6 +43,20 @@ class OpponentTest(unittest.TestCase):
         m.update(a,exposures[0])
         m.update(b,exposures[1])
         self.assertEqual(m.history[("L",b["home"])][-1][3],1.5)
+    def test_league_aggregates(self):
+        rows=fixture()
+        rows += [dict(r,matchID=1000+r["matchID"],league="M") for r in rows]
+        report=multiyear(rows,date(2026,11,26))
+        self.assertEqual(set(report["leagueAggregate"]),{"L","M"})
+        for k,v in report["aggregate"].items():
+            for name in ("baseline","venue","opponent","leagueReference"):
+                parts=[q[k]["models"][name] for q in report["leagueAggregate"].values()]
+                n=sum(m["n"] for m in parts)
+                self.assertEqual(v[name]["n"],n)
+                self.assertAlmostEqual(v[name]["brier"],sum(m["n"]*m["brier"] for m in parts)/n)
+            self.assertFalse(report["leagueAggregate"]["L"][k]["sampleAdequateForDescription"])
+        self.assertTrue(report["leagueSampleRule"]["descriptiveOnly"])
+
     def test_empty(self):
         report=multiyear([],date(2026,11,26))
         self.assertFalse(report["realBettingEnabled"])
