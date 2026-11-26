@@ -12,7 +12,12 @@ def market_metrics(values):
     n=len(values)
     selected=[o for p,o in values if p>=0.70]
     hits=sum(selected)
-    return dict(n=n,brier=sum((p-o)**2 for p,o in values)/n,
+    bins=[[0,0.0,0] for _ in range(10)]
+    for p,o in values:
+        z=bins[min(9,int(p*10))]
+        z[0]+=1;z[1]+=p;z[2]+=o
+    ece=sum(abs(z[1]-z[2]) for z in bins)/n
+    return dict(n=n,ece=ece,brier=sum((p-o)**2 for p,o in values)/n,
                 eventRate=sum(o for p,o in values)/n,
                 accuracy=sum(int((p>=0.5)==bool(o)) for p,o in values)/n,
                 selectionThreshold=0.70,selected=len(selected),hits=hits,
@@ -25,6 +30,7 @@ def evaluate(rows,as_of,weighted=False, window=10, rho=0.0, phase="test", streng
     from historical_strength import rates as strength_rates
     league_totals=defaultdict(lambda:[0,0,0])
     scores=defaultdict(list)
+    reference=defaultdict(list)
     skipped=0
     first=min((r["date"] for r in groups["train"]),default=meta["asOf"])
     for day,batch in groupby(sorted(groups["train"]+groups["validation"]+groups["test"],key=lambda r:r["date"]),key=lambda r:r["date"]):
@@ -50,16 +56,19 @@ def evaluate(rows,as_of,weighted=False, window=10, rho=0.0, phase="test", streng
                 sr=strength_rates(history[(r['league'],r['home'])],history[(r['league'],r['away'])],(gh+15)/(n+10),(ga+12)/(n+10))
                 if sr is not None: lam,mu=sr
             p=markets(lam,mu,rho)
+            gh,ga,n=league_totals[r["league"]]
+            q=markets(max(.15,min(4,(gh+15)/(n+10))),max(.15,min(4,(ga+12)/(n+10))),0.0)
             x,y=r["ft"]
             for k,o in (("over15",x+y>=2),("over25",x+y>=3),("btts",x>0 and y>0)):
                 scores[k].append((p[k],int(o)))
+                reference[k].append((q[k],int(o)))
         for r in batch:
             x,y=r["ft"]
             totals=league_totals[r["league"]]
             totals[0]+=x;totals[1]+=y;totals[2]+=1
             history[(r["league"],r["home"])].append((x,y,"home"))
             history[(r["league"],r["away"])].append((y,x,"away"))
-    return dict(status="research_only",realBettingEnabled=False,modelCalibrated=False,skipped=skipped,metrics={k:market_metrics(v) for k,v in scores.items()})
+    return dict(status="research_only",realBettingEnabled=False,modelCalibrated=False,skipped=skipped,metrics={k:dict(market_metrics(v),referenceBrier=market_metrics(reference[k])['brier'],brierImprovement=market_metrics(reference[k])['brier']-market_metrics(v)['brier']) for k,v in scores.items()})
 if __name__=="__main__":
     a=json.loads(Path("historical_data.json").read_text())
     r=evaluate(a["matches"],date.fromisoformat(a["asOf"]))
