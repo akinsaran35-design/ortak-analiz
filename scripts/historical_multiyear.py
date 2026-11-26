@@ -36,6 +36,7 @@ def run(today):
             except Exception as e: errors.append(dict(league=league,year=year,error=type(e).__name__))
             time.sleep(2)
     data=[v for k,v in rows.items() if k not in conflicts]
+    Path("openliga_archive.json").write_text(json.dumps(dict(asOf=today.isoformat(), attribution="Data from OpenLigaDB (www.openligadb.de)", license="ODbL-1.0", matches=data, errors=errors, conflicts=len(conflicts))))
     windows=[]
     for offset in range(0,1096,61):
         end=today-timedelta(days=offset)
