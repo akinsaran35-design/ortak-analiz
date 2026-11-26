@@ -1,21 +1,22 @@
 {
   "version": "4.81",
-  "updatedAt": "2026-11-26T15:19:30.934773+00:00",
+  "updatedAt": "2026-11-26T15:22:09.852368+00:00",
   "status": "PASS",
   "errors": [],
   "mode": "research_only",
   "reportTimestamps": {
-    "daily.json": "2026-11-26T18:19:13+03:00",
+    "daily.json": "2026-11-26T18:21:52+03:00",
     "odds.json": "2026-11-26T15:06:36.918894+00:00",
-    "matching.json": "2026-11-26T15:19:16.082725+00:00",
-    "prospective_validation.json": "2026-11-26T18:19:25.073951+03:00",
-    "performance.json": "2026-11-26T18:19:27.818019+03:00",
-    "data_quality.json": "2026-11-26T15:19:27.874984+00:00",
-    "archive_calendar_evidence_status.json": "2026-11-26T15:19:30.332830+00:00",
-    "archive_calendar_result_replay.json": "2026-11-26T18:19:30.500044+03:00",
-    "unified_decision.json": "2026-11-26T15:19:30.188928+00:00",
-    "score_provenance.json": "2026-11-26T18:19:30.823785+03:00",
-    "multi_league_results.json": "2026-11-26T18:19:23.937595+03:00",
-    "fixture_reconciliation.json": "2026-11-26T15:19:28.353499+00:00"
+    "matching.json": "2026-11-26T15:21:56.186195+00:00",
+    "prospective_validation.json": "2026-11-26T18:22:04.591144+03:00",
+    "performance.json": "2026-11-26T18:22:06.754781+03:00",
+    "data_quality.json": "2026-11-26T15:22:06.804716+00:00",
+    "archive_calendar_evidence_status.json": "2026-11-26T15:22:09.296749+00:00",
+    "archive_calendar_result_replay.json": "2026-11-26T18:22:09.449230+03:00",
+    "unified_decision.json": "2026-11-26T15:22:09.161699+00:00",
+    "score_provenance.json": "2026-11-26T18:22:09.753516+03:00",
+    "multi_league_results.json": "2026-11-26T18:22:03.528592+03:00",
+    "fixture_reconciliation.json": "2026-11-26T15:22:07.232318+00:00",
+    "archive_calendar_outcome_status.json": "2026-11-26T18:22:09.602656+03:00"
   }
 }
