@@ -48,4 +48,5 @@ jobs:
             historical_freshness.json
             openliga_pilot.json
             openliga_baseline.json
+          openliga_comparison.json
           retention-days: 7
