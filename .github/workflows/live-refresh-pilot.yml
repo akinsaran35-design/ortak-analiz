@@ -1,7 +1,9 @@
-name: V5.16 live score scenario and source pilot
+name: V5.17 live rate link and source pilot
 on:
   pull_request:
     paths:
+      - 'scripts/live_rate_link.py'
+      - 'scripts/test_live_rate_link.py'
       - 'scripts/live_score_scenario.py'
       - 'scripts/test_live_score_scenario.py'
       - 'scripts/live_analysis_quality.py'
@@ -32,8 +34,10 @@ jobs:
       - run: python scripts/test_live_refresh_snapshot.py
       - run: python scripts/test_live_analysis_quality.py
       - run: python scripts/test_live_score_scenario.py
+      - run: python scripts/test_live_rate_link.py
       - run: python scripts/live_refresh_snapshot.py
       - run: python scripts/live_analysis_quality.py
+      - run: python scripts/live_rate_link.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -41,5 +45,6 @@ jobs:
           path: |
             live_refresh_snapshot.json
             live_analysis_quality.json
+            live_rate_link.json
           if-no-files-found: warn
           retention-days: 1
