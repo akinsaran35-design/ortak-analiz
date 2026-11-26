@@ -103,3 +103,6 @@ jobs:
 
       - name: Test chronological split
         run: python scripts/test_historical_split.py
+
+      - name: Test archive reconciliation
+        run: python scripts/test_historical_reconcile.py
