@@ -164,3 +164,46 @@ body{min-height:100dvh}
 main{padding-inline:clamp(10px,3vw,20px)}
 @media(min-width:600px) and (pointer:fine){main{max-width:900px;margin-inline:auto}.top{max-width:900px;margin-inline:auto}.bottom-nav{max-width:900px;margin-inline:auto}}
 @media(pointer:coarse){html{-webkit-text-size-adjust:100%}body{font-size:16px}.bottom-nav button{font-size:11px}.match-open .team-label{font-size:14px}.match-meta,.match-time,.odds-summary{font-size:12px}}
+
+/* UI 525: readable match center, including wide mobile webviews. */
+:root{--ui:1px}
+@media(min-width:500px) and (pointer:coarse){:root{--ui:clamp(1px,.245vw,2.5px)}}
+@media(min-width:500px) and (display-mode:standalone){:root{--ui:clamp(1px,.245vw,2.5px)}}
+.detail-active main{padding-inline:calc(12 * var(--ui));font-size:calc(15 * var(--ui))}
+.detail-header{grid-template-columns:calc(44 * var(--ui)) minmax(0,1fr) calc(44 * var(--ui));padding-block:calc(10 * var(--ui));gap:calc(6 * var(--ui))}
+.detail-header h2{font-size:calc(21 * var(--ui));font-weight:800}
+.detail-header button{height:calc(44 * var(--ui));font-size:calc(30 * var(--ui))}
+.detail-header-mark{font-size:calc(20 * var(--ui))}
+.detail-hero{padding:calc(18 * var(--ui)) calc(12 * var(--ui));border-radius:calc(18 * var(--ui));margin-block:calc(10 * var(--ui));background:linear-gradient(155deg,var(--sub),var(--panel));box-shadow:0 5px 18px #0002}
+.detail-league{font-size:calc(13 * var(--ui));font-weight:650;margin-bottom:calc(18 * var(--ui))}
+.detail-hero .match-title{grid-template-columns:minmax(0,1fr) calc(32 * var(--ui)) minmax(0,1fr)}
+.detail-hero .team-crest{width:calc(74 * var(--ui));height:calc(74 * var(--ui))}
+.detail-hero .team-label{font-size:calc(15 * var(--ui));font-weight:800;line-height:1.3}
+.detail-hero .versus{font-size:calc(13 * var(--ui))}
+.detail-time{font-size:calc(12 * var(--ui));padding:calc(9 * var(--ui));margin-top:calc(16 * var(--ui));max-width:100%;white-space:normal}
+#detail-content .detail-tabs{grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(5 * var(--ui));padding:calc(5 * var(--ui));margin-bottom:calc(12 * var(--ui));border-radius:calc(13 * var(--ui))}
+#detail-content .detail-tabs button{min-height:calc(43 * var(--ui));font-size:calc(13 * var(--ui));font-weight:650;padding:calc(5 * var(--ui));background:var(--sub);border-radius:calc(8 * var(--ui));overflow-wrap:anywhere}
+#detail-content .detail-tabs button[aria-pressed=true]{background:linear-gradient(145deg,#1977b6,#12426d);color:#fff;box-shadow:inset 0 0 0 1px #52b9fa}
+#detail-content .panel{padding:calc(14 * var(--ui));border-radius:calc(15 * var(--ui));margin-bottom:calc(12 * var(--ui))}
+#detail-content h3{font-size:calc(17 * var(--ui));line-height:1.3;margin:0 0 calc(10 * var(--ui))}
+#detail-content .subtle{font-size:calc(13 * var(--ui));line-height:1.45}
+#detail-content .metric b{font-size:calc(19 * var(--ui))}
+#detail-content .metric small{font-size:calc(11 * var(--ui))}
+#detail-content .metric{padding:calc(10 * var(--ui)) calc(4 * var(--ui))}
+#detail-content .prob-row{font-size:calc(13 * var(--ui));grid-template-columns:calc(60 * var(--ui)) minmax(0,1fr) calc(54 * var(--ui));gap:calc(7 * var(--ui))}
+#detail-content .prob-row b{font-size:calc(15 * var(--ui))}
+#detail-content .prob-track{height:calc(9 * var(--ui))}
+.score-scenario{border:1px solid var(--line);background:var(--sub);border-radius:calc(12 * var(--ui));padding:calc(12 * var(--ui));margin-block:calc(9 * var(--ui))}
+.score-scenario:first-of-type{border-color:var(--good)}
+.score-rank{font-size:calc(12 * var(--ui));color:var(--muted)}
+.score-scenario-top{display:flex;justify-content:space-between;align-items:baseline;gap:calc(10 * var(--ui));margin-block:calc(5 * var(--ui)) calc(9 * var(--ui))}
+.score-value{font-size:calc(30 * var(--ui));line-height:1.1;font-weight:850;font-variant-numeric:tabular-nums}
+.score-percent{font-size:calc(23 * var(--ui));color:var(--good);font-variant-numeric:tabular-nums}
+.score-scenario .prob-fill{background:var(--good)}
+#detail-content .signal-line{font-size:calc(14 * var(--ui));padding-block:calc(12 * var(--ui))}
+#detail-content .signal-line strong{font-size:calc(12 * var(--ui))}
+#detail-content .personal-line{font-size:calc(14 * var(--ui))}
+@media(min-width:500px) and (pointer:coarse){body{font-size:calc(16 * var(--ui))}.brand h1{font-size:calc(20 * var(--ui))}.brand .eyebrow,.status{font-size:calc(10 * var(--ui))}.match-open .team-label{font-size:calc(14 * var(--ui))}.match-open .team-crest{width:calc(42 * var(--ui));height:calc(42 * var(--ui));flex-basis:calc(42 * var(--ui))}.match-meta,.match-time,.odds-summary{font-size:calc(12 * var(--ui))}.quick-markets strong{font-size:calc(17 * var(--ui))}.quick-markets small,.bottom-nav button{font-size:calc(11 * var(--ui))}.bottom-nav button{min-height:calc(52 * var(--ui))}.bottom-nav button svg{width:calc(22 * var(--ui));height:calc(22 * var(--ui))}}
+
+/* A wide embedded browser may report a fine pointer even on a phone. */
+@media(min-width:500px){body.detail-active{--ui:clamp(1px,.245vw,2.5px)}}
