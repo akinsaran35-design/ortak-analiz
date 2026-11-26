@@ -41,10 +41,17 @@ class SnapshotTests(unittest.TestCase):
         data["kickoff_confirmation"]=build_kickoff(data["daily"],data["fixture_coverage_audit"],data["odds"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         from model_research import build as build_models
         data["model_research"]=build_models(data["daily"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
+        from football_statistics_pilot import build as build_stats
+        from football_coverage_pilot import build as build_coverage
+        stamp=datetime.fromisoformat("2026-11-26T14:00:00Z")
+        data["football_statistics_pilot"]=build_stats(data["daily"],stamp,lambda _:b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n")
+        data["football_coverage_pilot"]=build_coverage(stamp,lambda _:'{"events":[]}')
         self.assertEqual(audit(data)["status"],"PASS")
-        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z","odds.json":"2026-11-26T14:00:00Z","kickoff_confirmation.json":"2026-11-26T14:00:00+00:00","model_research.json":"2026-11-26T14:00:00+00:00"})
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z","odds.json":"2026-11-26T14:00:00Z","kickoff_confirmation.json":"2026-11-26T14:00:00+00:00","model_research.json":"2026-11-26T14:00:00+00:00","football_statistics_pilot.json":"2026-11-26T14:00:00+00:00","football_coverage_pilot.json":"2026-11-26T14:00:00+00:00"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("football_statistics_pilot","fixtureCount",2,"football_statistics_integrity"),
+            ("football_coverage_pilot","eventCount",1,"football_coverage_integrity"),
             ("model_research","rows",[{}],"model_research_recompute"),
             ("model_research","rhoFitted",True,"model_research_recompute"),
             ("kickoff_confirmation","counts",{"agreed":1},"kickoff_recompute"),
