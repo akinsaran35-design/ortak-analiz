@@ -62,3 +62,12 @@ assert.equal(confirmedRows(confirmed,now+86400001,true).length,0);
 assert.equal(confirmedRows({...confirmed,kickoff_confirmation:{...confirmed.kickoff_confirmation,coverageUpdatedAt:"wrong"}},staleNow,true).length,0);
 assert.ok(html.includes('value="last-confirmed"'));
 console.log("Last-known corroborated fixture view passed");
+
+const {researchFor}=require("../mobile-v487.js");
+const modelRow={...row,poisson:{over25:.6}};
+const modelData={...history,model_research:{version:"4.21",updatedAt,sourceUpdatedAt:updatedAt,mode:"research_only",rhoFitted:false,modelCalibrated:false,realBettingEnabled:false,rows:[modelRow]},snapshot_integrity:{...history.snapshot_integrity,reportTimestamps:{...history.snapshot_integrity.reportTimestamps,"model_research.json":updatedAt}}};
+assert.deepEqual(researchFor(row,modelData,now),modelRow);
+assert.equal(researchFor(row,modelData,now+86400001),null);
+assert.equal(researchFor(row,{...modelData,model_research:{...modelData.model_research,sourceUpdatedAt:"wrong"}},now),null);
+assert.equal(researchFor(row,{...modelData,model_research:{...modelData.model_research,rows:[modelRow,modelRow]}},now),null);
+console.log("Manifest-bound model research lookup passed");

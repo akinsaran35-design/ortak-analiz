@@ -39,10 +39,14 @@ class SnapshotTests(unittest.TestCase):
         from kickoff_confirmation import build as build_kickoff
         data["odds"]["updatedAt"]="2026-11-26T14:00:00Z"
         data["kickoff_confirmation"]=build_kickoff(data["daily"],data["fixture_coverage_audit"],data["odds"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
+        from model_research import build as build_models
+        data["model_research"]=build_models(data["daily"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
         self.assertEqual(audit(data)["status"],"PASS")
-        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z","odds.json":"2026-11-26T14:00:00Z","kickoff_confirmation.json":"2026-11-26T14:00:00+00:00"})
+        self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z","prospective_validation.json":"2026-11-26T14:00:00Z","prospective_leagues.json":"2026-11-26T14:00:00+00:00","scoreboard_snapshot.json":"2026-11-26T14:00:00Z","fixture_coverage_audit.json":"2026-11-26T14:00:00Z","odds.json":"2026-11-26T14:00:00Z","kickoff_confirmation.json":"2026-11-26T14:00:00+00:00","model_research.json":"2026-11-26T14:00:00+00:00"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("model_research","rows",[{}],"model_research_recompute"),
+            ("model_research","rhoFitted",True,"model_research_recompute"),
             ("kickoff_confirmation","counts",{"agreed":1},"kickoff_recompute"),
             ("scoreboard_snapshot","eventCount",1,"scoreboard_counts"),
             ("scoreboard_snapshot","usedForPredictions",True,"scoreboard_lock"),

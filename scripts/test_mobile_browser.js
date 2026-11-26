@@ -11,6 +11,7 @@ const {chromium}=require("playwright");
   const row={date:"2026-11-27",league:"İngiltere Premier Lig",match:"SV Werder Bremen – Borussia Mönchengladbach"};
   const event={id:"1",league:"soccer_epl",kickoff:"2026-11-27T18:00:00Z",bookmakers:[]};
   const d={daily:{updatedAt,upcoming:[row],candidates:[{...row,markets:{"1.5 Üst":80,"2.5 Üst":60,"KG Var":50},expectedGoals:{home:1.5,away:1}}],leaguesLoaded:9},matching:{updatedAt,matched:[{match:row.match,eventId:"1",kickoff:event.kickoff}]},odds:{updatedAt,events:[event],remainingCredits:100,source:"The Odds API",region:"uk",errors:[]},data_quality:{updatedAt,qualityGate:"PASS"},unified_decision:{updatedAt,decision:"PAS"},prospective_validation:{updatedAt,tested:4,pending:86,minimumMatches:500},fixture_coverage_audit:{version:"4.92",updatedAt,dailyUpdatedAt:updatedAt,mode:"research_only",decision:"PAS",archivesModified:false,dates:[row.date],rows:[{status:"same_date",published:[row],espn:[{date:row.date}]}]},kickoff_confirmation:{version:"4.94",updatedAt,available:true,mode:"research_only",decision:"PAS",archivesModified:false,dailyUpdatedAt:updatedAt,coverageUpdatedAt:updatedAt,oddsUpdatedAt:updatedAt,rows:[{league:"en.1",date:row.date,match:row.match,kickoff:event.kickoff,oddsEventId:event.id,status:"agreed",published:[row]}]}};
+  d.model_research={version:"4.21",updatedAt,sourceUpdatedAt:updatedAt,mode:"research_only",rhoFitted:false,modelCalibrated:false,realBettingEnabled:false,rows:[{...row,poisson:{over15:.7,over25:.5,btts:.4},experimentalDixonColes:{over15:.71,over25:.5,btts:.41},simulation:{markets:{over15:{probability:.71},over25:{probability:.5},btts:{probability:.41}}}}]};
   d.snapshot_integrity={updatedAt,status:"PASS",errors:[],reportTimestamps:Object.fromEntries(Object.keys(d).map(k=>[k+".json",updatedAt]))};
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
   await page.goto("http://127.0.0.1:8765/index.html");
@@ -33,6 +34,9 @@ const {chromium}=require("playwright");
   }
   await page.setViewportSize({width:393,height:852});
   await page.screenshot({path:"mobile-reference-detail.png"});
+  await page.getByRole("button",{name:"İstatistik",exact:true}).click();
+  await page.getByText("Gol modeli karşılaştırması",{exact:true}).waitFor();
+  assert.equal(await page.getByText("Dixon-Coles",{exact:true}).count(),3);
   await page.getByRole("button",{name:"Para akışı",exact:true}).click();
   await page.getByText("Dünya toplamı (TL)",{exact:true}).waitFor();
   await page.getByText("Bağlı değil",{exact:true}).waitFor();

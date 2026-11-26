@@ -6,7 +6,8 @@ from dixon_coles import markets
 from monte_carlo import simulate
 from score_model import score_report
 
-def build(data):
+def build(data,now=None):
+    now=now or datetime.now(timezone.utc)
     rows=[]
     rejected=0
     for c in data.get("candidates",[]):
@@ -21,7 +22,7 @@ def build(data):
                          "simulation":simulate(h,a,-0.05)})
         except (KeyError,TypeError,ValueError,OverflowError):
             rejected+=1
-    return {"version":"4.21","mode":"research_only","updatedAt":datetime.now(timezone.utc).isoformat(),
+    return {"version":"4.21","mode":"research_only","updatedAt":now.isoformat(),
             "sourceUpdatedAt":data.get("updatedAt"),"rho":-0.05,"rhoFitted":False,
             "modelCalibrated":False,"realBettingEnabled":False,"rejected":rejected,"rows":rows}
 
