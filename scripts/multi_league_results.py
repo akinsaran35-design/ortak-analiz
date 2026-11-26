@@ -1,4 +1,4 @@
-"""V4.67: dual-source settlement input for eight smoke-tested leagues."""
+"""V4.69: dual-source settlement input for nine smoke-tested leagues."""
 import json
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta
@@ -7,7 +7,7 @@ from results_source_pilot import csv_results, espn_results, read, TR
 from nine_league_results_pilot import SOURCES, result_key
 from league_config import LEAGUES
 
-APPROVED=frozenset(("en.1","en.2","de.1","es.1","it.1","fr.1","nl.1","tr.1"))
+APPROVED=frozenset(("en.1","en.2","de.1","es.1","it.1","fr.1","nl.1","pt.1","tr.1"))
 SPORTS={code:sport for _,code,sport in LEAGUES}
 
 def source_urls(code,day):
@@ -45,12 +45,12 @@ def build_report(archive,now,reader=read):
         except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
             out["errors"].append(type(exc).__name__)
         reports.append(out)
-    return {"version":"4.67","updatedAt":now.isoformat(),"mode":"research_only","approvedLeagues":sorted(APPROVED),"excludedLeagues":["pt.1"],"groups":reports}
+    return {"version":"4.69","updatedAt":now.isoformat(),"mode":"research_only","approvedLeagues":sorted(APPROVED),"excludedLeagues":[],"groups":reports}
 
 def verified_rows(report,now):
     try:
         stamp=datetime.fromisoformat(report["updatedAt"])
-        if report["version"]!="4.67" or not timedelta(0)<=now-stamp<=timedelta(minutes=30): return []
+        if report["version"]!="4.69" or not timedelta(0)<=now-stamp<=timedelta(minutes=30): return []
         out=[]
         for group in report["groups"]:
             code,day=group["league"],group["date"]
@@ -71,6 +71,6 @@ def main():
     report=build_report(archive,now)
     report["automaticVerifiedCount"]=len(verified_rows(report,datetime.now(TR)))
     Path("multi_league_results.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
-    print("V4.67 result audit:",json.dumps({"verified":report["automaticVerifiedCount"],"groups":[{"league":g["league"],"date":g["date"],"counts":dict(Counter(r["status"] for r in g["rows"])),"errors":g["errors"]} for g in report["groups"]]},ensure_ascii=False))
+    print("V4.69 result audit:",json.dumps({"verified":report["automaticVerifiedCount"],"groups":[{"league":g["league"],"date":g["date"],"counts":dict(Counter(r["status"] for r in g["rows"])),"errors":g["errors"]} for g in report["groups"]]},ensure_ascii=False))
 
 if __name__=="__main__": main()
