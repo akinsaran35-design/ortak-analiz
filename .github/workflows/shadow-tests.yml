@@ -272,4 +272,6 @@ jobs:
         run: |
           node --check mobile-v487.js
           node scripts/test_mobile_v487.js
+          node --check money-v497.js
+          node scripts/test_money_v497.js
           grep -F 'src="./mobile-v487.js"' index.html
