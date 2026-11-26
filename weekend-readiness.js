@@ -51,7 +51,11 @@
     const provenanceCurrent=bound("score_provenance.json") && provenance.version==="4.80" && provenance.mode==="research_only" && Array.isArray(provenance.rows) && Array.isArray(provenance.crossArchiveConflicts) && integer(provenance.feedDisagreements)!==null && provenance.settledArchiveRecords===provenance.rows.length;
     const scoreAudit={current:provenanceCurrent,unique:provenanceCurrent?integer(provenance.uniqueSettledMatches):null,corroborated:provenanceCurrent?new Set(provenance.rows.filter(x=>x.status==="currently_corroborated").map(x=>JSON.stringify([x.league,x.date,x.home,x.away]))).size:null,conflicts:provenanceCurrent?provenance.crossArchiveConflicts.length:null,feedDisagreements:provenanceCurrent?provenance.feedDisagreements:null,archiveMismatches:provenanceCurrent?provenance.rows.filter(x=>x.status==="source_conflict"||x.status==="invalid_score").length:null};
     const scoreHealthy=provenanceCurrent && scoreAudit.conflicts===0 && scoreAudit.feedDisagreements===0 && scoreAudit.archiveMismatches===0;
-    return {today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, archiveAudit, integrityCurrent, scoreAudit, dailyDate:daily.date || null,
+    const marketNames=["1.5 Üst","2.5 Üst","KG Var"];
+    const research=validation.marketResearch||{};
+    const marketsCurrent=bound("prospective_validation.json") && validation.marketResearchVersion==="4.85" && marketNames.every(m=>{const x=research[m];return x && ["tested","pending","legacyWithoutForecast","invalid","minimumMatches"].every(k=>integer(x[k])!==null) && x.liveEnabled===false && x.status==="research_only" && x.tested+x.pending+x.legacyWithoutForecast+x.invalid===validation.tested+validation.pending && (x.tested===0?Object.keys(x.scores||{}).length===0:["old","candidate","baseline"].every(k=>typeof x.scores?.[k]==="number" && x.scores[k]>=0 && x.scores[k]<=1));});
+    const marketResearch=marketsCurrent?research:null;
+    return {marketResearch,today, weekend, missing, stale, healthy, turkey, coverage, reconciliation, archiveAudit, integrityCurrent, scoreAudit, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
       fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
@@ -66,7 +70,7 @@
   panel.className="card";
   panel.id="weekendReadiness";
   const h=document.createElement("h2");
-  h.textContent="Ortak Analiz V4.81 — Hafta sonu hazırlığı";
+  h.textContent="Ortak Analiz V4.86 — Hafta sonu hazırlığı";
   const out=document.createElement("div");
   out.setAttribute("aria-live","polite");
   const button=document.createElement("button");
@@ -146,6 +150,12 @@
       link.target="_blank"; link.rel="noopener noreferrer";
       out.append(link);
       line("İleriye dönük doğrulama: "+val(r.tested)+" / "+val(r.minimum)+" • Bekleyen: "+val(r.pending));
+      if(r.marketResearch){
+        for(const [name,x] of Object.entries(r.marketResearch)){
+          line(name+": "+x.tested+" / "+x.minimumMatches+" sonuç • "+x.pending+" bekleyen • "+x.legacyWithoutForecast+" eski kayıtta bu tahmin yok.");
+          if(x.tested) line("Brier (düşük daha iyi): klasik "+x.scores.old.toFixed(4)+" • ağırlıklı "+x.scores.candidate.toFixed(4)+" • lig ortalaması "+x.scores.baseline.toFixed(4),"note");
+        }
+      }else line("Üç kategorili araştırma: güncel ve tutarlı rapor bekleniyor.","note");
       line("Kalibrasyon: "+(r.calibrated?"Rapor onaylı":"Onay bekliyor"));
       line("Karar: PAS • Gerçek bahis kapalı. Geçmiş araştırma bağımsız ileriye dönük doğrulama değildir.","note");
       if(r.missing.length) line("Okunamayan: "+r.missing.join(", "),"muted");
