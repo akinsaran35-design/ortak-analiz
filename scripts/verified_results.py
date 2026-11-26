@@ -3,12 +3,15 @@ import json
 from datetime import date,datetime
 from pathlib import Path
 
-def load_verified(root):
+def load_verified(root,now=None):
     p=Path(root)/"verified_results.json"
-    if not p.exists(): return []
-    data=json.loads(p.read_text(encoding="utf-8"))
+    data=json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"records":[]}
     rows=data["records"]
     if not isinstance(rows,list): raise ValueError("verified result records")
+    auto=Path(root)/"results_source_pilot.json"
+    if now is not None and auto.exists():
+        from automatic_results import verified_rows
+        rows=rows+verified_rows(json.loads(auto.read_text(encoding="utf-8")),now)
     return rows
 
 def settle_verified(records,rows,now,league_codes=None):
