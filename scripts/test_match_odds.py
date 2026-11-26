@@ -9,5 +9,19 @@ class AliasTests(unittest.TestCase):
     def test_isolation(self):
         self.assertNotEqual(canonical("FC Bayern München","soccer_epl"),canonical("Bayern Munich","soccer_epl"))
         self.assertNotEqual(canonical("Everton FC","soccer_epl"),canonical("Liverpool FC","soccer_epl"))
+class ObservedAliases(unittest.TestCase):
+    def test_observed_pairs(self):
+        for league, a, b in [
+            ("soccer_netherlands_eredivisie","FC Twente '65","FC Twente Enschede"),
+            ("soccer_portugal_primeira_liga","Sport Lisboa e Benfica","Benfica"),
+            ("soccer_france_ligue_one","Olympique Lyonnais","Lyon"),
+            ("soccer_spain_la_liga","RC Celta de Vigo","Celta Vigo"),
+            ("soccer_italy_serie_a","FC Internazionale Milano","Inter Milan"),
+            ("soccer_epl","Brighton & Hove Albion FC","Brighton and Hove Albion"),
+            ("soccer_germany_bundesliga","Bayer 04 Leverkusen","Bayer Leverkusen"),
+        ]:
+            self.assertEqual(canonical(a,league),canonical(b,league))
+        self.assertNotEqual(canonical("Sporting Lisbon","soccer_portugal_primeira_liga"),canonical("Braga","soccer_portugal_primeira_liga"))
+
 if __name__ == "__main__":
     unittest.main()
