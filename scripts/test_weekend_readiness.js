@@ -66,3 +66,9 @@ assert.equal(summarize(data,now).scoreAudit.current,true);
 assert.equal(summarize({...data,"score_provenance.json":{...data["score_provenance.json"],feedDisagreements:1}},now).dataCurrent,false);
 assert.equal(summarize({...data,"score_provenance.json":{...data["score_provenance.json"],updatedAt:new Date(now-1000).toISOString()}},now).dataCurrent,false);
 assert.equal(summarize({...calData,"snapshot_integrity.json":{...data["snapshot_integrity.json"],reportTimestamps:{...data["snapshot_integrity.json"].reportTimestamps,"fixture_reconciliation.json":"wrong"}}},now).reconciliation.current,false);
+
+const marketRow={tested:0,pending:69,legacyWithoutForecast:0,invalid:0,minimumMatches:500,liveEnabled:false,status:"research_only",scores:{}};
+const marketData={...data,"prospective_validation.json":{...data["prospective_validation.json"],marketResearchVersion:"4.85",marketResearch:Object.fromEntries(["1.5 Üst","2.5 Üst","KG Var"].map(m=>[m,{...marketRow}]))}};
+assert.equal(summarize(marketData,now).marketResearch["KG Var"].pending,69);
+assert.equal(summarize({...marketData,"prospective_validation.json":{...marketData["prospective_validation.json"],marketResearch:{}}},now).marketResearch,null);
+assert.equal(summarize(marketData,now+1800001).marketResearch,null);

@@ -17,6 +17,9 @@ def audit(data):
         check(m["matchedCount"]==len(m["matched"]) and m["unmatchedCount"]==len(m["unmatched"]) and m["matchedCount"]+m["unmatchedCount"]==d["candidateCount"],"matching_count")
         n=sum(x["result"] is not None for x in a.values())
         check((v["recorded"],v["tested"],v["pending"])==(len(a),n,len(a)-n),"prospective_count")
+        from prospective_markets import summarize
+        reference=summarize(a,datetime.fromisoformat(v["updatedAt"]))
+        check(v["marketResearchVersion"]=="4.85" and v["marketResearch"]==reference,"prospective_market_recompute")
         check((q["archiveRecords"],q["settled"],q["pending"])==(len(a),n,len(a)-n),"quality_count")
         k=sum(x["result"] is not None for x in p.values())
         overall=f["overall"]
