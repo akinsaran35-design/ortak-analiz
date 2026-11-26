@@ -27,4 +27,14 @@ class Tests(unittest.TestCase):
         self.assertEqual(link(r,daily(),NOW)[0],"red_card_effect_unmodeled")
         r=row();r["quality"]="stale_receipt"
         self.assertEqual(link(r,daily(),NOW)[0],"quality_rejected")
+    def test_audited_identity(self):
+        r=row();r["eventId"]="123";r["home"]="A FC"
+        d=daily()
+        c=dict(version="4.92",source="ESPN",mode="research_only",dailyUpdatedAt=d["updatedAt"],updatedAt="2026-11-26T15:05:00+00:00",dates=["2026-11-26"],rows=[dict(league="en.1",status="same_date",published=[dict(date="2026-11-26",league="İngiltere Premier Lig",match="A – B")],espn=[dict(date="2026-11-26",eventId="123",kickoff=r["kickoff"],match="A FC – B")])])
+        self.assertEqual(link(r,d,NOW,c)[0],"conditional_scenario")
+        self.assertEqual(link(dict(r,eventId="124"),d,NOW,c)[0],"no_verified_event_link")
+        self.assertEqual(link(dict(r,kickoff="2026-11-26T17:01:00+00:00"),d,NOW,c)[0],"no_verified_event_link")
+        self.assertEqual(link(r,d,NOW,dict(c,rows=c["rows"]*2))[0],"no_verified_event_link")
+        self.assertEqual(link(r,d,NOW,dict(c,updatedAt=NOW.isoformat()))[0],"no_verified_event_link")
+        self.assertEqual(link(r,d,NOW,dict(c,dailyUpdatedAt="wrong"))[0],"no_verified_event_link")
 if __name__=="__main__":unittest.main()
