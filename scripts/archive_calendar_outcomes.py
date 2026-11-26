@@ -47,11 +47,19 @@ def collect(ledger,replay,archives,now):
             except (KeyError,TypeError,ValueError,AttributeError): continue
     groups=defaultdict(list)
     for e in out.values(): groups[identity(e)].append(e)
+    event_identities=defaultdict(set)
+    for ident,items in groups.items():
+        for e in items: event_identities[(ident[0],e["eventId"])].add(ident)
+    current={identity(row):row["status"] for row in replay.get("rows",[])} if fresh else {}
     status=Counter(); pairs=defaultdict(list); eligible_events=set()
     for ident,items in groups.items():
         variants={(x["eventId"],x["corroboratedDate"],x["kickoff"],tuple(x["result"])) for x in items}
         if len(variants)!=1: status["conflicting_observations"]+=1;continue
         e=items[0];kind=ident[0];rec=index.get(ident,[])
+        if len(event_identities[(kind,e["eventId"])])!=1:
+            status["duplicate_event"]+=1;continue
+        if current.get(ident) in ("schedule_conflict","duplicate_risk","invalid_evidence","conflict","archive_conflict","ambiguous"):
+            status["current_conflict"]+=1;continue
         if len(rec)!=1 or dates[ident[:4]+(e["corroboratedDate"],)] or rec[0]["result"] is not None:
             status["excluded_archive_state"]+=1;continue
         rec=rec[0];h,a=e["result"]
