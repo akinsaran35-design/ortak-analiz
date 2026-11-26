@@ -77,6 +77,10 @@ def run(today):
     tuning=tune(rows,today)
     Path("openliga_tuning.json").write_text(json.dumps(tuning,indent=2))
     print("Validation tuning:",tuning)
+    from historical_market_tuning import tune_markets
+    market_tuning=tune_markets(rows,today)
+    print("Market tuning:",market_tuning)
+    Path("openliga_market_tuning.json").write_text(json.dumps(market_tuning,indent=2))
     comparison=dict(status="research_only",realBettingEnabled=False,baseline=report,weighted=weighted,holdoutPreviouslyInspected=True)
     print("Weighted comparison:",comparison)
     Path("openliga_comparison.json").write_text(json.dumps(comparison,indent=2))
