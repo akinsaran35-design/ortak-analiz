@@ -55,5 +55,6 @@ jobs:
             openliga_tuning.json
             openliga_market_tuning.json
             openliga_multiyear.json
+            openliga_archive.json
             openliga_strength.json
-          retention-days: 7
+          retention-days: 90
