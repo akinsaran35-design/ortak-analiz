@@ -1,0 +1,12 @@
+{
+  "version": "5.15",
+  "mode": "live_analysis_quality_only",
+  "updatedAt": "2026-11-26T21:09:29.072833+03:00",
+  "sourceUpdatedAt": "2026-11-26T21:09:28.983608+03:00",
+  "sourceTimestampVerified": false,
+  "modelCalibrated": false,
+  "predictionsEnabled": false,
+  "decision": "PAS",
+  "counts": {},
+  "rows": []
+}

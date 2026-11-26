@@ -1,0 +1,18 @@
+{
+  "version": "5.19",
+  "mode": "research_only",
+  "modelCalibrated": false,
+  "predictionsEnabled": false,
+  "decision": "PAS",
+  "recorded": 0,
+  "counts": {},
+  "brier": {
+    "homeWin": null,
+    "draw": null,
+    "awayWin": null,
+    "over15": null,
+    "over25": null,
+    "btts": null
+  },
+  "updatedAt": "2026-11-26T21:09:42.561776+03:00"
+}
