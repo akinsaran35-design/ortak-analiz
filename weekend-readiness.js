@@ -22,6 +22,7 @@
       Array.isArray(quality.warnings) && quality.warnings.length===0;
     return {today, weekend, missing, stale, healthy, dailyDate:daily.date || null,
       leagues:integer(daily.leaguesLoaded), fixtures:integer(daily.fixturesToday),
+      fixtureCoverageComplete:daily.fixtureCoverageComplete===true && daily.upcomingCount===upcoming.length,
       events:integer(odds.eventCount), credits:integer(odds.remainingCredits),
       tested:integer(validation.tested), pending:integer(validation.pending),
       minimum:integer(validation.minimumMatches), calibrated:decision.modelCalibrated===true,
@@ -69,6 +70,7 @@
       line(r.dataCurrent?"Veri durumu: güncel":"Veri durumu: eksik, eski veya kalite kontrolü başarısız",r.dataCurrent?"good":"bad");
       line("28 Kasım: "+r.weekend["2026-11-28"]+" • 29 Kasım: "+r.weekend["2026-11-29"]+" (yayımlanmış liste; kesin fikstür sayısı değildir)");
       line("Fikstür kaynağı: "+val(r.leagues)+" lig • Bugün: "+val(r.fixtures));
+      line(r.fixtureCoverageComplete?"Yapılandırılan kaynakların iki sezonu okundu.":"Fikstür kapsamı eksik veya henüz doğrulanmadı.","note");
       line("Oran raporu: "+val(r.events)+" etkinlik • Son bildirilen API kredisi: "+val(r.credits));
       line("İleriye dönük doğrulama: "+val(r.tested)+" / "+val(r.minimum)+" • Bekleyen: "+val(r.pending));
       line("Kalibrasyon: "+(r.calibrated?"Rapor onaylı":"Onay bekliyor"));
