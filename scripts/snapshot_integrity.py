@@ -3,14 +3,14 @@ import json
 from pathlib import Path
 from datetime import datetime,timezone
 
-FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status")
+FILES=("daily","odds","matching","prospective_archive","prospective_validation","prediction_archive","performance","data_quality","archive_calendar_evidence","archive_calendar_evidence_status","archive_calendar_result_replay","unified_decision","score_provenance","multi_league_results","fixture_reconciliation","archive_calendar_outcomes","archive_calendar_outcome_status","prospective_leagues")
 
 def audit(data):
     errors=[]
     def check(ok,label):
         if not ok: errors.append(label)
     try:
-        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status=(data[k] for k in FILES)
+        d,o,m,a,v,p,f,q,e,s,r,u,prov,feeds,calendar,outcomes,outcome_status,league_report=(data[k] for k in FILES)
         check(d["candidateCount"]==len(d["candidates"]),"candidate_count")
         check(d["upcomingCount"]==len(d["upcoming"]),"fixture_count")
         check(o["eventCount"]==len(o["events"]),"odds_count")
@@ -20,6 +20,8 @@ def audit(data):
         from prospective_markets import summarize
         reference=summarize(a,datetime.fromisoformat(v["updatedAt"]))
         check(v["marketResearchVersion"]=="4.85" and v["marketResearch"]==reference,"prospective_market_recompute")
+        from prospective_leagues import build
+        check(league_report==build(a,datetime.fromisoformat(v["updatedAt"])),"prospective_league_recompute")
         check((q["archiveRecords"],q["settled"],q["pending"])==(len(a),n,len(a)-n),"quality_count")
         k=sum(x["result"] is not None for x in p.values())
         overall=f["overall"]
