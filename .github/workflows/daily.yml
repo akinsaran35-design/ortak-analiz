@@ -50,6 +50,7 @@ jobs:
         run: |
           python scripts/test_track_performance.py
           python scripts/test_verified_results.py
+          python scripts/test_calendar_duplicate_guard.py
 
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py

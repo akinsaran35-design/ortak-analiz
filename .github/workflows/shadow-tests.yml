@@ -241,3 +241,8 @@ jobs:
 
       - name: V4.77 backtest import and execution regression
         run: python scripts/test_backtest_import.py
+
+      - name: V4.78 calendar duplicate guard
+        run: |
+          python scripts/test_calendar_duplicate_guard.py
+          python -m py_compile scripts/prospective_validation.py scripts/track_performance.py
