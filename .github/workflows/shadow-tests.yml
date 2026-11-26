@@ -137,3 +137,6 @@ jobs:
           node --check weekend-readiness.js
           node scripts/test_weekend_readiness.js
           grep -F 'src="./weekend-readiness.js"' index.html
+
+      - name: V4.48 fixture coverage tests
+        run: python scripts/test_daily_coverage.py
