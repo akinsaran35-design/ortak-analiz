@@ -21,11 +21,10 @@ def run(today):
                 pairs.add((shortcut,int(season)))
     except Exception as e: errors.append(dict(stage="catalog",error=type(e).__name__))
     ordered=sorted(pairs,key=lambda x:(-x[1],x[0]))
-    # Rotate bounded batches daily; never silently claim full catalog coverage.
-    batch_size=100
-    batches=(len(ordered)+batch_size-1)//batch_size
-    batch_index=today.toordinal()%batches
-    requested=ordered[batch_index*batch_size:(batch_index+1)*batch_size]
+    # Scan the full discovered catalog; report any failed requests.
+    requested=ordered
+    batch_index=0
+    batches=1
     for league,year in requested:
         if True:
             try:
