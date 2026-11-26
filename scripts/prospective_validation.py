@@ -104,6 +104,12 @@ for league in LEAGUES:
             for x in history
         ) / len(history)
 
+        try:
+            markets = capture(history,old,new)
+        except ValueError:
+            errors.append(f"{league}/{d}/{h}/{a}: inconsistent model probabilities")
+            continue
+
         records[key] = {
             "date": d.isoformat(),
             "league": league,
@@ -114,7 +120,7 @@ for league in LEAGUES:
             "old": old[1],
             "candidate": new[1],
             "baseline": baseline,
-            "prospectiveMarkets": capture(history,old,new),
+            "prospectiveMarkets": markets,
             "result": None
         }
 
@@ -150,21 +156,15 @@ report = {
     "marketResearch": summarize(records,NOW)
 }
 
-if n:
-    scores = {
-        k: sum(
-            (r[k] - int(sum(r["result"]) >= 3)) ** 2
-            for r in settled
-        ) / n
-        for k in ("old", "candidate", "baseline")
-    }
+if report["marketResearch"]["2.5 Üst"]["tested"]:
+    scores = report["marketResearch"]["2.5 Üst"]["scores"]
 
     report["scores"] = scores
     report["improvement"] = (
         scores["baseline"] - scores["candidate"]
     )
 
-    if n >= 500 and not errors and all(x["invalid"]==0 for x in report["marketResearch"].values()):
+    if report["marketResearch"]["2.5 Üst"]["tested"] >= 500 and not errors and all(x["invalid"]==0 for x in report["marketResearch"].values()):
         eligible = (
             scores["candidate"] < scores["old"]
             and report["improvement"] >= 0.001
