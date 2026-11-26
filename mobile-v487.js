@@ -237,6 +237,16 @@ function render(){loadedAt=Date.now();rows=by("fixture-mode").value==="confirmed
  const s=by("settings-summary");s.replaceChildren(node("p","Son bildirilen API kredisi: "+num(data.odds?.remainingCredits)),node("p","Bütünlük: "+(current?"PASS":"Güncel doğrulama yok")),node("p","Ücretsiz araştırma • Türkiye dışı oran kaynakları","subtle"));
 }
 async function refresh(){if(refreshing)return;refreshing=true;by("refresh").disabled=true;by("connection").textContent="Raporlar okunuyor…";const next={};await Promise.all(FILES.map(async k=>{try{const r=await fetch("./"+k+".json?ts="+Date.now(),{cache:"no-store"});if(r.ok)next[k]=await r.json();}catch(_){}}));try{const r=await fetch(LIVE_URL+"?ts="+Date.now(),{cache:"no-store"});if(r.ok)next.live_analysis_quality=await r.json();}catch(_){}data=next;try{render();}catch(_){by("connection").textContent="Rapor biçimi doğrulanamadı · PAS";}finally{refreshing=false;by("refresh").disabled=false;}}
+let sport="football";
+function setSport(value){
+ sport=value==="basketball"?"basketball":"football";
+ const basketball=sport==="basketball";
+ for(const b of document.querySelectorAll("[data-sport]"))b.setAttribute("aria-pressed",String(b.dataset.sport===sport));
+ for(const id of ["date-shortcut","match-list","scoreboard-summary"])by(id).hidden=basketball;
+ for(const el of document.querySelectorAll("#view-matches .match-tools,#view-matches .filter-panel"))el.hidden=basketball;
+ by("basketball-matches").hidden=!basketball;by("basketball-live").hidden=!basketball;
+}
+for(const b of document.querySelectorAll("[data-sport]"))b.onclick=()=>setSport(b.dataset.sport);
 by("detail-back").onclick=closeDetail;
 by("date-shortcut").onclick=()=>{by("date-rail").scrollIntoView({block:"nearest"});by("date-rail").querySelector("button")?.focus();};
 by("fixture-mode").onchange=()=>{by("date-filter").value="";by("league-filter").value="";render();};
