@@ -27,6 +27,8 @@ class OpponentTest(unittest.TestCase):
             self.assertEqual(v["baseline"]["n"],v["opponent"]["n"])
             self.assertEqual(v["baseline"]["n"],v["venue"]["n"])
             self.assertAlmostEqual(v["baseline"]["brier"],baseline["metrics"][k]["brier"])
+            self.assertEqual(v["baseline"]["n"],v["leagueReference"]["n"])
+            self.assertAlmostEqual(v["leagueReference"]["brier"],baseline["metrics"][k]["referenceBrier"])
     def test_future_and_order(self):
         rows=fixture()
         end=date(2026,11,26)
@@ -45,5 +47,6 @@ class OpponentTest(unittest.TestCase):
         report=multiyear([],date(2026,11,26))
         self.assertFalse(report["realBettingEnabled"])
         self.assertIsNone(report["aggregate"]["over15"]["brierImprovement"])
+        self.assertIsNone(report["aggregate"]["over15"]["referenceImprovement"])
 
 if __name__=="__main__": unittest.main()
