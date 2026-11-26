@@ -15,3 +15,14 @@ def matches_in(data):
     if any(not isinstance(row,dict) for row in rows):
         raise ValueError("invalid fixture row")
     return rows
+
+
+def final_score(row):
+    """Return only a validated explicit full-time score; unknown shapes stay unresolved."""
+    score=row.get("score")
+    if not isinstance(score,dict):
+        return None
+    ft=score.get("ft")
+    if isinstance(ft,list) and len(ft)==2 and all(type(x) is int and x>=0 for x in ft):
+        return ft
+    return None
