@@ -65,3 +65,27 @@ def evaluate(records,verified,now):
         for k,y in zip(MARKETS,outcomes):errors[k].append((r["probabilities"][k]-int(y))**2)
         counts["evaluated"]+=1
     return dict(version="5.19",mode="research_only",modelCalibrated=False,predictionsEnabled=False,decision="PAS",recorded=len(records),counts=dict(counts),brier={k:sum(errors[k])/len(errors[k]) if errors[k] else None for k in MARKETS})
+
+def main():
+    import argparse
+    import json
+    from pathlib import Path
+    parser=argparse.ArgumentParser()
+    parser.add_argument("report",type=Path)
+    parser.add_argument("archive",type=Path)
+    parser.add_argument("verified",type=Path)
+    parser.add_argument("output",type=Path)
+    args=parser.parse_args()
+    def load(path):return json.loads(path.read_text(encoding="utf-8"))
+    now=datetime.now(TR)
+    records=load(args.archive) if args.archive.exists() else {}
+    if not isinstance(records,dict):raise ValueError("invalid archive")
+    records=archive(load(args.report),records,now)
+    result=evaluate(records,load(args.verified)["records"],now)
+    result["updatedAt"]=now.isoformat()
+    for path,value in ((args.archive,records),(args.output,result)):
+        tmp=path.with_suffix(".tmp")
+        tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+        tmp.replace(path)
+    print("Live performance research:",json.dumps(result,ensure_ascii=False))
+if __name__=="__main__":main()
