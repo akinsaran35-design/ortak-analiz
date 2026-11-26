@@ -1,0 +1,1219 @@
+{
+  "version": "4.94",
+  "updatedAt": "2026-11-26T19:12:42.524206+03:00",
+  "dailyUpdatedAt": "2026-11-26T19:12:23+03:00",
+  "coverageUpdatedAt": "2026-11-26T19:12:41.366123+03:00",
+  "oddsUpdatedAt": "2026-11-26T16:02:47.309721+00:00",
+  "mode": "research_only",
+  "available": true,
+  "counts": {
+    "agreed": 68,
+    "unmatched": 12
+  },
+  "rows": [
+    {
+      "league": "de.1",
+      "match": "Borussia Dortmund – Bayer Leverkusen",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T18:30:00+00:00",
+      "espnEventId": "401884727",
+      "oddsEventId": "98415e21c147d701bd81e70b1af0f3a7",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "Borussia Dortmund – Bayer 04 Leverkusen"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "de.1",
+      "match": "FC Cologne – SV Elversberg",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "espnEventId": "401884721",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "de.1",
+      "match": "SC Freiburg – RB Leipzig",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:30:00+00:00",
+      "espnEventId": "401884724",
+      "oddsEventId": "2aa9aa95157eb36fed45135c995cdd80",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "SC Freiburg – RB Leipzig"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "de.1",
+      "match": "Hamburg SV – Bayern Munich",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "espnEventId": "401884722",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "de.1",
+      "match": "Mainz – 1. FC Union Berlin",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "espnEventId": "401884723",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "de.1",
+      "match": "SC Paderborn 07 – Schalke 04",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "espnEventId": "401884719",
+      "oddsEventId": "f84a9da7eedd0ca11a28a1a7a8edddc7",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "SC Paderborn 07 – FC Schalke 04"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "de.1",
+      "match": "TSG Hoffenheim – FC Augsburg",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T16:30:00+00:00",
+      "espnEventId": "401884725",
+      "oddsEventId": "98dc79e39433bb4c59bf9753e35a5cdf",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "TSG 1899 Hoffenheim – FC Augsburg"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "de.1",
+      "match": "VfB Stuttgart – Eintracht Frankfurt",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "espnEventId": "401884726",
+      "oddsEventId": "5d838190a8f5932d7fcfbcc26bacdd9c",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Almanya Bundesliga",
+          "match": "VfB Stuttgart – Eintracht Frankfurt"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "de.1",
+      "match": "Werder Bremen – Borussia Mönchengladbach",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T19:30:00+00:00",
+      "espnEventId": "401884720",
+      "oddsEventId": "698f4a7967ead89e10205a68ceb4bda4",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Almanya Bundesliga",
+          "match": "SV Werder Bremen – Borussia Mönchengladbach"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Arsenal – Manchester City",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T16:30:00+00:00",
+      "espnEventId": "401878753",
+      "oddsEventId": "d20ede55e54ed7b55fdc36ca373727c0",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Arsenal FC – Manchester City FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Brighton & Hove Albion – Newcastle United",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "espnEventId": "401879231",
+      "oddsEventId": "e9c2b74ecaafd494e3b2d8521b52216a",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Brighton & Hove Albion FC – Newcastle United FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Crystal Palace – Hull City",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "espnEventId": "401879230",
+      "oddsEventId": "e12585885a7f135127f276b7f1ecdf89",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Crystal Palace FC – Hull City AFC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Everton – Liverpool",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T12:00:00+00:00",
+      "espnEventId": "401879229",
+      "oddsEventId": "f45e9062c2f755b977c98d496c22697b",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Everton FC – Liverpool FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Fulham – AFC Bournemouth",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "espnEventId": "401879228",
+      "oddsEventId": "56ea91809ff11d3a67557a21b3371cb9",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Fulham FC – AFC Bournemouth"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Ipswich Town – Aston Villa",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "espnEventId": "401878752",
+      "oddsEventId": "9d23f6ad21946dd258869ebc22236cf0",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Ipswich Town FC – Aston Villa FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Leeds United – Coventry City",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401879227",
+      "oddsEventId": "0bc17a3c7d8153e72b94688960cc603a",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Leeds United FC – Coventry City FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Manchester United – Brentford",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401879226",
+      "oddsEventId": "ab87184803a63f7b679f1d12b01c3271",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Manchester United FC – Brentford FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Nottingham Forest – Chelsea",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "espnEventId": "401879225",
+      "oddsEventId": "40d95e660c301c2d8a5a7a6317017b65",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Nottingham Forest FC – Chelsea FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.1",
+      "match": "Sunderland – Tottenham Hotspur",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:05:00+00:00",
+      "espnEventId": "401879224",
+      "oddsEventId": "09bb0ba9a9025d64fed410375c0c8f80",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Premier Lig",
+          "match": "Sunderland AFC – Tottenham Hotspur FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Birmingham City – Bolton Wanderers",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880136",
+      "oddsEventId": "15fc58a442321c2a85f7a814466c0ab9",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Birmingham City FC – Bolton Wanderers FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Blackburn Rovers – Charlton Athletic",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "espnEventId": "401880135",
+      "oddsEventId": "a1d96ec37a8b7022ef39a7755a655243",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Blackburn Rovers FC – Charlton Athletic FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Derby County – Watford",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880134",
+      "oddsEventId": "82ef491ed2f8399e4ccec9f5d8315cee",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Derby County FC – Watford FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Lincoln City – Wolverhampton Wanderers",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "espnEventId": "401880133",
+      "oddsEventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Lincoln City FC – Wolverhampton Wanderers FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Millwall – Burnley",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880132",
+      "oddsEventId": "3f93526d7c8e0ca84734aea60c13900a",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Millwall FC – Burnley FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Preston North End – Norwich City",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T12:30:00+00:00",
+      "espnEventId": "401880131",
+      "oddsEventId": "d47bc722be164b3a733434e89f224654",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Preston North End FC – Norwich City FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Queens Park Rangers – Sheffield United",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880130",
+      "oddsEventId": "dc42f49649c5329c2c47f94fc4ca0c89",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Queens Park Rangers FC – Sheffield United FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Southampton – Middlesbrough",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "espnEventId": "401880129",
+      "oddsEventId": "32b8e3ea76d9d8b2b36577063d40862e",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "İngiltere Championship",
+          "match": "Southampton FC – Middlesbrough FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Swansea City – Cardiff City",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T12:00:00+00:00",
+      "espnEventId": "401880128",
+      "oddsEventId": "bcf1bfc44adf70bf134bd132c4a5ba87",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İngiltere Championship",
+          "match": "Swansea City AFC – Cardiff City FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "West Bromwich Albion – Bristol City",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880127",
+      "oddsEventId": "b67372e7107fdd259a978e614711e657",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "West Bromwich Albion FC – Bristol City FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "West Ham United – Stoke City",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880126",
+      "oddsEventId": "c836236766f7859e3c1d61caa581abe1",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "West Ham United FC – Stoke City FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "en.2",
+      "match": "Wrexham – Portsmouth",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:00:00+00:00",
+      "espnEventId": "401880125",
+      "oddsEventId": "9cd8c682c6864b59a7f1a58964083e08",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "İngiltere Championship",
+          "match": "Wrexham AFC – Portsmouth FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Celta Vigo – Villarreal",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "espnEventId": "401882795",
+      "oddsEventId": "20c78c2ef75c4a6d7f4af81dd32e97cd",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "RC Celta de Vigo – Villarreal CF"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Deportivo – Barcelona",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T15:15:00+00:00",
+      "espnEventId": "401882794",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "es.1",
+      "match": "Elche – Atlético Madrid",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "espnEventId": "401882793",
+      "oddsEventId": "40236ab976955345ebd1edb72abf6b22",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Elche CF – Club Atlético de Madrid"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Levante – Racing Santander",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "espnEventId": "401882791",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "es.1",
+      "match": "Málaga – Athletic Club",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:15:00+00:00",
+      "espnEventId": "401882790",
+      "oddsEventId": "33d92dabbd2606dfe9d31058f7b20cc8",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Málaga CF – Athletic Club"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Real Betis – Rayo Vallecano",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T13:00:00+00:00",
+      "espnEventId": "401882796",
+      "oddsEventId": "c81520b9a9794749cfdab57f89bdeb16",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Real Betis Balompié – Rayo Vallecano de Madrid"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Real Madrid – Alavés",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T20:00:00+00:00",
+      "espnEventId": "401882789",
+      "oddsEventId": "c99772cba1418e72f2eded26e4afeb59",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Real Madrid CF – Deportivo Alavés"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Real Sociedad – Sevilla",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T20:00:00+00:00",
+      "espnEventId": "401882788",
+      "oddsEventId": "f892ea6d5eca105c36ca9468b12857f2",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Real Sociedad de Fútbol – Sevilla FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "es.1",
+      "match": "Valencia – Osasuna",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T13:00:00+00:00",
+      "espnEventId": "401882787",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "fr.1",
+      "match": "Angers – Lens",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T16:15:00+00:00",
+      "espnEventId": "401876394",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "fr.1",
+      "match": "AJ Auxerre – Marseille",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "espnEventId": "401876393",
+      "oddsEventId": "a370db12aaff183a94f8e9a6acb6d4c9",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "AJ Auxerre – Olympique de Marseille"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Brest – Paris FC",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T19:45:00+00:00",
+      "espnEventId": "401876392",
+      "oddsEventId": "02ff879cf54f6d1fec2664efee0431db",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Fransa Ligue 1",
+          "match": "Stade Brestois 29 – Paris FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Le Havre AC – Strasbourg",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "espnEventId": "401876391",
+      "oddsEventId": "f96c1137c9d3f7e2e691275a2988fa1d",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Le Havre AC – RC Strasbourg Alsace"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Le Mans – Lille",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "espnEventId": "401876390",
+      "oddsEventId": "aaa86a483888836242da663a46957894",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Le Mans FC – Lille OSC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Lyon – AS Monaco",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T19:45:00+00:00",
+      "espnEventId": "401876389",
+      "oddsEventId": "ca8aa566e27e1d05b47e8151b2066f9a",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "Olympique Lyonnais – AS Monaco FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Nice – Troyes",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "espnEventId": "401876388",
+      "oddsEventId": "e9a1243fbfbc6f58d0e0522eb07ea9a1",
+      "published": [],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Paris Saint-Germain – Lorient",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "espnEventId": "401876387",
+      "oddsEventId": "12002f6f804a122db48271ff05be03c0",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Paris Saint-Germain FC – FC Lorient"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "fr.1",
+      "match": "Toulouse – Stade Rennais",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T16:15:00+00:00",
+      "espnEventId": "401876386",
+      "oddsEventId": "71c08940a73e9f42d503449f052a1bdf",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "Toulouse FC – Stade Rennais FC 1901"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "AS Roma – Monza",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T17:00:00+00:00",
+      "espnEventId": "401874769",
+      "oddsEventId": "c979bd4559d2d81a8e2fe8f2d4aec376",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "AS Roma – AC Monza"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Como – Juventus",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T19:45:00+00:00",
+      "espnEventId": "401874994",
+      "oddsEventId": "3876ad367184af2f8fc04a544fc894aa",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Como 1907 – Juventus FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Frosinone – Parma",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "espnEventId": "401875081",
+      "oddsEventId": "af3432ca724da03d38f0ff4e62045e4c",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Frosinone Calcio – Parma Calcio 1913"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Internazionale – Genoa",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T19:45:00+00:00",
+      "espnEventId": "401874977",
+      "oddsEventId": "f128c19fa7af43e30dbe3c373e7bc27e",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "FC Internazionale Milano – Genoa CFC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Sassuolo – Napoli",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "espnEventId": "401874992",
+      "oddsEventId": "dc63586a1b1d938a461d71bf5b36d982",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "US Sassuolo Calcio – SSC Napoli"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Torino – Lazio",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T17:00:00+00:00",
+      "espnEventId": "401874826",
+      "oddsEventId": "aec86b479e922f437ba228b9a9d74da1",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Torino FC – SS Lazio"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Udinese – Fiorentina",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T11:30:00+00:00",
+      "espnEventId": "401875031",
+      "oddsEventId": "d3d47b94324eb7cde85bd93993437d1c",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Udinese Calcio – ACF Fiorentina"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "it.1",
+      "match": "Venezia – Bologna",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T19:45:00+00:00",
+      "espnEventId": "401875004",
+      "oddsEventId": "e9a663f13e7503c0ac20a54804338b60",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Venezia FC – Bologna FC 1909"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "ADO Den Haag – FC Utrecht",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T11:15:00+00:00",
+      "espnEventId": "401875538",
+      "oddsEventId": "d77c244bd9dd91534c40b863e44cf905",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "ADO Den Haag – FC Utrecht"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "SC Cambuur – Sparta Rotterdam",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T20:00:00+00:00",
+      "espnEventId": "401875530",
+      "oddsEventId": "708641646f92ec14288beaaf1154e996",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "SC Cambuur-Leeuwarden – Sparta Rotterdam"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "Excelsior – Telstar",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:30:00+00:00",
+      "espnEventId": "401875537",
+      "oddsEventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "SBV Excelsior – Telstar 1963"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "Feyenoord Rotterdam – Ajax Amsterdam",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T13:30:00+00:00",
+      "espnEventId": "401875535",
+      "oddsEventId": "a846e6934bbb0f1a707bae28d3c52e9b",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "Feyenoord Rotterdam – AFC Ajax"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "Fortuna Sittard – Heerenveen",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T13:30:00+00:00",
+      "espnEventId": "401875534",
+      "oddsEventId": "2bebeea09c64f8187e5b44dd6ab27b53",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "Fortuna Sittard – SC Heerenveen"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "FC Groningen – Willem II",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T19:00:00+00:00",
+      "espnEventId": "401875536",
+      "oddsEventId": "7aa2e13c09deb4fbd70e62312e82a514",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Hollanda Eredivisie",
+          "match": "FC Groningen – Willem II Tilburg"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "NEC Nijmegen – FC Twente",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T19:00:00+00:00",
+      "espnEventId": "401875533",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "nl.1",
+      "match": "PSV Eindhoven – Go Ahead Eagles",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T17:45:00+00:00",
+      "espnEventId": "401875531",
+      "oddsEventId": "8031222f3f3e8384a69c0ca5e1166458",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "PSV – Go Ahead Eagles"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "nl.1",
+      "match": "PEC Zwolle – AZ Alkmaar",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T15:45:00+00:00",
+      "espnEventId": "401875532",
+      "oddsEventId": "523fa336e1cf685100957e5e6359fc4c",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "PEC Zwolle – AZ"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "pt.1",
+      "match": "Académico de Viseu – Alverca",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T18:00:00+00:00",
+      "espnEventId": "401885393",
+      "oddsEventId": "ee7e0fb3eb049d403134cefaf634c7d5",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Académico de Viseu FC – FC Alverca"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "pt.1",
+      "match": "Arouca – Rio Ave",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:30:00+00:00",
+      "espnEventId": "401885392",
+      "oddsEventId": "d583b1676d961c26794a3ccedf7edffb",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "FC Arouca – Rio Ave FC"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "pt.1",
+      "match": "Gil Vicente – Estoril",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "espnEventId": "401885390",
+      "oddsEventId": "588984eaf08b356b49055b534cef52e6",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Portekiz Primeira Liga",
+          "match": "Gil Vicente FC – GD Estoril Praia"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "pt.1",
+      "match": "Maritimo – C.D. Nacional",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T20:15:00+00:00",
+      "espnEventId": "401885389",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "pt.1",
+      "match": "Moreirense – Santa Clara",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T15:30:00+00:00",
+      "espnEventId": "401885388",
+      "oddsEventId": "4adcfcfea85a2d5dbbd487aa2a9fd9c3",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Moreirense FC – CD Santa Clara"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "pt.1",
+      "match": "FC Porto – Sporting CP",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T20:30:00+00:00",
+      "espnEventId": "401885387",
+      "oddsEventId": "e2c82af8f115ac10036b905eb29e4f37",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Portekiz Primeira Liga",
+          "match": "FC Porto – Sporting Clube de Portugal"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "pt.1",
+      "match": "Vitória de Guimaraes – Estrela",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T20:30:00+00:00",
+      "espnEventId": "401885385",
+      "oddsEventId": "3348c02fd713356ec319779bd5edc561",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Vitória Guimarães – CF Estrela da Amadora"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "tr.1",
+      "match": "Alanyaspor – Konyaspor",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T17:00:00+00:00",
+      "espnEventId": "401888241",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "tr.1",
+      "match": "Çorum FK – Kocaelispor",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T10:30:00+00:00",
+      "espnEventId": "401888367",
+      "oddsEventId": "3e9a89fc7f5bd95d70e6fd3faaccf5d2",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "corum – kocaelispor"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "tr.1",
+      "match": "Eyupspor – Istanbul Basaksehir",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T13:00:00+00:00",
+      "espnEventId": "401888242",
+      "oddsEventId": "c93dfa2135f55e761dc577ae61eca31f",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "eyupspor – basaksehir"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "tr.1",
+      "match": "Fenerbahce – Erzurum BB",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T16:00:00+00:00",
+      "espnEventId": "401888238",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "tr.1",
+      "match": "Gaziantep FK – Amed SFK",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T16:00:00+00:00",
+      "espnEventId": "401888368",
+      "oddsEventId": null,
+      "published": [],
+      "status": "unmatched"
+    },
+    {
+      "league": "tr.1",
+      "match": "Caykur Rizespor – Kasimpasa",
+      "date": "2026-11-27",
+      "kickoff": "2026-11-27T17:00:00+00:00",
+      "espnEventId": "401888240",
+      "oddsEventId": "b50ce64bf9ca7a1a03eb6b9d534e93ce",
+      "published": [
+        {
+          "date": "2026-11-27",
+          "league": "Türkiye Süper Lig",
+          "match": "rizespor – kasimpasa"
+        }
+      ],
+      "status": "agreed"
+    },
+    {
+      "league": "tr.1",
+      "match": "Samsunspor – Genclerbirligi",
+      "date": "2026-11-28",
+      "kickoff": "2026-11-28T13:00:00+00:00",
+      "espnEventId": "401888236",
+      "oddsEventId": "f0f0492939c4f06ff9a4f1b9334d510f",
+      "published": [
+        {
+          "date": "2026-11-28",
+          "league": "Türkiye Süper Lig",
+          "match": "samsunspor – genclerbirligi"
+        }
+      ],
+      "status": "agreed"
+    }
+  ],
+  "archivesModified": false,
+  "decision": "PAS"
+}
