@@ -117,7 +117,7 @@ for league in LEAGUES:
 
 from verified_results import load_verified, settle_verified
 try:
-    verified_count = settle_verified(records, load_verified(ROOT), NOW)
+    verified_count = settle_verified(records, load_verified(ROOT,NOW), NOW)
 except (OSError, ValueError, KeyError, TypeError) as exc:
     verified_count = 0
     errors.append(f"verified_results: {exc}")
