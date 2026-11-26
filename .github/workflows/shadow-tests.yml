@@ -253,10 +253,12 @@ jobs:
           python scripts/test_archive_calendar_outcomes.py
           python scripts/archive_calendar_outcomes.py
 
-      - name: V4.83 full 17-file snapshot integrity check
+      - name: V4.93 full 20-file snapshot integrity check
         run: |
           python scripts/test_snapshot_integrity.py
           python scripts/prospective_leagues.py
+          python scripts/scoreboard_snapshot.py
+          python scripts/fixture_coverage_audit.py
           python scripts/snapshot_integrity.py
 
       - name: V4.85 prospective three-market research
