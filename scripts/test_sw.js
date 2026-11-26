@@ -1,0 +1,10 @@
+const assert=require("node:assert/strict");
+const {networkOnly}=require("../sw.js");
+const origin="https://example.test";
+for(const path of ["daily.json","odds.json","archive_calendar_result_replay.json?ts=1","performance.json","data_quality.JSON"]) assert.equal(networkOnly({url:origin+"/ortak-analiz/"+path},origin),true);
+assert.equal(networkOnly({url:origin+"/ortak-analiz/index.html"},origin),false);
+assert.equal(networkOnly({url:origin+"/ortak-analiz/weekend-readiness.js"},origin),false);
+assert.equal(networkOnly({url:origin+"/ortak-analiz/index.html",cache:"no-store"},origin),true);
+assert.equal(networkOnly({url:origin+"/ortak-analiz/index.html?ts=1"},origin),true);
+assert.equal(networkOnly({url:"https://other.test/daily.json"},origin),false);
+console.log("Dynamic report cache guards passed");
