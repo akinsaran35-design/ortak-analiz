@@ -17,6 +17,9 @@ class SnapshotTests(unittest.TestCase):
             "archive_calendar_evidence":{"a":ident},
             "archive_calendar_evidence_status":dict(observations=1,archiveIdentities=1),
             "archive_calendar_result_replay":dict(rows=[dict(ident,status="awaiting_match")],counts={"awaiting_match":1}),
+            "score_provenance":dict(version="4.80",settledArchiveRecords=0,uniqueSettledMatches=0,rows=[],counts={"prospective":{},"performance":{}}),
+            "multi_league_results":dict(version="4.69"),
+            "fixture_reconciliation":dict(status="unavailable"),
             "unified_decision":dict(testedMatches=0,decision="PAS",realBettingEnabled=False,selections=[]),
         }
         data["daily"]["updatedAt"]="2026-11-26T14:00:00Z"
@@ -24,6 +27,9 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(audit(data)["reportTimestamps"],{"daily.json":"2026-11-26T14:00:00Z"})
         for section,field,value,label in [
             ("daily","candidateCount",2,"candidate_count"),
+            ("score_provenance","settledArchiveRecords",1,"score_provenance_identity"),
+            ("score_provenance","uniqueSettledMatches",1,"score_provenance_unique_count"),
+            ("multi_league_results","version","wrong","score_report_version"),
             ("prospective_validation","tested",1,"prospective_count"),
             ("archive_calendar_evidence_status","observations",2,"evidence_count"),
             ("archive_calendar_result_replay","counts",{},"calendar_replay_count"),
