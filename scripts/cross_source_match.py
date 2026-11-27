@@ -11,6 +11,9 @@ for league,names in {"en.1":{"Sunderland AFC":"Sunderland","Crystal Palace FC":"
     ALIASES.setdefault(league,{}).update(names)
 for league,names in {"en.1":{"Everton FC":"Everton","Coventry City FC":"Coventry City","Leeds United FC":"Leeds United","Hull City AFC":"Hull City","Nottingham Forest FC":"Nottingham Forest"},"es.1":{"CA Osasuna":"Osasuna"},"it.1":{"Udinese Calcio":"Udinese","US Sassuolo Calcio":"Sassuolo"},"pt.1":{"FC Famalicão":"FC Famalicao","Casa Pia AC":"Casa Pia","Sporting Clube de Portugal":"Sporting CP"}}.items():
     ALIASES.setdefault(league,{}).update(names)
+# V5.84 observed names from V5.83 development sample; independent validation still required.
+for league,names in {"it.1":{"AC Monza":"Monza","ACF Fiorentina":"Fiorentina","Atalanta BC":"Atalanta","Juventus FC":"Juventus"},"es.1":{"Villarreal CF":"Villarreal","Getafe CF":"Getafe","Real Sociedad de Fútbol":"Real Sociedad","FC Barcelona":"Barcelona"},"pt.1":{"Gil Vicente FC":"Gil Vicente","GD Estoril Praia":"Estoril","Sporting Clube de Braga":"Braga","Sport Lisboa e Benfica":"Benfica"},"en.1":{"Liverpool FC":"Liverpool","Brighton & Hove Albion FC":"Brighton & Hove Albion"},"fr.1":{"Olympique de Marseille":"Marseille","Stade Rennais FC 1901":"Stade Rennais"},"nl.1":{"AFC Ajax":"Ajax Amsterdam","AZ":"AZ Alkmaar","FC Twente '65":"FC Twente"}}.items():
+    ALIASES.setdefault(league,{}).update(names)
 ALIASES={league:{norm(k):norm(v) for k,v in names.items()} for league,names in ALIASES.items()}
 def secondary_name(league,name):
     return ALIASES.get(league,{}).get(norm(name),norm(name))
