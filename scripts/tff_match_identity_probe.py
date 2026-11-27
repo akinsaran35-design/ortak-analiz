@@ -34,10 +34,13 @@ def extract(raw):
     # Only match-detail pages with explicit league heading and unique match code/date.
     if not re.search(r"Trendyol Süper Lig.{0,100}\(Profesyonel Takım\)",visible,re.I):raise ValueError("league context")
     codes=re.findall(r"Maç Kodu:\s*(\d+)",visible,re.I)
-    dates=re.findall(r"(\d{2}\.\d{2}\.\d{4})\s*-\s*(\d{2}:\d{2})",visible)
-    if len(set(codes))!=1 or len(set(dates))!=1:raise ValueError("match code or date ambiguity")
-    day,clock=dates[0]
-    kickoff=datetime.strptime(day+" "+clock,"%d.%m.%Y %H:%M").replace(tzinfo=TR)
+    dates=re.findall(r"(?<!\d)(\d{1,2}\.\d{1,2}\.\d{4})\s*-\s*(\d{1,2}:\d{2})(?!\d)",visible)
+    if len(set(codes))!=1:raise ValueError("match code missing or ambiguous")
+    if len(set(dates))>1:raise ValueError("match date ambiguity")
+    kickoff=None
+    if dates:
+        day,clock=dates[0]
+        kickoff=datetime.strptime(day+" "+clock,"%d.%m.%Y %H:%M").replace(tzinfo=TR)
     clubs=[]
     for label,href in a.links:
         ident=official_id(href,"28","kulupid")
@@ -51,7 +54,7 @@ def extract(raw):
     referee=None
     if len(refs)==1:
         ident,label=next(iter(refs));referee=dict(id=ident,label=label)
-    return dict(matchCode=codes[0],kickoff=kickoff.isoformat(),clubs=clubs,referee=referee,refereeStatus="observed" if referee else "ambiguous" if refs else "missing")
+    return dict(matchCode=codes[0],kickoff=kickoff.isoformat() if kickoff else None,kickoffStatus="observed" if kickoff else "missing",clubs=clubs,referee=referee,refereeStatus="observed" if referee else "ambiguous" if refs else "missing")
 
 def build(now,reader=read):
     links=discover(reader(FIXTURE_URL))
@@ -60,12 +63,12 @@ def build(now,reader=read):
     selected=[links[i*(len(links)-1)//max(1,size-1)] for i in range(size)]
     def fetch(link):
         try:return dict(link,status="observed",**extract(reader(link["source"])))
-        except (OSError,ValueError,TypeError,KeyError) as exc:return dict(link,status="error",error=type(exc).__name__)
+        except (OSError,ValueError,TypeError,KeyError) as exc:return dict(link,status="error",error=type(exc).__name__,detail=str(exc)[:160] if isinstance(exc,ValueError) else None)
     with ThreadPoolExecutor(max_workers=3) as pool:rows=list(pool.map(fetch,selected))
-    return dict(version="5.44",mode="official_match_identity_probe",updatedAt=now.isoformat(),discoveredLinks=len(links),requested=len(rows),observed=sum(r["status"]=="observed" for r in rows),withReferee=sum(r.get("referee") is not None for r in rows),automaticFixtureLinking=False,predictionsEnabled=False,decision="PAS",rows=rows)
+    return dict(version="5.44",mode="official_match_identity_probe",updatedAt=now.isoformat(),discoveredLinks=len(links),requested=len(rows),observed=sum(r["status"]=="observed" for r in rows),withKickoff=sum(r.get("kickoff") is not None for r in rows),withReferee=sum(r.get("referee") is not None for r in rows),automaticFixtureLinking=False,predictionsEnabled=False,decision="PAS",rows=rows)
 
 if __name__=="__main__":
     r=build(datetime.now(TR))
     Path("tff_match_identity_probe.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(r,ensure_ascii=False))
-    if not r["withReferee"]:raise SystemExit("No official match and referee identity pairs")
+    if not any(x.get("referee") and x.get("kickoff") for x in r["rows"]):raise SystemExit("No official dated match and referee identity pairs")
