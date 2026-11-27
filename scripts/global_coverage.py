@@ -26,6 +26,15 @@ def probe(code,day,reader=read):
         result["error"]=type(exc).__name__
         result["detail"]=str(exc)[:160]
     return result
+# Candidate aliases must be confirmed against provider metadata before activation.
+ALIASES={"pol.1":("pol.1","pol.ekstraklasa"),"kor.1":("kor.1","kor.kleague.1"),"sau.1":("sau.1","ksa.1"),"egy.1":("egy.1","egy.premier"),"por.2":("por.2","por.liga.2"),"ger.3":("ger.3","ger.3.liga")}
+def recover(code,days,reader):
+    attempts=[]
+    for alias in ALIASES.get(code,(code,)):
+        samples=[probe(alias,d,reader) for d in days]
+        attempts.append(dict(alias=alias,samples=samples,events=sum(x["events"] for x in samples),metadata=[m for x in samples for m in x.get("providerLeagues",[])]))
+    return dict(league=code,attempts=attempts,requiresIdentityReview=True,activated=False)
+
 def build(now,reader=read):
     days=[(now.astimezone(TR).date()-timedelta(days=i)).isoformat() for i in (0,1,2,3,4,5,6,7)]
     with ThreadPoolExecutor(max_workers=8) as pool:
@@ -36,9 +45,10 @@ def build(now,reader=read):
         events=sum(r["events"] for r in items)
         clean=all(r["error"] is None and not r["invalid"] for r in items)
         groups.append(dict(league=code,events=events,status="observed" if clean and events else "empty_unverified" if clean else "source_issue",errorCounts=dict(Counter(r["error"] for r in items if r["error"])),invalidRows=sum(r["invalid"] for r in items),samples=items))
-    return dict(version="5.64",mode="coverage_research_only",candidateCount=len(CANDIDATES),queryCount=len(rows),groups=groups,predictionsEnabled=False,usedForSettlement=False)
+    return dict(version="5.65",mode="coverage_research_only",recovery=[recover(c,days,reader) for c in ALIASES],candidateCount=len(CANDIDATES),queryCount=len(rows),groups=groups,predictionsEnabled=False,usedForSettlement=False)
 if __name__=="__main__":
     report=build(datetime.now(TR))
     Path("global_coverage.json").write_text(json.dumps(report,indent=2))
     print([(g["league"],g["events"],g["status"],g["errorCounts"],g["invalidRows"]) for g in report["groups"]])
+    print("Alias recovery:",[(r["league"],[(a["alias"],a["events"]) for a in r["attempts"]]) for r in report["recovery"]])
     assert any(g["status"]=="observed" for g in report["groups"])
