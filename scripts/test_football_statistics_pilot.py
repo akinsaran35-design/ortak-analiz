@@ -17,6 +17,16 @@ class Tests(unittest.TestCase):
         rows,_,bad=parse(raw,"en.1","soccer_epl",date(2026,11,26))
         self.assertEqual(len(rows),1)
         self.assertEqual(bad,1)
+    def test_inconsistent_metrics(self):
+        raw=b"Date,HomeTeam,AwayTeam,FTHG,FTAG,HS,AS,HST,AST,HTHG,HTAG,HC,AC\n20/11/2026,A,B,2,1,3,4,5,2,3,0,2,1\n21/11/2026,B,A,1,0,4,3,2,1,0,0,3,4\n"
+        rows,_,bad=parse(raw,"en.1","soccer_epl",date(2026,11,27))
+        self.assertEqual(len(rows),2)
+        self.assertEqual(bad,0)
+        self.assertNotIn("shotsOnTarget",rows[0]["stats"])
+        self.assertNotIn("halfTimeGoals",rows[0]["stats"])
+        self.assertEqual(rows[0]["stats"]["shots"],[3,4])
+        self.assertEqual(rows[0]["stats"]["corners"],[2,1])
+        self.assertEqual(describe(rows,"a")["metrics"]["shotsOnTarget"]["sample"],1)
     def test_report(self):
         r=build({"upcoming":[{"date":"2026-11-27","league":"İngiltere Premier Lig","match":"A – B"}]},datetime.fromisoformat("2026-11-26T18:00:00+03:00"),lambda _:CSV)
         self.assertEqual(r["fixtureCount"],1)
