@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-27T04:38:18.163449+00:00",
+  "updatedAt": "2026-11-27T05:48:53.161809+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -29,16 +29,16 @@
       "eventId": "abfc6851b152aecbb4bf84a348967f69",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.435356,
-        "williamhill": 0.442971,
-        "matchbook": 0.398058
+        "grosvenor": 0.417755,
+        "williamhill": 0.415584,
+        "matchbook": 0.375887
       },
-      "marketProbability": 0.4354,
+      "marketProbability": 0.4156,
       "modelProbabilityUncalibrated": 0.46299999999999997,
-      "difference": 0.0276,
-      "bookProbabilitySpread": 0.0449,
-      "marketFairOdds": 2.297,
-      "medianMargin": 0.0734
+      "difference": 0.0474,
+      "bookProbabilitySpread": 0.0419,
+      "marketFairOdds": 2.4062,
+      "medianMargin": 0.0694
     },
     {
       "match": "West Ham United FC – Stoke City FC",
@@ -98,13 +98,13 @@
         "leovegas": 0.52381,
         "casumo": 0.521858,
         "williamhill": 0.536193,
-        "matchbook": 0.524422
+        "matchbook": 0.526854
       },
-      "marketProbability": 0.5244,
+      "marketProbability": 0.5269,
       "modelProbabilityUncalibrated": 0.5770000000000001,
-      "difference": 0.0526,
+      "difference": 0.0501,
       "bookProbabilitySpread": 0.0301,
-      "marketFairOdds": 1.9069,
+      "marketFairOdds": 1.8981,
       "medianMargin": 0.078
     },
     {
@@ -199,13 +199,13 @@
         "casumo": 0.486111,
         "grosvenor": 0.526882,
         "williamhill": 0.5,
-        "matchbook": 0.492188
+        "matchbook": 0.493506
       },
-      "marketProbability": 0.4961,
+      "marketProbability": 0.4968,
       "modelProbabilityUncalibrated": 0.519,
-      "difference": 0.0229,
+      "difference": 0.0222,
       "bookProbabilitySpread": 0.0408,
-      "marketFairOdds": 2.0157,
+      "marketFairOdds": 2.0131,
       "medianMargin": 0.0628
     },
     {
@@ -233,7 +233,7 @@
         "leovegas": 0.484127,
         "casumo": 0.478142,
         "williamhill": 0.48,
-        "matchbook": 0.484456
+        "matchbook": 0.487113
       },
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.469,
@@ -332,16 +332,16 @@
       "eventId": "71c08940a73e9f42d503449f052a1bdf",
       "bookCount": 3,
       "bookProbabilities": {
-        "leovegas": 0.567282,
+        "leovegas": 0.562827,
         "grosvenor": 0.582902,
         "williamhill": 0.575916
       },
       "marketProbability": 0.5759,
       "modelProbabilityUncalibrated": 0.688,
       "difference": 0.1121,
-      "bookProbabilitySpread": 0.0156,
+      "bookProbabilitySpread": 0.0201,
       "marketFairOdds": 1.7364,
-      "medianMargin": 0.0718
+      "medianMargin": 0.0656
     },
     {
       "match": "Real Sociedad de Fútbol – Sevilla FC",
@@ -349,13 +349,13 @@
       "bookCount": 3,
       "bookProbabilities": {
         "williamhill": 0.539474,
-        "leovegas": 0.535809,
+        "leovegas": 0.533333,
         "grosvenor": 0.535809
       },
       "marketProbability": 0.5358,
       "modelProbabilityUncalibrated": 0.679,
       "difference": 0.1432,
-      "bookProbabilitySpread": 0.0037,
+      "bookProbabilitySpread": 0.0061,
       "marketFairOdds": 1.8663,
       "medianMargin": 0.0665
     },
@@ -417,12 +417,12 @@
         "williamhill": 0.515873,
         "leovegas": 0.538667,
         "grosvenor": 0.523936,
-        "matchbook": 0.547739
+        "matchbook": 0.545455
       },
       "marketProbability": 0.5313,
       "modelProbabilityUncalibrated": 0.5770000000000001,
       "difference": 0.0457,
-      "bookProbabilitySpread": 0.0319,
+      "bookProbabilitySpread": 0.0296,
       "marketFairOdds": 1.8822,
       "medianMargin": 0.0628
     },
