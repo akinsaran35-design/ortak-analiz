@@ -156,6 +156,19 @@ settled = [
 ]
 
 n = len(settled)
+# Date-based research status, not a claim about individual kickoff or completion.
+pending_dates = Counter()
+for record in records.values():
+    if record["result"] is not None:
+        continue
+    try:
+        fixture_date = date.fromisoformat(record["date"])
+    except (KeyError, TypeError, ValueError):
+        pending_dates["invalidDate"] += 1
+        continue
+    pending_dates["future" if fixture_date > TODAY else "today" if fixture_date == TODAY else "past"] += 1
+pending_date_status = {k: pending_dates[k] for k in ("future", "today", "past", "invalidDate")}
+assert sum(pending_date_status.values()) == len(records) - n
 
 report = {
     "version": "4.4",
@@ -171,6 +184,8 @@ report = {
     "historyIdentityAudit": history_audit,
     "tested": n,
     "pending": len(records) - n,
+    "pendingDateStatus": pending_date_status,
+    "pendingDateStatusAsOf": TODAY.isoformat(),
     "minimumMatches": 500,
     "liveEnabled": False,
     "status": "collecting_data",
