@@ -1,0 +1,38 @@
+{
+  "version": "6.19",
+  "mode": "research_only",
+  "sourceCommit": "4289ccb5af41602aeeb2e66b1313694ee2466674",
+  "sourceDate": "2026-11-27",
+  "rows": [
+    {
+      "date": "2026-11-27",
+      "league": "tr.1",
+      "home": "alanyaspor",
+      "away": "konyaspor",
+      "forecastSource": "daily.json",
+      "forecastTime": "2026-11-27T18:57:40+03:00",
+      "markets": {
+        "1.5 Üst": 73.3,
+        "2.5 Üst": 48.2,
+        "KG Var": 51.8
+      },
+      "archiveStatus": "same_day_snapshot_not_eligible",
+      "result": null
+    },
+    {
+      "date": "2026-11-27",
+      "league": "tr.1",
+      "home": "rizespor",
+      "away": "kasimpasa",
+      "forecastSource": "prediction_archive.json",
+      "forecastTime": "2026-11-26T16:34:26.690674+03:00",
+      "markets": {
+        "1.5 Üst": 83.5,
+        "2.5 Üst": 63,
+        "KG Var": 64.4
+      },
+      "archiveStatus": "pre_date_archive_pending",
+      "result": null
+    }
+  ]
+}

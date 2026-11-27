@@ -191,6 +191,7 @@ report = {
     "status": "collecting_data",
     "errors": errors,
     "marketResearchVersion": "4.85",
+    "classificationVersion": "6.19",
     "marketResearch": summarize(records,NOW)
 }
 
