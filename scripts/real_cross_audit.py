@@ -7,9 +7,9 @@ from cross_source_match import match,norm,secondary_name
 MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl.1":2003,"pt.1":2017,"uefa.champions":2001,"bra.1":2013}
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
-# Frozen Champions League mapping, tested on new dates after the development samples.
-start=date(2026,11,23)
-days=4
+# Expanded historical audit. Prior research may overlap; do not add totals without ID deduplication.
+start=date(2026,10,1)
+days=22
 offsets=tuple((start-now.date()).days+i for i in range(days)) if holdout else (-1,0,1)
 token=os.environ.get("FOOTBALL_DATA_TOKEN")
 def secondary_windowed():
@@ -61,6 +61,18 @@ audit_start=now.date()+timedelta(days=min(offsets))
 audit_end=now.date()+timedelta(days=max(offsets))
 scope=sample_counts(audit_start,audit_end)
 daily=[dict(date=str(audit_start+timedelta(days=i)),**sample_counts(audit_start+timedelta(days=i),audit_start+timedelta(days=i))) for i in range((audit_end-audit_start).days+1)]
+# Report league-level coverage and stable provider IDs for subsequent deduplication.
+league_coverage=[]
+verified_score_ids=[]
+for league,cid in MAP.items():
+    pp=[a for a in p if a["league"]==league]
+    ss=[a for a in s["rows"] if a["competitionId"]==cid and audit_start<=datetime.fromisoformat(a["kickoff"].replace("Z","+00:00")).astimezone(TR).date()<=audit_end]
+    pairs=match(pp,ss,MAP)["pairs"]
+    verified=[pair for pair in pairs if pair["scoreAgreement"] is True]
+    verified_score_ids.extend(dict(league=league,primaryId=pair["primaryId"],secondaryId=pair["secondaryId"]) for pair in verified)
+    league_coverage.append(dict(league=league,primaryCount=len(pp),secondaryCount=len(ss),matched=len(pairs),verifiedScores=len(verified),scoreMismatch=sum(pair["scoreAgreement"] is False for pair in pairs),primaryCoverage=len(pairs)/len(pp) if pp else None,secondaryCoverage=len(pairs)/len(ss) if ss else None))
+print("League coverage:",json.dumps(league_coverage))
+print("Verified score count:",len(verified_score_ids))
 print("Bidirectional coverage:",json.dumps(scope))
 print("Daily coverage:",json.dumps(daily))
 expected_leagues=set(MAP)
@@ -171,17 +183,17 @@ for a in p:
         if delta<=120:
             candidates.append(dict(secondaryId=b["eventId"],home=b["home"],away=b["away"],deltaMinutes=delta,exactHome=norm(a["home"])==norm(b["home"]),exactAway=norm(a["away"])==norm(b["away"])))
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
-# Champions League mapping remains frozen for these new dates.
+# Champions League mapping remains frozen in the expanded historical observation.
 champions_primary=[row for row in p if row["league"]=="uefa.champions"]
 champions_secondary=[row for row in s["rows"] if row["competitionId"]==2001 and audit_start<=datetime.fromisoformat(row["kickoff"].replace("Z","+00:00")).astimezone(TR).date()<=audit_end]
 champions_pairs=match(champions_primary,champions_secondary,MAP)["pairs"]
-champions=dict(primaryCount=len(champions_primary),secondaryCount=len(champions_secondary),matched=len(champions_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in champions_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in champions_pairs),sampleRole="frozen_champions_holdout" if holdout else "current",researchOnly=True)
+champions=dict(primaryCount=len(champions_primary),secondaryCount=len(champions_secondary),matched=len(champions_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in champions_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in champions_pairs),sampleRole="expanded_historical_observation" if holdout else "current",researchOnly=True)
 champions["completeCoverage"]=bool(champions_secondary and champions["matched"]==len(champions_primary)==len(champions_secondary)==champions["scoreCompared"] and not champions["scoreMismatch"])
 print("Champions League holdout:",json.dumps(champions))
 r["championsHoldout"]=champions
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.95",brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="new_dates_frozen_champions_holdout" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.96",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
@@ -190,6 +202,6 @@ assert not any(x["scoreAgreement"] is False for x in r["pairs"])
 if holdout:assert r["scoreCompared"]>0, "No comparable completed scores"
 if holdout:
     assert not primary_issues and secondary_rejected==0, "Source health incomplete"
-    assert champions["scoreCompared"]>=10, "Champions League holdout requires at least ten comparable scores"
-    assert champions["completeCoverage"], "Champions League holdout has unmatched or non-comparable fixtures"
+    assert len(verified_score_ids)>=100, "Expanded historical audit needs at least 100 verified scores"
+    assert scope["primaryCoverage"] is not None and scope["secondaryCoverage"] is not None and min(scope["primaryCoverage"],scope["secondaryCoverage"])>=0.99, "Expanded historical audit below 99 percent bidirectional coverage"
 print("Combined sample coverage:",r["coverage"],"score comparisons:",r["scoreCompared"])
