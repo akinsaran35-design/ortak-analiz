@@ -35,6 +35,36 @@
             0
           ]
         }
+      },
+      {
+        "receivedAt": "2026-11-27T21:33:32.710902+03:00",
+        "minute": 76,
+        "score": [
+          1,
+          1
+        ],
+        "metrics": {
+          "corners": [
+            2,
+            0
+          ],
+          "shots": [
+            8,
+            7
+          ],
+          "shotsOnTarget": [
+            2,
+            3
+          ],
+          "yellowCards": [
+            3,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
       }
     ]
   },
@@ -68,6 +98,36 @@
           "yellowCards": [
             0,
             0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "receivedAt": "2026-11-27T21:33:32.769084+03:00",
+        "minute": 74,
+        "score": [
+          1,
+          2
+        ],
+        "metrics": {
+          "corners": [
+            3,
+            2
+          ],
+          "shots": [
+            13,
+            10
+          ],
+          "shotsOnTarget": [
+            4,
+            6
+          ],
+          "yellowCards": [
+            0,
+            2
           ],
           "redCards": [
             0,

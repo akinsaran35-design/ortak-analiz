@@ -1,17 +1,17 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-27T20:42:53.577755+03:00",
-  "sourceUpdatedAt": "2026-11-27T20:42:35.333335+03:00",
+  "updatedAt": "2026-11-27T21:33:46.056350+03:00",
+  "sourceUpdatedAt": "2026-11-27T21:33:32.868685+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
   "accepted": 2,
   "archivedEvents": 2,
-  "archivedPoints": 2,
+  "archivedPoints": 4,
   "reasons": {
-    "rejected_observation": 3
+    "rejected_observation": 4
   },
   "windowCounts": {
     "5": 0,
@@ -25,9 +25,9 @@
       "home": "Alanyaspor",
       "away": "Konyaspor",
       "kickoff": "2026-11-27T17:00:00+00:00",
-      "receivedAt": "2026-11-27T20:42:35.237260+03:00",
-      "minute": 43,
-      "observations": 1,
+      "receivedAt": "2026-11-27T21:33:32.710902+03:00",
+      "minute": 76,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -36,9 +36,9 @@
       "home": "Caykur Rizespor",
       "away": "Kasimpasa",
       "kickoff": "2026-11-27T17:00:00+00:00",
-      "receivedAt": "2026-11-27T20:42:35.255982+03:00",
-      "minute": 42,
-      "observations": 1,
+      "receivedAt": "2026-11-27T21:33:32.769084+03:00",
+      "minute": 74,
+      "observations": 2,
       "windows": {}
     }
   ]
