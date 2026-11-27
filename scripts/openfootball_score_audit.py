@@ -73,6 +73,12 @@ def main():
             error=str(exc)
             rows=compare(a["matches"],{})
             for row in rows:row["status"]="source_unavailable"
+        # Inventory both naming systems without inferring club equivalence from scores.
+        source_names=sorted({n for m in a["matches"] for n in (m["team1"],m["team2"])})
+        independent_names=sorted({n for k in independent for n in k[1:]}) if error is None else []
+        source_dates=sorted({m["date"] for m in a["matches"] if valid(full_time(m))})
+        independent_dates=sorted({k[0] for k in independent}) if error is None else []
+        print("IDENTITY_DIAGNOSTICS",json.dumps(dict(league=code,sourceNames=source_names,secondaryNormalizedNames=independent_names,sourceDateRange=source_dates[::max(1,len(source_dates)-1)],secondaryDateRange=independent_dates[::max(1,len(independent_dates)-1)],sharedDates=len(set(source_dates)&set(independent_dates))),ensure_ascii=False))
         counts=dict(Counter(r["status"] for r in rows))
         reports.append(dict(league=code,sourceBlobSha=a["sourceBlobSha"],secondarySource=url,sourceError=error,counts=counts,nonstandardScoreRows=sum("score" in m and not isinstance(m["score"],dict) for m in a["matches"]),rows=rows))
         print(json.dumps({"league":code,"counts":counts,"error":error,"nonstandardScoreRows":reports[-1]["nonstandardScoreRows"]},ensure_ascii=False))
