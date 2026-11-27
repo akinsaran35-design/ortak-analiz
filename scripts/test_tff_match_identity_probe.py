@@ -9,6 +9,14 @@ class Tests(unittest.TestCase):
         self.assertEqual(r["kickoff"],"2026-11-27T20:00:00+03:00")
         self.assertEqual(r["clubs"],[dict(id="1",label="A"),dict(id="2",label="B")])
         self.assertEqual(r["referee"],dict(id="9",label="REF A"))
+    def test_single_digit_date(self):
+        r=extract(self.raw().replace(b"27.11.2026",b"1.11.2026"))
+        self.assertEqual(r["kickoff"],"2026-11-01T20:00:00+03:00")
+    def test_unscheduled(self):
+        r=extract(self.raw("").replace(b"27.11.2026 - 20:00",b""))
+        self.assertIsNone(r["kickoff"])
+        self.assertEqual(r["kickoffStatus"],"missing")
+        self.assertEqual(r["refereeStatus"],"missing")
     def test_missing_referee(self):
         self.assertEqual(extract(self.raw(""))["refereeStatus"],"missing")
     def test_ambiguous(self):
