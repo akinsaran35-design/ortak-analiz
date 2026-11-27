@@ -1,8 +1,8 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-27T17:43:34.693163+03:00",
-  "sourceUpdatedAt": "2026-11-27T17:43:34.625471+03:00",
+  "updatedAt": "2026-11-27T18:43:20.320466+03:00",
+  "sourceUpdatedAt": "2026-11-27T18:43:20.254563+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
@@ -17,20 +17,20 @@
       "home": "Inter Kashi",
       "away": "Churchill Brothers",
       "kickoff": "2026-11-27T14:00:00+00:00",
-      "receivedAt": "2026-11-27T17:43:34.622598+03:00",
+      "receivedAt": "2026-11-27T18:43:20.251600+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_FIRST_HALF",
-        "clock": "43'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "80'",
         "score": [
           0,
-          0
+          1
         ],
         "metrics": {
           "yellowCards": [
-            0,
-            2
+            2,
+            5
           ],
           "redCards": [
             0,
@@ -38,19 +38,19 @@
           ],
           "corners": [
             0,
-            0
+            2
           ],
           "possession": [
-            42.1,
-            57.9
+            45.6,
+            54.4
           ],
           "shots": [
-            3,
-            1
+            4,
+            5
           ],
           "shotsOnTarget": [
             2,
-            0
+            2
           ]
         }
       },
