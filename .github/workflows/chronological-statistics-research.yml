@@ -1,0 +1,27 @@
+name: V5.33 chronological statistical validation
+on:
+  pull_request:
+    paths:
+      - 'scripts/chronological_statistics_research.py'
+      - 'scripts/test_chronological_statistics_research.py'
+      - '.github/workflows/chronological-statistics-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_chronological_statistics_research.py
+      - run: python scripts/chronological_statistics_research.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chronological-statistics-research
+          path: chronological_statistics_research.json
+          if-no-files-found: error
+          retention-days: 7
