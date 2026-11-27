@@ -115,3 +115,11 @@ assert.equal(formGoalAverages({...formSide,sample:0}),null);
 assert.equal(formGoalAverages({...formSide,goalsFor:5}),null);
 assert.equal(formGoalAverages({...formSide,rows:[{gf:3,ga:1}]}),null);
 console.log("Form goal average arithmetic and sample guards passed");
+
+const {accuracyCounts,classificationFor}=require("../mobile-v487.js");
+assert.equal(accuracyCounts({tested:4,correct:3,incorrect:1}).rate,75);
+assert.equal(accuracyCounts({tested:0,correct:0,incorrect:0}).rate,null);
+assert.equal(accuracyCounts({tested:4,correct:4,incorrect:1}),null);
+assert.equal(classificationFor({tested:3,classification:{tested:4,correct:3,incorrect:1,threshold:.5,model:"candidate",descriptiveOnly:true}}),null);
+assert.equal(classificationFor({tested:4,classification:{tested:4,correct:3,incorrect:1,threshold:.5,model:"candidate",descriptiveOnly:true}}).rate,75);
+console.log("Research classification accuracy and empty/invalid count guards passed");
