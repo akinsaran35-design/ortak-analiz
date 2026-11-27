@@ -21,9 +21,10 @@ def build_report(archive,now,reader=read):
     groups=defaultdict(list)
     for r in archive.values():
         d=date.fromisoformat(r["date"])
-        if r["league"] in APPROVED and now.date()-timedelta(days=14)<=d<now.date():
+        if r["league"] in APPROVED and now.date()-timedelta(days=14)<=d<=now.date():
             groups[(r["league"],r["date"])].append(r)
     reports=[]
+    observations=[]
     cache={}
     for (code,day),records in sorted(groups.items()):
         urls=source_urls(code,day)
@@ -44,8 +45,12 @@ def build_report(archive,now,reader=read):
                 out["rows"].append(dict(date=day,home=r["home"],away=r["away"],csv=a,espn=b,status=status))
         except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
             out["errors"].append(type(exc).__name__)
-        reports.append(out)
-    return {"version":"4.69","updatedAt":now.isoformat(),"mode":"research_only","approvedLeagues":sorted(APPROVED),"excludedLeagues":[],"groups":reports}
+        if day==now.date().isoformat():
+            # Same-day evidence is for observation only; never settlement input.
+            observations.append(out)
+        else:
+            reports.append(out)
+    return {"version":"4.69","updatedAt":now.isoformat(),"mode":"research_only","approvedLeagues":sorted(APPROVED),"excludedLeagues":[],"groups":reports,"todayObservations":observations,"observationDate":now.date().isoformat()}
 
 def verified_rows(report,now):
     try:
@@ -71,6 +76,6 @@ def main():
     report=build_report(archive,now)
     report["automaticVerifiedCount"]=len(verified_rows(report,datetime.now(TR)))
     Path("multi_league_results.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
-    print("V4.69 result audit:",json.dumps({"verified":report["automaticVerifiedCount"],"groups":[{"league":g["league"],"date":g["date"],"counts":dict(Counter(r["status"] for r in g["rows"])),"errors":g["errors"]} for g in report["groups"]]},ensure_ascii=False))
+    print("V4.69 result audit:",json.dumps({"verified":report["automaticVerifiedCount"],"sameDayObservations":sum(len(g["rows"]) for g in report["todayObservations"]),"groups":[{"league":g["league"],"date":g["date"],"counts":dict(Counter(r["status"] for r in g["rows"])),"errors":g["errors"]} for g in report["groups"]]},ensure_ascii=False))
 
 if __name__=="__main__": main()
