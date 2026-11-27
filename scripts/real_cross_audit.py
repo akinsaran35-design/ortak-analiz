@@ -110,6 +110,34 @@ for row in brazil_secondary:
     elif not any(g["count"] for g in groups):reason="primary_day_empty"
     else:reason="no_matching_primary_fixture"
     brazil_gaps.append(dict(secondaryId=row["eventId"],home=row["home"],away=row["away"],kickoff=row["kickoff"],date=day,reason=reason,primaryDayCount=sum(g["count"] for g in groups),sameTimePrimaryIds=[a["eventId"] for a in same_time],sameTeamPrimaryIds=[a["eventId"] for a in same_teams]))
+# Research-only detail probe for unique same-team kickoff discrepancies.
+from results_source_pilot import read
+from secondary_fixtures import fetch_payload,parse as parse_secondary
+for gap in brazil_gaps:
+    if gap["reason"]!="kickoff_difference" or len(gap["sameTeamPrimaryIds"])!=1:continue
+    ident=gap["sameTeamPrimaryIds"][0]
+    primary_row=next(a for a in brazil_primary if a["eventId"]==ident)
+    secondary_row=next(a for a in brazil_secondary if a["eventId"]==gap["secondaryId"])
+    evidence=dict(primaryKickoff=primary_row["kickoff"],secondaryKickoff=secondary_row["kickoff"],primaryScore=primary_row["score"],secondaryScore=secondary_row["score"],decision="quarantined")
+    evidence["deltaMinutes"]=abs((datetime.fromisoformat(primary_row["kickoff"].replace("Z","+00:00"))-datetime.fromisoformat(secondary_row["kickoff"].replace("Z","+00:00"))).total_seconds())/60
+    primary_url="https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event="+ident
+    secondary_url="https://api.football-data.org/v4/matches/"+str(gap["secondaryId"])
+    evidence["sources"]=[primary_url,secondary_url]
+    try:
+        header=json.loads(read(primary_url))["header"]
+        comp,=header["competitions"]
+        if str(header["id"])!=ident:raise ValueError("detail identity mismatch")
+        evidence["primaryDetailKickoff"]=datetime.fromisoformat(comp["date"].replace("Z","+00:00")).isoformat()
+    except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
+        evidence["primaryDetailError"]=type(exc).__name__
+    try:
+        payload=fetch_payload(secondary_url,token)
+        parsed,rejected=parse_secondary({"matches":[payload]})
+        if rejected or len(parsed)!=1 or parsed[0]["eventId"]!=gap["secondaryId"]:raise ValueError("detail identity mismatch")
+        evidence["secondaryDetailKickoff"]=parsed[0]["kickoff"]
+    except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
+        evidence["secondaryDetailError"]=type(exc).__name__
+    gap["kickoffEvidence"]=evidence
 print("Brazil missing fixture diagnostics:",json.dumps(brazil_gaps,ensure_ascii=False))
 brazil["gaps"]=brazil_gaps
 brazil["completeCoverage"]=bool(brazil_secondary and len(brazil_pairs)==len(brazil_secondary)==len(brazil_primary) and brazil["scoreCompared"]==len(brazil_pairs) and not brazil["scoreMismatch"])
