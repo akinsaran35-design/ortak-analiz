@@ -1,10 +1,10 @@
 {
   "version": "4.88",
-  "updatedAt": "2026-11-27T08:48:59.192825+03:00",
+  "updatedAt": "2026-11-27T09:03:42.256519+03:00",
   "mode": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "recorded": 93,
+  "recorded": 177,
   "calibrationVersion": "5.03",
   "overallCalibration": {
     "1.5 Üst": {
@@ -42,11 +42,11 @@
   },
   "leagues": {
     "de.1": {
-      "recorded": 7,
+      "recorded": 13,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 0,
+          "pending": 6,
           "legacyWithoutForecast": 7,
           "invalid": 0,
           "scores": {},
@@ -67,7 +67,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 7,
+          "pending": 13,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -88,7 +88,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 0,
+          "pending": 6,
           "legacyWithoutForecast": 7,
           "invalid": 0,
           "scores": {},
@@ -110,12 +110,364 @@
       }
     },
     "en.1": {
+      "recorded": 27,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "pending": 9,
+          "legacyWithoutForecast": 18,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "pending": 27,
+          "legacyWithoutForecast": 0,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "pending": 9,
+          "legacyWithoutForecast": 18,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        }
+      }
+    },
+    "en.2": {
+      "recorded": 41,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "pending": 25,
+          "legacyWithoutForecast": 16,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "2.5 Üst": {
+          "tested": 4,
+          "pending": 37,
+          "legacyWithoutForecast": 0,
+          "invalid": 0,
+          "scores": {
+            "old": 0.21905543725772805,
+            "candidate": 0.23034267436075734,
+            "baseline": 0.2535921225406532
+          },
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 4,
+            "observedRate": 0.5,
+            "meanPrediction": {
+              "old": 0.5715031185022139,
+              "candidate": 0.550274520098406,
+              "baseline": 0.5599343185550082
+            },
+            "gapPP": {
+              "old": 7.150311850221391,
+              "candidate": 5.027452009840605,
+              "baseline": 5.99343185550082
+            },
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": 0.011287237103029285,
+          "candidateMinusBaseline": -0.023249448179895882
+        },
+        "KG Var": {
+          "tested": 0,
+          "pending": 25,
+          "legacyWithoutForecast": 16,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        }
+      }
+    },
+    "es.1": {
+      "recorded": 20,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "pending": 10,
+          "legacyWithoutForecast": 10,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "pending": 20,
+          "legacyWithoutForecast": 0,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "pending": 10,
+          "legacyWithoutForecast": 10,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        }
+      }
+    },
+    "fr.1": {
+      "recorded": 16,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "pending": 8,
+          "legacyWithoutForecast": 8,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "pending": 16,
+          "legacyWithoutForecast": 0,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "pending": 8,
+          "legacyWithoutForecast": 8,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        }
+      }
+    },
+    "it.1": {
+      "recorded": 20,
+      "markets": {
+        "1.5 Üst": {
+          "tested": 0,
+          "pending": 10,
+          "legacyWithoutForecast": 10,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "2.5 Üst": {
+          "tested": 0,
+          "pending": 20,
+          "legacyWithoutForecast": 0,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        },
+        "KG Var": {
+          "tested": 0,
+          "pending": 10,
+          "legacyWithoutForecast": 10,
+          "invalid": 0,
+          "scores": {},
+          "minimumMatches": 500,
+          "status": "research_only",
+          "liveEnabled": false,
+          "calibration": {
+            "sample": 0,
+            "observedRate": null,
+            "meanPrediction": {},
+            "gapPP": {},
+            "sampleAdequate": false,
+            "descriptiveOnly": true
+          },
+          "sampleAdequate": false,
+          "candidateMinusClassic": null,
+          "candidateMinusBaseline": null
+        }
+      }
+    },
+    "nl.1": {
       "recorded": 18,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 18,
+          "pending": 9,
+          "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},
           "minimumMatches": 500,
@@ -156,359 +508,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 18,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        }
-      }
-    },
-    "en.2": {
-      "recorded": 17,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "pending": 1,
-          "legacyWithoutForecast": 16,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "2.5 Üst": {
-          "tested": 4,
-          "pending": 13,
-          "legacyWithoutForecast": 0,
-          "invalid": 0,
-          "scores": {
-            "old": 0.21905543725772805,
-            "candidate": 0.23034267436075734,
-            "baseline": 0.2535921225406532
-          },
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 4,
-            "observedRate": 0.5,
-            "meanPrediction": {
-              "old": 0.5715031185022139,
-              "candidate": 0.550274520098406,
-              "baseline": 0.5599343185550082
-            },
-            "gapPP": {
-              "old": 7.150311850221391,
-              "candidate": 5.027452009840605,
-              "baseline": 5.99343185550082
-            },
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": 0.011287237103029285,
-          "candidateMinusBaseline": -0.023249448179895882
-        },
-        "KG Var": {
-          "tested": 0,
-          "pending": 1,
-          "legacyWithoutForecast": 16,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        }
-      }
-    },
-    "es.1": {
-      "recorded": 10,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 10,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "pending": 10,
-          "legacyWithoutForecast": 0,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 10,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        }
-      }
-    },
-    "fr.1": {
-      "recorded": 8,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 8,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "pending": 8,
-          "legacyWithoutForecast": 0,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 8,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        }
-      }
-    },
-    "it.1": {
-      "recorded": 10,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 10,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "pending": 10,
-          "legacyWithoutForecast": 0,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "pending": 0,
-          "legacyWithoutForecast": 10,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        }
-      }
-    },
-    "nl.1": {
-      "recorded": 10,
-      "markets": {
-        "1.5 Üst": {
-          "tested": 0,
-          "pending": 1,
-          "legacyWithoutForecast": 9,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "2.5 Üst": {
-          "tested": 0,
-          "pending": 10,
-          "legacyWithoutForecast": 0,
-          "invalid": 0,
-          "scores": {},
-          "minimumMatches": 500,
-          "status": "research_only",
-          "liveEnabled": false,
-          "calibration": {
-            "sample": 0,
-            "observedRate": null,
-            "meanPrediction": {},
-            "gapPP": {},
-            "sampleAdequate": false,
-            "descriptiveOnly": true
-          },
-          "sampleAdequate": false,
-          "candidateMinusClassic": null,
-          "candidateMinusBaseline": null
-        },
-        "KG Var": {
-          "tested": 0,
-          "pending": 1,
+          "pending": 9,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},
@@ -530,11 +530,11 @@
       }
     },
     "pt.1": {
-      "recorded": 9,
+      "recorded": 18,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 0,
+          "pending": 9,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},
@@ -555,7 +555,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 9,
+          "pending": 18,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -576,7 +576,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 0,
+          "pending": 9,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},

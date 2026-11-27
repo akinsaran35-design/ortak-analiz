@@ -1,16 +1,16 @@
 {
   "version": "4.5",
-  "updatedAt": "2026-11-27T05:49:01.152021+00:00",
+  "updatedAt": "2026-11-27T06:03:44.742712+00:00",
   "status": "healthy",
   "qualityGate": "PASS",
   "dataAgeHours": {
     "daily": 0.01,
-    "odds": 0.01,
+    "odds": 0.25,
     "validation": 0.0
   },
-  "archiveRecords": 93,
+  "archiveRecords": 177,
   "settled": 4,
-  "pending": 89,
+  "pending": 173,
   "duplicates": 0,
   "invalidRecords": 0,
   "incoherentMarketRecords": 0,

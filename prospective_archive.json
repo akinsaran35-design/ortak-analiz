@@ -1201,5 +1201,2441 @@
       }
     },
     "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Aston Villa FC\", \"Crystal Palace FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Aston Villa FC",
+    "away": "Crystal Palace FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5988368526853677,
+    "candidate": 0.6312380499010035,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8152982701864129,
+        "candidate": 0.8357045286724958,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.5988368526853677,
+        "candidate": 0.6312380499010035,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.6157687143992167,
+        "candidate": 0.6405083996302126,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Brentford FC\", \"Manchester City FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Brentford FC",
+    "away": "Manchester City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5423791164789341,
+    "candidate": 0.597473850397561,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7772993646318719,
+        "candidate": 0.8144180202485376,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.5423791164789341,
+        "candidate": 0.597473850397561,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.5730645540140828,
+        "candidate": 0.6161335363452293,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Chelsea FC\", \"Liverpool FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Chelsea FC",
+    "away": "Liverpool FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6095635590826801,
+    "candidate": 0.6378176606751356,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017832,
+        "candidate": 0.8397286780495229,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826801,
+        "candidate": 0.6378176606751356,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.6255983147205079,
+        "candidate": 0.6448334037376209,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Everton FC\", \"Fulham FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Everton FC",
+    "away": "Fulham FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.49404900047099864,
+    "candidate": 0.5158062307606242,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7421230723294321,
+        "candidate": 0.7582758229669517,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.49404900047099864,
+        "candidate": 0.5158062307606242,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.5188169459546189,
+        "candidate": 0.551180717820548,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Leeds United FC\", \"Ipswich Town FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Leeds United FC",
+    "away": "Ipswich Town FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5988368526853678,
+    "candidate": 0.6419461176466631,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.815298270186413,
+        "candidate": 0.8422333882259486,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.5988368526853678,
+        "candidate": 0.6419461176466631,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.5942863712587205,
+        "candidate": 0.6313890707102843,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Manchester United FC\", \"Coventry City FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Manchester United FC",
+    "away": "Coventry City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5768099188731565,
+    "candidate": 0.4989765344525162,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8008517265285442,
+        "candidate": 0.7458280750505345,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.5768099188731565,
+        "candidate": 0.4989765344525162,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.4896549458883085,
+        "candidate": 0.47091634806812616,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Newcastle United FC\", \"Sunderland AFC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Newcastle United FC",
+    "away": "Sunderland AFC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7060078446013036,
+    "candidate": 0.6486804360165572,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8791412511787877,
+        "candidate": 0.8462856879635581,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.7060078446013036,
+        "candidate": 0.6486804360165572,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.7010335331395071,
+        "candidate": 0.6547435055481948,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Nottingham Forest FC\", \"Brighton & Hove Albion FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Nottingham Forest FC",
+    "away": "Brighton & Hove Albion FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.468947069109657,
+    "candidate": 0.5501511583089006,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7228100856959063,
+        "candidate": 0.7827219121114013,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.468947069109657,
+        "candidate": 0.5501511583089006,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.510640294209276,
+        "candidate": 0.5780823973546995,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.1\", \"Tottenham Hotspur FC\", \"Arsenal FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.1",
+    "home": "Tottenham Hotspur FC",
+    "away": "Arsenal FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5540368014428194,
+    "candidate": 0.5167605660290466,
+    "baseline": 0.5904522613065326,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7854094417800119,
+        "candidate": 0.7589722496373994,
+        "baseline": 0.8442211055276382
+      },
+      "2.5 Üst": {
+        "old": 0.5540368014428194,
+        "candidate": 0.5167605660290466,
+        "baseline": 0.5904522613065326
+      },
+      "KG Var": {
+        "old": 0.5478483046316244,
+        "candidate": 0.5139437976875337,
+        "baseline": 0.5979899497487438
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Bolton Wanderers FC\", \"Blackburn Rovers FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Bolton Wanderers FC",
+    "away": "Blackburn Rovers FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6420060068698648,
+    "candidate": 0.6075273674995991,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8422696079682574,
+        "candidate": 0.8208688863424135,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6420060068698648,
+        "candidate": 0.6075273674995991,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6530086789979112,
+        "candidate": 0.6271119503640907,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Bristol City FC\", \"Swansea City AFC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Bristol City FC",
+    "away": "Swansea City AFC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.48157042406394945,
+    "candidate": 0.5247718747998749,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.732615118428398,
+        "candidate": 0.7647792565863232,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.48157042406394945,
+        "candidate": 0.5247718747998749,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5182723343678246,
+        "candidate": 0.557375250364456,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Cardiff City FC\", \"Lincoln City FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Cardiff City FC",
+    "away": "Lincoln City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.442373237929378,
+    "candidate": 0.4145253905403402,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7015312594052603,
+        "candidate": 0.6782533037011954,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.442373237929378,
+        "candidate": 0.4145253905403402,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.4978257033206054,
+        "candidate": 0.4754473255412069,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Charlton Athletic FC\", \"Birmingham City FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Charlton Athletic FC",
+    "away": "Birmingham City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.4171752074102223,
+    "candidate": 0.47226948152416337,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.6805133065779088,
+        "candidate": 0.725409228926759,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.4171752074102223,
+        "candidate": 0.47226948152416337,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.4775381809242942,
+        "candidate": 0.5191921354366827,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Middlesbrough FC\", \"Derby County FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Middlesbrough FC",
+    "away": "Derby County FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5768099188731565,
+    "candidate": 0.5810349563110861,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8008517265285442,
+        "candidate": 0.8036595836065081,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.5768099188731565,
+        "candidate": 0.5810349563110861,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5895083280572286,
+        "candidate": 0.5943988885696506,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Norwich City FC\", \"Wrexham AFC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Norwich City FC",
+    "away": "Wrexham AFC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5988368526853677,
+    "candidate": 0.6431397550557822,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8152982701864129,
+        "candidate": 0.8429546574041891,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.5988368526853677,
+        "candidate": 0.6431397550557822,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6072185211379586,
+        "candidate": 0.6490781950722005,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Portsmouth FC\", \"West Bromwich Albion FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Portsmouth FC",
+    "away": "West Bromwich Albion FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.4302912533424894,
+    "candidate": 0.46819647074460824,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.6915589588159975,
+        "candidate": 0.7222210396050672,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.4302912533424894,
+        "candidate": 0.46819647074460824,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.4875763870501691,
+        "candidate": 0.5184794323850106,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Stoke City FC\", \"Queens Park Rangers FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Stoke City FC",
+    "away": "Queens Park Rangers FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6095635590826801,
+    "candidate": 0.5887171639745276,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017832,
+        "candidate": 0.8087199823785347,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826801,
+        "candidate": 0.5887171639745276,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6183129779995622,
+        "candidate": 0.6123099215209125,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Watford FC\", \"Millwall FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Watford FC",
+    "away": "Millwall FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5768099188731565,
+    "candidate": 0.5596375730456644,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8008517265285442,
+        "candidate": 0.7892559709899056,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.5768099188731565,
+        "candidate": 0.5596375730456644,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5984968991012184,
+        "candidate": 0.578308049839796,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"en.2\", \"Wolverhampton Wanderers FC\", \"Southampton FC\"]": {
+    "date": "2026-12-05",
+    "league": "en.2",
+    "home": "Wolverhampton Wanderers FC",
+    "away": "Southampton FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.657496328697035,
+    "candidate": 0.6353146889328785,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8515284290048166,
+        "candidate": 0.838202532662678,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.657496328697035,
+        "candidate": 0.6353146889328785,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.665782807265292,
+        "candidate": 0.648720181668994,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"en.2\", \"Burnley FC\", \"Preston North End FC\"]": {
+    "date": "2026-12-06",
+    "league": "en.2",
+    "home": "Burnley FC",
+    "away": "Preston North End FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6148542701999364,
+    "candidate": 0.5681922046113872,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8255096154454593,
+        "candidate": 0.7950695933226604,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6148542701999364,
+        "candidate": 0.5681922046113872,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6317714849609508,
+        "candidate": 0.5968238653327994,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"Birmingham City FC\", \"Watford FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "Birmingham City FC",
+    "away": "Watford FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.48157042406394945,
+    "candidate": 0.4896745595882035,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.732615118428398,
+        "candidate": 0.7388105901298088,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.48157042406394945,
+        "candidate": 0.4896745595882035,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.45964572587552577,
+        "candidate": 0.5145031835391298,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"Blackburn Rovers FC\", \"Norwich City FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "Blackburn Rovers FC",
+    "away": "Norwich City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.506375508926538,
+    "candidate": 0.5957531492646568,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7513396028629259,
+        "candidate": 0.8133042064587389,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.506375508926538,
+        "candidate": 0.5957531492646568,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5487249914479668,
+        "candidate": 0.6169310565525138,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"Millwall FC\", \"Sheffield United FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "Millwall FC",
+    "away": "Sheffield United FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.468947069109657,
+    "candidate": 0.5867323829770373,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7228100856959063,
+        "candidate": 0.8074181115170214,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.468947069109657,
+        "candidate": 0.5867323829770373,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5190450761069505,
+        "candidate": 0.6082695990474717,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"Queens Park Rangers FC\", \"Wolverhampton Wanderers FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "Queens Park Rangers FC",
+    "away": "Wolverhampton Wanderers FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6947157257798638,
+    "candidate": 0.6602536310497009,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8728983863086972,
+        "candidate": 0.8531537999473893,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6947157257798638,
+        "candidate": 0.6602536310497009,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6817459710154633,
+        "candidate": 0.6638869362645866,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"Swansea City AFC\", \"Bolton Wanderers FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "Swansea City AFC",
+    "away": "Bolton Wanderers FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6420060068698648,
+    "candidate": 0.7056377365345028,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8422696079682574,
+        "candidate": 0.8789383928471325,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6420060068698648,
+        "candidate": 0.7056377365345028,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.627701515665695,
+        "candidate": 0.6834447881147847,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"West Bromwich Albion FC\", \"Cardiff City FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "West Bromwich Albion FC",
+    "away": "Cardiff City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.487828280343769,
+    "candidate": 0.4658248512598674,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7374058807508385,
+        "candidate": 0.7203553681919619,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.487828280343769,
+        "candidate": 0.4658248512598674,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5188940279065146,
+        "candidate": 0.5074104527739015,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"West Ham United FC\", \"Middlesbrough FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "West Ham United FC",
+    "away": "Middlesbrough FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6626651250469103,
+    "candidate": 0.7077202198158505,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8545697338553038,
+        "candidate": 0.8800782681158374,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6626651250469103,
+        "candidate": 0.7077202198158505,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6566765692042941,
+        "candidate": 0.6799730475099659,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-08\", \"en.2\", \"Wrexham AFC\", \"Charlton Athletic FC\"]": {
+    "date": "2026-12-08",
+    "league": "en.2",
+    "home": "Wrexham AFC",
+    "away": "Charlton Athletic FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5305463165333173,
+    "candidate": 0.5529388754292213,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7689217620241717,
+        "candidate": 0.7846516315580453,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.5305463165333173,
+        "candidate": 0.5529388754292213,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.5620572919382847,
+        "candidate": 0.5818486620956688,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-09\", \"en.2\", \"Derby County FC\", \"Bristol City FC\"]": {
+    "date": "2026-12-09",
+    "league": "en.2",
+    "home": "Derby County FC",
+    "away": "Bristol City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5540368014428194,
+    "candidate": 0.5341783736972032,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7854094417800118,
+        "candidate": 0.7715090451071404,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.5540368014428194,
+        "candidate": 0.5341783736972032,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.585296095966371,
+        "candidate": 0.5702919961680702,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-09\", \"en.2\", \"Lincoln City FC\", \"Stoke City FC\"]": {
+    "date": "2026-12-09",
+    "league": "en.2",
+    "home": "Lincoln City FC",
+    "away": "Stoke City FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.46167175183996123,
+    "candidate": 0.48619687290451585,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7170717140517886,
+        "candidate": 0.7361613542770155,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.46167175183996123,
+        "candidate": 0.48619687290451585,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.48049809389489084,
+        "candidate": 0.5323191662950639,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-09\", \"en.2\", \"Preston North End FC\", \"Portsmouth FC\"]": {
+    "date": "2026-12-09",
+    "league": "en.2",
+    "home": "Preston North End FC",
+    "away": "Portsmouth FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6405735336749161,
+    "candidate": 0.5773164458215584,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.841402380174668,
+        "candidate": 0.8011892839498596,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6405735336749161,
+        "candidate": 0.5773164458215584,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6484541190312236,
+        "candidate": 0.5995954372345107,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-09\", \"en.2\", \"Southampton FC\", \"Burnley FC\"]": {
+    "date": "2026-12-09",
+    "league": "en.2",
+    "home": "Southampton FC",
+    "away": "Burnley FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6554128554395506,
+    "candidate": 0.6499774248962877,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8502957323864611,
+        "candidate": 0.8470614042898331,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6554128554395506,
+        "candidate": 0.6499774248962877,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.576724081496878,
+        "candidate": 0.5807208783538342,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-11\", \"en.2\", \"Bolton Wanderers FC\", \"Wrexham AFC\"]": {
+    "date": "2026-12-11",
+    "league": "en.2",
+    "home": "Bolton Wanderers FC",
+    "away": "Wrexham AFC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6519201471326107,
+    "candidate": 0.6335435884805646,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8482204777387028,
+        "candidate": 0.837119153686287,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.6519201471326107,
+        "candidate": 0.6335435884805646,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.661544292253323,
+        "candidate": 0.6473064948802548,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"de.1\", \"1. FC Union Berlin\", \"Hamburger SV\"]": {
+    "date": "2026-12-05",
+    "league": "de.1",
+    "home": "1. FC Union Berlin",
+    "away": "Hamburger SV",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6405735336749161,
+    "candidate": 0.6853321546948035,
+    "baseline": 0.6819571865443425,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.841402380174668,
+        "candidate": 0.8676260072401717,
+        "baseline": 0.8776758409785933
+      },
+      "2.5 Üst": {
+        "old": 0.6405735336749161,
+        "candidate": 0.6853321546948035,
+        "baseline": 0.6819571865443425
+      },
+      "KG Var": {
+        "old": 0.6484541190312236,
+        "candidate": 0.6859801677243242,
+        "baseline": 0.6422018348623854
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"de.1\", \"Bayer 04 Leverkusen\", \"Borussia Mönchengladbach\"]": {
+    "date": "2026-12-05",
+    "league": "de.1",
+    "home": "Bayer 04 Leverkusen",
+    "away": "Borussia Mönchengladbach",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6972531552839984,
+    "candidate": 0.7011278277318658,
+    "baseline": 0.6819571865443425,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8743108767424542,
+        "candidate": 0.8764569351824245,
+        "baseline": 0.8776758409785933
+      },
+      "2.5 Üst": {
+        "old": 0.6972531552839984,
+        "candidate": 0.7011278277318658,
+        "baseline": 0.6819571865443425
+      },
+      "KG Var": {
+        "old": 0.5359809292918584,
+        "candidate": 0.6510430656543725,
+        "baseline": 0.6422018348623854
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"de.1\", \"Eintracht Frankfurt\", \"SV Werder Bremen\"]": {
+    "date": "2026-12-05",
+    "league": "de.1",
+    "home": "Eintracht Frankfurt",
+    "away": "SV Werder Bremen",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5655150159955756,
+    "candidate": 0.6418362209046974,
+    "baseline": 0.6819571865443425,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7932581615036921,
+        "candidate": 0.842166916468807,
+        "baseline": 0.8776758409785933
+      },
+      "2.5 Üst": {
+        "old": 0.5655150159955756,
+        "candidate": 0.6418362209046974,
+        "baseline": 0.6819571865443425
+      },
+      "KG Var": {
+        "old": 0.5934947681800828,
+        "candidate": 0.6528158718586802,
+        "baseline": 0.6422018348623854
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"de.1\", \"FC Augsburg\", \"1. FC Köln\"]": {
+    "date": "2026-12-05",
+    "league": "de.1",
+    "home": "FC Augsburg",
+    "away": "1. FC Köln",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6698056996226208,
+    "candidate": 0.6848746896032549,
+    "baseline": 0.6819571865443425,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8587319181175976,
+        "candidate": 0.8673669961273544,
+        "baseline": 0.8776758409785933
+      },
+      "2.5 Üst": {
+        "old": 0.6698056996226208,
+        "candidate": 0.6848746896032549,
+        "baseline": 0.6819571865443425
+      },
+      "KG Var": {
+        "old": 0.6344376811555439,
+        "candidate": 0.6720740675931568,
+        "baseline": 0.6422018348623854
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"de.1\", \"RB Leipzig\", \"1. FSV Mainz 05\"]": {
+    "date": "2026-12-05",
+    "league": "de.1",
+    "home": "RB Leipzig",
+    "away": "1. FSV Mainz 05",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6602601118038804,
+    "candidate": 0.690712538238461,
+    "baseline": 0.6819571865443425,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8531576121745652,
+        "candidate": 0.8706585314486571,
+        "baseline": 0.8776758409785933
+      },
+      "2.5 Üst": {
+        "old": 0.6602601118038804,
+        "candidate": 0.690712538238461,
+        "baseline": 0.6819571865443425
+      },
+      "KG Var": {
+        "old": 0.6606744905892612,
+        "candidate": 0.6887484418691775,
+        "baseline": 0.6422018348623854
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"de.1\", \"SC Freiburg\", \"TSG 1899 Hoffenheim\"]": {
+    "date": "2026-12-05",
+    "league": "de.1",
+    "home": "SC Freiburg",
+    "away": "TSG 1899 Hoffenheim",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7544784839865974,
+    "candidate": 0.7159636184010527,
+    "baseline": 0.6819571865443425,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.9046892262118347,
+        "candidate": 0.8845535737253135,
+        "baseline": 0.8776758409785933
+      },
+      "2.5 Üst": {
+        "old": 0.7544784839865974,
+        "candidate": 0.7159636184010527,
+        "baseline": 0.6819571865443425
+      },
+      "KG Var": {
+        "old": 0.6945760718326273,
+        "candidate": 0.6929384218183328,
+        "baseline": 0.6422018348623854
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Athletic Club\", \"Real Madrid CF\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Athletic Club",
+    "away": "Real Madrid CF",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.43029125334248963,
+    "candidate": 0.5504294834581367,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.6915589588159976,
+        "candidate": 0.7829149355676347,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.43029125334248963,
+        "candidate": 0.5504294834581367,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.48832952946500835,
+        "candidate": 0.5721489922410394,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"CA Osasuna\", \"Elche CF\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "CA Osasuna",
+    "away": "Elche CF",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5185432952869836,
+    "candidate": 0.5889008955397503,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7602705204748466,
+        "candidate": 0.8088403024382164,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.5185432952869836,
+        "candidate": 0.5889008955397503,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.5568257800788974,
+        "candidate": 0.6128602244312557,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Club Atlético de Madrid\", \"Real Betis Balompié\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Club Atlético de Madrid",
+    "away": "Real Betis Balompié",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5988368526853677,
+    "candidate": 0.5776880506369892,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8152982701864129,
+        "candidate": 0.801436765444423,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.5988368526853677,
+        "candidate": 0.5776880506369892,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.5942863712587205,
+        "candidate": 0.5967738159752807,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Deportivo Alavés\", \"RCD Espanyol de Barcelona\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Deportivo Alavés",
+    "away": "RCD Espanyol de Barcelona",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6200962589216268,
+    "candidate": 0.5674809979287804,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8287987432908619,
+        "candidate": 0.7945890824450283,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.6200962589216268,
+        "candidate": 0.5674809979287804,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.6186617917217185,
+        "candidate": 0.590252514480935,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"FC Barcelona\", \"RC Celta de Vigo\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "FC Barcelona",
+    "away": "RC Celta de Vigo",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6791528011378659,
+    "candidate": 0.6758359315224092,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8641117745995668,
+        "candidate": 0.8622115607230995,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.6791528011378659,
+        "candidate": 0.6758359315224092,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.6066083464348265,
+        "candidate": 0.6294268403810136,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Getafe CF\", \"Valencia CF\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Getafe CF",
+    "away": "Valencia CF",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.350368648117931,
+    "candidate": 0.3821933082335407,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.620385072415756,
+        "candidate": 0.6498723934795856,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.350368648117931,
+        "candidate": 0.3821933082335407,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.4146925566001807,
+        "candidate": 0.44649729917011516,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Rayo Vallecano de Madrid\", \"Levante UD\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Rayo Vallecano de Madrid",
+    "away": "Levante UD",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6095635590826801,
+    "candidate": 0.6395179786639129,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017832,
+        "candidate": 0.8407621402179738,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826801,
+        "candidate": 0.6395179786639129,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.5308832425645768,
+        "candidate": 0.6414793915591144,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Real Racing Club de Santander\", \"RC Deportivo La Coruña\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Real Racing Club de Santander",
+    "away": "RC Deportivo La Coruña",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6921622151974797,
+    "candidate": 0.6959738902944168,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.871471269718985,
+        "candidate": 0.8735994605954907,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.6921622151974797,
+        "candidate": 0.6959738902944168,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.661489008800133,
+        "candidate": 0.6791610715300047,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Sevilla FC\", \"Málaga CF\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Sevilla FC",
+    "away": "Málaga CF",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.44329850009593597,
+    "candidate": 0.44901827245074577,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7022871265771717,
+        "candidate": 0.7069353809151919,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.44329850009593597,
+        "candidate": 0.44901827245074577,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.4674759529320283,
+        "candidate": 0.47071370290136233,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"es.1\", \"Villarreal CF\", \"Real Sociedad de Fútbol\"]": {
+    "date": "2026-12-06",
+    "league": "es.1",
+    "home": "Villarreal CF",
+    "away": "Real Sociedad de Fútbol",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7468748973702162,
+    "candidate": 0.7002377605927624,
+    "baseline": 0.5337995337995338,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.9008146339155585,
+        "candidate": 0.8759651112156971,
+        "baseline": 0.8158508158508159
+      },
+      "2.5 Üst": {
+        "old": 0.7468748973702162,
+        "candidate": 0.7002377605927624,
+        "baseline": 0.5337995337995338
+      },
+      "KG Var": {
+        "old": 0.7063937980079621,
+        "candidate": 0.6904902561481225,
+        "baseline": 0.5944055944055944
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"AC Milan\", \"Parma Calcio 1913\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "AC Milan",
+    "away": "Parma Calcio 1913",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.4302912533424894,
+    "candidate": 0.4391221425051167,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.6915589588159975,
+        "candidate": 0.6988665969554397,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.4302912533424894,
+        "candidate": 0.4391221425051167,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.4610181334003835,
+        "candidate": 0.47553841807022357,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"AC Monza\", \"Como 1907\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "AC Monza",
+    "away": "Como 1907",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6602601118038804,
+    "candidate": 0.6760333039309456,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8531576121745652,
+        "candidate": 0.8623249063425402,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.6602601118038804,
+        "candidate": 0.6760333039309456,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.630384315326639,
+        "candidate": 0.6560425185912134,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"ACF Fiorentina\", \"Cagliari Calcio\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "ACF Fiorentina",
+    "away": "Cagliari Calcio",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.43029125334248963,
+    "candidate": 0.4697061778370787,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.6915589588159976,
+        "candidate": 0.7234051162050261,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.43029125334248963,
+        "candidate": 0.4697061778370787,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.48832952946500835,
+        "candidate": 0.5185960596396719,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"Bologna FC 1909\", \"AS Roma\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "Bologna FC 1909",
+    "away": "AS Roma",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5423791164789341,
+    "candidate": 0.5238016844577438,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7772993646318719,
+        "candidate": 0.7640797273334822,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.5423791164789341,
+        "candidate": 0.5238016844577438,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.5646002003418822,
+        "candidate": 0.5180118780635362,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"Frosinone Calcio\", \"FC Internazionale Milano\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "Frosinone Calcio",
+    "away": "FC Internazionale Milano",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.587918159141585,
+    "candidate": 0.6121792631897551,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8081963562158793,
+        "candidate": 0.8238211982469388,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.587918159141585,
+        "candidate": 0.6121792631897551,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.611980790415968,
+        "candidate": 0.6298048665421812,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"Genoa CFC\", \"Torino FC\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "Genoa CFC",
+    "away": "Torino FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5655150159955756,
+    "candidate": 0.541570719713298,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7932581615036921,
+        "candidate": 0.7767317260143332,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.5655150159955756,
+        "candidate": 0.541570719713298,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.594639257706205,
+        "candidate": 0.5759770590545777,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"Juventus FC\", \"Udinese Calcio\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "Juventus FC",
+    "away": "Udinese Calcio",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5423791164789341,
+    "candidate": 0.5366477474344642,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7772993646318719,
+        "candidate": 0.7732600793353213,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.5423791164789341,
+        "candidate": 0.5366477474344642,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.5730645540140827,
+        "candidate": 0.562783113272305,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"SS Lazio\", \"Atalanta BC\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "SS Lazio",
+    "away": "Atalanta BC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5655150159955756,
+    "candidate": 0.48762636909719115,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7932581615036921,
+        "candidate": 0.7372520199013199,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.5655150159955756,
+        "candidate": 0.48762636909719115,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.594639257706205,
+        "candidate": 0.5338631470856062,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"SSC Napoli\", \"US Lecce\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "SSC Napoli",
+    "away": "US Lecce",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.49404900047099864,
+    "candidate": 0.47253087366933744,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7421230723294321,
+        "candidate": 0.7256131529917759,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.49404900047099864,
+        "candidate": 0.47253087366933744,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.525532155535607,
+        "candidate": 0.497352618890078,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"it.1\", \"Venezia FC\", \"US Sassuolo Calcio\"]": {
+    "date": "2026-12-06",
+    "league": "it.1",
+    "home": "Venezia FC",
+    "away": "US Sassuolo Calcio",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6095635590826802,
+    "candidate": 0.6143502261958498,
+    "baseline": 0.5101522842639594,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017833,
+        "candidate": 0.8251919877464192,
+        "baseline": 0.7791878172588832
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826802,
+        "candidate": 0.6143502261958498,
+        "baseline": 0.5101522842639594
+      },
+      "KG Var": {
+        "old": 0.5993838433683246,
+        "candidate": 0.5995931789284666,
+        "baseline": 0.5101522842639594
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"AS Monaco FC\", \"Angers SCO\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "AS Monaco FC",
+    "away": "Angers SCO",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5423791164789341,
+    "candidate": 0.5521969670478916,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7772993646318719,
+        "candidate": 0.7841388491192796,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.5423791164789341,
+        "candidate": 0.5521969670478916,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.5215346781977022,
+        "candidate": 0.5679454475484057,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"Lille OSC\", \"AJ Auxerre\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "Lille OSC",
+    "away": "AJ Auxerre",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5655150159955755,
+    "candidate": 0.5449382023450957,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.793258161503692,
+        "candidate": 0.7790917872761638,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.5655150159955755,
+        "candidate": 0.5449382023450957,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.5934947681800828,
+        "candidate": 0.5657495625510383,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"Olympique de Marseille\", \"OGC Nice\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "Olympique de Marseille",
+    "away": "OGC Nice",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6200962589216268,
+    "candidate": 0.5653410670526692,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8287987432908619,
+        "candidate": 0.7931402147485731,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.6200962589216268,
+        "candidate": 0.5653410670526692,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.6042327088295514,
+        "candidate": 0.5786435877252033,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"Paris FC\", \"Le Mans FC\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "Paris FC",
+    "away": "Le Mans FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6791528011378659,
+    "candidate": 0.6561480585799773,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8641117745995668,
+        "candidate": 0.850731164881224,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.6791528011378659,
+        "candidate": 0.6561480585799773,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.6756753380090619,
+        "candidate": 0.6582017022449447,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"RC Strasbourg Alsace\", \"FC Lorient\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "RC Strasbourg Alsace",
+    "away": "FC Lorient",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6095635590826801,
+    "candidate": 0.6381967821361081,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017832,
+        "candidate": 0.8399593395895966,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826801,
+        "candidate": 0.6381967821361081,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.6287076350456418,
+        "candidate": 0.6505305645433103,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"Racing Club de Lens\", \"Le Havre AC\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "Racing Club de Lens",
+    "away": "Le Havre AC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5768099188731565,
+    "candidate": 0.5697507738032093,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8008517265285442,
+        "candidate": 0.7961208289745303,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.5768099188731565,
+        "candidate": 0.5697507738032093,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.5673473654471494,
+        "candidate": 0.5800055398122992,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"Stade Rennais FC 1901\", \"Stade Brestois 29\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "Stade Rennais FC 1901",
+    "away": "Stade Brestois 29",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.506375508926538,
+    "candidate": 0.5987799883570888,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7513396028629259,
+        "candidate": 0.8152615819685206,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.506375508926538,
+        "candidate": 0.5987799883570888,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.5166425475155727,
+        "candidate": 0.6088369495543168,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"fr.1\", \"Toulouse FC\", \"Paris Saint-Germain FC\"]": {
+    "date": "2026-12-05",
+    "league": "fr.1",
+    "home": "Toulouse FC",
+    "away": "Paris Saint-Germain FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5540368014428194,
+    "candidate": 0.573053756785772,
+    "baseline": 0.5820433436532507,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7854094417800118,
+        "candidate": 0.7983406082791265,
+        "baseline": 0.7956656346749226
+      },
+      "2.5 Üst": {
+        "old": 0.5540368014428194,
+        "candidate": 0.573053756785772,
+        "baseline": 0.5820433436532507
+      },
+      "KG Var": {
+        "old": 0.5711454840914704,
+        "candidate": 0.5842339411394346,
+        "baseline": 0.5634674922600619
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"nl.1\", \"AZ\", \"PSV\"]": {
+    "date": "2026-12-05",
+    "league": "nl.1",
+    "home": "AZ",
+    "away": "PSV",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7311033222888894,
+    "candidate": 0.7415557866895064,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8926202950904051,
+        "candidate": 0.8980747973307155,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.7311033222888894,
+        "candidate": 0.7415557866895064,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.7198619248179162,
+        "candidate": 0.7268480902466147,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"nl.1\", \"Fortuna Sittard\", \"PEC Zwolle\"]": {
+    "date": "2026-12-05",
+    "league": "nl.1",
+    "home": "Fortuna Sittard",
+    "away": "PEC Zwolle",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.739083831594948,
+    "candidate": 0.715202630856006,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8967932782738708,
+        "candidate": 0.8841428965362392,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.739083831594948,
+        "candidate": 0.715202630856006,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.7221120546121457,
+        "candidate": 0.701594435001766,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"nl.1\", \"Sparta Rotterdam\", \"NEC\"]": {
+    "date": "2026-12-05",
+    "league": "nl.1",
+    "home": "Sparta Rotterdam",
+    "away": "NEC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6200962589216268,
+    "candidate": 0.6672397918981114,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8287987432908619,
+        "candidate": 0.857241505383354,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.6200962589216268,
+        "candidate": 0.6672397918981114,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.6186617917217185,
+        "candidate": 0.6576162261287084,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"nl.1\", \"Willem II Tilburg\", \"Feyenoord Rotterdam\"]": {
+    "date": "2026-12-05",
+    "league": "nl.1",
+    "home": "Willem II Tilburg",
+    "away": "Feyenoord Rotterdam",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6985158463058496,
+    "candidate": 0.6979475867892992,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8750116771141152,
+        "candidate": 0.8746964618990027,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.6985158463058496,
+        "candidate": 0.6979475867892992,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.5633503155383593,
+        "candidate": 0.5691371884078592,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"nl.1\", \"ADO Den Haag\", \"SBV Excelsior\"]": {
+    "date": "2026-12-06",
+    "league": "nl.1",
+    "home": "ADO Den Haag",
+    "away": "SBV Excelsior",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6908794231872555,
+    "candidate": 0.6783171913973308,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8707521864939177,
+        "candidate": 0.8636339750791695,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.6908794231872555,
+        "candidate": 0.6783171913973308,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.6429756514989493,
+        "candidate": 0.6459249998743897,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"nl.1\", \"AFC Ajax\", \"FC Utrecht\"]": {
+    "date": "2026-12-06",
+    "league": "nl.1",
+    "home": "AFC Ajax",
+    "away": "FC Utrecht",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7618966944464557,
+    "candidate": 0.7336392738314527,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.9084218055563291,
+        "candidate": 0.8939522497941618,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.7618966944464557,
+        "candidate": 0.7336392738314527,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.7353732711131958,
+        "candidate": 0.7009835734501744,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"nl.1\", \"Go Ahead Eagles\", \"FC Twente '65\"]": {
+    "date": "2026-12-06",
+    "league": "nl.1",
+    "home": "Go Ahead Eagles",
+    "away": "FC Twente '65",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7544784839865974,
+    "candidate": 0.691893208862292,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.9046892262118348,
+        "candidate": 0.871320594529206,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.7544784839865974,
+        "candidate": 0.691893208862292,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.7346775999626078,
+        "candidate": 0.6920892939195048,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"nl.1\", \"SC Heerenveen\", \"SC Cambuur-Leeuwarden\"]": {
+    "date": "2026-12-06",
+    "league": "nl.1",
+    "home": "SC Heerenveen",
+    "away": "SC Cambuur-Leeuwarden",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7096998926754184,
+    "candidate": 0.6943451434662826,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8811583854517223,
+        "candidate": 0.8726916270605318,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.7096998926754184,
+        "candidate": 0.6943451434662826,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.670331684383724,
+        "candidate": 0.676676998424111,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"CD Nacional\", \"Sport Lisboa e Benfica\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "CD Nacional",
+    "away": "Sport Lisboa e Benfica",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6200962589216268,
+    "candidate": 0.6353472433192925,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8287987432908619,
+        "candidate": 0.8382224191054384,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.6200962589216268,
+        "candidate": 0.6353472433192925,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.5854346920273048,
+        "candidate": 0.5836357860058506,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"CD Santa Clara\", \"FC Porto\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "CD Santa Clara",
+    "away": "FC Porto",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5768099188731565,
+    "candidate": 0.5097037978645478,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8008517265285442,
+        "candidate": 0.7537988123933932,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.5768099188731565,
+        "candidate": 0.5097037978645478,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.6012935864316021,
+        "candidate": 0.5372486442490346,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"CF Estrela da Amadora\", \"Gil Vicente FC\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "CF Estrela da Amadora",
+    "away": "Gil Vicente FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5768099188731565,
+    "candidate": 0.6036083020425578,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8008517265285442,
+        "candidate": 0.8183657032606629,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.5768099188731565,
+        "candidate": 0.6036083020425578,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.5895083280572286,
+        "candidate": 0.6242371836030952,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"FC Alverca\", \"Moreirense FC\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "FC Alverca",
+    "away": "Moreirense FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5185432952869836,
+    "candidate": 0.49587155676673167,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7602705204748466,
+        "candidate": 0.7434966821594884,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.5185432952869836,
+        "candidate": 0.49587155676673167,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.539006868887874,
+        "candidate": 0.5329819558436458,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"FC Famalicão\", \"Académico de Viseu FC\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "FC Famalicão",
+    "away": "Académico de Viseu FC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.4395938464481616,
+    "candidate": 0.4634729134001877,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.699254064335249,
+        "candidate": 0.7184984022093512,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.4395938464481616,
+        "candidate": 0.4634729134001877,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.480766852679727,
+        "candidate": 0.5147634122963124,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"GD Estoril Praia\", \"Vitória Guimarães\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "GD Estoril Praia",
+    "away": "Vitória Guimarães",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6095635590826802,
+    "candidate": 0.5376101112608895,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017833,
+        "candidate": 0.7739407423846291,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826802,
+        "candidate": 0.5376101112608895,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.6183129779995622,
+        "candidate": 0.5729841304209382,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"Rio Ave FC\", \"Casa Pia AC\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "Rio Ave FC",
+    "away": "Casa Pia AC",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.5988368526853678,
+    "candidate": 0.57728223735206,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.815298270186413,
+        "candidate": 0.8011664949039108,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.5988368526853678,
+        "candidate": 0.57728223735206,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.6205532547400716,
+        "candidate": 0.6038468062493549,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"Sporting Clube de Braga\", \"FC Arouca\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "Sporting Clube de Braga",
+    "away": "FC Arouca",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.506375508926538,
+    "candidate": 0.5382010805587789,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7513396028629259,
+        "candidate": 0.7743582394183731,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.506375508926538,
+        "candidate": 0.5382010805587789,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.5324379110470149,
+        "candidate": 0.5700462330801901,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-06\", \"pt.1\", \"Sporting Clube de Portugal\", \"CS Marítimo\"]": {
+    "date": "2026-12-06",
+    "league": "pt.1",
+    "home": "Sporting Clube de Portugal",
+    "away": "CS Marítimo",
+    "recordedAt": "2026-11-27T09:03:42.256519+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6657390479209849,
+    "candidate": 0.6356736274820305,
+    "baseline": 0.5797101449275363,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8563670760373341,
+        "candidate": 0.8384217429821699,
+        "baseline": 0.8
+      },
+      "2.5 Üst": {
+        "old": 0.6657390479209849,
+        "candidate": 0.6356736274820305,
+        "baseline": 0.5797101449275363
+      },
+      "KG Var": {
+        "old": 0.6178603091005753,
+        "candidate": 0.5851789308804786,
+        "baseline": 0.5159420289855072
+      }
+    },
+    "result": null
   }
 }
