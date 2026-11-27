@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-27T07:29:00+03:00",
+  "updatedAt": "2026-11-27T07:30:32+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -159,10 +159,10 @@
       "today": 2,
       "next7": 7,
       "completedMatches": 414,
-      "candidates": 3,
+      "candidates": 5,
       "excluded": {
         "alreadyScored": 0,
-        "insufficientHistory": 4
+        "insufficientHistory": 2
       },
       "seasonsLoaded": [
         "2026-27",
@@ -1267,7 +1267,7 @@
     {
       "date": "2026-11-27",
       "league": "Türkiye Süper Lig",
-      "match": "alanyaspor – torku konyaspor",
+      "match": "alanyaspor – konyaspor",
       "formResearch": {
         "version": "5.06",
         "asOfExclusive": "2026-11-27",
@@ -1326,21 +1326,425 @@
           "latestCompletedDate": "2026-11-22"
         },
         "away": {
-          "sample": 0,
-          "rows": [],
-          "wins": 0,
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-22",
+              "opponent": "besiktas",
+              "gf": 2,
+              "ga": 4,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-07",
+              "opponent": "samsunspor",
+              "gf": 0,
+              "ga": 1,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-30",
+              "opponent": "galatasaray",
+              "gf": 0,
+              "ga": 4,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-25",
+              "opponent": "genclerbirligi",
+              "gf": 2,
+              "ga": 0,
+              "venue": "home",
+              "result": "W"
+            },
+            {
+              "date": "2026-10-17",
+              "opponent": "amed",
+              "gf": 0,
+              "ga": 1,
+              "venue": "away",
+              "result": "L"
+            }
+          ],
+          "wins": 1,
           "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "losses": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 10,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-22"
         },
-        "h2h": [],
+        "h2h": [
+          {
+            "date": "2026-02-14",
+            "home": "alanyaspor",
+            "away": "konyaspor",
+            "score": [
+              2,
+              1
+            ],
+            "stats": {
+              "corners": [
+                4,
+                3
+              ],
+              "yellowCards": [
+                2,
+                4
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                19,
+                9
+              ],
+              "shotsOnTarget": [
+                6,
+                2
+              ],
+              "halfTimeGoals": [
+                1,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2025-09-13",
+            "home": "konyaspor",
+            "away": "alanyaspor",
+            "score": [
+              1,
+              2
+            ],
+            "stats": {
+              "corners": [
+                6,
+                1
+              ],
+              "yellowCards": [
+                5,
+                3
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                13,
+                7
+              ],
+              "shotsOnTarget": [
+                5,
+                4
+              ],
+              "halfTimeGoals": [
+                0,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2025-05-25",
+            "home": "konyaspor",
+            "away": "alanyaspor",
+            "score": [
+              1,
+              2
+            ],
+            "stats": {
+              "corners": [
+                6,
+                2
+              ],
+              "yellowCards": [
+                4,
+                5
+              ],
+              "redCards": [
+                1,
+                0
+              ],
+              "shots": [
+                12,
+                10
+              ],
+              "shotsOnTarget": [
+                4,
+                5
+              ],
+              "halfTimeGoals": [
+                0,
+                2
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2025-01-03",
+            "home": "alanyaspor",
+            "away": "konyaspor",
+            "score": [
+              2,
+              1
+            ],
+            "stats": {
+              "corners": [
+                7,
+                2
+              ],
+              "yellowCards": [
+                3,
+                4
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                12,
+                8
+              ],
+              "shotsOnTarget": [
+                6,
+                3
+              ],
+              "halfTimeGoals": [
+                1,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2024-04-20",
+            "home": "konyaspor",
+            "away": "alanyaspor",
+            "score": [
+              0,
+              2
+            ],
+            "stats": {
+              "corners": [
+                2,
+                1
+              ],
+              "yellowCards": [
+                2,
+                3
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                5,
+                11
+              ],
+              "shotsOnTarget": [
+                1,
+                3
+              ],
+              "halfTimeGoals": [
+                0,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2023-12-02",
+            "home": "alanyaspor",
+            "away": "konyaspor",
+            "score": [
+              2,
+              2
+            ],
+            "stats": {
+              "corners": [
+                4,
+                6
+              ],
+              "yellowCards": [
+                2,
+                2
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                19,
+                13
+              ],
+              "shotsOnTarget": [
+                5,
+                6
+              ],
+              "halfTimeGoals": [
+                2,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2023-05-16",
+            "home": "alanyaspor",
+            "away": "konyaspor",
+            "score": [
+              0,
+              3
+            ],
+            "stats": {
+              "corners": [
+                3,
+                3
+              ],
+              "yellowCards": [
+                4,
+                2
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                12,
+                14
+              ],
+              "shotsOnTarget": [
+                5,
+                6
+              ],
+              "halfTimeGoals": [
+                0,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2022-12-25",
+            "home": "konyaspor",
+            "away": "alanyaspor",
+            "score": [
+              2,
+              2
+            ],
+            "stats": {
+              "corners": [
+                4,
+                5
+              ],
+              "yellowCards": [
+                3,
+                4
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                10,
+                15
+              ],
+              "shotsOnTarget": [
+                3,
+                6
+              ],
+              "halfTimeGoals": [
+                1,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2022-02-27",
+            "home": "alanyaspor",
+            "away": "konyaspor",
+            "score": [
+              5,
+              1
+            ],
+            "stats": {
+              "corners": [
+                4,
+                5
+              ],
+              "yellowCards": [
+                1,
+                3
+              ],
+              "redCards": [
+                0,
+                1
+              ],
+              "shots": [
+                17,
+                14
+              ],
+              "shotsOnTarget": [
+                10,
+                3
+              ],
+              "halfTimeGoals": [
+                4,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2021-10-02",
+            "home": "konyaspor",
+            "away": "alanyaspor",
+            "score": [
+              1,
+              1
+            ],
+            "stats": {
+              "corners": [
+                7,
+                5
+              ],
+              "yellowCards": [
+                2,
+                3
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                17,
+                10
+              ],
+              "shotsOnTarget": [
+                4,
+                5
+              ],
+              "halfTimeGoals": [
+                0,
+                0
+              ]
+            },
+            "competition": "T1"
+          }
+        ],
         "injuriesAvailable": false,
         "lineupsAvailable": false,
         "advancedStatsAvailable": false,
         "h2hCoverage": {
           "version": "5.28",
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "requestedSeasons": 6,
           "loadedSeasons": [
             2026,
@@ -1352,8 +1756,8 @@
           ],
           "failedSeasons": [],
           "limit": 12,
-          "sample": 0,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "conflictsExcluded": 0,
           "scope": "same_league_only",
           "extraDivision": null,
@@ -7072,20 +7476,63 @@
     {
       "date": "2026-11-28",
       "league": "Türkiye Süper Lig",
-      "match": "gazisehir gaziantep – amed",
+      "match": "gaziantep – amed",
       "formResearch": {
         "version": "5.06",
         "asOfExclusive": "2026-11-27",
         "scope": "available_league_history_only",
         "sourceConflictsExcluded": 0,
         "home": {
-          "sample": 0,
-          "rows": [],
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-21",
+              "opponent": "genclerbirligi",
+              "gf": 0,
+              "ga": 1,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-06",
+              "opponent": "kasimpasa",
+              "gf": 0,
+              "ga": 2,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-01",
+              "opponent": "trabzonspor",
+              "gf": 0,
+              "ga": 2,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-24",
+              "opponent": "erzurumspor",
+              "gf": 1,
+              "ga": 3,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-18",
+              "opponent": "basaksehir",
+              "gf": 1,
+              "ga": 2,
+              "venue": "away",
+              "result": "L"
+            }
+          ],
           "wins": 0,
           "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "losses": 5,
+          "goalsFor": 2,
+          "goalsAgainst": 10,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-21"
         },
         "away": {
           "sample": 5,
@@ -30185,6 +30632,31 @@
     },
     {
       "date": "2026-11-27",
+      "league": "Türkiye Süper Lig",
+      "match": "alanyaspor – konyaspor",
+      "markets": {
+        "1.5 Üst": 73.3,
+        "2.5 Üst": 48.2,
+        "KG Var": 51.8
+      },
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
+        "away": 1.1
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-27",
       "league": "Portekiz Primeira Liga",
       "match": "CS Marítimo – CD Nacional",
       "markets": {
@@ -30452,6 +30924,31 @@
       },
       "expectedGoals": {
         "home": 1.55,
+        "away": 1.7
+      },
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-11-28",
+      "league": "Türkiye Süper Lig",
+      "match": "gaziantep – amed",
+      "markets": {
+        "1.5 Üst": 82.9,
+        "2.5 Üst": 62.0,
+        "KG Var": 63.5
+      },
+      "sample": {
+        "home": 10,
+        "away": 5
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.5,
         "away": 1.7
       },
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
@@ -32259,7 +32756,7 @@
       "edge": null
     }
   ],
-  "candidateCount": 88,
+  "candidateCount": 90,
   "fixtureWindowDays": 7,
   "upcomingCount": 97,
   "upcomingCountsByDate": {
@@ -32279,5 +32776,5 @@
   "fixtureCoverageComplete": false,
   "candidateListLimit": null,
   "candidateListComplete": true,
-  "reason": "PAS — 9/9 lig okundu; bugün 7, 7 günde 97 fikstür; 88 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
+  "reason": "PAS — 9/9 lig okundu; bugün 7, 7 günde 97 fikstür; 90 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
 }

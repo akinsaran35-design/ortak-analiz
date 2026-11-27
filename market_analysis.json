@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-27T04:29:22.532632+00:00",
+  "updatedAt": "2026-11-27T04:30:51.096235+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -13,14 +13,14 @@
       "bookCount": 4,
       "bookProbabilities": {
         "leovegas": 0.504021,
-        "casumo": 0.5,
+        "casumo": 0.485175,
         "grosvenor": 0.523936,
         "williamhill": 0.52
       },
       "marketProbability": 0.512,
       "modelProbabilityUncalibrated": 0.599,
       "difference": 0.087,
-      "bookProbabilitySpread": 0.0239,
+      "bookProbabilitySpread": 0.0388,
       "marketFairOdds": 1.9531,
       "medianMargin": 0.0704
     },
@@ -29,16 +29,16 @@
       "eventId": "abfc6851b152aecbb4bf84a348967f69",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.47043,
-        "williamhill": 0.463807,
-        "matchbook": 0.42928
+        "grosvenor": 0.435356,
+        "williamhill": 0.442971,
+        "matchbook": 0.398058
       },
-      "marketProbability": 0.4638,
+      "marketProbability": 0.4354,
       "modelProbabilityUncalibrated": 0.46299999999999997,
-      "difference": -0.0008,
-      "bookProbabilitySpread": 0.0411,
-      "marketFairOdds": 2.1561,
-      "medianMargin": 0.078
+      "difference": 0.0276,
+      "bookProbabilitySpread": 0.0449,
+      "marketFairOdds": 2.297,
+      "medianMargin": 0.0734
     },
     {
       "match": "West Ham United FC – Stoke City FC",
@@ -132,13 +132,13 @@
         "leovegas": 0.507979,
         "casumo": 0.506849,
         "williamhill": 0.52,
-        "matchbook": 0.508997
+        "matchbook": 0.510256
       },
-      "marketProbability": 0.509,
+      "marketProbability": 0.5103,
       "modelProbabilityUncalibrated": 0.5539999999999999,
-      "difference": 0.045,
+      "difference": 0.0437,
       "bookProbabilitySpread": 0.0147,
-      "marketFairOdds": 1.9646,
+      "marketFairOdds": 1.9598,
       "medianMargin": 0.0684
     },
     {
@@ -233,7 +233,7 @@
         "leovegas": 0.484127,
         "casumo": 0.478142,
         "williamhill": 0.48,
-        "matchbook": 0.487113
+        "matchbook": 0.484456
       },
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.469,
@@ -579,18 +579,19 @@
     {
       "match": "Brentford FC – Arsenal FC",
       "eventId": "5f5235df01a384e23ff224101ff175e1",
-      "bookCount": 3,
+      "bookCount": 4,
       "bookProbabilities": {
         "leovegas": 0.528,
         "williamhill": 0.536193,
-        "grosvenor": 0.529101
+        "grosvenor": 0.529101,
+        "matchbook": 0.524934
       },
-      "marketProbability": 0.5291,
+      "marketProbability": 0.5286,
       "modelProbabilityUncalibrated": 0.506,
-      "difference": -0.0231,
-      "bookProbabilitySpread": 0.0082,
-      "marketFairOdds": 1.89,
-      "medianMargin": 0.07
+      "difference": -0.0226,
+      "bookProbabilitySpread": 0.0113,
+      "marketFairOdds": 1.892,
+      "medianMargin": 0.0659
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-27T04:29:22.450479+00:00",
+  "updatedAt": "2026-11-27T04:30:51.034672+00:00",
   "decision": "PAS",
-  "matchedCount": 67,
+  "matchedCount": 69,
   "unmatchedCount": 21,
   "matched": [
     {
@@ -34,6 +34,12 @@
       "eventId": "02ff879cf54f6d1fec2664efee0431db",
       "kickoff": "2026-11-27T19:45:00+00:00",
       "freshLineCount": 4
+    },
+    {
+      "match": "alanyaspor – konyaspor",
+      "eventId": "ffcd87d9e41dbce42bd91952669b2e47",
+      "kickoff": "2026-11-27T17:00:00+00:00",
+      "freshLineCount": 2
     },
     {
       "match": "CS Marítimo – CD Nacional",
@@ -99,6 +105,12 @@
       "match": "Ipswich Town FC – Aston Villa FC",
       "eventId": "9d23f6ad21946dd258869ebc22236cf0",
       "kickoff": "2026-11-28T17:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "gaziantep – amed",
+      "eventId": "4001fed3da6baa90d8b6278f43a77af1",
+      "kickoff": "2026-11-28T16:00:00+00:00",
       "freshLineCount": 1
     },
     {

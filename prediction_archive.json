@@ -1230,5 +1230,18 @@
       "KG Var": 64.8
     },
     "result": null
+  },
+  "[\"2026-11-28\", \"Türkiye Süper Lig\", \"gaziantep – amed\"]": {
+    "date": "2026-11-28",
+    "league": "Türkiye Süper Lig",
+    "match": "gaziantep – amed",
+    "recordedAt": "2026-11-27T07:31:01.109118+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.9,
+      "2.5 Üst": 62.0,
+      "KG Var": 63.5
+    },
+    "result": null
   }
 }

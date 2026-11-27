@@ -1,7 +1,7 @@
 {
   "version": "4.92",
-  "updatedAt": "2026-11-27T07:29:38.181400+03:00",
-  "dailyUpdatedAt": "2026-11-27T07:29:00+03:00",
+  "updatedAt": "2026-11-27T07:31:04.079713+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:30:32+03:00",
   "mode": "research_only",
   "dates": [
     "2026-11-28",
@@ -24991,37 +24991,67 @@
     },
     {
       "league": "tr.1",
-      "published": [],
-      "espn": [
-        {
-          "date": "2026-11-28",
-          "eventId": "401888368",
-          "kickoff": "2026-11-28T16:00:00+00:00",
-          "match": "Gaziantep FK – Amed SFK"
-        }
-      ],
-      "status": "espn_only"
-    },
-    {
-      "league": "tr.1",
       "published": [
         {
           "date": "2026-11-28",
           "league": "Türkiye Süper Lig",
-          "match": "gazisehir gaziantep – amed",
+          "match": "gaziantep – amed",
           "formResearch": {
             "version": "5.06",
             "asOfExclusive": "2026-11-27",
             "scope": "available_league_history_only",
             "sourceConflictsExcluded": 0,
             "home": {
-              "sample": 0,
-              "rows": [],
+              "sample": 5,
+              "rows": [
+                {
+                  "date": "2026-11-21",
+                  "opponent": "genclerbirligi",
+                  "gf": 0,
+                  "ga": 1,
+                  "venue": "away",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-11-06",
+                  "opponent": "kasimpasa",
+                  "gf": 0,
+                  "ga": 2,
+                  "venue": "home",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-11-01",
+                  "opponent": "trabzonspor",
+                  "gf": 0,
+                  "ga": 2,
+                  "venue": "away",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "erzurumspor",
+                  "gf": 1,
+                  "ga": 3,
+                  "venue": "home",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "basaksehir",
+                  "gf": 1,
+                  "ga": 2,
+                  "venue": "away",
+                  "result": "L"
+                }
+              ],
               "wins": 0,
               "draws": 0,
-              "losses": 0,
-              "goalsFor": 0,
-              "goalsAgainst": 0
+              "losses": 5,
+              "goalsFor": 2,
+              "goalsAgainst": 10,
+              "source": "football-data.co.uk",
+              "latestCompletedDate": "2026-11-21"
             },
             "away": {
               "sample": 5,
@@ -25108,6 +25138,19 @@
       ],
       "espn": [],
       "status": "published_only"
+    },
+    {
+      "league": "tr.1",
+      "published": [],
+      "espn": [
+        {
+          "date": "2026-11-28",
+          "eventId": "401888368",
+          "kickoff": "2026-11-28T16:00:00+00:00",
+          "match": "Gaziantep FK – Amed SFK"
+        }
+      ],
+      "status": "espn_only"
     },
     {
       "league": "tr.1",
