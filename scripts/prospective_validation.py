@@ -5,6 +5,8 @@ from pathlib import Path
 
 from backtest import LEAGUES, fetch, team, predict, weighted_predict
 from prospective_markets import capture, summarize
+from prospective_capture_window import HORIZON_DAYS, identity, existing_identities, capture_status
+from collections import Counter
 
 ROOT = Path(__file__).resolve().parent.parent
 NOW = datetime.now(timezone(timedelta(hours=3)))
@@ -18,6 +20,8 @@ records = json.loads(
 from calendar_duplicate_guard import load_guard
 blocked = load_guard(ROOT, records, "prospective", NOW)
 calendar_duplicate_prevented = 0
+existing = existing_identities(records)
+capture_counts = Counter()
 errors = []
 
 year = TODAY.year if TODAY.month >= 7 else TODAY.year - 1
@@ -79,24 +83,21 @@ for league in LEAGUES:
             ensure_ascii=False
         )
 
-        if key in records:
-            # New outcomes are written only through verified_results below.
+        try:
+            status = capture_status(league,d,h,a,ft,TODAY,existing,blocked)
+        except (KeyError,ValueError,TypeError):
+            capture_counts["invalid_identity"] += 1
             continue
-
-        if d <= TODAY or ft is not None:
-            continue
-
-        if d > TODAY + timedelta(days=7):
-            continue
-
-        if (league,h,a,d.isoformat()) in blocked:
-            calendar_duplicate_prevented += 1
+        if status != "eligible":
+            if status == "calendar_blocked": calendar_duplicate_prevented += 1
+            if status != "outside_future_window": capture_counts[status] += 1
             continue
 
         old = predict(history, h, a)
         new = weighted_predict(history, h, a)
 
         if old is None or new is None or not history:
+            capture_counts['insufficient_history'] += 1
             continue
 
         baseline = sum(
@@ -123,6 +124,8 @@ for league in LEAGUES:
             "prospectiveMarkets": markets,
             "result": None
         }
+        existing.add(identity(league,d.isoformat(),h,a))
+        capture_counts["new"] += 1
 
 from verified_results import load_verified, settle_verified
 try:
@@ -146,6 +149,8 @@ report = {
     "recorded": len(records),
     "verifiedFallbackSettled": verified_count,
     "calendarDuplicatePrevented": calendar_duplicate_prevented,
+    "captureWindowDays": HORIZON_DAYS,
+    "captureCounts": dict(capture_counts),
     "tested": n,
     "pending": len(records) - n,
     "minimumMatches": 500,
