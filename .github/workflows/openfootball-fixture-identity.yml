@@ -1,0 +1,22 @@
+name: V6.17 OpenFootball fixture identity audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/openfootball_fixture_identity.py'
+      - '.github/workflows/openfootball-fixture-identity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/openfootball_fixture_identity.py --self-test
+      - run: python3 scripts/openfootball_fixture_identity.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: openfootball-fixture-identity
+          path: openfootball_fixture_identity.json
