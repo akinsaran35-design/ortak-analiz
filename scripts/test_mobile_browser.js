@@ -1,5 +1,10 @@
 const assert=require("node:assert/strict");
 const {chromium}=require("playwright");
+const {systemColumns,systemCost}=require("../money-v497.js");
+assert.deepEqual(systemColumns(5),{total:26,bySize:{2:10,3:10,4:5,5:1}});
+assert.equal(systemColumns(6).total,56);
+assert.equal(systemColumns(4),null);
+assert.equal(systemCost(5,"total",1000,{balance:5000,dailyCap:5000,spent:0}).unused,12);
 (async()=>{
  const browser=await chromium.launch({headless:true});
  try{
@@ -21,7 +26,7 @@ const {chromium}=require("playwright");
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
-  await page.getByText("FOOTBALL INTELLIGENCE · UI 528",{exact:true}).waitFor();
+  await page.getByText("FOOTBALL INTELLIGENCE · UI 529",{exact:true}).waitFor();
   for(const width of [320,360,393,412,540,690,980]){
     await page.setViewportSize({width,height:850});
     const sizes=await page.evaluate(()=>({body:document.body.getBoundingClientRect().width,nav:document.querySelector(".bottom-nav").getBoundingClientRect().width,main:document.querySelector("main").getBoundingClientRect().width,viewport:innerWidth,scroll:document.documentElement.scrollWidth}));
@@ -125,6 +130,20 @@ const {chromium}=require("playwright");
   await page.locator("#budget-value").fill("5000");
   await page.locator("#budget-form button").click();
   await page.locator("#tab-coupons").click();
+  assert.equal(await page.locator("#coupon-ready").isVisible(),true);
+  assert.equal(await page.locator("#coupon-tiers article").count(),3);
+  await page.getByRole("button",{name:"Sistem Kuponları",exact:true}).click();
+  assert.equal(await page.locator("#coupon-markets article").count(),9);
+  await page.locator("#system-amount").fill("260");
+  await page.locator("#system-cost-output").getByText(/Toplam 26 kolon/).waitFor();
+  assert.equal(await page.locator("#system-cost-output .money-tile").filter({hasText:"Kolon başı"}).locator("strong").innerText(),(10).toLocaleString("tr-TR",{style:"currency",currency:"TRY"}));
+  await page.locator("#system-amount").fill("600");
+  await page.getByText("Belirlediğin bütçe veya günlük sınır aşılıyor.",{exact:true}).waitFor();
+  await page.locator("#system-mode").selectOption("column");
+  await page.locator("#system-amount").fill("1");
+  await page.getByText("Hesap kayıtlı sınırı aşmıyor; bu bir bahis önerisi değildir.",{exact:true}).waitFor();
+  await page.screenshot({path:"mobile-reference-system.png",fullPage:true});
+  await page.getByRole("button",{name:"Kuponlarım",exact:true}).click();
   await page.getByText("Elle bahis kaydı ekle",{exact:true}).click();
   await page.locator("#record-label").fill("Test kaydı");
   await page.locator("#record-stake").fill("200");

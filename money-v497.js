@@ -16,7 +16,9 @@ function totals(records){
 }
 function summary(s,today){const all=totals(s.records),spent=totals(s.records.filter(r=>r.date===today)).invested;return {...all,spent,balance:s.budget===null?null:s.budget-all.invested+all.returned,dailyCap:s.budget===null?null:Math.round(s.budget*s.limit/100)};}
 function periodRecords(records,period,today){let start=today;if(period==="month")start=today.slice(0,7)+"-01";if(period==="week"){const d=new Date(today+"T12:00:00Z");d.setUTCDate(d.getUTCDate()-((d.getUTCDay()+6)%7));start=d.toISOString().slice(0,10);}return records.filter(r=>r.date>=start&&r.date<=today);}
-if(typeof module!=="undefined"&&module.exports)module.exports={cents,totals,summary,periodRecords,valid,empty};
+function systemColumns(n){if(!Number.isInteger(n)||n<5||n>20)return null;let c=1,total=0,bySize={};for(let k=1;k<=5;k++){c=c*(n-k+1)/k;if(k>=2){bySize[k]=c;total+=c;}}return {total,bySize};}
+function systemCost(n,mode,value,s){const columns=systemColumns(n);if(!columns||!amount(value)||!["total","column"].includes(mode))return null;const per=mode==="total"?Math.floor(value/columns.total):value,total=per*columns.total;if(!Number.isSafeInteger(total))return null;const remaining=s.balance===null||s.dailyCap===null?null:Math.max(0,Math.min(s.balance,s.dailyCap-s.spent));return {columns,per,total,unused:mode==="total"?value-total:0,remaining,over:remaining===null?null:total>remaining};}
+if(typeof module!=="undefined"&&module.exports)module.exports={cents,totals,summary,periodRecords,valid,empty,systemColumns,systemCost};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let state=empty(),error="",period="month",view="active";
@@ -38,7 +40,23 @@ function render(){const today=day(Date.now()),s=summary(state,today),home=by("ba
  const list=state.records.filter(r=>view==="all"||(view==="active"?r.returned===null:r.returned!==null)).slice().reverse();if(!list.length)cp.append(panel("Kayıt yok",el("p","Bu görünümde henüz kişisel kayıt yok.","subtle")));
  for(const r of list){const card=panel(r.label,el("p",r.date+" · "+(r.returned===null?"Açık":"Sonuçlandı"),"subtle"),tiles([["Yatırılan",money(r.stake)],["Gerçek dönüş",money(r.returned)],["Net",r.returned===null?"—":money(r.returned-r.stake)]]));if(r.returned===null){const f=el("form"),l=field("Gerçek geri dönüş (TL; kayıp için 0)","return-"+r.id,"number",{min:"0",max:"100000000",step:"0.01",required:true}),b=el("button","Sonucu kaydet","action");b.type="submit";b.disabled=locked;f.append(l,b);f.onsubmit=e=>{e.preventDefault();const v=cents(l.querySelector("input").value);if(v!==null)save({...state,records:state.records.map(x=>x.id===r.id?{...x,returned:v}:x)});};card.append(f);}cp.append(card);}
 }
+const couponTabs=[...document.querySelectorAll("[data-coupon-tab]")];
+function couponTab(id){for(const b of couponTabs){const active=b.dataset.couponTab===id;b.setAttribute("aria-pressed",String(active));by("coupon-"+b.dataset.couponTab).hidden=!active;}if(id==="system")renderSystemBudget();}
+for(const b of couponTabs)b.onclick=()=>couponTab(b.dataset.couponTab);
+const tiers=by("coupon-tiers");
+for(const label of ["Temkinli","Dengeli","Yüksek risk"])tiers.append(panel(label+" · 2 maç",el("p","Onaylanmış ve kalibre edilmiş seçim yok. Kademe eşikleri henüz doğrulanmadı.","subtle"),el("p","Toplam oran ve birleşik tutma olasılığı: hesaplanmadı.","subtle")));
+const markets=by("coupon-markets");
+for(const label of ["Maç sonucu","Doğru skor","İlk yarı KG Var","İkinci yarı KG Var","İki yarıda KG Var","İY/MS","Gol alt/üst","Korner","Kart"])markets.append(panel(label,el("p","PAS · Yayına izin verilmiş sistem seçimi yok.","subtle")));
+const budgetBox=by("coupon-budget");
+const calc=el("article",undefined,"panel money-panel");
+calc.append(heading("Sistem 2-3-4-5 · bütçe hesabı"),el("p","Yalnız matematiksel maliyet hesabı; maç seçimi veya tutar tavsiyesi değildir.","subtle"));
+calc.append(field("Varsayımsal seçim sayısı (5–20)","system-n","number",{min:"5",max:"20",step:"1",value:"5"}));
+const modeLabel=el("label","Tutar türü"),mode=el("select");mode.id="system-mode";for(const [v,t] of [["total","Toplam ayırdığım tutar"],["column","Kolon başı tutar"]]){const o=el("option",t);o.value=v;mode.append(o);}modeLabel.append(mode);calc.append(modeLabel,field("Kendi belirlediğin tutar (TL)","system-amount","number",{min:"0",max:"100000000",step:"0.01"}));
+const output=el("div");output.id="system-cost-output";output.setAttribute("aria-live","polite");calc.append(output,el("p","En az bir kolonun kazanma olasılığı: hesaplanmadı.","subtle"),el("p","Toplam yatırılan tutarı aşma olasılığı: hesaplanmadı. Doğrulanmış ortak dağılım ve oranlar yok.","subtle"));budgetBox.append(calc);
+function renderSystemBudget(){const n=Number(by("system-n").value),columns=systemColumns(n),v=cents(by("system-amount").value),s=summary(state,day(Date.now()));output.replaceChildren();if(!columns){output.append(el("p","5–20 arasında tam sayı gir.","subtle"));return;}output.append(el("p",Object.entries(columns.bySize).map(([k,c])=>k+"'li: "+c).join(" · ")+" · Toplam "+columns.total+" kolon"));const r=systemCost(n,mode.value,v,s);if(!r){output.append(el("p","Hesap için kendi tutarını gir.","subtle"));return;}output.append(tiles([["Kolon başı",money(r.per)],["Toplam maliyet",money(r.total)],["Olası azami kayıp",money(r.total)],["Kullanılmayan tutar",money(r.unused)],["Kalan bütçe sınırı",money(locked?null:r.remaining)]]),el("p",locked||r.over===null?"Bütçe sınırı doğrulanamadı.":r.over?"Belirlediğin bütçe veya günlük sınır aşılıyor.":r.per===0?"Kolon başına en az 1 kuruş için tutar yetersiz.":"Hesap kayıtlı sınırı aşmıyor; bu bir bahis önerisi değildir.","subtle"));}
+for(const id of ["system-n","system-mode","system-amount"])by(id).addEventListener("input",renderSystemBudget);
 by("budget-value").value=state.budget===null?"":state.budget/100;by("budget-limit").value=state.limit;
 by("budget-form").onsubmit=e=>{e.preventDefault();const budget=cents(by("budget-value").value),limit=Number(by("budget-limit").value);if(budget!==null&&Number.isInteger(limit)&&limit>=0&&limit<=100)save({...state,budget,limit});};
 render();
+renderSystemBudget();
 })();
