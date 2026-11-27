@@ -5,24 +5,32 @@ from urllib.request import Request,urlopen
 from urllib.error import HTTPError,URLError
 from pathlib import Path
 def parse(payload):
-    rows=[];seen=set()
+    rows=[];seen=set(); rejected=0
+    counts={}
+    for m in payload["matches"]:
+        ident=m.get("id")
+        counts[ident]=counts.get(ident,0)+1
     for m in payload["matches"]:
         ident=m["id"]; c=m["competition"]["id"]; h=m["homeTeam"]; a=m["awayTeam"]
         stamp=datetime.fromisoformat(m["utcDate"].replace("Z","+00:00"))
-        if type(ident)!=int or type(c)!=int or ident in seen or stamp.tzinfo is None or type(h["id"])!=int or type(a["id"])!=int or h["id"]==a["id"]:raise ValueError("identity")
+        if type(ident)!=int or type(c)!=int or counts.get(ident)!=1 or stamp.tzinfo is None or type(h["id"])!=int or type(a["id"])!=int or h["id"]==a["id"]:
+            rejected+=1
+            continue
         seen.add(ident)
         score=None
         if m["status"]=="FINISHED" and m["score"]["duration"]=="REGULAR":
             f=m["score"]["fullTime"];score=[f["home"],f["away"]]
-            if any(type(v)!=int or v<0 for v in score):raise ValueError("score")
+            if any(type(v)!=int or v<0 for v in score):
+                rejected+=1
+                continue
         rows.append(dict(eventId=ident,competitionId=c,kickoff=stamp.isoformat(),home=h["name"],away=a["name"],status=m["status"],score=score))
-    return rows
+    return rows,rejected
 def build(token,now):
     out=dict(version="5.67",source="football-data.org",mode="independent_research",rows=[],status="credentials_missing",usedForSettlement=False,predictionsEnabled=False)
     if not token:return out
     day=now.date();url="https://api.football-data.org/v4/matches?dateFrom="+str(day-timedelta(days=1))+"&dateTo="+str(day+timedelta(days=2))
     try:
-        with urlopen(Request(url,headers={"X-Auth-Token":token}),timeout=20) as response:out["rows"]=parse(json.load(response))
+        with urlopen(Request(url,headers={"X-Auth-Token":token}),timeout=20) as response:out["rows"],out["rejectedRows"]=parse(json.load(response))
         out["status"]="observed" if out["rows"] else "empty"
     except HTTPError as e:out["status"]="HTTP_"+str(e.code)
     except (URLError,OSError,ValueError,TypeError,KeyError) as exc:
@@ -35,4 +43,4 @@ def build(token,now):
 if __name__=="__main__":
     r=build(os.environ.get("FOOTBALL_DATA_TOKEN"),datetime.now(timezone.utc))
     Path("secondary_fixtures.json").write_text(json.dumps(r,indent=2))
-    print(r["status"],len(r["rows"]),{k:v for k,v in r.items() if k in ("errorType","missingField","validationFailure","networkErrorType")})
+    print(r["status"],len(r["rows"]),{k:v for k,v in r.items() if k in ("errorType","missingField","validationFailure","networkErrorType","rejectedRows")})
