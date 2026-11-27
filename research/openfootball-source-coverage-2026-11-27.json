@@ -1,0 +1,64 @@
+{
+  "version": "6.11",
+  "purpose": "public football fixture and historical source coverage audit only",
+  "checkedDate": "2026-11-27",
+  "source": "https://github.com/openfootball/football.json",
+  "license": "public domain per source README",
+  "ref": "master",
+  "historicalSeason": "2025-26",
+  "historical": [
+    {
+      "code": "en.3",
+      "path": "2025-26/en.3.json",
+      "blobSha": "85eff2982c2154ea2ef9ded45dec1d88ac1407d5",
+      "fixtureRows": 552,
+      "rowsWithValidScoreShape": 261
+    },
+    {
+      "code": "de.2",
+      "path": "2025-26/de.2.json",
+      "blobSha": "d7a5d081ac99327f6d3afd52d0f4e90125de5a17",
+      "fixtureRows": 306,
+      "rowsWithValidScoreShape": 94
+    },
+    {
+      "code": "es.2",
+      "path": "2025-26/es.2.json",
+      "blobSha": "ee20d4fc21d0a8df18bba74c2760579bf64a433e",
+      "fixtureRows": 462,
+      "rowsWithValidScoreShape": 115
+    },
+    {
+      "code": "it.2",
+      "path": "2025-26/it.2.json",
+      "blobSha": "df8043d6833f397cee0668baeee6ac36f1d46598",
+      "fixtureRows": 380,
+      "rowsWithValidScoreShape": 283
+    },
+    {
+      "code": "fr.2",
+      "path": "2025-26/fr.2.json",
+      "blobSha": "b110df523122f94a721bb9298524352d11a7d11e",
+      "fixtureRows": 306,
+      "rowsWithValidScoreShape": 107
+    }
+  ],
+  "currentSeason": "2026-27",
+  "currentFilesReturning404": [
+    "2026-27/en.3.json",
+    "2026-27/en.4.json",
+    "2026-27/de.2.json",
+    "2026-27/de.3.json",
+    "2026-27/es.2.json",
+    "2026-27/it.2.json",
+    "2026-27/fr.2.json",
+    "2026-27/nl.2.json",
+    "2026-27/pt.2.json"
+  ],
+  "limitations": [
+    "Counts are source rows, not independently verified scores or unique fixtures.",
+    "HTTP 404 refers to tested paths only, not all possible data sources.",
+    "Historical rows must not be presented as current fixtures.",
+    "Source contains no money or preference percentages."
+  ]
+}
