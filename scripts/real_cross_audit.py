@@ -49,7 +49,7 @@ for a in p:
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.83",secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.84",sampleRole="development_replay" if holdout else "current",secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
