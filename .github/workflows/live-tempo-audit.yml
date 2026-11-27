@@ -1,0 +1,32 @@
+name: V5.56 live tempo audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/*live_tempo_audit.py'
+      - '.github/workflows/live-tempo-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_live_tempo_audit.py
+      - run: |
+          git fetch origin live-data
+          git ls-tree -r --name-only FETCH_HEAD | grep -E 'live.*(archive|history).*json' || true
+          path=$(git ls-tree -r --name-only FETCH_HEAD | grep -E '(^|/)live_observation_archive.json$' | head -1)
+          if [ -n "$path" ]; then
+            git show "FETCH_HEAD:$path" > observations.json
+            python scripts/live_tempo_audit.py observations.json > live_tempo_audit.json
+          else
+            echo '{"status":"archive_not_found","predictionsEnabled":false}' > live_tempo_audit.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-tempo-audit
+          path: live_tempo_audit.json
