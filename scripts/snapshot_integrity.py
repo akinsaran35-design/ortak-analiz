@@ -19,9 +19,20 @@ def audit(data):
         check((v["recorded"],v["tested"],v["pending"])==(len(a),n,len(a)-n),"prospective_count")
         from prospective_markets import summarize
         reference=summarize(a,datetime.fromisoformat(v["updatedAt"]))
-        check(v["marketResearchVersion"]=="4.85" and v["marketResearch"]==reference,"prospective_market_recompute")
         from prospective_leagues import build
-        check(league_report==build(a,datetime.fromisoformat(v["updatedAt"])),"prospective_league_recompute")
+        league_reference=build(a,datetime.fromisoformat(v["updatedAt"]))
+        # Old published snapshots predate classification; verify exactly the old schema.
+        # New snapshots must include and exactly reproduce classification counts.
+        if v.get("classificationVersion") is None:
+            for x in reference.values():x.pop("classification",None)
+            for entry in league_reference["leagues"].values():
+                for x in entry["markets"].values():x.pop("classification",None)
+            # Tests/new reports may contain the new fields; reject mixed schema.
+            if all("classification" in x for x in v["marketResearch"].values()):
+                reference=summarize(a,datetime.fromisoformat(v["updatedAt"]))
+                league_reference=build(a,datetime.fromisoformat(v["updatedAt"]))
+        check(v.get("classificationVersion") in (None,"6.19") and v["marketResearchVersion"]=="4.85" and v["marketResearch"]==reference,"prospective_market_recompute")
+        check(league_report==league_reference,"prospective_league_recompute")
         check((q["archiveRecords"],q["settled"],q["pending"])==(len(a),n,len(a)-n),"quality_count")
         k=sum(x["result"] is not None for x in p.values())
         overall=f["overall"]
