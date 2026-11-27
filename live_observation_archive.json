@@ -1,4 +1,238 @@
 {
+  "pt.1:401885389": {
+    "league": "pt.1",
+    "eventId": "401885389",
+    "home": "Maritimo",
+    "away": "C.D. Nacional",
+    "kickoff": "2026-11-27T20:15:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T23:30:03.787918+03:00",
+        "minute": 14,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            2,
+            1
+          ],
+          "shots": [
+            0,
+            0
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "es.1:401882791": {
+    "league": "es.1",
+    "eventId": "401882791",
+    "home": "Levante",
+    "away": "Racing Santander",
+    "kickoff": "2026-11-27T20:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T23:30:03.776844+03:00",
+        "minute": 28,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            4,
+            3
+          ],
+          "shots": [
+            6,
+            3
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ],
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "en.2:401880129": {
+    "league": "en.2",
+    "eventId": "401880129",
+    "home": "Southampton",
+    "away": "Middlesbrough",
+    "kickoff": "2026-11-27T20:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T23:30:03.791721+03:00",
+        "minute": 30,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            1
+          ],
+          "shots": [
+            5,
+            7
+          ],
+          "shotsOnTarget": [
+            2,
+            1
+          ],
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "en.1:401879225": {
+    "league": "en.1",
+    "eventId": "401879225",
+    "home": "Nottingham Forest",
+    "away": "Chelsea",
+    "kickoff": "2026-11-27T20:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T23:30:03.759649+03:00",
+        "minute": 30,
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            1
+          ],
+          "shots": [
+            3,
+            2
+          ],
+          "shotsOnTarget": [
+            2,
+            0
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "it.1:401875004": {
+    "league": "it.1",
+    "eventId": "401875004",
+    "home": "Venezia",
+    "away": "Bologna",
+    "kickoff": "2026-11-27T19:45:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T23:30:03.943741+03:00",
+        "minute": 44,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            3,
+            2
+          ],
+          "shots": [
+            8,
+            5
+          ],
+          "shotsOnTarget": [
+            3,
+            2
+          ],
+          "yellowCards": [
+            2,
+            2
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "fr.1:401876392": {
+    "league": "fr.1",
+    "eventId": "401876392",
+    "home": "Brest",
+    "away": "Paris FC",
+    "kickoff": "2026-11-27T19:45:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T23:30:03.827999+03:00",
+        "minute": 45,
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            3,
+            3
+          ],
+          "shots": [
+            11,
+            7
+          ],
+          "shotsOnTarget": [
+            2,
+            3
+          ],
+          "yellowCards": [
+            1,
+            2
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
   "de.1:401884720": {
     "league": "de.1",
     "eventId": "401884720",
@@ -68,6 +302,36 @@
           "yellowCards": [
             0,
             0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "receivedAt": "2026-11-27T23:30:03.894093+03:00",
+        "minute": 66,
+        "score": [
+          0,
+          1
+        ],
+        "metrics": {
+          "corners": [
+            4,
+            1
+          ],
+          "shots": [
+            20,
+            6
+          ],
+          "shotsOnTarget": [
+            8,
+            3
+          ],
+          "yellowCards": [
+            0,
+            1
           ],
           "redCards": [
             0,
