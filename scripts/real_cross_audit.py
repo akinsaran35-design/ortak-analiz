@@ -91,7 +91,7 @@ print("Unmapped competitions:",json.dumps(unmapped_competitions))
 brazil_primary=[row for row in p if row["league"]=="bra.1"]
 brazil_secondary=[row for row in s["rows"] if row["competitionId"]==2013 and audit_start<=datetime.fromisoformat(row["kickoff"].replace("Z","+00:00")).astimezone(TR).date()<=audit_end]
 brazil_pairs=match(brazil_primary,brazil_secondary,MAP)["pairs"]
-brazil=dict(primaryCount=len(brazil_primary),secondaryCount=len(brazil_secondary),matched=len(brazil_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in brazil_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in brazil_pairs),researchOnly=True)
+brazil=dict(primaryCount=len(brazil_primary),secondaryCount=len(brazil_secondary),matched=len(brazil_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in brazil_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in brazil_pairs),primaryCoverage=len(brazil_pairs)/len(brazil_primary) if brazil_primary else None,secondaryCoverage=len(brazil_pairs)/len(brazil_secondary) if brazil_secondary else None,sampleRole="development_replay",researchOnly=True)
 print("Brazil candidate:",json.dumps(brazil))
 diagnostics=[]
 for a in p:
