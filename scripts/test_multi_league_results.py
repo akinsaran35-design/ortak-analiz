@@ -36,4 +36,20 @@ class MultiLeagueTests(unittest.TestCase):
         report["groups"][0]["sources"]=["https://example.org","https://example.net"]
         self.assertEqual(verified_rows(report,now),[])
         self.assertEqual(verified_rows(build_report(archive,now,lambda url:b"bad"),now),[])
+    def test_today_observation_never_settles(self):
+        now=datetime(2026,11,27,23,50,tzinfo=TR)
+        d="2026-11-27"
+        row=dict(date=d,home="A",away="B",league="de.1",recordedAt="2026-11-26T17:00:00+03:00",candidate=.6,result=None)
+        event={"date":"2026-11-27T18:00:00Z","competitions":[{"status":{"type":{"completed":True,"name":"STATUS_FULL_TIME"}},"competitors":[{"homeAway":"home","team":{"displayName":"A"},"score":"2"},{"homeAway":"away","team":{"displayName":"B"},"score":"1"}]}]}
+        def reader(url):
+            if url==source_urls("de.1",d)[0]:return b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n27/11/26,A,B,2,1\n"
+            return json.dumps({"events":[event]}).encode()
+        report=build_report({"a":row},now,reader)
+        self.assertEqual(report["groups"],[])
+        self.assertEqual(report["todayObservations"][0]["rows"][0]["status"],"corroborated")
+        self.assertEqual(verified_rows(report,now),[])
+        self.assertEqual(verified_rows(report,now+timedelta(minutes=20)),[])
+        self.assertIsNone(row["result"])
+        next_report=build_report({"a":row},now+timedelta(minutes=20),reader)
+        self.assertEqual(len(verified_rows(next_report,now+timedelta(minutes=20))),1)
 if __name__=="__main__": unittest.main()
