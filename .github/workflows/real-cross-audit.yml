@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'scripts/real_cross_audit.py'
+      - 'scripts/cross_source_match.py'
       - '.github/workflows/real-cross-audit.yml'
   workflow_dispatch:
 permissions:
