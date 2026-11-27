@@ -1,0 +1,58 @@
+name: V5.48 prospective capture research
+on:
+  pull_request:
+    paths:
+      - 'scripts/prospective_capture_window.py'
+      - 'scripts/test_prospective_capture_window.py'
+      - 'scripts/prospective_validation.py'
+      - '.github/workflows/prospective-capture-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_prospective_capture_window.py
+      - run: python scripts/test_prospective_markets.py
+      - run: |
+          cp prospective_archive.json /tmp/original_archive.json
+          python scripts/prospective_validation.py
+          python - <<'PY'
+          import json
+          from datetime import datetime,date
+          from pathlib import Path
+          import sys
+          sys.path.insert(0,"scripts")
+          from prospective_capture_window import identity
+          from prospective_markets import coherent
+          a=json.loads(Path("/tmp/original_archive.json").read_text())
+          b=json.loads(Path("prospective_archive.json").read_text())
+          r=json.loads(Path("prospective_validation.json").read_text())
+          assert not r["errors"],r["errors"]
+          assert a.keys() <= b.keys()
+          for k,v in a.items():
+              assert all(b[k][f]==v[f] for f in v if f!="result")
+          known={identity(v["league"],v["date"],v["home"],v["away"]) for v in a.values()}
+          for k in b.keys()-a.keys():
+              v=b[k]
+              ident=identity(v["league"],v["date"],v["home"],v["away"])
+              assert ident not in known
+              known.add(ident)
+              assert v["result"] is None and coherent(v["prospectiveMarkets"],v)
+              assert 1 <= (date.fromisoformat(v["date"])-datetime.fromisoformat(v["recordedAt"]).date()).days <= 14
+          assert r["captureCounts"].get("new",0)==len(b)-len(a)
+          assert r["liveEnabled"] is False
+          print("Validated genuine new records:",len(b)-len(a))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prospective-capture-research
+          path: prospective_validation.json
+          if-no-files-found: error
+          retention-days: 7
