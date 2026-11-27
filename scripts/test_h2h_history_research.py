@@ -57,6 +57,24 @@ class Tests(unittest.TestCase):
         self.assertTrue(refresh_form(f,[row("2026-11-20"),row("2026-11-21")],"a","home","en.1","soccer_epl",CUT))
         self.assertEqual(f["home"]["sample"],1)
         self.assertEqual(f["home"]["rows"][0]["date"],"2026-11-21")
+    def test_cross_division_only_h2h(self):
+        f=fixture()
+        f["formResearch"]["home"]={"sample":0,"rows":[]}
+        f["formResearch"]["away"]={"sample":0,"rows":[]}
+        extra=[dict(row("2025-11-01"),competition="E1")]
+        r=enrich_fixture(f,[],"en.1","soccer_epl",CUT,[],[],extra,[{"season":2025}],[])
+        self.assertEqual(r["sample"],1)
+        self.assertEqual(r["crossDivisionMatches"],1)
+        self.assertEqual(f["formResearch"]["h2h"][0]["competition"],"E1")
+        self.assertEqual(f["formResearch"]["home"]["sample"],0)
+        self.assertEqual(f["formResearch"]["h2hCoverage"]["scope"],"domestic_league_divisions")
+    def test_cross_division_conflict(self):
+        f=fixture()
+        a=dict(row("2025-11-01"),competition="E0")
+        b=dict(row("2025-11-01"),competition="E1")
+        r=enrich_fixture(f,[a],"en.1","soccer_epl",CUT,[],[],[b],[{"season":2025}],[])
+        self.assertEqual(r["sample"],0)
+        self.assertEqual(f["formResearch"]["h2hCoverage"]["conflictsExcluded"],1)
     def test_stale(self):
         with self.assertRaises(ValueError):
             build(dict(updatedAt="2026-11-26T10:00:00+03:00"),datetime.fromisoformat("2026-11-27T07:00:00+03:00"))
