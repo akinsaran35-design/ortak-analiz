@@ -1,0 +1,23 @@
+name: V6.13 OpenFootball score audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/openfootball_score_audit.py'
+      - '.github/workflows/openfootball-score-audit.yml'
+      - 'research/openfootball/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/openfootball_score_audit.py --self-test
+      - run: python3 scripts/openfootball_score_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: openfootball-score-audit
+          path: openfootball_score_audit.json
