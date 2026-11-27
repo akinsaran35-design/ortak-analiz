@@ -1,0 +1,205 @@
+{
+  "version": "6.11",
+  "purpose": "public football fixture and historical source coverage audit only",
+  "checkedDate": "2026-11-27",
+  "source": "https://github.com/openfootball/football.json",
+  "license": "public domain per source README",
+  "ref": "master",
+  "historicalSeason": "2025-26",
+  "historical": [
+    {
+      "code": "en.3",
+      "path": "2025-26/en.3.json",
+      "blobSha": "85eff2982c2154ea2ef9ded45dec1d88ac1407d5",
+      "fixtureRows": 552,
+      "rowsWithValidScoreShape": 261,
+      "lastScored": "2025-12-29",
+      "earliest": "2025-01-01",
+      "latest": "2025-12-29",
+      "exactIdentityDuplicates": 0,
+      "invalidIdentityShape": 0,
+      "sample": {
+        "date": "2025-08-01",
+        "home": "Luton Town",
+        "away": "AFC Wimbledon",
+        "score": [
+          1,
+          0
+        ],
+        "source": "https://www.bbc.co.uk/sport/football/live/cwy5l7z0dz1t",
+        "agreement": true
+      },
+      "seasonDateAudit": {
+        "windowStart": "2025-07-01",
+        "windowEndExclusive": "2026-07-01",
+        "inWindowRows": 276,
+        "inWindowScored": 261,
+        "outOfWindowRows": 276,
+        "outOfWindowScored": 0
+      }
+    },
+    {
+      "code": "de.2",
+      "path": "2025-26/de.2.json",
+      "blobSha": "d7a5d081ac99327f6d3afd52d0f4e90125de5a17",
+      "fixtureRows": 306,
+      "rowsWithValidScoreShape": 94,
+      "lastScored": "2025-11-02",
+      "earliest": "2025-08-01",
+      "latest": "2026-05-17",
+      "exactIdentityDuplicates": 0,
+      "invalidIdentityShape": 0,
+      "sample": {
+        "date": "2025-08-01",
+        "home": "FC Schalke 04",
+        "away": "Hertha BSC",
+        "score": [
+          2,
+          1
+        ],
+        "source": "https://www.bundesliga.com/en/2bundesliga/matchday/2025-2026/1/fc-schalke-04-vs-hertha-bsc/liveticker",
+        "agreement": true
+      },
+      "seasonDateAudit": {
+        "windowStart": "2025-07-01",
+        "windowEndExclusive": "2026-07-01",
+        "inWindowRows": 306,
+        "inWindowScored": 94,
+        "outOfWindowRows": 0,
+        "outOfWindowScored": 0
+      }
+    },
+    {
+      "code": "es.2",
+      "path": "2025-26/es.2.json",
+      "blobSha": "ee20d4fc21d0a8df18bba74c2760579bf64a433e",
+      "fixtureRows": 462,
+      "rowsWithValidScoreShape": 115,
+      "lastScored": "2025-11-03",
+      "earliest": "2025-08-15",
+      "latest": "2026-05-31",
+      "exactIdentityDuplicates": 0,
+      "invalidIdentityShape": 0,
+      "sample": {
+        "date": "2025-08-15",
+        "home": "Burgos CF",
+        "away": "Cultural Leonesa",
+        "score": [
+          5,
+          1
+        ],
+        "source": "https://www.laliga.com/en-GB/match/temporada-2025-2026-laliga-hypermotion-burgos-cf-cultural-leonesa-1",
+        "agreement": true
+      },
+      "seasonDateAudit": {
+        "windowStart": "2025-07-01",
+        "windowEndExclusive": "2026-07-01",
+        "inWindowRows": 462,
+        "inWindowScored": 115,
+        "outOfWindowRows": 0,
+        "outOfWindowScored": 0
+      }
+    },
+    {
+      "code": "it.2",
+      "path": "2025-26/it.2.json",
+      "blobSha": "df8043d6833f397cee0668baeee6ac36f1d46598",
+      "fixtureRows": 380,
+      "rowsWithValidScoreShape": 283,
+      "lastScored": "2026-03-17",
+      "earliest": "2025-08-22",
+      "latest": "2026-05-09",
+      "exactIdentityDuplicates": 0,
+      "invalidIdentityShape": 0,
+      "sample": {
+        "date": "2025-08-22",
+        "home": "Delfino Pescara",
+        "away": "Cesena FC",
+        "score": [
+          1,
+          3
+        ],
+        "source": "https://www.legab.it/seriebkt/partita/2025-2026/stagione-regolare/pescara-vs-cesena",
+        "agreement": true
+      },
+      "seasonDateAudit": {
+        "windowStart": "2025-07-01",
+        "windowEndExclusive": "2026-07-01",
+        "inWindowRows": 380,
+        "inWindowScored": 283,
+        "outOfWindowRows": 0,
+        "outOfWindowScored": 0
+      }
+    },
+    {
+      "code": "fr.2",
+      "path": "2025-26/fr.2.json",
+      "blobSha": "b110df523122f94a721bb9298524352d11a7d11e",
+      "fixtureRows": 306,
+      "rowsWithValidScoreShape": 107,
+      "lastScored": "2025-11-03",
+      "earliest": "2025-08-09",
+      "latest": "2026-05-08",
+      "exactIdentityDuplicates": 0,
+      "invalidIdentityShape": 0,
+      "sample": {
+        "date": "2025-08-09",
+        "home": "EA Guingamp",
+        "away": "Le Mans FC",
+        "score": [
+          3,
+          3
+        ],
+        "source": "https://www.eaguingamp.com/match/j1-guingamp-le-mans-ligue-2-bkt/",
+        "agreement": true
+      },
+      "seasonDateAudit": {
+        "windowStart": "2025-07-01",
+        "windowEndExclusive": "2026-07-01",
+        "inWindowRows": 306,
+        "inWindowScored": 107,
+        "outOfWindowRows": 0,
+        "outOfWindowScored": 0
+      }
+    }
+  ],
+  "currentSeason": "2026-27",
+  "currentFilesReturning404": [
+    "2026-27/en.3.json",
+    "2026-27/en.4.json",
+    "2026-27/de.2.json",
+    "2026-27/de.3.json",
+    "2026-27/es.2.json",
+    "2026-27/it.2.json",
+    "2026-27/fr.2.json",
+    "2026-27/nl.2.json",
+    "2026-27/pt.2.json"
+  ],
+  "limitations": [
+    "Counts are source rows, not independently verified scores or unique fixtures.",
+    "HTTP 404 refers to tested paths only, not all possible data sources.",
+    "Historical rows must not be presented as current fixtures.",
+    "Source contains no money or preference percentages.",
+    "League One file labeled 2025-26 contains January 2025 rows; season membership requires further checks.",
+    "Sample agreement does not establish full archive accuracy."
+  ],
+  "sampleVerification": {
+    "checked": 5,
+    "matched": 5,
+    "method": "first scored row dated on or after 2025-08-01 per file, compared to independent published result",
+    "notExhaustive": true
+  },
+  "currentSeasonControl": {
+    "path": "2026-27/en.1.json",
+    "blobSha": "60e281f0fcc51cfca1a901353666a688cf62a8ba",
+    "fixtureRows": 380,
+    "rowsWithValidScoreShape": 45,
+    "lastScored": "2026-09-20"
+  },
+  "sourcePolicy": {
+    "historicalOnly": true,
+    "quarantineOutsideSeasonWindow": true,
+    "independentVerificationRequired": true,
+    "allowAsCurrentSource": false
+  }
+}
