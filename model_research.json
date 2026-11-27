@@ -1,8 +1,8 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-26T17:54:11.074068+00:00",
-  "sourceUpdatedAt": "2026-11-26T20:53:55+03:00",
+  "updatedAt": "2026-11-27T04:10:53.110396+00:00",
+  "sourceUpdatedAt": "2026-11-27T07:10:26+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
@@ -5337,6 +5337,130 @@
           "btts": {
             "probability": 0.55355,
             "sampling_se": 0.003515198411896546
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-04",
+      "league": "İngiltere Championship",
+      "match": "Sheffield United FC – West Ham United FC",
+      "expectedGoals": {
+        "home": 1.44,
+        "away": 2.42
+      },
+      "poisson": {
+        "over15": 0.8976095223180187,
+        "over25": 0.7406571394712647,
+        "btts": 0.6952186233815334
+      },
+      "experimentalDixonColes": {
+        "over15": 0.9012804105549134,
+        "over25": 0.7406571394712647,
+        "btts": 0.698889511618428
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.08883549533285269
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.07708865297478952
+          },
+          {
+            "home": 1,
+            "away": 3,
+            "probability": 0.07166063290183451
+          }
+        ],
+        "topScoresCombined": 0.23758478120947674,
+        "homeWin": 0.21538041273998912,
+        "draw": 0.19677916384669933,
+        "awayWin": 0.5878404234133116,
+        "expectedHome": 1.44,
+        "expectedAway": 2.4199999999999995
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.9048,
+            "sampling_se": 0.0020752946778710723
+          },
+          "over25": {
+            "probability": 0.74205,
+            "sampling_se": 0.003093636997936248
+          },
+          "btts": {
+            "probability": 0.7011,
+            "sampling_se": 0.0032369645503156196
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-04",
+      "league": "Hollanda Eredivisie",
+      "match": "Telstar 1963 – FC Groningen",
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.5
+      },
+      "poisson": {
+        "over15": 0.8414023801746681,
+        "over25": 0.6405735336749162,
+        "btts": 0.6484541190312237
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8463816077738354,
+        "over25": 0.6405735336749162,
+        "btts": 0.6534333466303911
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10456377958251542
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08962609678501322
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.07468841398751101
+          }
+        ],
+        "topScoresCombined": 0.26887829035503963,
+        "homeWin": 0.4441872340116136,
+        "draw": 0.2376112821659695,
+        "awayWin": 0.318201483822417,
+        "expectedHome": 1.8000000000000003,
+        "expectedAway": 1.5000000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8498,
+            "sampling_se": 0.0025262616649903867
+          },
+          "over25": {
+            "probability": 0.64445,
+            "sampling_se": 0.0033847761927489387
+          },
+          "btts": {
+            "probability": 0.6532,
+            "sampling_se": 0.0033654848090579757
           }
         }
       }

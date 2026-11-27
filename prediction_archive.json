@@ -1204,5 +1204,31 @@
       "KG Var": 54.9
     },
     "result": null
+  },
+  "[\"2026-12-04\", \"İngiltere Championship\", \"Sheffield United FC – West Ham United FC\"]": {
+    "date": "2026-12-04",
+    "league": "İngiltere Championship",
+    "match": "Sheffield United FC – West Ham United FC",
+    "recordedAt": "2026-11-27T07:10:52.084345+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 89.8,
+      "2.5 Üst": 74.1,
+      "KG Var": 69.5
+    },
+    "result": null
+  },
+  "[\"2026-12-04\", \"Hollanda Eredivisie\", \"Telstar 1963 – FC Groningen\"]": {
+    "date": "2026-12-04",
+    "league": "Hollanda Eredivisie",
+    "match": "Telstar 1963 – FC Groningen",
+    "recordedAt": "2026-11-27T07:10:52.084345+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 84.1,
+      "2.5 Üst": 64.1,
+      "KG Var": 64.8
+    },
+    "result": null
   }
 }

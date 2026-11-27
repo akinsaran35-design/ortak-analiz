@@ -1,16 +1,16 @@
 {
   "version": "4.59",
-  "updatedAt": "2026-11-26T17:54:10.380005+00:00",
+  "updatedAt": "2026-11-27T04:10:52.457430+00:00",
   "source": "https://github.com/oladeeayo/open-matchday",
   "sourceUpdatedAt": "2026-11-26T07:40:37+00:00",
-  "oddsUpdatedAt": "2026-11-26T17:38:34.746705+00:00",
-  "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
+  "oddsUpdatedAt": "2026-11-27T04:10:23.714145+00:00",
+  "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
   "oddsFresh": true,
   "status": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "originalMatched": 66,
-  "reconciledMatched": 86,
+  "originalMatched": 67,
+  "reconciledMatched": 87,
   "proposedCorrections": [
     {
       "league": "İngiltere Premier Lig",
@@ -153,7 +153,15 @@
       "eventId": "0c1ccc010b185ada698661a21316696c"
     }
   ],
-  "unresolved": [],
+  "unresolved": [
+    {
+      "match": "Sheffield United FC – West Ham United FC",
+      "league": "İngiltere Championship",
+      "date": "2026-12-04",
+      "reason": "no_exact_match",
+      "providerDates": []
+    }
+  ],
   "candidateCountsByDate": {
     "2026-11-27": 9,
     "2026-11-28": 35,
@@ -161,6 +169,7 @@
     "2026-11-30": 5,
     "2026-12-02": 7,
     "2026-12-01": 1,
-    "2026-12-03": 1
+    "2026-12-03": 1,
+    "2026-12-04": 2
   }
 }

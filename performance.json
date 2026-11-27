@@ -1,14 +1,14 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-26T20:54:09.827828+03:00",
+  "updatedAt": "2026-11-27T07:10:52.084345+03:00",
   "method": "First recorded future-date candidates; new scores require corroborated sources; kickoff unverified; no profit measurement.",
   "errors": [],
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "overall": {
-    "recorded": 90,
+    "recorded": 92,
     "settled": 4,
-    "pending": 86,
+    "pending": 88,
     "markets": {
       "1.5 Üst": {
         "tested": 4,
@@ -51,9 +51,9 @@
       }
     },
     "İngiltere Championship": {
-      "recorded": 16,
+      "recorded": 17,
       "settled": 4,
-      "pending": 12,
+      "pending": 13,
       "markets": {
         "1.5 Üst": {
           "tested": 4,
@@ -161,9 +161,9 @@
       }
     },
     "Hollanda Eredivisie": {
-      "recorded": 9,
+      "recorded": 10,
       "settled": 0,
-      "pending": 9,
+      "pending": 10,
       "markets": {
         "1.5 Üst": {
           "tested": 0,

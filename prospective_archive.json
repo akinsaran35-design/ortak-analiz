@@ -1114,5 +1114,63 @@
     "candidate": 0.5693829096359942,
     "baseline": 0.5458937198067633,
     "result": null
+  },
+  "[\"2026-12-04\", \"en.2\", \"Sheffield United FC\", \"West Ham United FC\"]": {
+    "date": "2026-12-04",
+    "league": "en.2",
+    "home": "Sheffield United FC",
+    "away": "West Ham United FC",
+    "recordedAt": "2026-11-27T07:10:49.488101+03:00",
+    "modelVersion": "4.4",
+    "old": 0.7410492841250083,
+    "candidate": 0.7112803536555075,
+    "baseline": 0.5599343185550082,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8978126403201889,
+        "candidate": 0.8820182564708466,
+        "baseline": 0.819376026272578
+      },
+      "2.5 Üst": {
+        "old": 0.7410492841250083,
+        "candidate": 0.7112803536555075,
+        "baseline": 0.5599343185550082
+      },
+      "KG Var": {
+        "old": 0.6950164571693566,
+        "candidate": 0.6903208349575077,
+        "baseline": 0.6223316912972086
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-04\", \"nl.1\", \"Telstar 1963\", \"FC Groningen\"]": {
+    "date": "2026-12-04",
+    "league": "nl.1",
+    "home": "Telstar 1963",
+    "away": "FC Groningen",
+    "recordedAt": "2026-11-27T07:10:49.488101+03:00",
+    "modelVersion": "4.4",
+    "old": 0.6405735336749161,
+    "candidate": 0.6380824110228905,
+    "baseline": 0.6638655462184874,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.841402380174668,
+        "candidate": 0.8398897688672984,
+        "baseline": 0.8991596638655462
+      },
+      "2.5 Üst": {
+        "old": 0.6405735336749161,
+        "candidate": 0.6380824110228905,
+        "baseline": 0.6638655462184874
+      },
+      "KG Var": {
+        "old": 0.6484541190312236,
+        "candidate": 0.6491503864432824,
+        "baseline": 0.6610644257703081
+      }
+    },
+    "result": null
   }
 }

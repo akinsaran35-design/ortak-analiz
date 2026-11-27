@@ -1,15 +1,54 @@
 {
   "version": "4.12",
-  "updatedAt": "2026-11-26T17:54:12.246020+00:00",
+  "updatedAt": "2026-11-27T04:10:53.878162+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
   "realBettingEnabled": false,
-  "rows": [],
+  "rows": [
+    {
+      "eventId": "02ff879cf54f6d1fec2664efee0431db",
+      "match": "Stade Brestois 29 – Paris FC",
+      "kickoff": "2026-11-27T19:45:00+00:00",
+      "market": "over25",
+      "marketLabel": "2.5 Üst",
+      "bookCount": 4,
+      "modelProbabilityUncalibrated": 0.599,
+      "marketProbability": 0.512011,
+      "differencePP": 8.6989,
+      "bestBookmaker": "leovegas",
+      "bestOdds": 1.85,
+      "estimatedEV": 0.10815,
+      "decision": "PAS",
+      "movementDirection": null,
+      "movementPP": null,
+      "movementBookmakers": 0
+    },
+    {
+      "eventId": "abfc6851b152aecbb4bf84a348967f69",
+      "match": "CS Marítimo – CD Nacional",
+      "kickoff": "2026-11-27T20:15:00+00:00",
+      "market": "over25",
+      "marketLabel": "2.5 Üst",
+      "bookCount": 3,
+      "modelProbabilityUncalibrated": 0.463,
+      "marketProbability": 0.463807,
+      "differencePP": -0.0807,
+      "bestBookmaker": "matchbook",
+      "bestOdds": 2.3,
+      "estimatedEV": 0.0649,
+      "decision": "PAS",
+      "movementDirection": null,
+      "movementPP": null,
+      "movementBookmakers": 0
+    }
+  ],
   "rejected": {
     "extra_report_unavailable": 1,
-    "not_today": 66
+    "missing_or_mismatched_extra_event": 12,
+    "insufficient_valid_market_data": 4,
+    "not_today": 61
   },
   "errors": [],
-  "comparedCount": 0
+  "comparedCount": 2
 }

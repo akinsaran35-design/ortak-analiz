@@ -1,8 +1,8 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-26T20:54:15.404802+03:00",
-  "dailyUpdatedAt": "2026-11-26T20:53:55+03:00",
-  "cutoffExclusive": "2026-11-26",
+  "updatedAt": "2026-11-27T07:10:58.721350+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+  "cutoffExclusive": "2026-11-27",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
   "groups": [
@@ -2436,6 +2436,81 @@
                 "sample": 10,
                 "forAverage": 1.3,
                 "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-04",
+          "league": "İngiltere Championship",
+          "match": "Sheffield United FC – West Ham United FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 4.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.8,
+                "againstAverage": 3.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.6,
+                "againstAverage": 10.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.6,
+                "againstAverage": 3.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.5
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 8.2,
+                "againstAverage": 3.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 19.8,
+                "againstAverage": 9.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.8,
+                "againstAverage": 3.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 1.2
               }
             }
           }
@@ -6054,6 +6129,81 @@
               }
             }
           }
+        },
+        {
+          "date": "2026-12-04",
+          "league": "Hollanda Eredivisie",
+          "match": "Telstar 1963 – FC Groningen",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 5.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.3,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.4,
+                "againstAverage": 14.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 5.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 1.3
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.1,
+                "againstAverage": 5.5
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 1.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.1,
+                "againstAverage": 14.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 5.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.3,
+                "againstAverage": 1.1
+              }
+            }
+          }
         }
       ]
     },
@@ -7295,7 +7445,7 @@
     }
   ],
   "respondingLeagues": 9,
-  "fixtureCount": 95,
+  "fixtureCount": 97,
   "predictionsEnabled": false,
   "realBettingEnabled": false,
   "decision": "PAS"

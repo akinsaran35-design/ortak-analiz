@@ -1,10 +1,10 @@
 {
   "version": "4.88",
-  "updatedAt": "2026-11-26T20:54:07.370406+03:00",
+  "updatedAt": "2026-11-27T07:10:49.488101+03:00",
   "mode": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "recorded": 90,
+  "recorded": 92,
   "calibrationVersion": "5.03",
   "overallCalibration": {
     "1.5 Üst": {
@@ -178,11 +178,11 @@
       }
     },
     "en.2": {
-      "recorded": 16,
+      "recorded": 17,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 0,
+          "pending": 1,
           "legacyWithoutForecast": 16,
           "invalid": 0,
           "scores": {},
@@ -203,7 +203,7 @@
         },
         "2.5 Üst": {
           "tested": 4,
-          "pending": 12,
+          "pending": 13,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {
@@ -236,7 +236,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 0,
+          "pending": 1,
           "legacyWithoutForecast": 16,
           "invalid": 0,
           "scores": {},
@@ -462,11 +462,11 @@
       }
     },
     "nl.1": {
-      "recorded": 9,
+      "recorded": 10,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 0,
+          "pending": 1,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},
@@ -487,7 +487,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 9,
+          "pending": 10,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -508,7 +508,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 0,
+          "pending": 1,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},

@@ -1,9 +1,9 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-26T17:53:58.817470+00:00",
+  "updatedAt": "2026-11-27T04:10:41.142824+00:00",
   "decision": "PAS",
-  "matchedCount": 66,
-  "unmatchedCount": 20,
+  "matchedCount": 67,
+  "unmatchedCount": 21,
   "matched": [
     {
       "match": "FC Groningen – Willem II Tilburg",
@@ -21,7 +21,7 @@
       "match": "rizespor – kasimpasa",
       "eventId": "b50ce64bf9ca7a1a03eb6b9d534e93ce",
       "kickoff": "2026-11-27T17:00:00+00:00",
-      "freshLineCount": 1
+      "freshLineCount": 2
     },
     {
       "match": "Southampton FC – Middlesbrough FC",
@@ -105,13 +105,13 @@
       "match": "Birmingham City FC – Bolton Wanderers FC",
       "eventId": "15fc58a442321c2a85f7a814466c0ab9",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 2
     },
     {
       "match": "Preston North End FC – Norwich City FC",
       "eventId": "d47bc722be164b3a733434e89f224654",
       "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 2
     },
     {
       "match": "Paris Saint-Germain FC – FC Lorient",
@@ -243,7 +243,7 @@
       "match": "Real Sociedad de Fútbol – Sevilla FC",
       "eventId": "f892ea6d5eca105c36ca9468b12857f2",
       "kickoff": "2026-11-29T20:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 3
     },
     {
       "match": "Borussia Dortmund – Bayer 04 Leverkusen",
@@ -261,7 +261,7 @@
       "match": "Como 1907 – Juventus FC",
       "eventId": "3876ad367184af2f8fc04a544fc894aa",
       "kickoff": "2026-11-29T19:45:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "Feyenoord Rotterdam – AFC Ajax",
@@ -315,7 +315,7 @@
       "match": "FC Porto – Sporting Clube de Portugal",
       "eventId": "e2c82af8f115ac10036b905eb29e4f37",
       "kickoff": "2026-11-29T20:30:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "AJ Auxerre – Olympique de Marseille",
@@ -345,7 +345,7 @@
       "match": "Gil Vicente FC – GD Estoril Praia",
       "eventId": "588984eaf08b356b49055b534cef52e6",
       "kickoff": "2026-11-29T18:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "Sport Lisboa e Benfica – FC Famalicão",
@@ -399,7 +399,13 @@
       "match": "Brentford FC – Arsenal FC",
       "eventId": "5f5235df01a384e23ff224101ff175e1",
       "kickoff": "2026-12-02T20:15:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
+    },
+    {
+      "match": "Telstar 1963 – FC Groningen",
+      "eventId": "992217cc628328f9d2cd16b8e670ddb1",
+      "kickoff": "2026-12-04T19:00:00+00:00",
+      "freshLineCount": 1
     }
   ],
   "unmatched": [
@@ -582,6 +588,13 @@
       "providerDates": [
         "2026-12-03"
       ]
+    },
+    {
+      "match": "Sheffield United FC – West Ham United FC",
+      "league": "İngiltere Championship",
+      "date": "2026-12-04",
+      "reason": "no_exact_match",
+      "providerDates": []
     }
   ],
   "modelCalibrated": false
