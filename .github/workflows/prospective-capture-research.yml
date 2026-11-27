@@ -2,6 +2,8 @@ name: V5.48 prospective capture research
 on:
   pull_request:
     paths:
+      - 'scripts/prospective_history.py'
+      - 'scripts/test_prospective_history.py'
       - 'scripts/prospective_capture_window.py'
       - 'scripts/test_prospective_capture_window.py'
       - 'scripts/prospective_validation.py'
@@ -18,6 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python scripts/test_prospective_history.py
       - run: python scripts/test_prospective_capture_window.py
       - run: python scripts/test_prospective_markets.py
       - run: |
