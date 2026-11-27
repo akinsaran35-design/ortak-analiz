@@ -29,13 +29,13 @@ on:
       - '.github/workflows/live-refresh-pilot.yml'
       - 'scripts/live_*py'
   schedule:
-    # Staggered 15-minute pilot during European football hours (13:07-02:52 TRT).
-    - cron: '7,22,37,52 10-23 * * *'
+    # Staggered 5-minute worldwide collection target; GitHub scheduling is best effort.
+    - cron: '2-57/5 * * * *'
 permissions:
   contents: read
 concurrency:
   group: live-refresh-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   source:
     runs-on: ubuntu-24.04
