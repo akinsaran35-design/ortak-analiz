@@ -7,8 +7,8 @@ from cross_source_match import match,norm
 MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl.1":2003,"pt.1":2017,"uefa.champions":2001}
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
-offsets=(-8,-7,-6) if holdout else (-1,0,1)
-s=secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now,now.date()+timedelta(days=-9),now.date()+timedelta(days=-5)) if holdout else secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now)
+offsets=(-15,-14,-13) if holdout else (-1,0,1)
+s=secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now,now.date()+timedelta(days=-16),now.date()+timedelta(days=-12)) if holdout else secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now)
 p=[]
 for offset in offsets:
     report=build(now,query_date=(now.date()+timedelta(days=offset)).isoformat(),extra_codes=("uefa.champions",))
@@ -28,7 +28,9 @@ for a in p:
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.74",holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.79",holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p
+assert not any(x["scoreAgreement"] is False for x in r["pairs"])
+print("Independent sample coverage:",len(r["pairs"])/len(p))
