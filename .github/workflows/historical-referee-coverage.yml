@@ -1,0 +1,27 @@
+name: V5.41 historical referee label coverage
+on:
+  pull_request:
+    paths:
+      - 'scripts/historical_referee_coverage.py'
+      - 'scripts/test_historical_referee_coverage.py'
+      - '.github/workflows/historical-referee-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_historical_referee_coverage.py
+      - run: python scripts/historical_referee_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-referee-coverage
+          path: historical_referee_coverage.json
+          if-no-files-found: error
+          retention-days: 7
