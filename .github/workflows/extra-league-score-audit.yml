@@ -5,7 +5,18 @@ on:
       - 'scripts/extra_league_score_audit.py'
       - 'scripts/test_extra_league_score_audit.py'
       - '.github/workflows/extra-league-score-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extra_league_score_audit.py'
+      - 'scripts/test_extra_league_score_audit.py'
+      - '.github/workflows/extra-league-score-audit.yml'
+  schedule:
+    - cron: '20 5,15 * * *'
   workflow_dispatch:
+concurrency:
+  group: extra-league-score-audit-${{ github.ref }}
+  cancel-in-progress: false
 permissions:
   contents: read
 jobs:
@@ -20,3 +31,5 @@ jobs:
         with:
           name: extra-league-score-audit
           path: extra_league_score_audit.json
+          if-no-files-found: error
+          retention-days: 30
