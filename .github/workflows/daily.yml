@@ -11,7 +11,7 @@ on:
   # Report-only commits do not match these paths.
   push:
     branches: [main]
-    paths: ['.github/workflows/daily.yml', 'scripts/league_config.py', 'scripts/fixture_schema.py', 'scripts/daily_analysis.py', 'scripts/turkey_source.py', 'scripts/nine_league_results_pilot.py', 'scripts/football_statistics_pilot.py', 'scripts/prospective_validation.py', 'scripts/prospective_capture_window.py', 'verified_results.json', 'scripts/verified_results.py']
+    paths: ['.github/workflows/daily.yml', 'scripts/league_config.py', 'scripts/fixture_schema.py', 'scripts/daily_analysis.py', 'scripts/turkey_source.py', 'scripts/nine_league_results_pilot.py', 'scripts/multi_league_results.py', 'scripts/football_statistics_pilot.py', 'scripts/prospective_validation.py', 'scripts/prospective_capture_window.py', 'verified_results.json', 'scripts/verified_results.py']
 
 concurrency:
   group: ortak-analiz-${{ github.ref }}
