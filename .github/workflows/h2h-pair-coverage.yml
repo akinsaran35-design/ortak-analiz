@@ -1,0 +1,26 @@
+name: V5.55 H2H pair coverage
+on:
+  pull_request:
+    paths:
+      - 'scripts/*h2h_pair_coverage.py'
+      - '.github/workflows/h2h-pair-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_h2h_pair_coverage.py
+      - run: python scripts/h2h_pair_coverage.py > h2h_pair_coverage.json
+      - run: python -c "import json; r=json.load(open('h2h_pair_coverage.json')); assert any(g['pairs'] for g in r['groups']); print([(g['league'],len(g['pairs']),sum(p['sample'] for p in g['pairs']),len(g['errors'])) for g in r['groups']])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h2h-pair-coverage
+          path: h2h_pair_coverage.json
+          if-no-files-found: error
