@@ -33,6 +33,9 @@ def parse(raw,code,sport,cutoff):
                 if x is None or y is None:continue
                 if name=="halfTimeGoals" and (x>hg or y>ag):continue
                 stats[name]=[x,y]
+            # Keep the match and valid metrics, but never expose contradictory shot counts.
+            if "shotsOnTarget" in stats and "shots" in stats and any(t>s for t,s in zip(stats["shotsOnTarget"],stats["shots"])):
+                del stats["shotsOnTarget"]
             k=(d.isoformat(),h,a)
             item=dict(date=k[0],home=h,away=a,score=[hg,ag],stats=stats)
             if k in unique and unique[k]!=item:blocked.add(k)
