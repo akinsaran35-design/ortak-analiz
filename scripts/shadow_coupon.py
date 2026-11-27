@@ -3,13 +3,15 @@ from datetime import datetime, timezone, timedelta
 import json
 from pathlib import Path
 
+RESEARCH_HORIZON_HOURS = 24
+
 def stamp(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 def select(analysis, odds, now):
     result = {"version":"4.8","mode":"shadow","liveEnabled":False,
               "updatedAt":now.isoformat(),"decision":"PAS","selections":[]}
-    diagnostics = {"rows":len(analysis.get("rows", [])), "rejected":{}, "eligible":0}
+    diagnostics = {"rows":len(analysis.get("rows", [])), "rejected":{}, "eligible":0, "researchHorizonHours":RESEARCH_HORIZON_HOURS}
     result["diagnostics"] = diagnostics
     def reject(reason):
         counts = diagnostics["rejected"]
@@ -31,8 +33,11 @@ def select(analysis, odds, now):
         try:
             event = events[row["eventId"]]
             kickoff = stamp(event["kickoff"])
-            if kickoff <= now or kickoff.astimezone(timezone(timedelta(hours=3))).date() != now.astimezone(timezone(timedelta(hours=3))).date():
-                reject("started_or_other_day")
+            if kickoff <= now:
+                reject("started")
+                continue
+            if kickoff > now + timedelta(hours=RESEARCH_HORIZON_HOURS):
+                reject("outside_research_window")
                 continue
             p = float(row["modelProbabilityUncalibrated"])
             if not .75 <= p <= 1:
