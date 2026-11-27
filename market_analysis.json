@@ -1,28 +1,28 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-27T06:13:31.185032+00:00",
+  "updatedAt": "2026-11-27T15:47:02.815847+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
-  "comparedCount": 35,
+  "comparedCount": 36,
   "rows": [
     {
       "match": "Stade Brestois 29 – Paris FC",
       "eventId": "02ff879cf54f6d1fec2664efee0431db",
       "bookCount": 4,
       "bookProbabilities": {
-        "leovegas": 0.504021,
-        "casumo": 0.485175,
-        "grosvenor": 0.523936,
+        "leovegas": 0.506667,
+        "casumo": 0.5,
+        "grosvenor": 0.512,
         "williamhill": 0.52
       },
-      "marketProbability": 0.512,
+      "marketProbability": 0.5093,
       "modelProbabilityUncalibrated": 0.599,
-      "difference": 0.087,
-      "bookProbabilitySpread": 0.0388,
-      "marketFairOdds": 1.9531,
-      "medianMargin": 0.0704
+      "difference": 0.0897,
+      "bookProbabilitySpread": 0.02,
+      "marketFairOdds": 1.9634,
+      "medianMargin": 0.0678
     },
     {
       "match": "CS Marítimo – CD Nacional",
@@ -30,64 +30,65 @@
       "bookCount": 3,
       "bookProbabilities": {
         "grosvenor": 0.417755,
-        "williamhill": 0.415584,
-        "matchbook": 0.380952
+        "williamhill": 0.442971,
+        "matchbook": 0.414634
       },
-      "marketProbability": 0.4156,
+      "marketProbability": 0.4178,
       "modelProbabilityUncalibrated": 0.46299999999999997,
-      "difference": 0.0474,
-      "bookProbabilitySpread": 0.0368,
-      "marketFairOdds": 2.4062,
-      "medianMargin": 0.0694
+      "difference": 0.0452,
+      "bookProbabilitySpread": 0.0283,
+      "marketFairOdds": 2.3937,
+      "medianMargin": 0.0734
     },
     {
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
-      "bookCount": 3,
+      "bookCount": 4,
       "bookProbabilities": {
         "grosvenor": 0.557029,
         "leovegas": 0.561358,
-        "williamhill": 0.575916
+        "williamhill": 0.557029,
+        "matchbook": 0.541772
       },
-      "marketProbability": 0.5614,
+      "marketProbability": 0.557,
       "modelProbabilityUncalibrated": 0.6809999999999999,
-      "difference": 0.1196,
-      "bookProbabilitySpread": 0.0189,
-      "marketFairOdds": 1.7814,
-      "medianMargin": 0.0718
+      "difference": 0.124,
+      "bookProbabilitySpread": 0.0196,
+      "marketFairOdds": 1.7952,
+      "medianMargin": 0.0677
     },
     {
       "match": "Le Havre AC – RC Strasbourg Alsace",
       "eventId": "f96c1137c9d3f7e2e691275a2988fa1d",
       "bookCount": 3,
       "bookProbabilities": {
-        "leovegas": 0.559367,
+        "leovegas": 0.557895,
         "grosvenor": 0.57772,
         "williamhill": 0.557029
       },
-      "marketProbability": 0.5594,
+      "marketProbability": 0.5579,
       "modelProbabilityUncalibrated": 0.66,
-      "difference": 0.1006,
+      "difference": 0.1021,
       "bookProbabilitySpread": 0.0207,
-      "marketFairOdds": 1.7877,
-      "medianMargin": 0.0705
+      "marketFairOdds": 1.7925,
+      "medianMargin": 0.0669
     },
     {
       "match": "Wrexham AFC – Portsmouth FC",
       "eventId": "9cd8c682c6864b59a7f1a58964083e08",
       "bookCount": 4,
       "bookProbabilities": {
-        "grosvenor": 0.456,
-        "leovegas": 0.427083,
+        "grosvenor": 0.439153,
+        "leovegas": 0.418605,
         "williamhill": 0.442971,
-        "matchbook": 0.412935
+        "matchbook": 0.410891
       },
-      "marketProbability": 0.435,
+      "marketProbability": 0.4289,
       "modelProbabilityUncalibrated": 0.6409999999999999,
-      "difference": 0.206,
-      "bookProbabilitySpread": 0.0431,
-      "marketFairOdds": 2.2987,
-      "medianMargin": 0.0696
+      "difference": 0.2121,
+      "bookProbabilitySpread": 0.0321,
+      "marketFairOdds": 2.3317,
+      "medianMargin": 0.0679
     },
     {
       "match": "Queens Park Rangers FC – Sheffield United FC",
@@ -98,13 +99,13 @@
         "leovegas": 0.52381,
         "casumo": 0.521858,
         "williamhill": 0.536193,
-        "matchbook": 0.526854
+        "matchbook": 0.523077
       },
-      "marketProbability": 0.5269,
+      "marketProbability": 0.5238,
       "modelProbabilityUncalibrated": 0.5770000000000001,
-      "difference": 0.0501,
+      "difference": 0.0532,
       "bookProbabilitySpread": 0.0301,
-      "marketFairOdds": 1.8981,
+      "marketFairOdds": 1.9091,
       "medianMargin": 0.078
     },
     {
@@ -112,16 +113,32 @@
       "eventId": "3f93526d7c8e0ca84734aea60c13900a",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.542553,
-        "leovegas": 0.566234,
+        "grosvenor": 0.544,
+        "leovegas": 0.561358,
         "williamhill": 0.575916
       },
-      "marketProbability": 0.5662,
+      "marketProbability": 0.5614,
       "modelProbabilityUncalibrated": 0.5710000000000001,
-      "difference": 0.0048,
-      "bookProbabilitySpread": 0.0334,
-      "marketFairOdds": 1.7661,
-      "medianMargin": 0.0716
+      "difference": 0.0096,
+      "bookProbabilitySpread": 0.0319,
+      "marketFairOdds": 1.7814,
+      "medianMargin": 0.0718
+    },
+    {
+      "match": "samsunspor – genclerbirligi",
+      "eventId": "f0f0492939c4f06ff9a4f1b9334d510f",
+      "bookCount": 3,
+      "bookProbabilities": {
+        "grosvenor": 0.521739,
+        "casumo": 0.506849,
+        "matchbook": 0.511568
+      },
+      "marketProbability": 0.5116,
+      "modelProbabilityUncalibrated": 0.5660000000000001,
+      "difference": 0.0544,
+      "bookProbabilitySpread": 0.0149,
+      "marketFairOdds": 1.9548,
+      "medianMargin": 0.089
     },
     {
       "match": "West Bromwich Albion FC – Bristol City FC",
@@ -129,34 +146,51 @@
       "bookCount": 5,
       "bookProbabilities": {
         "grosvenor": 0.521505,
-        "leovegas": 0.507979,
-        "casumo": 0.506849,
+        "leovegas": 0.509284,
+        "casumo": 0.502717,
         "williamhill": 0.52,
-        "matchbook": 0.512887
+        "matchbook": 0.512821
       },
-      "marketProbability": 0.5129,
+      "marketProbability": 0.5128,
       "modelProbabilityUncalibrated": 0.5539999999999999,
-      "difference": 0.0411,
-      "bookProbabilitySpread": 0.0147,
-      "marketFairOdds": 1.9497,
+      "difference": 0.0412,
+      "bookProbabilitySpread": 0.0188,
+      "marketFairOdds": 1.95,
       "medianMargin": 0.0684
     },
     {
       "match": "Lincoln City FC – Wolverhampton Wanderers FC",
       "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
-      "bookCount": 4,
+      "bookCount": 5,
       "bookProbabilities": {
-        "grosvenor": 0.540107,
-        "leovegas": 0.532982,
-        "williamhill": 0.546667,
-        "matchbook": 0.53944
+        "grosvenor": 0.544,
+        "leovegas": 0.52381,
+        "casumo": 0.521858,
+        "williamhill": 0.536193,
+        "matchbook": 0.497487
       },
-      "marketProbability": 0.5398,
+      "marketProbability": 0.5238,
       "modelProbabilityUncalibrated": 0.544,
-      "difference": 0.0042,
-      "bookProbabilitySpread": 0.0137,
-      "marketFairOdds": 1.8526,
-      "medianMargin": 0.068
+      "difference": 0.0202,
+      "bookProbabilitySpread": 0.0465,
+      "marketFairOdds": 1.9091,
+      "medianMargin": 0.075
+    },
+    {
+      "match": "SBV Excelsior – Telstar 1963",
+      "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
+      "bookCount": 3,
+      "bookProbabilities": {
+        "grosvenor": 0.581395,
+        "williamhill": 0.557029,
+        "matchbook": 0.558974
+      },
+      "marketProbability": 0.559,
+      "modelProbabilityUncalibrated": 0.542,
+      "difference": -0.017,
+      "bookProbabilitySpread": 0.0244,
+      "marketFairOdds": 1.789,
+      "medianMargin": 0.0617
     },
     {
       "match": "Le Mans FC – Lille OSC",
@@ -164,14 +198,14 @@
       "bookCount": 3,
       "bookProbabilities": {
         "leovegas": 0.464191,
-        "grosvenor": 0.469496,
+        "grosvenor": 0.465608,
         "williamhill": 0.48
       },
-      "marketProbability": 0.4695,
+      "marketProbability": 0.4656,
       "modelProbabilityUncalibrated": 0.531,
-      "difference": 0.0615,
+      "difference": 0.0654,
       "bookProbabilitySpread": 0.0158,
-      "marketFairOdds": 2.1299,
+      "marketFairOdds": 2.1477,
       "medianMargin": 0.0665
     },
     {
@@ -182,13 +216,13 @@
         "casumo": 0.513889,
         "williamhill": 0.536193,
         "grosvenor": 0.520216,
-        "matchbook": 0.528796
+        "matchbook": 0.524422
       },
-      "marketProbability": 0.5245,
+      "marketProbability": 0.5223,
       "modelProbabilityUncalibrated": 0.531,
-      "difference": 0.0065,
+      "difference": 0.0087,
       "bookProbabilitySpread": 0.0223,
-      "marketFairOdds": 1.9066,
+      "marketFairOdds": 1.9145,
       "medianMargin": 0.079
     },
     {
@@ -196,16 +230,16 @@
       "eventId": "d583b1676d961c26794a3ccedf7edffb",
       "bookCount": 4,
       "bookProbabilities": {
-        "casumo": 0.486111,
+        "casumo": 0.493151,
         "grosvenor": 0.526882,
         "williamhill": 0.5,
-        "matchbook": 0.493506
+        "matchbook": 0.494872
       },
-      "marketProbability": 0.4968,
+      "marketProbability": 0.4974,
       "modelProbabilityUncalibrated": 0.519,
-      "difference": 0.0222,
-      "bookProbabilitySpread": 0.0408,
-      "marketFairOdds": 2.0131,
+      "difference": 0.0216,
+      "bookProbabilitySpread": 0.0337,
+      "marketFairOdds": 2.0103,
       "medianMargin": 0.0628
     },
     {
@@ -213,16 +247,16 @@
       "eventId": "24b99950496c624f7124922fc1bda8bd",
       "bookCount": 3,
       "bookProbabilities": {
-        "leovegas": 0.567282,
+        "leovegas": 0.562827,
         "grosvenor": 0.589744,
         "williamhill": 0.575916
       },
       "marketProbability": 0.5759,
       "modelProbabilityUncalibrated": 0.506,
       "difference": -0.0699,
-      "bookProbabilitySpread": 0.0225,
+      "bookProbabilitySpread": 0.0269,
       "marketFairOdds": 1.7364,
-      "medianMargin": 0.0718
+      "medianMargin": 0.0639
     },
     {
       "match": "Derby County FC – Watford FC",
@@ -231,14 +265,14 @@
       "bookProbabilities": {
         "grosvenor": 0.509434,
         "leovegas": 0.484127,
-        "casumo": 0.478142,
+        "casumo": 0.472973,
         "williamhill": 0.48,
-        "matchbook": 0.485788
+        "matchbook": 0.485861
       },
       "marketProbability": 0.4841,
       "modelProbabilityUncalibrated": 0.469,
       "difference": -0.0151,
-      "bookProbabilitySpread": 0.0313,
+      "bookProbabilitySpread": 0.0365,
       "marketFairOdds": 2.0656,
       "medianMargin": 0.0684
     },
@@ -249,12 +283,12 @@
       "bookProbabilities": {
         "grosvenor": 0.421053,
         "williamhill": 0.405685,
-        "matchbook": 0.397059
+        "matchbook": 0.392771
       },
       "marketProbability": 0.4057,
       "modelProbabilityUncalibrated": 0.469,
       "difference": 0.0633,
-      "bookProbabilitySpread": 0.024,
+      "bookProbabilitySpread": 0.0283,
       "marketFairOdds": 2.465,
       "medianMargin": 0.0717
     },
@@ -282,15 +316,15 @@
       "bookProbabilities": {
         "grosvenor": 0.490566,
         "leovegas": 0.484127,
-        "casumo": 0.472973,
+        "casumo": 0.485175,
         "williamhill": 0.5,
-        "matchbook": 0.476923
+        "matchbook": 0.482051
       },
-      "marketProbability": 0.4841,
+      "marketProbability": 0.4852,
       "modelProbabilityUncalibrated": 0.44299999999999995,
-      "difference": -0.0411,
-      "bookProbabilitySpread": 0.027,
-      "marketFairOdds": 2.0656,
+      "difference": -0.0422,
+      "bookProbabilitySpread": 0.0179,
+      "marketFairOdds": 2.0611,
       "medianMargin": 0.0593
     },
     {
@@ -299,65 +333,65 @@
       "bookCount": 4,
       "bookProbabilities": {
         "leovegas": 0.570681,
-        "grosvenor": 0.557292,
+        "grosvenor": 0.565104,
         "williamhill": 0.575916,
-        "matchbook": 0.567901
+        "matchbook": 0.564356
       },
-      "marketProbability": 0.5693,
+      "marketProbability": 0.5679,
       "modelProbabilityUncalibrated": 0.43,
-      "difference": -0.1393,
-      "bookProbabilitySpread": 0.0186,
-      "marketFairOdds": 1.7566,
-      "medianMargin": 0.062
+      "difference": -0.1379,
+      "bookProbabilitySpread": 0.0116,
+      "marketFairOdds": 1.7609,
+      "medianMargin": 0.0641
     },
     {
       "match": "Olympique Lyonnais – AS Monaco FC",
       "eventId": "ca8aa566e27e1d05b47e8151b2066f9a",
       "bookCount": 4,
       "bookProbabilities": {
-        "leovegas": 0.483871,
+        "leovegas": 0.488,
         "casumo": 0.478142,
         "grosvenor": 0.512,
         "williamhill": 0.5
       },
-      "marketProbability": 0.4919,
+      "marketProbability": 0.494,
       "modelProbabilityUncalibrated": 0.706,
-      "difference": 0.2141,
+      "difference": 0.212,
       "bookProbabilitySpread": 0.0339,
-      "marketFairOdds": 2.0328,
-      "medianMargin": 0.0718
+      "marketFairOdds": 2.0243,
+      "medianMargin": 0.0673
     },
     {
       "match": "Toulouse FC – Stade Rennais FC 1901",
       "eventId": "71c08940a73e9f42d503449f052a1bdf",
       "bookCount": 3,
       "bookProbabilities": {
-        "leovegas": 0.562827,
+        "leovegas": 0.567282,
         "grosvenor": 0.582902,
-        "williamhill": 0.575916
+        "williamhill": 0.557029
       },
-      "marketProbability": 0.5759,
+      "marketProbability": 0.5673,
       "modelProbabilityUncalibrated": 0.688,
-      "difference": 0.1121,
-      "bookProbabilitySpread": 0.0201,
-      "marketFairOdds": 1.7364,
-      "medianMargin": 0.0656
+      "difference": 0.1207,
+      "bookProbabilitySpread": 0.0259,
+      "marketFairOdds": 1.7628,
+      "medianMargin": 0.0749
     },
     {
       "match": "Real Sociedad de Fútbol – Sevilla FC",
       "eventId": "f892ea6d5eca105c36ca9468b12857f2",
       "bookCount": 3,
       "bookProbabilities": {
-        "williamhill": 0.539474,
+        "williamhill": 0.546667,
         "leovegas": 0.533333,
         "grosvenor": 0.535809
       },
       "marketProbability": 0.5358,
       "modelProbabilityUncalibrated": 0.679,
       "difference": 0.1432,
-      "bookProbabilitySpread": 0.0061,
+      "bookProbabilitySpread": 0.0133,
       "marketFairOdds": 1.8663,
-      "medianMargin": 0.0665
+      "medianMargin": 0.0714
     },
     {
       "match": "Como 1907 – Juventus FC",
@@ -367,97 +401,81 @@
         "leovegas": 0.528,
         "casumo": 0.521858,
         "grosvenor": 0.546174,
-        "williamhill": 0.536193
+        "williamhill": 0.546667
       },
-      "marketProbability": 0.5321,
+      "marketProbability": 0.5371,
       "modelProbabilityUncalibrated": 0.66,
-      "difference": 0.1279,
-      "bookProbabilitySpread": 0.0243,
-      "marketFairOdds": 1.8794,
-      "medianMargin": 0.074
+      "difference": 0.1229,
+      "bookProbabilitySpread": 0.0248,
+      "marketFairOdds": 1.8619,
+      "medianMargin": 0.073
     },
     {
       "match": "Valencia CF – CA Osasuna",
       "eventId": "1ab9541320cecbe9f043565fd4a141e0",
       "bookCount": 4,
       "bookProbabilities": {
-        "williamhill": 0.428571,
+        "williamhill": 0.442971,
         "leovegas": 0.429319,
-        "grosvenor": 0.445026,
+        "grosvenor": 0.439791,
         "matchbook": 0.412346
       },
-      "marketProbability": 0.4289,
+      "marketProbability": 0.4346,
       "modelProbabilityUncalibrated": 0.6409999999999999,
-      "difference": 0.2121,
-      "bookProbabilitySpread": 0.0327,
-      "marketFairOdds": 2.3313,
-      "medianMargin": 0.0603
-    },
-    {
-      "match": "US Sassuolo Calcio – SSC Napoli",
-      "eventId": "dc63586a1b1d938a461d71bf5b36d982",
-      "bookCount": 3,
-      "bookProbabilities": {
-        "leovegas": 0.602564,
-        "grosvenor": 0.618687,
-        "williamhill": 0.625
-      },
-      "marketProbability": 0.6187,
-      "modelProbabilityUncalibrated": 0.599,
-      "difference": -0.0197,
-      "bookProbabilitySpread": 0.0224,
-      "marketFairOdds": 1.6163,
-      "medianMargin": 0.0704
+      "difference": 0.2064,
+      "bookProbabilitySpread": 0.0306,
+      "marketFairOdds": 2.3012,
+      "medianMargin": 0.0655
     },
     {
       "match": "RC Celta de Vigo – Villarreal CF",
       "eventId": "20c78c2ef75c4a6d7f4af81dd32e97cd",
       "bookCount": 4,
       "bookProbabilities": {
-        "williamhill": 0.515873,
-        "leovegas": 0.538667,
-        "grosvenor": 0.523936,
-        "matchbook": 0.545455
+        "williamhill": 0.536193,
+        "leovegas": 0.542328,
+        "grosvenor": 0.507979,
+        "matchbook": 0.544081
       },
-      "marketProbability": 0.5313,
+      "marketProbability": 0.5393,
       "modelProbabilityUncalibrated": 0.5770000000000001,
-      "difference": 0.0457,
-      "bookProbabilitySpread": 0.0296,
-      "marketFairOdds": 1.8822,
-      "medianMargin": 0.0628
+      "difference": 0.0377,
+      "bookProbabilitySpread": 0.0361,
+      "marketFairOdds": 1.8544,
+      "medianMargin": 0.065
     },
     {
       "match": "FC Porto – Sporting Clube de Portugal",
       "eventId": "e2c82af8f115ac10036b905eb29e4f37",
       "bookCount": 4,
       "bookProbabilities": {
-        "casumo": 0.488827,
+        "casumo": 0.495868,
         "williamhill": 0.52,
-        "grosvenor": 0.493261,
-        "matchbook": 0.511936
+        "grosvenor": 0.485255,
+        "matchbook": 0.514286
       },
-      "marketProbability": 0.5026,
+      "marketProbability": 0.5051,
       "modelProbabilityUncalibrated": 0.5539999999999999,
-      "difference": 0.0514,
-      "bookProbabilitySpread": 0.0312,
-      "marketFairOdds": 1.9897,
-      "medianMargin": 0.0734
+      "difference": 0.0489,
+      "bookProbabilitySpread": 0.0347,
+      "marketFairOdds": 1.9799,
+      "medianMargin": 0.0708
     },
     {
       "match": "AJ Auxerre – Olympique de Marseille",
       "eventId": "a370db12aaff183a94f8e9a6acb6d4c9",
       "bookCount": 3,
       "bookProbabilities": {
-        "leovegas": 0.592784,
+        "leovegas": 0.584416,
         "grosvenor": 0.601023,
-        "williamhill": 0.594315
+        "williamhill": 0.584416
       },
-      "marketProbability": 0.5943,
+      "marketProbability": 0.5844,
       "modelProbabilityUncalibrated": 0.542,
-      "difference": -0.0523,
-      "bookProbabilitySpread": 0.0082,
-      "marketFairOdds": 1.6826,
-      "medianMargin": 0.0677
+      "difference": -0.0424,
+      "bookProbabilitySpread": 0.0166,
+      "marketFairOdds": 1.7111,
+      "medianMargin": 0.0694
     },
     {
       "match": "Udinese Calcio – ACF Fiorentina",
@@ -465,14 +483,14 @@
       "bookCount": 3,
       "bookProbabilities": {
         "leovegas": 0.559367,
-        "grosvenor": 0.557895,
+        "grosvenor": 0.554974,
         "williamhill": 0.546667
       },
-      "marketProbability": 0.5579,
+      "marketProbability": 0.555,
       "modelProbabilityUncalibrated": 0.469,
-      "difference": -0.0889,
+      "difference": -0.086,
       "bookProbabilitySpread": 0.0127,
-      "marketFairOdds": 1.7925,
+      "marketFairOdds": 1.8019,
       "medianMargin": 0.0705
     },
     {
@@ -483,28 +501,28 @@
         "casumo": 0.486111,
         "williamhill": 0.5,
         "grosvenor": 0.47043,
-        "matchbook": 0.489418
+        "matchbook": 0.490956
       },
-      "marketProbability": 0.4878,
+      "marketProbability": 0.4885,
       "modelProbabilityUncalibrated": 0.41700000000000004,
-      "difference": -0.0708,
+      "difference": -0.0715,
       "bookProbabilitySpread": 0.0296,
-      "marketFairOdds": 2.0502,
-      "medianMargin": 0.0689
+      "marketFairOdds": 2.0469,
+      "medianMargin": 0.0631
     },
     {
       "match": "Casa Pia AC – Sporting Clube de Braga",
       "eventId": "61b7d270b965f9804d2d2ed500f41214",
       "bookCount": 3,
       "bookProbabilities": {
-        "casumo": 0.488827,
+        "casumo": 0.492958,
         "williamhill": 0.5,
         "grosvenor": 0.509434
       },
       "marketProbability": 0.5,
       "modelProbabilityUncalibrated": 0.5660000000000001,
       "difference": 0.066,
-      "bookProbabilitySpread": 0.0206,
+      "bookProbabilitySpread": 0.0165,
       "marketFairOdds": 2.0,
       "medianMargin": 0.0786
     },
@@ -516,13 +534,13 @@
         "williamhill": 0.594315,
         "leovegas": 0.59949,
         "grosvenor": 0.601023,
-        "matchbook": 0.594059
+        "matchbook": 0.60396
       },
-      "marketProbability": 0.5969,
+      "marketProbability": 0.6003,
       "modelProbabilityUncalibrated": 0.66,
-      "difference": 0.0631,
-      "bookProbabilitySpread": 0.007,
-      "marketFairOdds": 1.6753,
+      "difference": 0.0597,
+      "bookProbabilitySpread": 0.0096,
+      "marketFairOdds": 1.666,
       "medianMargin": 0.0645
     },
     {
@@ -533,12 +551,12 @@
         "williamhill": 0.594315,
         "leovegas": 0.602564,
         "grosvenor": 0.594315,
-        "matchbook": 0.607407
+        "matchbook": 0.603491
       },
       "marketProbability": 0.5984,
       "modelProbabilityUncalibrated": 0.62,
       "difference": 0.0216,
-      "bookProbabilitySpread": 0.0131,
+      "bookProbabilitySpread": 0.0092,
       "marketFairOdds": 1.671,
       "medianMargin": 0.0712
     },
@@ -548,15 +566,15 @@
       "bookCount": 4,
       "bookProbabilities": {
         "leovegas": 0.555556,
-        "williamhill": 0.557029,
+        "williamhill": 0.575916,
         "grosvenor": 0.554974,
-        "matchbook": 0.551899
+        "matchbook": 0.556122
       },
-      "marketProbability": 0.5553,
+      "marketProbability": 0.5558,
       "modelProbabilityUncalibrated": 0.5660000000000001,
-      "difference": 0.0107,
-      "bookProbabilitySpread": 0.0051,
-      "marketFairOdds": 1.8009,
+      "difference": 0.0102,
+      "bookProbabilitySpread": 0.0209,
+      "marketFairOdds": 1.7991,
       "medianMargin": 0.0657
     },
     {
@@ -565,33 +583,34 @@
       "bookCount": 4,
       "bookProbabilities": {
         "leovegas": 0.550265,
-        "williamhill": 0.557029,
+        "williamhill": 0.575916,
         "grosvenor": 0.551181,
         "matchbook": 0.55527
       },
       "marketProbability": 0.5532,
       "modelProbabilityUncalibrated": 0.5539999999999999,
       "difference": 0.0008,
-      "bookProbabilitySpread": 0.0068,
+      "bookProbabilitySpread": 0.0257,
       "marketFairOdds": 1.8076,
       "medianMargin": 0.065
     },
     {
       "match": "Brentford FC – Arsenal FC",
       "eventId": "5f5235df01a384e23ff224101ff175e1",
-      "bookCount": 4,
+      "bookCount": 5,
       "bookProbabilities": {
         "leovegas": 0.528,
-        "williamhill": 0.536193,
+        "casumo": 0.521858,
+        "williamhill": 0.546667,
         "grosvenor": 0.529101,
-        "matchbook": 0.524934
+        "matchbook": 0.525773
       },
-      "marketProbability": 0.5286,
+      "marketProbability": 0.528,
       "modelProbabilityUncalibrated": 0.506,
-      "difference": -0.0226,
-      "bookProbabilitySpread": 0.0113,
-      "marketFairOdds": 1.892,
-      "medianMargin": 0.0659
+      "difference": -0.022,
+      "bookProbabilitySpread": 0.0248,
+      "marketFairOdds": 1.8939,
+      "medianMargin": 0.07
     }
   ]
 }

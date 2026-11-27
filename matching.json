@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-27T06:13:31.033974+00:00",
+  "updatedAt": "2026-11-27T15:47:02.722430+00:00",
   "decision": "PAS",
   "matchedCount": 69,
   "unmatchedCount": 21,
@@ -81,7 +81,7 @@
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "VfB Stuttgart – Eintracht Frankfurt",
@@ -147,7 +147,7 @@
       "match": "samsunspor – genclerbirligi",
       "eventId": "f0f0492939c4f06ff9a4f1b9334d510f",
       "kickoff": "2026-11-28T13:00:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "West Bromwich Albion FC – Bristol City FC",
@@ -159,13 +159,13 @@
       "match": "Lincoln City FC – Wolverhampton Wanderers FC",
       "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
       "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 5
     },
     {
       "match": "SBV Excelsior – Telstar 1963",
       "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
       "kickoff": "2026-11-28T15:30:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "Le Mans FC – Lille OSC",
@@ -309,7 +309,7 @@
       "match": "US Sassuolo Calcio – SSC Napoli",
       "eventId": "dc63586a1b1d938a461d71bf5b36d982",
       "kickoff": "2026-11-29T14:00:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 2
     },
     {
       "match": "RC Celta de Vigo – Villarreal CF",
@@ -411,7 +411,7 @@
       "match": "Brentford FC – Arsenal FC",
       "eventId": "5f5235df01a384e23ff224101ff175e1",
       "kickoff": "2026-12-02T20:15:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 5
     },
     {
       "match": "Telstar 1963 – FC Groningen",

@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-27T09:13:46.758320+03:00",
+  "updatedAt": "2026-11-27T18:47:18.476071+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -786,10 +786,13 @@
           "home": "Al Kholood",
           "away": "Al Khaleej",
           "kickoff": "2026-11-27T12:15:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+8'",
+          "score": [
+            2,
+            1
+          ],
           "date": "2026-11-27"
         },
         {
@@ -797,10 +800,13 @@
           "home": "Al Qadsiah",
           "away": "Al Fayha",
           "kickoff": "2026-11-27T14:20:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "69'",
+          "score": [
+            0,
+            0
+          ],
           "date": "2026-11-27"
         },
         {
@@ -1033,10 +1039,13 @@
           "home": "Macarthur FC",
           "away": "Melbourne City FC",
           "kickoff": "2026-11-27T08:40:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+3'",
+          "score": [
+            2,
+            0
+          ],
           "date": "2026-11-27"
         },
         {
