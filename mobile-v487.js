@@ -1,6 +1,6 @@
 (function(){
 "use strict";
-const FILES=["nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
+const FILES=["multi_league_results","nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
 const MARKETS=["1.5 Üst","2.5 Üst","KG Var"];
 const LEAGUES={"İngiltere Premier Lig":"soccer_epl","İngiltere Championship":"soccer_efl_champ","Almanya Bundesliga":"soccer_germany_bundesliga","İspanya La Liga":"soccer_spain_la_liga","İtalya Serie A":"soccer_italy_serie_a","Fransa Ligue 1":"soccer_france_ligue_one","Hollanda Eredivisie":"soccer_netherlands_eredivisie","Portekiz Primeira Liga":"soccer_portugal_primeira_liga","Türkiye Süper Lig":"soccer_turkey_super_league"};
 const arr=x=>Array.isArray(x)?x:[],num=x=>Number.isInteger(x)&&x>=0?String(x):"—";
@@ -303,6 +303,22 @@ function render(){loadedAt=Date.now();rows=by("fixture-mode").value==="confirmed
      items.push(detail);
    }
    if(items.length===3)panel(root,"27 Kasım maç incelemesi",items);
+ }
+ const observations=data.multi_league_results;
+ if(scheduleBound(data,"multi_league_results",loadedAt)&&observations?.version==="4.69"&&observations.mode==="research_only"&&observations.observationDate===dateTR(loadedAt)&&Array.isArray(observations.todayObservations)){
+   const items=[];const counts={corroborated:0,incomplete:0,conflict:0,unavailable:0};const scoreOk=s=>Array.isArray(s)&&s.length===2&&s.every(x=>Number.isInteger(x)&&x>=0);
+   for(const group of observations.todayObservations){
+     if(group.date!==observations.observationDate||!Array.isArray(group.errors)||!Array.isArray(group.rows))continue;
+     if(group.errors.length){counts.unavailable++;continue;}
+     for(const match of group.rows){
+       if(match.date!==group.date||typeof match.home!=="string"||typeof match.away!=="string")continue;
+       const csv=scoreOk(match.csv),espn=scoreOk(match.espn),agree=csv&&espn&&match.csv.every((x,i)=>x===match.espn[i]);
+       const status=match.status==="corroborated"&&agree?"corroborated":match.status==="incomplete"&&!(csv&&espn)?"incomplete":"conflict";
+       counts[status]++;
+       if(items.length<30)items.push(node("p",match.home+" – "+match.away+" · "+(status==="corroborated"?match.csv.join("–")+" (iki kaynak)":status==="incomplete"?(csv?"CSV "+match.csv.join("–"):espn?"ESPN "+match.espn.join("–"):"Skor bekleniyor")+" (teyit bekliyor)":"Uyuşmazlık; inceleme gerekli"),"subtle"));
+     }
+   }
+   panel(root,"Bugünkü maç sonuçları · ön inceleme",[metrics([["İki kaynak",num(counts.corroborated)],["Bekleyen",num(counts.incomplete)],["Uyuşmazlık",num(counts.conflict)],["Kaynak hatası (grup)",num(counts.unavailable)]]),node("p","Gün içi gözlem; kesin performans hesabına aktarım değildir. Rapor zamanı: "+hourTR(observations.updatedAt)+" TSİ.","subtle"),...items]);
  }
  const pending=v?.pendingDateStatus;if(v?.pendingDateStatusAsOf===dateTR(loadedAt)&&pending&&["future","today","past","invalidDate"].every(k=>Number.isInteger(pending[k])&&pending[k]>=0)&&pending.future+pending.today+pending.past+pending.invalidDate===v.pending){panel(root,"Bekleyen sonuçların tarih dağılımı",[metrics([["İleri tarih",num(pending.future)],["Bugün",num(pending.today)],["Geçmiş tarih",num(pending.past)]]),node("p","Tarih bazlı arşiv durumu; geçmiş tarih, maçın tamamlandığını tek başına kanıtlamaz. "+(verified?"":"Rapor eski olabilir. ")+(pending.invalidDate?"Geçersiz tarih: "+num(pending.invalidDate):""),"subtle")]);}
  const leagueRows=leagueReport(data,loadedAt);
