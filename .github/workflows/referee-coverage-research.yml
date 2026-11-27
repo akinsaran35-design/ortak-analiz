@@ -1,4 +1,4 @@
-name: V5.24 all league referee coverage
+name: V5.25 core referee coverage
 on:
   pull_request:
     paths:
