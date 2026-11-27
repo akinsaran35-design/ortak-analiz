@@ -1,0 +1,16 @@
+name: V5.80 fallback policy
+on:
+  pull_request:
+    paths:
+      - 'scripts/*fallback_policy.py'
+      - '.github/workflows/fallback-policy.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_fallback_policy.py
