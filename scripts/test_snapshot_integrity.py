@@ -28,6 +28,7 @@ class SnapshotTests(unittest.TestCase):
         from prospective_markets import summarize
         data["prospective_validation"]["updatedAt"]="2026-11-26T14:00:00Z"
         data["prospective_validation"]["marketResearchVersion"]="4.85"
+        data["prospective_validation"]["classificationVersion"]="6.19"
         from prospective_leagues import build
         data["prospective_archive"]["a"].update(league="en.1")
         data["prospective_leagues"]=build(data["prospective_archive"],datetime.fromisoformat("2026-11-26T14:00:00Z"))
