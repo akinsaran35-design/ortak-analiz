@@ -55,6 +55,12 @@ jobs:
       - name: Gunluk analizi calistir
         run: python scripts/daily_analysis.py
 
+      - name: V5.26 H2H history enrichment
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/test_h2h_history_research.py
+          python scripts/h2h_history_research.py --apply
+
       - name: Takim isimleri birim testi
         run: python scripts/test_match_odds.py
 
