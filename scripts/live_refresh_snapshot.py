@@ -7,7 +7,8 @@ from scoreboard_snapshot import build as board
 from results_source_pilot import read,TR
 from live_statistics_pilot import BASE,SOURCES,parse_summary,select_candidates
 
-MAX_EVENTS=12
+MAX_EVENTS=48
+MAX_WORKERS=8
 MAX_AGE_SECONDS=120
 
 def is_fresh(received,now,max_age=MAX_AGE_SECONDS):
@@ -41,10 +42,10 @@ def build(now,reader=read,board_reader=board,clock=lambda:datetime.now(TR)):
         except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
             result["error"]=type(exc).__name__
         return result
-    with ThreadPoolExecutor(max_workers=4) as pool:rows=list(pool.map(fetch,chosen))
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:rows=list(pool.map(fetch,chosen))
     end=clock()
     fresh=sum(bool(r["observation"]) and is_fresh(r["receivedAt"],end) for r in rows)
-    return dict(version="5.13",mode="live_snapshot_only",source="ESPN",startedAt=now.isoformat(),updatedAt=end.isoformat(),maxAgeSeconds=MAX_AGE_SECONDS,sourceTimestampVerified=False,rows=rows,sourceIssues=issues,detected=len(candidates),requested=len(rows),freshAtBuild=fresh,realTime=False,predictionsEnabled=False,usedForSettlement=False,decision="PAS")
+    return dict(version="5.57",mode="live_snapshot_only",source="ESPN",startedAt=now.isoformat(),updatedAt=end.isoformat(),maxAgeSeconds=MAX_AGE_SECONDS,sourceTimestampVerified=False,rows=rows,sourceIssues=issues,detected=len(candidates),capacity=MAX_EVENTS,workers=MAX_WORKERS,unrequested=len(candidates)-len(rows),requested=len(rows),freshAtBuild=fresh,realTime=False,predictionsEnabled=False,usedForSettlement=False,decision="PAS")
 
 def main():
     report=build(datetime.now(TR))
