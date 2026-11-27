@@ -1,0 +1,18 @@
+{
+  "version": "5.32",
+  "mode": "descriptive_research_manifest",
+  "dailyUpdatedAt": "2026-11-27T07:23:53+03:00",
+  "cutoffExclusive": "2026-11-27",
+  "predictionsEnabled": false,
+  "decision": "PAS",
+  "status": "PASS",
+  "coverageMatches": 17553,
+  "contextLeagues": 9,
+  "h2hFixtures": 97,
+  "sha256": {
+    "daily.json": "32b601aabc8c6e13f77a52143361e62a6cf1c185470c564726efb2d519e194e4",
+    "football_context_research.json": "ad9cd1a8718a184021b744141c761cda0c56483d3c28cff766da1f7218c428ab",
+    "historical_metric_coverage.json": "e627382a8bb10948f24baf65790cba9bf7ac16e9d930f7aa314c8f9848eb9b78",
+    "h2h_history_research.json": "6014eb9fb89dad9c43204c24309bcd3ef5ff4bb7ad55247d07f04aa5a325d469"
+  }
+}
