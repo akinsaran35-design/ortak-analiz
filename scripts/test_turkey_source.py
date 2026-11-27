@@ -14,6 +14,11 @@ class TurkeySourceTest(unittest.TestCase):
         self.assertEqual(team_key("İstanbul Başakşehir"),team_key("Basaksehir"))
         self.assertEqual(canonical("Beşiktaş JK",SPORT),canonical("Besiktas",SPORT))
         self.assertNotEqual(team_key("Galatasaray"),team_key("Fenerbahçe"))
+    def test_historical_club_names(self):
+        self.assertEqual(team_key("Torku Konyaspor"),team_key("Konyaspor"))
+        self.assertEqual(team_key("Gazişehir Gaziantep"),team_key("Gaziantep FK"))
+        self.assertEqual(team_key("Gazişehir Gaziantep FK"),team_key("Gaziantep"))
+        self.assertNotEqual(team_key("Gaziantepspor"),team_key("Gaziantep FK"))
     def test_fixtures(self):
         now=datetime(2026,11,26,13,tzinfo=timezone.utc)
         snapshot=dict(updatedAt=now.isoformat(),source="The Odds API",region="uk",queriedLeagues=[SPORT],events=[
