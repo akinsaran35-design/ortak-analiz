@@ -7,6 +7,7 @@ from backtest import LEAGUES, fetch, team, predict, weighted_predict
 from prospective_markets import capture, summarize
 from prospective_capture_window import HORIZON_DAYS, identity, existing_identities, capture_status
 from collections import Counter
+from prospective_history import canonical_history, team_counts
 
 ROOT = Path(__file__).resolve().parent.parent
 NOW = datetime.now(timezone(timedelta(hours=3)))
@@ -22,6 +23,8 @@ blocked = load_guard(ROOT, records, "prospective", NOW)
 calendar_duplicate_prevented = 0
 existing = existing_identities(records)
 capture_counts = Counter()
+missing_history = []
+history_audit = {}
 errors = []
 
 year = TODAY.year if TODAY.month >= 7 else TODAY.year - 1
@@ -77,6 +80,8 @@ for league in LEAGUES:
         if d < TODAY and ft is not None
     )
 
+    normalized, history_audit[league] = canonical_history(league,history,TODAY)
+
     for (d, h, a), ft in sorted(fixtures.items()):
         key = json.dumps(
             [d.isoformat(), league, h, a],
@@ -93,20 +98,29 @@ for league in LEAGUES:
             if status != "outside_future_window": capture_counts[status] += 1
             continue
 
-        old = predict(history, h, a)
-        new = weighted_predict(history, h, a)
+        training = history
+        normalization = "source_names"
+        old = predict(training, h, a)
+        new = weighted_predict(training, h, a)
 
-        if old is None or new is None or not history:
-            capture_counts['insufficient_history'] += 1
-            continue
+        if old is None or new is None or not training:
+            _,_,hk,ak = identity(league,d.isoformat(),h,a)
+            training = normalized
+            old = predict(training,hk,ak)
+            new = weighted_predict(training,hk,ak)
+            normalization = "canonical_exact"
+            if old is None or new is None or not training:
+                capture_counts["insufficient_history"] += 1
+                missing_history.append(dict(league=league,date=d.isoformat(),home=h,away=a,sourceSamples=team_counts(history,h,a),canonicalSamples=team_counts(normalized,hk,ak)))
+                continue
 
         baseline = sum(
             int(x[3] + x[4] >= 3)
-            for x in history
-        ) / len(history)
+            for x in training
+        ) / len(training)
 
         try:
-            markets = capture(history,old,new)
+            markets = capture(training,old,new)
         except ValueError:
             errors.append(f"{league}/{d}/{h}/{a}: inconsistent model probabilities")
             continue
@@ -118,6 +132,7 @@ for league in LEAGUES:
             "away": a,
             "recordedAt": NOW.isoformat(),
             "modelVersion": "4.4",
+            "historyNormalization": normalization,
             "old": old[1],
             "candidate": new[1],
             "baseline": baseline,
@@ -126,6 +141,7 @@ for league in LEAGUES:
         }
         existing.add(identity(league,d.isoformat(),h,a))
         capture_counts["new"] += 1
+        if normalization == "canonical_exact":capture_counts["recovered_identity"] += 1
 
 from verified_results import load_verified, settle_verified
 try:
@@ -151,6 +167,8 @@ report = {
     "calendarDuplicatePrevented": calendar_duplicate_prevented,
     "captureWindowDays": HORIZON_DAYS,
     "captureCounts": dict(capture_counts),
+    "missingHistory": missing_history,
+    "historyIdentityAudit": history_audit,
     "tested": n,
     "pending": len(records) - n,
     "minimumMatches": 500,
