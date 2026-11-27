@@ -1,8 +1,8 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-27T11:54:21.541008+03:00",
-  "sourceUpdatedAt": "2026-11-27T11:54:21.446917+03:00",
+  "updatedAt": "2026-11-27T12:45:46.775830+03:00",
+  "sourceUpdatedAt": "2026-11-27T12:45:46.685134+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
@@ -17,40 +17,40 @@
       "home": "Macarthur FC",
       "away": "Melbourne City FC",
       "kickoff": "2026-11-27T08:40:00+00:00",
-      "receivedAt": "2026-11-27T11:54:21.443496+03:00",
+      "receivedAt": "2026-11-27T12:45:46.681315+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_FIRST_HALF",
-        "clock": "14'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "48'",
         "score": [
-          1,
+          2,
           0
         ],
         "metrics": {
           "yellowCards": [
-            0,
-            0
+            1,
+            2
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            1,
-            1
-          ],
-          "possession": [
-            47.6,
-            52.4
-          ],
-          "shots": [
             4,
             2
           ],
+          "possession": [
+            49.9,
+            50.1
+          ],
+          "shots": [
+            7,
+            7
+          ],
           "shotsOnTarget": [
-            2,
-            0
+            4,
+            1
           ]
         }
       },
