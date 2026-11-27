@@ -1,0 +1,23 @@
+name: V5.60 global metric coverage
+on:
+  pull_request:
+    paths:
+      - 'scripts/global_metric_coverage.py'
+      - '.github/workflows/global-metric-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/global_metric_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: global-metric-coverage
+          path: global_metric_coverage.json
