@@ -23,9 +23,19 @@ class Anchors(HTMLParser):
         if tag=="a" and self.parts is not None:
             self.links.append((" ".join("".join(self.parts).split()),self.href));self.parts=None
 
+def decode_html(raw):
+    # TFF serves legacy Turkish encodings; honor a supported declared charset.
+    declared=re.search(rb'charset\s*=\s*["\']?\s*([a-zA-Z0-9_-]+)',raw[:16384],re.I)
+    enc=declared.group(1).decode("ascii").lower() if declared else None
+    supported={"utf-8":"utf-8-sig","windows-1254":"cp1254","iso-8859-9":"iso8859_9","cp1254":"cp1254"}
+    for codec in dict.fromkeys([supported.get(enc,"utf-8-sig"),"utf-8-sig","cp1254"]):
+        try:return raw.decode(codec)
+        except UnicodeDecodeError:continue
+    raise ValueError("unsupported page encoding")
+
 def extract(raw,expected):
     parser=Anchors()
-    html=raw.decode("utf-8-sig")
+    html=decode_html(raw)
     parser.feed(html)
     # Require the official match heading and date; do not infer from nearby fixtures.
     if "Süper Lig" not in html or expected[1] not in html:raise ValueError("match context")
@@ -47,3 +57,4 @@ def build(now,reader=read):
 if __name__=="__main__":
     r=build(datetime.now(TR));Path("tff_referee_source_probe.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(r,ensure_ascii=False))
+    if not any(x["status"]=="observed" for x in r["rows"]):raise SystemExit("No referee labels extracted from real source")
