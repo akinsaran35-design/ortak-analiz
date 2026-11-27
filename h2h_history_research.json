@@ -1,6 +1,6 @@
 {
   "version": "5.28",
-  "dailyUpdatedAt": "2026-11-27T07:32:35+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
   "cutoffExclusive": "2026-11-27",
   "mode": "descriptive_research",
   "decision": "PAS",
@@ -47,27 +47,29 @@
       "extraLoadedSeasons": 6,
       "extraErrors": [],
       "extraInvalid": 0,
-      "crossDivisionFixtures": 1,
+      "crossDivisionFixtures": 4,
       "fixtures": 20,
       "sampleCounts": {
-        "2": 8,
-        "0": 5,
-        "10": 6,
-        "8": 1
+        "10": 9,
+        "0": 1,
+        "2": 4,
+        "4": 2,
+        "8": 3,
+        "6": 1
       },
-      "formSidesRefreshed": 26,
-      "formSidesNewer": 26,
+      "formSidesRefreshed": 40,
+      "formSidesNewer": 40,
       "rows": [
         {
           "match": "Arsenal FC – Manchester City FC",
           "date": "2026-11-28",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-19",
@@ -75,19 +77,19 @@
           },
           "formNewDates": {
             "home": "2026-11-21",
-            "away": "2026-09-20"
+            "away": "2026-11-21"
           }
         },
         {
           "match": "Brighton & Hove Albion FC – Newcastle United FC",
           "date": "2026-11-28",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-19",
@@ -95,7 +97,7 @@
           },
           "formNewDates": {
             "home": "2026-11-22",
-            "away": "2026-09-19"
+            "away": "2026-11-21"
           }
         },
         {
@@ -161,12 +163,12 @@
         {
           "match": "Ipswich Town FC – Aston Villa FC",
           "date": "2026-11-28",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
+          "sample": 2,
+          "csvMatchesAvailable": 2,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -174,28 +176,28 @@
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-21",
             "away": "2026-11-21"
           }
         },
         {
           "match": "Leeds United FC – Coventry City FC",
           "date": "2026-11-28",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "sample": 4,
+          "csvMatchesAvailable": 4,
+          "crossDivisionMatches": 4,
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
-            "away": false
+            "home": true,
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-14",
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-14",
-            "away": "2026-09-19"
+            "home": "2026-11-21",
+            "away": "2026-11-21"
           }
         },
         {
@@ -221,12 +223,12 @@
         {
           "match": "Nottingham Forest FC – Chelsea FC",
           "date": "2026-11-28",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 8,
+          "csvMatchesAvailable": 8,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -234,7 +236,7 @@
             "away": "2026-09-18"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-21",
             "away": "2026-11-21"
           }
         },
@@ -242,12 +244,12 @@
           "match": "Sunderland AFC – Tottenham Hotspur FC",
           "date": "2026-11-28",
           "sample": 2,
-          "csvMatchesAvailable": 0,
+          "csvMatchesAvailable": 2,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
@@ -255,7 +257,7 @@
           },
           "formNewDates": {
             "home": "2026-11-21",
-            "away": "2026-09-19"
+            "away": "2026-11-21"
           }
         },
         {
@@ -341,33 +343,33 @@
         {
           "match": "Coventry City FC – Ipswich Town FC",
           "date": "2026-12-02",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "sample": 4,
+          "csvMatchesAvailable": 4,
+          "crossDivisionMatches": 4,
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
-            "away": false
+            "home": true,
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-19",
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-19",
-            "away": "2026-09-19"
+            "home": "2026-11-21",
+            "away": "2026-11-21"
           }
         },
         {
           "match": "Hull City AFC – Nottingham Forest FC",
           "date": "2026-12-02",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "sample": 2,
+          "csvMatchesAvailable": 2,
+          "crossDivisionMatches": 2,
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-19",
@@ -375,7 +377,7 @@
           },
           "formNewDates": {
             "home": "2026-11-22",
-            "away": "2026-09-19"
+            "away": "2026-11-21"
           }
         },
         {
@@ -401,32 +403,32 @@
         {
           "match": "Manchester City FC – Leeds United FC",
           "date": "2026-12-02",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 6,
+          "csvMatchesAvailable": 6,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
-            "away": false
+            "home": true,
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
             "away": "2026-09-14"
           },
           "formNewDates": {
-            "home": "2026-09-20",
-            "away": "2026-09-14"
+            "home": "2026-11-21",
+            "away": "2026-11-21"
           }
         },
         {
           "match": "Newcastle United FC – Manchester United FC",
           "date": "2026-12-02",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -434,19 +436,19 @@
             "away": "2026-09-20"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-21",
             "away": "2026-11-22"
           }
         },
         {
           "match": "Tottenham Hotspur FC – Fulham FC",
           "date": "2026-12-02",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 8,
+          "csvMatchesAvailable": 8,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -454,7 +456,7 @@
             "away": "2026-09-20"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-21",
             "away": "2026-11-21"
           }
         }
@@ -816,16 +818,15 @@
       "extraLoadedSeasons": 6,
       "extraErrors": [],
       "extraInvalid": 0,
-      "crossDivisionFixtures": 1,
+      "crossDivisionFixtures": 2,
       "fixtures": 9,
       "sampleCounts": {
         "8": 2,
-        "0": 1,
         "2": 2,
-        "10": 4
+        "10": 5
       },
-      "formSidesRefreshed": 14,
-      "formSidesNewer": 14,
+      "formSidesRefreshed": 18,
+      "formSidesNewer": 18,
       "rows": [
         {
           "match": "SV Werder Bremen – Borussia Mönchengladbach",
@@ -850,32 +851,32 @@
         {
           "match": "1. FC Köln – SV 07 Elversberg",
           "date": "2026-11-28",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "sample": 2,
+          "csvMatchesAvailable": 2,
+          "crossDivisionMatches": 2,
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
-            "away": false
+            "home": true,
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-19",
             "away": "2026-09-13"
           },
           "formNewDates": {
-            "home": "2026-09-19",
-            "away": "2026-09-13"
+            "home": "2026-11-20",
+            "away": "2026-11-21"
           }
         },
         {
           "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
           "date": "2026-11-28",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -883,7 +884,7 @@
             "away": "2026-09-18"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-22",
             "away": "2026-11-21"
           }
         },
@@ -891,11 +892,11 @@
           "match": "Hamburger SV – FC Bayern München",
           "date": "2026-11-28",
           "sample": 2,
-          "csvMatchesAvailable": 0,
+          "csvMatchesAvailable": 2,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -903,7 +904,7 @@
             "away": "2026-09-18"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-22",
             "away": "2026-11-20"
           }
         },
@@ -1050,18 +1051,16 @@
       "extraLoadedSeasons": 6,
       "extraErrors": [],
       "extraInvalid": 0,
-      "crossDivisionFixtures": 0,
+      "crossDivisionFixtures": 1,
       "fixtures": 10,
       "sampleCounts": {
-        "6": 1,
-        "0": 3,
-        "2": 3,
-        "1": 1,
-        "8": 1,
-        "10": 1
+        "6": 2,
+        "0": 2,
+        "10": 4,
+        "8": 2
       },
-      "formSidesRefreshed": 12,
-      "formSidesNewer": 12,
+      "formSidesRefreshed": 20,
+      "formSidesNewer": 20,
       "rows": [
         {
           "match": "Elche CF – Club Atlético de Madrid",
@@ -1086,13 +1085,13 @@
         {
           "match": "Levante UD – Real Racing Club de Santander",
           "date": "2026-11-29",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "sample": 6,
+          "csvMatchesAvailable": 6,
+          "crossDivisionMatches": 6,
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
@@ -1100,7 +1099,7 @@
           },
           "formNewDates": {
             "home": "2026-11-23",
-            "away": "2026-09-19"
+            "away": "2026-11-22"
           }
         },
         {
@@ -1112,7 +1111,7 @@
           "source": "original_league_history",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
@@ -1120,18 +1119,18 @@
           },
           "formNewDates": {
             "home": "2026-11-22",
-            "away": "2026-09-12"
+            "away": "2026-11-20"
           }
         },
         {
           "match": "RC Celta de Vigo – Villarreal CF",
           "date": "2026-11-29",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -1139,7 +1138,7 @@
             "away": "2026-09-20"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-21",
             "away": "2026-11-22"
           }
         },
@@ -1151,7 +1150,7 @@
           "crossDivisionMatches": 0,
           "source": "original_league_history",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -1159,19 +1158,19 @@
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-20",
+            "home": "2026-11-21",
             "away": "2026-11-22"
           }
         },
         {
           "match": "RCD Espanyol de Barcelona – Getafe CF",
           "date": "2026-11-29",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 8,
+          "csvMatchesAvailable": 8,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -1179,28 +1178,28 @@
             "away": "2026-09-20"
           },
           "formNewDates": {
-            "home": "2026-09-18",
+            "home": "2026-11-20",
             "away": "2026-11-22"
           }
         },
         {
           "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
           "date": "2026-11-29",
-          "sample": 1,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
-            "away": false
+            "home": true,
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-20",
-            "away": "2026-09-19"
+            "home": "2026-11-21",
+            "away": "2026-11-21"
           }
         },
         {
@@ -1246,13 +1245,13 @@
         {
           "match": "Valencia CF – CA Osasuna",
           "date": "2026-11-29",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
@@ -1260,7 +1259,7 @@
           },
           "formNewDates": {
             "home": "2026-11-21",
-            "away": "2026-09-19"
+            "away": "2026-11-22"
           }
         }
       ]
@@ -1309,24 +1308,23 @@
       "crossDivisionFixtures": 1,
       "fixtures": 10,
       "sampleCounts": {
-        "0": 1,
-        "8": 3,
+        "6": 1,
+        "8": 4,
         "4": 3,
-        "10": 2,
-        "2": 1
+        "10": 2
       },
-      "formSidesRefreshed": 18,
-      "formSidesNewer": 18,
+      "formSidesRefreshed": 20,
+      "formSidesNewer": 20,
       "rows": [
         {
           "match": "AS Roma – AC Monza",
           "date": "2026-11-29",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
+          "sample": 6,
+          "csvMatchesAvailable": 6,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -1334,7 +1332,7 @@
             "away": "2026-09-18"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-21",
             "away": "2026-11-23"
           }
         },
@@ -1441,13 +1439,13 @@
         {
           "match": "US Lecce – Atalanta BC",
           "date": "2026-11-29",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 8,
+          "csvMatchesAvailable": 8,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
@@ -1455,7 +1453,7 @@
           },
           "formNewDates": {
             "home": "2026-11-21",
-            "away": "2026-09-20"
+            "away": "2026-11-22"
           }
         },
         {
@@ -1564,14 +1562,15 @@
       "crossDivisionFixtures": 0,
       "fixtures": 9,
       "sampleCounts": {
-        "2": 2,
+        "2": 1,
+        "8": 3,
         "6": 2,
-        "0": 2,
-        "8": 2,
+        "0": 1,
+        "4": 1,
         "10": 1
       },
-      "formSidesRefreshed": 15,
-      "formSidesNewer": 15,
+      "formSidesRefreshed": 18,
+      "formSidesNewer": 18,
       "rows": [
         {
           "match": "Stade Brestois 29 – Paris FC",
@@ -1596,13 +1595,13 @@
         {
           "match": "Angers SCO – Racing Club de Lens",
           "date": "2026-11-28",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 8,
+          "csvMatchesAvailable": 8,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-19",
@@ -1610,7 +1609,7 @@
           },
           "formNewDates": {
             "home": "2026-11-22",
-            "away": "2026-09-18"
+            "away": "2026-11-21"
           }
         },
         {
@@ -1656,21 +1655,21 @@
         {
           "match": "OGC Nice – ES Troyes AC",
           "date": "2026-11-28",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
+          "sample": 4,
+          "csvMatchesAvailable": 4,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
-            "home": false,
-            "away": false
+            "home": true,
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-20",
-            "away": "2026-09-19"
+            "home": "2026-11-21",
+            "away": "2026-11-20"
           }
         },
         {
@@ -1800,13 +1799,13 @@
       "fixtures": 10,
       "sampleCounts": {
         "4": 2,
-        "10": 3,
-        "2": 3,
+        "10": 4,
+        "2": 2,
         "0": 1,
         "8": 1
       },
-      "formSidesRefreshed": 19,
-      "formSidesNewer": 19,
+      "formSidesRefreshed": 20,
+      "formSidesNewer": 20,
       "rows": [
         {
           "match": "FC Groningen – Willem II Tilburg",
@@ -1951,13 +1950,13 @@
         {
           "match": "NEC – FC Twente '65",
           "date": "2026-11-29",
-          "sample": 2,
-          "csvMatchesAvailable": 0,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
           "crossDivisionMatches": 0,
-          "source": "original_league_history",
+          "source": "football-data.co.uk",
           "formRefreshed": {
             "home": true,
-            "away": false
+            "away": true
           },
           "formOldDates": {
             "home": "2026-09-20",
@@ -1965,7 +1964,7 @@
           },
           "formNewDates": {
             "home": "2026-11-21",
-            "away": "2026-09-20"
+            "away": "2026-11-22"
           }
         },
         {
@@ -2059,8 +2058,8 @@
         "6": 2,
         "10": 3
       },
-      "formSidesRefreshed": 17,
-      "formSidesNewer": 17,
+      "formSidesRefreshed": 18,
+      "formSidesNewer": 18,
       "rows": [
         {
           "match": "CS Marítimo – CD Nacional",
@@ -2070,7 +2069,7 @@
           "crossDivisionMatches": 0,
           "source": "original_league_history",
           "formRefreshed": {
-            "home": false,
+            "home": true,
             "away": true
           },
           "formOldDates": {
@@ -2078,7 +2077,7 @@
             "away": "2026-09-19"
           },
           "formNewDates": {
-            "home": "2026-09-19",
+            "home": "2026-11-01",
             "away": "2026-11-08"
           }
         },

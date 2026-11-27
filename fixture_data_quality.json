@@ -1,7 +1,7 @@
 {
   "version": "5.37",
   "mode": "fixture_data_quality_only",
-  "dailyUpdatedAt": "2026-11-27T07:32:35+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
   "cutoffExclusive": "2026-11-27",
   "predictionsEnabled": false,
   "decision": "PAS",
@@ -18,34 +18,8 @@
       "latestLeagueResultAgeDays": 4,
       "fixtures": 20,
       "flags": {
-        "awayForm:stale": 7,
-        "h2h:partial": 8,
-        "overall:away:halfTimeGoals:missing": 7,
-        "overall:away:corners:missing": 7,
-        "overall:away:yellowCards:missing": 7,
-        "overall:away:redCards:missing": 7,
-        "overall:away:shots:missing": 7,
-        "overall:away:shotsOnTarget:missing": 7,
-        "venue:away:halfTimeGoals:missing": 7,
-        "venue:away:corners:missing": 7,
-        "venue:away:yellowCards:missing": 7,
-        "venue:away:redCards:missing": 7,
-        "venue:away:shots:missing": 7,
-        "venue:away:shotsOnTarget:missing": 7,
-        "h2h:missing": 5,
-        "homeForm:stale": 7,
-        "overall:home:halfTimeGoals:missing": 7,
-        "overall:home:corners:missing": 7,
-        "overall:home:yellowCards:missing": 7,
-        "overall:home:redCards:missing": 7,
-        "overall:home:shots:missing": 7,
-        "overall:home:shotsOnTarget:missing": 7,
-        "venue:home:halfTimeGoals:missing": 7,
-        "venue:home:corners:missing": 7,
-        "venue:home:yellowCards:missing": 7,
-        "venue:home:redCards:missing": 7,
-        "venue:home:shots:missing": 7,
-        "venue:home:shotsOnTarget:missing": 7
+        "h2h:missing": 1,
+        "h2h:partial": 6
       },
       "rows": [
         {
@@ -58,14 +32,14 @@
               "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 68
+              "latestAgeDays": 6
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 10,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -77,12 +51,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -95,30 +69,15 @@
               "shotsOnTarget": 5
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-28",
@@ -130,14 +89,14 @@
               "latestAgeDays": 5
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 10,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -149,12 +108,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -167,30 +126,15 @@
               "shotsOnTarget": 5
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-28",
@@ -370,9 +314,9 @@
           "match": "Ipswich Town FC – Aston Villa FC",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             },
             "away": {
               "status": "available",
@@ -381,17 +325,17 @@
             }
           },
           "h2h": {
-            "sample": 0,
-            "status": "missing"
+            "sample": 2,
+            "status": "partial"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -404,12 +348,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             },
             "away": {
               "halfTimeGoals": 5,
@@ -421,20 +365,7 @@
             }
           },
           "flags": [
-            "homeForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
+            "h2h:partial"
           ]
         },
         {
@@ -442,84 +373,58 @@
           "match": "Leeds United FC – Coventry City FC",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 74
+              "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             }
           },
           "h2h": {
-            "sample": 0,
-            "status": "missing"
+            "sample": 4,
+            "status": "partial"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
           "flags": [
-            "homeForm:stale",
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
+            "h2h:partial"
           ]
         },
         {
@@ -584,9 +489,9 @@
           "match": "Nottingham Forest FC – Chelsea FC",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             },
             "away": {
               "status": "available",
@@ -595,17 +500,17 @@
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 8,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -618,12 +523,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             },
             "away": {
               "halfTimeGoals": 5,
@@ -634,22 +539,7 @@
               "shotsOnTarget": 5
             }
           },
-          "flags": [
-            "homeForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-28",
@@ -661,9 +551,9 @@
               "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             }
           },
           "h2h": {
@@ -680,12 +570,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -698,29 +588,16 @@
               "shotsOnTarget": 5
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
           "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
+            "h2h:partial"
           ]
         },
         {
@@ -956,104 +833,19 @@
           "match": "Coventry City FC – Ipswich Town FC",
           "form": {
             "home": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 69
-            },
-            "away": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 69
-            }
-          },
-          "h2h": {
-            "sample": 0,
-            "status": "missing"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            }
-          },
-          "flags": [
-            "homeForm:stale",
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
-        },
-        {
-          "date": "2026-12-02",
-          "match": "Hull City AFC – Nottingham Forest FC",
-          "form": {
-            "home": {
               "status": "available",
               "sample": 5,
-              "latestAgeDays": 5
+              "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             }
           },
           "h2h": {
-            "sample": 0,
-            "status": "missing"
+            "sample": 4,
+            "status": "partial"
           },
           "metricSamples": {
             "home": {
@@ -1065,12 +857,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -1083,29 +875,75 @@
               "shotsOnTarget": 6
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             }
           },
           "flags": [
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
+            "h2h:partial"
+          ]
+        },
+        {
+          "date": "2026-12-02",
+          "match": "Hull City AFC – Nottingham Forest FC",
+          "form": {
+            "home": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 5
+            },
+            "away": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            }
+          },
+          "h2h": {
+            "sample": 2,
+            "status": "partial"
+          },
+          "metricSamples": {
+            "home": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            },
+            "away": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            }
+          },
+          "venueMetricSamples": {
+            "home": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            },
+            "away": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            }
+          },
+          "flags": [
+            "h2h:partial"
           ]
         },
         {
@@ -1172,166 +1010,9 @@
           "match": "Manchester City FC – Leeds United FC",
           "form": {
             "home": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 68
-            },
-            "away": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 74
-            }
-          },
-          "h2h": {
-            "sample": 2,
-            "status": "partial"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            }
-          },
-          "flags": [
-            "homeForm:stale",
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
-        },
-        {
-          "date": "2026-12-02",
-          "match": "Newcastle United FC – Manchester United FC",
-          "form": {
-            "home": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 69
-            },
-            "away": {
               "status": "available",
               "sample": 5,
-              "latestAgeDays": 5
-            }
-          },
-          "h2h": {
-            "sample": 2,
-            "status": "partial"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 6,
-              "corners": 6,
-              "yellowCards": 6,
-              "redCards": 6,
-              "shots": 6,
-              "shotsOnTarget": 6
-            }
-          },
-          "flags": [
-            "homeForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
-          ]
-        },
-        {
-          "date": "2026-12-02",
-          "match": "Tottenham Hotspur FC – Fulham FC",
-          "form": {
-            "home": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             },
             "away": {
               "status": "available",
@@ -1340,17 +1021,17 @@
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 6,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -1363,12 +1044,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             },
             "away": {
               "halfTimeGoals": 6,
@@ -1379,22 +1060,121 @@
               "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "homeForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
-          ]
+          "flags": []
+        },
+        {
+          "date": "2026-12-02",
+          "match": "Newcastle United FC – Manchester United FC",
+          "form": {
+            "home": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            },
+            "away": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 5
+            }
+          },
+          "h2h": {
+            "sample": 10,
+            "status": "available"
+          },
+          "metricSamples": {
+            "home": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            },
+            "away": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            }
+          },
+          "venueMetricSamples": {
+            "home": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            },
+            "away": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            }
+          },
+          "flags": []
+        },
+        {
+          "date": "2026-12-02",
+          "match": "Tottenham Hotspur FC – Fulham FC",
+          "form": {
+            "home": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            },
+            "away": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            }
+          },
+          "h2h": {
+            "sample": 8,
+            "status": "available"
+          },
+          "metricSamples": {
+            "home": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            },
+            "away": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            }
+          },
+          "venueMetricSamples": {
+            "home": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            },
+            "away": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            }
+          },
+          "flags": []
         }
       ]
     },
@@ -2175,33 +1955,6 @@
       "latestLeagueResultAgeDays": 5,
       "fixtures": 9,
       "flags": {
-        "homeForm:stale": 3,
-        "awayForm:stale": 1,
-        "h2h:missing": 1,
-        "overall:home:halfTimeGoals:missing": 3,
-        "overall:home:corners:missing": 3,
-        "overall:home:yellowCards:missing": 3,
-        "overall:home:redCards:missing": 3,
-        "overall:home:shots:missing": 3,
-        "overall:home:shotsOnTarget:missing": 3,
-        "overall:away:halfTimeGoals:missing": 1,
-        "overall:away:corners:missing": 1,
-        "overall:away:yellowCards:missing": 1,
-        "overall:away:redCards:missing": 1,
-        "overall:away:shots:missing": 1,
-        "overall:away:shotsOnTarget:missing": 1,
-        "venue:home:halfTimeGoals:missing": 3,
-        "venue:home:corners:missing": 3,
-        "venue:home:yellowCards:missing": 3,
-        "venue:home:redCards:missing": 3,
-        "venue:home:shots:missing": 3,
-        "venue:home:shotsOnTarget:missing": 3,
-        "venue:away:halfTimeGoals:missing": 1,
-        "venue:away:corners:missing": 1,
-        "venue:away:yellowCards:missing": 1,
-        "venue:away:redCards:missing": 1,
-        "venue:away:shots:missing": 1,
-        "venue:away:shotsOnTarget:missing": 1,
         "h2h:partial": 2,
         "venue:away:halfTimeGoals:partial": 2,
         "venue:away:corners:partial": 2,
@@ -2209,12 +1962,12 @@
         "venue:away:redCards:partial": 2,
         "venue:away:shots:partial": 2,
         "venue:away:shotsOnTarget:partial": 2,
-        "venue:home:halfTimeGoals:partial": 1,
-        "venue:home:corners:partial": 1,
-        "venue:home:yellowCards:partial": 1,
-        "venue:home:redCards:partial": 1,
-        "venue:home:shots:partial": 1,
-        "venue:home:shotsOnTarget:partial": 1
+        "venue:home:halfTimeGoals:partial": 2,
+        "venue:home:corners:partial": 2,
+        "venue:home:yellowCards:partial": 2,
+        "venue:home:redCards:partial": 2,
+        "venue:home:shots:partial": 2,
+        "venue:home:shotsOnTarget:partial": 2
       },
       "rows": [
         {
@@ -2279,94 +2032,9 @@
           "match": "1. FC Köln – SV 07 Elversberg",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
-            },
-            "away": {
-              "status": "stale",
-              "sample": 3,
-              "latestAgeDays": 75
-            }
-          },
-          "h2h": {
-            "sample": 0,
-            "status": "missing"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            },
-            "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
-            }
-          },
-          "flags": [
-            "homeForm:stale",
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
-        },
-        {
-          "date": "2026-11-28",
-          "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
-          "form": {
-            "home": {
-              "status": "stale",
-              "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 7
             },
             "away": {
               "status": "available",
@@ -2380,12 +2048,12 @@
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -2398,12 +2066,71 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
+            },
+            "away": {
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
+            }
+          },
+          "flags": [
+            "h2h:partial"
+          ]
+        },
+        {
+          "date": "2026-11-28",
+          "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
+          "form": {
+            "home": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 5
+            },
+            "away": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            }
+          },
+          "h2h": {
+            "sample": 10,
+            "status": "available"
+          },
+          "metricSamples": {
+            "home": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            },
+            "away": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            }
+          },
+          "venueMetricSamples": {
+            "home": {
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             },
             "away": {
               "halfTimeGoals": 4,
@@ -2415,20 +2142,6 @@
             }
           },
           "flags": [
-            "homeForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
             "venue:away:halfTimeGoals:partial",
             "venue:away:corners:partial",
             "venue:away:yellowCards:partial",
@@ -2442,9 +2155,9 @@
           "match": "Hamburger SV – FC Bayern München",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 5
             },
             "away": {
               "status": "available",
@@ -2458,12 +2171,12 @@
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -2476,12 +2189,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 4,
+              "corners": 4,
+              "yellowCards": 4,
+              "redCards": 4,
+              "shots": 4,
+              "shotsOnTarget": 4
             },
             "away": {
               "halfTimeGoals": 5,
@@ -2493,20 +2206,13 @@
             }
           },
           "flags": [
-            "homeForm:stale",
             "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
+            "venue:home:halfTimeGoals:partial",
+            "venue:home:corners:partial",
+            "venue:home:yellowCards:partial",
+            "venue:home:redCards:partial",
+            "venue:home:shots:partial",
+            "venue:home:shotsOnTarget:partial"
           ]
         },
         {
@@ -2816,34 +2522,7 @@
       "latestLeagueResultAgeDays": 4,
       "fixtures": 10,
       "flags": {
-        "awayForm:stale": 4,
-        "h2h:missing": 3,
-        "overall:away:halfTimeGoals:missing": 4,
-        "overall:away:corners:missing": 4,
-        "overall:away:yellowCards:missing": 4,
-        "overall:away:redCards:missing": 4,
-        "overall:away:shots:missing": 4,
-        "overall:away:shotsOnTarget:missing": 4,
-        "venue:away:halfTimeGoals:missing": 4,
-        "venue:away:corners:missing": 4,
-        "venue:away:yellowCards:missing": 4,
-        "venue:away:redCards:missing": 4,
-        "venue:away:shots:missing": 4,
-        "venue:away:shotsOnTarget:missing": 4,
-        "homeForm:stale": 4,
-        "h2h:partial": 4,
-        "overall:home:halfTimeGoals:missing": 4,
-        "overall:home:corners:missing": 4,
-        "overall:home:yellowCards:missing": 4,
-        "overall:home:redCards:missing": 4,
-        "overall:home:shots:missing": 4,
-        "overall:home:shotsOnTarget:missing": 4,
-        "venue:home:halfTimeGoals:missing": 4,
-        "venue:home:corners:missing": 4,
-        "venue:home:yellowCards:missing": 4,
-        "venue:home:redCards:missing": 4,
-        "venue:home:shots:missing": 4,
-        "venue:home:shotsOnTarget:missing": 4
+        "h2h:missing": 2
       },
       "rows": [
         {
@@ -2913,14 +2592,14 @@
               "latestAgeDays": 4
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 5
             }
           },
           "h2h": {
-            "sample": 0,
-            "status": "missing"
+            "sample": 6,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -2932,12 +2611,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -2950,30 +2629,15 @@
               "shotsOnTarget": 6
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
@@ -2985,9 +2649,9 @@
               "latestAgeDays": 5
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 76
+              "latestAgeDays": 7
             }
           },
           "h2h": {
@@ -3004,12 +2668,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -3022,29 +2686,16 @@
               "shotsOnTarget": 6
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
           "flags": [
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
+            "h2h:missing"
           ]
         },
         {
@@ -3052,9 +2703,9 @@
           "match": "RC Celta de Vigo – Villarreal CF",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             },
             "away": {
               "status": "available",
@@ -3063,17 +2714,17 @@
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 10,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -3086,12 +2737,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 7,
+              "corners": 7,
+              "yellowCards": 7,
+              "redCards": 7,
+              "shots": 7,
+              "shotsOnTarget": 7
             },
             "away": {
               "halfTimeGoals": 7,
@@ -3102,31 +2753,16 @@
               "shotsOnTarget": 7
             }
           },
-          "flags": [
-            "homeForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
           "match": "RC Deportivo La Coruña – FC Barcelona",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 68
+              "latestAgeDays": 6
             },
             "away": {
               "status": "available",
@@ -3140,12 +2776,12 @@
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -3158,12 +2794,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             },
             "away": {
               "halfTimeGoals": 6,
@@ -3175,20 +2811,7 @@
             }
           },
           "flags": [
-            "homeForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
+            "h2h:missing"
           ]
         },
         {
@@ -3196,9 +2819,9 @@
           "match": "RCD Espanyol de Barcelona – Getafe CF",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 70
+              "latestAgeDays": 7
             },
             "away": {
               "status": "available",
@@ -3207,17 +2830,17 @@
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 8,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -3230,12 +2853,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             },
             "away": {
               "halfTimeGoals": 6,
@@ -3246,107 +2869,64 @@
               "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "homeForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
           "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 68
+              "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             }
           },
           "h2h": {
-            "sample": 1,
-            "status": "partial"
+            "sample": 10,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "homeForm:stale",
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
@@ -3472,14 +3052,14 @@
               "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 5
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 10,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -3491,12 +3071,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -3509,30 +3089,15 @@
               "shotsOnTarget": 7
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         }
       ]
     },
@@ -3542,34 +3107,7 @@
       "latestLeagueResultAgeDays": 4,
       "fixtures": 10,
       "flags": {
-        "homeForm:stale": 1,
-        "h2h:missing": 1,
-        "overall:home:halfTimeGoals:missing": 1,
-        "overall:home:corners:missing": 1,
-        "overall:home:yellowCards:missing": 1,
-        "overall:home:redCards:missing": 1,
-        "overall:home:shots:missing": 1,
-        "overall:home:shotsOnTarget:missing": 1,
-        "venue:home:halfTimeGoals:missing": 1,
-        "venue:home:corners:missing": 1,
-        "venue:home:yellowCards:missing": 1,
-        "venue:home:redCards:missing": 1,
-        "venue:home:shots:missing": 1,
-        "venue:home:shotsOnTarget:missing": 1,
-        "h2h:partial": 4,
-        "awayForm:stale": 1,
-        "overall:away:halfTimeGoals:missing": 1,
-        "overall:away:corners:missing": 1,
-        "overall:away:yellowCards:missing": 1,
-        "overall:away:redCards:missing": 1,
-        "overall:away:shots:missing": 1,
-        "overall:away:shotsOnTarget:missing": 1,
-        "venue:away:halfTimeGoals:missing": 1,
-        "venue:away:corners:missing": 1,
-        "venue:away:yellowCards:missing": 1,
-        "venue:away:redCards:missing": 1,
-        "venue:away:shots:missing": 1,
-        "venue:away:shotsOnTarget:missing": 1
+        "h2h:partial": 3
       },
       "rows": [
         {
@@ -3577,9 +3115,9 @@
           "match": "AS Roma – AC Monza",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 6
             },
             "away": {
               "status": "available",
@@ -3588,17 +3126,17 @@
             }
           },
           "h2h": {
-            "sample": 0,
-            "status": "missing"
+            "sample": 6,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -3611,12 +3149,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             },
             "away": {
               "halfTimeGoals": 6,
@@ -3627,22 +3165,7 @@
               "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "homeForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
@@ -3943,14 +3466,14 @@
               "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 68
+              "latestAgeDays": 5
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 8,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -3962,12 +3485,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -3980,30 +3503,15 @@
               "shotsOnTarget": 5
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
@@ -4187,33 +3695,7 @@
       "fixtures": 9,
       "flags": {
         "h2h:partial": 2,
-        "awayForm:stale": 2,
-        "overall:away:halfTimeGoals:missing": 2,
-        "overall:away:corners:missing": 2,
-        "overall:away:yellowCards:missing": 2,
-        "overall:away:redCards:missing": 2,
-        "overall:away:shots:missing": 2,
-        "overall:away:shotsOnTarget:missing": 2,
-        "venue:away:halfTimeGoals:missing": 2,
-        "venue:away:corners:missing": 2,
-        "venue:away:yellowCards:missing": 2,
-        "venue:away:redCards:missing": 2,
-        "venue:away:shots:missing": 2,
-        "venue:away:shotsOnTarget:missing": 2,
-        "h2h:missing": 2,
-        "homeForm:stale": 1,
-        "overall:home:halfTimeGoals:missing": 1,
-        "overall:home:corners:missing": 1,
-        "overall:home:yellowCards:missing": 1,
-        "overall:home:redCards:missing": 1,
-        "overall:home:shots:missing": 1,
-        "overall:home:shotsOnTarget:missing": 1,
-        "venue:home:halfTimeGoals:missing": 1,
-        "venue:home:corners:missing": 1,
-        "venue:home:yellowCards:missing": 1,
-        "venue:home:redCards:missing": 1,
-        "venue:home:shots:missing": 1,
-        "venue:home:shotsOnTarget:missing": 1,
+        "h2h:missing": 1,
         "venue:home:halfTimeGoals:partial": 1,
         "venue:home:corners:partial": 1,
         "venue:home:yellowCards:partial": 1,
@@ -4291,14 +3773,14 @@
               "latestAgeDays": 5
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 70
+              "latestAgeDays": 6
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 8,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -4310,12 +3792,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -4328,30 +3810,15 @@
               "shotsOnTarget": 6
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-28",
@@ -4474,84 +3941,58 @@
           "match": "OGC Nice – ES Troyes AC",
           "form": {
             "home": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 68
+              "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
-              "sample": 4,
-              "latestAgeDays": 69
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 7
             }
           },
           "h2h": {
-            "sample": 0,
-            "status": "missing"
+            "sample": 4,
+            "status": "partial"
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             }
           },
           "flags": [
-            "homeForm:stale",
-            "awayForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
+            "h2h:partial"
           ]
         },
         {
@@ -4797,21 +4238,8 @@
       "latestLeagueResultAgeDays": 5,
       "fixtures": 10,
       "flags": {
-        "h2h:partial": 5,
-        "h2h:missing": 1,
-        "awayForm:stale": 1,
-        "overall:away:halfTimeGoals:missing": 1,
-        "overall:away:corners:missing": 1,
-        "overall:away:yellowCards:missing": 1,
-        "overall:away:redCards:missing": 1,
-        "overall:away:shots:missing": 1,
-        "overall:away:shotsOnTarget:missing": 1,
-        "venue:away:halfTimeGoals:missing": 1,
-        "venue:away:corners:missing": 1,
-        "venue:away:yellowCards:missing": 1,
-        "venue:away:redCards:missing": 1,
-        "venue:away:shots:missing": 1,
-        "venue:away:shotsOnTarget:missing": 1
+        "h2h:partial": 4,
+        "h2h:missing": 1
       },
       "rows": [
         {
@@ -5231,14 +4659,14 @@
               "latestAgeDays": 6
             },
             "away": {
-              "status": "stale",
+              "status": "available",
               "sample": 5,
-              "latestAgeDays": 68
+              "latestAgeDays": 5
             }
           },
           "h2h": {
-            "sample": 2,
-            "status": "partial"
+            "sample": 10,
+            "status": "available"
           },
           "metricSamples": {
             "home": {
@@ -5250,12 +4678,12 @@
               "shotsOnTarget": 10
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             }
           },
           "venueMetricSamples": {
@@ -5268,30 +4696,15 @@
               "shotsOnTarget": 7
             },
             "away": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
             }
           },
-          "flags": [
-            "awayForm:stale",
-            "h2h:partial",
-            "overall:away:halfTimeGoals:missing",
-            "overall:away:corners:missing",
-            "overall:away:yellowCards:missing",
-            "overall:away:redCards:missing",
-            "overall:away:shots:missing",
-            "overall:away:shotsOnTarget:missing",
-            "venue:away:halfTimeGoals:missing",
-            "venue:away:corners:missing",
-            "venue:away:yellowCards:missing",
-            "venue:away:redCards:missing",
-            "venue:away:shots:missing",
-            "venue:away:shotsOnTarget:missing"
-          ]
+          "flags": []
         },
         {
           "date": "2026-11-29",
@@ -5419,18 +4832,6 @@
       "flags": {
         "homeForm:stale": 1,
         "h2h:missing": 2,
-        "overall:home:halfTimeGoals:missing": 1,
-        "overall:home:corners:missing": 1,
-        "overall:home:yellowCards:missing": 1,
-        "overall:home:redCards:missing": 1,
-        "overall:home:shots:missing": 1,
-        "overall:home:shotsOnTarget:missing": 1,
-        "venue:home:halfTimeGoals:missing": 1,
-        "venue:home:corners:missing": 1,
-        "venue:home:yellowCards:missing": 1,
-        "venue:home:redCards:missing": 1,
-        "venue:home:shots:missing": 1,
-        "venue:home:shotsOnTarget:missing": 1,
         "awayForm:stale": 1
       },
       "rows": [
@@ -5441,7 +4842,7 @@
             "home": {
               "status": "stale",
               "sample": 5,
-              "latestAgeDays": 69
+              "latestAgeDays": 26
             },
             "away": {
               "status": "available",
@@ -5455,12 +4856,12 @@
           },
           "metricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
             },
             "away": {
               "halfTimeGoals": 10,
@@ -5473,12 +4874,12 @@
           },
           "venueMetricSamples": {
             "home": {
-              "halfTimeGoals": 0,
-              "corners": 0,
-              "yellowCards": 0,
-              "redCards": 0,
-              "shots": 0,
-              "shotsOnTarget": 0
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
             },
             "away": {
               "halfTimeGoals": 5,
@@ -5491,19 +4892,7 @@
           },
           "flags": [
             "homeForm:stale",
-            "h2h:missing",
-            "overall:home:halfTimeGoals:missing",
-            "overall:home:corners:missing",
-            "overall:home:yellowCards:missing",
-            "overall:home:redCards:missing",
-            "overall:home:shots:missing",
-            "overall:home:shotsOnTarget:missing",
-            "venue:home:halfTimeGoals:missing",
-            "venue:home:corners:missing",
-            "venue:home:yellowCards:missing",
-            "venue:home:redCards:missing",
-            "venue:home:shots:missing",
-            "venue:home:shotsOnTarget:missing"
+            "h2h:missing"
           ]
         },
         {

@@ -1,7 +1,7 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-27T07:33:11.472239+03:00",
-  "dailyUpdatedAt": "2026-11-27T07:32:35+03:00",
+  "updatedAt": "2026-11-27T07:36:28.630179+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
   "cutoffExclusive": "2026-11-27",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -62,37 +62,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 4.1
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 2.1
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 15.2,
+                "againstAverage": 10.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 3.9
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.8
               }
             }
           }
@@ -137,37 +137,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 4.9
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 12.1,
+                "againstAverage": 15.2
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 4.8
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.8
               }
             }
           }
@@ -402,37 +402,37 @@
           "league": "İngiltere Premier Lig",
           "match": "Ipswich Town FC – Aston Villa FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.1,
+                "againstAverage": 5.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.3
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.0,
+                "againstAverage": 16.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 5.6
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.0
               }
             }
           },
@@ -477,72 +477,72 @@
           "league": "İngiltere Premier Lig",
           "match": "Leeds United FC – Coventry City FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 4.1
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 2.1
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 13.1,
+                "againstAverage": 13.4
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.2,
+                "againstAverage": 4.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.4
               }
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.3
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 1.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.9,
+                "againstAverage": 16.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 4.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
               }
             }
           }
@@ -627,37 +627,37 @@
           "league": "İngiltere Premier Lig",
           "match": "Nottingham Forest FC – Chelsea FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 1.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 16.9,
+                "againstAverage": 10.8
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.5,
+                "againstAverage": 3.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.6
               }
             }
           },
@@ -737,37 +737,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 8.0,
+                "againstAverage": 4.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.2
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 16.4,
+                "againstAverage": 11.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 3.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.1
               }
             }
           }
@@ -1077,72 +1077,72 @@
           "league": "İngiltere Premier Lig",
           "match": "Coventry City FC – Ipswich Town FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.3
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 1.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.9,
+                "againstAverage": 16.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 4.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
               }
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.1,
+                "againstAverage": 5.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.3
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.0,
+                "againstAverage": 16.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 5.6
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.0
               }
             }
           }
@@ -1187,37 +1187,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 1.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 16.9,
+                "againstAverage": 10.8
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.5,
+                "againstAverage": 3.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.6
               }
             }
           }
@@ -1302,72 +1302,72 @@
           "league": "İngiltere Premier Lig",
           "match": "Manchester City FC – Leeds United FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 4.1
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 2.1
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 15.2,
+                "againstAverage": 10.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 3.9
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.8
               }
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 4.1
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 2.1
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 13.1,
+                "againstAverage": 13.4
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.2,
+                "againstAverage": 4.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.4
               }
             }
           }
@@ -1377,37 +1377,37 @@
           "league": "İngiltere Premier Lig",
           "match": "Newcastle United FC – Manchester United FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 4.9
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 12.1,
+                "againstAverage": 15.2
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 4.8
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.8
               }
             }
           },
@@ -1452,37 +1452,37 @@
           "league": "İngiltere Premier Lig",
           "match": "Tottenham Hotspur FC – Fulham FC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 8.0,
+                "againstAverage": 4.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.2
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 16.4,
+                "againstAverage": 11.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 3.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.1
               }
             }
           },
@@ -2613,72 +2613,72 @@
           "league": "Almanya Bundesliga",
           "match": "1. FC Köln – SV 07 Elversberg",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 5.6
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 2.3
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 14.4,
+                "againstAverage": 13.9
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.7
               }
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 7.2
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.1
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.1,
+                "againstAverage": 18.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 4.6
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.4
               }
             }
           }
@@ -2688,37 +2688,37 @@
           "league": "Almanya Bundesliga",
           "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 4.9
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.7,
+                "againstAverage": 1.5
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 15.1,
+                "againstAverage": 15.3
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 5.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 1.3
               }
             }
           },
@@ -2763,37 +2763,37 @@
           "league": "Almanya Bundesliga",
           "match": "Hamburger SV – FC Bayern München",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.5,
+                "againstAverage": 5.2
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 1.9
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.3
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 12.2,
+                "againstAverage": 18.4
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 6.3
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.9
               }
             }
           },
@@ -3341,37 +3341,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 7.6
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 2.8
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.3
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 13.1,
+                "againstAverage": 18.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 6.8
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 1.6
               }
             }
           }
@@ -3416,37 +3416,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.7,
+                "againstAverage": 3.9
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 15.8,
+                "againstAverage": 10.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 3.2
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.3
               }
             }
           }
@@ -3456,37 +3456,37 @@
           "league": "İspanya La Liga",
           "match": "RC Celta de Vigo – Villarreal CF",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 12.0,
+                "againstAverage": 14.1
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.2
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.2
               }
             }
           },
@@ -3531,37 +3531,37 @@
           "league": "İspanya La Liga",
           "match": "RC Deportivo La Coruña – FC Barcelona",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 5.3
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.9
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 12.5,
+                "againstAverage": 14.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 4.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.6
               }
             }
           },
@@ -3606,37 +3606,37 @@
           "league": "İspanya La Liga",
           "match": "RCD Espanyol de Barcelona – Getafe CF",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.6,
+                "againstAverage": 6.3
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.7,
+                "againstAverage": 3.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.2,
+                "againstAverage": 13.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 4.8
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.4
               }
             }
           },
@@ -3681,72 +3681,72 @@
           "league": "İspanya La Liga",
           "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 6.2
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.7
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 15.8,
+                "againstAverage": 15.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 5.6
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.3
               }
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 6.1
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 1.9
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 16.5,
+                "againstAverage": 15.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.2,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 1.1
               }
             }
           }
@@ -3941,37 +3941,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.5,
+                "againstAverage": 5.2
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 1.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.1,
+                "againstAverage": 14.9
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.6,
+                "againstAverage": 4.9
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.8
               }
             }
           }
@@ -3999,37 +3999,37 @@
           "league": "İtalya Serie A",
           "match": "AS Roma – AC Monza",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 7.5,
+                "againstAverage": 3.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 1.5
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 20.0,
+                "againstAverage": 13.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 6.5,
+                "againstAverage": 4.6
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 0.2
               }
             }
           },
@@ -4484,37 +4484,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 6.3
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 1.7
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 14.5,
+                "againstAverage": 17.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 6.0,
+                "againstAverage": 6.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 1.0
               }
             }
           }
@@ -4877,37 +4877,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 6.3,
+                "againstAverage": 4.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 13.9,
+                "againstAverage": 11.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 4.9
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.7
               }
             }
           }
@@ -5067,72 +5067,72 @@
           "league": "Fransa Ligue 1",
           "match": "OGC Nice – ES Troyes AC",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 3.9
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 1.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 11.4,
+                "againstAverage": 13.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 5.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.9
               }
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 5.8,
+                "againstAverage": 2.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 14.1,
+                "againstAverage": 10.9
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.8
               }
             }
           }
@@ -6020,37 +6020,37 @@
             }
           },
           "away": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 7.0,
+                "againstAverage": 3.1
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.3,
+                "againstAverage": 2.3
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 21.4,
+                "againstAverage": 9.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 7.5,
+                "againstAverage": 3.3
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.6
               }
             }
           }
@@ -6228,37 +6228,37 @@
           "league": "Portekiz Primeira Liga",
           "match": "CS Marítimo – CD Nacional",
           "home": {
-            "sample": 0,
+            "sample": 10,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 4.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 2.5
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 10.7,
+                "againstAverage": 14.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 3.4,
+                "againstAverage": 5.9
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 1.1
               }
             }
           },

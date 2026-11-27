@@ -1,7 +1,7 @@
 {
   "version": "5.23",
-  "updatedAt": "2026-11-27T07:33:13.751214+03:00",
-  "dailyUpdatedAt": "2026-11-27T07:32:35+03:00",
+  "updatedAt": "2026-11-27T07:36:30.310168+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
   "cutoffExclusive": "2026-11-27",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -94,77 +94,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 6.6,
+                "againstAverage": 4.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.4,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 13.2,
+                "againstAverage": 11.4
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 5.2,
+                "againstAverage": 3.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.6
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 2.0,
+              "againstAverage": 1.2
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 3,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 3,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 2,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
                 "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/2": 2,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.6,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.4,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.4,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.2
               }
             }
           }
@@ -248,77 +248,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 5.0,
+                "againstAverage": 5.2
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.6,
+                "againstAverage": 1.2
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 11.2,
+                "againstAverage": 13.8
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.0,
+                "againstAverage": 5.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.8
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.4,
+              "againstAverage": 1.8
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 2,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 3,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 2,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 2,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.4,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.6,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.4,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.4,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -789,77 +789,77 @@
           "date": "2026-11-28",
           "match": "Ipswich Town FC – Aston Villa FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.2,
+                "againstAverage": 5.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.2,
+                "againstAverage": 2.8
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 10.4,
+                "againstAverage": 13.2
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.6,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.4,
+                "againstAverage": 1.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.2,
+              "againstAverage": 1.4
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 3,
+                "firstBtts": 2,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
                 "halfFull:1/1": 0,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:X/1": 2,
+                "halfFull:X/X": 1,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 2
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8,
+                "firstOver15": 0.6,
+                "firstBtts": 0.4,
+                "secondBtts": 0.4,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.0,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.4,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.4
               }
             }
           },
@@ -943,152 +943,152 @@
           "date": "2026-11-28",
           "match": "Leeds United FC – Coventry City FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.4,
+                "againstAverage": 4.2
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.2,
+                "againstAverage": 2.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 13.6,
+                "againstAverage": 12.2
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.8,
+                "againstAverage": 4.2
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.6,
+                "againstAverage": 0.4
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.4,
+              "againstAverage": 0.6
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 3,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 1,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 1,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
+                "halfFull:2/X": 2,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.2,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.2,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.4,
+                "halfFull:2/2": 0.0
               }
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.0,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.4,
+                "againstAverage": 1.2
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 10.6,
+                "againstAverage": 18.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.4,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.8
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 0.6,
+              "againstAverage": 2.0
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 3,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.4,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.6,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.2,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -1251,77 +1251,77 @@
           "date": "2026-11-28",
           "match": "Nottingham Forest FC – Chelsea FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.4,
+                "againstAverage": 5.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.4,
+                "againstAverage": 1.2
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 14.6,
+                "againstAverage": 10.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.8,
+                "againstAverage": 2.2
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.4,
+                "againstAverage": 0.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 0.6,
+              "againstAverage": 0.8
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 1,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 1,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 3,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.2,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.2,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.2,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.6,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           },
@@ -1480,77 +1480,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 5.4,
+                "againstAverage": 4.6
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.2,
+                "againstAverage": 2.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 10.8,
+                "againstAverage": 14.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.0,
+                "againstAverage": 4.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.4
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 0.6,
+              "againstAverage": 1.0
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 1,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 1,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 2,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.2,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.2,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.2,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.4,
+                "halfFull:X/2": 0.2,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -2175,152 +2175,152 @@
           "date": "2026-12-02",
           "match": "Coventry City FC – Ipswich Town FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.166666666666667,
+                "againstAverage": 4.5
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.8333333333333334,
+                "againstAverage": 1.8333333333333333
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.16666666666666666
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 11.666666666666666,
+                "againstAverage": 15.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.666666666666667,
+                "againstAverage": 4.166666666666667
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.8333333333333334,
+                "againstAverage": 0.5
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.6666666666666667,
+              "againstAverage": 1.8333333333333333
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 2,
+                "firstBtts": 1,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 2,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/2": 2,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.3333333333333333,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.3333333333333333,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.3333333333333333,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.8333333333333335,
+                "againstAverage": 5.666666666666667
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.1666666666666665,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.16666666666666666
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 11.333333333333334,
+                "againstAverage": 18.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.0,
+                "againstAverage": 5.833333333333333
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.8333333333333334,
+                "againstAverage": 1.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.5,
+              "againstAverage": 2.5
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "firstOver05": 6,
+                "firstOver15": 3,
+                "firstBtts": 3,
+                "secondBtts": 4,
+                "bothHalvesBtts": 3,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/X": 1,
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 1.0,
+                "firstOver15": 0.5,
+                "firstBtts": 0.5,
+                "secondBtts": 0.6666666666666666,
+                "bothHalvesBtts": 0.5,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.16666666666666666,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           }
@@ -2404,77 +2404,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.5,
+                "againstAverage": 3.8333333333333335
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.6666666666666665,
+                "againstAverage": 1.8333333333333333
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 18.0,
+                "againstAverage": 11.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.8333333333333335,
+                "againstAverage": 4.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.5,
+                "againstAverage": 1.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.0,
+              "againstAverage": 1.8333333333333333
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 5,
+                "firstOver15": 3,
+                "firstBtts": 2,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
+                "halfFull:2/X": 1,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8333333333333334,
+                "firstOver15": 0.5,
+                "firstBtts": 0.3333333333333333,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.16666666666666666,
+                "halfFull:X/2": 0.16666666666666666,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.16666666666666666,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -2637,152 +2637,152 @@
           "date": "2026-12-02",
           "match": "Manchester City FC – Leeds United FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 6.0,
+                "againstAverage": 4.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.6666666666666666,
+                "againstAverage": 2.1666666666666665
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 16.5,
+                "againstAverage": 9.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 5.166666666666667,
+                "againstAverage": 4.333333333333333
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.0,
+                "againstAverage": 1.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 2.0,
+              "againstAverage": 1.3333333333333333
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "firstOver05": 6,
+                "firstOver15": 2,
+                "firstBtts": 2,
+                "secondBtts": 2,
+                "bothHalvesBtts": 2,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/1": 1,
+                "halfFull:2/X": 1,
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 1.0,
+                "firstOver15": 0.3333333333333333,
+                "firstBtts": 0.3333333333333333,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.3333333333333333,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.16666666666666666,
+                "halfFull:2/X": 0.16666666666666666,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.8333333333333335,
+                "againstAverage": 3.8333333333333335
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.5,
+                "againstAverage": 1.6666666666666667
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 12.333333333333334,
+                "againstAverage": 14.166666666666666
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.333333333333333,
+                "againstAverage": 4.166666666666667
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.3333333333333333,
+                "againstAverage": 0.3333333333333333
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.1666666666666667,
+              "againstAverage": 1.0
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 3,
+                "firstOver15": 1,
+                "firstBtts": 1,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 1,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 2,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
+                "halfFull:2/X": 1,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.5,
+                "firstOver15": 0.16666666666666666,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.16666666666666666,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.16666666666666666,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.16666666666666666,
+                "halfFull:X/2": 0.3333333333333333,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.16666666666666666,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -2791,77 +2791,77 @@
           "date": "2026-12-02",
           "match": "Newcastle United FC – Manchester United FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.0,
+                "againstAverage": 4.833333333333333
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.5,
+                "againstAverage": 2.8333333333333335
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 13.0,
+                "againstAverage": 18.333333333333332
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.8333333333333335,
+                "againstAverage": 4.666666666666667
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.6666666666666666,
+                "againstAverage": 0.6666666666666666
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.3333333333333333,
+              "againstAverage": 1.5
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 5,
+                "firstOver15": 2,
+                "firstBtts": 1,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
+                "halfFull:1/1": 1,
+                "halfFull:1/X": 1,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
                 "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/X": 2,
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8333333333333334,
+                "firstOver15": 0.3333333333333333,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.16666666666666666,
+                "halfFull:1/X": 0.16666666666666666,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.16666666666666666,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.3333333333333333,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
@@ -2945,77 +2945,77 @@
           "date": "2026-12-02",
           "match": "Tottenham Hotspur FC – Fulham FC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 9.333333333333334,
+                "againstAverage": 4.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.3333333333333333,
+                "againstAverage": 1.8333333333333333
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.16666666666666666
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 19.833333333333332,
+                "againstAverage": 10.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 6.333333333333333,
+                "againstAverage": 2.6666666666666665
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.5,
+                "againstAverage": 0.16666666666666666
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.5,
+              "againstAverage": 1.0
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
+                "firstOver05": 4,
                 "firstOver15": 0,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.0,
+                "firstBtts": 0.0,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.16666666666666666,
+                "halfFull:X/2": 0.16666666666666666,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
@@ -6051,152 +6051,152 @@
           "date": "2026-11-28",
           "match": "1. FC Köln – SV 07 Elversberg",
           "homeVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 5.6,
+                "againstAverage": 5.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.2,
+                "againstAverage": 2.8
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 15.6,
+                "againstAverage": 13.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 6.0,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.4,
+                "againstAverage": 0.6
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.4,
+              "againstAverage": 1.2
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 1,
+                "firstBtts": 1,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
                 "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
+                "halfFull:1/X": 1,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 1,
                 "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
+                "halfFull:2/1": 1,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8,
+                "firstOver15": 0.2,
+                "firstBtts": 0.2,
+                "secondBtts": 0.4,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.0,
+                "halfFull:1/X": 0.2,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.2,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.2
               }
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.6,
+                "againstAverage": 6.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.4,
+                "againstAverage": 1.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 10.6,
+                "againstAverage": 17.8
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.2,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.4
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.0,
+              "againstAverage": 2.0
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
+                "firstOver05": 1,
+                "firstOver15": 1,
+                "firstBtts": 1,
+                "secondBtts": 2,
+                "bothHalvesBtts": 1,
                 "halfFull:1/1": 0,
                 "halfFull:1/X": 0,
-                "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:1/2": 1,
+                "halfFull:X/1": 3,
+                "halfFull:X/X": 1,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.2,
+                "firstOver15": 0.2,
+                "firstBtts": 0.2,
+                "secondBtts": 0.4,
+                "bothHalvesBtts": 0.2,
+                "halfFull:1/1": 0.0,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.2,
+                "halfFull:X/1": 0.6,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -6205,77 +6205,77 @@
           "date": "2026-11-28",
           "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
           "homeVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 6.4,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.8,
+                "againstAverage": 1.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 18.0,
+                "againstAverage": 16.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.6,
+                "againstAverage": 5.8
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.6,
+                "againstAverage": 1.4
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.4,
+              "againstAverage": 2.4
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 3,
+                "firstBtts": 2,
+                "secondBtts": 4,
+                "bothHalvesBtts": 2,
                 "halfFull:1/1": 0,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 3
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8,
+                "firstOver15": 0.6,
+                "firstBtts": 0.4,
+                "secondBtts": 0.8,
+                "bothHalvesBtts": 0.4,
+                "halfFull:1/1": 0.0,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.2,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.6
               }
             }
           },
@@ -6359,77 +6359,77 @@
           "date": "2026-11-28",
           "match": "Hamburger SV – FC Bayern München",
           "homeVenue": {
-            "sample": 0,
+            "sample": 4,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 4,
+                "forAverage": 4.25,
+                "againstAverage": 5.5
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 4,
+                "forAverage": 1.5,
+                "againstAverage": 2.25
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 4,
+                "forAverage": 0.0,
+                "againstAverage": 0.25
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 4,
+                "forAverage": 13.0,
+                "againstAverage": 19.5
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 4,
+                "forAverage": 5.0,
+                "againstAverage": 6.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 4,
+                "forAverage": 0.5,
+                "againstAverage": 0.75
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 4,
+              "forAverage": 1.5,
+              "againstAverage": 1.75
             },
             "halves": {
-              "sample": 0,
+              "sample": 4,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 3,
+                "firstOver15": 2,
+                "firstBtts": 1,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 1,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 2,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.75,
+                "firstOver15": 0.5,
+                "firstBtts": 0.25,
+                "secondBtts": 0.25,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.25,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.5,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.25
               }
             }
           },
@@ -7597,56 +7597,56 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.6666666666666665,
+                "againstAverage": 8.5
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.8333333333333335,
+                "againstAverage": 2.8333333333333335
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.5
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 10.166666666666666,
+                "againstAverage": 17.833333333333332
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.8333333333333335,
+                "againstAverage": 7.333333333333333
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.5,
+                "againstAverage": 1.6666666666666667
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.0,
+              "againstAverage": 3.1666666666666665
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "firstOver05": 5,
+                "firstOver15": 3,
+                "firstBtts": 2,
+                "secondBtts": 1,
+                "bothHalvesBtts": 1,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
-                "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:1/2": 1,
+                "halfFull:X/1": 2,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
@@ -7654,20 +7654,20 @@
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8333333333333334,
+                "firstOver15": 0.5,
+                "firstBtts": 0.3333333333333333,
+                "secondBtts": 0.16666666666666666,
+                "bothHalvesBtts": 0.16666666666666666,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.16666666666666666,
+                "halfFull:X/1": 0.3333333333333333,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -7751,77 +7751,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 6.2,
+                "againstAverage": 5.4
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.0,
+                "againstAverage": 1.8
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 13.6,
+                "againstAverage": 15.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.4,
+                "againstAverage": 5.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.4,
+                "againstAverage": 0.6
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 0.8,
+              "againstAverage": 1.2
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 3,
+                "firstOver15": 2,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 2,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:X/X": 2,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6,
+                "firstOver15": 0.4,
+                "firstBtts": 0.0,
+                "secondBtts": 0.4,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.4,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.4,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.2
               }
             }
           }
@@ -7830,77 +7830,77 @@
           "date": "2026-11-29",
           "match": "RC Celta de Vigo – Villarreal CF",
           "homeVenue": {
-            "sample": 0,
+            "sample": 7,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 7,
+                "forAverage": 3.142857142857143,
+                "againstAverage": 3.857142857142857
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 7,
+                "forAverage": 1.0,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 7,
+                "forAverage": 0.14285714285714285,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 7,
+                "forAverage": 11.857142857142858,
+                "againstAverage": 13.428571428571429
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 7,
+                "forAverage": 4.714285714285714,
+                "againstAverage": 4.285714285714286
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 7,
+                "forAverage": 0.5714285714285714,
+                "againstAverage": 0.2857142857142857
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 7,
+              "forAverage": 1.2857142857142858,
+              "againstAverage": 0.8571428571428571
             },
             "halves": {
-              "sample": 0,
+              "sample": 7,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 4,
+                "firstOver15": 2,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
-                "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:1/1": 1,
+                "halfFull:1/X": 1,
+                "halfFull:1/2": 1,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 2,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.5714285714285714,
+                "firstOver15": 0.2857142857142857,
+                "firstBtts": 0.0,
+                "secondBtts": 0.14285714285714285,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.14285714285714285,
+                "halfFull:1/X": 0.14285714285714285,
+                "halfFull:1/2": 0.14285714285714285,
+                "halfFull:X/1": 0.14285714285714285,
+                "halfFull:X/X": 0.2857142857142857,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.14285714285714285
               }
             }
           },
@@ -7984,77 +7984,77 @@
           "date": "2026-11-29",
           "match": "RC Deportivo La Coruña – FC Barcelona",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 5.5,
+                "againstAverage": 4.5
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.3333333333333333,
+                "againstAverage": 2.3333333333333335
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.3333333333333333,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 13.0,
+                "againstAverage": 11.166666666666666
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.833333333333333,
+                "againstAverage": 4.333333333333333
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.3333333333333333,
+              "againstAverage": 1.0
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 1,
+                "firstBtts": 1,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
+                "halfFull:1/1": 1,
+                "halfFull:1/X": 1,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 1,
+                "halfFull:2/1": 1,
+                "halfFull:2/X": 1,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.16666666666666666,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.16666666666666666,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.16666666666666666,
+                "halfFull:1/X": 0.16666666666666666,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.16666666666666666,
+                "halfFull:X/2": 0.16666666666666666,
+                "halfFull:2/1": 0.16666666666666666,
+                "halfFull:2/X": 0.16666666666666666,
+                "halfFull:2/2": 0.0
               }
             }
           },
@@ -8138,77 +8138,77 @@
           "date": "2026-11-29",
           "match": "RCD Espanyol de Barcelona – Getafe CF",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.6666666666666665,
+                "againstAverage": 5.5
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.0,
+                "againstAverage": 2.5
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.3333333333333333
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 13.333333333333334,
+                "againstAverage": 10.666666666666666
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.6666666666666665,
+                "againstAverage": 4.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.0,
+              "againstAverage": 1.1666666666666667
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 3,
+                "firstOver15": 3,
+                "firstBtts": 1,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 1,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/X": 2,
+                "halfFull:X/2": 2,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.5,
+                "firstOver15": 0.5,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.16666666666666666,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.3333333333333333,
+                "halfFull:X/2": 0.3333333333333333,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
@@ -8292,152 +8292,152 @@
           "date": "2026-11-29",
           "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 5.666666666666667,
+                "againstAverage": 5.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.1666666666666665,
+                "againstAverage": 2.8333333333333335
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 16.666666666666668,
+                "againstAverage": 12.666666666666666
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 6.333333333333333,
+                "againstAverage": 5.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.0,
+                "againstAverage": 0.3333333333333333
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 2.0,
+              "againstAverage": 1.3333333333333333
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "firstOver05": 4,
+                "firstOver15": 3,
+                "firstBtts": 1,
+                "secondBtts": 2,
+                "bothHalvesBtts": 1,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 2,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.5,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.16666666666666666,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.3333333333333333,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 5.0,
+                "againstAverage": 6.666666666666667
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.1666666666666665,
+                "againstAverage": 2.5
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.3333333333333333
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 14.333333333333334,
+                "againstAverage": 17.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.166666666666667,
+                "againstAverage": 5.666666666666667
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.5,
+                "againstAverage": 1.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.0,
+              "againstAverage": 2.3333333333333335
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
+                "firstOver05": 5,
+                "firstOver15": 2,
+                "firstBtts": 1,
+                "secondBtts": 2,
+                "bothHalvesBtts": 1,
+                "halfFull:1/1": 2,
+                "halfFull:1/X": 1,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
+                "halfFull:2/1": 1,
+                "halfFull:2/X": 1,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8333333333333334,
+                "firstOver15": 0.3333333333333333,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.16666666666666666,
+                "halfFull:1/1": 0.3333333333333333,
+                "halfFull:1/X": 0.16666666666666666,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.16666666666666666,
+                "halfFull:2/X": 0.16666666666666666,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -8829,77 +8829,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.3333333333333335,
+                "againstAverage": 6.666666666666667
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.6666666666666665,
+                "againstAverage": 0.8333333333333334
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.16666666666666666
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 9.166666666666666,
+                "againstAverage": 16.333333333333332
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 3.3333333333333335,
+                "againstAverage": 6.833333333333333
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 1.1666666666666667
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 1.1666666666666667,
+              "againstAverage": 3.1666666666666665
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 6,
+                "firstOver15": 2,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 2,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 4,
                 "halfFull:1/X": 0,
-                "halfFull:1/2": 0,
+                "halfFull:1/2": 1,
                 "halfFull:X/1": 0,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
+                "halfFull:2/1": 1,
                 "halfFull:2/X": 0,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 1.0,
+                "firstOver15": 0.3333333333333333,
+                "firstBtts": 0.0,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.6666666666666666,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.16666666666666666,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.16666666666666666,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -8993,56 +8993,56 @@
           "date": "2026-11-29",
           "match": "AS Roma – AC Monza",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 7.333333333333333,
+                "againstAverage": 3.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.8333333333333333,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.16666666666666666
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 22.833333333333332,
+                "againstAverage": 10.833333333333334
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 7.333333333333333,
+                "againstAverage": 3.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.1666666666666667,
+                "againstAverage": 0.16666666666666666
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 2.8333333333333335,
+              "againstAverage": 0.8333333333333334
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
+                "firstOver05": 4,
+                "firstOver15": 3,
+                "firstBtts": 1,
+                "secondBtts": 2,
+                "bothHalvesBtts": 1,
+                "halfFull:1/1": 3,
+                "halfFull:1/X": 1,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 2,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
@@ -9050,20 +9050,20 @@
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.5,
+                "firstBtts": 0.16666666666666666,
+                "secondBtts": 0.3333333333333333,
+                "bothHalvesBtts": 0.16666666666666666,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.16666666666666666,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.3333333333333333,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.0
               }
             }
           },
@@ -9992,77 +9992,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.4,
+                "againstAverage": 7.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.8,
+                "againstAverage": 2.0
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 8.8,
+                "againstAverage": 20.0
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.0,
+                "againstAverage": 6.4
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 0.6
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.2,
+              "againstAverage": 1.8
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 3,
+                "firstOver15": 1,
                 "firstBtts": 0,
-                "secondBtts": 0,
+                "secondBtts": 3,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 2,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
+                "halfFull:2/X": 1,
                 "halfFull:2/2": 0
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.6,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.4,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.2,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.2,
+                "halfFull:2/2": 0.0
               }
             }
           }
@@ -10847,77 +10847,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 5.8,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.8,
+                "againstAverage": 1.4
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 12.6,
+                "againstAverage": 13.2
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.6,
+                "againstAverage": 6.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.8,
+                "againstAverage": 0.8
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 1.4,
+              "againstAverage": 1.6
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 2,
+                "firstBtts": 2,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
+                "halfFull:1/1": 1,
+                "halfFull:1/X": 1,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
                 "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
+                "halfFull:2/1": 1,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8,
+                "firstOver15": 0.4,
+                "firstBtts": 0.4,
+                "secondBtts": 0.2,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.2,
+                "halfFull:1/X": 0.2,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.2,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.2
               }
             }
           }
@@ -11234,152 +11234,152 @@
           "date": "2026-11-28",
           "match": "OGC Nice – ES Troyes AC",
           "homeVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.0,
+                "againstAverage": 4.5
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 2.1666666666666665,
+                "againstAverage": 1.1666666666666667
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 10.666666666666666,
+                "againstAverage": 13.666666666666666
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 4.0,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.1666666666666667,
+                "againstAverage": 0.8333333333333334
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 2.0,
+              "againstAverage": 1.3333333333333333
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "firstOver05": 5,
+                "firstOver15": 4,
+                "firstBtts": 4,
+                "secondBtts": 3,
+                "bothHalvesBtts": 2,
+                "halfFull:1/1": 2,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 2,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8333333333333334,
+                "firstOver15": 0.6666666666666666,
+                "firstBtts": 0.6666666666666666,
+                "secondBtts": 0.5,
+                "bothHalvesBtts": 0.3333333333333333,
+                "halfFull:1/1": 0.3333333333333333,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.3333333333333333,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 4.8,
+                "againstAverage": 3.0
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.0,
+                "againstAverage": 2.6
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 10.8,
+                "againstAverage": 12.4
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 1.8,
+                "againstAverage": 5.0
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.4,
+                "againstAverage": 0.6
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 0.4,
+              "againstAverage": 1.2
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
+                "firstOver05": 4,
+                "firstOver15": 1,
                 "firstBtts": 0,
                 "secondBtts": 0,
                 "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
+                "halfFull:1/1": 3,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
                 "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
+                "halfFull:X/X": 1,
                 "halfFull:X/2": 0,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 1
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8,
+                "firstOver15": 0.2,
+                "firstBtts": 0.0,
+                "secondBtts": 0.0,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.6,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.2,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.2
               }
             }
           }
@@ -13242,77 +13242,77 @@
             }
           },
           "awayVenue": {
-            "sample": 0,
+            "sample": 6,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 6.666666666666667,
+                "againstAverage": 3.6666666666666665
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.3333333333333333,
+                "againstAverage": 1.3333333333333333
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.16666666666666666
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 18.833333333333332,
+                "againstAverage": 10.833333333333334
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 7.333333333333333,
+                "againstAverage": 3.5
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 6,
+                "forAverage": 1.6666666666666667,
+                "againstAverage": 0.5
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 6,
+              "forAverage": 3.0,
+              "againstAverage": 0.8333333333333334
             },
             "halves": {
-              "sample": 0,
+              "sample": 6,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
-                "secondBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 4,
+                "firstBtts": 2,
+                "secondBtts": 1,
                 "bothHalvesBtts": 0,
                 "halfFull:1/1": 0,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 2,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
                 "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/2": 2
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.6666666666666666,
+                "firstBtts": 0.3333333333333333,
+                "secondBtts": 0.16666666666666666,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.0,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.3333333333333333,
+                "halfFull:X/2": 0.16666666666666666,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.3333333333333333
               }
             }
           }
@@ -13714,77 +13714,77 @@
           "date": "2026-11-27",
           "match": "CS Marítimo – CD Nacional",
           "homeVenue": {
-            "sample": 0,
+            "sample": 5,
             "metrics": {
               "corners": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.2,
+                "againstAverage": 4.8
               },
               "yellowCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 2.0,
+                "againstAverage": 3.2
               },
               "redCards": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
               },
               "shots": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 11.4,
+                "againstAverage": 12.6
               },
               "shotsOnTarget": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 3.8,
+                "againstAverage": 6.2
               },
               "halfTimeGoals": {
-                "sample": 0,
-                "forAverage": null,
-                "againstAverage": null
+                "sample": 5,
+                "forAverage": 0.2,
+                "againstAverage": 1.0
               }
             },
             "goals": {
-              "sample": 0,
-              "forAverage": null,
-              "againstAverage": null
+              "sample": 5,
+              "forAverage": 0.8,
+              "againstAverage": 1.8
             },
             "halves": {
-              "sample": 0,
+              "sample": 5,
               "counts": {
-                "firstOver05": 0,
-                "firstOver15": 0,
-                "firstBtts": 0,
+                "firstOver05": 4,
+                "firstOver15": 2,
+                "firstBtts": 1,
                 "secondBtts": 0,
                 "bothHalvesBtts": 0,
                 "halfFull:1/1": 0,
                 "halfFull:1/X": 0,
                 "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
+                "halfFull:X/1": 1,
                 "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
+                "halfFull:X/2": 1,
                 "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
-                "halfFull:2/2": 0
+                "halfFull:2/X": 1,
+                "halfFull:2/2": 2
               },
               "observedFrequency": {
-                "firstOver05": null,
-                "firstOver15": null,
-                "firstBtts": null,
-                "secondBtts": null,
-                "bothHalvesBtts": null,
-                "halfFull:1/1": null,
-                "halfFull:1/X": null,
-                "halfFull:1/2": null,
-                "halfFull:X/1": null,
-                "halfFull:X/X": null,
-                "halfFull:X/2": null,
-                "halfFull:2/1": null,
-                "halfFull:2/X": null,
-                "halfFull:2/2": null
+                "firstOver05": 0.8,
+                "firstOver15": 0.4,
+                "firstBtts": 0.2,
+                "secondBtts": 0.0,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.0,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.2,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.2,
+                "halfFull:2/2": 0.4
               }
             }
           },
