@@ -16,6 +16,8 @@ for league,names in {"it.1":{"AC Monza":"Monza","ACF Fiorentina":"Fiorentina","A
     ALIASES.setdefault(league,{}).update(names)
 # V5.89 observed Brazil development aliases; not independent identity verification.
 ALIASES.setdefault("bra.1",{}).update({"SE Palmeiras":"Palmeiras","CR Flamengo":"Flamengo","EC Bahia":"Bahia","Coritiba FBC":"Coritiba","CA Paranaense":"Athletico-PR","Clube do Remo":"Remo"})
+# V5.92: aliases observed in the V5.91 Brazil development sample.
+ALIASES.setdefault("bra.1",{}).update({"Mirassol FC":"Mirassol","CA Mineiro":"Atlético-MG","Chapecoense AF":"Chapecoense","CR Vasco da Gama":"Vasco da Gama","Santos FC":"Santos","Cruzeiro EC":"Cruzeiro","Grêmio FBPA":"Grêmio","SC Corinthians Paulista":"Corinthians","Botafogo FR":"Botafogo","EC Vitória":"Vitória","RB Bragantino":"Red Bull Bragantino","SC Internacional":"Internacional","São Paulo FC":"São Paulo","Fluminense FC":"Fluminense"})
 ALIASES={league:{norm(k):norm(v) for k,v in names.items()} for league,names in ALIASES.items()}
 def secondary_name(league,name):
     return ALIASES.get(league,{}).get(norm(name),norm(name))
