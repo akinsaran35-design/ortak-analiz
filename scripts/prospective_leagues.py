@@ -27,6 +27,9 @@ def main():
     validation=json.loads((root/"prospective_validation.json").read_text(encoding="utf-8"))
     now=datetime.fromisoformat(validation["updatedAt"])
     report=build(archive,now)
+    if validation.get("classificationVersion") is None:
+        for entry in report["leagues"].values():
+            for x in entry["markets"].values():x.pop("classification",None)
     for market in MARKETS:
         expected=validation["marketResearch"][market]
         for k in ("tested","pending","legacyWithoutForecast","invalid"):
