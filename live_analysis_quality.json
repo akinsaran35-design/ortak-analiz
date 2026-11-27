@@ -1,60 +1,12 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-27T18:43:20.320466+03:00",
-  "sourceUpdatedAt": "2026-11-27T18:43:20.254563+03:00",
+  "updatedAt": "2026-11-27T19:48:56.869932+03:00",
+  "sourceUpdatedAt": "2026-11-27T19:48:56.796137+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "counts": {
-    "observation_ready": 1
-  },
-  "rows": [
-    {
-      "league": "ind.1",
-      "eventId": "401925406",
-      "home": "Inter Kashi",
-      "away": "Churchill Brothers",
-      "kickoff": "2026-11-27T14:00:00+00:00",
-      "receivedAt": "2026-11-27T18:43:20.251600+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "80'",
-        "score": [
-          0,
-          1
-        ],
-        "metrics": {
-          "yellowCards": [
-            2,
-            5
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            0,
-            2
-          ],
-          "possession": [
-            45.6,
-            54.4
-          ],
-          "shots": [
-            4,
-            5
-          ],
-          "shotsOnTarget": [
-            2,
-            2
-          ]
-        }
-      },
-      "prediction": null
-    }
-  ]
+  "counts": {},
+  "rows": []
 }

@@ -1681,5 +1681,566 @@
         }
       ]
     }
+  },
+  "de.1:401884724": {
+    "kickoff": "2026-11-29T14:30:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Almanya Bundesliga",
+          "match": "SC Freiburg – RB Leipzig",
+          "expectedGoals": {
+            "home": 2.15,
+            "away": 1.25
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "de.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401884724",
+              "kickoff": "2026-11-29T14:30:00+00:00",
+              "match": "SC Freiburg – RB Leipzig"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Almanya Bundesliga",
+              "match": "SC Freiburg – RB Leipzig"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "en.2:401880128": {
+    "kickoff": "2026-11-29T12:00:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "İngiltere Championship",
+          "match": "Swansea City AFC – Cardiff City FC",
+          "expectedGoals": {
+            "home": 1.7,
+            "away": 1.12
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "en.2",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401880128",
+              "kickoff": "2026-11-29T12:00:00+00:00",
+              "match": "Swansea City – Cardiff City"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "İngiltere Championship",
+              "match": "Swansea City AFC – Cardiff City FC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "es.1:401882787": {
+    "kickoff": "2026-11-29T13:00:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "İspanya La Liga",
+          "match": "Valencia CF – CA Osasuna",
+          "expectedGoals": {
+            "home": 1.8,
+            "away": 1.5
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "es.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401882787",
+              "kickoff": "2026-11-29T13:00:00+00:00",
+              "match": "Valencia – Osasuna"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "İspanya La Liga",
+              "match": "Valencia CF – CA Osasuna"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fr.1:401876393": {
+    "kickoff": "2026-11-29T14:00:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Fransa Ligue 1",
+          "match": "AJ Auxerre – Olympique de Marseille",
+          "expectedGoals": {
+            "home": 1.85,
+            "away": 1.0
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "fr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401876393",
+              "kickoff": "2026-11-29T14:00:00+00:00",
+              "match": "AJ Auxerre – Marseille"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Fransa Ligue 1",
+              "match": "AJ Auxerre – Olympique de Marseille"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "it.1:401874992": {
+    "kickoff": "2026-11-29T14:00:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "US Sassuolo Calcio – SSC Napoli",
+          "expectedGoals": {
+            "home": 1.55,
+            "away": 1.55
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "it.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401874992",
+              "kickoff": "2026-11-29T14:00:00+00:00",
+              "match": "Sassuolo – Napoli"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "İtalya Serie A",
+              "match": "US Sassuolo Calcio – SSC Napoli"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "it.1:401875031": {
+    "kickoff": "2026-11-29T11:30:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "İtalya Serie A",
+          "match": "Udinese Calcio – ACF Fiorentina",
+          "expectedGoals": {
+            "home": 1.35,
+            "away": 1.2
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "it.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401875031",
+              "kickoff": "2026-11-29T11:30:00+00:00",
+              "match": "Udinese – Fiorentina"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "İtalya Serie A",
+              "match": "Udinese Calcio – ACF Fiorentina"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875538": {
+    "kickoff": "2026-11-29T11:15:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "ADO Den Haag – FC Utrecht",
+          "expectedGoals": {
+            "home": 1.65,
+            "away": 2.11
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401875538",
+              "kickoff": "2026-11-29T11:15:00+00:00",
+              "match": "ADO Den Haag – FC Utrecht"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Hollanda Eredivisie",
+              "match": "ADO Den Haag – FC Utrecht"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875535": {
+    "kickoff": "2026-11-29T13:30:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "Feyenoord Rotterdam – AFC Ajax",
+          "expectedGoals": {
+            "home": 1.65,
+            "away": 1.75
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401875535",
+              "kickoff": "2026-11-29T13:30:00+00:00",
+              "match": "Feyenoord Rotterdam – Ajax Amsterdam"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Hollanda Eredivisie",
+              "match": "Feyenoord Rotterdam – AFC Ajax"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875534": {
+    "kickoff": "2026-11-29T13:30:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "Fortuna Sittard – SC Heerenveen",
+          "expectedGoals": {
+            "home": 1.7,
+            "away": 2.0
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401875534",
+              "kickoff": "2026-11-29T13:30:00+00:00",
+              "match": "Fortuna Sittard – Heerenveen"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Hollanda Eredivisie",
+              "match": "Fortuna Sittard – SC Heerenveen"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875532": {
+    "kickoff": "2026-11-29T15:45:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Hollanda Eredivisie",
+          "match": "PEC Zwolle – AZ",
+          "expectedGoals": {
+            "home": 1.35,
+            "away": 1.8
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401875532",
+              "kickoff": "2026-11-29T15:45:00+00:00",
+              "match": "PEC Zwolle – AZ Alkmaar"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Hollanda Eredivisie",
+              "match": "PEC Zwolle – AZ"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "tr.1:401888367": {
+    "kickoff": "2026-11-29T10:30:00+00:00",
+    "frozenAt": "2026-11-27T19:48:56.933452+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T18:57:40+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "corum – kocaelispor",
+          "expectedGoals": {
+            "home": 1.15,
+            "away": 1.35
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+      "updatedAt": "2026-11-27T18:58:08.497881+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "tr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-29",
+              "eventId": "401888367",
+              "kickoff": "2026-11-29T10:30:00+00:00",
+              "match": "Çorum FK – Kocaelispor"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-29",
+              "league": "Türkiye Süper Lig",
+              "match": "corum – kocaelispor"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
