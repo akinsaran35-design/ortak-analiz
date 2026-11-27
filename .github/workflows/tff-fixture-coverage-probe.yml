@@ -1,0 +1,28 @@
+name: V5.45 TFF fixture coverage probe
+on:
+  pull_request:
+    paths:
+      - 'scripts/tff_fixture_coverage_probe.py'
+      - 'scripts/test_tff_fixture_coverage_probe.py'
+      - '.github/workflows/tff-fixture-coverage-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_tff_fixture_coverage_probe.py
+      - run: python scripts/tff_fixture_coverage_probe.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tff-fixture-coverage-probe
+          path: tff_fixture_coverage_probe.json
+          if-no-files-found: ignore
+          retention-days: 7
