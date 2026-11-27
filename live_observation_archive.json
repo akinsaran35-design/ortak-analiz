@@ -1,4 +1,82 @@
 {
+  "de.1:401884720": {
+    "league": "de.1",
+    "eventId": "401884720",
+    "home": "Werder Bremen",
+    "away": "Borussia Mönchengladbach",
+    "kickoff": "2026-11-27T19:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T22:35:44.595526+03:00",
+        "minute": 5,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            0,
+            0
+          ],
+          "shots": [
+            0,
+            1
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "nl.1:401875536": {
+    "league": "nl.1",
+    "eventId": "401875536",
+    "home": "FC Groningen",
+    "away": "Willem II",
+    "kickoff": "2026-11-27T19:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-27T22:35:44.608115+03:00",
+        "minute": 32,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            2,
+            1
+          ],
+          "shots": [
+            7,
+            5
+          ],
+          "shotsOnTarget": [
+            3,
+            2
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
   "tr.1:401888241": {
     "league": "tr.1",
     "eventId": "401888241",

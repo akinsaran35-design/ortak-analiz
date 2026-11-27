@@ -1,28 +1,208 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-27T21:33:32.868685+03:00",
-  "sourceUpdatedAt": "2026-11-27T21:33:32.780144+03:00",
+  "updatedAt": "2026-11-27T22:35:44.675746+03:00",
+  "sourceUpdatedAt": "2026-11-27T22:35:44.613602+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
   "counts": {
-    "observation_ready": 6
+    "observation_ready": 7
   },
   "rows": [
+    {
+      "league": "esp.2",
+      "eventId": "401883102",
+      "home": "Leganés",
+      "away": "CD Sabadell",
+      "kickoff": "2026-11-27T19:30:00+00:00",
+      "receivedAt": "2026-11-27T22:35:44.587875+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "4'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            85.0,
+            15.0
+          ],
+          "shots": [
+            0,
+            0
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "de.1",
+      "eventId": "401884720",
+      "home": "Werder Bremen",
+      "away": "Borussia Mönchengladbach",
+      "kickoff": "2026-11-27T19:30:00+00:00",
+      "receivedAt": "2026-11-27T22:35:44.595526+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "5'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            42.2,
+            57.8
+          ],
+          "shots": [
+            0,
+            1
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "nl.1",
+      "eventId": "401875536",
+      "home": "FC Groningen",
+      "away": "Willem II",
+      "kickoff": "2026-11-27T19:00:00+00:00",
+      "receivedAt": "2026-11-27T22:35:44.608115+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "32'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            2,
+            1
+          ],
+          "possession": [
+            54.6,
+            45.4
+          ],
+          "shots": [
+            7,
+            5
+          ],
+          "shotsOnTarget": [
+            3,
+            2
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "ned.2",
+      "eventId": "401875833",
+      "home": "Jong Ajax",
+      "away": "Heracles Almelo",
+      "kickoff": "2026-11-27T19:00:00+00:00",
+      "receivedAt": "2026-11-27T22:35:44.557239+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "35'",
+        "score": [
+          1,
+          3
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            2
+          ],
+          "possession": [
+            52.9,
+            47.1
+          ],
+          "shots": [
+            3,
+            11
+          ],
+          "shotsOnTarget": [
+            3,
+            5
+          ]
+        }
+      },
+      "prediction": null
+    },
     {
       "league": "den.1",
       "eventId": "401874563",
       "home": "Sønderjyske Fodbold",
       "away": "Brøndby IF",
       "kickoff": "2026-11-27T18:00:00+00:00",
-      "receivedAt": "2026-11-27T21:33:32.776702+03:00",
+      "receivedAt": "2026-11-27T22:35:44.583327+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_FIRST_HALF",
-        "clock": "31'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "75'",
         "score": [
           1,
           0
@@ -37,245 +217,110 @@
             0
           ],
           "corners": [
-            1,
-            0
+            4,
+            3
           ],
           "possession": [
-            41.8,
-            58.2
+            34.5,
+            65.5
           ],
           "shots": [
-            3,
-            4
+            8,
+            16
           ],
           "shotsOnTarget": [
-            0,
-            0
+            1,
+            2
           ]
         }
       },
       "prediction": null
     },
     {
-      "league": "rsa.1",
-      "eventId": "401902007",
-      "home": "Stellenbosch",
-      "away": "TS Galaxy FC",
-      "kickoff": "2026-11-27T17:30:00+00:00",
-      "receivedAt": "2026-11-27T21:33:32.748142+03:00",
+      "league": "ned.2",
+      "eventId": "401875830",
+      "home": "MVV Maastricht",
+      "away": "Jong PSV",
+      "kickoff": "2026-11-27T19:00:00+00:00",
+      "receivedAt": "2026-11-27T22:35:44.567807+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "47'",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "32'",
         "score": [
           0,
-          0
+          2
         ],
         "metrics": {
           "yellowCards": [
             0,
-            1
+            0
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            5,
+            1,
+            1
+          ],
+          "possession": [
+            58.6,
+            41.4
+          ],
+          "shots": [
+            6,
+            5
+          ],
+          "shotsOnTarget": [
+            2,
             2
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "ned.2",
+      "eventId": "401875829",
+      "home": "NAC Breda",
+      "away": "FC Den Bosch",
+      "kickoff": "2026-11-27T19:00:00+00:00",
+      "receivedAt": "2026-11-27T22:35:44.577274+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "34'",
+        "score": [
+          2,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            1,
+            4
           ],
           "possession": [
             58.0,
             42.0
           ],
           "shots": [
-            3,
-            6
-          ],
-          "shotsOnTarget": [
-            1,
-            1
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "ger.2",
-      "eventId": "401885047",
-      "home": "1. FC Heidenheim 1846",
-      "away": "1. FC Nürnberg",
-      "kickoff": "2026-11-27T17:30:00+00:00",
-      "receivedAt": "2026-11-27T21:33:32.741782+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+4'",
-        "score": [
-          1,
-          1
-        ],
-        "metrics": {
-          "yellowCards": [
-            1,
-            1
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            2,
-            1
-          ],
-          "possession": [
-            24.9,
-            75.1
-          ],
-          "shots": [
-            8,
-            5
-          ],
-          "shotsOnTarget": [
-            2,
-            0
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "tr.1",
-      "eventId": "401888241",
-      "home": "Alanyaspor",
-      "away": "Konyaspor",
-      "kickoff": "2026-11-27T17:00:00+00:00",
-      "receivedAt": "2026-11-27T21:33:32.710902+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "76'",
-        "score": [
-          1,
-          1
-        ],
-        "metrics": {
-          "yellowCards": [
-            3,
-            0
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            2,
-            0
-          ],
-          "possession": [
-            47.2,
-            52.8
-          ],
-          "shots": [
-            8,
-            7
-          ],
-          "shotsOnTarget": [
-            2,
-            3
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "ger.2",
-      "eventId": "401885045",
-      "home": "VfL Bochum",
-      "away": "SV Darmstadt 98",
-      "kickoff": "2026-11-27T17:30:00+00:00",
-      "receivedAt": "2026-11-27T21:33:32.751897+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+1'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            1
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            1,
-            4
-          ],
-          "possession": [
-            42.1,
-            57.9
-          ],
-          "shots": [
-            4,
+            6,
             2
           ],
           "shotsOnTarget": [
-            1,
+            2,
             0
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "tr.1",
-      "eventId": "401888240",
-      "home": "Caykur Rizespor",
-      "away": "Kasimpasa",
-      "kickoff": "2026-11-27T17:00:00+00:00",
-      "receivedAt": "2026-11-27T21:33:32.769084+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "74'",
-        "score": [
-          1,
-          2
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            2
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            3,
-            2
-          ],
-          "possession": [
-            55.3,
-            44.7
-          ],
-          "shots": [
-            13,
-            10
-          ],
-          "shotsOnTarget": [
-            4,
-            6
           ]
         }
       },
