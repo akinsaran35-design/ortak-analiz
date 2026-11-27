@@ -172,9 +172,17 @@ for a in p:
         if delta<=120:
             candidates.append(dict(secondaryId=b["eventId"],home=b["home"],away=b["away"],deltaMinutes=delta,exactHome=norm(a["home"])==norm(b["home"]),exactAway=norm(a["away"])==norm(b["away"])))
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
+# This Champions League sample informed alias development; not an independent holdout.
+champions_primary=[row for row in p if row["league"]=="uefa.champions"]
+champions_secondary=[row for row in s["rows"] if row["competitionId"]==2001 and audit_start<=datetime.fromisoformat(row["kickoff"].replace("Z","+00:00")).astimezone(TR).date()<=audit_end]
+champions_pairs=match(champions_primary,champions_secondary,MAP)["pairs"]
+champions=dict(primaryCount=len(champions_primary),secondaryCount=len(champions_secondary),matched=len(champions_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in champions_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in champions_pairs),sampleRole="development_replay",researchOnly=True)
+champions["completeCoverage"]=bool(champions_secondary and champions["matched"]==len(champions_primary)==len(champions_secondary)==champions["scoreCompared"] and not champions["scoreMismatch"])
+print("Champions League replay:",json.dumps(champions))
+r["championsReplay"]=champions
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.93",brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="brazil_specific_holdout_other_leagues_may_overlap" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.94",brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="brazil_specific_holdout_other_leagues_may_overlap" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
@@ -183,4 +191,5 @@ assert not any(x["scoreAgreement"] is False for x in r["pairs"])
 if holdout:assert r["scoreCompared"]>0, "No comparable completed scores"
 if holdout:assert brazil["scoreCompared"]>=10 and brazil["scoreMismatch"]==0, "Brazil holdout requires at least ten comparable scores with no conflicts"
 if holdout:assert brazil["researchCoveragePassed"], "Brazil holdout has unresolved fixtures; strict coverage reported separately"
+if holdout:assert champions["completeCoverage"], "Champions League development replay must match every observed fixture and completed score"
 print("Combined sample coverage:",r["coverage"],"score comparisons:",r["scoreCompared"])
