@@ -1,5 +1,6 @@
 """Independent fixture feed; never automatically settle or predict."""
-import os,json
+import os,json,time
+from email.utils import parsedate_to_datetime
 from datetime import datetime,timedelta,timezone
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError,URLError
@@ -25,12 +26,34 @@ def parse(payload):
                 continue
         rows.append(dict(eventId=ident,competitionId=c,kickoff=stamp.isoformat(),home=h["name"],away=a["name"],status=m["status"],score=score))
     return rows,rejected
+def retry_delay(headers):
+    raw=headers.get("Retry-After") if headers else None
+    if raw:
+        try: return max(1,int(raw))
+        except ValueError:
+            try: return max(1,int((parsedate_to_datetime(raw)-datetime.now(timezone.utc)).total_seconds())+1)
+            except (ValueError,TypeError,OverflowError): pass
+    return 65
+
+def fetch_payload(url,token):
+    for attempt in range(3):
+        try:
+            with urlopen(Request(url,headers={"X-Auth-Token":token}),timeout=20) as response:
+                return json.load(response)
+        except HTTPError as exc:
+            if exc.code!=429 or attempt==2: raise
+            delay=retry_delay(exc.headers)
+            if delay>120: raise
+            exc.close()
+            time.sleep(delay)
+    raise RuntimeError("unreachable")
+
 def build(token,now,date_from=None,date_to=None):
     out=dict(version="5.67",source="football-data.org",mode="independent_research",rows=[],status="credentials_missing",usedForSettlement=False,predictionsEnabled=False)
     if not token:return out
     day=now.date();url="https://api.football-data.org/v4/matches?dateFrom="+str(date_from or day-timedelta(days=1))+"&dateTo="+str(date_to or day+timedelta(days=2))
     try:
-        with urlopen(Request(url,headers={"X-Auth-Token":token}),timeout=20) as response:out["rows"],out["rejectedRows"]=parse(json.load(response))
+        out["rows"],out["rejectedRows"]=parse(fetch_payload(url,token))
         out["status"]="observed" if out["rows"] else "empty"
     except HTTPError as e:out["status"]="HTTP_"+str(e.code)
     except (URLError,OSError,ValueError,TypeError,KeyError) as exc:
