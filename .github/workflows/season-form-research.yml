@@ -1,0 +1,26 @@
+name: V5.53 season form research
+on:
+  pull_request:
+    paths:
+      - 'scripts/*season_form_research.py'
+      - '.github/workflows/season-form-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_season_form_research.py
+      - run: python scripts/season_form_research.py > season_form_research.json
+      - run: python -c "import json; r=json.load(open('season_form_research.json')); assert any(g['teams'] for g in r['groups']); print([(g['league'],len(g['teams']),len(g['seasons']),g['sourceErrors']) for g in r['groups']])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: season-form-research
+          path: season_form_research.json
+          if-no-files-found: error
