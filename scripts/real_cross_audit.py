@@ -7,15 +7,16 @@ from cross_source_match import match,norm,secondary_name
 MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl.1":2003,"pt.1":2017,"uefa.champions":2001,"bra.1":2013}
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
-# Fixed original Nov 9–19 plus separately reported Nov 20–22 extension.
-# Original empty sample must not be described as validated.
-start=date(2026,11,9)
-offsets=tuple((start-now.date()).days+i for i in range(14)) if holdout else (-1,0,1)
+# Brazil-specific holdout: disjoint from Nov 9-22 alias development.
+# Other leagues may overlap earlier research; no independent claim for them.
+start=date(2026,10,23)
+days=17
+offsets=tuple((start-now.date()).days+i for i in range(days)) if holdout else (-1,0,1)
 token=os.environ.get("FOOTBALL_DATA_TOKEN")
 def secondary_windowed():
     # Overlap boundaries so either inclusive or exclusive dateTo is safe.
     first=(start-now.date()).days
-    windows=[(first-1,first+3),(first+3,first+7),(first+7,first+11),(first+11,first+14)]
+    windows=[(first+i,min(first+i+4,first+days)) for i in range(-1,days,4)]
     rows={}
     details=[]
     conflict=False
@@ -55,7 +56,7 @@ def sample_counts(date_from,date_to):
     paired=len(result["pairs"])
     secondary_ids={x["secondaryId"] for x in result["pairs"]}
     return dict(primaryCount=len(primary),secondaryCount=len(secondary_rows),matched=paired,primaryCoverage=paired/len(primary) if primary else None,secondaryCoverage=paired/len(secondary_rows) if secondary_rows else None,secondaryOnly=[row["eventId"] for row in secondary_rows if row["eventId"] not in secondary_ids],scoreCompared=sum(x["scoreAgreement"] is not None for x in result["pairs"]),scoreMismatch=sum(x["scoreAgreement"] is False for x in result["pairs"]),status="empty_both" if not primary and not secondary_rows else "no_primary_data" if not primary else "no_secondary_data" if not secondary_rows else "partial" if paired!=len(primary) or paired!=len(secondary_rows) else "complete")
-samples=dict(original=sample_counts(start,start+timedelta(days=10)),extension=sample_counts(start+timedelta(days=11),start+timedelta(days=13))) if holdout else {}
+samples=dict(brazil_holdout_date_scope=sample_counts(start,start+timedelta(days=days-1))) if holdout else {}
 print("Separate sample counts:",json.dumps(samples))
 audit_start=now.date()+timedelta(days=min(offsets))
 audit_end=now.date()+timedelta(days=max(offsets))
@@ -91,7 +92,7 @@ print("Unmapped competitions:",json.dumps(unmapped_competitions))
 brazil_primary=[row for row in p if row["league"]=="bra.1"]
 brazil_secondary=[row for row in s["rows"] if row["competitionId"]==2013 and audit_start<=datetime.fromisoformat(row["kickoff"].replace("Z","+00:00")).astimezone(TR).date()<=audit_end]
 brazil_pairs=match(brazil_primary,brazil_secondary,MAP)["pairs"]
-brazil=dict(primaryCount=len(brazil_primary),secondaryCount=len(brazil_secondary),matched=len(brazil_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in brazil_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in brazil_pairs),primaryCoverage=len(brazil_pairs)/len(brazil_primary) if brazil_primary else None,secondaryCoverage=len(brazil_pairs)/len(brazil_secondary) if brazil_secondary else None,sampleRole="development_replay",researchOnly=True)
+brazil=dict(primaryCount=len(brazil_primary),secondaryCount=len(brazil_secondary),matched=len(brazil_pairs),scoreCompared=sum(x["scoreAgreement"] is not None for x in brazil_pairs),scoreMismatch=sum(x["scoreAgreement"] is False for x in brazil_pairs),primaryCoverage=len(brazil_pairs)/len(brazil_primary) if brazil_primary else None,secondaryCoverage=len(brazil_pairs)/len(brazil_secondary) if brazil_secondary else None,sampleRole="frozen_brazil_holdout" if holdout else "current",researchOnly=True)
 print("Brazil candidate:",json.dumps(brazil))
 brazil_matched_ids={pair["secondaryId"] for pair in brazil_pairs}
 brazil_gaps=[]
@@ -109,10 +110,59 @@ for row in brazil_secondary:
     elif not any(g["count"] for g in groups):reason="primary_day_empty"
     else:reason="no_matching_primary_fixture"
     brazil_gaps.append(dict(secondaryId=row["eventId"],home=row["home"],away=row["away"],kickoff=row["kickoff"],date=day,reason=reason,primaryDayCount=sum(g["count"] for g in groups),sameTimePrimaryIds=[a["eventId"] for a in same_time],sameTeamPrimaryIds=[a["eventId"] for a in same_teams]))
+# Research-only detail probe for unique same-team kickoff discrepancies.
+from results_source_pilot import read
+from secondary_fixtures import fetch_payload,parse as parse_secondary
+for gap in brazil_gaps:
+    if gap["reason"]!="kickoff_difference" or len(gap["sameTeamPrimaryIds"])!=1:continue
+    ident=gap["sameTeamPrimaryIds"][0]
+    primary_row=next(a for a in brazil_primary if a["eventId"]==ident)
+    secondary_row=next(a for a in brazil_secondary if a["eventId"]==gap["secondaryId"])
+    evidence=dict(primaryKickoff=primary_row["kickoff"],secondaryKickoff=secondary_row["kickoff"],primaryScore=primary_row["score"],secondaryScore=secondary_row["score"],decision="quarantined")
+    evidence["deltaMinutes"]=abs((datetime.fromisoformat(primary_row["kickoff"].replace("Z","+00:00"))-datetime.fromisoformat(secondary_row["kickoff"].replace("Z","+00:00"))).total_seconds())/60
+    primary_url="https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event="+ident
+    secondary_url="https://api.football-data.org/v4/matches/"+str(gap["secondaryId"])
+    evidence["sources"]=[primary_url,secondary_url]
+    try:
+        header=json.loads(read(primary_url))["header"]
+        comp,=header["competitions"]
+        if str(header["id"])!=ident:raise ValueError("detail identity mismatch")
+        evidence["primaryDetailKickoff"]=datetime.fromisoformat(comp["date"].replace("Z","+00:00")).isoformat()
+    except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
+        evidence["primaryDetailError"]=type(exc).__name__
+    try:
+        payload=fetch_payload(secondary_url,token)
+        parsed,rejected=parse_secondary({"matches":[payload]})
+        if rejected or len(parsed)!=1 or parsed[0]["eventId"]!=gap["secondaryId"]:raise ValueError("detail identity mismatch")
+        evidence["secondaryDetailKickoff"]=parsed[0]["kickoff"]
+    except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
+        evidence["secondaryDetailError"]=type(exc).__name__
+    gap["kickoffEvidence"]=evidence
 print("Brazil missing fixture diagnostics:",json.dumps(brazil_gaps,ensure_ascii=False))
 brazil["gaps"]=brazil_gaps
 brazil["completeCoverage"]=bool(brazil_secondary and len(brazil_pairs)==len(brazil_secondary)==len(brazil_primary) and brazil["scoreCompared"]==len(brazil_pairs) and not brazil["scoreMismatch"])
+# Manually reviewed official CBF fixture 832203, round 32, match 313.
+# Do not relax the exact-time matcher or silently change provider data.
+official=dict(primaryId="401841282",secondaryId=555057,home="Santos",away="Bahia",kickoff="2026-10-25T00:00:00+00:00",score=[1,1],source="https://www.cbf.com.br/futebol-brasileiro/jogos/campeonato-brasileiro/serie-d/2026/santos-fc-x-bahia/832203",reviewedDate="2026-11-27",method="manual_official_fixture_review")
+adjudicated=[]
+strict_primary_ids={str(pair["primaryId"]) for pair in brazil_pairs}
+for gap in brazil_gaps:
+    ev=gap.get("kickoffEvidence",{})
+    if (gap["secondaryId"]==official["secondaryId"] and gap["sameTeamPrimaryIds"]==[official["primaryId"]]
+        and official["primaryId"] not in strict_primary_ids
+        and gap["reason"]=="kickoff_difference"
+        and norm(gap["home"])==norm("Santos FC") and norm(gap["away"])==norm("EC Bahia")
+        and ev.get("primaryKickoff")==ev.get("primaryDetailKickoff")==official["kickoff"]
+        and ev.get("secondaryKickoff")==ev.get("secondaryDetailKickoff")=="2026-10-25T01:00:00+00:00"
+        and ev.get("primaryScore")==ev.get("secondaryScore")==official["score"]):
+        adjudicated.append(official.copy())
+        ev["decision"]="officially_adjudicated_provider_time_conflict"
+brazil["officialAdjudications"]=adjudicated
+brazil["strictCoveragePassed"]=brazil["completeCoverage"]
+brazil["officiallyResolvedCount"]=len(brazil_pairs)+len(adjudicated)
+brazil["researchCoveragePassed"]=bool(brazil_secondary and brazil["officiallyResolvedCount"]==len(brazil_secondary)==len(brazil_primary) and brazil["scoreCompared"]==len(brazil_pairs) and not brazil["scoreMismatch"] and not primary_issues and secondary_rejected==0 and s["status"]=="observed")
 brazil["productionEnabled"]=False
+print("Brazil official adjudication:",json.dumps({k:brazil[k] for k in ("officialAdjudications","strictCoveragePassed","officiallyResolvedCount","researchCoveragePassed","productionEnabled")}))
 diagnostics=[]
 for a in p:
     candidates=[]
@@ -124,12 +174,13 @@ for a in p:
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.92",brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="holdout_with_reported_extension" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.93",brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="brazil_specific_holdout_other_leagues_may_overlap" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
 assert r["pairs"], "No independent matches; coverage audit cannot pass"
 assert not any(x["scoreAgreement"] is False for x in r["pairs"])
 if holdout:assert r["scoreCompared"]>0, "No comparable completed scores"
-if holdout:assert brazil["completeCoverage"], "Brazil development replay must match every observed fixture and completed score"
+if holdout:assert brazil["scoreCompared"]>=10 and brazil["scoreMismatch"]==0, "Brazil holdout requires at least ten comparable scores with no conflicts"
+if holdout:assert brazil["researchCoveragePassed"], "Brazil holdout has unresolved fixtures; strict coverage reported separately"
 print("Combined sample coverage:",r["coverage"],"score comparisons:",r["scoreCompared"])
