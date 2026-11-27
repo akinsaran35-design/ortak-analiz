@@ -1,0 +1,26 @@
+name: V5.54 referee sample research
+on:
+  pull_request:
+    paths:
+      - 'scripts/*referee_sample_research.py'
+      - '.github/workflows/referee-sample-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_referee_sample_research.py
+      - run: python scripts/referee_sample_research.py > referee_sample_research.json
+      - run: python -c "import json; r=json.load(open('referee_sample_research.json')); assert any(g['profiles'] for g in r['groups']); print([(g['league'],g['completedMatches'],g['assignedFixtures'],len(g['profiles']),sum(p['metrics']['yellowCards']['minimumSampleMet'] for p in g['profiles'])) for g in r['groups']])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: referee-sample-research
+          path: referee_sample_research.json
+          if-no-files-found: error
