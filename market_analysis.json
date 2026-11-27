@@ -1,28 +1,12 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-27T19:53:54.209838+00:00",
+  "updatedAt": "2026-11-27T20:24:38.672089+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
-  "comparedCount": 35,
+  "comparedCount": 34,
   "rows": [
-    {
-      "match": "CS Marítimo – CD Nacional",
-      "eventId": "abfc6851b152aecbb4bf84a348967f69",
-      "bookCount": 3,
-      "bookProbabilities": {
-        "grosvenor": 0.426316,
-        "williamhill": 0.442971,
-        "matchbook": 0.421569
-      },
-      "marketProbability": 0.4263,
-      "modelProbabilityUncalibrated": 0.46299999999999997,
-      "difference": 0.0367,
-      "bookProbabilitySpread": 0.0214,
-      "marketFairOdds": 2.3457,
-      "medianMargin": 0.075
-    },
     {
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
@@ -163,16 +147,16 @@
       "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.582902,
+        "grosvenor": 0.579221,
         "williamhill": 0.557029,
         "matchbook": 0.555556
       },
       "marketProbability": 0.557,
       "modelProbabilityUncalibrated": 0.542,
       "difference": -0.015,
-      "bookProbabilitySpread": 0.0273,
+      "bookProbabilitySpread": 0.0237,
       "marketFairOdds": 1.7952,
-      "medianMargin": 0.0656
+      "medianMargin": 0.0657
     },
     {
       "match": "Le Mans FC – Lille OSC",
@@ -249,13 +233,13 @@
         "leovegas": 0.484127,
         "casumo": 0.472973,
         "williamhill": 0.48,
-        "matchbook": 0.483204
+        "matchbook": 0.478261
       },
-      "marketProbability": 0.4832,
+      "marketProbability": 0.48,
       "modelProbabilityUncalibrated": 0.469,
-      "difference": -0.0142,
+      "difference": -0.011,
       "bookProbabilitySpread": 0.0365,
-      "marketFairOdds": 2.0695,
+      "marketFairOdds": 2.0833,
       "medianMargin": 0.0684
     },
     {
@@ -399,12 +383,12 @@
         "williamhill": 0.442971,
         "leovegas": 0.429319,
         "grosvenor": 0.439791,
-        "matchbook": 0.409756
+        "matchbook": 0.411765
       },
       "marketProbability": 0.4346,
       "modelProbabilityUncalibrated": 0.6409999999999999,
       "difference": 0.2064,
-      "bookProbabilitySpread": 0.0332,
+      "bookProbabilitySpread": 0.0312,
       "marketFairOdds": 2.3012,
       "medianMargin": 0.0655
     },
@@ -496,14 +480,14 @@
       "eventId": "61b7d270b965f9804d2d2ed500f41214",
       "bookCount": 3,
       "bookProbabilities": {
-        "casumo": 0.492958,
+        "casumo": 0.486111,
         "williamhill": 0.5,
         "grosvenor": 0.509434
       },
       "marketProbability": 0.5,
       "modelProbabilityUncalibrated": 0.5660000000000001,
       "difference": 0.066,
-      "bookProbabilitySpread": 0.0165,
+      "bookProbabilitySpread": 0.0233,
       "marketFairOdds": 2.0,
       "medianMargin": 0.0786
     },

@@ -1,22 +1,10 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-27T19:53:54.022161+00:00",
+  "updatedAt": "2026-11-27T20:24:38.571270+00:00",
   "decision": "PAS",
-  "matchedCount": 64,
-  "unmatchedCount": 24,
+  "matchedCount": 63,
+  "unmatchedCount": 25,
   "matched": [
-    {
-      "match": "Southampton FC – Middlesbrough FC",
-      "eventId": "32b8e3ea76d9d8b2b36577063d40862e",
-      "kickoff": "2026-11-27T20:00:00+00:00",
-      "freshLineCount": 2
-    },
-    {
-      "match": "CS Marítimo – CD Nacional",
-      "eventId": "abfc6851b152aecbb4bf84a348967f69",
-      "kickoff": "2026-11-27T20:15:00+00:00",
-      "freshLineCount": 3
-    },
     {
       "match": "PSV – Go Ahead Eagles",
       "eventId": "8031222f3f3e8384a69c0ca5e1166458",
@@ -384,6 +372,12 @@
       "freshLineCount": 4
     },
     {
+      "match": "Sheffield United FC – West Ham United FC",
+      "eventId": "bb7e0cbeb7030e0c954aa0aeb5d1e8ee",
+      "kickoff": "2026-12-04T20:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
       "match": "Telstar 1963 – FC Groningen",
       "eventId": "992217cc628328f9d2cd16b8e670ddb1",
       "kickoff": "2026-12-04T19:00:00+00:00",
@@ -406,8 +400,22 @@
       "providerDates": []
     },
     {
+      "match": "Southampton FC – Middlesbrough FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-27",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Stade Brestois 29 – Paris FC",
       "league": "Fransa Ligue 1",
+      "date": "2026-11-27",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "CS Marítimo – CD Nacional",
+      "league": "Portekiz Primeira Liga",
       "date": "2026-11-27",
       "reason": "no_exact_match",
       "providerDates": []
@@ -434,10 +442,8 @@
       "match": "Nottingham Forest FC – Chelsea FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-27"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Fulham FC – AFC Bournemouth",
@@ -470,10 +476,8 @@
       "match": "Levante UD – Real Racing Club de Santander",
       "league": "İspanya La Liga",
       "date": "2026-11-29",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-27"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Real Madrid CF – Deportivo Alavés",
@@ -589,13 +593,6 @@
       "providerDates": [
         "2026-12-03"
       ]
-    },
-    {
-      "match": "Sheffield United FC – West Ham United FC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-04",
-      "reason": "no_exact_match",
-      "providerDates": []
     }
   ],
   "modelCalibrated": false

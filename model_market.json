@@ -1,36 +1,15 @@
 {
   "version": "4.12",
-  "updatedAt": "2026-11-27T19:54:06.745874+00:00",
+  "updatedAt": "2026-11-27T20:24:48.664314+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
   "realBettingEnabled": false,
-  "rows": [
-    {
-      "eventId": "abfc6851b152aecbb4bf84a348967f69",
-      "match": "CS Marítimo – CD Nacional",
-      "kickoff": "2026-11-27T20:15:00+00:00",
-      "market": "over25",
-      "marketLabel": "2.5 Üst",
-      "bookCount": 3,
-      "modelProbabilityUncalibrated": 0.463,
-      "marketProbability": 0.426316,
-      "differencePP": 3.6684,
-      "bestBookmaker": "matchbook",
-      "bestOdds": 2.36,
-      "estimatedEV": 0.09268,
-      "decision": "PAS",
-      "movementDirection": null,
-      "movementPP": null,
-      "movementBookmakers": 0
-    }
-  ],
+  "rows": [],
   "rejected": {
     "extra_report_unavailable": 1,
-    "missing_or_mismatched_extra_event": 4,
-    "insufficient_valid_market_data": 1,
-    "not_today": 62
+    "not_today": 63
   },
   "errors": [],
-  "comparedCount": 1
+  "comparedCount": 0
 }

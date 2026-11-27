@@ -2,16 +2,14 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-27T22:54:02.229101+03:00",
+  "updatedAt": "2026-11-27T23:24:44.720964+03:00",
   "recorded": 180,
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "captureWindowDays": 14,
   "captureCounts": {
-    "already_recorded": 169,
-    "insufficient_history": 10,
-    "new": 1,
-    "recovered_identity": 1
+    "already_recorded": 170,
+    "insufficient_history": 10
   },
   "missingHistory": [
     {

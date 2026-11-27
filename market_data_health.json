@@ -1,18 +1,13 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-27T19:54:42.617948+00:00",
+  "updatedAt": "2026-11-27T20:25:17.384707+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-27T19:53:28.886385+00:00",
-    "archivedEvents": 139,
-    "freshEvents": 71,
+    "snapshotAt": "2026-11-27T20:24:21.099589+00:00",
+    "archivedEvents": 136,
+    "freshEvents": 69,
     "rows": [
-      {
-        "eventId": "40d95e660c301c2d8a5a7a6317017b65",
-        "league": "soccer_epl",
-        "freshBookmakers": 4
-      },
       {
         "eventId": "0bc17a3c7d8153e72b94688960cc603a",
         "league": "soccer_epl",
@@ -171,12 +166,12 @@
       {
         "eventId": "b648a7246af1d3a839b0fcd212849a7c",
         "league": "soccer_spain_la_liga",
-        "freshBookmakers": 4
+        "freshBookmakers": 3
       },
       {
         "eventId": "ae879dadcd548f1a496b6751b4d85bff",
         "league": "soccer_spain_la_liga",
-        "freshBookmakers": 3
+        "freshBookmakers": 4
       },
       {
         "eventId": "188e30796d25595e117480df1cfb19b8",
@@ -221,7 +216,7 @@
       {
         "eventId": "7a3763ed676aa657abff78f841bb851c",
         "league": "soccer_italy_serie_a",
-        "freshBookmakers": 3
+        "freshBookmakers": 4
       },
       {
         "eventId": "7d32e6e9bbd769e7d505467971c4d7ca",
@@ -319,11 +314,6 @@
         "freshBookmakers": 3
       },
       {
-        "eventId": "abfc6851b152aecbb4bf84a348967f69",
-        "league": "soccer_portugal_primeira_liga",
-        "freshBookmakers": 3
-      },
-      {
         "eventId": "d583b1676d961c26794a3ccedf7edffb",
         "league": "soccer_portugal_primeira_liga",
         "freshBookmakers": 4
@@ -365,11 +355,11 @@
       }
     ],
     "region": "uk",
-    "remainingCredits": 134
+    "remainingCredits": 125
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-27T19:54:06.671356+00:00",
+    "reportAt": "2026-11-27T20:24:48.566354+00:00",
     "reportedMarkets": 0
   },
   "volume": {

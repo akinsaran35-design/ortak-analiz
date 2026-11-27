@@ -1,11 +1,11 @@
 {
   "version": "4.70",
-  "updatedAt": "2026-11-27T19:54:06.894368+00:00",
+  "updatedAt": "2026-11-27T20:24:48.864089+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "prospective": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T19:54:06.894368+00:00",
+    "updatedAt": "2026-11-27T20:24:48.864089+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -28,17 +28,6 @@
         "corroboratedDate": "2026-11-29",
         "eventId": "d20ede55e54ed7b55fdc36ca373727c0",
         "kickoff": "2026-11-29T16:30:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "en.1",
-        "home": "Nottingham Forest FC",
-        "away": "Chelsea FC",
-        "archivedDate": "2026-11-28",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "40d95e660c301c2d8a5a7a6317017b65",
-        "kickoff": "2026-11-27T20:00:00+00:00",
         "recordedAt": "2026-11-24T22:36:25.349101+03:00",
         "status": "review_pending"
       },
@@ -72,17 +61,6 @@
         "corroboratedDate": "2026-11-29",
         "eventId": "09bb0ba9a9025d64fed410375c0c8f80",
         "kickoff": "2026-11-29T14:05:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "es.1",
-        "home": "Levante UD",
-        "away": "Real Racing Club de Santander",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "80c92a163a81b69fef76530221e2edd0",
-        "kickoff": "2026-11-27T20:00:00+00:00",
         "recordedAt": "2026-11-24T22:36:25.349101+03:00",
         "status": "review_pending"
       },
@@ -220,13 +198,13 @@
       }
     ],
     "counts": {
-      "review_pending": 19
+      "review_pending": 17
     },
     "decision": "PAS"
   },
   "performance": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T19:54:06.894368+00:00",
+    "updatedAt": "2026-11-27T20:24:48.864089+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -254,17 +232,6 @@
       },
       {
         "league": "en.1",
-        "home": "Nottingham Forest FC",
-        "away": "Chelsea FC",
-        "archivedDate": "2026-11-28",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "40d95e660c301c2d8a5a7a6317017b65",
-        "kickoff": "2026-11-27T20:00:00+00:00",
-        "recordedAt": "2026-11-25T01:37:51.359978+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "en.1",
         "home": "Fulham FC",
         "away": "AFC Bournemouth",
         "archivedDate": "2026-11-28",
@@ -293,17 +260,6 @@
         "corroboratedDate": "2026-11-29",
         "eventId": "09bb0ba9a9025d64fed410375c0c8f80",
         "kickoff": "2026-11-29T14:05:00+00:00",
-        "recordedAt": "2026-11-26T08:45:30.559361+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "es.1",
-        "home": "Levante UD",
-        "away": "Real Racing Club de Santander",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "80c92a163a81b69fef76530221e2edd0",
-        "kickoff": "2026-11-27T20:00:00+00:00",
         "recordedAt": "2026-11-26T08:45:30.559361+03:00",
         "status": "review_pending"
       },
@@ -441,7 +397,7 @@
       }
     ],
     "counts": {
-      "review_pending": 19
+      "review_pending": 17
     },
     "decision": "PAS"
   }

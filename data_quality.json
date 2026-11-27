@@ -1,6 +1,6 @@
 {
   "version": "4.5",
-  "updatedAt": "2026-11-27T19:54:04.996422+00:00",
+  "updatedAt": "2026-11-27T20:24:46.518496+00:00",
   "status": "healthy",
   "qualityGate": "PASS",
   "dataAgeHours": {
@@ -15,7 +15,7 @@
   "invalidRecords": 0,
   "incoherentMarketRecords": 0,
   "overdueResults": 0,
-  "validOddsEvents": 139,
+  "validOddsEvents": 136,
   "minimumMatches": 500,
   "validationProgress": 0.8,
   "liveEnabled": false,

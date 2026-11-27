@@ -1,6 +1,6 @@
 {
   "version": "4.90",
-  "updatedAt": "2026-11-27T22:54:07.392234+03:00",
+  "updatedAt": "2026-11-27T23:24:49.521982+03:00",
   "date": "2026-11-27",
   "mode": "scoreboard_snapshot",
   "source": "ESPN",
@@ -15,10 +15,13 @@
           "home": "Nottingham Forest",
           "away": "Chelsea",
           "kickoff": "2026-11-27T20:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "25'",
+          "score": [
+            1,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -34,10 +37,13 @@
           "home": "Southampton",
           "away": "Middlesbrough",
           "kickoff": "2026-11-27T20:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_IN_PROGRESS",
+          "clock": "25'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -54,11 +60,11 @@
           "away": "Borussia Mönchengladbach",
           "kickoff": "2026-11-27T19:30:00+00:00",
           "state": "in",
-          "status": "STATUS_IN_PROGRESS",
-          "clock": "23'",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+5'",
           "score": [
-            0,
-            0
+            1,
+            1
           ]
         }
       ],
@@ -75,10 +81,13 @@
           "home": "Levante",
           "away": "Racing Santander",
           "kickoff": "2026-11-27T20:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "23'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -96,7 +105,7 @@
           "kickoff": "2026-11-27T19:45:00+00:00",
           "state": "in",
           "status": "STATUS_FIRST_HALF",
-          "clock": "8'",
+          "clock": "39'",
           "score": [
             0,
             0
@@ -118,9 +127,9 @@
           "kickoff": "2026-11-27T19:45:00+00:00",
           "state": "in",
           "status": "STATUS_FIRST_HALF",
-          "clock": "9'",
+          "clock": "40'",
           "score": [
-            0,
+            1,
             0
           ]
         }
@@ -139,8 +148,8 @@
           "away": "Willem II",
           "kickoff": "2026-11-27T19:00:00+00:00",
           "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+4'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "61'",
           "score": [
             0,
             1
@@ -160,10 +169,13 @@
           "home": "Maritimo",
           "away": "C.D. Nacional",
           "kickoff": "2026-11-27T20:15:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -207,7 +219,7 @@
   ],
   "loadedLeagues": 9,
   "eventCount": 10,
-  "inProgress": 4,
+  "inProgress": 8,
   "realTime": false,
   "usedForSettlement": false,
   "usedForPredictions": false
