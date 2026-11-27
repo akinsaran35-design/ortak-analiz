@@ -10,8 +10,14 @@ class Tests(unittest.TestCase):
     def test_pair(self):
         self.assertEqual(compare(fixture(),[row()],NOW)[0]["comparison"],"pair_date_match")
     def test_absence(self):
-        d=fixture();d["upcoming"]=[]
+        d=fixture();d["upcoming"][0]["match"]="goztepe – trabzonspor"
         self.assertEqual(compare(d,[row()],NOW)[0]["comparison"],"absent_from_daily")
+    def test_outside_window(self):
+        r=row();r["kickoff"]="2026-12-06T19:00:00+03:00"
+        self.assertEqual(compare(fixture(),[r],NOW)[0]["comparison"],"outside_daily_window")
+    def test_empty_window(self):
+        d=fixture();d["upcoming"]=[]
+        with self.assertRaises(ValueError):compare(d,[row()],NOW)
     def test_duplicate(self):
         self.assertEqual(compare(fixture(),[row(),row()],NOW)[1]["comparison"],"duplicate_official_pair")
     def test_no_fuzzy(self):
