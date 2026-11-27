@@ -10,6 +10,14 @@ class AuditTests(unittest.TestCase):
             self.assertEqual(team_key("sco.1","Unrelated Town"),"unrelated town")
         rows=[dict(home="a",away="b",status="csv_only"),dict(home="a",away="c",status="espn_only"),dict(home="d",away="e",status="corroborated")]
         self.assertEqual(unmatched_names(rows),{"csv_only":["a","b"],"espn_only":["a","c"]})
+    def test_reviewed_names(self):
+        for code,names in REVIEWED_ALIASES.items():
+            for short,full in names.items():
+                self.assertEqual(team_key(code,short),team_key(code,full))
+                self.assertEqual(team_key("unrelated",short),short)
+                self.assertNotEqual(short,full)
+        self.assertNotEqual(team_key("esp.2","celta"),team_key("esp.2","celta b"))
+        self.assertNotEqual(team_key("sco.1","dundee"),team_key("sco.1","dundee united"))
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
