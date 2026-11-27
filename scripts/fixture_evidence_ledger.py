@@ -34,7 +34,13 @@ def reconcile(reports):
             conflicts.append(dict(entry,reasons=reasons))
         else:
             verified.append(dict(entry,score=list(next(iter(scores))) if scores else None,kickoff=next(iter(stamps)) if stamps else None))
-    return dict(mode="research_only",observationCount=len(observations),uniqueVerifiedCount=len(verified),duplicateObservations=len(observations)-len(groups),conflictCount=len(conflicts),verified=verified,conflicts=conflicts,productionEnabled=False)
+    from collections import Counter
+    quality_by_report={label:report.get("sourceQualityGate","unknown") for label,report in reports}
+    passing=[x for x in verified if any(quality_by_report[label]=="success" for label in x["reports"])]
+    periods=[]
+    for label,report in reports:
+        periods.append(dict(report=label,month=report.get("month"),sourceRun=report.get("sourceRun"),sourceQualityGate=quality_by_report[label],observations=len(report["verifiedScoreIds"]),uniqueReconciled=sum(label in x["reports"] for x in verified),scopeCoverage=report.get("scopeCoverage")))
+    return dict(mode="research_only",observationCount=len(observations),uniqueVerifiedCount=len(verified),duplicateObservations=len(observations)-len(groups),conflictCount=len(conflicts),passingWindowUniqueCount=len(passing),otherWindowUniqueCount=len(verified)-len(passing),withExplicitScoreCount=sum(x["score"] is not None for x in verified),byLeague=dict(sorted(Counter(x["league"] for x in verified).items())),periods=periods,verified=verified,conflicts=conflicts,productionEnabled=False)
 
 def self_test():
     a=dict(league="en.1",primaryId="p",secondaryId=1,score=[2,1],kickoff="2026-05-01T12:00:00Z")
@@ -46,6 +52,10 @@ def self_test():
     assert reconcile([("one",report(a)),("two",report(dict(a,secondaryId=2)))])["conflictCount"]==2
     assert reconcile([("one",report(a)),("two",report(dict(a,primaryId="z")))])["conflictCount"]==2
     assert reconcile([("one",report(a)),("two",report(dict(a,kickoff="2026-05-01T13:00:00Z")))])["conflictCount"]==1
+    mixed=reconcile([("pass",dict(report(a),sourceQualityGate="success")),("fail",dict(report(a,b),sourceQualityGate="failure"))])
+    assert mixed["uniqueVerifiedCount"]==2 and mixed["passingWindowUniqueCount"]==1 and mixed["otherWindowUniqueCount"]==1
+    assert mixed["byLeague"]=={"en.1":2} and mixed["withExplicitScoreCount"]==2
+    assert mixed["periods"][1]["sourceQualityGate"]=="failure"
     print("Fixture ledger self-tests passed")
 
 if __name__=="__main__":
