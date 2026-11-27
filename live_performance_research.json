@@ -4,8 +4,10 @@
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "recorded": 0,
-  "counts": {},
+  "recorded": 1,
+  "counts": {
+    "pending": 1
+  },
   "brier": {
     "homeWin": null,
     "draw": null,
@@ -14,5 +16,5 @@
     "over25": null,
     "btts": null
   },
-  "updatedAt": "2026-11-27T19:49:15.848635+03:00"
+  "updatedAt": "2026-11-27T20:42:53.468996+03:00"
 }
