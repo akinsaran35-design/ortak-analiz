@@ -50,7 +50,7 @@ class MultiLeagueTests(unittest.TestCase):
         self.assertEqual(counts["conflictingIdentities"],1)
         self.assertEqual(len(conflicting),3)
         now=datetime(2026,11,26,17,tzinfo=TR)
-        report=build_report(conflicting,now,lambda url: b"Date,HomeTeam,AwayTeam,FTHG,FTAG\\n25/11/26,A,B,2,1\\n" if url.endswith(".csv") else b'{"events":[]}')
+        report=build_report(conflicting,now,lambda url: b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n" if url.endswith(".csv") else b'{"events":[]}')
         self.assertEqual(sum(r["status"]=="ambiguous" for g in report["groups"] for r in g["rows"]),2)
         self.assertEqual(verified_rows(report,now),[])
 if __name__=="__main__": unittest.main()
