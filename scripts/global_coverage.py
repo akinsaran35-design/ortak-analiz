@@ -1,5 +1,7 @@
 """Read-only global scoreboard coverage probe; no prediction or settlement."""
 import json
+from collections import Counter
+from urllib.error import HTTPError,URLError
 from datetime import datetime,timedelta
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -15,9 +17,14 @@ def probe(code,day,reader=read):
     try:
         payload=json.loads(reader(url))
         rows,invalid=parse(payload,day)
-        result.update(events=len(rows),invalid=invalid)
+        result.update(events=len(rows),invalid=invalid,providerLeagues=[dict(id=x.get("id"),slug=x.get("slug"),name=x.get("name")) for x in payload.get("leagues",[]) if isinstance(x,dict)])
+    except HTTPError as exc:
+        result["error"]="HTTP_"+str(exc.code)
+    except URLError as exc:
+        result["error"]="network_"+type(exc.reason).__name__
     except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
         result["error"]=type(exc).__name__
+        result["detail"]=str(exc)[:160]
     return result
 def build(now,reader=read):
     days=[(now.astimezone(TR).date()-timedelta(days=i)).isoformat() for i in (0,1,2,3,4,5,6,7)]
@@ -28,10 +35,10 @@ def build(now,reader=read):
         items=[r for r in rows if r["league"]==code]
         events=sum(r["events"] for r in items)
         clean=all(r["error"] is None and not r["invalid"] for r in items)
-        groups.append(dict(league=code,events=events,status="observed" if clean and events else "empty_unverified" if clean else "source_issue",samples=items))
-    return dict(version="5.62",mode="coverage_research_only",candidateCount=len(CANDIDATES),queryCount=len(rows),groups=groups,predictionsEnabled=False,usedForSettlement=False)
+        groups.append(dict(league=code,events=events,status="observed" if clean and events else "empty_unverified" if clean else "source_issue",errorCounts=dict(Counter(r["error"] for r in items if r["error"])),invalidRows=sum(r["invalid"] for r in items),samples=items))
+    return dict(version="5.64",mode="coverage_research_only",candidateCount=len(CANDIDATES),queryCount=len(rows),groups=groups,predictionsEnabled=False,usedForSettlement=False)
 if __name__=="__main__":
     report=build(datetime.now(TR))
     Path("global_coverage.json").write_text(json.dumps(report,indent=2))
-    print([(g["league"],g["events"],g["status"]) for g in report["groups"]])
+    print([(g["league"],g["events"],g["status"],g["errorCounts"],g["invalidRows"]) for g in report["groups"]])
     assert any(g["status"]=="observed" for g in report["groups"])
