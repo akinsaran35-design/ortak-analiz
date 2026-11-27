@@ -27,10 +27,6 @@ def audit(data):
             for x in reference.values():x.pop("classification",None)
             for entry in league_reference["leagues"].values():
                 for x in entry["markets"].values():x.pop("classification",None)
-            # Tests/new reports may contain the new fields; reject mixed schema.
-            if all("classification" in x for x in v["marketResearch"].values()):
-                reference=summarize(a,datetime.fromisoformat(v["updatedAt"]))
-                league_reference=build(a,datetime.fromisoformat(v["updatedAt"]))
         check(v.get("classificationVersion") in (None,"6.19") and v["marketResearchVersion"]=="4.85" and v["marketResearch"]==reference,"prospective_market_recompute")
         check(league_report==league_reference,"prospective_league_recompute")
         check((q["archiveRecords"],q["settled"],q["pending"])==(len(a),n,len(a)-n),"quality_count")
