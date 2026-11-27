@@ -50,11 +50,19 @@ def sample_counts(date_from,date_to):
         day=datetime.fromisoformat(row["kickoff"].replace("Z","+00:00")).astimezone(TR).date()
         return date_from<=day<=date_to
     primary=[row for row in p if within(row)]
-    secondary_rows=[row for row in s["rows"] if within(row)]
+    secondary_rows=[row for row in s["rows"] if within(row) and row["competitionId"] in MAP.values()]
     result=match(primary,secondary_rows,MAP)
-    return dict(primaryCount=len(primary),secondaryCount=len(secondary_rows),matched=len(result["pairs"]),scoreCompared=sum(x["scoreAgreement"] is not None for x in result["pairs"]),scoreMismatch=sum(x["scoreAgreement"] is False for x in result["pairs"]))
+    paired=len(result["pairs"])
+    secondary_ids={x["secondaryId"] for x in result["pairs"]}
+    return dict(primaryCount=len(primary),secondaryCount=len(secondary_rows),matched=paired,primaryCoverage=paired/len(primary) if primary else None,secondaryCoverage=paired/len(secondary_rows) if secondary_rows else None,secondaryOnly=[row["eventId"] for row in secondary_rows if row["eventId"] not in secondary_ids],scoreCompared=sum(x["scoreAgreement"] is not None for x in result["pairs"]),scoreMismatch=sum(x["scoreAgreement"] is False for x in result["pairs"]),status="no_primary_data" if not primary else "no_secondary_data" if not secondary_rows else "partial" if paired!=len(primary) or paired!=len(secondary_rows) else "complete")
 samples=dict(original=sample_counts(start,start+timedelta(days=10)),extension=sample_counts(start+timedelta(days=11),start+timedelta(days=13))) if holdout else {}
 print("Separate sample counts:",json.dumps(samples))
+audit_start=now.date()+timedelta(days=min(offsets))
+audit_end=now.date()+timedelta(days=max(offsets))
+scope=sample_counts(audit_start,audit_end)
+daily=[dict(date=str(audit_start+timedelta(days=i)),**sample_counts(audit_start+timedelta(days=i),audit_start+timedelta(days=i))) for i in range((audit_end-audit_start).days+1)]
+print("Bidirectional coverage:",json.dumps(scope))
+print("Daily coverage:",json.dumps(daily))
 diagnostics=[]
 for a in p:
     candidates=[]
@@ -66,7 +74,7 @@ for a in p:
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.85",sampleRole="holdout_with_reported_extension" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.86",scopeCoverage=scope,dailyCoverage=daily,fullCoverageVerified=scope["status"]=="complete" and not any(g["error"] or g["invalid"] for day in primary_days for g in day["groups"]),sampleRole="holdout_with_reported_extension" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
