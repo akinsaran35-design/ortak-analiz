@@ -5,10 +5,39 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from results_source_pilot import csv_results, espn_results, read, TR
 from nine_league_results_pilot import SOURCES, result_key
-from league_config import LEAGUES
+from league_config import LEAGUES,FIXTURE_CODES
 
 APPROVED=frozenset(("en.1","en.2","de.1","es.1","it.1","fr.1","nl.1","pt.1","tr.1"))
 SPORTS={code:sport for _,code,sport in LEAGUES}
+RETRY_DAYS=30
+
+def within_window(day,now):
+    return now.date()-timedelta(days=RETRY_DAYS)<=date.fromisoformat(day)<now.date()
+
+def combined_records(prospective,performance):
+    # Preserve exact archive names and avoid counting the same fixture twice.
+    rows=dict(prospective)
+    by_id=defaultdict(list)
+    for r in prospective.values():
+        by_id[(r['league'],r['date'],r['home'],r['away'])].append(r)
+    for key,r in performance.items():
+        try:
+            code=FIXTURE_CODES[r['league']];h,a=r['match'].split(' – ')
+            ident=(code,r['date'],h,a)
+            converted=dict(r,league=code,home=h,away=a)
+            if ident in by_id:
+                existing=by_id[ident]
+                # Conflicting archived scores must never become an eligible row.
+                if any(x['result'] is not None and r['result'] is not None and x['result']!=r['result'] for x in existing):
+                    rows['performance:'+key]=converted
+                elif len(existing)==1 and existing[0]['result'] is None and r['result'] is not None:
+                    for k,x in rows.items():
+                        if x is existing[0]:rows[k]=dict(x,result=r['result']);break
+                continue
+            rows['performance:'+key]=converted
+            by_id[ident].append(converted)
+        except (ValueError,KeyError,TypeError,AttributeError):continue
+    return rows
 
 def source_urls(code,day):
     d=date.fromisoformat(day)
@@ -21,7 +50,7 @@ def build_report(archive,now,reader=read):
     groups=defaultdict(list)
     for r in archive.values():
         d=date.fromisoformat(r["date"])
-        if r["league"] in APPROVED and now.date()-timedelta(days=14)<=d<now.date():
+        if r["league"] in APPROVED and within_window(r["date"],now):
             groups[(r["league"],r["date"])].append(r)
     reports=[]
     cache={}
@@ -54,7 +83,7 @@ def verified_rows(report,now):
         out=[]
         for group in report["groups"]:
             code,day=group["league"],group["date"]
-            if code not in APPROVED or group["errors"] or not now.date()-timedelta(days=14)<=date.fromisoformat(day)<now.date(): continue
+            if code not in APPROVED or group["errors"] or not within_window(day,now): continue
             urls=source_urls(code,day)
             if group["sources"]!=list(urls): continue
             for r in group["rows"]:
@@ -68,7 +97,9 @@ def verified_rows(report,now):
 def main():
     now=datetime.now(TR)
     archive=json.loads(Path("prospective_archive.json").read_text())
-    report=build_report(archive,now)
+    legacy=json.loads(Path("prediction_archive.json").read_text())
+    report=build_report(combined_records(archive,legacy),now)
+    report["retryDays"]=RETRY_DAYS
     report["automaticVerifiedCount"]=len(verified_rows(report,datetime.now(TR)))
     Path("multi_league_results.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
     print("V4.69 result audit:",json.dumps({"verified":report["automaticVerifiedCount"],"groups":[{"league":g["league"],"date":g["date"],"counts":dict(Counter(r["status"] for r in g["rows"])),"errors":g["errors"]} for g in report["groups"]]},ensure_ascii=False))
