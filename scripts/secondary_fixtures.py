@@ -25,10 +25,10 @@ def parse(payload):
                 continue
         rows.append(dict(eventId=ident,competitionId=c,kickoff=stamp.isoformat(),home=h["name"],away=a["name"],status=m["status"],score=score))
     return rows,rejected
-def build(token,now):
+def build(token,now,date_from=None,date_to=None):
     out=dict(version="5.67",source="football-data.org",mode="independent_research",rows=[],status="credentials_missing",usedForSettlement=False,predictionsEnabled=False)
     if not token:return out
-    day=now.date();url="https://api.football-data.org/v4/matches?dateFrom="+str(day-timedelta(days=1))+"&dateTo="+str(day+timedelta(days=2))
+    day=now.date();url="https://api.football-data.org/v4/matches?dateFrom="+str(date_from or day-timedelta(days=1))+"&dateTo="+str(date_to or day+timedelta(days=2))
     try:
         with urlopen(Request(url,headers={"X-Auth-Token":token}),timeout=20) as response:out["rows"],out["rejectedRows"]=parse(json.load(response))
         out["status"]="observed" if out["rows"] else "empty"
