@@ -1,6 +1,6 @@
 (function(){
 "use strict";
-const FILES=["nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
+const FILES=["shadow_performance","nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
 const MARKETS=["1.5 Üst","2.5 Üst","KG Var"];
 const LEAGUES={"İngiltere Premier Lig":"soccer_epl","İngiltere Championship":"soccer_efl_champ","Almanya Bundesliga":"soccer_germany_bundesliga","İspanya La Liga":"soccer_spain_la_liga","İtalya Serie A":"soccer_italy_serie_a","Fransa Ligue 1":"soccer_france_ligue_one","Hollanda Eredivisie":"soccer_netherlands_eredivisie","Portekiz Primeira Liga":"soccer_portugal_primeira_liga","Türkiye Süper Lig":"soccer_turkey_super_league"};
 const arr=x=>Array.isArray(x)?x:[],num=x=>Number.isInteger(x)&&x>=0?String(x):"—";
@@ -133,7 +133,19 @@ function accuracyCounts(x){
  return {...x,rate:x.tested?100*x.correct/x.tested:null};
 }
 function classificationFor(x){const a=x?.classification;if(a?.threshold!==.5||a.model!=="candidate"||a.descriptiveOnly!==true||a.tested!==x.tested)return null;return accuracyCounts(a);}
-if(typeof module!=="undefined"&&module.exports)module.exports={accuracyCounts,classificationFor,formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
+function shadowHistory(report,now){
+ if(report?.version!=="4.8"||report.mode!=="shadow"||report.liveEnabled!==false||!Number.isFinite(Date.parse(report.updatedAt))||Date.parse(report.updatedAt)>now)return null;
+ const keys=["recorded","settled","pending","won","lost"];
+ function counts(x){
+   if(!x||!keys.every(k=>Number.isSafeInteger(x[k])&&x[k]>=0)||x.settled+x.pending!==x.recorded||x.won+x.lost!==x.settled)return null;
+   if(x.settled?(!Number.isFinite(x.winRate)||Math.abs(x.winRate-x.won/x.settled)>1e-10):x.winRate!==null)return null;
+   return Object.fromEntries(keys.map(k=>[k,x[k]]).concat([["rate",x.settled?100*x.won/x.settled:null]]));
+ }
+ const total=counts(report.overall),sizes=[1,2,3].map(n=>counts(report.bySize?.[String(n)]));
+ if(!total||sizes.some(x=>!x)||!keys.every(k=>sizes.reduce((sum,x)=>sum+x[k],0)===total[k]))return null;
+ return {total,sizes,updatedAt:report.updatedAt};
+}
+if(typeof module!=="undefined"&&module.exports)module.exports={shadowHistory,accuracyCounts,classificationFor,formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
@@ -339,7 +351,14 @@ function render(){loadedAt=Date.now();rows=by("fixture-mode").value==="confirmed
    panel(radar,isCurrent?"Son skor görüntüsü":"Eski skor görüntüsü — canlı değil",[node("p",board.date+" · "+(Number.isFinite(Date.parse(board.updatedAt))?hourTR(board.updatedAt):"—")+" TSİ · ESPN"),node("p",num(board.loadedLeagues)+" / 9 lig yanıt verdi. "+num(board.eventCount)+" maç kaydı.","subtle")]);
    if(isCurrent){for(const group of board.groups){if(group.error||!Array.isArray(group.rows))continue;for(const r of group.rows){if(r.state!=="in"&&r.state!=="post")continue;const score=Array.isArray(r.score)&&r.score.length===2?r.score.join(" – "):"Skor yok";panel(radar,r.home+" – "+r.away,[node("p",score),node("p",group.leagueName+" · "+(r.state==="in"?"Görüntü alındığında sürüyordu":"Kaynakta sona ermiş / durmuş")+(r.clock?" · "+r.clock:""),"subtle")]);}}if(board.inProgress===0)radar.append(node("p","Son görüntüde devam eden maç yok. Bu, şu anda maç olmadığı anlamına gelmez.","subtle"));}
  }else radar.append(node("p","Skor görüntüsü henüz yayımlanmadı.","subtle"));
- const c=by("coupon-summary");c.replaceChildren();panel(c,"PAS",[node("p","Onaylanmış otomatik kupon yok."),node("p","Kazanma olasılığı: doğrulanmadı. Model kalibrasyonu tamamlanmadı.","subtle")]);
+ const c=by("coupon-summary");c.replaceChildren();panel(c,"PAS",[node("p","Onaylanmış otomatik kupon yok."),node("p","Model kalibrasyonu tamamlanmadı.","subtle")]);
+ const history=shadowHistory(data.shadow_performance,loadedAt);
+ if(history){
+   const x=history.total,body=[node("p","Yayımlanmış geçmiş sanal test kayıtları; gerçek para veya yeni maç seçimi yok. Veri tarihi: "+dateTR(history.updatedAt)+".","subtle"),metrics([["Kayıt",num(x.recorded)],["Sonuçlanan",num(x.settled)],["Bekleyen",num(x.pending)]]),metrics([["Doğru",num(x.won)],["Yanlış",num(x.lost)],["Geçmiş doğruluk",x.settled?pct(x.rate):"Veri yok"]])];
+   for(let i=0;i<history.sizes.length;i++){const y=history.sizes[i];body.push(node("p",(i+1)+" maçlı test: "+(y.settled?pct(y.rate)+" · "+y.won+"/"+y.settled:"Veri yok")+" · "+num(y.pending)+" bekleyen","subtle"));}
+   body.push(node("p",x.settled?"Geçmiş sanal sonuçlar gelecekteki başarıyı garanti etmez; model onayı değildir.":"Henüz sonuçlanmış sanal test kaydı bulunmuyor.","subtle"));
+   panel(c,"Sanal test geçmişi",body);
+ }else panel(c,"Sanal test geçmişi",[node("p","Doğrulanabilir biçimde yayımlanmış sanal test özeti yok.","subtle")]);
  const s=by("settings-summary");s.replaceChildren(node("p","Son bildirilen API kredisi: "+num(data.odds?.remainingCredits)),node("p","Bütünlük: "+(current?"PASS":"Güncel doğrulama yok")),node("p","Ücretsiz araştırma • Türkiye dışı oran kaynakları","subtle"));
 }
 async function refresh(){if(refreshing)return;refreshing=true;by("refresh").disabled=true;by("connection").textContent="Raporlar okunuyor…";const next={};await Promise.all(FILES.map(async k=>{try{const r=await fetch("./"+k+".json?ts="+Date.now(),{cache:"no-store"});if(r.ok)next[k]=await r.json();}catch(_){}}));try{const r=await fetch(LIVE_URL+"?ts="+Date.now(),{cache:"no-store"});if(r.ok)next.live_analysis_quality=await r.json();}catch(_){}data=next;try{render();}catch(_){by("connection").textContent="Rapor biçimi doğrulanamadı · PAS";}finally{refreshing=false;by("refresh").disabled=false;}}
