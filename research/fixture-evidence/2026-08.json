@@ -1,0 +1,1207 @@
+{
+  "mode": "research_only",
+  "sourceRun": 46019495145,
+  "sourceJob": 140575128802,
+  "sourceQualityGate": "success",
+  "month": "2026-08",
+  "scopeCoverage": {
+    "primaryCount": 238,
+    "secondaryCount": 238,
+    "matched": 237,
+    "primaryCoverage": 0.9957983193277311,
+    "secondaryCoverage": 0.9957983193277311,
+    "secondaryOnly": [
+      559702
+    ],
+    "scoreCompared": 237,
+    "scoreMismatch": 0,
+    "status": "partial"
+  },
+  "verifiedScoreIds": [
+    {
+      "league": "en.1",
+      "primaryId": "401879301",
+      "secondaryId": 560542
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879322",
+      "secondaryId": 560543
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879300",
+      "secondaryId": 560546
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879299",
+      "secondaryId": 560544
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879298",
+      "secondaryId": 560545
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879321",
+      "secondaryId": 560547
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879297",
+      "secondaryId": 560549
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879320",
+      "secondaryId": 560548
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879319",
+      "secondaryId": 560550
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879318",
+      "secondaryId": 560551
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879294",
+      "secondaryId": 560555
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879314",
+      "secondaryId": 560552
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879296",
+      "secondaryId": 560560
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879316",
+      "secondaryId": 560561
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879312",
+      "secondaryId": 560558
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879317",
+      "secondaryId": 560556
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879315",
+      "secondaryId": 560559
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879313",
+      "secondaryId": 560554
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879293",
+      "secondaryId": 560553
+    },
+    {
+      "league": "en.1",
+      "primaryId": "401879295",
+      "secondaryId": 560557
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880340",
+      "secondaryId": 561761
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880339",
+      "secondaryId": 561762
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880338",
+      "secondaryId": 561764
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880337",
+      "secondaryId": 561767
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880336",
+      "secondaryId": 561765
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880335",
+      "secondaryId": 561763
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880334",
+      "secondaryId": 561768
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880333",
+      "secondaryId": 561766
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880332",
+      "secondaryId": 561769
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880331",
+      "secondaryId": 561770
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880330",
+      "secondaryId": 561771
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880329",
+      "secondaryId": 561772
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880328",
+      "secondaryId": 561773
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880325",
+      "secondaryId": 561781
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880324",
+      "secondaryId": 561784
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880327",
+      "secondaryId": 561780
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880326",
+      "secondaryId": 561777
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880323",
+      "secondaryId": 561778
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880322",
+      "secondaryId": 561783
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880321",
+      "secondaryId": 561782
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880320",
+      "secondaryId": 561774
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880318",
+      "secondaryId": 561775
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880317",
+      "secondaryId": 561779
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880319",
+      "secondaryId": 561776
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880305",
+      "secondaryId": 561796
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880311",
+      "secondaryId": 561791
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880310",
+      "secondaryId": 561794
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880306",
+      "secondaryId": 561789
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880316",
+      "secondaryId": 561792
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880315",
+      "secondaryId": 561786
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880314",
+      "secondaryId": 561787
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880313",
+      "secondaryId": 561793
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880312",
+      "secondaryId": 561790
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880309",
+      "secondaryId": 561785
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880308",
+      "secondaryId": 561788
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401880307",
+      "secondaryId": 561795
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884817",
+      "secondaryId": 565776
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884811",
+      "secondaryId": 565779
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884810",
+      "secondaryId": 565783
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884812",
+      "secondaryId": 565778
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884815",
+      "secondaryId": 565777
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884809",
+      "secondaryId": 565780
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884816",
+      "secondaryId": 565781
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884814",
+      "secondaryId": 565784
+    },
+    {
+      "league": "de.1",
+      "primaryId": "401884813",
+      "secondaryId": 565782
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882926",
+      "secondaryId": 564634
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882918",
+      "secondaryId": 564633
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882920",
+      "secondaryId": 564629
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882922",
+      "secondaryId": 564632
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882923",
+      "secondaryId": 564635
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882925",
+      "secondaryId": 564628
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882908",
+      "secondaryId": 564638
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882914",
+      "secondaryId": 564647
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882916",
+      "secondaryId": 564641
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882907",
+      "secondaryId": 564643
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882912",
+      "secondaryId": 564645
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882915",
+      "secondaryId": 564646
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882911",
+      "secondaryId": 564644
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882913",
+      "secondaryId": 564642
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882909",
+      "secondaryId": 564639
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882910",
+      "secondaryId": 564640
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882917",
+      "secondaryId": 564637
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882919",
+      "secondaryId": 564631
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882924",
+      "secondaryId": 564636
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882921",
+      "secondaryId": 564630
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882900",
+      "secondaryId": 564654
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882906",
+      "secondaryId": 564648
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882902",
+      "secondaryId": 564655
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882898",
+      "secondaryId": 564653
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882897",
+      "secondaryId": 564649
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882899",
+      "secondaryId": 564656
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882904",
+      "secondaryId": 564651
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882905",
+      "secondaryId": 564652
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882901",
+      "secondaryId": 564657
+    },
+    {
+      "league": "es.1",
+      "primaryId": "401882903",
+      "secondaryId": 564650
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874931",
+      "secondaryId": 558632
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874745",
+      "secondaryId": 558629
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874929",
+      "secondaryId": 558631
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874747",
+      "secondaryId": 558636
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874930",
+      "secondaryId": 558635
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874946",
+      "secondaryId": 558637
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874748",
+      "secondaryId": 558633
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874932",
+      "secondaryId": 558634
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874927",
+      "secondaryId": 558630
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874928",
+      "secondaryId": 558638
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874758",
+      "secondaryId": 558625
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874942",
+      "secondaryId": 558627
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874749",
+      "secondaryId": 558624
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874743",
+      "secondaryId": 558620
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874746",
+      "secondaryId": 558619
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874755",
+      "secondaryId": 558626
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874938",
+      "secondaryId": 558623
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874742",
+      "secondaryId": 558622
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874945",
+      "secondaryId": 558621
+    },
+    {
+      "league": "it.1",
+      "primaryId": "401874970",
+      "secondaryId": 558628
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876489",
+      "secondaryId": 559715
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876490",
+      "secondaryId": 559712
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876491",
+      "secondaryId": 559711
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876488",
+      "secondaryId": 559716
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876486",
+      "secondaryId": 559718
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876485",
+      "secondaryId": 559714
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876493",
+      "secondaryId": 559717
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876492",
+      "secondaryId": 559719
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876487",
+      "secondaryId": 559713
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876477",
+      "secondaryId": 559704
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876484",
+      "secondaryId": 559708
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876483",
+      "secondaryId": 559710
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876482",
+      "secondaryId": 559705
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876481",
+      "secondaryId": 559706
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876479",
+      "secondaryId": 559707
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876478",
+      "secondaryId": 559709
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "401876480",
+      "secondaryId": 559703
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875655",
+      "secondaryId": 558214
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875654",
+      "secondaryId": 558215
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875653",
+      "secondaryId": 558216
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875652",
+      "secondaryId": 558217
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875651",
+      "secondaryId": 558218
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875650",
+      "secondaryId": 558219
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875649",
+      "secondaryId": 558220
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875648",
+      "secondaryId": 558221
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875647",
+      "secondaryId": 558222
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875646",
+      "secondaryId": 558223
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875645",
+      "secondaryId": 558224
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875644",
+      "secondaryId": 558225
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875643",
+      "secondaryId": 558226
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875642",
+      "secondaryId": 558227
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875641",
+      "secondaryId": 558228
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875639",
+      "secondaryId": 558230
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875640",
+      "secondaryId": 558229
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875638",
+      "secondaryId": 558231
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875637",
+      "secondaryId": 558232
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875635",
+      "secondaryId": 558234
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875634",
+      "secondaryId": 558235
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875633",
+      "secondaryId": 558236
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875632",
+      "secondaryId": 558237
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875631",
+      "secondaryId": 558238
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875630",
+      "secondaryId": 558241
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875629",
+      "secondaryId": 558242
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875628",
+      "secondaryId": 558243
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875627",
+      "secondaryId": 558244
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875626",
+      "secondaryId": 558245
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875624",
+      "secondaryId": 558247
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875625",
+      "secondaryId": 558246
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875623",
+      "secondaryId": 558248
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "401875622",
+      "secondaryId": 558249
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885491",
+      "secondaryId": 567264
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885489",
+      "secondaryId": 567263
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885484",
+      "secondaryId": 567258
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885492",
+      "secondaryId": 567260
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885487",
+      "secondaryId": 567265
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885485",
+      "secondaryId": 567262
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885490",
+      "secondaryId": 567261
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885488",
+      "secondaryId": 567259
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885486",
+      "secondaryId": 567257
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885475",
+      "secondaryId": 567268
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885482",
+      "secondaryId": 567266
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885483",
+      "secondaryId": 567273
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885476",
+      "secondaryId": 567274
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885477",
+      "secondaryId": 567270
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885481",
+      "secondaryId": 567272
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885478",
+      "secondaryId": 567269
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885479",
+      "secondaryId": 567267
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885471",
+      "secondaryId": 567283
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885473",
+      "secondaryId": 567279
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885467",
+      "secondaryId": 567275
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885466",
+      "secondaryId": 567278
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885468",
+      "secondaryId": 567281
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885469",
+      "secondaryId": 567280
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885472",
+      "secondaryId": 567277
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885458",
+      "secondaryId": 567291
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885464",
+      "secondaryId": 567285
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885463",
+      "secondaryId": 567287
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885465",
+      "secondaryId": 567289
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885459",
+      "secondaryId": 567286
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885461",
+      "secondaryId": 567290
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885460",
+      "secondaryId": 567284
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885457",
+      "secondaryId": 567288
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "401885462",
+      "secondaryId": 567292
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841181",
+      "secondaryId": 554956
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841178",
+      "secondaryId": 554958
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841184",
+      "secondaryId": 554953
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841185",
+      "secondaryId": 554951
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841183",
+      "secondaryId": 554954
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841186",
+      "secondaryId": 554950
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841180",
+      "secondaryId": 554957
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841179",
+      "secondaryId": 554952
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841182",
+      "secondaryId": 554959
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841187",
+      "secondaryId": 554955
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841192",
+      "secondaryId": 554964
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841196",
+      "secondaryId": 554960
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841189",
+      "secondaryId": 554967
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841194",
+      "secondaryId": 554962
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841195",
+      "secondaryId": 554961
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841188",
+      "secondaryId": 554968
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841190",
+      "secondaryId": 554966
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841197",
+      "secondaryId": 554969
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841193",
+      "secondaryId": 554963
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841191",
+      "secondaryId": 554965
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841205",
+      "secondaryId": 554975
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841204",
+      "secondaryId": 554976
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841206",
+      "secondaryId": 554974
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841203",
+      "secondaryId": 554977
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841202",
+      "secondaryId": 554971
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841200",
+      "secondaryId": 554979
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841199",
+      "secondaryId": 554972
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841201",
+      "secondaryId": 554978
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841207",
+      "secondaryId": 554973
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841198",
+      "secondaryId": 554970
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841216",
+      "secondaryId": 554981
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841209",
+      "secondaryId": 554988
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841212",
+      "secondaryId": 554989
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841208",
+      "secondaryId": 554980
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841214",
+      "secondaryId": 554983
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841213",
+      "secondaryId": 554984
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841217",
+      "secondaryId": 554985
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841211",
+      "secondaryId": 554986
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841215",
+      "secondaryId": 554982
+    }
+  ]
+}
