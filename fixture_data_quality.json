@@ -1,7 +1,7 @@
 {
   "version": "5.37",
   "mode": "fixture_data_quality_only",
-  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:37:55+03:00",
   "cutoffExclusive": "2026-11-27",
   "predictionsEnabled": false,
   "decision": "PAS",
@@ -3107,7 +3107,8 @@
       "latestLeagueResultAgeDays": 4,
       "fixtures": 10,
       "flags": {
-        "h2h:partial": 3
+        "h2h:partial": 3,
+        "venue:away:shotsOnTarget:partial": 1
       },
       "rows": [
         {
@@ -3490,7 +3491,7 @@
               "yellowCards": 10,
               "redCards": 10,
               "shots": 10,
-              "shotsOnTarget": 10
+              "shotsOnTarget": 9
             }
           },
           "venueMetricSamples": {
@@ -3508,10 +3509,12 @@
               "yellowCards": 5,
               "redCards": 5,
               "shots": 5,
-              "shotsOnTarget": 5
+              "shotsOnTarget": 4
             }
           },
-          "flags": []
+          "flags": [
+            "venue:away:shotsOnTarget:partial"
+          ]
         },
         {
           "date": "2026-11-29",
@@ -3604,7 +3607,7 @@
               "yellowCards": 10,
               "redCards": 10,
               "shots": 10,
-              "shotsOnTarget": 10
+              "shotsOnTarget": 9
             }
           },
           "venueMetricSamples": {

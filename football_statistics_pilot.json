@@ -1,7 +1,7 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-27T07:36:28.630179+03:00",
-  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
+  "updatedAt": "2026-11-27T07:38:35.402746+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:37:55+03:00",
   "cutoffExclusive": "2026-11-27",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -4507,9 +4507,9 @@
                 "againstAverage": 17.0
               },
               "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 6.0,
-                "againstAverage": 6.0
+                "sample": 9,
+                "forAverage": 6.111111111111111,
+                "againstAverage": 6.222222222222222
               },
               "halfTimeGoals": {
                 "sample": 10,
@@ -4657,9 +4657,9 @@
                 "againstAverage": 12.9
               },
               "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 5.6,
-                "againstAverage": 5.3
+                "sample": 9,
+                "forAverage": 5.777777777777778,
+                "againstAverage": 5.333333333333333
               },
               "halfTimeGoals": {
                 "sample": 10,

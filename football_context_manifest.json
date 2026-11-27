@@ -1,7 +1,7 @@
 {
   "version": "5.35",
   "mode": "descriptive_research_manifest",
-  "dailyUpdatedAt": "2026-11-27T07:36:03+03:00",
+  "dailyUpdatedAt": "2026-11-27T07:37:55+03:00",
   "cutoffExclusive": "2026-11-27",
   "predictionsEnabled": false,
   "decision": "PAS",
@@ -17,10 +17,10 @@
     "totalYellowCardsAtLeast5": 15724
   },
   "sha256": {
-    "daily.json": "e9c6d98dd2a2f92650dda4801c76d3a349f72f44ce5c2eae986ee3cd8c5d95b0",
-    "football_context_research.json": "d2df1919c43fbd4907bcfd52d3688f6dddf39719d36290a03ca27921354e8d88",
-    "historical_metric_coverage.json": "901c248e4b2764a77cd27126f6fed31c67a08a214046ced36db380040d8583a8",
-    "h2h_history_research.json": "5782f273190dd7f5ff5ca547c4464c2f43fe474af246aa81c4634ba87573467e",
-    "chronological_statistics_research.json": "8eded8d6a18654e8c527310deba7ba42e7e61c03038587ed5374fe631fe9452b"
+    "daily.json": "32feb45b3af80e0c6e79fa40a411d361c3e9a341bf365b35963d5c3a1981777c",
+    "football_context_research.json": "368dbde9354998c4f1e5512a4aa3c9598975f0c41d4b03c27048a3b921158538",
+    "historical_metric_coverage.json": "9610323065c71cbd03014e89c11cb5f137fc4afe0c783905c824b53b6c2f652f",
+    "h2h_history_research.json": "bade11ceaa328d6441832bde3665ff167adaeae33076ecdee6628f1904c97863",
+    "chronological_statistics_research.json": "5d7cb86a146884570d1b0e9bddb4d6b59b5f786b9643ea42a1027c5ce0cfb3cb"
   }
 }

@@ -1,7 +1,7 @@
 {
   "version": "5.31",
   "mode": "historical_metric_coverage_only",
-  "updatedAt": "2026-11-27T07:36:31.777925+03:00",
+  "updatedAt": "2026-11-27T07:38:40.473930+03:00",
   "cutoffExclusive": "2026-11-27",
   "source": "football-data.co.uk",
   "predictionsEnabled": false,
@@ -47,9 +47,7 @@
       "sourceInvalid": 0,
       "aggregate": {
         "matches": 2010,
-        "issues": {
-          "shotsOnTargetExceedsShots": 1
-        },
+        "issues": {},
         "metrics": {
           "goals": {
             "sample": 2010,
@@ -830,9 +828,7 @@
         {
           "season": 2021,
           "matches": 380,
-          "issues": {
-            "shotsOnTargetExceedsShots": 1
-          },
+          "issues": {},
           "metrics": {
             "goals": {
               "sample": 380,
@@ -1000,9 +996,7 @@
       "sourceInvalid": 0,
       "aggregate": {
         "matches": 2964,
-        "issues": {
-          "shotsOnTargetExceedsShots": 1
-        },
+        "issues": {},
         "metrics": {
           "goals": {
             "sample": 2964,
@@ -1393,9 +1387,7 @@
         {
           "season": 2024,
           "matches": 552,
-          "issues": {
-            "shotsOnTargetExceedsShots": 1
-          },
+          "issues": {},
           "metrics": {
             "goals": {
               "sample": 552,
@@ -3851,9 +3843,7 @@
       "sourceInvalid": 0,
       "aggregate": {
         "matches": 2020,
-        "issues": {
-          "shotsOnTargetExceedsShots": 1
-        },
+        "issues": {},
         "metrics": {
           "goals": {
             "sample": 2020,
@@ -3984,9 +3974,7 @@
         {
           "season": 2026,
           "matches": 120,
-          "issues": {
-            "shotsOnTargetExceedsShots": 1
-          },
+          "issues": {},
           "metrics": {
             "goals": {
               "sample": 120,
