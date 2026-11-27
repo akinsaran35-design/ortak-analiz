@@ -2,6 +2,7 @@ import copy
 import unittest
 from datetime import datetime,timedelta
 from live_analysis_quality import build,assess
+from live_refresh_snapshot import MAX_EVENTS
 from live_statistics_pilot import BASE,SOURCES
 from results_source_pilot import TR
 
@@ -32,5 +33,11 @@ class Tests(unittest.TestCase):
         self.assertEqual(build(snap([row(),row()]),NOW)["counts"],{"duplicate_identity":2})
     def test_empty_and_bad(self):
         self.assertEqual(build(snap([]),NOW)["rows"],[])
-        with self.assertRaises(ValueError):build(snap([row()]*13),NOW)
+        self.assertEqual(build(snap([row()]*MAX_EVENTS),NOW)["counts"],{"duplicate_identity":MAX_EVENTS})
+        with self.assertRaises(ValueError):build(snap([row()]*(MAX_EVENTS+1)),NOW)
+    def test_full_capacity_unique(self):
+        rows=[]
+        for i in range(MAX_EVENTS):
+            r=row();r["eventId"]=str(1000+i);r["source"]=BASE+SOURCES["en.1"][1]+"/summary?event="+r["eventId"];rows.append(r)
+        self.assertEqual(build(snap(rows),NOW)["counts"],{"observation_ready":MAX_EVENTS})
 if __name__=="__main__":unittest.main()
