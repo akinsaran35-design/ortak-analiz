@@ -200,6 +200,20 @@ champions=dict(primaryCount=len(champions_primary),secondaryCount=len(champions_
 champions["completeCoverage"]=bool(champions_secondary and champions["matched"]==len(champions_primary)==len(champions_secondary)==champions["scoreCompared"] and not champions["scoreMismatch"])
 print("Champions League holdout:",json.dumps(champions))
 r["championsHoldout"]=champions
+# Distinguish fixture identity failures from matched fixtures lacking a final score.
+paired_primary={str(pair["primaryId"]):pair for pair in r["pairs"]}
+unresolved=[]
+for item in diagnostics:
+    pair=paired_primary.get(str(item["primaryId"]))
+    if pair is not None and pair["scoreAgreement"] is True:continue
+    if pair is not None:
+        reason="score_conflict" if pair["scoreAgreement"] is False else "score_not_comparable"
+    else:
+        same_teams=[b for b in item["candidates"] if norm(item["home"])==secondary_name(item["league"],b["home"]) and norm(item["away"])==secondary_name(item["league"],b["away"])]
+        reason=("identity_or_duplicate" if any(b["deltaMinutes"]==0 for b in same_teams) else "kickoff_difference" if same_teams else "no_nearby_source_fixture" if not item["candidates"] else "team_identity_unresolved")
+    unresolved.append(dict(item,reason=reason))
+r["unresolvedFixtures"]=unresolved
+print("Unresolved fixtures:",json.dumps(unresolved,ensure_ascii=False))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
 r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.99",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
