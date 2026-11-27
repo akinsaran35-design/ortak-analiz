@@ -38,19 +38,19 @@ def parse(payload,day):
         except (KeyError,ValueError,TypeError,AttributeError): invalid+=1
     return [v for k,v in rows.items() if k not in blocked],invalid+len(blocked)
 
-def build(now,reader=read,query_date=None):
+def build(now,reader=read,query_date=None,extra_codes=()):
     day=query_date or now.astimezone(TR).date().isoformat()
     date.fromisoformat(day)
     def group(item):
         name,code,_=item
-        url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+SOURCES[code][1]+"/scoreboard?dates="+day.replace("-","")
+        url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+(SOURCES[code][1] if code in SOURCES else code)+"/scoreboard?dates="+day.replace("-","")
         result=dict(league=code,leagueName=name,source=url,rows=[],invalid=0,error=None)
         try:
             result["rows"],result["invalid"]=parse(json.loads(reader(url)),day)
         except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc: result["error"]=type(exc).__name__
         return result
     with ThreadPoolExecutor(max_workers=4) as pool:
-        groups=list(pool.map(group,LEAGUES))
+        groups=list(pool.map(group,[*LEAGUES,*[(c,c,"soccer") for c in extra_codes if c not in SOURCES]]))
     return dict(version="4.90",updatedAt=now.isoformat(),date=day,mode="scoreboard_snapshot" if query_date is None else "source_probe",source="ESPN",groups=groups,loadedLeagues=sum(g["error"] is None for g in groups),eventCount=sum(len(g["rows"]) for g in groups),inProgress=sum(r["state"]=="in" for g in groups for r in g["rows"]),realTime=False,usedForSettlement=False,usedForPredictions=False)
 
 def main():
