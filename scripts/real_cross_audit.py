@@ -8,8 +8,8 @@ MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
 # Expanded historical audit. Prior research may overlap; do not add totals without ID deduplication.
-start=date(2026,10,1)
-days=22
+start=date(2026,9,1)
+days=30
 offsets=tuple((start-now.date()).days+i for i in range(days)) if holdout else (-1,0,1)
 token=os.environ.get("FOOTBALL_DATA_TOKEN")
 def secondary_windowed():
@@ -73,6 +73,10 @@ for league,cid in MAP.items():
     league_coverage.append(dict(league=league,primaryCount=len(pp),secondaryCount=len(ss),matched=len(pairs),verifiedScores=len(verified),scoreMismatch=sum(pair["scoreAgreement"] is False for pair in pairs),primaryCoverage=len(pairs)/len(pp) if pp else None,secondaryCoverage=len(pairs)/len(ss) if ss else None))
 print("League coverage:",json.dumps(league_coverage))
 print("Verified score count:",len(verified_score_ids))
+# Keep both IDs unique across the audit, not merely within a competition.
+assert len({str(x["primaryId"]) for x in verified_score_ids})==len(verified_score_ids), "Duplicate primary verification ID"
+assert len({str(x["secondaryId"]) for x in verified_score_ids})==len(verified_score_ids), "Duplicate secondary verification ID"
+print("Verified score IDs:",json.dumps(verified_score_ids))
 print("Bidirectional coverage:",json.dumps(scope))
 print("Daily coverage:",json.dumps(daily))
 expected_leagues=set(MAP)
@@ -193,7 +197,7 @@ print("Champions League holdout:",json.dumps(champions))
 r["championsHoldout"]=champions
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.96",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.97",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
