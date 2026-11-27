@@ -1,4 +1,4 @@
-"""V5.26: six-season league H2H enrichment, descriptive and schedule-bound."""
+"""V5.27: six-season league H2H and fresh team form enrichment, descriptive and schedule-bound."""
 import json
 from collections import Counter,defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -29,6 +29,38 @@ def collect(code,sport,cutoff,reader=read):
                 rows[k]=r
         except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:errors.append(dict(season=y,source=url,error=type(exc).__name__))
     return [r for k,r in rows.items() if k not in blocked],sources,errors,invalid+len(blocked)
+
+def refresh_form(existing,history,team,side,code,sport,cutoff):
+    original=existing.get(side)
+    if not isinstance(original,dict):return False
+    old=original.get("rows",[])
+    if not isinstance(old,list):return False
+    valid=[]
+    known={}
+    for r in old:
+        try:
+            d=date.fromisoformat(r["date"])
+            op=result_key(r["opponent"],code,sport)
+            gf,ga=r["gf"],r["ga"]
+            if d>=cutoff or not op or op==team or r["venue"] not in ("home","away") or not all(type(x) is int and x>=0 for x in (gf,ga)):continue
+            known[(r["date"],op,r["venue"])]=(gf,ga)
+        except (KeyError,TypeError,ValueError,AttributeError):continue
+    for r in history:
+        if r["date"]>=cutoff.isoformat() or team not in (r["home"],r["away"]):continue
+        h=r["home"]==team
+        op=r["away"] if h else r["home"]
+        venue="home" if h else "away"
+        gf,ga=r["score"] if h else list(reversed(r["score"]))
+        k=(r["date"],op,venue)
+        if k in known and known[k]!=(gf,ga):continue
+        valid.append(dict(date=r["date"],opponent=op,gf=gf,ga=ga,venue=venue,result="W" if gf>ga else "L" if gf<ga else "D"))
+    valid.sort(key=lambda x:x["date"],reverse=True)
+    chosen=valid[:5]
+    if len(chosen)<max(1,len(old)):return False
+    # Never replace a more recent existing record with older CSV history.
+    if old and chosen[0]["date"]<max(x["date"] for x in old):return False
+    existing[side]=dict(sample=len(chosen),rows=chosen,wins=sum(x["result"]=="W" for x in chosen),draws=sum(x["result"]=="D" for x in chosen),losses=sum(x["result"]=="L" for x in chosen),goalsFor=sum(x["gf"] for x in chosen),goalsAgainst=sum(x["ga"] for x in chosen),source="football-data.co.uk",latestCompletedDate=chosen[0]["date"])
+    return True
 
 def enrich_fixture(f,history,code,sport,cutoff,sources,errors):
     existing=f.get("formResearch")
@@ -70,7 +102,10 @@ def enrich_fixture(f,history,code,sport,cutoff,sources,errors):
     else:
         selected=existing.get("h2h",[]);source="original_league_history"
     existing["h2hCoverage"]=dict(version="5.26",source=source,requestedSeasons=SEASONS,loadedSeasons=[s["season"] for s in sources],failedSeasons=[s["season"] for s in errors],limit=LIMIT,sample=len(selected),csvMatchesAvailable=len(matches),conflictsExcluded=len(conflicts),scope="same_league_only",predictionsEnabled=False)
-    return dict(match=f["match"],date=f["date"],sample=len(selected),csvMatchesAvailable=len(matches),source=source)
+    old_dates={side:(existing.get(side,{}).get("rows") or [{}])[0].get("date") for side in ("home","away")}
+    refreshed={side:refresh_form(existing,history,team,side,code,sport,cutoff) for side,team in (("home",hk),("away",ak))}
+    new_dates={side:(existing.get(side,{}).get("rows") or [{}])[0].get("date") for side in ("home","away")}
+    return dict(match=f["match"],date=f["date"],sample=len(selected),csvMatchesAvailable=len(matches),source=source,formRefreshed=refreshed,formOldDates=old_dates,formNewDates=new_dates)
 
 def build(daily,now,reader=read):
     cutoff=now.astimezone(TR).date()
@@ -85,9 +120,9 @@ def build(daily,now,reader=read):
             if f.get("league")==label and f.get("date","")>=cutoff.isoformat():
                 r=enrich_fixture(f,history,code,sport,cutoff,sources,errors)
                 if r is not None:records.append(r)
-        return dict(league=code,sources=sources,errors=errors,invalid=invalid,historicalRows=len(history),fixtures=len(records),sampleCounts=dict(Counter(r["sample"] for r in records)),rows=records)
+        return dict(league=code,sources=sources,errors=errors,invalid=invalid,historicalRows=len(history),fixtures=len(records),sampleCounts=dict(Counter(r["sample"] for r in records)),formSidesRefreshed=sum(sum(r["formRefreshed"].values()) for r in records),formSidesNewer=sum(sum(bool(r["formNewDates"][s] and (not r["formOldDates"][s] or r["formNewDates"][s]>r["formOldDates"][s])) for s in ("home","away")) for r in records),rows=records)
     with ThreadPoolExecutor(max_workers=6) as pool:groups=list(pool.map(group,LEAGUES))
-    report=dict(version="5.26",dailyUpdatedAt=daily["updatedAt"],cutoffExclusive=cutoff.isoformat(),mode="descriptive_research",decision="PAS",predictionsEnabled=False,groups=groups)
+    report=dict(version="5.27",dailyUpdatedAt=daily["updatedAt"],cutoffExclusive=cutoff.isoformat(),mode="descriptive_research",decision="PAS",predictionsEnabled=False,groups=groups)
     return report
 
 if __name__=="__main__":
