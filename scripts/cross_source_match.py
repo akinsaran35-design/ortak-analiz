@@ -13,7 +13,7 @@ ALIASES={league:{norm(k):norm(v) for k,v in names.items()} for league,names in A
 def secondary_name(league,name):
     return ALIASES.get(league,{}).get(norm(name),norm(name))
 def match(primary,secondary,competition_map):
-    pairs=[]; unmatched=[]; used=set()
+    pairs=[]; unmatched=[]; proposals=[]
     for p in primary:
         candidates=[]
         for s in secondary:
@@ -21,9 +21,16 @@ def match(primary,secondary,competition_map):
             if norm(p["home"])!=secondary_name(p["league"],s["home"]) or norm(p["away"])!=secondary_name(p["league"],s["away"]):continue
             if datetime.fromisoformat(p["kickoff"].replace("Z","+00:00"))!=datetime.fromisoformat(s["kickoff"].replace("Z","+00:00")):continue
             candidates.append(s)
-        if len(candidates)!=1 or candidates[0]["eventId"] in used:
+        if len(candidates)!=1:
             unmatched.append(p["eventId"]);continue
-        s=candidates[0];used.add(s["eventId"])
+        proposals.append((p,candidates[0]))
+    from collections import Counter
+    pc=Counter(p["eventId"] for p in primary)
+    sc=Counter(s["eventId"] for s in secondary)
+    claims=Counter(s["eventId"] for p,s in proposals)
+    for p,s in proposals:
+        if pc[p["eventId"]]!=1 or sc[s["eventId"]]!=1 or claims[s["eventId"]]!=1:
+            unmatched.append(p["eventId"]);continue
         a=p.get("score");b=s.get("score")
         pairs.append(dict(primaryId=p["eventId"],secondaryId=s["eventId"],scoreAgreement=(a==b if a is not None and b is not None else None)))
     return dict(pairs=pairs,unmatched=unmatched,settlementEnabled=False)
