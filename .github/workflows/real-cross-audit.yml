@@ -1,0 +1,23 @@
+name: V5.71 real cross source audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/real_cross_audit.py'
+      - '.github/workflows/real-cross-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/real_cross_audit.py
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cross-audit
+          path: cross_audit.json
