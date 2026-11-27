@@ -16,6 +16,23 @@ class Tests(unittest.TestCase):
         self.assertEqual(r["firstHalfGoal"]["sample"],1)
         self.assertAlmostEqual(r["firstHalfGoal"]["leagueBrier"],(1/102)**2)
         self.assertEqual(r["secondHalfGoal"]["observedEvents"],1)
+    def test_reliability_and_season_counts(self):
+        rows=[row("2025-06-29") for _ in range(100)]
+        rows += [row("2025-06-30"),row("2025-07-01",(1,0),(2,0))]
+        result=replay(rows)["firstHalfGoal"]
+        self.assertEqual(result["sample"],2)
+        self.assertEqual([v["season"] for v in result["seasonResults"]],[2024,2025])
+        self.assertEqual(sum(v["sample"] for v in result["seasonResults"]),2)
+        for method in ("league","venue"):
+            diagnostic=result["reliability"][method]
+            self.assertEqual(diagnostic["sample"],2)
+            self.assertEqual(len(diagnostic["bins"]),10)
+            self.assertEqual(sum(v["sample"] for v in diagnostic["bins"]),2)
+            self.assertTrue(0<=diagnostic["weightedAbsoluteGap"]<=1)
+    def test_empty_reliability(self):
+        result=replay([])["firstHalfGoal"]
+        self.assertIsNone(result["reliability"]["league"]["weightedAbsoluteGap"])
+        self.assertEqual(result["seasonResults"],[])
     def test_missing_not_zero(self):
         x=row("2026-01-01");del x["stats"]["corners"]
         self.assertNotIn("totalCornersAtLeast10",observations(x))
