@@ -18,9 +18,9 @@ def secondary_windowed():
     rows={}
     details=[]
     conflict=False
-    for start,end in windows:
-        date_from=now.date()+timedelta(days=start)
-        date_to=now.date()+timedelta(days=end)
+    for window_start,window_end in windows:
+        date_from=now.date()+timedelta(days=window_start)
+        date_to=now.date()+timedelta(days=window_end)
         batch=secondary(token,now,date_from,date_to)
         details.append(dict(dateFrom=str(date_from),dateTo=str(date_to),status=batch["status"],count=len(batch["rows"]),rejectedRows=batch.get("rejectedRows",0),errorType=batch.get("errorType"),missingField=batch.get("missingField")))
         for row in batch["rows"]:
