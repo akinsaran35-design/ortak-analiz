@@ -1,6 +1,7 @@
 import unittest
 from copy import deepcopy
-from referee_coverage_research import extract,build
+from referee_coverage_research import extract,build,core_officials
+import json
 from datetime import datetime
 F=dict(eventId="123",home="A",away="B",kickoff="2026-11-22T15:00:00+00:00",score=[2,1])
 def payload():
@@ -21,6 +22,17 @@ class Tests(unittest.TestCase):
     def test_not_completed(self):
         p=payload();p["header"]["competitions"][0]["status"]["type"]["completed"]=False
         with self.assertRaises(ValueError):extract(p,F)
+    def test_core_reference(self):
+        root="https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/events/123/competitions/123/officials"
+        data={root+"?limit=25":dict(count=1,pageCount=1,items=[{"$ref":root+"/9"}]),root+"/9":dict(id="9",displayName="Ref C",position=dict(name="Referee"))}
+        result,source=core_officials(lambda url:json.dumps(data[url]).encode(),"eng.1","123")
+        self.assertEqual(result["referee"],dict(label="Ref C",sourceId="9"))
+        self.assertEqual(source,root)
+    def test_core_wrong_reference(self):
+        data=dict(count=1,pageCount=1,items=[{"$ref":"https://example.org/9"}])
+        with self.assertRaises(ValueError):core_officials(lambda _:json.dumps(data).encode(),"eng.1","123")
+        data=dict(count=2,pageCount=2,items=[{}])
+        with self.assertRaises(ValueError):core_officials(lambda _:json.dumps(data).encode(),"eng.1","123")
     def test_all_leagues_even_unavailable(self):
         def fail(_):raise OSError("offline")
         r=build(datetime.fromisoformat("2026-11-27T07:00:00+03:00"),fail)
