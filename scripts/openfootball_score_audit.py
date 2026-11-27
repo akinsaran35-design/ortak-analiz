@@ -38,13 +38,17 @@ def csv_index(raw):
     if not out:raise ValueError("no valid independent scores")
     return out
 
+def full_time(m):
+    s=m.get("score")
+    return s.get("ft") if isinstance(s,dict) else None
+
 def compare(matches,independent):
-    scored=[m for m in matches if valid(m.get("score",{}).get("ft"))]
+    scored=[m for m in matches if valid(full_time(m))]
     ids=Counter(key(m["date"],m["team1"],m["team2"]) for m in scored)
     rows=[]
     for m in scored:
         k=key(m["date"],m["team1"],m["team2"])
-        a=m["score"]["ft"]; candidates=independent.get(k,[])
+        a=full_time(m); candidates=independent.get(k,[])
         if ids[k]!=1 or not all(k) or k[1]==k[2] or len(candidates)>1:status="ambiguous"
         elif not candidates:status="unmatched"
         elif a==candidates[0]:status="matched"
@@ -70,8 +74,8 @@ def main():
             rows=compare(a["matches"],{})
             for row in rows:row["status"]="source_unavailable"
         counts=dict(Counter(r["status"] for r in rows))
-        reports.append(dict(league=code,sourceBlobSha=a["sourceBlobSha"],secondarySource=url,sourceError=error,counts=counts,rows=rows))
-        print(json.dumps({"league":code,"counts":counts,"error":error},ensure_ascii=False))
+        reports.append(dict(league=code,sourceBlobSha=a["sourceBlobSha"],secondarySource=url,sourceError=error,counts=counts,nonstandardScoreRows=sum("score" in m and not isinstance(m["score"],dict) for m in a["matches"]),rows=rows))
+        print(json.dumps({"league":code,"counts":counts,"error":error,"nonstandardScoreRows":reports[-1]["nonstandardScoreRows"]},ensure_ascii=False))
     totals=Counter()
     for report in reports:totals.update(report["counts"])
     result=dict(mode="historical_score_audit",identityMethod="exact date and normalized full team names; no fuzzy matches",counts=dict(totals),leagues=reports)
@@ -89,6 +93,7 @@ def self_test():
     assert compare([row,row],idx)[0]["status"]=="ambiguous"
     assert compare([row],{})[0]["status"]=="unmatched"
     assert compare([row],csv_index(raw+raw.splitlines()[1]+b"\n"))[0]["status"]=="ambiguous"
+    assert compare([dict(row,score=[0,0]),dict(row,score=None),dict(row,score={})],idx)==[]
     print("OpenFootball score audit self-tests passed")
 
 if __name__=="__main__":
