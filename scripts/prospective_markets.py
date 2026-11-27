@@ -1,6 +1,6 @@
 """Prospective three-market research; never backfill missing historical forecasts."""
 import math
-from datetime import datetime,date
+from datetime import datetime,date,timedelta
 MARKETS=("1.5 Üst","2.5 Üst","KG Var")
 MODELS=("old","candidate","baseline")
 def actual(h,a): return (int(h+a>=2),int(h+a>=3),int(h>0 and a>0))
@@ -20,6 +20,11 @@ def capture(history,old,new):
     out={m:dict(old=old[i],candidate=new[i],baseline=base[i]) for i,m in enumerate(MARKETS)}
     if not coherent(out): raise ValueError("incoherent probabilities")
     return out
+def classification_counts(rows):
+    # Fixed descriptive threshold, not a selection rule or an optimized cutoff.
+    correct=sum(int(p["candidate"]>=.5)==y for p,y,_ in rows)
+    return {"tested":len(rows),"correct":correct,"incorrect":len(rows)-correct}
+
 def summarize(records,now,include_calibration=False):
     out={}
     for i,m in enumerate(MARKETS):
@@ -39,14 +44,16 @@ def summarize(records,now,include_calibration=False):
                 if result is None: pending+=1;continue
                 if not isinstance(result,list) or len(result)!=2 or not all(type(v) is int and v>=0 for v in result): raise ValueError("score")
                 if date.fromisoformat(r["date"])>=now.date(): raise ValueError("unsettled date")
-                rows.append((p,actual(*result)[i]))
+                rows.append((p,actual(*result)[i],date.fromisoformat(r["date"])))
             except (KeyError,TypeError,ValueError,AttributeError): invalid+=1
-        scores={k:sum((p[k]-y)**2 for p,y in rows)/len(rows) for k in MODELS} if rows else {}
+        scores={k:sum((p[k]-y)**2 for p,y,_ in rows)/len(rows) for k in MODELS} if rows else {}
         out[m]={"tested":len(rows),"pending":pending,"legacyWithoutForecast":legacy,"invalid":invalid,"scores":scores,"minimumMatches":500,"status":"research_only","liveEnabled":False}
+        out[m]["classification"]={"threshold":.5,"model":"candidate","descriptiveOnly":True,**classification_counts(rows),
+            "periods":{str(days):classification_counts([row for row in rows if now.date()-timedelta(days=days)<=row[2]<now.date()]) for days in (1,7,30)}}
         if include_calibration:
             n=len(rows)
-            observed=sum(y for _,y in rows)/n if n else None
-            predicted={k:sum(p[k] for p,_ in rows)/n for k in MODELS} if n else {}
+            observed=sum(y for _,y,_ in rows)/n if n else None
+            predicted={k:sum(p[k] for p,_,_ in rows)/n for k in MODELS} if n else {}
             out[m]["calibration"]={"sample":n,"observedRate":observed,"meanPrediction":predicted,
                 "gapPP":{k:(v-observed)*100 for k,v in predicted.items()} if n else {},
                 "sampleAdequate":n>=500 and invalid==0,"descriptiveOnly":True}
