@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-27T23:24:51.752797+03:00",
+  "updatedAt": "2026-11-27T23:45:30.832748+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -157,8 +157,8 @@
           "away": "KV Kortrijk",
           "kickoff": "2026-11-27T19:45:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "38'",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+3'",
           "score": [
             1,
             0

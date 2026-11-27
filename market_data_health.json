@@ -1,10 +1,10 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-27T20:25:17.384707+00:00",
+  "updatedAt": "2026-11-27T20:45:57.451073+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-27T20:24:21.099589+00:00",
+    "snapshotAt": "2026-11-27T20:44:54.575389+00:00",
     "archivedEvents": 136,
     "freshEvents": 69,
     "rows": [
@@ -331,7 +331,7 @@
       {
         "eventId": "3348c02fd713356ec319779bd5edc561",
         "league": "soccer_portugal_primeira_liga",
-        "freshBookmakers": 4
+        "freshBookmakers": 3
       },
       {
         "eventId": "588984eaf08b356b49055b534cef52e6",
@@ -346,7 +346,7 @@
       {
         "eventId": "61b7d270b965f9804d2d2ed500f41214",
         "league": "soccer_portugal_primeira_liga",
-        "freshBookmakers": 3
+        "freshBookmakers": 4
       },
       {
         "eventId": "f0f0492939c4f06ff9a4f1b9334d510f",
@@ -355,11 +355,11 @@
       }
     ],
     "region": "uk",
-    "remainingCredits": 125
+    "remainingCredits": 116
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-27T20:24:48.566354+00:00",
+    "reportAt": "2026-11-27T20:45:27.937924+00:00",
     "reportedMarkets": 0
   },
   "volume": {

@@ -1,6 +1,6 @@
 {
   "version": "4.90",
-  "updatedAt": "2026-11-27T23:24:49.521982+03:00",
+  "updatedAt": "2026-11-27T23:45:28.737528+03:00",
   "date": "2026-11-27",
   "mode": "scoreboard_snapshot",
   "source": "ESPN",
@@ -17,7 +17,7 @@
           "kickoff": "2026-11-27T20:00:00+00:00",
           "state": "in",
           "status": "STATUS_FIRST_HALF",
-          "clock": "25'",
+          "clock": "45'",
           "score": [
             1,
             0
@@ -38,8 +38,8 @@
           "away": "Middlesbrough",
           "kickoff": "2026-11-27T20:00:00+00:00",
           "state": "in",
-          "status": "STATUS_IN_PROGRESS",
-          "clock": "25'",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "45'",
           "score": [
             0,
             0
@@ -60,11 +60,11 @@
           "away": "Borussia Mönchengladbach",
           "kickoff": "2026-11-27T19:30:00+00:00",
           "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+5'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "54'",
           "score": [
             1,
-            1
+            2
           ]
         }
       ],
@@ -83,9 +83,9 @@
           "kickoff": "2026-11-27T20:00:00+00:00",
           "state": "in",
           "status": "STATUS_FIRST_HALF",
-          "clock": "23'",
+          "clock": "44'",
           "score": [
-            0,
+            1,
             0
           ]
         }
@@ -104,8 +104,8 @@
           "away": "Bologna",
           "kickoff": "2026-11-27T19:45:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "39'",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+5'",
           "score": [
             0,
             0
@@ -126,8 +126,8 @@
           "away": "Paris FC",
           "kickoff": "2026-11-27T19:45:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "40'",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+3'",
           "score": [
             1,
             0
@@ -149,7 +149,7 @@
           "kickoff": "2026-11-27T19:00:00+00:00",
           "state": "in",
           "status": "STATUS_SECOND_HALF",
-          "clock": "61'",
+          "clock": "81'",
           "score": [
             0,
             1
@@ -171,7 +171,7 @@
           "kickoff": "2026-11-27T20:15:00+00:00",
           "state": "in",
           "status": "STATUS_FIRST_HALF",
-          "clock": "8'",
+          "clock": "29'",
           "score": [
             0,
             0

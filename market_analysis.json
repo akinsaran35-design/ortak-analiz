@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-27T20:24:38.672089+00:00",
+  "updatedAt": "2026-11-27T20:45:15.023515+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -15,12 +15,12 @@
         "grosvenor": 0.545213,
         "leovegas": 0.561358,
         "williamhill": 0.557029,
-        "matchbook": 0.540404
+        "matchbook": 0.539043
       },
       "marketProbability": 0.5511,
       "modelProbabilityUncalibrated": 0.6809999999999999,
       "difference": 0.1299,
-      "bookProbabilitySpread": 0.021,
+      "bookProbabilitySpread": 0.0223,
       "marketFairOdds": 1.8145,
       "medianMargin": 0.0665
     },
@@ -97,13 +97,13 @@
       "bookProbabilities": {
         "grosvenor": 0.521739,
         "casumo": 0.506849,
-        "matchbook": 0.508951
+        "matchbook": 0.510256
       },
-      "marketProbability": 0.509,
+      "marketProbability": 0.5103,
       "modelProbabilityUncalibrated": 0.5660000000000001,
-      "difference": 0.057,
+      "difference": 0.0557,
       "bookProbabilitySpread": 0.0149,
-      "marketFairOdds": 1.9648,
+      "marketFairOdds": 1.9598,
       "medianMargin": 0.089
     },
     {
@@ -177,19 +177,18 @@
     {
       "match": "Vitória Guimarães – CF Estrela da Amadora",
       "eventId": "3348c02fd713356ec319779bd5edc561",
-      "bookCount": 4,
+      "bookCount": 3,
       "bookProbabilities": {
-        "casumo": 0.513889,
         "williamhill": 0.536193,
         "grosvenor": 0.520216,
-        "matchbook": 0.524422
+        "matchbook": 0.526854
       },
-      "marketProbability": 0.5223,
+      "marketProbability": 0.5269,
       "modelProbabilityUncalibrated": 0.531,
-      "difference": 0.0087,
-      "bookProbabilitySpread": 0.0223,
-      "marketFairOdds": 1.9145,
-      "medianMargin": 0.079
+      "difference": 0.0041,
+      "bookProbabilitySpread": 0.016,
+      "marketFairOdds": 1.8981,
+      "medianMargin": 0.078
     },
     {
       "match": "FC Arouca – Rio Ave FC",
@@ -233,13 +232,13 @@
         "leovegas": 0.484127,
         "casumo": 0.472973,
         "williamhill": 0.48,
-        "matchbook": 0.478261
+        "matchbook": 0.48072
       },
-      "marketProbability": 0.48,
+      "marketProbability": 0.4807,
       "modelProbabilityUncalibrated": 0.469,
-      "difference": -0.011,
+      "difference": -0.0117,
       "bookProbabilitySpread": 0.0365,
-      "marketFairOdds": 2.0833,
+      "marketFairOdds": 2.0802,
       "medianMargin": 0.0684
     },
     {
@@ -283,12 +282,12 @@
         "leovegas": 0.484127,
         "casumo": 0.485175,
         "williamhill": 0.5,
-        "matchbook": 0.484536
+        "matchbook": 0.482051
       },
       "marketProbability": 0.4852,
       "modelProbabilityUncalibrated": 0.44299999999999995,
       "difference": -0.0422,
-      "bookProbabilitySpread": 0.0159,
+      "bookProbabilitySpread": 0.0179,
       "marketFairOdds": 2.0611,
       "medianMargin": 0.0593
     },
@@ -466,30 +465,31 @@
         "casumo": 0.486111,
         "williamhill": 0.5,
         "grosvenor": 0.47043,
-        "matchbook": 0.492268
+        "matchbook": 0.492228
       },
       "marketProbability": 0.4892,
       "modelProbabilityUncalibrated": 0.41700000000000004,
       "difference": -0.0722,
       "bookProbabilitySpread": 0.0296,
-      "marketFairOdds": 2.0442,
+      "marketFairOdds": 2.0443,
       "medianMargin": 0.0631
     },
     {
       "match": "Casa Pia AC – Sporting Clube de Braga",
       "eventId": "61b7d270b965f9804d2d2ed500f41214",
-      "bookCount": 3,
+      "bookCount": 4,
       "bookProbabilities": {
         "casumo": 0.486111,
         "williamhill": 0.5,
-        "grosvenor": 0.509434
+        "grosvenor": 0.509434,
+        "matchbook": 0.484127
       },
-      "marketProbability": 0.5,
+      "marketProbability": 0.4931,
       "modelProbabilityUncalibrated": 0.5660000000000001,
-      "difference": 0.066,
-      "bookProbabilitySpread": 0.0233,
-      "marketFairOdds": 2.0,
-      "medianMargin": 0.0786
+      "difference": 0.0729,
+      "bookProbabilitySpread": 0.0253,
+      "marketFairOdds": 2.0282,
+      "medianMargin": 0.0689
     },
     {
       "match": "Liverpool FC – Sunderland AFC",
