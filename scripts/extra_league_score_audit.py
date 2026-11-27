@@ -80,6 +80,9 @@ def unmatched_names(rows):
     return out
 
 COMPETITIONS=(("sco.1","SC0"),("bel.1","B1"),("ger.2","D2"),("esp.2","SP2"),("ita.2","I2"),("fra.2","F2"))
+HISTORY_WINDOW_DAYS=28
+SAMPLE_DATE_LIMIT=7
+
 def audit_league(code,csv_code,now,reader=read):
     year=now.year if now.month>=7 else now.year-1
     csv_url=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{csv_code}.csv"
@@ -90,7 +93,7 @@ def audit_league(code,csv_code,now,reader=read):
     except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
         out["errors"].append(dict(source="csv",type=type(exc).__name__))
         return out
-    days=sorted({k[0] for k in primary if (now.date()-timedelta(days=28)).isoformat()<=k[0]<now.date().isoformat()},reverse=True)[:3]
+    days=sorted({k[0] for k in primary if (now.date()-timedelta(days=HISTORY_WINDOW_DAYS)).isoformat()<=k[0]<now.date().isoformat()},reverse=True)[:SAMPLE_DATE_LIMIT]
     out["days"]=days
     for day in days:
         url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{code}/scoreboard?dates={day.replace('-','')}"
@@ -113,7 +116,7 @@ def build(now,reader=read):
     for g in leagues:
         g["counts"]=dict(Counter(x["status"] for x in g["rows"]))
         g["unmatchedNames"]=unmatched_names(g["rows"])
-    return dict(version="6.25",mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    return dict(version="6.27",historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
