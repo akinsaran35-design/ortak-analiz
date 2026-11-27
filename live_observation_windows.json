@@ -1,0 +1,20 @@
+{
+  "version": "5.29",
+  "mode": "observed_deltas_only",
+  "updatedAt": "2026-11-27T07:18:56.250649+03:00",
+  "sourceUpdatedAt": "2026-11-27T07:18:43.398844+03:00",
+  "sourceTimestampVerified": false,
+  "modelCalibrated": false,
+  "predictionsEnabled": false,
+  "decision": "PAS",
+  "accepted": 0,
+  "archivedEvents": 0,
+  "archivedPoints": 0,
+  "reasons": {},
+  "windowCounts": {
+    "5": 0,
+    "10": 0,
+    "15": 0
+  },
+  "rows": []
+}

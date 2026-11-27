@@ -1222,5 +1222,311 @@
         }
       ]
     }
+  },
+  "fr.1:401876391": {
+    "kickoff": "2026-11-28T19:45:00+00:00",
+    "frozenAt": "2026-11-27T07:18:43.479298+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T07:10:26+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Le Havre AC – RC Strasbourg Alsace",
+          "expectedGoals": {
+            "home": 1.55,
+            "away": 1.85
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+      "updatedAt": "2026-11-27T07:10:55.054477+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "fr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401876391",
+              "kickoff": "2026-11-28T19:45:00+00:00",
+              "match": "Le Havre AC – Strasbourg"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Fransa Ligue 1",
+              "match": "Le Havre AC – RC Strasbourg Alsace"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fr.1:401876390": {
+    "kickoff": "2026-11-28T19:45:00+00:00",
+    "frozenAt": "2026-11-27T07:18:43.479298+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T07:10:26+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Le Mans FC – Lille OSC",
+          "expectedGoals": {
+            "home": 1.15,
+            "away": 1.65
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+      "updatedAt": "2026-11-27T07:10:55.054477+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "fr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401876390",
+              "kickoff": "2026-11-28T19:45:00+00:00",
+              "match": "Le Mans – Lille"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Fransa Ligue 1",
+              "match": "Le Mans FC – Lille OSC"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fr.1:401876387": {
+    "kickoff": "2026-11-28T19:45:00+00:00",
+    "frozenAt": "2026-11-27T07:18:43.479298+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T07:10:26+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Fransa Ligue 1",
+          "match": "Paris Saint-Germain FC – FC Lorient",
+          "expectedGoals": {
+            "home": 1.8,
+            "away": 1.2
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+      "updatedAt": "2026-11-27T07:10:55.054477+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "fr.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401876387",
+              "kickoff": "2026-11-28T19:45:00+00:00",
+              "match": "Paris Saint-Germain – Lorient"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Fransa Ligue 1",
+              "match": "Paris Saint-Germain FC – FC Lorient"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "nl.1:401875530": {
+    "kickoff": "2026-11-28T20:00:00+00:00",
+    "frozenAt": "2026-11-27T07:18:43.479298+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T07:10:26+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Hollanda Eredivisie",
+          "match": "SC Cambuur-Leeuwarden – Sparta Rotterdam",
+          "expectedGoals": {
+            "home": 2.01,
+            "away": 1.91
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+      "updatedAt": "2026-11-27T07:10:55.054477+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "nl.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401875530",
+              "kickoff": "2026-11-28T20:00:00+00:00",
+              "match": "SC Cambuur – Sparta Rotterdam"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Hollanda Eredivisie",
+              "match": "SC Cambuur-Leeuwarden – Sparta Rotterdam"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pt.1:401885393": {
+    "kickoff": "2026-11-28T18:00:00+00:00",
+    "frozenAt": "2026-11-27T07:18:43.479298+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T07:10:26+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Académico de Viseu FC – FC Alverca",
+          "expectedGoals": {
+            "home": 1.34,
+            "away": 1.14
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+      "updatedAt": "2026-11-27T07:10:55.054477+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "pt.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401885393",
+              "kickoff": "2026-11-28T18:00:00+00:00",
+              "match": "Académico de Viseu – Alverca"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Portekiz Primeira Liga",
+              "match": "Académico de Viseu FC – FC Alverca"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pt.1:401885385": {
+    "kickoff": "2026-11-28T20:30:00+00:00",
+    "frozenAt": "2026-11-27T07:18:43.479298+03:00",
+    "daily": {
+      "updatedAt": "2026-11-27T07:10:26+03:00",
+      "candidates": [
+        {
+          "date": "2026-11-28",
+          "league": "Portekiz Primeira Liga",
+          "match": "Vitória Guimarães – CF Estrela da Amadora",
+          "expectedGoals": {
+            "home": 1.7,
+            "away": 1.1
+          }
+        }
+      ]
+    },
+    "coverage": {
+      "version": "4.92",
+      "source": "ESPN",
+      "mode": "research_only",
+      "dailyUpdatedAt": "2026-11-27T07:10:26+03:00",
+      "updatedAt": "2026-11-27T07:10:55.054477+03:00",
+      "dates": [
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "rows": [
+        {
+          "league": "pt.1",
+          "status": "same_date",
+          "espn": [
+            {
+              "date": "2026-11-28",
+              "eventId": "401885385",
+              "kickoff": "2026-11-28T20:30:00+00:00",
+              "match": "Vitória de Guimaraes – Estrela"
+            }
+          ],
+          "published": [
+            {
+              "date": "2026-11-28",
+              "league": "Portekiz Primeira Liga",
+              "match": "Vitória Guimarães – CF Estrela da Amadora"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
