@@ -1,0 +1,27 @@
+name: V5.38 source identity audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/source_identity_audit.py'
+      - 'scripts/test_source_identity_audit.py'
+      - '.github/workflows/source-identity-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_source_identity_audit.py
+      - run: python scripts/source_identity_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-identity-audit
+          path: source_identity_audit.json
+          if-no-files-found: error
+          retention-days: 7
