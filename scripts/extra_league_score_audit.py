@@ -8,7 +8,66 @@ from results_source_pilot import read,csv_results,espn_results,TR
 from match_odds import normalize
 
 # League-specific, evidence-reviewed aliases only; never infer from score agreement.
-REVIEWED_ALIASES={}
+# Observed in source name evidence, run 46066942435; scoped to competition.
+REVIEWED_ALIASES={
+    "sco.1": {
+        "hearts": "heart of midlothian"
+    },
+    "bel.1": {
+        "oud heverlee leuven": "oh leuven",
+        "beveren": "waasland beveren",
+        "gent": "kaa gent",
+        "kortrijk": "kv kortrijk",
+        "st gilloise": "union st gilloise",
+        "standard": "standard liege",
+        "charleroi": "royal charleroi",
+        "st truiden": "sint truidense",
+        "genk": "racing genk",
+        "mechelen": "kv mechelen",
+        "waregem": "zulte waregem",
+        "cercle brugge": "cercle brugge ksv",
+        "westerlo": "kvc westerlo"
+    },
+    "ger.2": {
+        "cottbus": "energie cottbus",
+        "hertha": "hertha berlin",
+        "dresden": "dynamo dresden",
+        "karlsruhe": "karlsruher",
+        "osnabruck": "vfl osnabruck",
+        "nurnberg": "1 nurnberg",
+        "braunschweig": "tsv eintracht braunschweig",
+        "hannover": "hannover 96",
+        "greuther furth": "spvgg greuther furth",
+        "bochum": "vfl bochum",
+        "wolfsburg": "vfl wolfsburg",
+        "bielefeld": "arminia bielefeld",
+        "magdeburg": "1 magdeburg",
+        "darmstadt": "sv darmstadt 98",
+        "heidenheim": "1 heidenheim 1846"
+    },
+    "esp.2": {
+        "celta b": "rc celta fortuna",
+        "valladolid": "real valladolid",
+        "oviedo": "real oviedo",
+        "sp gijon": "sporting gijon",
+        "sabadell": "cd sabadell",
+        "sociedad b": "real sociedad ii"
+    },
+    "ita.2": {
+        "avellino": "us avellino",
+        "verona": "hellas verona"
+    },
+    "fra.2": {
+        "laval": "stade laval",
+        "reims": "stade de reims",
+        "st etienne": "saint etienne",
+        "clermont": "clermont foot",
+        "nancy": "as nancy lorraine",
+        "dijon": "dijon fco",
+        "rodez": "rodez aveyron",
+        "red star": "red star 93"
+    }
+}
 def team_key(code,name):
     n=normalize(name)
     return REVIEWED_ALIASES.get(code,{}).get(n,n)
@@ -54,7 +113,7 @@ def build(now,reader=read):
     for g in leagues:
         g["counts"]=dict(Counter(x["status"] for x in g["rows"]))
         g["unmatchedNames"]=unmatched_names(g["rows"])
-    return dict(version="6.24",mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    return dict(version="6.25",mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
