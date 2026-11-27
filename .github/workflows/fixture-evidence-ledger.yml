@@ -4,6 +4,7 @@ on:
     paths:
       - scripts/fixture_evidence_ledger.py
       - .github/workflows/fixture-evidence-ledger.yml
+      - 'research/fixture-evidence/**'
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,3 +17,17 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/fixture_evidence_ledger.py --self-test
+      - run: python scripts/fixture_evidence_ledger.py research/fixture-evidence/*.json
+      - run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path("fixture_evidence_ledger.json").read_text())
+          assert result["conflictCount"] == 0, "Cross-period conflict"
+          assert result["uniqueVerifiedCount"] >= 891, "Archived evidence unexpectedly lost"
+          assert result["productionEnabled"] is False
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reconciled-fixture-evidence
+          path: fixture_evidence_ledger.json
