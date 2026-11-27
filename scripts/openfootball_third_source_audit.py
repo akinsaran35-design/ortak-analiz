@@ -1,5 +1,5 @@
 """Read-only third-source adjudication of disputed historical scores."""
-import calendar, hashlib, json, sys
+import hashlib, json, sys
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -57,20 +57,19 @@ def main():
         idx=defaultdict(list)
         if unresolved and code in LEAGUES:
             espn,tz=LEAGUES[code]
-            for month in sorted({r["date"][:7] for r in unresolved}):
-                y,m=map(int,month.split("-"))
-                end=calendar.monthrange(y,m)[1]
-                url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/scoreboard?dates={y:04d}{m:02d}01-{y:04d}{m:02d}{end:02d}&limit=1000"
+            for day in sorted({r["date"] for r in unresolved}):
+                url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{espn}/scoreboard?dates="+day.replace("-","")
                 try:
                     b=read(url);payload=json.loads(b)
                     part=espn_index(payload,code,tz)
-                    for k,v in part.items():idx[k].extend(v)
-                    out["thirdSources"].append(dict(month=month,url=url,sha256=hashlib.sha256(b).hexdigest(),eventCount=len(payload["events"]),indexedKeys=len(part)))
-                except (OSError,ValueError,TypeError,KeyError) as exc:out["errors"].append(dict(month=month,error=str(exc)))
+                    for k,v in part.items():
+                        if k[0]==day:idx[k].extend(v)
+                    out["thirdSources"].append(dict(day=day,url=url,sha256=hashlib.sha256(b).hexdigest(),eventCount=len(payload["events"]),indexedKeys=len(part)))
+                except (OSError,ValueError,TypeError,KeyError) as exc:out["errors"].append(dict(day=day,error=str(exc)))
         for row in unresolved:
             k=key(row["date"],row["home"],row["away"],code)
             candidates=idx.get(k,[])
-            outcome=adjudicate(row,candidates) if row["status"]!="ambiguous" else "original_ambiguous"
+            outcome="third_source_unavailable" if any(e["day"]==row["date"] for e in out["errors"]) else adjudicate(row,candidates) if row["status"]!="ambiguous" else "original_ambiguous"
             detail=dict(row,thirdCandidates=candidates,outcome=outcome)
             out["rows"].append(detail)
             print("REVIEW",json.dumps(dict(league=code,**detail),ensure_ascii=False))
