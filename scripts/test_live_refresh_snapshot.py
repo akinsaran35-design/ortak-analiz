@@ -45,7 +45,7 @@ class Tests(unittest.TestCase):
             return summary()
         r=build(NOW,reader,extra,clock=lambda:NOW)
         self.assertEqual(r["freshAtBuild"],1)
-        self.assertEqual(r["configuredCompetitions"],21)
+        self.assertEqual(r["configuredCompetitions"],30)
     def test_source_failure(self):
         def reader(url):raise OSError("unavailable")
         r=build(NOW,reader,board_with([ROW]),clock=lambda:NOW)
