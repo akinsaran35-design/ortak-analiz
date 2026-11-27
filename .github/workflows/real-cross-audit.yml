@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: python scripts/real_cross_audit.py
         env:
+          CROSS_HOLDOUT: '1'
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
       - uses: actions/upload-artifact@v4
         if: always()
