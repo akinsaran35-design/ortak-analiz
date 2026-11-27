@@ -253,13 +253,25 @@ jobs:
         run: |
           python scripts/test_snapshot_integrity.py
           python scripts/snapshot_integrity.py
+      - name: V6.7 Read-only source health report
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/market_data_health.py --self-test
+          python scripts/market_data_health.py
+      - name: V6.7 Upload source health evidence
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-source-health
+          path: market_data_health.json
+          retention-days: 7
       - name: V4.61 Publish complete snapshot
         if: github.ref == 'refs/heads/main' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/ortak-analiz-v4-8')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ "$GITHUB_REF" = "refs/heads/main" ]; then
-            git add fixture_data_quality.json chronological_statistics_research.json football_context_research.json historical_metric_coverage.json h2h_history_research.json football_context_manifest.json daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json fixture_reconciliation.json archive_calendar_audit.json archive_calendar_evidence.json archive_calendar_evidence_status.json archive_calendar_result_replay.json archive_calendar_outcomes.json archive_calendar_outcome_status.json snapshot_integrity.json score_provenance.json results_source_pilot.json multi_league_results.json backtest.json prediction_archive.json performance.json market_archive.json validation.json prospective_archive.json prospective_validation.json prospective_leagues.json scoreboard_snapshot.json fixture_coverage_audit.json kickoff_confirmation.json data_quality.json decision.json calibration.json model_research.json football_coverage_pilot.json football_statistics_pilot.json
+            git add market_data_health.json fixture_data_quality.json chronological_statistics_research.json football_context_research.json historical_metric_coverage.json h2h_history_research.json football_context_manifest.json daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json fixture_reconciliation.json archive_calendar_audit.json archive_calendar_evidence.json archive_calendar_evidence_status.json archive_calendar_result_replay.json archive_calendar_outcomes.json archive_calendar_outcome_status.json snapshot_integrity.json score_provenance.json results_source_pilot.json multi_league_results.json backtest.json prediction_archive.json performance.json market_archive.json validation.json prospective_archive.json prospective_validation.json prospective_leagues.json scoreboard_snapshot.json fixture_coverage_audit.json kickoff_confirmation.json data_quality.json decision.json calibration.json model_research.json football_coverage_pilot.json football_statistics_pilot.json
           fi
           git add market_movement.json model_market.json unified_decision.json
           if ! git diff --cached --quiet; then
