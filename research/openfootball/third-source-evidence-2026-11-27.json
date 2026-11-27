@@ -1,0 +1,3019 @@
+{
+  "sourceRun": 46051728902,
+  "sourceJob": 140684446963,
+  "mode": "historical_source_evidence",
+  "archiveModified": false,
+  "corroboratedCorrections": [
+    {
+      "league": "en.3",
+      "date": "2025-11-06",
+      "home": "Reading FC",
+      "away": "Stevenage FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745322",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Reading",
+          "away": "Stevenage"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Northampton Town",
+      "away": "Mansfield Town",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745324",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Northampton Town",
+          "away": "Mansfield Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Wycombe Wanderers",
+      "away": "Leyton Orient",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        4,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745331",
+          "score": [
+            4,
+            1
+          ],
+          "home": "Wycombe Wanderers",
+          "away": "Leyton Orient"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Blackpool FC",
+      "away": "Cardiff City",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": [
+        3,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745330",
+          "score": [
+            3,
+            1
+          ],
+          "home": "Blackpool",
+          "away": "Cardiff City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Bolton Wanderers",
+      "away": "Port Vale FC",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": [
+        4,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745329",
+          "score": [
+            4,
+            0
+          ],
+          "home": "Bolton Wanderers",
+          "away": "Port Vale"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Bradford City",
+      "away": "Burton Albion",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745328",
+          "score": [
+            1,
+            2
+          ],
+          "home": "Bradford City",
+          "away": "Burton Albion"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Exeter City",
+      "away": "Wigan Athletic",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745326",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Exeter City",
+          "away": "Wigan Athletic"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Huddersfield Town",
+      "away": "Plymouth Argyle",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        3,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745325",
+          "score": [
+            3,
+            1
+          ],
+          "home": "Huddersfield Town",
+          "away": "Plymouth Argyle"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Peterborough United",
+      "away": "AFC Wimbledon",
+      "openfootball": [
+        3,
+        1
+      ],
+      "independent": [
+        5,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745323",
+          "score": [
+            5,
+            0
+          ],
+          "home": "Peterborough United",
+          "away": "AFC Wimbledon"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Rotherham United",
+      "away": "Lincoln City",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        3,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745321",
+          "score": [
+            3,
+            0
+          ],
+          "home": "Rotherham United",
+          "away": "Lincoln City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-08",
+      "home": "Stockport County",
+      "away": "Luton Town",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": [
+        0,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745320",
+          "score": [
+            0,
+            3
+          ],
+          "home": "Stockport County",
+          "away": "Luton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Burton Albion",
+      "away": "Blackpool FC",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745340",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Burton Albion",
+          "away": "Blackpool"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Leyton Orient",
+      "away": "Exeter City",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745338",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Leyton Orient",
+          "away": "Exeter City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Lincoln City",
+      "away": "Doncaster Rovers",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745337",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Lincoln City",
+          "away": "Doncaster Rovers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Luton Town",
+      "away": "Rotherham United",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745336",
+          "score": [
+            0,
+            0
+          ],
+          "home": "Luton Town",
+          "away": "Rotherham United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Port Vale FC",
+      "away": "Wycombe Wanderers",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745333",
+          "score": [
+            0,
+            0
+          ],
+          "home": "Port Vale",
+          "away": "Wycombe Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-20",
+      "home": "Peterborough United",
+      "away": "Stockport County",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        3,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745353",
+          "score": [
+            3,
+            0
+          ],
+          "home": "Peterborough United",
+          "away": "Stockport County"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Port Vale FC",
+      "away": "Plymouth Argyle",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745354",
+          "score": [
+            0,
+            1
+          ],
+          "home": "Port Vale",
+          "away": "Plymouth Argyle"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "AFC Wimbledon",
+      "away": "Wigan Athletic",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": [
+        1,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745347",
+          "score": [
+            1,
+            2
+          ],
+          "home": "AFC Wimbledon",
+          "away": "Wigan Athletic"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Barnsley FC",
+      "away": "Luton Town",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        5,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745346",
+          "score": [
+            5,
+            0
+          ],
+          "home": "Barnsley",
+          "away": "Luton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Bolton Wanderers",
+      "away": "Bradford City",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745348",
+          "score": [
+            0,
+            0
+          ],
+          "home": "Bolton Wanderers",
+          "away": "Bradford City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Leyton Orient",
+      "away": "Blackpool FC",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745350",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Leyton Orient",
+          "away": "Blackpool"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Northampton Town",
+      "away": "Cardiff City",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": [
+        1,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745352",
+          "score": [
+            1,
+            3
+          ],
+          "home": "Northampton Town",
+          "away": "Cardiff City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Stevenage FC",
+      "away": "Doncaster Rovers",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745345",
+          "score": [
+            0,
+            0
+          ],
+          "home": "Stevenage",
+          "away": "Doncaster Rovers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Wycombe Wanderers",
+      "away": "Lincoln City",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        3,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745344",
+          "score": [
+            3,
+            2
+          ],
+          "home": "Wycombe Wanderers",
+          "away": "Lincoln City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Blackpool FC",
+      "away": "Reading FC",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        0,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745357",
+          "score": [
+            0,
+            3
+          ],
+          "home": "Blackpool",
+          "away": "Reading"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Stockport County",
+      "away": "Barnsley FC",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745356",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Stockport County",
+          "away": "Barnsley"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Bradford City",
+      "away": "Exeter City",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745358",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Bradford City",
+          "away": "Exeter City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Burton Albion",
+      "away": "Leyton Orient",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": [
+        0,
+        4
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745359",
+          "score": [
+            0,
+            4
+          ],
+          "home": "Burton Albion",
+          "away": "Leyton Orient"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Doncaster Rovers",
+      "away": "Peterborough United",
+      "openfootball": [
+        1,
+        3
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745367",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Doncaster Rovers",
+          "away": "Peterborough United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Huddersfield Town",
+      "away": "AFC Wimbledon",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        3,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745361",
+          "score": [
+            3,
+            3
+          ],
+          "home": "Huddersfield Town",
+          "away": "AFC Wimbledon"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Plymouth Argyle",
+      "away": "Northampton Town",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        0,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745365",
+          "score": [
+            0,
+            3
+          ],
+          "home": "Plymouth Argyle",
+          "away": "Northampton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Rotherham United",
+      "away": "Wycombe Wanderers",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745366",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Rotherham United",
+          "away": "Wycombe Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-29",
+      "home": "Wigan Athletic",
+      "away": "Stevenage FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745362",
+          "score": [
+            0,
+            0
+          ],
+          "home": "Wigan Athletic",
+          "away": "Stevenage"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Leyton Orient",
+      "away": "Luton Town",
+      "openfootball": [
+        1,
+        3
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745370",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Leyton Orient",
+          "away": "Luton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Lincoln City",
+      "away": "Barnsley FC",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": [
+        3,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745371",
+          "score": [
+            3,
+            1
+          ],
+          "home": "Lincoln City",
+          "away": "Barnsley"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Mansfield Town",
+      "away": "Bolton Wanderers",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745372",
+          "score": [
+            0,
+            1
+          ],
+          "home": "Mansfield Town",
+          "away": "Bolton Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Northampton Town",
+      "away": "Huddersfield Town",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745375",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Northampton Town",
+          "away": "Huddersfield Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Stevenage FC",
+      "away": "Cardiff City",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745373",
+          "score": [
+            0,
+            1
+          ],
+          "home": "Stevenage",
+          "away": "Cardiff City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Wycombe Wanderers",
+      "away": "Plymouth Argyle",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745376",
+          "score": [
+            0,
+            1
+          ],
+          "home": "Wycombe Wanderers",
+          "away": "Plymouth Argyle"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Reading FC",
+      "away": "Peterborough United",
+      "openfootball": [
+        3,
+        2
+      ],
+      "independent": [
+        1,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745379",
+          "score": [
+            1,
+            2
+          ],
+          "home": "Reading",
+          "away": "Peterborough United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "AFC Wimbledon",
+      "away": "Mansfield Town",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745385",
+          "score": [
+            0,
+            0
+          ],
+          "home": "AFC Wimbledon",
+          "away": "Mansfield Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Huddersfield Town",
+      "away": "Wigan Athletic",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745383",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Huddersfield Town",
+          "away": "Wigan Athletic"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Barnsley FC",
+      "away": "Leyton Orient",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        3,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745390",
+          "score": [
+            3,
+            2
+          ],
+          "home": "Barnsley",
+          "away": "Leyton Orient"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Blackpool FC",
+      "away": "Lincoln City",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        2,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745389",
+          "score": [
+            2,
+            2
+          ],
+          "home": "Blackpool",
+          "away": "Lincoln City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Bolton Wanderers",
+      "away": "Exeter City",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745386",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Bolton Wanderers",
+          "away": "Exeter City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Bradford City",
+      "away": "Reading FC",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        2,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745380",
+          "score": [
+            2,
+            0
+          ],
+          "home": "Bradford City",
+          "away": "Reading"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Burton Albion",
+      "away": "Wycombe Wanderers",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745381",
+          "score": [
+            0,
+            0
+          ],
+          "home": "Burton Albion",
+          "away": "Wycombe Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Cardiff City",
+      "away": "Doncaster Rovers",
+      "openfootball": [
+        4,
+        0
+      ],
+      "independent": [
+        4,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745382",
+          "score": [
+            4,
+            3
+          ],
+          "home": "Cardiff City",
+          "away": "Doncaster Rovers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Luton Town",
+      "away": "Port Vale FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        2,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745384",
+          "score": [
+            2,
+            2
+          ],
+          "home": "Luton Town",
+          "away": "Port Vale"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Peterborough United",
+      "away": "Northampton Town",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745391",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Peterborough United",
+          "away": "Northampton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Plymouth Argyle",
+      "away": "Rotherham United",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745388",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Plymouth Argyle",
+          "away": "Rotherham United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-13",
+      "home": "Stockport County",
+      "away": "Stevenage FC",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745387",
+          "score": [
+            1,
+            3
+          ],
+          "home": "Stockport County",
+          "away": "Stevenage"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-18",
+      "home": "Reading FC",
+      "away": "Luton Town",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        3,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745395",
+          "score": [
+            3,
+            2
+          ],
+          "home": "Reading",
+          "away": "Luton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Stevenage FC",
+      "away": "Burton Albion",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        2,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745403",
+          "score": [
+            2,
+            2
+          ],
+          "home": "Stevenage",
+          "away": "Burton Albion"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Wigan Athletic",
+      "away": "Blackpool FC",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        0,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745398",
+          "score": [
+            0,
+            2
+          ],
+          "home": "Wigan Athletic",
+          "away": "Blackpool"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Doncaster Rovers",
+      "away": "Plymouth Argyle",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        1,
+        5
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745397",
+          "score": [
+            1,
+            5
+          ],
+          "home": "Doncaster Rovers",
+          "away": "Plymouth Argyle"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Exeter City",
+      "away": "Barnsley FC",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        3,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745402",
+          "score": [
+            3,
+            0
+          ],
+          "home": "Exeter City",
+          "away": "Barnsley"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Leyton Orient",
+      "away": "Bradford City",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745401",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Leyton Orient",
+          "away": "Bradford City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Lincoln City",
+      "away": "Cardiff City",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745400",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Lincoln City",
+          "away": "Cardiff City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Mansfield Town",
+      "away": "Stockport County",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": [
+        1,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745392",
+          "score": [
+            1,
+            2
+          ],
+          "home": "Mansfield Town",
+          "away": "Stockport County"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Port Vale FC",
+      "away": "Peterborough United",
+      "openfootball": [
+        1,
+        3
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745394",
+          "score": [
+            0,
+            1
+          ],
+          "home": "Port Vale",
+          "away": "Peterborough United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Rotherham United",
+      "away": "Huddersfield Town",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        1,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745396",
+          "score": [
+            1,
+            3
+          ],
+          "home": "Rotherham United",
+          "away": "Huddersfield Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Wycombe Wanderers",
+      "away": "Bolton Wanderers",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745399",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Wycombe Wanderers",
+          "away": "Bolton Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "AFC Wimbledon",
+      "away": "Stevenage FC",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        0,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745406",
+          "score": [
+            0,
+            0
+          ],
+          "home": "AFC Wimbledon",
+          "away": "Stevenage"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Barnsley FC",
+      "away": "Mansfield Town",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": [
+        2,
+        3
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745407",
+          "score": [
+            2,
+            3
+          ],
+          "home": "Barnsley",
+          "away": "Mansfield Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Blackpool FC",
+      "away": "Doncaster Rovers",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745408",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Blackpool",
+          "away": "Doncaster Rovers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Bolton Wanderers",
+      "away": "Rotherham United",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745411",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Bolton Wanderers",
+          "away": "Rotherham United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Bradford City",
+      "away": "Wigan Athletic",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745410",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Bradford City",
+          "away": "Wigan Athletic"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Burton Albion",
+      "away": "Northampton Town",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        5,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745409",
+          "score": [
+            5,
+            1
+          ],
+          "home": "Burton Albion",
+          "away": "Northampton Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Cardiff City",
+      "away": "Exeter City",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745412",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Cardiff City",
+          "away": "Exeter City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Huddersfield Town",
+      "away": "Port Vale FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        5,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745413",
+          "score": [
+            5,
+            0
+          ],
+          "home": "Huddersfield Town",
+          "away": "Port Vale"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Luton Town",
+      "away": "Wycombe Wanderers",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        4,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745414",
+          "score": [
+            4,
+            0
+          ],
+          "home": "Luton Town",
+          "away": "Wycombe Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Peterborough United",
+      "away": "Leyton Orient",
+      "openfootball": [
+        4,
+        2
+      ],
+      "independent": [
+        1,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745415",
+          "score": [
+            1,
+            0
+          ],
+          "home": "Peterborough United",
+          "away": "Leyton Orient"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Plymouth Argyle",
+      "away": "Reading FC",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        4
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745405",
+          "score": [
+            1,
+            4
+          ],
+          "home": "Plymouth Argyle",
+          "away": "Reading"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-26",
+      "home": "Stockport County",
+      "away": "Lincoln City",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": [
+        1,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745404",
+          "score": [
+            1,
+            2
+          ],
+          "home": "Stockport County",
+          "away": "Lincoln City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "AFC Wimbledon",
+      "away": "Exeter City",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745420",
+          "score": [
+            0,
+            1
+          ],
+          "home": "AFC Wimbledon",
+          "away": "Exeter City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Barnsley FC",
+      "away": "Lincoln City",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": [
+        0,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745427",
+          "score": [
+            0,
+            2
+          ],
+          "home": "Barnsley",
+          "away": "Lincoln City"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Blackpool FC",
+      "away": "Rotherham United",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": [
+        4,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745421",
+          "score": [
+            4,
+            0
+          ],
+          "home": "Blackpool",
+          "away": "Rotherham United"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Bolton Wanderers",
+      "away": "Mansfield Town",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        0,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745423",
+          "score": [
+            0,
+            1
+          ],
+          "home": "Bolton Wanderers",
+          "away": "Mansfield Town"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Cardiff City",
+      "away": "Stevenage FC",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": [
+        2,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745426",
+          "score": [
+            2,
+            1
+          ],
+          "home": "Cardiff City",
+          "away": "Stevenage"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Luton Town",
+      "away": "Leyton Orient",
+      "openfootball": [
+        3,
+        1
+      ],
+      "independent": [
+        3,
+        0
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745419",
+          "score": [
+            3,
+            0
+          ],
+          "home": "Luton Town",
+          "away": "Leyton Orient"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Peterborough United",
+      "away": "Reading FC",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745418",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Peterborough United",
+          "away": "Reading"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Plymouth Argyle",
+      "away": "Wycombe Wanderers",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": [
+        1,
+        1
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745417",
+          "score": [
+            1,
+            1
+          ],
+          "home": "Plymouth Argyle",
+          "away": "Wycombe Wanderers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-29",
+      "home": "Stockport County",
+      "away": "Doncaster Rovers",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": [
+        4,
+        2
+      ],
+      "status": "score_conflict",
+      "thirdCandidates": [
+        {
+          "eventId": "745422",
+          "score": [
+            4,
+            2
+          ],
+          "home": "Stockport County",
+          "away": "Doncaster Rovers"
+        }
+      ],
+      "outcome": "third_supports_csv"
+    }
+  ],
+  "unresolved": [
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "AFC Wimbledon",
+      "away": "Stockport County",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Cardiff City",
+      "away": "Huddersfield Town",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Mansfield Town",
+      "away": "Peterborough United",
+      "openfootball": [
+        2,
+        4
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-15",
+      "home": "Wigan Athletic",
+      "away": "Reading FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-11-22",
+      "home": "Exeter City",
+      "away": "Burton Albion",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Rotherham United",
+      "away": "Blackpool FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-09",
+      "home": "Wigan Athletic",
+      "away": "Burton Albion",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "en.3",
+      "date": "2025-12-20",
+      "home": "Northampton Town",
+      "away": "AFC Wimbledon",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-10",
+      "home": "Mantova 1911 SSD",
+      "away": "Palermo FC",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-10",
+      "home": "Calcio Padova",
+      "away": "Modena FC",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-17",
+      "home": "Palermo FC",
+      "away": "Spezia Calcio",
+      "openfootball": [
+        1,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-17",
+      "home": "Delfino Pescara",
+      "away": "Modena FC",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-17",
+      "home": "Sampdoria",
+      "away": "Virtus Entella",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-24",
+      "home": "Carrarese Calcio",
+      "away": "Empoli FC",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-24",
+      "home": "FC Südtirol",
+      "away": "Calcio Padova",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-31",
+      "home": "SSC Bari",
+      "away": "Palermo FC",
+      "openfootball": [
+        0,
+        3
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-31",
+      "home": "Calcio Padova",
+      "away": "AC Monza",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-01-31",
+      "home": "AC Reggiana 1919",
+      "away": "Juve Stabia",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-07",
+      "home": "Cesena FC",
+      "away": "Delfino Pescara",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-07",
+      "home": "AC Monza",
+      "away": "US Avellino",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-10",
+      "home": "US Avellino",
+      "away": "Frosinone Calcio",
+      "openfootball": [
+        1,
+        3
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-10",
+      "home": "Empoli FC",
+      "away": "Juve Stabia",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-14",
+      "home": "US Avellino",
+      "away": "Delfino Pescara",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-14",
+      "home": "SSC Bari",
+      "away": "FC Südtirol",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-14",
+      "home": "Empoli FC",
+      "away": "AC Reggiana 1919",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-14",
+      "home": "AC Monza",
+      "away": "Juve Stabia",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-14",
+      "home": "Spezia Calcio",
+      "away": "Frosinone Calcio",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-21",
+      "home": "Frosinone Calcio",
+      "away": "Empoli FC",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-21",
+      "home": "Juve Stabia",
+      "away": "Modena FC",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-21",
+      "home": "AC Reggiana 1919",
+      "away": "US Avellino",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-28",
+      "home": "US Catanzaro",
+      "away": "Frosinone Calcio",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-28",
+      "home": "Mantova 1911 SSD",
+      "away": "Carrarese Calcio",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-28",
+      "home": "AC Monza",
+      "away": "Virtus Entella",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-28",
+      "home": "Delfino Pescara",
+      "away": "Palermo FC",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-02-28",
+      "home": "Sampdoria",
+      "away": "SSC Bari",
+      "openfootball": [
+        0,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-03",
+      "home": "SSC Bari",
+      "away": "Empoli FC",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-03",
+      "home": "Carrarese Calcio",
+      "away": "US Catanzaro",
+      "openfootball": [
+        3,
+        3
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-03",
+      "home": "Frosinone Calcio",
+      "away": "Delfino Pescara",
+      "openfootball": [
+        2,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-03",
+      "home": "Juve Stabia",
+      "away": "Sampdoria",
+      "openfootball": [
+        1,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-03",
+      "home": "Palermo FC",
+      "away": "Mantova 1911 SSD",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-07",
+      "home": "Carrarese Calcio",
+      "away": "Palermo FC",
+      "openfootball": [
+        0,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-07",
+      "home": "US Catanzaro",
+      "away": "Empoli FC",
+      "openfootball": [
+        3,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-07",
+      "home": "Frosinone Calcio",
+      "away": "Sampdoria",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-07",
+      "home": "Mantova 1911 SSD",
+      "away": "Juve Stabia",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-07",
+      "home": "Delfino Pescara",
+      "away": "SSC Bari",
+      "openfootball": [
+        4,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-14",
+      "home": "Virtus Entella",
+      "away": "US Avellino",
+      "openfootball": [
+        1,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-14",
+      "home": "Modena FC",
+      "away": "Spezia Calcio",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-17",
+      "home": "US Avellino",
+      "away": "FC Südtirol",
+      "openfootball": [
+        3,
+        2
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-17",
+      "home": "Carrarese Calcio",
+      "away": "Sampdoria",
+      "openfootball": [
+        2,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-17",
+      "home": "Frosinone Calcio",
+      "away": "SSC Bari",
+      "openfootball": [
+        2,
+        1
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    },
+    {
+      "league": "it.2",
+      "date": "2026-03-17",
+      "home": "Delfino Pescara",
+      "away": "Virtus Entella",
+      "openfootball": [
+        3,
+        0
+      ],
+      "independent": null,
+      "status": "unmatched",
+      "thirdCandidates": [],
+      "outcome": "third_missing"
+    }
+  ]
+}
