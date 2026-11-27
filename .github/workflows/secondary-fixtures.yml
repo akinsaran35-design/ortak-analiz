@@ -1,0 +1,21 @@
+name: V5.67 secondary fixture feed
+on:
+  pull_request:
+    paths:
+      - 'scripts/secondary_fixtures.py'
+      - '.github/workflows/secondary-fixtures.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/secondary_fixtures.py
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: secondary-fixtures
+          path: secondary_fixtures.json
