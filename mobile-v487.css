@@ -239,3 +239,5 @@ main{padding-inline:clamp(10px,3vw,20px)}
 .expectation-card.red .expectation-total{color:#e97480}
 .expectation-split{display:grid;gap:calc(4 * var(--ui));border-top:1px solid var(--line);padding-top:calc(6 * var(--ui));font-size:calc(11 * var(--ui));overflow-wrap:anywhere}
 #detail-content .expectation-card small{font-size:calc(10 * var(--ui))}
+
+#view-coupons [hidden]{display:none!important}#view-coupons .money-tabs button{min-width:0;overflow-wrap:anywhere}#coupon-markets,#coupon-tiers{display:grid;gap:8px}#coupon-budget{margin-top:12px}#system-cost-output .money-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
