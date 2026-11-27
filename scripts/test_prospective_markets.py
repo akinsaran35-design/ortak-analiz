@@ -52,4 +52,15 @@ class MarketTests(unittest.TestCase):
         self.assertEqual(enriched["KG Var"]["calibration"]["meanPrediction"],{})
         for m in MARKETS:
             self.assertEqual({k:v for k,v in enriched[m].items() if k!="calibration"},normal[m])
+    def test_classification_counts_and_periods(self):
+        now=datetime(2026,11,30,18,tzinfo=timezone.utc)
+        r=dict(date="2026-11-29",recordedAt="2026-11-20T12:00:00+00:00",result=[2,1],old=.6,candidate=.5,baseline=.5)
+        records={"a":r,"b":dict(r,date="2026-11-25",result=[0,0],candidate=.8),"c":dict(r,date="2026-11-21",result=[0,0],candidate=.4),"p":dict(r,date="2026-12-01",result=None)}
+        out=summarize(records,now)
+        x=out["2.5 Üst"]["classification"]
+        self.assertEqual((x["tested"],x["correct"],x["incorrect"]),(3,2,1))
+        self.assertEqual(x["periods"]["1"],dict(tested=1,correct=1,incorrect=0))
+        self.assertEqual(x["periods"]["7"],dict(tested=2,correct=1,incorrect=1))
+        self.assertEqual(x["periods"]["30"],dict(tested=3,correct=2,incorrect=1))
+        self.assertEqual(out["KG Var"]["classification"]["tested"],0)
 if __name__=="__main__": unittest.main()
