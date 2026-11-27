@@ -4,12 +4,15 @@ on:
     paths:
       - 'scripts/secondary_fixtures.py'
       - '.github/workflows/secondary-fixtures.yml'
+  schedule:
+    - cron: '17,47 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   audit:
     runs-on: ubuntu-24.04
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
       - run: python scripts/secondary_fixtures.py
