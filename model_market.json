@@ -1,6 +1,6 @@
 {
   "version": "4.12",
-  "updatedAt": "2026-11-27T06:03:46.881757+00:00",
+  "updatedAt": "2026-11-27T06:13:44.225361+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
@@ -17,8 +17,8 @@
       "marketProbability": 0.415584,
       "differencePP": 4.7416,
       "bestBookmaker": "matchbook",
-      "bestOdds": 2.64,
-      "estimatedEV": 0.22232,
+      "bestOdds": 2.6,
+      "estimatedEV": 0.2038,
       "decision": "PAS",
       "movementDirection": null,
       "movementPP": null,

@@ -2,18 +2,199 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-27T09:03:42.256519+03:00",
-  "recorded": 177,
+  "updatedAt": "2026-11-27T09:13:39.191798+03:00",
+  "recorded": 179,
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "captureWindowDays": 14,
   "captureCounts": {
-    "already_recorded": 83,
-    "insufficient_history": 12,
-    "new": 84
+    "already_recorded": 167,
+    "insufficient_history": 10,
+    "new": 2,
+    "recovered_identity": 2
+  },
+  "missingHistory": [
+    {
+      "league": "en.1",
+      "date": "2026-11-28",
+      "home": "Crystal Palace FC",
+      "away": "Hull City AFC",
+      "sourceSamples": {
+        "home": 36,
+        "away": 4
+      },
+      "canonicalSamples": {
+        "home": 36,
+        "away": 4
+      }
+    },
+    {
+      "league": "en.1",
+      "date": "2026-12-02",
+      "home": "Hull City AFC",
+      "away": "Nottingham Forest FC",
+      "sourceSamples": {
+        "home": 4,
+        "away": 39
+      },
+      "canonicalSamples": {
+        "home": 4,
+        "away": 39
+      }
+    },
+    {
+      "league": "en.1",
+      "date": "2026-12-05",
+      "home": "AFC Bournemouth",
+      "away": "Hull City AFC",
+      "sourceSamples": {
+        "home": 38,
+        "away": 4
+      },
+      "canonicalSamples": {
+        "home": 38,
+        "away": 4
+      }
+    },
+    {
+      "league": "de.1",
+      "date": "2026-11-28",
+      "home": "1. FC Köln",
+      "away": "SV 07 Elversberg",
+      "sourceSamples": {
+        "home": 38,
+        "away": 3
+      },
+      "canonicalSamples": {
+        "home": 38,
+        "away": 3
+      }
+    },
+    {
+      "league": "de.1",
+      "date": "2026-11-28",
+      "home": "SC Paderborn 07",
+      "away": "FC Schalke 04",
+      "sourceSamples": {
+        "home": 3,
+        "away": 2
+      },
+      "canonicalSamples": {
+        "home": 3,
+        "away": 2
+      }
+    },
+    {
+      "league": "de.1",
+      "date": "2026-12-05",
+      "home": "FC Bayern München",
+      "away": "SC Paderborn 07",
+      "sourceSamples": {
+        "home": 37,
+        "away": 3
+      },
+      "canonicalSamples": {
+        "home": 37,
+        "away": 3
+      }
+    },
+    {
+      "league": "de.1",
+      "date": "2026-12-05",
+      "home": "FC Schalke 04",
+      "away": "Borussia Dortmund",
+      "sourceSamples": {
+        "home": 2,
+        "away": 38
+      },
+      "canonicalSamples": {
+        "home": 2,
+        "away": 38
+      }
+    },
+    {
+      "league": "de.1",
+      "date": "2026-12-05",
+      "home": "SV 07 Elversberg",
+      "away": "VfB Stuttgart",
+      "sourceSamples": {
+        "home": 3,
+        "away": 37
+      },
+      "canonicalSamples": {
+        "home": 3,
+        "away": 37
+      }
+    },
+    {
+      "league": "fr.1",
+      "date": "2026-11-28",
+      "home": "OGC Nice",
+      "away": "ES Troyes AC",
+      "sourceSamples": {
+        "home": 35,
+        "away": 4
+      },
+      "canonicalSamples": {
+        "home": 35,
+        "away": 4
+      }
+    },
+    {
+      "league": "fr.1",
+      "date": "2026-12-05",
+      "home": "ES Troyes AC",
+      "away": "Olympique Lyonnais",
+      "sourceSamples": {
+        "home": 4,
+        "away": 34
+      },
+      "canonicalSamples": {
+        "home": 4,
+        "away": 34
+      }
+    }
+  ],
+  "historyIdentityAudit": {
+    "en.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "en.2": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "de.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "es.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "it.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "fr.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "nl.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "pt.1": {
+      "conflicts": 0,
+      "invalid": 0
+    },
+    "tr.1": {
+      "conflicts": 0,
+      "invalid": 0
+    }
   },
   "tested": 4,
-  "pending": 173,
+  "pending": 175,
   "minimumMatches": 500,
   "liveEnabled": false,
   "status": "collecting_data",
@@ -22,7 +203,7 @@
   "marketResearch": {
     "1.5 Üst": {
       "tested": 0,
-      "pending": 87,
+      "pending": 89,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},
@@ -32,7 +213,7 @@
     },
     "2.5 Üst": {
       "tested": 4,
-      "pending": 173,
+      "pending": 175,
       "legacyWithoutForecast": 0,
       "invalid": 0,
       "scores": {
@@ -46,7 +227,7 @@
     },
     "KG Var": {
       "tested": 0,
-      "pending": 87,
+      "pending": 89,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},

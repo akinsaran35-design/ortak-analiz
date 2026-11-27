@@ -3637,5 +3637,65 @@
       }
     },
     "result": null
+  },
+  "[\"2026-11-29\", \"tr.1\", \"eyupspor\", \"basaksehir\"]": {
+    "date": "2026-11-29",
+    "league": "tr.1",
+    "home": "eyupspor",
+    "away": "basaksehir",
+    "recordedAt": "2026-11-27T09:13:39.191798+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "canonical_exact",
+    "old": 0.44329850009593585,
+    "candidate": 0.5566955815799677,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7022871265771717,
+        "candidate": 0.787239455583755,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.44329850009593585,
+        "candidate": 0.5566955815799677,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.48975887344660857,
+        "candidate": 0.5543686975926602,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
+  },
+  "[\"2026-11-30\", \"tr.1\", \"goztepe\", \"trabzonspor\"]": {
+    "date": "2026-11-30",
+    "league": "tr.1",
+    "home": "goztepe",
+    "away": "trabzonspor",
+    "recordedAt": "2026-11-27T09:13:39.191798+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "canonical_exact",
+    "old": 0.5988368526853678,
+    "candidate": 0.5746753179427706,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.815298270186413,
+        "candidate": 0.7994263970843898,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.5988368526853678,
+        "candidate": 0.5746753179427706,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.6157687143992168,
+        "candidate": 0.5919030019201694,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
   }
 }
