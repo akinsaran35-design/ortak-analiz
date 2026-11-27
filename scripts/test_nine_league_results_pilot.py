@@ -30,6 +30,13 @@ class NineLeagueTests(unittest.TestCase):
                     self.assertEqual(result_key(a,code,sports[code]),result_key(b,code,sports[code]))
         self.assertNotEqual(result_key("Hull","en.2",sports["en.2"]),result_key("Hull City","en.2",sports["en.2"]))
         self.assertNotEqual(result_key("Inter","it.1",sports["it.1"]),result_key("Milan","it.1",sports["it.1"]))
+    def test_v539_source_labels(self):
+        sports={code:sport for _,code,sport in LEAGUES}
+        for code,pairs in {"en.1":[["Coventry","Coventry City FC"],["Ipswich","Ipswich Town FC"],["Leeds","Leeds United FC"],["Man City","Manchester City FC"],["Newcastle","Newcastle United FC"],["Nott'm Forest","Nottingham Forest FC"],["Tottenham","Tottenham Hotspur FC"]],"de.1":[["FC Koln","1. FC Köln"],["Mainz","1. FSV Mainz 05"],["Hamburg","Hamburger SV"],["Elversberg","SV 07 Elversberg"]],"es.1":[["Ath Bilbao","Athletic Club"],["Osasuna","CA Osasuna"],["Celta","RC Celta de Vigo"],["La Coruna","RC Deportivo La Coruña"],["Espanol","RCD Espanyol de Barcelona"],["Vallecano","Rayo Vallecano de Madrid"],["Betis","Real Betis Balompié"],["Santander","Real Racing Club de Santander"]],"it.1":[["Roma","AS Roma"],["Atalanta","Atalanta BC"]],"fr.1":[["Troyes","ES Troyes AC"],["Nice","OGC Nice"],["Lens","Racing Club de Lens"]],"nl.1":[["Twente","FC Twente '65"]],"pt.1":[["Maritimo","CS Marítimo"]]}.items():
+            for a,b in pairs:
+                with self.subTest(code=code,a=a,b=b):
+                    self.assertEqual(result_key(a,code,sports[code]),result_key(b,code,sports[code]))
+        self.assertNotEqual(result_key("Man City","en.1",sports["en.1"]),result_key("Man United","en.1",sports["en.1"]))
     def test_probe(self):
         now=datetime(2026,11,26,17,tzinfo=TR)
         event={"date":"2026-11-25T18:00:00Z","competitions":[{"status":{"type":{"completed":True,"name":"STATUS_FULL_TIME"}},"competitors":[{"homeAway":"home","team":{"displayName":"A"},"score":"1"},{"homeAway":"away","team":{"displayName":"B"},"score":"0"}]}]}
