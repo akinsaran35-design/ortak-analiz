@@ -7,7 +7,7 @@ from scoreboard_snapshot import build as board
 from results_source_pilot import read,TR
 from live_statistics_pilot import BASE,SOURCES,parse_summary,select_candidates
 
-EXTRA_CODES=("eng.3","ger.2","esp.2","ita.2","fra.2","den.1","nor.1","jpn.1","aus.1","ind.1","rsa.1","uefa.europa")
+EXTRA_CODES=("eng.3","ger.2","esp.2","ita.2","fra.2","den.1","nor.1","jpn.1","aus.1","ind.1","rsa.1","uefa.europa","eng.4","sco.1","swe.1","gre.1","arg.1","uefa.champions","afc.champions","ned.2","sco.2")
 LIVE_SOURCES={**SOURCES,**{c:(None,c) for c in EXTRA_CODES}}
 def live_board(now,reader,query_date):
     return board(now,reader=reader,query_date=query_date,extra_codes=EXTRA_CODES)
@@ -50,7 +50,7 @@ def build(now,reader=read,board_reader=live_board,clock=lambda:datetime.now(TR))
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:rows=list(pool.map(fetch,chosen))
     end=clock()
     fresh=sum(bool(r["observation"]) and is_fresh(r["receivedAt"],end) for r in rows)
-    return dict(version="5.61",configuredCompetitions=len(LIVE_SOURCES),mode="live_snapshot_only",source="ESPN",startedAt=now.isoformat(),updatedAt=end.isoformat(),maxAgeSeconds=MAX_AGE_SECONDS,sourceTimestampVerified=False,rows=rows,sourceIssues=issues,detected=len(candidates),capacity=MAX_EVENTS,workers=MAX_WORKERS,unrequested=len(candidates)-len(rows),requested=len(rows),freshAtBuild=fresh,realTime=False,predictionsEnabled=False,usedForSettlement=False,decision="PAS")
+    return dict(version="5.77",configuredCompetitions=len(LIVE_SOURCES),mode="live_snapshot_only",source="ESPN",startedAt=now.isoformat(),updatedAt=end.isoformat(),maxAgeSeconds=MAX_AGE_SECONDS,sourceTimestampVerified=False,rows=rows,sourceIssues=issues,detected=len(candidates),capacity=MAX_EVENTS,workers=MAX_WORKERS,unrequested=len(candidates)-len(rows),requested=len(rows),freshAtBuild=fresh,realTime=False,predictionsEnabled=False,usedForSettlement=False,decision="PAS")
 
 def main():
     report=build(datetime.now(TR))
