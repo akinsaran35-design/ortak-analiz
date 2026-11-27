@@ -1,0 +1,26 @@
+name: V5.51 missing team history coverage
+on:
+  pull_request:
+    paths:
+      - 'scripts/prospective_history_coverage.py'
+      - 'scripts/test_prospective_history_coverage.py'
+      - '.github/workflows/prospective-history-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_prospective_history_coverage.py
+      - run: python scripts/prospective_history_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prospective-history-coverage
+          path: prospective_history_coverage.json
+          if-no-files-found: error
