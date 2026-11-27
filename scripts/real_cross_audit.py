@@ -8,8 +8,8 @@ MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
 # Expanded historical audit. Prior research may overlap; do not add totals without ID deduplication.
-start=date(2026,9,1)
-days=30
+start=date(2026,8,1)
+days=31
 offsets=tuple((start-now.date()).days+i for i in range(days)) if holdout else (-1,0,1)
 token=os.environ.get("FOOTBALL_DATA_TOKEN")
 def secondary_windowed():
@@ -197,7 +197,7 @@ print("Champions League holdout:",json.dumps(champions))
 r["championsHoldout"]=champions
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.97",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.98",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
