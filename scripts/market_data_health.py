@@ -20,7 +20,12 @@ def fresh(value,now):
 def price(value):
     return type(value) in (int,float) and math.isfinite(value) and value>1
 
+def objects(value):
+    return [x for x in value if isinstance(x,dict)] if isinstance(value,list) else []
+
 def build(snapshot,movement,now):
+    snapshot=snapshot if isinstance(snapshot,dict) else {}
+    movement=movement if isinstance(movement,dict) else {}
     valid_source=snapshot.get("source")=="The Odds API" and snapshot.get("region")=="uk" and snapshot.get("errors")==[]
     snapshot_fresh=valid_source and fresh(snapshot.get("updatedAt"),now)
     rows=[]
@@ -28,18 +33,17 @@ def build(snapshot,movement,now):
     if not isinstance(events,list):events=[]
     from collections import Counter
     counts=Counter(str(e.get("id")) for e in events if isinstance(e,dict))
-    for event in events:
-        if not isinstance(event,dict):continue
+    for event in objects(events):
         ident=event.get("id")
         if not isinstance(ident,str) or not ident or counts[ident]!=1:continue
         try:
             if instant(event["kickoff"])<=now:continue
         except (ValueError,TypeError,KeyError,AttributeError):continue
         books={}
-        for book in event.get("bookmakers",[]):
+        for book in objects(event.get("bookmakers")):
             key=book.get("key")
             if not isinstance(key,str) or not key:continue
-            for line in book.get("lines",[]):
+            for line in objects(book.get("lines")):
                 if line.get("point")!=2.5 or not price(line.get("over")) or not price(line.get("under")):continue
                 if not fresh(line.get("lastUpdate"),now):continue
                 if key in books:
@@ -49,9 +53,9 @@ def build(snapshot,movement,now):
         count=sum(v is not None for v in books.values())
         if snapshot_fresh and count>=3:
             rows.append(dict(eventId=ident,league=event.get("league"),freshBookmakers=count))
-    moves=movement.get("markets",[])
+    moves=objects(movement.get("markets"))
     movement_fresh=movement.get("mode")=="research_only" and movement.get("errors")==[] and fresh(movement.get("updatedAt"),now)
-    return dict(version="6.0",updatedAt=now.isoformat(),mode="research_only",
+    return dict(version="6.4",updatedAt=now.isoformat(),mode="research_only",
         odds=dict(status="observed" if rows else "stale_or_unavailable" if not snapshot_fresh else "insufficient_coverage",snapshotAt=snapshot.get("updatedAt"),archivedEvents=len(events),freshEvents=len(rows),rows=rows,region="uk",remainingCredits=snapshot.get("remainingCredits")),
         movement=dict(status="report_available" if movement_fresh and moves else "no_fresh_evidence",reportAt=movement.get("updatedAt"),reportedMarkets=len(moves) if movement_fresh and isinstance(moves,list) else 0),
         volume=dict(status="source_unavailable",matchedAmount=None,currency=None,amountTRY=None,worldwideTotal=None,reason="Odds and price movement do not establish wager volume."),
@@ -72,6 +76,11 @@ def self_test():
     assert build(dict(snapshot,events=[dict(event,bookmakers=event["bookmakers"][:2])]),{},now)["odds"]["freshEvents"]==0
     assert build(dict(snapshot,events=[dict(event,kickoff=stamp)]),{},now)["odds"]["freshEvents"]==0
     assert build(snapshot,dict(mode="research_only",errors=[],updatedAt=stamp,markets=[]),now)["movement"]["status"]=="no_fresh_evidence"
+    assert build(None,None,now)["odds"]["freshEvents"]==0
+    assert build(dict(snapshot,events=[dict(event,bookmakers=None)]),{},now)["odds"]["freshEvents"]==0
+    assert build(dict(snapshot,events=[dict(event,bookmakers=[None,dict(key="a",lines=None)])]),{},now)["odds"]["freshEvents"]==0
+    assert build(snapshot,dict(mode="research_only",errors=[],updatedAt=stamp,markets={"unexpected":1}),now)["movement"]["status"]=="no_fresh_evidence"
+    assert build(snapshot,dict(mode="research_only",errors=[],updatedAt=stamp,markets=[None,False]),now)["movement"]["reportedMarkets"]==0
     print("Market evidence self-tests passed")
 
 if __name__=="__main__":
