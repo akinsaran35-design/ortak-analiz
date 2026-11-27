@@ -4,8 +4,8 @@ import math
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
-from live_refresh_snapshot import is_fresh,MAX_AGE_SECONDS,MAX_EVENTS
-from live_statistics_pilot import BASE,SOURCES
+from live_refresh_snapshot import is_fresh,MAX_AGE_SECONDS,MAX_EVENTS,LIVE_SOURCES
+from live_statistics_pilot import BASE
 from results_source_pilot import TR
 
 REQUIRED=("corners","shots","shotsOnTarget","yellowCards","redCards","possession")
@@ -19,8 +19,8 @@ def assess(row,now):
     if row.get("error") or not isinstance(row.get("observation"),dict):return "source_error"
     if not is_fresh(row.get("receivedAt"),now,MAX_AGE_SECONDS):return "stale_receipt"
     league=row.get("league");event=row.get("eventId")
-    if league not in SOURCES or not isinstance(event,str) or not event.isascii() or not event.isdigit():return "invalid_identity"
-    if row.get("source")!=BASE+SOURCES[league][1]+"/summary?event="+event:return "invalid_identity"
+    if league not in LIVE_SOURCES or not isinstance(event,str) or not event.isascii() or not event.isdigit():return "invalid_identity"
+    if row.get("source")!=BASE+LIVE_SOURCES[league][1]+"/summary?event="+event:return "invalid_identity"
     try:
         start=datetime.fromisoformat(row["kickoff"])
         if start.tzinfo is None or start>now:return "invalid_identity"

@@ -37,6 +37,15 @@ class Tests(unittest.TestCase):
         r=build(NOW,lambda url:summary("post"),board_with([ROW]),clock=lambda:NOW)
         self.assertEqual(r["freshAtBuild"],0)
         self.assertIsNone(r["rows"][0]["observation"])
+    def test_expanded_league(self):
+        def extra(now,reader,query_date):
+            return {"groups":[dict(league="jpn.1",error=None,invalid=0,rows=[ROW] if query_date==NOW.date().isoformat() else [])]}
+        def reader(url):
+            self.assertIn("/jpn.1/summary?event=123",url)
+            return summary()
+        r=build(NOW,reader,extra,clock=lambda:NOW)
+        self.assertEqual(r["freshAtBuild"],1)
+        self.assertEqual(r["configuredCompetitions"],21)
     def test_source_failure(self):
         def reader(url):raise OSError("unavailable")
         r=build(NOW,reader,board_with([ROW]),clock=lambda:NOW)
