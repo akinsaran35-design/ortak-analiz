@@ -18,6 +18,19 @@ class AuditTests(unittest.TestCase):
                 self.assertNotEqual(short,full)
         self.assertNotEqual(team_key("esp.2","celta"),team_key("esp.2","celta b"))
         self.assertNotEqual(team_key("sco.1","dundee"),team_key("sco.1","dundee united"))
+    def test_extended_history_window(self):
+        now=datetime(2026,11,27,22,tzinfo=TR)
+        dates=list(range(17,28))
+        csv=("Date,HomeTeam,AwayTeam,FTHG,FTAG\n"+"".join(f"{d}/11/26,A,B,2,1\n" for d in dates)+"01/10/26,A,B,2,1\n").encode()
+        urls=[]
+        def reader(url):
+            urls.append(url)
+            return csv if url.endswith(".csv") else b'{"events":[]}'
+        report=audit_league("sco.1","SC0",now,reader)
+        self.assertEqual(report["days"],[f"2026-11-{d:02d}" for d in range(26,19,-1)])
+        self.assertEqual(len(urls),8)
+        self.assertEqual(len(report["rows"]),7)
+        self.assertTrue(all(r["status"]=="csv_only" for r in report["rows"]))
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
