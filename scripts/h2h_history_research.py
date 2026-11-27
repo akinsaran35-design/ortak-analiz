@@ -1,4 +1,4 @@
-"""V5.27: six-season league H2H and fresh team form enrichment, descriptive and schedule-bound."""
+"""V5.28: cross-division domestic H2H and fresh team form enrichment, descriptive and schedule-bound."""
 import json
 from collections import Counter,defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -11,9 +11,11 @@ from results_source_pilot import read,TR
 
 SEASONS=6
 LIMIT=12
-def collect(code,sport,cutoff,reader=read):
+# Known football-data domestic divisions. Probe additional divisions independently.
+EXTRA_DIVISIONS={"en.1":"E1","en.2":"E0","de.1":"D2","es.1":"SP2","it.1":"I2","fr.1":"F2"}
+def collect(code,sport,cutoff,reader=read,csv_override=None):
     year=cutoff.year-(cutoff.month<7)
-    csv_code,_=SOURCES[code]
+    csv_code=csv_override or SOURCES[code][0]
     rows={};blocked=set();sources=[];errors=[];invalid=0
     for y in range(year,year-SEASONS,-1):
         url=f"https://football-data.co.uk/mmz4281/{y%100:02d}{(y+1)%100:02d}/{csv_code}.csv"
@@ -25,8 +27,8 @@ def collect(code,sport,cutoff,reader=read):
             sources.append(dict(season=y,source=url,rows=len(valid)))
             for r in valid:
                 k=(r["date"],r["home"],r["away"])
-                if k in rows and rows[k]!=r:blocked.add(k)
-                rows[k]=r
+                if k in rows and rows[k]!=dict(r,competition=csv_code):blocked.add(k)
+                rows[k]=dict(r,competition=csv_code)
         except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:errors.append(dict(season=y,source=url,error=type(exc).__name__))
     return [r for k,r in rows.items() if k not in blocked],sources,errors,invalid+len(blocked)
 
@@ -62,7 +64,7 @@ def refresh_form(existing,history,team,side,code,sport,cutoff):
     existing[side]=dict(sample=len(chosen),rows=chosen,wins=sum(x["result"]=="W" for x in chosen),draws=sum(x["result"]=="D" for x in chosen),losses=sum(x["result"]=="L" for x in chosen),goalsFor=sum(x["gf"] for x in chosen),goalsAgainst=sum(x["ga"] for x in chosen),source="football-data.co.uk",latestCompletedDate=chosen[0]["date"])
     return True
 
-def enrich_fixture(f,history,code,sport,cutoff,sources,errors):
+def enrich_fixture(f,history,code,sport,cutoff,sources,errors,extra_history=(),extra_sources=(),extra_errors=()):
     existing=f.get("formResearch")
     if not isinstance(existing,dict) or existing.get("version")!="5.06":return None
     if existing.get("asOfExclusive")!=cutoff.isoformat():return None
@@ -72,9 +74,10 @@ def enrich_fixture(f,history,code,sport,cutoff,sources,errors):
     hk,ak=result_key(home,code,sport),result_key(away,code,sport)
     if not hk or not ak or hk==ak:return None
     rows={};conflicts=set()
-    for r in history:
+    for r in list(history)+list(extra_history):
         if {r["home"],r["away"]}!={hk,ak} or r["date"]>=cutoff.isoformat():continue
         k=(r["date"],r["home"],r["away"])
+        if k in rows and rows[k]!=r:conflicts.add(k)
         rows[k]=r
     for r in existing.get("h2h",[]):
         try:
@@ -89,7 +92,7 @@ def enrich_fixture(f,history,code,sport,cutoff,sources,errors):
     matches=[]
     for k,r in sorted(rows.items(),reverse=True):
         if k in conflicts:continue
-        m=dict(date=r["date"],home=home if r["home"]==hk else away,away=away if r["away"]==ak else home,score=r["score"],stats=r["stats"])
+        m=dict(date=r["date"],home=home if r["home"]==hk else away,away=away if r["away"]==ak else home,score=r["score"],stats=r["stats"],competition=r.get("competition",SOURCES[code][0]))
         matches.append(m)
     if matches:
         selected=matches[:LIMIT]
@@ -101,11 +104,11 @@ def enrich_fixture(f,history,code,sport,cutoff,sources,errors):
         selected=existing["h2h"];source="original_league_history_conflicts_filtered"
     else:
         selected=existing.get("h2h",[]);source="original_league_history"
-    existing["h2hCoverage"]=dict(version="5.26",source=source,requestedSeasons=SEASONS,loadedSeasons=[s["season"] for s in sources],failedSeasons=[s["season"] for s in errors],limit=LIMIT,sample=len(selected),csvMatchesAvailable=len(matches),conflictsExcluded=len(conflicts),scope="same_league_only",predictionsEnabled=False)
+    existing["h2hCoverage"]=dict(version="5.28",source=source,requestedSeasons=SEASONS,loadedSeasons=[s["season"] for s in sources],failedSeasons=[s["season"] for s in errors],limit=LIMIT,sample=len(selected),csvMatchesAvailable=len(matches),conflictsExcluded=len(conflicts),scope="domestic_league_divisions" if extra_sources else "same_league_only",extraDivision=EXTRA_DIVISIONS.get(code),extraLoadedSeasons=[s["season"] for s in extra_sources],extraFailedSeasons=[s["season"] for s in extra_errors],crossDivisionMatches=sum(m.get("competition",SOURCES[code][0])!=SOURCES[code][0] for m in selected),predictionsEnabled=False)
     old_dates={side:(existing.get(side,{}).get("rows") or [{}])[0].get("date") for side in ("home","away")}
     refreshed={side:refresh_form(existing,history,team,side,code,sport,cutoff) for side,team in (("home",hk),("away",ak))}
     new_dates={side:(existing.get(side,{}).get("rows") or [{}])[0].get("date") for side in ("home","away")}
-    return dict(match=f["match"],date=f["date"],sample=len(selected),csvMatchesAvailable=len(matches),source=source,formRefreshed=refreshed,formOldDates=old_dates,formNewDates=new_dates)
+    return dict(match=f["match"],date=f["date"],sample=len(selected),csvMatchesAvailable=len(matches),crossDivisionMatches=existing["h2hCoverage"]["crossDivisionMatches"],source=source,formRefreshed=refreshed,formOldDates=old_dates,formNewDates=new_dates)
 
 def build(daily,now,reader=read):
     cutoff=now.astimezone(TR).date()
@@ -115,14 +118,15 @@ def build(daily,now,reader=read):
     def group(entry):
         label,code,sport=entry
         history,sources,errors,invalid=collect(code,sport,cutoff,reader)
+        extra,extra_sources,extra_errors,extra_invalid=collect(code,sport,cutoff,reader,EXTRA_DIVISIONS[code]) if code in EXTRA_DIVISIONS else ([],[],[],0)
         records=[]
         for f in daily.get("upcoming",[]):
             if f.get("league")==label and f.get("date","")>=cutoff.isoformat():
-                r=enrich_fixture(f,history,code,sport,cutoff,sources,errors)
+                r=enrich_fixture(f,history,code,sport,cutoff,sources,errors,extra,extra_sources,extra_errors)
                 if r is not None:records.append(r)
-        return dict(league=code,sources=sources,errors=errors,invalid=invalid,historicalRows=len(history),fixtures=len(records),sampleCounts=dict(Counter(r["sample"] for r in records)),formSidesRefreshed=sum(sum(r["formRefreshed"].values()) for r in records),formSidesNewer=sum(sum(bool(r["formNewDates"][s] and (not r["formOldDates"][s] or r["formNewDates"][s]>r["formOldDates"][s])) for s in ("home","away")) for r in records),rows=records)
+        return dict(league=code,sources=sources,errors=errors,invalid=invalid,historicalRows=len(history),extraHistoricalRows=len(extra),extraLoadedSeasons=len(extra_sources),extraErrors=extra_errors,extraInvalid=extra_invalid,crossDivisionFixtures=sum(r["crossDivisionMatches"]>0 for r in records),fixtures=len(records),sampleCounts=dict(Counter(r["sample"] for r in records)),formSidesRefreshed=sum(sum(r["formRefreshed"].values()) for r in records),formSidesNewer=sum(sum(bool(r["formNewDates"][s] and (not r["formOldDates"][s] or r["formNewDates"][s]>r["formOldDates"][s])) for s in ("home","away")) for r in records),rows=records)
     with ThreadPoolExecutor(max_workers=6) as pool:groups=list(pool.map(group,LEAGUES))
-    report=dict(version="5.27",dailyUpdatedAt=daily["updatedAt"],cutoffExclusive=cutoff.isoformat(),mode="descriptive_research",decision="PAS",predictionsEnabled=False,groups=groups)
+    report=dict(version="5.28",dailyUpdatedAt=daily["updatedAt"],cutoffExclusive=cutoff.isoformat(),mode="descriptive_research",decision="PAS",predictionsEnabled=False,groups=groups)
     return report
 
 if __name__=="__main__":
