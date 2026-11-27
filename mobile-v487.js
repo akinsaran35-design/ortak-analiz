@@ -1,6 +1,6 @@
 (function(){
 "use strict";
-const FILES=["fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
+const FILES=["nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
 const MARKETS=["1.5 Üst","2.5 Üst","KG Var"];
 const LEAGUES={"İngiltere Premier Lig":"soccer_epl","İngiltere Championship":"soccer_efl_champ","Almanya Bundesliga":"soccer_germany_bundesliga","İspanya La Liga":"soccer_spain_la_liga","İtalya Serie A":"soccer_italy_serie_a","Fransa Ligue 1":"soccer_france_ligue_one","Hollanda Eredivisie":"soccer_netherlands_eredivisie","Portekiz Primeira Liga":"soccer_portugal_primeira_liga","Türkiye Süper Lig":"soccer_turkey_super_league"};
 const arr=x=>Array.isArray(x)?x:[],num=x=>Number.isInteger(x)&&x>=0?String(x):"—";
@@ -293,6 +293,17 @@ function render(){loadedAt=Date.now();rows=by("fixture-mode").value==="confirmed
    if(valid){const a=accuracyCounts(total);panel(root,"Tahmin doğruluğu · araştırma",[metrics([["Genel",a.tested?pct(a.rate):"Veri bekleniyor"],["Doğru",num(a.correct)],["Yanlış",num(a.incorrect)],["Test",num(a.tested)]]),node("p","Sabit %50 sınıflandırma eşiği: gerçekleşti / gerçekleşmedi. Toplam, maç değil tahmin türü sayısıdır. Kazanç veya seçim başarısı değildir. "+(verified?"":"Rapor güncel olmayabilir. ")+ "Veri tarihi: "+dateTR(v.updatedAt)+".","subtle"),...cards]);}
    else panel(root,"Tahmin doğruluğu · araştırma",[node("p","Doğruluk raporu eksik veya tutarsız.","subtle")]);
  }else panel(root,"Tahmin doğruluğu · araştırma",[node("p","Doğrulanmış doğruluk raporu bekleniyor.","subtle")]);
+ const review=data.nov27_match_review;
+ if(review?.version==="6.19"&&review.mode==="research_only"&&review.sourceRun===46058594856&&Array.isArray(review.rows)&&review.rows.length===2&&Number.isFinite(Date.parse(review.observedAt))&&Date.parse(review.observedAt)<=loadedAt){
+   const items=[node("p","27 Kasım tarihli kaynak incelemesi. Tek kaynaklı skorlar başarı hesabına dahil değildir. Bu sabit rapor canlı skor değildir.","subtle")];
+   for(const m of review.rows){
+     if(m.date!=="2026-11-27"||m.league!=="tr.1"||!["alanyaspor – konyaspor","rizespor – kasimpasa"].includes(m.home+" – "+m.away)||m.resultStatus!=="incomplete"||m.result!==null||!Array.isArray(m.espnScore)||m.espnScore.length!==2||!m.espnScore.every(x=>Number.isInteger(x)&&x>=0))continue;
+     const detail=node("div",undefined,"panel");detail.append(node("h3",m.home+" – "+m.away),node("p","ESPN: "+m.espnScore.join("–")+" · İkinci kaynak bekleniyor"),node("p",m.archiveStatus==="pre_date_archive_pending"?"Önceden kayıtlı tahmin var.":"Tahmin zamanı kesinleşmedi; başarı hesabı dışında.","subtle"));
+     for(const market of MARKETS){const p=m.markets?.[market];if(Number.isFinite(p)&&p>=0&&p<=100)detail.append(node("p",market+" · "+pct(p),"subtle"));}
+     items.push(detail);
+   }
+   if(items.length===3)panel(root,"27 Kasım maç incelemesi",items);
+ }
  const pending=v?.pendingDateStatus;if(v?.pendingDateStatusAsOf===dateTR(loadedAt)&&pending&&["future","today","past","invalidDate"].every(k=>Number.isInteger(pending[k])&&pending[k]>=0)&&pending.future+pending.today+pending.past+pending.invalidDate===v.pending){panel(root,"Bekleyen sonuçların tarih dağılımı",[metrics([["İleri tarih",num(pending.future)],["Bugün",num(pending.today)],["Geçmiş tarih",num(pending.past)]]),node("p","Tarih bazlı arşiv durumu; geçmiş tarih, maçın tamamlandığını tek başına kanıtlamaz. "+(verified?"":"Rapor eski olabilir. ")+(pending.invalidDate?"Geçersiz tarih: "+num(pending.invalidDate):""),"subtle")]);}
  const leagueRows=leagueReport(data,loadedAt);
  const diag=data.prospective_leagues;
