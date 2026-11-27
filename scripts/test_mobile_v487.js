@@ -123,3 +123,14 @@ assert.equal(accuracyCounts({tested:4,correct:4,incorrect:1}),null);
 assert.equal(classificationFor({tested:3,classification:{tested:4,correct:3,incorrect:1,threshold:.5,model:"candidate",descriptiveOnly:true}}),null);
 assert.equal(classificationFor({tested:4,classification:{tested:4,correct:3,incorrect:1,threshold:.5,model:"candidate",descriptiveOnly:true}}).rate,75);
 console.log("Research classification accuracy and empty/invalid count guards passed");
+
+const {shadowHistory}=require("../mobile-v487.js");
+const shEmpty={recorded:0,settled:0,pending:0,won:0,lost:0,winRate:null};
+const shDone={recorded:3,settled:2,pending:1,won:1,lost:1,winRate:.5};
+const sh={version:"4.8",mode:"shadow",liveEnabled:false,updatedAt,overall:shDone,bySize:{"1":shEmpty,"2":shDone,"3":shEmpty}};
+assert.equal(shadowHistory(sh,now).total.rate,50);
+assert.equal(shadowHistory({...sh,overall:shEmpty},now),null);
+assert.equal(shadowHistory({...sh,liveEnabled:true},now),null);
+assert.equal(shadowHistory({...sh,overall:{...shDone,winRate:.9}},now),null);
+assert.equal(shadowHistory({...sh,overall:shEmpty,bySize:{"1":shEmpty,"2":shEmpty,"3":shEmpty}},now).total.rate,null);
+console.log("Historical shadow summary count and rate guards passed");
