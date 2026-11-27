@@ -7,8 +7,8 @@ from cross_source_match import match,norm
 MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl.1":2003,"pt.1":2017,"uefa.champions":2001}
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
-offsets=(-15,-14,-13) if holdout else (-1,0,1)
-s=secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now,now.date()+timedelta(days=-16),now.date()+timedelta(days=-12)) if holdout else secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now)
+offsets=(-22,-21,-20) if holdout else (-1,0,1)
+s=secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now,now.date()+timedelta(days=-23),now.date()+timedelta(days=-19)) if holdout else secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now)
 p=[]
 for offset in offsets:
     report=build(now,query_date=(now.date()+timedelta(days=offset)).isoformat(),extra_codes=("uefa.champions",))
