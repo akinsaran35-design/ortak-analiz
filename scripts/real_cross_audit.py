@@ -6,9 +6,11 @@ from secondary_fixtures import build as secondary
 from cross_source_match import match,norm
 MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl.1":2003,"pt.1":2017,"uefa.champions":2001}
 now=datetime.now(TR)
-s=secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now)
+holdout=os.environ.get("CROSS_HOLDOUT")=="1"
+offsets=(-8,-7,-6) if holdout else (-1,0,1)
+s=secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now,now.date()+timedelta(days=-9),now.date()+timedelta(days=-5)) if holdout else secondary(os.environ.get("FOOTBALL_DATA_TOKEN"),now)
 p=[]
-for offset in (-1,0,1):
+for offset in offsets:
     report=build(now,query_date=(now.date()+timedelta(days=offset)).isoformat(),extra_codes=("uefa.champions",))
     for g in report["groups"]:
         if g["league"] not in MAP or g["error"] or g["invalid"]:continue
@@ -26,7 +28,7 @@ for a in p:
     diagnostics.append(dict(primaryId=a["eventId"],league=a["league"],home=a["home"],away=a["away"],candidates=candidates))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.72")
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.74",holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
 assert s["status"]=="observed" and p
