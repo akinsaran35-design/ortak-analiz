@@ -1,7 +1,7 @@
 import json
 import unittest
 from datetime import datetime,timedelta
-from multi_league_results import build_report,verified_rows,source_urls,TR,APPROVED
+from multi_league_results import build_report,verified_rows,source_urls,TR,APPROVED,combined_archive
 from verified_results import settle_verified
 
 class MultiLeagueTests(unittest.TestCase):
@@ -36,4 +36,21 @@ class MultiLeagueTests(unittest.TestCase):
         report["groups"][0]["sources"]=["https://example.org","https://example.net"]
         self.assertEqual(verified_rows(report,now),[])
         self.assertEqual(verified_rows(build_report(archive,now,lambda url:b"bad"),now),[])
+    def test_combined_archive_coverage(self):
+        p=dict(date="2026-11-25",league="tr.1",home="A",away="B",result=None)
+        f=dict(date=p["date"],league="Türkiye Süper Lig",match="A – B",result=[2,1])
+        a={"a":p}
+        b={"a":f,"b":dict(f,match="C – D",result=None)}
+        combined,counts=combined_archive(a,b)
+        self.assertEqual(counts,{"shared":1,"performanceOnly":1})
+        self.assertEqual(len(combined),2)
+        self.assertEqual(combined[("tr.1",p["date"],"A","B")]["result"],[2,1])
+        self.assertIsNone(p["result"])
+        conflicting,counts=combined_archive({"a":dict(p,result=[1,0])},b)
+        self.assertEqual(counts["conflictingIdentities"],1)
+        self.assertEqual(len(conflicting),3)
+        now=datetime(2026,11,26,17,tzinfo=TR)
+        report=build_report(conflicting,now,lambda url: b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n" if url.endswith(".csv") else b'{"events":[]}')
+        self.assertEqual(sum(r["status"]=="ambiguous" for g in report["groups"] for r in g["rows"]),2)
+        self.assertEqual(verified_rows(report,now),[])
 if __name__=="__main__": unittest.main()
