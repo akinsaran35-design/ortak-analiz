@@ -46,7 +46,21 @@ def build(now,reader=read,query_date=None,extra_codes=()):
         url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+(SOURCES[code][1] if code in SOURCES else code)+"/scoreboard?dates="+day.replace("-","")
         result=dict(league=code,leagueName=name,source=url,rows=[],invalid=0,error=None)
         try:
-            result["rows"],result["invalid"]=parse(json.loads(reader(url)),day)
+            if code=="bra.1":
+                # Provider dates may follow the competition's local calendar, not TR.
+                # Fetch adjacent dates but retain only actual TR-day fixtures.
+                day_value=date.fromisoformat(day)
+                query_days=[(day_value+timedelta(days=i)).strftime("%Y%m%d") for i in (-1,0,1)]
+                urls=[url.rsplit("=",1)[0]+"="+q for q in query_days]
+                result["sources"]=urls
+                events=[]
+                for source in urls:
+                    payload=json.loads(reader(source))
+                    if not isinstance(payload.get("events"),list):raise ValueError("events schema")
+                    events.extend(payload["events"])
+                result["rows"],result["invalid"]=parse({"events":events},day)
+            else:
+                result["rows"],result["invalid"]=parse(json.loads(reader(url)),day)
         except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc: result["error"]=type(exc).__name__
         return result
     with ThreadPoolExecutor(max_workers=4) as pool:
