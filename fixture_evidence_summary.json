@@ -1,0 +1,108 @@
+{
+  "mode": "research_only",
+  "observationCount": 891,
+  "uniqueVerifiedCount": 891,
+  "duplicateObservations": 0,
+  "conflictCount": 0,
+  "passingWindowUniqueCount": 559,
+  "otherWindowUniqueCount": 332,
+  "withExplicitScoreCount": 332,
+  "byLeague": {
+    "bra.1": 147,
+    "de.1": 63,
+    "en.1": 91,
+    "en.2": 110,
+    "es.1": 119,
+    "fr.1": 72,
+    "it.1": 90,
+    "nl.1": 90,
+    "pt.1": 89,
+    "uefa.champions": 20
+  },
+  "periods": [
+    {
+      "report": "research/fixture-evidence/2026-05.json",
+      "month": "2026-05",
+      "sourceRun": 46022798824,
+      "sourceQualityGate": "failure",
+      "observations": 304,
+      "uniqueReconciled": 304,
+      "scopeCoverage": {
+        "primaryCount": 312,
+        "secondaryCount": 309,
+        "matched": 307,
+        "primaryCoverage": 0.9839743589743589,
+        "secondaryCoverage": 0.9935275080906149,
+        "secondaryOnly": [
+          554887,
+          557983
+        ],
+        "scoreCompared": 304,
+        "scoreMismatch": 0,
+        "status": "partial"
+      }
+    },
+    {
+      "report": "research/fixture-evidence/2026-07.json",
+      "month": "2026-07",
+      "sourceRun": 46020355389,
+      "sourceQualityGate": "failure",
+      "observations": 28,
+      "uniqueReconciled": 28,
+      "scopeCoverage": {
+        "primaryCount": 28,
+        "secondaryCount": 28,
+        "matched": 28,
+        "primaryCoverage": 1,
+        "secondaryCoverage": 1,
+        "secondaryOnly": [],
+        "scoreCompared": 28,
+        "scoreMismatch": 0,
+        "status": "complete"
+      }
+    },
+    {
+      "report": "research/fixture-evidence/2026-08.json",
+      "month": "2026-08",
+      "sourceRun": 46019495145,
+      "sourceQualityGate": "success",
+      "observations": 237,
+      "uniqueReconciled": 237,
+      "scopeCoverage": {
+        "primaryCount": 238,
+        "secondaryCount": 238,
+        "matched": 237,
+        "primaryCoverage": 0.9957983193277311,
+        "secondaryCoverage": 0.9957983193277311,
+        "secondaryOnly": [
+          559702
+        ],
+        "scoreCompared": 237,
+        "scoreMismatch": 0,
+        "status": "partial"
+      }
+    },
+    {
+      "report": "research/fixture-evidence/2026-09.json",
+      "month": "2026-09",
+      "sourceRun": 46019182793,
+      "sourceQualityGate": "success",
+      "observations": 322,
+      "uniqueReconciled": 322,
+      "scopeCoverage": {
+        "primaryCount": 322,
+        "secondaryCount": 322,
+        "matched": 322,
+        "primaryCoverage": 1,
+        "secondaryCoverage": 1,
+        "secondaryOnly": [],
+        "scoreCompared": 322,
+        "scoreMismatch": 0,
+        "status": "complete"
+      }
+    }
+  ],
+  "productionEnabled": false,
+  "sourceRun": 46023743981,
+  "sourceJob": 140589685718
+}
