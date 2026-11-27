@@ -1,7 +1,9 @@
-name: V5.29 frozen evidence and observed live windows
+name: V5.30 live observation and cadence audit
 on:
   pull_request:
     paths:
+      - 'scripts/live_cadence_audit.py'
+      - 'scripts/test_live_cadence_audit.py'
       - 'scripts/live_observation_history.py'
       - 'scripts/test_live_observation_history.py'
       - 'scripts/live_frozen_evidence.py'
@@ -55,6 +57,7 @@ jobs:
       - run: python scripts/test_live_performance_research.py
       - run: python scripts/test_live_frozen_evidence.py
       - run: python scripts/test_live_observation_history.py
+      - run: python scripts/test_live_cadence_audit.py
       - run: python scripts/live_result_evidence.py
       - run: python scripts/live_refresh_snapshot.py
       - run: python scripts/live_analysis_quality.py
@@ -62,6 +65,7 @@ jobs:
       - name: Exercise publication archive CLI without writing remote data
         run: |
           mkdir -p /tmp/oa-publication-check
+          python scripts/live_cadence_audit.py live_refresh_snapshot.json /tmp/oa-publication-check/cadence-history.json /tmp/oa-publication-check/cadence.json
           python scripts/live_observation_history.py live_analysis_quality.json /tmp/oa-publication-check/observations.json /tmp/oa-publication-check/windows.json
           python scripts/live_performance_research.py live_rate_link.json /tmp/oa-publication-check/archive.json verified_results.json /tmp/oa-publication-check/performance.json
           python -c 'import json; from pathlib import Path; p=Path("/tmp/oa-publication-check"); a=json.loads((p/"archive.json").read_text()); r=json.loads((p/"performance.json").read_text()); assert r["recorded"]==len(a) and r["predictionsEnabled"] is False and r["modelCalibrated"] is False'
@@ -106,15 +110,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           python research-code/scripts/live_performance_research.py /tmp/oa-live/live_rate_link.json live_scenario_archive.json research-code/verified_results.json live_performance_research.json
+          python research-code/scripts/live_cadence_audit.py /tmp/oa-live/live_refresh_snapshot.json live_cadence_history.json live_cadence_report.json
           python research-code/scripts/live_observation_history.py live_analysis_quality.json live_observation_archive.json live_observation_windows.json
-          git add live_observation_archive.json live_observation_windows.json live_analysis_quality.json live_scenario_archive.json live_performance_research.json live_prematch_frozen.json live_result_evidence.json
+          git add live_cadence_history.json live_cadence_report.json live_observation_archive.json live_observation_windows.json live_analysis_quality.json live_scenario_archive.json live_performance_research.json live_prematch_frozen.json live_result_evidence.json
           if ! git diff --cached --quiet; then
             git commit -m "Update live observations and research archive"
             git push origin HEAD:live-data
           fi
           git fetch origin live-data
           test "$(git rev-parse HEAD)" = "$(git rev-parse FETCH_HEAD)"
-          for f in live_observation_archive.json live_observation_windows.json live_analysis_quality.json live_scenario_archive.json live_performance_research.json live_prematch_frozen.json live_result_evidence.json; do
+          for f in live_cadence_history.json live_cadence_report.json live_observation_archive.json live_observation_windows.json live_analysis_quality.json live_scenario_archive.json live_performance_research.json live_prematch_frozen.json live_result_evidence.json; do
             git show FETCH_HEAD:"$f" | cmp - "$f"
           done
           echo "Verified remote publication: $(git rev-parse FETCH_HEAD)"
