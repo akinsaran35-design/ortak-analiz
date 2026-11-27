@@ -3697,5 +3697,35 @@
       }
     },
     "result": null
+  },
+  "[\"2026-11-29\", \"tr.1\", \"fenerbahce\", \"erzurum bb\"]": {
+    "date": "2026-11-29",
+    "league": "tr.1",
+    "home": "fenerbahce",
+    "away": "erzurum bb",
+    "recordedAt": "2026-11-27T22:54:02.229101+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "canonical_exact",
+    "old": 0.6602601118038807,
+    "candidate": 0.5999873041551858,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8531576121745653,
+        "candidate": 0.8160398610105737,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.6602601118038807,
+        "candidate": 0.5999873041551858,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.5922475152305087,
+        "candidate": 0.5657640475826261,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-27T15:58:05.851650+00:00",
-  "sourceUpdatedAt": "2026-11-27T18:57:40+03:00",
+  "updatedAt": "2026-11-27T19:54:05.969784+00:00",
+  "sourceUpdatedAt": "2026-11-27T22:53:31+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
@@ -135,68 +135,6 @@
     },
     {
       "date": "2026-11-27",
-      "league": "Türkiye Süper Lig",
-      "match": "rizespor – kasimpasa",
-      "expectedGoals": {
-        "home": 1.7,
-        "away": 1.55
-      },
-      "poisson": {
-        "over15": 0.8352096167151815,
-        "over25": 0.6304333316038996,
-        "btts": 0.6438427099522442
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8403181185970108,
-        "over25": 0.6304333316038996,
-        "btts": 0.6489512118340737
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.10727853951841687
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.08684453199109936
-          },
-          {
-            "home": 1,
-            "away": 2,
-            "probability": 0.07918177916835532
-          }
-        ],
-        "topScoresCombined": 0.2733048506778716,
-        "homeWin": 0.41090087601071806,
-        "draw": 0.24178472262491016,
-        "awayWin": 0.3473144013643718,
-        "expectedHome": 1.7,
-        "expectedAway": 1.55
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.8461,
-            "sampling_se": 0.0025516150767700054
-          },
-          "over25": {
-            "probability": 0.6356,
-            "sampling_se": 0.0034030327650494347
-          },
-          "btts": {
-            "probability": 0.6524,
-            "sampling_se": 0.003367300402399525
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-27",
       "league": "İngiltere Championship",
       "match": "Southampton FC – Middlesbrough FC",
       "expectedGoals": {
@@ -315,68 +253,6 @@
           "btts": {
             "probability": 0.6251,
             "sampling_se": 0.0034230833323189783
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-27",
-      "league": "Türkiye Süper Lig",
-      "match": "alanyaspor – konyaspor",
-      "expectedGoals": {
-        "home": 1.5,
-        "away": 1.1
-      },
-      "poisson": {
-        "over15": 0.7326151184283981,
-        "over25": 0.48157042406394956,
-        "btts": 0.5182723343678245
-      },
-      "experimentalDixonColes": {
-        "over15": 0.7387426886310806,
-        "over25": 0.48157042406394956,
-        "btts": 0.5243999045705071
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.12867897425633346
-          },
-          {
-            "home": 1,
-            "away": 0,
-            "probability": 0.10528279711881826
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09191355304023818
-          }
-        ],
-        "topScoresCombined": 0.3258753244153899,
-        "homeWin": 0.45811661558410793,
-        "draw": 0.2699223551814157,
-        "awayWin": 0.27196102923447635,
-        "expectedHome": 1.5,
-        "expectedAway": 1.1
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.73685,
-            "sampling_se": 0.0031136961757692416
-          },
-          "over25": {
-            "probability": 0.4829,
-            "sampling_se": 0.0035334656500382172
-          },
-          "btts": {
-            "probability": 0.52345,
-            "sampling_se": 0.0035316433674707306
           }
         }
       }

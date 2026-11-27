@@ -1,7 +1,7 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-27T18:58:10.668467+03:00",
-  "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+  "updatedAt": "2026-11-27T22:54:11.555695+03:00",
+  "dailyUpdatedAt": "2026-11-27T22:53:31+03:00",
   "cutoffExclusive": "2026-11-27",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -6917,156 +6917,6 @@
       "error": null,
       "rows": [
         {
-          "date": "2026-11-27",
-          "league": "Türkiye Süper Lig",
-          "match": "alanyaspor – konyaspor",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.3,
-                "againstAverage": 4.0
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.7,
-                "againstAverage": 2.6
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.1
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 11.4,
-                "againstAverage": 16.1
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 3.4,
-                "againstAverage": 5.1
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.2,
-                "againstAverage": 0.9
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 3.3,
-                "againstAverage": 5.0
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 2.1,
-                "againstAverage": 2.1
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.1,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 10.1,
-                "againstAverage": 12.0
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 2.9,
-                "againstAverage": 4.1
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.4,
-                "againstAverage": 0.6
-              }
-            }
-          }
-        },
-        {
-          "date": "2026-11-27",
-          "league": "Türkiye Süper Lig",
-          "match": "rizespor – kasimpasa",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.3,
-                "againstAverage": 5.4
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.9,
-                "againstAverage": 2.0
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.1,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 14.5,
-                "againstAverage": 15.2
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 4.7,
-                "againstAverage": 5.2
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.8,
-                "againstAverage": 0.4
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.6,
-                "againstAverage": 5.6
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 2.8,
-                "againstAverage": 2.2
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.1
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 13.8,
-                "againstAverage": 13.2
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 4.6,
-                "againstAverage": 4.4
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.7,
-                "againstAverage": 0.6
-              }
-            }
-          }
-        },
-        {
           "date": "2026-11-28",
           "league": "Türkiye Süper Lig",
           "match": "gaziantep – amed",
@@ -7367,6 +7217,81 @@
           }
         },
         {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "fenerbahce – erzurum bb",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 5.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.5,
+                "againstAverage": 15.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.9,
+                "againstAverage": 4.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 0.3
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.6,
+                "againstAverage": 4.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.6,
+                "againstAverage": 14.7
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 4.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
           "date": "2026-11-30",
           "league": "Türkiye Süper Lig",
           "match": "goztepe – trabzonspor",
@@ -7445,7 +7370,7 @@
     }
   ],
   "respondingLeagues": 9,
-  "fixtureCount": 97,
+  "fixtureCount": 96,
   "predictionsEnabled": false,
   "realBettingEnabled": false,
   "decision": "PAS"

@@ -1,16 +1,16 @@
 {
   "version": "4.9-research",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-27T15:58:05.031120+00:00",
+  "updatedAt": "2026-11-27T19:54:05.214728+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "1.5",
   "comparedCount": 0,
   "rows": [],
   "diagnostics": {
-    "matched": 69,
+    "matched": 64,
     "rejected": {
-      "fewer_than_three_valid_fresh_15_books": 69
+      "fewer_than_three_valid_fresh_15_books": 64
     }
   }
 }

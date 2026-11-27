@@ -1,11 +1,11 @@
 {
   "version": "4.70",
-  "updatedAt": "2026-11-27T15:58:07.393573+00:00",
+  "updatedAt": "2026-11-27T19:54:06.894368+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "prospective": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T15:58:07.393573+00:00",
+    "updatedAt": "2026-11-27T19:54:06.894368+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -132,17 +132,6 @@
       },
       {
         "league": "it.1",
-        "home": "Venezia FC",
-        "away": "Bologna FC 1909",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "e9a663f13e7503c0ac20a54804338b60",
-        "kickoff": "2026-11-27T19:45:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
         "home": "US Lecce",
         "away": "Atalanta BC",
         "archivedDate": "2026-11-29",
@@ -231,13 +220,13 @@
       }
     ],
     "counts": {
-      "review_pending": 20
+      "review_pending": 19
     },
     "decision": "PAS"
   },
   "performance": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T15:58:07.393573+00:00",
+    "updatedAt": "2026-11-27T19:54:06.894368+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -364,17 +353,6 @@
       },
       {
         "league": "it.1",
-        "home": "Venezia FC",
-        "away": "Bologna FC 1909",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "e9a663f13e7503c0ac20a54804338b60",
-        "kickoff": "2026-11-27T19:45:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
         "home": "US Lecce",
         "away": "Atalanta BC",
         "archivedDate": "2026-11-29",
@@ -463,7 +441,7 @@
       }
     ],
     "counts": {
-      "review_pending": 20
+      "review_pending": 19
     },
     "decision": "PAS"
   }

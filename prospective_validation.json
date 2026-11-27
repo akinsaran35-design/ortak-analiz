@@ -2,14 +2,16 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-27T18:58:02.854760+03:00",
-  "recorded": 179,
+  "updatedAt": "2026-11-27T22:54:02.229101+03:00",
+  "recorded": 180,
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "captureWindowDays": 14,
   "captureCounts": {
     "already_recorded": 169,
-    "insufficient_history": 10
+    "insufficient_history": 10,
+    "new": 1,
+    "recovered_identity": 1
   },
   "missingHistory": [
     {
@@ -192,9 +194,9 @@
     }
   },
   "tested": 4,
-  "pending": 175,
+  "pending": 176,
   "pendingDateStatus": {
-    "future": 169,
+    "future": 170,
     "today": 6,
     "past": 0,
     "invalidDate": 0
@@ -205,20 +207,46 @@
   "status": "collecting_data",
   "errors": [],
   "marketResearchVersion": "4.85",
+  "classificationVersion": "6.19",
   "marketResearch": {
     "1.5 Üst": {
       "tested": 0,
-      "pending": 89,
+      "pending": 90,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},
       "minimumMatches": 500,
       "status": "research_only",
-      "liveEnabled": false
+      "liveEnabled": false,
+      "classification": {
+        "threshold": 0.5,
+        "model": "candidate",
+        "descriptiveOnly": true,
+        "tested": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "periods": {
+          "1": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          },
+          "7": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          },
+          "30": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          }
+        }
+      }
     },
     "2.5 Üst": {
       "tested": 4,
-      "pending": 175,
+      "pending": 176,
       "legacyWithoutForecast": 0,
       "invalid": 0,
       "scores": {
@@ -228,17 +256,67 @@
       },
       "minimumMatches": 500,
       "status": "research_only",
-      "liveEnabled": false
+      "liveEnabled": false,
+      "classification": {
+        "threshold": 0.5,
+        "model": "candidate",
+        "descriptiveOnly": true,
+        "tested": 4,
+        "correct": 2,
+        "incorrect": 2,
+        "periods": {
+          "1": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          },
+          "7": {
+            "tested": 4,
+            "correct": 2,
+            "incorrect": 2
+          },
+          "30": {
+            "tested": 4,
+            "correct": 2,
+            "incorrect": 2
+          }
+        }
+      }
     },
     "KG Var": {
       "tested": 0,
-      "pending": 89,
+      "pending": 90,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},
       "minimumMatches": 500,
       "status": "research_only",
-      "liveEnabled": false
+      "liveEnabled": false,
+      "classification": {
+        "threshold": 0.5,
+        "model": "candidate",
+        "descriptiveOnly": true,
+        "tested": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "periods": {
+          "1": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          },
+          "7": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          },
+          "30": {
+            "tested": 0,
+            "correct": 0,
+            "incorrect": 0
+          }
+        }
+      }
     }
   },
   "scores": {

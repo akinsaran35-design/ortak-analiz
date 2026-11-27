@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-27T18:58:09.515462+03:00",
+  "updatedAt": "2026-11-27T22:54:08.944282+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -156,10 +156,13 @@
           "home": "OH Leuven",
           "away": "KV Kortrijk",
           "kickoff": "2026-11-27T19:45:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "7'",
+          "score": [
+            1,
+            0
+          ],
           "date": "2026-11-27"
         },
         {
@@ -272,10 +275,13 @@
           "home": "Grazer AK",
           "away": "SC Rheindorf Altach",
           "kickoff": "2026-11-27T18:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "68'",
+          "score": [
+            1,
+            2
+          ],
           "date": "2026-11-27"
         },
         {
@@ -371,10 +377,13 @@
           "home": "Sønderjyske Fodbold",
           "away": "Brøndby IF",
           "kickoff": "2026-11-27T18:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "90'+4'",
+          "score": [
+            1,
+            1
+          ],
           "date": "2026-11-27"
         },
         {
@@ -800,11 +809,11 @@
           "home": "Al Qadsiah",
           "away": "Al Fayha",
           "kickoff": "2026-11-27T14:20:00+00:00",
-          "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "80'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
           "score": [
-            1,
+            2,
             0
           ],
           "date": "2026-11-27"
@@ -814,10 +823,13 @@
           "home": "Al Ittihad",
           "away": "Neom SC",
           "kickoff": "2026-11-27T17:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
+          "score": [
+            1,
+            0
+          ],
           "date": "2026-11-27"
         },
         {

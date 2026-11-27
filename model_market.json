@@ -1,6 +1,6 @@
 {
   "version": "4.12",
-  "updatedAt": "2026-11-27T15:58:07.155019+00:00",
+  "updatedAt": "2026-11-27T19:54:06.745874+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
@@ -14,29 +14,11 @@
       "marketLabel": "2.5 Üst",
       "bookCount": 3,
       "modelProbabilityUncalibrated": 0.463,
-      "marketProbability": 0.417755,
-      "differencePP": 4.5245,
+      "marketProbability": 0.426316,
+      "differencePP": 3.6684,
       "bestBookmaker": "matchbook",
-      "bestOdds": 2.4,
-      "estimatedEV": 0.1112,
-      "decision": "PAS",
-      "movementDirection": null,
-      "movementPP": null,
-      "movementBookmakers": 0
-    },
-    {
-      "eventId": "02ff879cf54f6d1fec2664efee0431db",
-      "match": "Stade Brestois 29 – Paris FC",
-      "kickoff": "2026-11-27T19:45:00+00:00",
-      "market": "over25",
-      "marketLabel": "2.5 Üst",
-      "bookCount": 4,
-      "modelProbabilityUncalibrated": 0.599,
-      "marketProbability": 0.509333,
-      "differencePP": 8.9667,
-      "bestBookmaker": "leovegas",
-      "bestOdds": 1.85,
-      "estimatedEV": 0.10815,
+      "bestOdds": 2.36,
+      "estimatedEV": 0.09268,
       "decision": "PAS",
       "movementDirection": null,
       "movementPP": null,
@@ -45,10 +27,10 @@
   ],
   "rejected": {
     "extra_report_unavailable": 1,
-    "missing_or_mismatched_extra_event": 14,
-    "insufficient_valid_market_data": 5,
+    "missing_or_mismatched_extra_event": 4,
+    "insufficient_valid_market_data": 1,
     "not_today": 62
   },
   "errors": [],
-  "comparedCount": 2
+  "comparedCount": 1
 }

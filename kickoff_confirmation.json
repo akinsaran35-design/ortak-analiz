@@ -1,14 +1,14 @@
 {
   "version": "4.94",
-  "updatedAt": "2026-11-27T18:58:09.204270+03:00",
-  "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
-  "coverageUpdatedAt": "2026-11-27T18:58:08.497881+03:00",
-  "oddsUpdatedAt": "2026-11-27T15:46:42.974729+00:00",
+  "updatedAt": "2026-11-27T22:54:08.740677+03:00",
+  "dailyUpdatedAt": "2026-11-27T22:53:31+03:00",
+  "coverageUpdatedAt": "2026-11-27T22:54:07.723261+03:00",
+  "oddsUpdatedAt": "2026-11-27T19:53:28.886385+00:00",
   "mode": "research_only",
   "available": true,
   "counts": {
-    "agreed": 72,
-    "unmatched": 5
+    "agreed": 73,
+    "unmatched": 4
   },
   "rows": [
     {
@@ -27740,9 +27740,153 @@
       "date": "2026-11-29",
       "kickoff": "2026-11-29T16:00:00+00:00",
       "espnEventId": "401888238",
-      "oddsEventId": null,
-      "published": [],
-      "status": "unmatched"
+      "oddsEventId": "84823d7f9d7deb307b17327b31aefa51",
+      "published": [
+        {
+          "date": "2026-11-29",
+          "league": "Türkiye Süper Lig",
+          "match": "fenerbahce – erzurum bb",
+          "formResearch": {
+            "version": "5.06",
+            "asOfExclusive": "2026-11-27",
+            "scope": "available_league_history_only",
+            "sourceConflictsExcluded": 0,
+            "home": {
+              "sample": 5,
+              "rows": [
+                {
+                  "date": "2026-11-21",
+                  "opponent": "kocaelispor",
+                  "gf": 2,
+                  "ga": 2,
+                  "venue": "away",
+                  "result": "D"
+                },
+                {
+                  "date": "2026-11-08",
+                  "opponent": "corum",
+                  "gf": 5,
+                  "ga": 0,
+                  "venue": "away",
+                  "result": "W"
+                },
+                {
+                  "date": "2026-10-31",
+                  "opponent": "goztepe",
+                  "gf": 1,
+                  "ga": 2,
+                  "venue": "home",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "galatasaray",
+                  "gf": 1,
+                  "ga": 2,
+                  "venue": "away",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "alanyaspor",
+                  "gf": 3,
+                  "ga": 0,
+                  "venue": "home",
+                  "result": "W"
+                }
+              ],
+              "wins": 2,
+              "draws": 1,
+              "losses": 2,
+              "goalsFor": 12,
+              "goalsAgainst": 6,
+              "source": "football-data.co.uk",
+              "latestCompletedDate": "2026-11-21"
+            },
+            "away": {
+              "sample": 5,
+              "rows": [
+                {
+                  "date": "2026-11-22",
+                  "opponent": "goztepe",
+                  "gf": 0,
+                  "ga": 1,
+                  "venue": "home",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-11-08",
+                  "opponent": "rizespor",
+                  "gf": 1,
+                  "ga": 2,
+                  "venue": "away",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-10-31",
+                  "opponent": "corum",
+                  "gf": 1,
+                  "ga": 3,
+                  "venue": "home",
+                  "result": "L"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "gaziantep",
+                  "gf": 3,
+                  "ga": 1,
+                  "venue": "away",
+                  "result": "W"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "eyupspor",
+                  "gf": 2,
+                  "ga": 0,
+                  "venue": "home",
+                  "result": "W"
+                }
+              ],
+              "wins": 2,
+              "draws": 0,
+              "losses": 3,
+              "goalsFor": 7,
+              "goalsAgainst": 7,
+              "source": "football-data.co.uk",
+              "latestCompletedDate": "2026-11-22"
+            },
+            "h2h": [],
+            "injuriesAvailable": false,
+            "lineupsAvailable": false,
+            "advancedStatsAvailable": false,
+            "h2hCoverage": {
+              "version": "5.28",
+              "source": "original_league_history",
+              "requestedSeasons": 6,
+              "loadedSeasons": [
+                2026,
+                2025,
+                2024,
+                2023,
+                2022,
+                2021
+              ],
+              "failedSeasons": [],
+              "limit": 12,
+              "sample": 0,
+              "csvMatchesAvailable": 0,
+              "conflictsExcluded": 0,
+              "scope": "same_league_only",
+              "extraDivision": null,
+              "extraLoadedSeasons": [],
+              "extraFailedSeasons": [],
+              "crossDivisionMatches": 0,
+              "predictionsEnabled": false
+            }
+          }
+        }
+      ],
+      "status": "agreed"
     },
     {
       "league": "tr.1",

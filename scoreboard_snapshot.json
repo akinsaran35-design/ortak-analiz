@@ -1,6 +1,6 @@
 {
   "version": "4.90",
-  "updatedAt": "2026-11-27T18:58:08.173919+03:00",
+  "updatedAt": "2026-11-27T22:54:07.392234+03:00",
   "date": "2026-11-27",
   "mode": "scoreboard_snapshot",
   "source": "ESPN",
@@ -53,10 +53,13 @@
           "home": "Werder Bremen",
           "away": "Borussia Mönchengladbach",
           "kickoff": "2026-11-27T19:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_IN_PROGRESS",
+          "clock": "23'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -91,10 +94,13 @@
           "home": "Venezia",
           "away": "Bologna",
           "kickoff": "2026-11-27T19:45:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "8'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -110,10 +116,13 @@
           "home": "Brest",
           "away": "Paris FC",
           "kickoff": "2026-11-27T19:45:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "9'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -129,10 +138,13 @@
           "home": "FC Groningen",
           "away": "Willem II",
           "kickoff": "2026-11-27T19:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+4'",
+          "score": [
+            0,
+            1
+          ]
         }
       ],
       "invalid": 0,
@@ -167,20 +179,26 @@
           "home": "Alanyaspor",
           "away": "Konyaspor",
           "kickoff": "2026-11-27T17:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+8'",
+          "score": [
+            1,
+            2
+          ]
         },
         {
           "eventId": "401888240",
           "home": "Caykur Rizespor",
           "away": "Kasimpasa",
           "kickoff": "2026-11-27T17:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
+          "score": [
+            3,
+            2
+          ]
         }
       ],
       "invalid": 0,
@@ -189,7 +207,7 @@
   ],
   "loadedLeagues": 9,
   "eventCount": 10,
-  "inProgress": 0,
+  "inProgress": 4,
   "realTime": false,
   "usedForSettlement": false,
   "usedForPredictions": false

@@ -1,44 +1,14 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-27T15:57:56.683050+00:00",
+  "updatedAt": "2026-11-27T19:53:54.022161+00:00",
   "decision": "PAS",
-  "matchedCount": 69,
-  "unmatchedCount": 21,
+  "matchedCount": 64,
+  "unmatchedCount": 24,
   "matched": [
-    {
-      "match": "FC Groningen – Willem II Tilburg",
-      "eventId": "7aa2e13c09deb4fbd70e62312e82a514",
-      "kickoff": "2026-11-27T19:00:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "SV Werder Bremen – Borussia Mönchengladbach",
-      "eventId": "698f4a7967ead89e10205a68ceb4bda4",
-      "kickoff": "2026-11-27T19:30:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "rizespor – kasimpasa",
-      "eventId": "b50ce64bf9ca7a1a03eb6b9d534e93ce",
-      "kickoff": "2026-11-27T17:00:00+00:00",
-      "freshLineCount": 2
-    },
     {
       "match": "Southampton FC – Middlesbrough FC",
       "eventId": "32b8e3ea76d9d8b2b36577063d40862e",
       "kickoff": "2026-11-27T20:00:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "Stade Brestois 29 – Paris FC",
-      "eventId": "02ff879cf54f6d1fec2664efee0431db",
-      "kickoff": "2026-11-27T19:45:00+00:00",
-      "freshLineCount": 4
-    },
-    {
-      "match": "alanyaspor – konyaspor",
-      "eventId": "ffcd87d9e41dbce42bd91952669b2e47",
-      "kickoff": "2026-11-27T17:00:00+00:00",
       "freshLineCount": 2
     },
     {
@@ -111,7 +81,7 @@
       "match": "gaziantep – amed",
       "eventId": "4001fed3da6baa90d8b6278f43a77af1",
       "kickoff": "2026-11-28T16:00:00+00:00",
-      "freshLineCount": 1
+      "freshLineCount": 2
     },
     {
       "match": "Birmingham City FC – Bolton Wanderers FC",
@@ -135,7 +105,7 @@
       "match": "Queens Park Rangers FC – Sheffield United FC",
       "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "Millwall FC – Burnley FC",
@@ -207,7 +177,7 @@
       "match": "Académico de Viseu FC – FC Alverca",
       "eventId": "ee7e0fb3eb049d403134cefaf634c7d5",
       "kickoff": "2026-11-28T18:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 3
     },
     {
       "match": "Blackburn Rovers FC – Charlton Athletic FC",
@@ -411,7 +381,7 @@
       "match": "Brentford FC – Arsenal FC",
       "eventId": "5f5235df01a384e23ff224101ff175e1",
       "kickoff": "2026-12-02T20:15:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "Telstar 1963 – FC Groningen",
@@ -421,6 +391,27 @@
     }
   ],
   "unmatched": [
+    {
+      "match": "FC Groningen – Willem II Tilburg",
+      "league": "Hollanda Eredivisie",
+      "date": "2026-11-27",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "SV Werder Bremen – Borussia Mönchengladbach",
+      "league": "Almanya Bundesliga",
+      "date": "2026-11-27",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Stade Brestois 29 – Paris FC",
+      "league": "Fransa Ligue 1",
+      "date": "2026-11-27",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
     {
       "match": "Everton FC – Liverpool FC",
       "league": "İngiltere Premier Lig",
@@ -524,10 +515,8 @@
       "match": "Venezia FC – Bologna FC 1909",
       "league": "İtalya Serie A",
       "date": "2026-11-29",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-27"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "US Lecce – Atalanta BC",

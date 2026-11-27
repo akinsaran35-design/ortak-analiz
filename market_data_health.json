@@ -1,17 +1,17 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-27T15:58:33.302959+00:00",
+  "updatedAt": "2026-11-27T19:54:42.617948+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-27T15:46:42.974729+00:00",
-    "archivedEvents": 144,
-    "freshEvents": 72,
+    "snapshotAt": "2026-11-27T19:53:28.886385+00:00",
+    "archivedEvents": 139,
+    "freshEvents": 71,
     "rows": [
       {
         "eventId": "40d95e660c301c2d8a5a7a6317017b65",
         "league": "soccer_epl",
-        "freshBookmakers": 5
+        "freshBookmakers": 4
       },
       {
         "eventId": "0bc17a3c7d8153e72b94688960cc603a",
@@ -21,12 +21,12 @@
       {
         "eventId": "f45e9062c2f755b977c98d496c22697b",
         "league": "soccer_epl",
-        "freshBookmakers": 4
+        "freshBookmakers": 3
       },
       {
         "eventId": "56ea91809ff11d3a67557a21b3371cb9",
         "league": "soccer_epl",
-        "freshBookmakers": 5
+        "freshBookmakers": 4
       },
       {
         "eventId": "e12585885a7f135127f276b7f1ecdf89",
@@ -41,7 +41,7 @@
       {
         "eventId": "d20ede55e54ed7b55fdc36ca373727c0",
         "league": "soccer_epl",
-        "freshBookmakers": 4
+        "freshBookmakers": 3
       },
       {
         "eventId": "c7aff6bfea3ca1c4b177694977831b85",
@@ -66,7 +66,7 @@
       {
         "eventId": "5f5235df01a384e23ff224101ff175e1",
         "league": "soccer_epl",
-        "freshBookmakers": 5
+        "freshBookmakers": 4
       },
       {
         "eventId": "2198fb9aab762e9e1c8c6af4113a1d31",
@@ -116,7 +116,7 @@
       {
         "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
         "league": "soccer_efl_champ",
-        "freshBookmakers": 5
+        "freshBookmakers": 4
       },
       {
         "eventId": "c836236766f7859e3c1d61caa581abe1",
@@ -136,6 +136,11 @@
       {
         "eventId": "cd4d6b19f7f06ffc538fbbb6984fb4c4",
         "league": "soccer_germany_bundesliga",
+        "freshBookmakers": 3
+      },
+      {
+        "eventId": "c81520b9a9794749cfdab57f89bdeb16",
+        "league": "soccer_spain_la_liga",
         "freshBookmakers": 3
       },
       {
@@ -189,11 +194,6 @@
         "freshBookmakers": 3
       },
       {
-        "eventId": "e9a663f13e7503c0ac20a54804338b60",
-        "league": "soccer_italy_serie_a",
-        "freshBookmakers": 4
-      },
-      {
         "eventId": "aec86b479e922f437ba228b9a9d74da1",
         "league": "soccer_italy_serie_a",
         "freshBookmakers": 5
@@ -211,7 +211,7 @@
       {
         "eventId": "f1d2a6064d1452074570bbc656d36a20",
         "league": "soccer_italy_serie_a",
-        "freshBookmakers": 4
+        "freshBookmakers": 3
       },
       {
         "eventId": "3d57da6bdb20b65145bc2479ee5f2ae7",
@@ -254,11 +254,6 @@
         "freshBookmakers": 3
       },
       {
-        "eventId": "02ff879cf54f6d1fec2664efee0431db",
-        "league": "soccer_france_ligue_one",
-        "freshBookmakers": 4
-      },
-      {
         "eventId": "24b99950496c624f7124922fc1bda8bd",
         "league": "soccer_france_ligue_one",
         "freshBookmakers": 3
@@ -296,7 +291,7 @@
       {
         "eventId": "0664eb46841c1e73a465bfca504b9b54",
         "league": "soccer_france_ligue_one",
-        "freshBookmakers": 3
+        "freshBookmakers": 4
       },
       {
         "eventId": "ebe354c9e9e99226e30939d97baeca99",
@@ -341,7 +336,7 @@
       {
         "eventId": "ee7e0fb3eb049d403134cefaf634c7d5",
         "league": "soccer_portugal_primeira_liga",
-        "freshBookmakers": 4
+        "freshBookmakers": 3
       },
       {
         "eventId": "3348c02fd713356ec319779bd5edc561",
@@ -370,11 +365,11 @@
       }
     ],
     "region": "uk",
-    "remainingCredits": 143
+    "remainingCredits": 134
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-27T15:58:07.033939+00:00",
+    "reportAt": "2026-11-27T19:54:06.671356+00:00",
     "reportedMarkets": 0
   },
   "volume": {

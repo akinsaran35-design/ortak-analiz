@@ -1,7 +1,7 @@
 {
   "version": "5.37",
   "mode": "fixture_data_quality_only",
-  "dailyUpdatedAt": "2026-11-27T18:57:40+03:00",
+  "dailyUpdatedAt": "2026-11-27T22:53:31+03:00",
   "cutoffExclusive": "2026-11-27",
   "predictionsEnabled": false,
   "decision": "PAS",
@@ -5364,126 +5364,12 @@
       "league": "tr.1",
       "leagueName": "Türkiye Süper Lig",
       "latestLeagueResultAgeDays": 4,
-      "fixtures": 7,
+      "fixtures": 6,
       "flags": {
-        "h2h:missing": 2,
+        "h2h:missing": 3,
         "h2h:partial": 2
       },
       "rows": [
-        {
-          "date": "2026-11-27",
-          "match": "alanyaspor – konyaspor",
-          "form": {
-            "home": {
-              "status": "available",
-              "sample": 5,
-              "latestAgeDays": 5
-            },
-            "away": {
-              "status": "available",
-              "sample": 5,
-              "latestAgeDays": 5
-            }
-          },
-          "h2h": {
-            "sample": 10,
-            "status": "available"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            },
-            "away": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 5,
-              "corners": 5,
-              "yellowCards": 5,
-              "redCards": 5,
-              "shots": 5,
-              "shotsOnTarget": 5
-            },
-            "away": {
-              "halfTimeGoals": 5,
-              "corners": 5,
-              "yellowCards": 5,
-              "redCards": 5,
-              "shots": 5,
-              "shotsOnTarget": 5
-            }
-          },
-          "flags": []
-        },
-        {
-          "date": "2026-11-27",
-          "match": "rizespor – kasimpasa",
-          "form": {
-            "home": {
-              "status": "available",
-              "sample": 5,
-              "latestAgeDays": 6
-            },
-            "away": {
-              "status": "available",
-              "sample": 5,
-              "latestAgeDays": 5
-            }
-          },
-          "h2h": {
-            "sample": 8,
-            "status": "available"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            },
-            "away": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 5,
-              "corners": 5,
-              "yellowCards": 5,
-              "redCards": 5,
-              "shots": 5,
-              "shotsOnTarget": 5
-            },
-            "away": {
-              "halfTimeGoals": 6,
-              "corners": 6,
-              "yellowCards": 6,
-              "redCards": 6,
-              "shots": 6,
-              "shotsOnTarget": 6
-            }
-          },
-          "flags": []
-        },
         {
           "date": "2026-11-28",
           "match": "gaziantep – amed",
@@ -5718,6 +5604,65 @@
           },
           "flags": [
             "h2h:partial"
+          ]
+        },
+        {
+          "date": "2026-11-29",
+          "match": "fenerbahce – erzurum bb",
+          "form": {
+            "home": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            },
+            "away": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 5
+            }
+          },
+          "h2h": {
+            "sample": 0,
+            "status": "missing"
+          },
+          "metricSamples": {
+            "home": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            },
+            "away": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            }
+          },
+          "venueMetricSamples": {
+            "home": {
+              "halfTimeGoals": 5,
+              "corners": 5,
+              "yellowCards": 5,
+              "redCards": 5,
+              "shots": 5,
+              "shotsOnTarget": 5
+            },
+            "away": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            }
+          },
+          "flags": [
+            "h2h:missing"
           ]
         },
         {
