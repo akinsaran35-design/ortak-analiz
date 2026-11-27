@@ -8,7 +8,7 @@ MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
 # Expanded historical audit. Prior research may overlap; do not add totals without ID deduplication.
-start=date.fromisoformat(os.environ.get("CROSS_START","2026-07-01"))
+start=date.fromisoformat(os.environ.get("CROSS_START","2026-05-01"))
 days=int(os.environ.get("CROSS_DAYS","31"))
 if holdout and (not 1<=days<=31 or start+timedelta(days=days-1)>=now.date()):
     raise ValueError("Historical window must contain 1-31 completed local dates")
