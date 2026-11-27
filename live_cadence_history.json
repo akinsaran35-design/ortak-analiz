@@ -158,5 +158,13 @@
     "requested": 0,
     "freshAtBuild": 0,
     "sourceIssues": 0
+  },
+  {
+    "startedAt": "2026-11-28T02:23:06.327317+03:00",
+    "endedAt": "2026-11-28T02:23:08.697694+03:00",
+    "detected": 0,
+    "requested": 0,
+    "freshAtBuild": 0,
+    "sourceIssues": 0
   }
 ]
