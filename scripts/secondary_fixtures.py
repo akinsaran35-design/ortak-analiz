@@ -25,9 +25,14 @@ def build(token,now):
         with urlopen(Request(url,headers={"X-Auth-Token":token}),timeout=20) as response:out["rows"]=parse(json.load(response))
         out["status"]="observed" if out["rows"] else "empty"
     except HTTPError as e:out["status"]="HTTP_"+str(e.code)
-    except (URLError,OSError,ValueError,TypeError,KeyError):out["status"]="source_or_schema_error"
+    except (URLError,OSError,ValueError,TypeError,KeyError) as exc:
+        out["status"]="source_or_schema_error"
+        out["errorType"]=type(exc).__name__
+        if isinstance(exc,KeyError):out["missingField"]=str(exc)[:80]
+        elif isinstance(exc,ValueError):out["validationFailure"]=str(exc) if str(exc) in ("identity","score") else "invalid_value"
+        elif isinstance(exc,URLError):out["networkErrorType"]=type(exc.reason).__name__
     return out
 if __name__=="__main__":
     r=build(os.environ.get("FOOTBALL_DATA_TOKEN"),datetime.now(timezone.utc))
     Path("secondary_fixtures.json").write_text(json.dumps(r,indent=2))
-    print(r["status"],len(r["rows"]))
+    print(r["status"],len(r["rows"]),{k:v for k,v in r.items() if k in ("errorType","missingField","validationFailure","networkErrorType")})
