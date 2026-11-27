@@ -1,0 +1,25 @@
+name: V5.52 league average research
+on:
+  pull_request:
+    paths:
+      - 'scripts/*league_average_research.py'
+      - '.github/workflows/league-average-research.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_league_average_research.py
+      - run: python scripts/league_average_research.py > league_average_research.json
+      - run: python -c "import json; r=json.load(open('league_average_research.json')); assert any(g['metrics']['goals']['sample'] for g in r['groups'])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: league-average-research
+          path: league_average_research.json
