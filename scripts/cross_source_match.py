@@ -9,6 +9,8 @@ for league,names in {"en.1":{"Manchester City FC":"Manchester City","Fulham FC":
     ALIASES.setdefault(league,{}).update(names)
 for league,names in {"en.1":{"Sunderland AFC":"Sunderland","Crystal Palace FC":"Crystal Palace","Tottenham Hotspur FC":"Tottenham Hotspur"},"en.2":{"Cardiff City FC":"Cardiff City","Swansea City AFC":"Swansea City"},"de.1":{"Bayer 04 Leverkusen":"Bayer Leverkusen","TSG 1899 Hoffenheim":"TSG Hoffenheim"},"it.1":{"Como 1907":"Como","Cagliari Calcio":"Cagliari","US Lecce":"Lecce"},"fr.1":{"AS Monaco FC":"AS Monaco","Toulouse FC":"Toulouse","Olympique Lyonnais":"Lyon"},"nl.1":{"SC Heerenveen":"Heerenveen"}}.items():
     ALIASES.setdefault(league,{}).update(names)
+for league,names in {"en.1":{"Everton FC":"Everton","Coventry City FC":"Coventry City","Leeds United FC":"Leeds United","Hull City AFC":"Hull City","Nottingham Forest FC":"Nottingham Forest"},"es.1":{"CA Osasuna":"Osasuna"},"it.1":{"Udinese Calcio":"Udinese","US Sassuolo Calcio":"Sassuolo"},"pt.1":{"FC Famalicão":"FC Famalicao","Casa Pia AC":"Casa Pia","Sporting Clube de Portugal":"Sporting CP"}}.items():
+    ALIASES.setdefault(league,{}).update(names)
 ALIASES={league:{norm(k):norm(v) for k,v in names.items()} for league,names in ALIASES.items()}
 def secondary_name(league,name):
     return ALIASES.get(league,{}).get(norm(name),norm(name))
