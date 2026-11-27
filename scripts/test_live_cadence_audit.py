@@ -17,6 +17,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(r["within180Minutes"]["within5"],1)
         self.assertEqual(r["within180Minutes"]["within15"],2)
         self.assertFalse(r["scheduleGuaranteed"])
+        self.assertEqual(r["scheduledIntervalMinutes"],5)
     def test_status(self):
         a=[]
         for i,args in enumerate(((0,0,0,0),(2,2,0,0),(3,2,1,0),(2,2,2,0),(0,0,0,1))):
