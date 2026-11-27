@@ -19,7 +19,8 @@ def team_key(name):
         "kasimpasa sk":"kasimpasa","kasimpasa as":"kasimpasa","istanbul basaksehir":"basaksehir",
         "istanbul basaksehir fk":"basaksehir","basaksehir fk":"basaksehir","buyuksehir belediye erzurumspor":"erzurumspor",
         "bb erzurumspor":"erzurumspor","erzurumspor fk":"erzurumspor","gaziantep fk":"gaziantep",
-        "gaziantep bb":"gaziantep","atiker konyaspor":"konyaspor","aytemiz alanyaspor":"alanyaspor",
+        "gaziantep bb":"gaziantep","gazisehir gaziantep":"gaziantep","gazisehir gaziantep fk":"gaziantep",
+        "torku konyaspor":"konyaspor","atiker konyaspor":"konyaspor","aytemiz alanyaspor":"alanyaspor",
         "caykur rizespor":"rizespor","goztepe sk":"goztepe","corum fk":"corum",
         "amed sk":"amed","amedspor":"amed","genclerbirligi sk":"genclerbirligi",
         "eyupspor fk":"eyupspor","trabzonspor as":"trabzonspor"
