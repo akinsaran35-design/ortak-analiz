@@ -21,6 +21,10 @@ RESULT_ALIASES={
     "tr.1":{"buyuksehyr":"basaksehir","erzurum bb":"erzurumspor","goztep":"goztepe"},
 }
 
+# V5.39: exact names verified against source identity audit run 45940607825.
+for _code, _names in {"en.1":{"coventry":"coventry city","ipswich":"ipswich town","leeds":"leeds united","man city":"manchester city","newcastle":"newcastle united","nott m forest":"nottingham forest","tottenham":"tottenham hotspur"},"de.1":{"1 koln":"koln","fsv mainz 05":"mainz","hamburger sv":"hamburg sv","sv 07 elversberg":"sv elversberg"},"es.1":{"ath bilbao":"athletic bilbao","ca osasuna":"osasuna","celta":"celta vigo","la coruna":"deportivo la coruna","espanol":"espanyol","vallecano":"rayo vallecano","betis":"real betis","real racing club de santander":"racing santander"},"it.1":{"as roma":"roma","atalanta bc":"atalanta"},"fr.1":{"es troyes ac":"troyes","ogc nice":"nice","rc lens":"lens"},"nl.1":{"twente":"twente enschede"},"pt.1":{"cs maritimo":"maritimo"}}.items():
+    RESULT_ALIASES[_code].update(_names)
+
 def result_key(name,code,sport):
     n=key(name) if code=="en.2" else canonical(name,sport)
     return RESULT_ALIASES.get(code,{}).get(n,n)
