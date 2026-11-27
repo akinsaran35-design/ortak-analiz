@@ -1,22 +1,22 @@
 {
   "version": "5.58",
   "mode": "collection_cadence_audit_only",
-  "updatedAt": "2026-11-27T14:32:29.092083+03:00",
+  "updatedAt": "2026-11-27T15:33:19.340778+03:00",
   "scheduledIntervalMinutes": 5,
   "scheduleGuaranteed": false,
   "sourceTimestampVerified": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "runs": 9,
+  "runs": 10,
   "counts": {
-    "no_live_detected": 7,
+    "no_live_detected": 8,
     "fresh_observation": 2
   },
-  "actualGapCount": 8,
+  "actualGapCount": 9,
   "gapsOver180Minutes": 0,
   "within180Minutes": {
-    "sample": 8,
-    "median": 38.24,
+    "sample": 9,
+    "median": 51.43,
     "p90": 162.65,
     "max": 162.65,
     "within5": 0,
@@ -24,8 +24,8 @@
     "within15": 0
   },
   "latestRun": {
-    "startedAt": "2026-11-27T14:32:07.224489+03:00",
-    "endedAt": "2026-11-27T14:32:09.231416+03:00",
+    "startedAt": "2026-11-27T15:33:03.864795+03:00",
+    "endedAt": "2026-11-27T15:33:05.947777+03:00",
     "detected": 0,
     "requested": 0,
     "freshAtBuild": 0,
