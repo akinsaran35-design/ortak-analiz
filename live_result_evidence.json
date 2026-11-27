@@ -1,9 +1,12 @@
 {
   "version": "5.22",
-  "updatedAt": "2026-11-27T23:30:01.310265+03:00",
+  "updatedAt": "2026-11-28T00:28:11.918455+03:00",
   "mode": "research_only",
   "verified": [],
   "blocked": [],
-  "attempts": {},
-  "groupsQueried": 0
+  "attempts": {
+    "de.1:2026-11-27": "2026-11-28T00:28:11.918455+03:00",
+    "en.2:2026-11-27": "2026-11-28T00:28:11.918455+03:00"
+  },
+  "groupsQueried": 2
 }

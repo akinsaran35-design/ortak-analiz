@@ -1,18 +1,16 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-27T23:30:21.848604+03:00",
-  "sourceUpdatedAt": "2026-11-27T23:30:04.265911+03:00",
+  "updatedAt": "2026-11-28T00:28:32.993154+03:00",
+  "sourceUpdatedAt": "2026-11-28T00:28:15.072768+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "accepted": 7,
+  "accepted": 6,
   "archivedEvents": 10,
-  "archivedPoints": 13,
-  "reasons": {
-    "rejected_observation": 5
-  },
+  "archivedPoints": 19,
+  "reasons": {},
   "windowCounts": {
     "5": 0,
     "10": 0,
@@ -25,9 +23,9 @@
       "home": "Maritimo",
       "away": "C.D. Nacional",
       "kickoff": "2026-11-27T20:15:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.787918+03:00",
-      "minute": 14,
-      "observations": 1,
+      "receivedAt": "2026-11-28T00:28:15.001953+03:00",
+      "minute": 54,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -36,9 +34,9 @@
       "home": "Levante",
       "away": "Racing Santander",
       "kickoff": "2026-11-27T20:00:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.776844+03:00",
-      "minute": 28,
-      "observations": 1,
+      "receivedAt": "2026-11-28T00:28:14.958045+03:00",
+      "minute": 69,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -47,9 +45,9 @@
       "home": "Southampton",
       "away": "Middlesbrough",
       "kickoff": "2026-11-27T20:00:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.791721+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T00:28:14.951773+03:00",
+      "minute": 70,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -58,9 +56,9 @@
       "home": "Nottingham Forest",
       "away": "Chelsea",
       "kickoff": "2026-11-27T20:00:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.759649+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T00:28:14.967768+03:00",
+      "minute": 70,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -69,9 +67,9 @@
       "home": "Venezia",
       "away": "Bologna",
       "kickoff": "2026-11-27T19:45:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.943741+03:00",
-      "minute": 44,
-      "observations": 1,
+      "receivedAt": "2026-11-28T00:28:14.998057+03:00",
+      "minute": 83,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -80,19 +78,8 @@
       "home": "Brest",
       "away": "Paris FC",
       "kickoff": "2026-11-27T19:45:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.827999+03:00",
-      "minute": 45,
-      "observations": 1,
-      "windows": {}
-    },
-    {
-      "league": "nl.1",
-      "eventId": "401875536",
-      "home": "FC Groningen",
-      "away": "Willem II",
-      "kickoff": "2026-11-27T19:00:00+00:00",
-      "receivedAt": "2026-11-27T23:30:03.894093+03:00",
-      "minute": 66,
+      "receivedAt": "2026-11-28T00:28:14.943409+03:00",
+      "minute": 85,
       "observations": 2,
       "windows": {}
     }
