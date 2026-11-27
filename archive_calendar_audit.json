@@ -1,11 +1,11 @@
 {
   "version": "4.70",
-  "updatedAt": "2026-11-27T15:50:53.851823+00:00",
+  "updatedAt": "2026-11-27T15:58:07.393573+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "prospective": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T15:50:53.851823+00:00",
+    "updatedAt": "2026-11-27T15:58:07.393573+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -237,7 +237,7 @@
   },
   "performance": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T15:50:53.851823+00:00",
+    "updatedAt": "2026-11-27T15:58:07.393573+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
