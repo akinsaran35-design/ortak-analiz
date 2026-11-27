@@ -1,0 +1,300 @@
+{
+  "mode": "research_only",
+  "sourceRun": 46020355389,
+  "sourceJob": 140578088949,
+  "sourceQualityGate": "failure",
+  "month": "2026-07",
+  "scopeCoverage": {
+    "primaryCount": 28,
+    "secondaryCount": 28,
+    "matched": 28,
+    "primaryCoverage": 1,
+    "secondaryCoverage": 1,
+    "secondaryOnly": [],
+    "scoreCompared": 28,
+    "scoreMismatch": 0,
+    "status": "complete"
+  },
+  "verifiedScoreIds": [
+    {
+      "league": "bra.1",
+      "primaryId": "401841149",
+      "secondaryId": 554921,
+      "kickoff": "2026-07-16T22:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841157",
+      "secondaryId": 554929,
+      "kickoff": "2026-07-16T22:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401879459",
+      "secondaryId": 554770,
+      "kickoff": "2026-07-17T22:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841153",
+      "secondaryId": 554925,
+      "kickoff": "2026-07-17T23:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841155",
+      "secondaryId": 554927,
+      "kickoff": "2026-07-17T23:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841148",
+      "secondaryId": 554920,
+      "kickoff": "2026-07-21T22:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841152",
+      "secondaryId": 554924,
+      "kickoff": "2026-07-22T22:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841150",
+      "secondaryId": 554922,
+      "kickoff": "2026-07-23T00:30:00+00:00",
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841154",
+      "secondaryId": 554926,
+      "kickoff": "2026-07-23T00:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841156",
+      "secondaryId": 554928,
+      "kickoff": "2026-07-23T00:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401879458",
+      "secondaryId": 554771,
+      "kickoff": "2026-07-23T22:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841151",
+      "secondaryId": 554923,
+      "kickoff": "2026-07-23T22:30:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841158",
+      "secondaryId": 554930,
+      "kickoff": "2026-07-25T21:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841161",
+      "secondaryId": 554938,
+      "kickoff": "2026-07-25T21:30:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841160",
+      "secondaryId": 554939,
+      "kickoff": "2026-07-25T23:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841159",
+      "secondaryId": 554931,
+      "kickoff": "2026-07-26T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841167",
+      "secondaryId": 554933,
+      "kickoff": "2026-07-26T19:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841166",
+      "secondaryId": 554934,
+      "kickoff": "2026-07-26T21:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841165",
+      "secondaryId": 554935,
+      "kickoff": "2026-07-26T21:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841163",
+      "secondaryId": 554932,
+      "kickoff": "2026-07-26T21:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841164",
+      "secondaryId": 554936,
+      "kickoff": "2026-07-26T22:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841162",
+      "secondaryId": 554937,
+      "kickoff": "2026-07-26T22:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841171",
+      "secondaryId": 554946,
+      "kickoff": "2026-07-29T22:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841170",
+      "secondaryId": 554947,
+      "kickoff": "2026-07-29T22:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841177",
+      "secondaryId": 554945,
+      "kickoff": "2026-07-30T00:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841172",
+      "secondaryId": 554949,
+      "kickoff": "2026-07-30T00:30:00+00:00",
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841174",
+      "secondaryId": 554943,
+      "kickoff": "2026-07-30T22:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841173",
+      "secondaryId": 554944,
+      "kickoff": "2026-07-31T00:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    }
+  ]
+}

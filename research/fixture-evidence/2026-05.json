@@ -1,0 +1,3063 @@
+{
+  "mode": "research_only",
+  "sourceRun": 46022798824,
+  "sourceJob": 140586444765,
+  "sourceQualityGate": "failure",
+  "month": "2026-05",
+  "scopeCoverage": {
+    "primaryCount": 312,
+    "secondaryCount": 309,
+    "matched": 307,
+    "primaryCoverage": 0.9839743589743589,
+    "secondaryCoverage": 0.9935275080906149,
+    "secondaryOnly": [
+      554887,
+      557983
+    ],
+    "scoreCompared": 304,
+    "scoreMismatch": 0,
+    "status": "partial"
+  },
+  "verifiedScoreIds": [
+    {
+      "league": "en.1",
+      "primaryId": "740942",
+      "secondaryId": 538131,
+      "kickoff": "2026-05-01T19:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740939",
+      "secondaryId": 538128,
+      "kickoff": "2026-05-02T14:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740944",
+      "secondaryId": 538133,
+      "kickoff": "2026-05-02T14:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740945",
+      "secondaryId": 538134,
+      "kickoff": "2026-05-02T14:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740936",
+      "secondaryId": 538127,
+      "kickoff": "2026-05-02T16:30:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740938",
+      "secondaryId": 538125,
+      "kickoff": "2026-05-03T13:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740943",
+      "secondaryId": 538132,
+      "kickoff": "2026-05-03T14:30:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740937",
+      "secondaryId": 538126,
+      "kickoff": "2026-05-03T18:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740940",
+      "secondaryId": 538129,
+      "kickoff": "2026-05-04T14:00:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740941",
+      "secondaryId": 538130,
+      "kickoff": "2026-05-04T19:00:00+00:00",
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740950",
+      "secondaryId": 538140,
+      "kickoff": "2026-05-09T11:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740946",
+      "secondaryId": 538136,
+      "kickoff": "2026-05-09T14:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740949",
+      "secondaryId": 538139,
+      "kickoff": "2026-05-09T14:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740953",
+      "secondaryId": 538135,
+      "kickoff": "2026-05-09T14:00:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740951",
+      "secondaryId": 538141,
+      "kickoff": "2026-05-09T16:30:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740947",
+      "secondaryId": 538138,
+      "kickoff": "2026-05-10T13:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740948",
+      "secondaryId": 538137,
+      "kickoff": "2026-05-10T13:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740952",
+      "secondaryId": 538142,
+      "kickoff": "2026-05-10T13:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740955",
+      "secondaryId": 538144,
+      "kickoff": "2026-05-10T15:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740954",
+      "secondaryId": 538143,
+      "kickoff": "2026-05-11T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740902",
+      "secondaryId": 538091,
+      "kickoff": "2026-05-13T19:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740957",
+      "secondaryId": 538146,
+      "kickoff": "2026-05-15T19:00:00+00:00",
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740963",
+      "secondaryId": 538152,
+      "kickoff": "2026-05-17T11:30:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740959",
+      "secondaryId": 538148,
+      "kickoff": "2026-05-17T14:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740961",
+      "secondaryId": 538150,
+      "kickoff": "2026-05-17T14:00:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740962",
+      "secondaryId": 538151,
+      "kickoff": "2026-05-17T14:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740965",
+      "secondaryId": 538154,
+      "kickoff": "2026-05-17T14:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740964",
+      "secondaryId": 538153,
+      "kickoff": "2026-05-17T16:30:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740956",
+      "secondaryId": 538147,
+      "kickoff": "2026-05-18T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740958",
+      "secondaryId": 538145,
+      "kickoff": "2026-05-19T18:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740960",
+      "secondaryId": 538149,
+      "kickoff": "2026-05-19T19:15:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740966",
+      "secondaryId": 538156,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        0,
+        3
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740967",
+      "secondaryId": 538158,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740968",
+      "secondaryId": 538157,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740969",
+      "secondaryId": 538159,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740975",
+      "secondaryId": 538160,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740970",
+      "secondaryId": 538161,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740972",
+      "secondaryId": 538162,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740973",
+      "secondaryId": 538155,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740974",
+      "secondaryId": 538163,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "en.1",
+      "primaryId": "740971",
+      "secondaryId": 538164,
+      "kickoff": "2026-05-24T15:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745148",
+      "secondaryId": 541252,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745149",
+      "secondaryId": 541253,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745150",
+      "secondaryId": 541254,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745145",
+      "secondaryId": 541255,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745140",
+      "secondaryId": 541256,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745141",
+      "secondaryId": 541257,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745142",
+      "secondaryId": 541258,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745143",
+      "secondaryId": 541259,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745144",
+      "secondaryId": 541260,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745151",
+      "secondaryId": 541261,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745146",
+      "secondaryId": 541262,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "745147",
+      "secondaryId": 541263,
+      "kickoff": "2026-05-02T11:30:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401871353",
+      "secondaryId": 557841,
+      "kickoff": "2026-05-08T19:00:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401871354",
+      "secondaryId": 557840,
+      "kickoff": "2026-05-09T11:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "en.2",
+      "primaryId": "401871355",
+      "secondaryId": 557839,
+      "kickoff": "2026-05-11T19:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "746997",
+      "secondaryId": 540692,
+      "kickoff": "2026-05-02T13:30:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747001",
+      "secondaryId": 540691,
+      "kickoff": "2026-05-02T13:30:00+00:00",
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747000",
+      "secondaryId": 540693,
+      "kickoff": "2026-05-02T13:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747005",
+      "secondaryId": 540688,
+      "kickoff": "2026-05-02T13:30:00+00:00",
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747004",
+      "secondaryId": 540690,
+      "kickoff": "2026-05-02T13:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "746998",
+      "secondaryId": 540687,
+      "kickoff": "2026-05-02T16:30:00+00:00",
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747002",
+      "secondaryId": 540686,
+      "kickoff": "2026-05-03T13:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "746999",
+      "secondaryId": 540685,
+      "kickoff": "2026-05-03T15:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747003",
+      "secondaryId": 540689,
+      "kickoff": "2026-05-03T17:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747008",
+      "secondaryId": 540696,
+      "kickoff": "2026-05-08T18:30:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747009",
+      "secondaryId": 540699,
+      "kickoff": "2026-05-09T13:30:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747011",
+      "secondaryId": 540701,
+      "kickoff": "2026-05-09T13:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747012",
+      "secondaryId": 540698,
+      "kickoff": "2026-05-09T13:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747013",
+      "secondaryId": 540695,
+      "kickoff": "2026-05-09T13:30:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747014",
+      "secondaryId": 540694,
+      "kickoff": "2026-05-09T16:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747010",
+      "secondaryId": 540697,
+      "kickoff": "2026-05-10T13:30:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747006",
+      "secondaryId": 540702,
+      "kickoff": "2026-05-10T15:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747007",
+      "secondaryId": 540700,
+      "kickoff": "2026-05-10T17:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747015",
+      "secondaryId": 540704,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747016",
+      "secondaryId": 540708,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747017",
+      "secondaryId": 540711,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747020",
+      "secondaryId": 540710,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747018",
+      "secondaryId": 540709,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747023",
+      "secondaryId": 540706,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747019",
+      "secondaryId": 540705,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747021",
+      "secondaryId": 540707,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "de.1",
+      "primaryId": "747022",
+      "secondaryId": 540703,
+      "kickoff": "2026-05-16T13:30:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748476",
+      "secondaryId": 544546,
+      "kickoff": "2026-05-01T19:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748477",
+      "secondaryId": 544549,
+      "kickoff": "2026-05-02T12:00:00+00:00",
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748481",
+      "secondaryId": 544547,
+      "kickoff": "2026-05-02T14:15:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748482",
+      "secondaryId": 544541,
+      "kickoff": "2026-05-02T16:30:00+00:00",
+      "score": [
+        2,
+        4
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748480",
+      "secondaryId": 544548,
+      "kickoff": "2026-05-02T19:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748483",
+      "secondaryId": 544543,
+      "kickoff": "2026-05-03T12:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748474",
+      "secondaryId": 544545,
+      "kickoff": "2026-05-03T14:15:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748479",
+      "secondaryId": 544542,
+      "kickoff": "2026-05-03T16:30:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748475",
+      "secondaryId": 544544,
+      "kickoff": "2026-05-03T19:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748478",
+      "secondaryId": 544550,
+      "kickoff": "2026-05-04T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748491",
+      "secondaryId": 544554,
+      "kickoff": "2026-05-08T19:00:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748492",
+      "secondaryId": 544556,
+      "kickoff": "2026-05-09T12:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748486",
+      "secondaryId": 544558,
+      "kickoff": "2026-05-09T14:15:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748487",
+      "secondaryId": 544552,
+      "kickoff": "2026-05-09T16:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748485",
+      "secondaryId": 544557,
+      "kickoff": "2026-05-09T19:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748490",
+      "secondaryId": 544555,
+      "kickoff": "2026-05-10T12:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748488",
+      "secondaryId": 544551,
+      "kickoff": "2026-05-10T14:15:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748493",
+      "secondaryId": 544559,
+      "kickoff": "2026-05-10T16:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748484",
+      "secondaryId": 544553,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748489",
+      "secondaryId": 544560,
+      "kickoff": "2026-05-11T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748500",
+      "secondaryId": 544563,
+      "kickoff": "2026-05-12T17:00:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748499",
+      "secondaryId": 544562,
+      "kickoff": "2026-05-12T18:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748494",
+      "secondaryId": 544567,
+      "kickoff": "2026-05-12T19:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748497",
+      "secondaryId": 544566,
+      "kickoff": "2026-05-13T17:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748501",
+      "secondaryId": 544569,
+      "kickoff": "2026-05-13T17:00:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748498",
+      "secondaryId": 544561,
+      "kickoff": "2026-05-13T19:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748496",
+      "secondaryId": 544564,
+      "kickoff": "2026-05-13T19:30:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748502",
+      "secondaryId": 544568,
+      "kickoff": "2026-05-14T17:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748495",
+      "secondaryId": 544565,
+      "kickoff": "2026-05-14T18:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748503",
+      "secondaryId": 544570,
+      "kickoff": "2026-05-14T19:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748506",
+      "secondaryId": 544571,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748509",
+      "secondaryId": 544572,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748507",
+      "secondaryId": 544574,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748510",
+      "secondaryId": 544575,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748511",
+      "secondaryId": 544579,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748512",
+      "secondaryId": 544576,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748513",
+      "secondaryId": 544578,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748505",
+      "secondaryId": 544577,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        3,
+        4
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748504",
+      "secondaryId": 544580,
+      "kickoff": "2026-05-17T17:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748508",
+      "secondaryId": 544573,
+      "kickoff": "2026-05-17T19:15:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748523",
+      "secondaryId": 544581,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748517",
+      "secondaryId": 544583,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748516",
+      "secondaryId": 544584,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748518",
+      "secondaryId": 544585,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748520",
+      "secondaryId": 544590,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748521",
+      "secondaryId": 544586,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748522",
+      "secondaryId": 544582,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748514",
+      "secondaryId": 544587,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748519",
+      "secondaryId": 544589,
+      "kickoff": "2026-05-23T19:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "es.1",
+      "primaryId": "748515",
+      "secondaryId": 544588,
+      "kickoff": "2026-05-24T19:00:00+00:00",
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737126",
+      "secondaryId": 537161,
+      "kickoff": "2026-05-01T18:45:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737128",
+      "secondaryId": 537163,
+      "kickoff": "2026-05-02T13:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737130",
+      "secondaryId": 537157,
+      "kickoff": "2026-05-02T16:00:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737132",
+      "secondaryId": 537156,
+      "kickoff": "2026-05-02T18:45:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737131",
+      "secondaryId": 537158,
+      "kickoff": "2026-05-03T10:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737124",
+      "secondaryId": 537162,
+      "kickoff": "2026-05-03T13:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737127",
+      "secondaryId": 537160,
+      "kickoff": "2026-05-03T16:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737133",
+      "secondaryId": 537159,
+      "kickoff": "2026-05-03T18:45:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737129",
+      "secondaryId": 537164,
+      "kickoff": "2026-05-04T16:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737125",
+      "secondaryId": 537155,
+      "kickoff": "2026-05-04T18:45:00+00:00",
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737143",
+      "secondaryId": 537168,
+      "kickoff": "2026-05-08T18:45:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737142",
+      "secondaryId": 537167,
+      "kickoff": "2026-05-09T13:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737138",
+      "secondaryId": 537170,
+      "kickoff": "2026-05-09T16:00:00+00:00",
+      "score": [
+        0,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737137",
+      "secondaryId": 537174,
+      "kickoff": "2026-05-09T18:45:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737139",
+      "secondaryId": 537169,
+      "kickoff": "2026-05-10T10:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737141",
+      "secondaryId": 537173,
+      "kickoff": "2026-05-10T13:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737140",
+      "secondaryId": 537165,
+      "kickoff": "2026-05-10T13:00:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737134",
+      "secondaryId": 537171,
+      "kickoff": "2026-05-10T16:00:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737136",
+      "secondaryId": 537166,
+      "kickoff": "2026-05-10T18:45:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737135",
+      "secondaryId": 537172,
+      "kickoff": "2026-05-11T18:45:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737148",
+      "secondaryId": 537175,
+      "kickoff": "2026-05-17T10:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737153",
+      "secondaryId": 537179,
+      "kickoff": "2026-05-17T10:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737152",
+      "secondaryId": 537178,
+      "kickoff": "2026-05-17T10:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737150",
+      "secondaryId": 537181,
+      "kickoff": "2026-05-17T10:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737149",
+      "secondaryId": 537182,
+      "kickoff": "2026-05-17T10:00:00+00:00",
+      "score": [
+        0,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737151",
+      "secondaryId": 537180,
+      "kickoff": "2026-05-17T13:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737144",
+      "secondaryId": 537176,
+      "kickoff": "2026-05-17T16:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737145",
+      "secondaryId": 537177,
+      "kickoff": "2026-05-17T18:45:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737147",
+      "secondaryId": 537183,
+      "kickoff": "2026-05-17T18:45:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737146",
+      "secondaryId": 537184,
+      "kickoff": "2026-05-17T18:45:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737161",
+      "secondaryId": 537185,
+      "kickoff": "2026-05-22T18:45:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737154",
+      "secondaryId": 537187,
+      "kickoff": "2026-05-23T16:00:00+00:00",
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737159",
+      "secondaryId": 537190,
+      "kickoff": "2026-05-23T18:45:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737155",
+      "secondaryId": 537191,
+      "kickoff": "2026-05-24T13:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737156",
+      "secondaryId": 537192,
+      "kickoff": "2026-05-24T16:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737157",
+      "secondaryId": 537186,
+      "kickoff": "2026-05-24T18:45:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737162",
+      "secondaryId": 537193,
+      "kickoff": "2026-05-24T18:45:00+00:00",
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737160",
+      "secondaryId": 537189,
+      "kickoff": "2026-05-24T18:45:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737163",
+      "secondaryId": 537194,
+      "kickoff": "2026-05-24T18:45:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "it.1",
+      "primaryId": "737158",
+      "secondaryId": 537188,
+      "kickoff": "2026-05-24T19:45:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746694",
+      "secondaryId": 542687,
+      "kickoff": "2026-05-02T13:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746695",
+      "secondaryId": 542692,
+      "kickoff": "2026-05-02T15:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746693",
+      "secondaryId": 542686,
+      "kickoff": "2026-05-02T17:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746697",
+      "secondaryId": 542689,
+      "kickoff": "2026-05-02T19:05:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746691",
+      "secondaryId": 542691,
+      "kickoff": "2026-05-03T13:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746699",
+      "secondaryId": 542685,
+      "kickoff": "2026-05-03T15:15:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746698",
+      "secondaryId": 542688,
+      "kickoff": "2026-05-03T15:15:00+00:00",
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746696",
+      "secondaryId": 542693,
+      "kickoff": "2026-05-03T15:15:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746692",
+      "secondaryId": 542690,
+      "kickoff": "2026-05-03T18:45:00+00:00",
+      "score": [
+        4,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746702",
+      "secondaryId": 542700,
+      "kickoff": "2026-05-08T18:45:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746700",
+      "secondaryId": 542695,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746704",
+      "secondaryId": 542701,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746703",
+      "secondaryId": 542696,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746701",
+      "secondaryId": 542694,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746708",
+      "secondaryId": 542697,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746705",
+      "secondaryId": 542699,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746706",
+      "secondaryId": 542702,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746707",
+      "secondaryId": 542698,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746665",
+      "secondaryId": 542665,
+      "kickoff": "2026-05-13T17:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746666",
+      "secondaryId": 542664,
+      "kickoff": "2026-05-13T19:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746709",
+      "secondaryId": 542711,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746710",
+      "secondaryId": 542709,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746711",
+      "secondaryId": 542703,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746712",
+      "secondaryId": 542707,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        0,
+        4
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746717",
+      "secondaryId": 542708,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746715",
+      "secondaryId": 542706,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746713",
+      "secondaryId": 542705,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "fr.1",
+      "primaryId": "746716",
+      "secondaryId": 542710,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        5,
+        4
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741259",
+      "secondaryId": 537723,
+      "kickoff": "2026-05-02T14:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741257",
+      "secondaryId": 537722,
+      "kickoff": "2026-05-02T16:45:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741256",
+      "secondaryId": 537720,
+      "kickoff": "2026-05-02T18:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741260",
+      "secondaryId": 537726,
+      "kickoff": "2026-05-02T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741262",
+      "secondaryId": 537724,
+      "kickoff": "2026-05-03T10:15:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741261",
+      "secondaryId": 537725,
+      "kickoff": "2026-05-03T12:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741263",
+      "secondaryId": 537727,
+      "kickoff": "2026-05-03T12:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741255",
+      "secondaryId": 537721,
+      "kickoff": "2026-05-03T14:45:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741258",
+      "secondaryId": 537728,
+      "kickoff": "2026-05-03T14:45:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741272",
+      "secondaryId": 537729,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741271",
+      "secondaryId": 537730,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741270",
+      "secondaryId": 537731,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741269",
+      "secondaryId": 537737,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741268",
+      "secondaryId": 537732,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741265",
+      "secondaryId": 537733,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741266",
+      "secondaryId": 537734,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741264",
+      "secondaryId": 537736,
+      "kickoff": "2026-05-10T14:45:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741267",
+      "secondaryId": 537735,
+      "kickoff": "2026-05-11T12:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741275",
+      "secondaryId": 537738,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        3,
+        3
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741274",
+      "secondaryId": 537739,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741273",
+      "secondaryId": 537740,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741277",
+      "secondaryId": 537745,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741276",
+      "secondaryId": 537741,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741281",
+      "secondaryId": 537742,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741278",
+      "secondaryId": 537743,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741279",
+      "secondaryId": 537744,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "league": "nl.1",
+      "primaryId": "741280",
+      "secondaryId": 537746,
+      "kickoff": "2026-05-17T12:30:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750525",
+      "secondaryId": 545986,
+      "kickoff": "2026-05-02T14:30:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750526",
+      "secondaryId": 545979,
+      "kickoff": "2026-05-02T14:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750529",
+      "secondaryId": 545980,
+      "kickoff": "2026-05-02T14:30:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750533",
+      "secondaryId": 545983,
+      "kickoff": "2026-05-02T17:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750528",
+      "secondaryId": 545981,
+      "kickoff": "2026-05-02T19:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750527",
+      "secondaryId": 545985,
+      "kickoff": "2026-05-03T14:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750531",
+      "secondaryId": 545987,
+      "kickoff": "2026-05-03T17:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750532",
+      "secondaryId": 545982,
+      "kickoff": "2026-05-03T19:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750530",
+      "secondaryId": 545984,
+      "kickoff": "2026-05-04T19:15:00+00:00",
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750537",
+      "secondaryId": 545991,
+      "kickoff": "2026-05-10T17:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750536",
+      "secondaryId": 545993,
+      "kickoff": "2026-05-10T19:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750539",
+      "secondaryId": 545996,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750540",
+      "secondaryId": 545992,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750541",
+      "secondaryId": 545989,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750542",
+      "secondaryId": 545994,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        1,
+        4
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750538",
+      "secondaryId": 545995,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750534",
+      "secondaryId": 545990,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750535",
+      "secondaryId": 545988,
+      "kickoff": "2026-05-11T19:15:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750544",
+      "secondaryId": 546000,
+      "kickoff": "2026-05-16T14:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750546",
+      "secondaryId": 545997,
+      "kickoff": "2026-05-16T14:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750543",
+      "secondaryId": 546004,
+      "kickoff": "2026-05-16T17:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750547",
+      "secondaryId": 546005,
+      "kickoff": "2026-05-16T17:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750551",
+      "secondaryId": 546002,
+      "kickoff": "2026-05-16T17:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750548",
+      "secondaryId": 546003,
+      "kickoff": "2026-05-16T17:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750549",
+      "secondaryId": 546001,
+      "kickoff": "2026-05-16T19:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750545",
+      "secondaryId": 545998,
+      "kickoff": "2026-05-16T19:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "pt.1",
+      "primaryId": "750550",
+      "secondaryId": 545999,
+      "kickoff": "2026-05-16T19:30:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "uefa.champions",
+      "primaryId": "401862896",
+      "secondaryId": 552095,
+      "kickoff": "2026-05-05T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "uefa.champions",
+      "primaryId": "401862895",
+      "secondaryId": 552094,
+      "kickoff": "2026-05-06T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841107",
+      "secondaryId": 554871,
+      "kickoff": "2026-05-02T19:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841102",
+      "secondaryId": 554877,
+      "kickoff": "2026-05-02T21:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841100",
+      "secondaryId": 554879,
+      "kickoff": "2026-05-02T21:30:00+00:00",
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841106",
+      "secondaryId": 554870,
+      "kickoff": "2026-05-02T23:30:00+00:00",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841098",
+      "secondaryId": 554873,
+      "kickoff": "2026-05-03T00:00:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841105",
+      "secondaryId": 554874,
+      "kickoff": "2026-05-03T19:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841101",
+      "secondaryId": 554878,
+      "kickoff": "2026-05-03T19:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841099",
+      "secondaryId": 554872,
+      "kickoff": "2026-05-03T21:30:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841104",
+      "secondaryId": 554875,
+      "kickoff": "2026-05-03T21:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841103",
+      "secondaryId": 554876,
+      "kickoff": "2026-05-03T23:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841114",
+      "secondaryId": 554883,
+      "kickoff": "2026-05-09T19:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841113",
+      "secondaryId": 554884,
+      "kickoff": "2026-05-09T21:00:00+00:00",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841116",
+      "secondaryId": 554881,
+      "kickoff": "2026-05-10T00:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841108",
+      "secondaryId": 554880,
+      "kickoff": "2026-05-10T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841115",
+      "secondaryId": 554882,
+      "kickoff": "2026-05-10T21:30:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841111",
+      "secondaryId": 554886,
+      "kickoff": "2026-05-10T21:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841109",
+      "secondaryId": 554888,
+      "kickoff": "2026-05-10T21:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841117",
+      "secondaryId": 554885,
+      "kickoff": "2026-05-10T22:30:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841112",
+      "secondaryId": 554889,
+      "kickoff": "2026-05-10T23:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841120",
+      "secondaryId": 554891,
+      "kickoff": "2026-05-16T21:30:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841126",
+      "secondaryId": 554897,
+      "kickoff": "2026-05-16T21:30:00+00:00",
+      "score": [
+        4,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841127",
+      "secondaryId": 554896,
+      "kickoff": "2026-05-16T22:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841125",
+      "secondaryId": 554898,
+      "kickoff": "2026-05-17T00:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841123",
+      "secondaryId": 554899,
+      "kickoff": "2026-05-17T14:00:00+00:00",
+      "score": [
+        0,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841119",
+      "secondaryId": 554892,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841118",
+      "secondaryId": 554893,
+      "kickoff": "2026-05-17T19:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841122",
+      "secondaryId": 554895,
+      "kickoff": "2026-05-17T21:30:00+00:00",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841124",
+      "secondaryId": 554894,
+      "kickoff": "2026-05-17T21:30:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841121",
+      "secondaryId": 554890,
+      "kickoff": "2026-05-17T22:30:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841132",
+      "secondaryId": 554907,
+      "kickoff": "2026-05-23T20:00:00+00:00",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841130",
+      "secondaryId": 554909,
+      "kickoff": "2026-05-23T20:00:00+00:00",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841135",
+      "secondaryId": 554904,
+      "kickoff": "2026-05-23T22:00:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841134",
+      "secondaryId": 554905,
+      "kickoff": "2026-05-23T22:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841136",
+      "secondaryId": 554903,
+      "kickoff": "2026-05-24T00:00:00+00:00",
+      "score": [
+        0,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841137",
+      "secondaryId": 554902,
+      "kickoff": "2026-05-24T19:00:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841133",
+      "secondaryId": 554906,
+      "kickoff": "2026-05-24T19:00:00+00:00",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841128",
+      "secondaryId": 554900,
+      "kickoff": "2026-05-24T21:30:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841131",
+      "secondaryId": 554908,
+      "kickoff": "2026-05-24T23:30:00+00:00",
+      "score": [
+        0,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841129",
+      "secondaryId": 554901,
+      "kickoff": "2026-05-25T23:00:00+00:00",
+      "score": [
+        3,
+        2
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841138",
+      "secondaryId": 554910,
+      "kickoff": "2026-05-30T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841144",
+      "secondaryId": 554914,
+      "kickoff": "2026-05-30T19:00:00+00:00",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841146",
+      "secondaryId": 554911,
+      "kickoff": "2026-05-30T20:30:00+00:00",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841139",
+      "secondaryId": 554915,
+      "kickoff": "2026-05-30T20:30:00+00:00",
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841143",
+      "secondaryId": 554918,
+      "kickoff": "2026-05-30T23:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841141",
+      "secondaryId": 554912,
+      "kickoff": "2026-05-31T14:00:00+00:00",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841140",
+      "secondaryId": 554916,
+      "kickoff": "2026-05-31T19:00:00+00:00",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "league": "bra.1",
+      "primaryId": "401841142",
+      "secondaryId": 554919,
+      "kickoff": "2026-05-31T19:00:00+00:00",
+      "score": [
+        0,
+        1
+      ]
+    }
+  ]
+}
