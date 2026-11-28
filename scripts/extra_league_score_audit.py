@@ -1,5 +1,5 @@
 """Read-only source audit for six additional competitions; never writes forecast archives."""
-import json
+import json,math
 from collections import Counter
 from datetime import datetime,timedelta
 from pathlib import Path
@@ -113,13 +113,12 @@ def audit_league(code,csv_code,now,reader=read):
             out["rows"].append(dict(date=day,home=k[1],away=k[2],csv=a,espn=b,status=status))
     return out
 
-def outcome_baseline(rows):
-    """Descriptive outcome frequencies, not forecast accuracy."""
+def verified_rows(rows):
+    """Exclude every duplicated identity and non-corroborated result."""
     grouped={}
     for r in rows:
         k=(r["league"],r["date"],r["home"],r["away"])
         grouped.setdefault(k,[]).append(r)
-    counts=Counter()
     for records in grouped.values():
         if len(records)!=1:
             continue
@@ -127,13 +126,65 @@ def outcome_baseline(rows):
         s=r.get("csv")
         if r.get("status")!="corroborated" or s!=r.get("espn") or not isinstance(s,list) or len(s)!=2 or any(type(x) is not int or x<0 for x in s):
             continue
-        h,a=s
+        yield r
+
+def outcome_baseline(rows):
+    """Descriptive outcome frequencies, not forecast accuracy."""
+    counts=Counter()
+    for r in verified_rows(rows):
+        h,a=r["csv"]
         counts["matches"]+=1
         counts["over15"]+=int(h+a>=2)
         counts["over25"]+=int(h+a>=3)
         counts["btts"]+=int(h>0 and a>0)
     n=counts["matches"]
     return dict(matches=n,excludedRows=len(rows)-n,markets={k:dict(occurred=counts[k],ratePct=round(100*counts[k]/n,2) if n else None) for k in ("over15","over25","btts")},metric="observed_outcome_frequency",predictionAccuracy=None)
+
+MARKETS=("over15","over25","btts")
+MIN_TRAIN_MATCHES=20
+
+def labels(h,a):
+    return (int(h+a>=2),int(h+a>=3),int(h>0 and a>0))
+
+def chronological_backtest(rows):
+    """Research-only league-mean Poisson benchmark; no same-day training."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    predictions={k:[] for k in MARKETS}
+    evaluated=0
+    for day,group in sorted(by_day.items()):
+        for r in group:
+            past=history.get(r["league"],[])
+            if len(past)<MIN_TRAIN_MATCHES:
+                continue
+            n=len(past)
+            h=sum(x[0] for x in past)/n
+            a=sum(x[1] for x in past)/n
+            total=h+a
+            p=(1-math.exp(-total)*(1+total),1-math.exp(-total)*(1+total+total*total/2),(1-math.exp(-h))*(1-math.exp(-a)))
+            y=labels(*r["csv"])
+            previous=[labels(*s) for s in past]
+            for i,k in enumerate(MARKETS):
+                empirical=(sum(v[i] for v in previous)+1)/(n+2)
+                predictions[k].append((min(1,max(0,p[i])),y[i],empirical))
+            evaluated+=1
+        for r in group:
+            history.setdefault(r["league"],[]).append(r["csv"])
+    metrics={}
+    for k,items in predictions.items():
+        n=len(items)
+        bins=[]
+        for j in range(5):
+            subset=[(p,y) for p,y,_ in items if min(4,int(p*5))==j]
+            if subset:
+                bins.append(dict(lower=j/5,upper=(j+1)/5,n=len(subset),meanProbability=round(sum(p for p,y in subset)/len(subset),6),observedFrequency=round(sum(y for p,y in subset)/len(subset),6)))
+        metrics[k]=dict(n=n,accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y,_ in items)/n,2) if n else None,
+            brier=round(sum((p-y)**2 for p,y,_ in items)/n,6) if n else None,
+            empiricalBrier=round(sum((q-y)**2 for p,y,q in items)/n,6) if n else None,calibrationBins=bins)
+    return dict(model="league_mean_independent_poisson_benchmark",mode="historical_replay_only",minTrainingMatches=MIN_TRAIN_MATCHES,evaluatedMatches=evaluated,
+        warmupMatches=sum(len(g) for g in by_day.values())-evaluated,markets=metrics,sameDayTraining=False,productionModelValidated=False)
 
 def build(now,reader=read):
     now=now.astimezone(TR)
@@ -145,7 +196,8 @@ def build(now,reader=read):
     for g in leagues:
         g["outcomeBaseline"]=outcome_baseline([dict(r,league=g["league"]) for r in g["rows"]])
     baseline=outcome_baseline([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.29",outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    replay=chronological_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.30",chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -156,5 +208,6 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("CHRONOLOGICAL_BACKTEST",json.dumps(report["chronologicalBacktest"]))
     print("OUTCOME_BASELINE",json.dumps(report["outcomeBaseline"]))
     print("AUDIT_TOTAL",json.dumps({k:report[k] for k in ("configured","responding","corroborated","archivesModified")}))
