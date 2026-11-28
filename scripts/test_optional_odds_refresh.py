@@ -109,4 +109,28 @@ class OptionalRefreshTests(unittest.TestCase):
                             self.assertEqual(status["mode"],"fallback")
                             self.assertEqual(json.loads(Path("odds_last_good.json").read_text()),snapshot)
             finally:os.chdir(cwd)
+    def test_partial_snapshot_isolated_from_legacy_market_reports(self):
+        cwd=Path.cwd()
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                os.chdir(temp)
+                now=datetime.now(timezone.utc)
+                stamp=now.isoformat()
+                kickoff=(now+timedelta(hours=2)).isoformat()
+                event=dict(id="e",kickoff=kickoff,bookmakers=[
+                    dict(key=k,lines=[dict(point=p,over=1.9,under=1.9,lastUpdate=stamp)
+                        for p in (1.5,2.5)]) for k in ("a","b","c")])
+                Path("daily.json").write_text(json.dumps(dict(candidates=[
+                    dict(match="A – B",markets={"1.5 Üst":65,"2.5 Üst":52})])))
+                Path("matching.json").write_text(json.dumps(dict(matched=[
+                    dict(match="A – B",eventId="e",kickoff=kickoff)])))
+                for errors in ([],["quota_guard"],["soccer_epl: HTTP 429"],["duplicate_event_identity"]):
+                    Path("odds.json").write_text(json.dumps(dict(updatedAt=stamp,events=[event],errors=errors)))
+                    for name in ("market_analysis","market_analysis_15"):
+                        runpy.run_path(str(MODULE.with_name(name+".py")),run_name="__main__")
+                        report=json.loads(Path(name+".json").read_text())
+                        self.assertEqual(report["comparedCount"],0 if errors else 1)
+                        self.assertEqual(report["snapshotFresh"],not errors)
+                        self.assertEqual(report["decision"],"PAS")
+            finally:os.chdir(cwd)
 if __name__=="__main__":unittest.main()
