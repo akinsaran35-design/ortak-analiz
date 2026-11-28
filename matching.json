@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-28T08:29:50.502011+00:00",
+  "updatedAt": "2026-11-28T09:21:44.866424+00:00",
   "decision": "PAS",
   "matchedCount": 78,
   "unmatchedCount": 42,
@@ -39,7 +39,7 @@
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 5
+      "freshLineCount": 4
     },
     {
       "match": "VfB Stuttgart – Eintracht Frankfurt",
@@ -63,7 +63,7 @@
       "match": "Ipswich Town FC – Aston Villa FC",
       "eventId": "9d23f6ad21946dd258869ebc22236cf0",
       "kickoff": "2026-11-28T17:30:00+00:00",
-      "freshLineCount": 1
+      "freshLineCount": 2
     },
     {
       "match": "gaziantep – amed",
@@ -75,7 +75,7 @@
       "match": "Birmingham City FC – Bolton Wanderers FC",
       "eventId": "15fc58a442321c2a85f7a814466c0ab9",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "Preston North End FC – Norwich City FC",

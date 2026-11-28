@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-28T11:29:33+03:00",
+  "updatedAt": "2026-11-28T12:21:24+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -49292,6 +49292,7 @@
         "2.5 Üst": 77.6,
         "KG Var": 69.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49317,6 +49318,7 @@
         "2.5 Üst": 75.0,
         "KG Var": 73.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -49342,6 +49344,7 @@
         "2.5 Üst": 71.5,
         "KG Var": 66.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49367,6 +49370,7 @@
         "2.5 Üst": 70.6,
         "KG Var": 69.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49392,6 +49396,7 @@
         "2.5 Üst": 69.7,
         "KG Var": 65.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49417,6 +49422,7 @@
         "2.5 Üst": 68.1,
         "KG Var": 59.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 8,
         "away": 10
@@ -49442,6 +49448,7 @@
         "2.5 Üst": 67.0,
         "KG Var": 65.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49467,6 +49474,7 @@
         "2.5 Üst": 66.0,
         "KG Var": 66.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49492,6 +49500,7 @@
         "2.5 Üst": 64.1,
         "KG Var": 65.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49517,6 +49526,7 @@
         "2.5 Üst": 63.0,
         "KG Var": 64.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 5,
         "away": 10
@@ -49542,6 +49552,7 @@
         "2.5 Üst": 62.0,
         "KG Var": 63.5
       },
+      "historyThrough": "2026-11-23",
       "sample": {
         "home": 10,
         "away": 5
@@ -49567,6 +49578,7 @@
         "2.5 Üst": 61.1,
         "KG Var": 61.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 7
@@ -49592,6 +49604,7 @@
         "2.5 Üst": 58.8,
         "KG Var": 59.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49617,6 +49630,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 58.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49642,6 +49656,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 59.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49667,6 +49682,7 @@
         "2.5 Üst": 57.1,
         "KG Var": 56.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 8
@@ -49692,6 +49708,7 @@
         "2.5 Üst": 56.6,
         "KG Var": 57.0
       },
+      "historyThrough": "2026-11-23",
       "sample": {
         "home": 10,
         "away": 10
@@ -49717,6 +49734,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 58.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49742,6 +49760,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 57.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49767,6 +49786,7 @@
         "2.5 Üst": 54.4,
         "KG Var": 56.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 7
@@ -49792,6 +49812,7 @@
         "2.5 Üst": 54.2,
         "KG Var": 57.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49817,6 +49838,7 @@
         "2.5 Üst": 53.1,
         "KG Var": 55.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 5,
         "away": 10
@@ -49842,6 +49864,7 @@
         "2.5 Üst": 53.1,
         "KG Var": 54.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49867,6 +49890,7 @@
         "2.5 Üst": 51.9,
         "KG Var": 55.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49892,6 +49916,7 @@
         "2.5 Üst": 51.9,
         "KG Var": 52.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49917,6 +49942,7 @@
         "2.5 Üst": 51.9,
         "KG Var": 55.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49942,6 +49968,7 @@
         "2.5 Üst": 50.6,
         "KG Var": 53.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49967,6 +49994,7 @@
         "2.5 Üst": 50.6,
         "KG Var": 54.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -49992,6 +50020,7 @@
         "2.5 Üst": 49.4,
         "KG Var": 49.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50017,6 +50046,7 @@
         "2.5 Üst": 46.9,
         "KG Var": 46.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50042,6 +50072,7 @@
         "2.5 Üst": 46.9,
         "KG Var": 51.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50067,6 +50098,7 @@
         "2.5 Üst": 46.9,
         "KG Var": 51.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50092,6 +50124,7 @@
         "2.5 Üst": 45.3,
         "KG Var": 50.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -50117,6 +50150,7 @@
         "2.5 Üst": 44.3,
         "KG Var": 49.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50142,6 +50176,7 @@
         "2.5 Üst": 43.0,
         "KG Var": 37.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 5
@@ -50167,6 +50202,7 @@
         "2.5 Üst": 76.0,
         "KG Var": 69.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 7
@@ -50192,6 +50228,7 @@
         "2.5 Üst": 72.5,
         "KG Var": 71.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -50217,6 +50254,7 @@
         "2.5 Üst": 71.5,
         "KG Var": 70.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50242,6 +50280,7 @@
         "2.5 Üst": 70.6,
         "KG Var": 70.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50267,6 +50306,7 @@
         "2.5 Üst": 69.7,
         "KG Var": 62.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 5
@@ -50292,6 +50332,7 @@
         "2.5 Üst": 68.8,
         "KG Var": 64.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50317,6 +50358,7 @@
         "2.5 Üst": 68.8,
         "KG Var": 69.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50342,6 +50384,7 @@
         "2.5 Üst": 67.9,
         "KG Var": 68.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50367,6 +50410,7 @@
         "2.5 Üst": 67.9,
         "KG Var": 67.9
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50392,6 +50436,7 @@
         "2.5 Üst": 67.0,
         "KG Var": 64.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50417,6 +50462,7 @@
         "2.5 Üst": 67.0,
         "KG Var": 67.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50442,6 +50488,7 @@
         "2.5 Üst": 66.0,
         "KG Var": 66.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50467,6 +50514,7 @@
         "2.5 Üst": 66.0,
         "KG Var": 66.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50492,6 +50540,7 @@
         "2.5 Üst": 66.0,
         "KG Var": 63.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50517,6 +50566,7 @@
         "2.5 Üst": 64.1,
         "KG Var": 58.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50542,6 +50592,7 @@
         "2.5 Üst": 64.1,
         "KG Var": 64.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50567,6 +50618,7 @@
         "2.5 Üst": 64.1,
         "KG Var": 64.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50592,6 +50644,7 @@
         "2.5 Üst": 61.0,
         "KG Var": 61.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50617,6 +50670,7 @@
         "2.5 Üst": 59.9,
         "KG Var": 62.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50642,6 +50696,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 60.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50667,6 +50722,7 @@
         "2.5 Üst": 57.4,
         "KG Var": 57.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -50692,6 +50748,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 58.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50717,6 +50774,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 57.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 6,
         "away": 10
@@ -50742,6 +50800,7 @@
         "2.5 Üst": 54.2,
         "KG Var": 53.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50767,6 +50826,7 @@
         "2.5 Üst": 54.2,
         "KG Var": 52.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 5,
         "away": 10
@@ -50792,6 +50852,7 @@
         "2.5 Üst": 53.6,
         "KG Var": 55.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 8
@@ -50817,6 +50878,7 @@
         "2.5 Üst": 53.1,
         "KG Var": 55.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50842,6 +50904,7 @@
         "2.5 Üst": 48.2,
         "KG Var": 48.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50867,6 +50930,7 @@
         "2.5 Üst": 48.2,
         "KG Var": 52.9
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50892,6 +50956,7 @@
         "2.5 Üst": 46.9,
         "KG Var": 51.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50917,6 +50982,7 @@
         "2.5 Üst": 45.6,
         "KG Var": 50.6
       },
+      "historyThrough": "2026-11-23",
       "sample": {
         "home": 5,
         "away": 10
@@ -50942,6 +51008,7 @@
         "2.5 Üst": 43.0,
         "KG Var": 41.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 5,
         "away": 10
@@ -50967,6 +51034,7 @@
         "2.5 Üst": 41.7,
         "KG Var": 44.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -50992,6 +51060,7 @@
         "2.5 Üst": 39.1,
         "KG Var": 45.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51017,6 +51086,7 @@
         "2.5 Üst": 35.0,
         "KG Var": 42.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51042,6 +51112,7 @@
         "2.5 Üst": 62.0,
         "KG Var": 60.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51067,6 +51138,7 @@
         "2.5 Üst": 56.6,
         "KG Var": 56.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51092,6 +51164,7 @@
         "2.5 Üst": 66.0,
         "KG Var": 65.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51117,6 +51190,7 @@
         "2.5 Üst": 63.0,
         "KG Var": 64.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51142,6 +51216,7 @@
         "2.5 Üst": 63.0,
         "KG Var": 64.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51167,6 +51242,7 @@
         "2.5 Üst": 62.0,
         "KG Var": 60.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51192,6 +51268,7 @@
         "2.5 Üst": 56.6,
         "KG Var": 59.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51217,6 +51294,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 58.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51242,6 +51320,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 57.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 5,
         "away": 5
@@ -51267,6 +51346,7 @@
         "2.5 Üst": 54.2,
         "KG Var": 57.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51292,6 +51372,7 @@
         "2.5 Üst": 50.6,
         "KG Var": 54.9
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51317,6 +51398,7 @@
         "2.5 Üst": 74.1,
         "KG Var": 69.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 8
@@ -51342,6 +51424,7 @@
         "2.5 Üst": 64.1,
         "KG Var": 64.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51367,6 +51450,7 @@
         "2.5 Üst": 75.4,
         "KG Var": 69.5
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51392,6 +51476,7 @@
         "2.5 Üst": 73.9,
         "KG Var": 72.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51417,6 +51502,7 @@
         "2.5 Üst": 73.1,
         "KG Var": 72.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51442,6 +51528,7 @@
         "2.5 Üst": 70.6,
         "KG Var": 70.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51467,6 +51554,7 @@
         "2.5 Üst": 69.9,
         "KG Var": 56.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -51492,6 +51580,7 @@
         "2.5 Üst": 69.7,
         "KG Var": 53.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51517,6 +51606,7 @@
         "2.5 Üst": 67.9,
         "KG Var": 67.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 5
@@ -51542,6 +51632,7 @@
         "2.5 Üst": 67.0,
         "KG Var": 63.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51567,6 +51658,7 @@
         "2.5 Üst": 66.0,
         "KG Var": 66.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51592,6 +51684,7 @@
         "2.5 Üst": 65.7,
         "KG Var": 66.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -51617,6 +51710,7 @@
         "2.5 Üst": 64.2,
         "KG Var": 65.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 7,
         "away": 10
@@ -51642,6 +51736,7 @@
         "2.5 Üst": 64.1,
         "KG Var": 64.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51667,6 +51762,7 @@
         "2.5 Üst": 62.0,
         "KG Var": 60.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51692,6 +51788,7 @@
         "2.5 Üst": 62.0,
         "KG Var": 61.9
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51717,6 +51814,7 @@
         "2.5 Üst": 61.0,
         "KG Var": 62.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51742,6 +51840,7 @@
         "2.5 Üst": 61.0,
         "KG Var": 62.9
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51767,6 +51866,7 @@
         "2.5 Üst": 61.0,
         "KG Var": 61.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51792,6 +51892,7 @@
         "2.5 Üst": 59.9,
         "KG Var": 61.6
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51817,6 +51918,7 @@
         "2.5 Üst": 59.9,
         "KG Var": 59.4
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 5
@@ -51842,6 +51944,7 @@
         "2.5 Üst": 59.9,
         "KG Var": 60.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51867,6 +51970,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 49.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 5
@@ -51892,6 +51996,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 59.0
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51917,6 +52022,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 56.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51942,6 +52048,7 @@
         "2.5 Üst": 57.7,
         "KG Var": 59.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51967,6 +52074,7 @@
         "2.5 Üst": 56.6,
         "KG Var": 59.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -51992,6 +52100,7 @@
         "2.5 Üst": 56.6,
         "KG Var": 59.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52017,6 +52126,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 54.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52042,6 +52152,7 @@
         "2.5 Üst": 55.4,
         "KG Var": 57.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52067,6 +52178,7 @@
         "2.5 Üst": 54.2,
         "KG Var": 52.2
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52092,6 +52204,7 @@
         "2.5 Üst": 54.2,
         "KG Var": 57.3
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52117,6 +52230,7 @@
         "2.5 Üst": 50.6,
         "KG Var": 51.7
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52142,6 +52256,7 @@
         "2.5 Üst": 49.4,
         "KG Var": 51.9
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52167,6 +52282,7 @@
         "2.5 Üst": 48.2,
         "KG Var": 51.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52192,6 +52308,7 @@
         "2.5 Üst": 46.9,
         "KG Var": 51.1
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52217,6 +52334,7 @@
         "2.5 Üst": 44.2,
         "KG Var": 49.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 8,
         "away": 7
@@ -52242,6 +52360,7 @@
         "2.5 Üst": 43.0,
         "KG Var": 48.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52267,6 +52386,7 @@
         "2.5 Üst": 41.7,
         "KG Var": 47.8
       },
+      "historyThrough": "2026-09-20",
       "sample": {
         "home": 10,
         "away": 10
@@ -52304,5 +52424,8 @@
   "fixtureCoverageComplete": false,
   "candidateListLimit": null,
   "candidateListComplete": true,
-  "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı."
+  "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
+  "forecastTimingVersion": "6.82",
+  "historyCutoffExclusive": "2026-11-28",
+  "generationCompletedAt": "2026-11-28T12:21:27.090694+03:00"
 }

@@ -1,6 +1,6 @@
 {
   "status": "observed",
-  "added": 337,
+  "added": 339,
   "events": [
     {
       "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
@@ -11,31 +11,31 @@
           "firstObserved": 1.72,
           "current": 1.72,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:07Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.85,
-          "current": 1.85,
+          "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:15Z",
+          "dropPct": 3.783783783783787
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.72,
+      "currentComparableMedian": 1.72,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "0664eb46841c1e73a465bfca504b9b54",
@@ -46,31 +46,31 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.79,
           "current": 1.79,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.73,
+      "currentComparableMedian": 1.73,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "08bc048e18105e5b3e41fae5d67a0500",
@@ -81,31 +81,31 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:56Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:17Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:55Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.62,
+      "currentComparableMedian": 1.62,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "09bb0ba9a9025d64fed410375c0c8f80",
@@ -116,47 +116,47 @@
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:11Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.96,
           "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.1,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.95,
+      "currentComparableMedian": 1.95,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "0bc17a3c7d8153e72b94688960cc603a",
@@ -167,39 +167,39 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.67,
-          "current": 1.67,
+          "current": 1.66,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.5988023952095815
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.72,
           "current": 1.72,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.645,
+      "currentComparableMedian": 1.6400000000000001,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "0c1ccc010b185ada698661a21316696c",
@@ -210,39 +210,39 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.74,
+      "currentComparableMedian": 1.74,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "0c405290d0f977236962e55ba90c2c04",
@@ -253,12 +253,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -272,39 +272,39 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.585,
+      "currentComparableMedian": 1.585,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "11e1b8546651036ec5c70eb8e91bb622",
@@ -315,12 +315,12 @@
           "firstObserved": 1.22,
           "current": 1.22,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -334,12 +334,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -353,20 +353,28 @@
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
+        },
+        {
+          "bookmaker": "matchbook",
+          "firstObserved": 1.63,
+          "current": 1.63,
+          "firstObservedAt": "2026-11-28T09:21:23.302175+00:00",
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
           "dropPct": null
         }
       ],
-      "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "currentBookCount": 3,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -380,20 +388,20 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -407,31 +415,31 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:24Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
-          "current": 1.73,
+          "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 1.7341040462427761
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.65,
           "current": 1.65,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.67,
+      "currentComparableMedian": 1.67,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "1ab9541320cecbe9f043565fd4a141e0",
@@ -442,39 +450,39 @@
           "firstObserved": 2.1,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 2.18,
           "current": 2.18,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:23Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 2.14,
           "current": 2.14,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.4,
           "current": 2.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 2.16,
+      "currentComparableMedian": 2.16,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "20c78c2ef75c4a6d7f4af81dd32e97cd",
@@ -485,39 +493,39 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:23Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.81,
           "current": 1.81,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.81,
           "current": 1.81,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.77,
+      "currentComparableMedian": 1.77,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "2198fb9aab762e9e1c8c6af4113a1d31",
@@ -528,39 +536,39 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.705,
+      "currentComparableMedian": 1.705,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "219b1f7a6a968c14cb9777d7b994cdb9",
@@ -571,39 +579,39 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.91,
+      "currentComparableMedian": 1.91,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "24b99950496c624f7124922fc1bda8bd",
@@ -612,33 +620,33 @@
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.68,
-          "current": 1.68,
+          "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.5952380952380958
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.61,
           "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.62,
+      "currentComparableMedian": 1.62,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "24d5861f7f820bd4e070deaaa063fac9",
@@ -649,12 +657,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -668,39 +676,39 @@
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.69,
+      "currentComparableMedian": 1.69,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "2aa9aa95157eb36fed45135c995cdd80",
@@ -711,12 +719,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -730,12 +738,12 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -749,20 +757,20 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -776,20 +784,20 @@
           "firstObserved": 1.58,
           "current": 1.58,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:56Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -803,12 +811,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -822,12 +830,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -841,12 +849,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -860,31 +868,31 @@
           "firstObserved": 1.64,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.63,
+      "currentComparableMedian": 1.63,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "3348c02fd713356ec319779bd5edc561",
@@ -895,20 +903,20 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -922,47 +930,47 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:23Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.83,
-          "current": 1.83,
+          "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": 1.6393442622950833
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.87,
           "current": 1.87,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.87,
-          "current": 1.87,
+          "current": 1.89,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": -1.069518716577529
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.83,
+      "currentComparableMedian": 1.8,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "365e1a00908ab1cd5a51a53ede2b86b2",
@@ -971,14 +979,14 @@
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
-          "current": 1.5,
+          "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 4.0000000000000036
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -992,12 +1000,12 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1011,39 +1019,39 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.74,
           "current": 1.74,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.745,
+      "currentComparableMedian": 1.745,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "388c70bbc3bc49af4a2245b4caebd730",
@@ -1054,31 +1062,31 @@
           "firstObserved": 2.05,
           "current": 2.05,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 2.1,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 2.2,
           "current": 2.2,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 2.1,
+      "currentComparableMedian": 2.1,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "3b025a029f51fbeb9580a178d0612f50",
@@ -1089,12 +1097,12 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1108,47 +1116,47 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.94,
-          "current": 1.94,
+          "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 1.0309278350515474
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.83,
+      "currentComparableMedian": 1.83,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "3e9a89fc7f5bd95d70e6fd3faaccf5d2",
@@ -1159,20 +1167,20 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1186,31 +1194,31 @@
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.67,
-          "current": 1.67,
+          "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 1.7964071856287442
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.67,
+      "currentComparableMedian": 1.64,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "4001fed3da6baa90d8b6278f43a77af1",
@@ -1221,31 +1229,31 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.94,
           "current": 1.94,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.8,
+      "currentComparableMedian": 1.8,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "40236ab976955345ebd1edb72abf6b22",
@@ -1256,31 +1264,31 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.62,
-          "current": 1.62,
+          "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": 0.6172839506172845
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.55,
+      "currentComparableMedian": 1.55,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "4535d59d6670cc8342d5e6b40ce76fb4",
@@ -1291,20 +1299,20 @@
           "firstObserved": 1.15,
           "current": 1.15,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.18,
           "current": 1.18,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:56Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1318,20 +1326,20 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1345,31 +1353,31 @@
           "firstObserved": 2.28,
           "current": 2.28,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 2.25,
           "current": 2.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.48,
           "current": 2.48,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 2.28,
+      "currentComparableMedian": 2.28,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "4bd9a6fe4abb6774b3e8700b3dbe8d00",
@@ -1380,47 +1388,47 @@
           "firstObserved": 1.9,
           "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:11Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.0,
           "current": 2.0,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.91,
+      "currentComparableMedian": 1.91,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "5089643216359c9456d425930e6c57d9",
@@ -1431,12 +1439,12 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1450,12 +1458,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1469,20 +1477,20 @@
           "firstObserved": 1.66,
           "current": 1.66,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:07Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1496,12 +1504,12 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1515,47 +1523,47 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:11Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.88,
-          "current": 1.88,
+          "current": 1.87,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.5319148936170099
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.75,
+      "currentComparableMedian": 1.75,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "588984eaf08b356b49055b534cef52e6",
@@ -1566,39 +1574,39 @@
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:47Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:49Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.97,
           "current": 1.97,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.96,
           "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.935,
+      "currentComparableMedian": 1.935,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "59e9722830fbf906910c1526eddf110c",
@@ -1609,12 +1617,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1628,12 +1636,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1647,39 +1655,39 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.775,
+      "currentComparableMedian": 1.775,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "61b7d270b965f9804d2d2ed500f41214",
@@ -1690,39 +1698,39 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:47Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:49Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.82,
           "current": 1.82,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.87,
+      "currentComparableMedian": 1.87,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "61e4741f21230122441a7a07f53f4341",
@@ -1733,12 +1741,12 @@
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1752,12 +1760,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1771,12 +1779,12 @@
           "firstObserved": 1.2,
           "current": 1.2,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1790,12 +1798,12 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1809,31 +1817,31 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.61,
           "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.62,
+      "currentComparableMedian": 1.62,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "77532da89d3808d31296c0cb40c1e936",
@@ -1844,12 +1852,12 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1863,39 +1871,39 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.705,
+      "currentComparableMedian": 1.705,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "7b643abf36a551631acaae1f1a8e01f6",
@@ -1906,20 +1914,20 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1933,31 +1941,31 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.67,
+      "currentComparableMedian": 1.67,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "7d32e6e9bbd769e7d505467971c4d7ca",
@@ -1968,31 +1976,31 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.56,
+      "currentComparableMedian": 1.56,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "8031222f3f3e8384a69c0ca5e1166458",
@@ -2003,12 +2011,12 @@
           "firstObserved": 1.2,
           "current": 1.2,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2020,49 +2028,49 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.82,
-          "current": 1.82,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": -1.6483516483516498
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 2.0,
           "current": 2.0,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.08,
           "current": 2.08,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.95,
+      "currentComparableMedian": 1.95,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "836ad618789e171f7357649ce8e62b49",
@@ -2073,12 +2081,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2092,12 +2100,12 @@
           "firstObserved": 1.43,
           "current": 1.43,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2111,12 +2119,12 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2130,20 +2138,20 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:24Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.49,
           "current": 1.49,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2157,12 +2165,12 @@
           "firstObserved": 2.38,
           "current": 2.38,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2176,39 +2184,39 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.57,
+      "currentComparableMedian": 1.57,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "98415e21c147d701bd81e70b1af0f3a7",
@@ -2219,12 +2227,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2238,12 +2246,12 @@
           "firstObserved": 1.29,
           "current": 1.29,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2257,12 +2265,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2276,55 +2284,63 @@
           "firstObserved": 2.12,
           "current": 2.12,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 2.3,
           "current": 2.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 2.25,
           "current": 2.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.46,
           "current": 2.46,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 2.275,
+      "currentComparableMedian": 2.275,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "9d23f6ad21946dd258869ebc22236cf0",
       "point": 2.5,
       "books": [
         {
+          "bookmaker": "leovegas",
+          "firstObserved": 1.57,
+          "current": 1.57,
+          "firstObservedAt": "2026-11-28T09:21:23.302175+00:00",
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": null
+        },
+        {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
-      "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "currentBookCount": 2,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2338,12 +2354,12 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2357,47 +2373,47 @@
           "firstObserved": 1.89,
           "current": 1.89,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.9,
-          "current": 1.9,
+          "current": 1.88,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 1.0526315789473695
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.91,
-          "current": 1.91,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 3.141361256544494
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.97,
           "current": 1.97,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.91,
+      "currentComparableMedian": 1.89,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "a370db12aaff183a94f8e9a6acb6d4c9",
@@ -2408,31 +2424,31 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.6,
+      "currentComparableMedian": 1.6,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "a57d8cacc423d2a63545b240790dcdba",
@@ -2443,12 +2459,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2462,12 +2478,12 @@
           "firstObserved": 1.17,
           "current": 1.17,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2481,12 +2497,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2500,12 +2516,12 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2519,31 +2535,31 @@
           "firstObserved": 2.05,
           "current": 2.05,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 2.02,
           "current": 2.02,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 2.02,
+      "currentComparableMedian": 2.02,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "ab69b4103cc49d598c7608d48c77ce26",
@@ -2554,12 +2570,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2573,20 +2589,20 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2600,39 +2616,39 @@
           "firstObserved": 2.02,
           "current": 2.02,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:24Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.97,
           "current": 1.97,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.08,
-          "current": 2.08,
+          "current": 2.12,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": -1.9230769230769247
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.995,
+      "currentComparableMedian": 1.995,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "aec86b479e922f437ba228b9a9d74da1",
@@ -2643,47 +2659,47 @@
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.88,
           "current": 1.88,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.95,
-          "current": 1.95,
+          "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:06Z",
+          "dropPct": -0.5128205128205133
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.85,
+      "currentComparableMedian": 1.85,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "af3432ca724da03d38f0ff4e62045e4c",
@@ -2692,14 +2708,14 @@
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.33,
-          "current": 1.33,
+          "current": 1.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 2.2556390977443628
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2713,31 +2729,31 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.65,
           "current": 1.65,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.62,
+      "currentComparableMedian": 1.62,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "b3ecf4f05571a5c613459857c9b3f7b0",
@@ -2748,39 +2764,39 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:22Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:20Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:24Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.83,
+      "currentComparableMedian": 1.83,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "b648a7246af1d3a839b0fcd212849a7c",
@@ -2791,31 +2807,31 @@
           "firstObserved": 2.3,
           "current": 2.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 2.38,
           "current": 2.38,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:24Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 2.32,
           "current": 2.32,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 2.32,
+      "currentComparableMedian": 2.32,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "b67372e7107fdd259a978e614711e657",
@@ -2826,47 +2842,47 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.94,
           "current": 1.94,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.83,
+      "currentComparableMedian": 1.83,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "b8a455b28ca30fd95640228161c7c5c5",
@@ -2877,12 +2893,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2896,12 +2912,12 @@
           "firstObserved": 1.61,
           "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2915,12 +2931,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -2934,31 +2950,31 @@
           "firstObserved": 1.58,
           "current": 1.58,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.58,
+      "currentComparableMedian": 1.58,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "c7aff6bfea3ca1c4b177694977831b85",
@@ -2969,39 +2985,39 @@
           "firstObserved": 1.64,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.74,
           "current": 1.74,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:17Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.66,
+      "currentComparableMedian": 1.66,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "c81520b9a9794749cfdab57f89bdeb16",
@@ -3012,20 +3028,28 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:23Z",
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
+        },
+        {
+          "bookmaker": "matchbook",
+          "firstObserved": 1.64,
+          "current": 1.64,
+          "firstObservedAt": "2026-11-28T09:21:23.302175+00:00",
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
           "dropPct": null
         }
       ],
-      "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "currentBookCount": 3,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3039,47 +3063,39 @@
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
-        },
-        {
-          "bookmaker": "casumo",
-          "firstObserved": 1.75,
-          "current": 1.75,
-          "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.87,
-          "current": 1.87,
+          "current": 1.88,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": -0.5347593582887586
         }
       ],
-      "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "currentBookCount": 4,
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.7650000000000001,
+      "currentComparableMedian": 1.7650000000000001,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "c93dfa2135f55e761dc577ae61eca31f",
@@ -3090,12 +3106,12 @@
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3109,12 +3125,12 @@
           "firstObserved": 1.29,
           "current": 1.29,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3128,12 +3144,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3147,39 +3163,39 @@
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.91,
+      "currentComparableMedian": 1.91,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "cbe76870424e24c03bf811910914148f",
@@ -3190,12 +3206,12 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3209,31 +3225,31 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:56Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:17Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:55Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.55,
+      "currentComparableMedian": 1.55,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "cd71180a378c01105112f52d2764b922",
@@ -3244,12 +3260,12 @@
           "firstObserved": 1.3,
           "current": 1.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3263,31 +3279,31 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.7,
+      "currentComparableMedian": 1.7,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
@@ -3298,47 +3314,47 @@
           "firstObserved": 1.81,
           "current": 1.81,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.88,
           "current": 1.88,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.98,
           "current": 1.98,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.88,
+      "currentComparableMedian": 1.88,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "d3d47b94324eb7cde85bd93993437d1c",
@@ -3349,31 +3365,31 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.7,
+      "currentComparableMedian": 1.7,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "d47bc722be164b3a733434e89f224654",
@@ -3384,31 +3400,31 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.6,
+      "currentComparableMedian": 1.6,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "d583b1676d961c26794a3ccedf7edffb",
@@ -3419,39 +3435,39 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:47Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:49Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.94,
-          "current": 1.94,
+          "current": 1.93,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
+          "dropPct": 0.5154639175257737
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.78,
+      "currentComparableMedian": 1.78,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "d77c244bd9dd91534c40b863e44cf905",
@@ -3460,22 +3476,22 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.63,
-          "current": 1.63,
+          "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:07Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:15Z",
+          "dropPct": -0.613496932515338
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3489,12 +3505,12 @@
           "firstObserved": 1.29,
           "current": 1.29,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3508,47 +3524,47 @@
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:38Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:36Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:11Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.91,
-          "current": 1.91,
+          "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.5235602094240842
         }
       ],
       "currentBookCount": 5,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 5,
+      "firstObservedMedian": 1.8,
+      "currentComparableMedian": 1.8,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "dc63586a1b1d938a461d71bf5b36d982",
@@ -3559,20 +3575,20 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3586,31 +3602,31 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:24Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.7,
+      "currentComparableMedian": 1.7,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "e12585885a7f135127f276b7f1ecdf89",
@@ -3619,33 +3635,33 @@
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.7,
-          "current": 1.7,
+          "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": -1.764705882352943
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.7,
+      "currentComparableMedian": 1.71,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "e14f8c52d44db0f33abb0c108145fb09",
@@ -3656,31 +3672,31 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.67,
+      "currentComparableMedian": 1.67,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "e16ca74d26d0cc7836959df77eb59649",
@@ -3691,12 +3707,12 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3708,41 +3724,41 @@
         {
           "bookmaker": "casumo",
           "firstObserved": 1.83,
-          "current": 1.83,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:47Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:49Z",
+          "dropPct": -1.092896174863389
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.88,
-          "current": 1.88,
+          "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
+          "dropPct": -1.0638297872340436
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.855,
+      "currentComparableMedian": 1.875,
+      "medianDropPct": -0.5319148936170218
     },
     {
       "eventId": "e9a1243fbfbc6f58d0e0522eb07ea9a1",
@@ -3753,31 +3769,31 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
-          "current": 1.73,
+          "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 1.7341040462427761
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.73,
+      "currentComparableMedian": 1.73,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "e9c2b74ecaafd494e3b2d8521b52216a",
@@ -3788,12 +3804,12 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3807,31 +3823,31 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.55,
+      "currentComparableMedian": 1.55,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "ecfbbd9537f81d25746539e719d015a0",
@@ -3842,12 +3858,12 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3861,31 +3877,31 @@
           "firstObserved": 1.89,
           "current": 1.89,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:09Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:48Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.08,
-          "current": 2.08,
+          "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:19Z",
+          "dropPct": -0.9615384615384623
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.95,
+      "currentComparableMedian": 1.95,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "eec20b5e9fc4a8160b3e5833d4c7674f",
@@ -3896,12 +3912,12 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
-      "comparableBookCount": 0,
+      "comparableBookCount": 1,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3915,20 +3931,20 @@
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:29Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:37Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:08Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3942,20 +3958,20 @@
           "firstObserved": 1.51,
           "current": 1.51,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -3969,31 +3985,31 @@
           "firstObserved": 1.58,
           "current": 1.58,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:28Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:07Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:27Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:10Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.6,
+      "currentComparableMedian": 1.6,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "f45e9062c2f755b977c98d496c22697b",
@@ -4004,31 +4020,31 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:44Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:47Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:10Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:18Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:43Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:46Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.62,
+      "currentComparableMedian": 1.62,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "f518a80f5839eb0ed1dbb7a3a786b5ce",
@@ -4039,39 +4055,39 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 4,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 4,
+      "firstObservedMedian": 1.74,
+      "currentComparableMedian": 1.74,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "f84a9da7eedd0ca11a28a1a7a8edddc7",
@@ -4082,31 +4098,31 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:56Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.7,
-          "current": 1.7,
+          "current": 1.66,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:17Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:55Z",
+          "dropPct": 2.3529411764705905
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:16Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:00Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.62,
+      "currentComparableMedian": 1.62,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "f892ea6d5eca105c36ca9468b12857f2",
@@ -4117,31 +4133,31 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:14Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:23Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:21Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:21Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:51Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.75,
+      "currentComparableMedian": 1.75,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "f96c1137c9d3f7e2e691275a2988fa1d",
@@ -4150,33 +4166,33 @@
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.73,
-          "current": 1.73,
+          "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:40Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:42Z",
+          "dropPct": -1.1560693641618507
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.65,
           "current": 1.65,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:37Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:14Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:15:38Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:15Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
-      "comparableBookCount": 0,
-      "firstObservedMedian": null,
-      "currentComparableMedian": null,
-      "medianDropPct": null
+      "comparableBookCount": 3,
+      "firstObservedMedian": 1.7,
+      "currentComparableMedian": 1.7,
+      "medianDropPct": 0.0
     },
     {
       "eventId": "fa3db722f03c13fb73e6042d689e9c23",
@@ -4187,20 +4203,20 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:07Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:21:15Z",
+          "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T08:16:08Z",
-          "dropPct": null
+          "currentLastUpdate": "2026-11-28T09:20:45Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
-      "comparableBookCount": 0,
+      "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -4208,8 +4224,8 @@
   ],
   "version": "6.63",
   "mode": "research_only",
-  "oddsUpdatedAt": "2026-11-28T08:16:37.164097+00:00",
-  "updatedAt": "2026-11-28T08:30:37.456353+00:00",
+  "oddsUpdatedAt": "2026-11-28T09:21:23.302175+00:00",
+  "updatedAt": "2026-11-28T09:22:37.278381+00:00",
   "firstObservedIsOpening": false,
   "realBettingEnabled": false
 }
