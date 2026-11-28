@@ -1,10 +1,10 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-28T09:22:37.354532+00:00",
+  "updatedAt": "2026-11-28T09:53:58.378351+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-28T09:21:23.302175+00:00",
+    "snapshotAt": "2026-11-28T09:53:05.374700+00:00",
     "archivedEvents": 136,
     "freshEvents": 70,
     "rows": [
@@ -126,7 +126,7 @@
       {
         "eventId": "c836236766f7859e3c1d61caa581abe1",
         "league": "soccer_efl_champ",
-        "freshBookmakers": 4
+        "freshBookmakers": 5
       },
       {
         "eventId": "f84a9da7eedd0ca11a28a1a7a8edddc7",
@@ -156,7 +156,7 @@
       {
         "eventId": "40236ab976955345ebd1edb72abf6b22",
         "league": "soccer_spain_la_liga",
-        "freshBookmakers": 3
+        "freshBookmakers": 4
       },
       {
         "eventId": "1ab9541320cecbe9f043565fd4a141e0",
@@ -360,11 +360,11 @@
       }
     ],
     "region": "uk",
-    "remainingCredits": 80
+    "remainingCredits": 71
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-28T09:22:01.099792+00:00",
+    "reportAt": "2026-11-28T09:53:32.352699+00:00",
     "reportedMarkets": 0
   },
   "volume": {
@@ -378,7 +378,7 @@
   "productionEnabled": false,
   "predictionsEnabled": false,
   "marketCoverage": {
-    "snapshotAt": "2026-11-28T09:21:23.302175+00:00",
+    "snapshotAt": "2026-11-28T09:53:05.374700+00:00",
     "snapshotFresh": true,
     "sourceAccepted": true,
     "archivedEvents": 136,
@@ -414,7 +414,7 @@
       "recordUnit": "event_market_bookmaker",
       "usedAsCurrentEvidence": false
     },
-    "remainingCreditsAtSnapshot": 80,
+    "remainingCreditsAtSnapshot": 71,
     "additionalApiRequests": 0,
     "extraMarketCollectionEnabled": false,
     "productionEnabled": false

@@ -1,6 +1,6 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-28T09:21:44.866424+00:00",
+  "updatedAt": "2026-11-28T09:53:20.770480+00:00",
   "decision": "PAS",
   "matchedCount": 78,
   "unmatchedCount": 42,
@@ -39,7 +39,7 @@
       "match": "West Ham United FC – Stoke City FC",
       "eventId": "c836236766f7859e3c1d61caa581abe1",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 5
     },
     {
       "match": "VfB Stuttgart – Eintracht Frankfurt",
