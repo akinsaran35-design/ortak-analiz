@@ -40,7 +40,7 @@ def fit_frozen(train,keys):
     model.fit(vector(train,keys),y)
     return model
 
-def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,now=None):
+def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,now=None,version=VERSION,expected_train=EXPECTED_TRAIN):
     from catboost import CatBoostClassifier,__version__
     now=(now or datetime.now(TR)).astimezone(TR)
     existing=(model_path.exists(),meta_path.exists())
@@ -48,24 +48,24 @@ def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,no
         raise ValueError("partial frozen cohort; refuse replacement")
     if all(existing):
         meta=read_json(meta_path)
-        if (meta["version"]!=VERSION or meta["weight"]!=WEIGHT or meta["catboostVersion"]!=__version__
+        if (meta["version"]!=version or meta["weight"]!=WEIGHT or meta["catboostVersion"]!=__version__
             or meta["modelSha256"]!=hashlib.sha256(model_path.read_bytes()).hexdigest()
             or len(meta["featureKeys"])!=EXPECTED_FEATURES or len(set(meta["featureKeys"]))!=EXPECTED_FEATURES
-            or meta["trainingMatches"]!=EXPECTED_TRAIN or meta["trainingCutoff"]!=TUNE_START):
+            or meta["trainingMatches"]!=expected_train or meta["trainingCutoff"]!=TUNE_START):
             raise ValueError("frozen model mismatch")
         model=CatBoostClassifier()
         model.load_model(str(model_path))
     else:
         train=sorted(feature_rows([r for r in history if r["date"]<TUNE_START]),
             key=lambda r:(r["date"],r["league"],r["home"],r["away"]))
-        if len(train)!=EXPECTED_TRAIN:
+        if len(train)!=expected_train:
             raise ValueError("historical training count changed; review required")
         keys=sorted(train[0]["features"])
         if len(keys)!=EXPECTED_FEATURES or any(set(r["features"])!=set(keys) for r in train):
             raise ValueError("training schema changed")
         model=fit_frozen(train,keys)
         model.save_model(str(model_path))
-        meta=dict(version=VERSION,model="catboost",weight=WEIGHT,catboostVersion=__version__,
+        meta=dict(version=version,model="catboost",weight=WEIGHT,catboostVersion=__version__,
             modelSha256=hashlib.sha256(model_path.read_bytes()).hexdigest(),trainingFingerprint=digest(train),
             trainingMatches=len(train),trainingCutoff=TUNE_START,featureKeys=keys,
             frozenAt=now.isoformat(),trainingSourceVerification="single_source_only")
@@ -74,12 +74,12 @@ def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,no
         raise ValueError("model class order mismatch")
     return model,meta
 
-def empty_ledger(meta):
-    return dict(version=VERSION,modelSha256=meta["modelSha256"],forecasts={},settlements={},quarantine={})
+def empty_ledger(meta,version=VERSION):
+    return dict(version=version,modelSha256=meta["modelSha256"],forecasts={},settlements={},quarantine={})
 
-def capture(ledger,history,fixtures,model,meta,now):
+def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None):
     now=now.astimezone(TR)
-    if ledger.get("version")!=VERSION or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
+    if ledger.get("version")!=version or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
         raise ValueError("cohort mismatch")
     frozen=datetime.fromisoformat(meta["frozenAt"])
     if frozen.tzinfo is None or frozen>now:
@@ -99,7 +99,7 @@ def capture(ledger,history,fixtures,model,meta,now):
         if ids[identity]!=1 or identities[k]!=1:
             excluded["duplicate_identity"]+=1
             continue
-        info,reason=input_features(history,f,now)
+        info,reason=input_features(history,f,now,**({"identity_fn":identity_fn} if identity_fn is not None else {}))
         if reason:
             excluded[reason]+=1
             continue
@@ -114,7 +114,7 @@ def capture(ledger,history,fixtures,model,meta,now):
             candidate=dict(zip(MARKETS,blend(p,q,WEIGHT))))
         if not all(probabilities(v) for v in models.values()):
             raise ValueError("incoherent forecast")
-        ledger["forecasts"][k]=dict(f,**models,recordedAt=now.isoformat(),policyVersion=VERSION,
+        ledger["forecasts"][k]=dict(f,**models,recordedAt=now.isoformat(),policyVersion=version,
             modelSha256=meta["modelSha256"],featureFingerprint=digest(features),featureCount=len(keys),
             historyThrough=info["historyThrough"],teamHistoryThrough=info["teamHistoryThrough"],
             trainingSourceVerification="single_source_only")
