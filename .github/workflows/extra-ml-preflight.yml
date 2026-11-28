@@ -1,0 +1,27 @@
+name: V6.58 prospective ML input preflight
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_ml_preflight.py'
+      - 'scripts/test_extra_ml_preflight.py'
+      - 'scripts/extra_league_training_inventory.py'
+      - '.github/workflows/extra-ml-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_extra_league_training_inventory.py
+      - run: python scripts/test_extra_ml_preflight.py
+      - run: python scripts/extra_ml_preflight.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: extra-ml-preflight
+          path: extra_ml_preflight.json
+          if-no-files-found: ignore
+          retention-days: 30
