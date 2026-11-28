@@ -1,0 +1,403 @@
+{
+  "forecasts": {
+    "[\"bel.1\",\"2026-11-29\",\"antwerp\",\"anderlecht\"]": {
+      "away": "anderlecht",
+      "candidate": {
+        "btts": 0.595122595068543,
+        "over15": 0.8028220720023158,
+        "over25": 0.5991107929379413
+      },
+      "date": "2026-11-29",
+      "eventId": "401878928",
+      "home": "antwerp",
+      "kickoff": "2026-11-29T15:00:00+00:00",
+      "league": "bel.1",
+      "poisson": {
+        "btts": 0.6077754928287552,
+        "over15": 0.8154749697625281,
+        "over25": 0.5991107929379413
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 79,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"bel.1\",\"2026-11-29\",\"sint truidense\",\"racing genk\"]": {
+      "away": "racing genk",
+      "candidate": {
+        "btts": 0.595122595068543,
+        "over15": 0.8028220720023158,
+        "over25": 0.5991107929379413
+      },
+      "date": "2026-11-29",
+      "eventId": "401878926",
+      "home": "sint truidense",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "bel.1",
+      "poisson": {
+        "btts": 0.6077754928287552,
+        "over15": 0.8154749697625281,
+        "over25": 0.5991107929379413
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 79,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"bel.1\",\"2026-11-29\",\"standard liege\",\"club brugge\"]": {
+      "away": "club brugge",
+      "candidate": {
+        "btts": 0.595122595068543,
+        "over15": 0.8028220720023158,
+        "over25": 0.5991107929379413
+      },
+      "date": "2026-11-29",
+      "eventId": "401878927",
+      "home": "standard liege",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "league": "bel.1",
+      "poisson": {
+        "btts": 0.6077754928287552,
+        "over15": 0.8154749697625281,
+        "over25": 0.5991107929379413
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 79,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"bel.1\",\"2026-11-29\",\"union st gilloise\",\"kaa gent\"]": {
+      "away": "kaa gent",
+      "candidate": {
+        "btts": 0.595122595068543,
+        "over15": 0.8028220720023158,
+        "over25": 0.5991107929379413
+      },
+      "date": "2026-11-29",
+      "eventId": "401878925",
+      "home": "union st gilloise",
+      "kickoff": "2026-11-29T18:15:00+00:00",
+      "league": "bel.1",
+      "poisson": {
+        "btts": 0.6077754928287552,
+        "over15": 0.8154749697625281,
+        "over25": 0.5991107929379413
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 79,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"almeria\",\"sporting gijon\"]": {
+      "away": "sporting gijon",
+      "candidate": {
+        "btts": 0.5617862436331943,
+        "over15": 0.7699287592234407,
+        "over25": 0.5270073769931884
+      },
+      "date": "2026-11-29",
+      "eventId": "401883106",
+      "home": "almeria",
+      "kickoff": "2026-11-29T20:00:00+00:00",
+      "league": "esp.2",
+      "poisson": {
+        "btts": 0.5582447167443859,
+        "over15": 0.7663872323346324,
+        "over25": 0.5270073769931884
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 135,
+      "trainingThrough": "2026-11-23"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"cadiz\",\"cordoba\"]": {
+      "away": "cordoba",
+      "candidate": {
+        "btts": 0.5617862436331943,
+        "over15": 0.7699287592234407,
+        "over25": 0.5270073769931884
+      },
+      "date": "2026-11-29",
+      "eventId": "401883105",
+      "home": "cadiz",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "league": "esp.2",
+      "poisson": {
+        "btts": 0.5582447167443859,
+        "over15": 0.7663872323346324,
+        "over25": 0.5270073769931884
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 135,
+      "trainingThrough": "2026-11-23"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"granada\",\"ceuta\"]": {
+      "away": "ceuta",
+      "candidate": {
+        "btts": 0.5617862436331943,
+        "over15": 0.7699287592234407,
+        "over25": 0.5270073769931884
+      },
+      "date": "2026-11-29",
+      "eventId": "401883103",
+      "home": "granada",
+      "kickoff": "2026-11-29T13:00:00+00:00",
+      "league": "esp.2",
+      "poisson": {
+        "btts": 0.5582447167443859,
+        "over15": 0.7663872323346324,
+        "over25": 0.5270073769931884
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 135,
+      "trainingThrough": "2026-11-23"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"mallorca\",\"castellon\"]": {
+      "away": "castellon",
+      "candidate": {
+        "btts": 0.5617862436331943,
+        "over15": 0.7699287592234407,
+        "over25": 0.5270073769931884
+      },
+      "date": "2026-11-29",
+      "eventId": "401882295",
+      "home": "mallorca",
+      "kickoff": "2026-11-29T15:15:00+00:00",
+      "league": "esp.2",
+      "poisson": {
+        "btts": 0.5582447167443859,
+        "over15": 0.7663872323346324,
+        "over25": 0.5270073769931884
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 135,
+      "trainingThrough": "2026-11-23"
+    },
+    "[\"esp.2\",\"2026-11-30\",\"real oviedo\",\"rc celta fortuna\"]": {
+      "away": "rc celta fortuna",
+      "candidate": {
+        "btts": 0.5617862436331943,
+        "over15": 0.7699287592234407,
+        "over25": 0.5270073769931884
+      },
+      "date": "2026-11-30",
+      "eventId": "401883303",
+      "home": "real oviedo",
+      "kickoff": "2026-11-30T19:30:00+00:00",
+      "league": "esp.2",
+      "poisson": {
+        "btts": 0.5582447167443859,
+        "over15": 0.7663872323346324,
+        "over25": 0.5270073769931884
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 135,
+      "trainingThrough": "2026-11-23"
+    },
+    "[\"ger.2\",\"2026-11-29\",\"1 magdeburg\",\"energie cottbus\"]": {
+      "away": "energie cottbus",
+      "candidate": {
+        "btts": 0.5343272116392532,
+        "over15": 0.7636908784911103,
+        "over25": 0.5185432952869836
+      },
+      "date": "2026-11-29",
+      "eventId": "401885042",
+      "home": "1 magdeburg",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "ger.2",
+      "poisson": {
+        "btts": 0.5309068536229895,
+        "over15": 0.7602705204748466,
+        "over25": 0.5185432952869836
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 84,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"ger.2\",\"2026-11-29\",\"spvgg greuther furth\",\"arminia bielefeld\"]": {
+      "away": "arminia bielefeld",
+      "candidate": {
+        "btts": 0.5343272116392532,
+        "over15": 0.7636908784911103,
+        "over25": 0.5185432952869836
+      },
+      "date": "2026-11-29",
+      "eventId": "401885040",
+      "home": "spvgg greuther furth",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "ger.2",
+      "poisson": {
+        "btts": 0.5309068536229895,
+        "over15": 0.7602705204748466,
+        "over25": 0.5185432952869836
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 84,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"ger.2\",\"2026-11-29\",\"tsv eintracht braunschweig\",\"vfl wolfsburg\"]": {
+      "away": "vfl wolfsburg",
+      "candidate": {
+        "btts": 0.5343272116392532,
+        "over15": 0.7636908784911103,
+        "over25": 0.5185432952869836
+      },
+      "date": "2026-11-29",
+      "eventId": "401885041",
+      "home": "tsv eintracht braunschweig",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "ger.2",
+      "poisson": {
+        "btts": 0.5309068536229895,
+        "over15": 0.7602705204748466,
+        "over25": 0.5185432952869836
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 84,
+      "trainingThrough": "2026-11-22"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"arezzo\",\"pisa\"]": {
+      "away": "pisa",
+      "candidate": {
+        "btts": 0.5462027434574367,
+        "over15": 0.7537070129200863,
+        "over25": 0.5046549018009181
+      },
+      "date": "2026-11-29",
+      "eventId": "401899529",
+      "home": "arezzo",
+      "kickoff": "2026-11-29T18:30:00+00:00",
+      "league": "ita.2",
+      "poisson": {
+        "btts": 0.5425591499250958,
+        "over15": 0.7500634193877455,
+        "over25": 0.5046549018009181
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 114,
+      "trainingThrough": "2026-11-25"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"modena\",\"padova\"]": {
+      "away": "padova",
+      "candidate": {
+        "btts": 0.5462027434574367,
+        "over15": 0.7537070129200863,
+        "over25": 0.5046549018009181
+      },
+      "date": "2026-11-29",
+      "eventId": "401899523",
+      "home": "modena",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "league": "ita.2",
+      "poisson": {
+        "btts": 0.5425591499250958,
+        "over15": 0.7500634193877455,
+        "over25": 0.5046549018009181
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 114,
+      "trainingThrough": "2026-11-25"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"sampdoria\",\"cremonese\"]": {
+      "away": "cremonese",
+      "candidate": {
+        "btts": 0.5462027434574367,
+        "over15": 0.7537070129200863,
+        "over25": 0.5046549018009181
+      },
+      "date": "2026-11-29",
+      "eventId": "401899521",
+      "home": "sampdoria",
+      "kickoff": "2026-11-29T16:15:00+00:00",
+      "league": "ita.2",
+      "poisson": {
+        "btts": 0.5425591499250958,
+        "over15": 0.7500634193877455,
+        "over25": 0.5046549018009181
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 114,
+      "trainingThrough": "2026-11-25"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"sudtirol\",\"mantova\"]": {
+      "away": "mantova",
+      "candidate": {
+        "btts": 0.5462027434574367,
+        "over15": 0.7537070129200863,
+        "over25": 0.5046549018009181
+      },
+      "date": "2026-11-29",
+      "eventId": "401899520",
+      "home": "sudtirol",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "league": "ita.2",
+      "poisson": {
+        "btts": 0.5425591499250958,
+        "over15": 0.7500634193877455,
+        "over25": 0.5046549018009181
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 114,
+      "trainingThrough": "2026-11-25"
+    },
+    "[\"ita.2\",\"2026-11-30\",\"catanzaro\",\"us avellino\"]": {
+      "away": "us avellino",
+      "candidate": {
+        "btts": 0.5462027434574367,
+        "over15": 0.7537070129200863,
+        "over25": 0.5046549018009181
+      },
+      "date": "2026-11-30",
+      "eventId": "401899526",
+      "home": "catanzaro",
+      "kickoff": "2026-11-30T19:30:00+00:00",
+      "league": "ita.2",
+      "poisson": {
+        "btts": 0.5425591499250958,
+        "over15": 0.7500634193877455,
+        "over25": 0.5046549018009181
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 114,
+      "trainingThrough": "2026-11-25"
+    },
+    "[\"sco.1\",\"2026-11-29\",\"heart of midlothian\",\"celtic\"]": {
+      "away": "celtic",
+      "candidate": {
+        "btts": 0.6005814784297838,
+        "over15": 0.796420947198528,
+        "over25": 0.590051614534622
+      },
+      "date": "2026-11-29",
+      "eventId": "401878330",
+      "home": "heart of midlothian",
+      "kickoff": "2026-11-29T15:00:00+00:00",
+      "league": "sco.1",
+      "poisson": {
+        "btts": 0.6137536555741242,
+        "over15": 0.8095931243428682,
+        "over25": 0.590051614534622
+      },
+      "policyVersion": "6.48",
+      "recordedAt": "2026-11-28T09:51:45.043248+03:00",
+      "trainingMatches": 67,
+      "trainingThrough": "2026-11-24"
+    }
+  },
+  "quarantine": {},
+  "settlements": {},
+  "version": "6.48"
+}
