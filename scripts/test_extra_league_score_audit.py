@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -85,6 +85,23 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result["markets"]["over15"]["leagueMean"]["brier"],chronological_backtest(rows)["markets"]["over15"]["brier"])
         self.assertFalse(result["productionModelValidated"])
         self.assertIsNone(team_form_backtest([])["markets"]["btts"]["team"]["brier"])
+    def test_hybrid_holdout(self):
+        def row(day,i,score):
+            return dict(league="sco.1",date=day,home=f"a{i}",away=f"b{i}",csv=score,espn=score,status="corroborated")
+        start=datetime(2026,8,1)
+        rows=[row((start+timedelta(days=d)).date().isoformat(),i,[i%3,(i+d)%3]) for d in range(30) for i in range(10)]
+        result=hybrid_holdout(rows)
+        self.assertEqual(result,hybrid_holdout(list(reversed(rows))))
+        self.assertEqual(result["markets"]["over15"]["tuneMatches"]+result["markets"]["over15"]["holdoutMatches"],280)
+        self.assertTrue(result["markets"]["over15"]["enoughForComparison"])
+        changed=[dict(r,csv=[9,9],espn=[9,9]) if r["date"]>=result["holdoutStart"] else r for r in rows]
+        modified=hybrid_holdout(changed)
+        for k in result["markets"]:
+            self.assertEqual(result["markets"][k]["teamWeight"],modified["markets"][k]["teamWeight"])
+        self.assertFalse(result["productionModelValidated"])
+        empty=hybrid_holdout([])
+        self.assertIsNone(empty["markets"]["btts"]["hybrid"]["brier"])
+        self.assertFalse(empty["markets"]["btts"]["enoughForComparison"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
