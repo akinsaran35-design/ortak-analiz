@@ -24,6 +24,7 @@ report = {
     "startedAt": now.isoformat(),
     "integrityVersion": "6.84",
     "quotaPolicyVersion": "6.89",
+    "oddsSnapshotAt": None,
     "quotaStatus": "not_checked",
     "paidRequestsAttempted": 0,
     "source": "The Odds API",
@@ -113,6 +114,7 @@ def run():
         Path("odds.json").read_text(encoding="utf-8")
     )
 
+    report["oddsSnapshotAt"]=snapshot.get("updatedAt")
     age = (
         now - parse_time(snapshot["updatedAt"])
     ).total_seconds()
