@@ -252,6 +252,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           python scripts/test_snapshot_integrity.py
+          python scripts/test_publication_retry.py
           python scripts/snapshot_integrity.py
       - name: V6.7 Read-only source health report
         if: github.ref == 'refs/heads/main'
@@ -281,10 +282,13 @@ jobs:
               if [ "$attempt" = 3 ]; then exit 1; fi
               sleep 5
               git fetch origin "$GITHUB_REF_NAME"
-              # Do not overwrite another run or merge newer code into old reports.
+              # Permit only isolated research ledger changes; never rebase across analysis inputs.
               if [ "$(git rev-parse FETCH_HEAD)" != "$(git rev-parse HEAD^)" ]; then
-                echo "Remote advanced; refusing to publish stale snapshot"
-                exit 1
+                if [ "$GITHUB_REF" != "refs/heads/main" ] || ! python scripts/publication_retry.py HEAD^ FETCH_HEAD; then
+                  echo "Remote advanced; refusing to publish stale snapshot"
+                  exit 1
+                fi
+                git rebase FETCH_HEAD || { git rebase --abort; exit 1; }
               fi
             done
           fi
