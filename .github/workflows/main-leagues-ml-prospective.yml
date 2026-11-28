@@ -5,6 +5,8 @@ on:
       - 'scripts/main_leagues_ml_prospective.py'
       - 'scripts/main_leagues_ml_settlement.py'
       - 'scripts/main_ml_matched_comparison.py'
+      - 'scripts/main_ml_calibration_review.py'
+      - 'scripts/test_main_ml_calibration_review.py'
       - 'scripts/test_main_ml_matched_comparison.py'
       - 'scripts/test_main_leagues_ml_settlement.py'
       - 'scripts/extra_ml_settlement.py'
@@ -18,6 +20,8 @@ on:
       - 'scripts/main_leagues_ml_prospective.py'
       - 'scripts/main_leagues_ml_settlement.py'
       - 'scripts/main_ml_matched_comparison.py'
+      - 'scripts/main_ml_calibration_review.py'
+      - 'scripts/test_main_ml_calibration_review.py'
       - 'scripts/test_main_ml_matched_comparison.py'
       - 'scripts/test_main_leagues_ml_settlement.py'
       - 'scripts/extra_ml_settlement.py'
@@ -47,12 +51,15 @@ jobs:
       - run: python scripts/test_extra_ml_settlement.py
       - run: python scripts/test_main_leagues_ml_settlement.py
       - run: python scripts/test_main_ml_matched_comparison.py
+      - run: python scripts/test_main_ml_calibration_review.py
       - if: github.event_name == 'pull_request'
         run: python scripts/main_leagues_ml_prospective.py
       - if: github.event_name == 'pull_request'
         run: python scripts/main_leagues_ml_settlement.py
       - if: github.event_name == 'pull_request'
         run: python scripts/main_ml_matched_comparison.py
+      - if: github.event_name == 'pull_request'
+        run: python scripts/main_ml_calibration_review.py
       - if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
@@ -61,6 +68,7 @@ jobs:
             main_ml_prospective_report.json
             main_ml_settlement_report.json
             main_ml_matched_report.json
+            main_ml_calibration_review.json
           if-no-files-found: error
           retention-days: 30
   capture:
@@ -81,6 +89,7 @@ jobs:
       - run: python scripts/main_leagues_ml_prospective.py
       - run: python scripts/main_leagues_ml_settlement.py
       - run: python scripts/main_ml_matched_comparison.py
+      - run: python scripts/main_ml_calibration_review.py
       - name: Preserve main frozen model and prospective ledger
         run: |
           git config user.name "github-actions[bot]"
@@ -98,5 +107,6 @@ jobs:
             main_ml_prospective_report.json
             main_ml_settlement_report.json
             main_ml_matched_report.json
+            main_ml_calibration_review.json
           if-no-files-found: error
           retention-days: 90
