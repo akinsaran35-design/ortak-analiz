@@ -93,6 +93,12 @@ def build(pairs,ledger,meta,legacy,now):
         for day,b,c,y in vals:blocks[day].append((b-y)**2-(c-y)**2)
         stats[m]=dict(legacy=reliability([(b,y) for _,b,_,y in vals]),
             candidate=reliability([(c,y) for _,_,c,y in vals]),pairedBootstrap=paired_date_bootstrap(blocks))
+        poisson_pairs=[(f["date"],f["poisson"][m],x["candidate"][m],labels(*score)[i]) for f,x,score in valid]
+        poisson_blocks=defaultdict(list)
+        for day,b,c,y in poisson_pairs:poisson_blocks[day].append((b-y)**2-(c-y)**2)
+        stats[m]["poisson"]=reliability([(b,y) for _,b,_,y in poisson_pairs])
+        stats[m]["pairedPoissonBootstrap"]=paired_date_bootstrap(poisson_blocks)
+        stats[m]["identicalEvaluationSample"]=True
     dates=len({f["date"] for f,_,_ in valid})
     return dict(version="6.69",mode="matched_prospective_research_only",cohortVersion=VERSION,legacyVersion=LEGACY_VERSION,
         newPairs=added,paired=len(locked),validSettled=len(valid),pending=pending,excluded=dict(excluded),dateBlocks=dates,
