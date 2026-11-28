@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-28T13:29:20+03:00",
+  "updatedAt": "2026-11-28T13:34:03+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -32,7 +32,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "İngiltere Championship",
@@ -49,7 +50,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Almanya Bundesliga",
@@ -66,7 +68,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "İspanya La Liga",
@@ -83,7 +86,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "İtalya Serie A",
@@ -100,7 +104,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Fransa Ligue 1",
@@ -117,7 +122,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Hollanda Eredivisie",
@@ -134,7 +140,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Portekiz Primeira Liga",
@@ -151,7 +158,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Türkiye Süper Lig",
@@ -169,6 +177,7 @@
         "2025-26"
       ],
       "seasonErrors": {},
+      "cachedHistoricalSeasons": {},
       "fixtureSources": [
         "The Odds API"
       ],
@@ -49308,6 +49317,8 @@
         "home": 2.75,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49334,6 +49345,8 @@
         "home": 2.01,
         "away": 1.91
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49360,6 +49373,8 @@
         "home": 1.3,
         "away": 2.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49386,6 +49401,8 @@
         "home": 2.1,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49412,6 +49429,8 @@
         "home": 2.3,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49438,6 +49457,8 @@
         "home": 2.48,
         "away": 1.04
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49464,6 +49485,8 @@
         "home": 2.1,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49490,6 +49513,8 @@
         "home": 1.55,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49516,6 +49541,8 @@
         "home": 1.75,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49542,6 +49569,8 @@
         "home": 1.55,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49568,6 +49597,8 @@
         "home": 1.5,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49594,6 +49625,8 @@
         "home": 1.82,
         "away": 1.34
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49620,6 +49653,8 @@
         "home": 1.25,
         "away": 1.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49646,6 +49681,8 @@
         "home": 1.8,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49672,6 +49709,8 @@
         "home": 1.3,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49698,6 +49737,8 @@
         "home": 1.86,
         "away": 1.11
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49724,6 +49765,8 @@
         "home": 1.8,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49750,6 +49793,8 @@
         "home": 1.5,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49776,6 +49821,8 @@
         "home": 1.65,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49802,6 +49849,8 @@
         "home": 1.21,
         "away": 1.64
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49828,6 +49877,8 @@
         "home": 1.5,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49854,6 +49905,8 @@
         "home": 1.15,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49880,6 +49933,8 @@
         "home": 1.7,
         "away": 1.1
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49906,6 +49961,8 @@
         "home": 1.45,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49932,6 +49989,8 @@
         "home": 1.75,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49958,6 +50017,8 @@
         "home": 1.45,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49984,6 +50045,8 @@
         "home": 1.15,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50010,6 +50073,8 @@
         "home": 1.25,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50036,6 +50101,8 @@
         "home": 1.75,
         "away": 0.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50062,6 +50129,8 @@
         "home": 1.7,
         "away": 0.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50088,6 +50157,8 @@
         "home": 1.15,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50114,6 +50185,8 @@
         "home": 1.35,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50140,6 +50213,8 @@
         "home": 1.34,
         "away": 1.14
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50166,6 +50241,8 @@
         "home": 1.4,
         "away": 1.05
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50192,6 +50269,8 @@
         "home": 1.8,
         "away": 0.6
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50218,6 +50297,8 @@
         "home": 2.6,
         "away": 1.39
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50244,6 +50325,8 @@
         "home": 1.65,
         "away": 2.11
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50270,6 +50353,8 @@
         "home": 1.7,
         "away": 2.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50296,6 +50381,8 @@
         "home": 1.95,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50322,6 +50409,8 @@
         "home": 2.45,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50348,6 +50437,8 @@
         "home": 2.3,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50374,6 +50465,8 @@
         "home": 1.8,
         "away": 1.75
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50400,6 +50493,8 @@
         "home": 1.65,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50426,6 +50521,8 @@
         "home": 1.9,
         "away": 1.6
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50452,6 +50549,8 @@
         "home": 2.15,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50478,6 +50577,8 @@
         "home": 1.65,
         "away": 1.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50504,6 +50605,8 @@
         "home": 1.9,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50530,6 +50633,8 @@
         "home": 1.65,
         "away": 1.75
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50556,6 +50661,8 @@
         "home": 2.15,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50582,6 +50689,8 @@
         "home": 2.25,
         "away": 1.05
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50608,6 +50717,8 @@
         "home": 1.85,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50634,6 +50745,8 @@
         "home": 1.8,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50660,6 +50773,8 @@
         "home": 1.35,
         "away": 1.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50686,6 +50801,8 @@
         "home": 1.55,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50712,6 +50829,8 @@
         "home": 1.5,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50738,6 +50857,8 @@
         "home": 1.16,
         "away": 1.82
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50764,6 +50885,8 @@
         "home": 1.5,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50790,6 +50913,8 @@
         "home": 1.25,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50816,6 +50941,8 @@
         "home": 1.85,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50842,6 +50969,8 @@
         "home": 0.95,
         "away": 1.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50868,6 +50997,8 @@
         "home": 1.7,
         "away": 1.12
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50894,6 +51025,8 @@
         "home": 1.2,
         "away": 1.6
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50920,6 +51053,8 @@
         "home": 1.7,
         "away": 0.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50946,6 +51081,8 @@
         "home": 1.3,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50972,6 +51109,8 @@
         "home": 1.35,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50998,6 +51137,8 @@
         "home": 1.15,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51024,6 +51165,8 @@
         "home": 1.7,
         "away": 0.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51050,6 +51193,8 @@
         "home": 1.5,
         "away": 0.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51076,6 +51221,8 @@
         "home": 1.1,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51102,6 +51249,8 @@
         "home": 1.1,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51128,6 +51277,8 @@
         "home": 2.0,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51154,6 +51305,8 @@
         "home": 1.1,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51180,6 +51333,8 @@
         "home": 2.0,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51206,6 +51361,8 @@
         "home": 1.7,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51232,6 +51389,8 @@
         "home": 1.6,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51258,6 +51417,8 @@
         "home": 2.0,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51284,6 +51445,8 @@
         "home": 1.45,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51310,6 +51473,8 @@
         "home": 1.45,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51336,6 +51501,8 @@
         "home": 1.2,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51362,6 +51529,8 @@
         "home": 1.35,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51388,6 +51557,8 @@
         "home": 1.35,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51414,6 +51585,8 @@
         "home": 1.44,
         "away": 2.42
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51440,6 +51613,8 @@
         "home": 1.8,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51466,6 +51641,8 @@
         "home": 2.55,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51492,6 +51669,8 @@
         "home": 2.15,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51518,6 +51697,8 @@
         "home": 2.05,
         "away": 1.75
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51544,6 +51725,8 @@
         "home": 1.95,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51570,6 +51753,8 @@
         "home": 0.93,
         "away": 2.68
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51596,6 +51781,8 @@
         "home": 2.75,
         "away": 0.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51622,6 +51809,8 @@
         "home": 1.95,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51648,6 +51837,8 @@
         "home": 2.2,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51674,6 +51865,8 @@
         "home": 1.9,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51700,6 +51893,8 @@
         "home": 1.67,
         "away": 1.71
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51726,6 +51921,8 @@
         "home": 1.59,
         "away": 1.72
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51752,6 +51949,8 @@
         "home": 1.8,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51778,6 +51977,8 @@
         "home": 2.0,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51804,6 +52005,8 @@
         "home": 1.3,
         "away": 1.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51830,6 +52033,8 @@
         "home": 1.45,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51856,6 +52061,8 @@
         "home": 1.6,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51882,6 +52089,8 @@
         "home": 1.8,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51908,6 +52117,8 @@
         "home": 1.7,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51934,6 +52145,8 @@
         "home": 1.9,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51960,6 +52173,8 @@
         "home": 1.8,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51986,6 +52201,8 @@
         "home": 2.2,
         "away": 0.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52012,6 +52229,8 @@
         "home": 1.75,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52038,6 +52257,8 @@
         "home": 1.9,
         "away": 1.1
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52064,6 +52285,8 @@
         "home": 1.35,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52090,6 +52313,8 @@
         "home": 1.55,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52116,6 +52341,8 @@
         "home": 1.55,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52142,6 +52369,8 @@
         "home": 1.05,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52168,6 +52397,8 @@
         "home": 1.2,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52194,6 +52425,8 @@
         "home": 1.9,
         "away": 0.95
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52220,6 +52453,8 @@
         "home": 1.3,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52246,6 +52481,8 @@
         "home": 1.7,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52272,6 +52509,8 @@
         "home": 1.6,
         "away": 1.05
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52298,6 +52537,8 @@
         "home": 1.1,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52324,6 +52565,8 @@
         "home": 1.1,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52350,6 +52593,8 @@
         "home": 1.2,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52376,6 +52621,8 @@
         "home": 1.25,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52402,6 +52649,8 @@
         "home": 1.2,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52430,5 +52679,5 @@
   "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
   "forecastTimingVersion": "6.82",
   "historyCutoffExclusive": "2026-11-28",
-  "generationCompletedAt": "2026-11-28T13:29:21.848382+03:00"
+  "generationCompletedAt": "2026-11-28T13:34:04.936887+03:00"
 }

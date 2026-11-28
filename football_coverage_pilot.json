@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-28T13:29:51.430202+03:00",
+  "updatedAt": "2026-11-28T13:34:34.756389+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -984,10 +984,10 @@
           "kickoff": "2026-11-28T08:40:00+00:00",
           "state": "in",
           "status": "STATUS_SECOND_HALF",
-          "clock": "90'",
+          "clock": "90'+4'",
           "score": [
             2,
-            2
+            3
           ],
           "date": "2026-11-28"
         }
