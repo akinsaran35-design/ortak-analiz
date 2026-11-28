@@ -1,7 +1,7 @@
 {
   "version": "5.37",
   "mode": "fixture_data_quality_only",
-  "dailyUpdatedAt": "2026-11-28T11:16:39+03:00",
+  "dailyUpdatedAt": "2026-11-28T11:29:33+03:00",
   "cutoffExclusive": "2026-11-28",
   "predictionsEnabled": false,
   "decision": "PAS",

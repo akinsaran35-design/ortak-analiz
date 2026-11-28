@@ -1,6 +1,6 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-28T08:17:52.600058+00:00",
+  "updatedAt": "2026-11-28T08:30:37.512584+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
@@ -354,7 +354,7 @@
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-28T08:17:18.913946+00:00",
+    "reportAt": "2026-11-28T08:30:07.326727+00:00",
     "reportedMarkets": 0
   },
   "volume": {
