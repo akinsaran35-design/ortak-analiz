@@ -1206,7 +1206,24 @@ def xgb_predictions(model,rows):
     import numpy as np
     return [xgb_market_probabilities(p) for p in model.predict_proba(np.asarray([xgb_features(r[1]) for r in rows]))]
 
+def lightgbm_fit(train):
+    if len(train)<XGB_MIN_TRAIN or {score_class(r[2]) for r in train}!=set(range(5)):
+        return None
+    import numpy as np
+    from lightgbm import LGBMClassifier
+    model=LGBMClassifier(objective="multiclass",num_class=5,n_estimators=40,max_depth=2,num_leaves=4,
+        learning_rate=0.05,min_child_samples=15,reg_lambda=5,subsample=1,colsample_bytree=1,
+        random_state=20261128,n_jobs=1,deterministic=True,force_col_wise=True,verbosity=-1)
+    model.fit(np.asarray([xgb_features(r[1]) for r in train]),np.asarray([score_class(r[2]) for r in train]))
+    return model
+
+def lightgbm_backtest(rows):
+    return stacking_backtest(rows,lightgbm_fit,"lightgbm")
+
 def xgb_backtest(rows):
+    return stacking_backtest(rows,xgb_fit,"xgboost")
+
+def stacking_backtest(rows,fit_model,model_name):
     """Fit on early dates, select blend on middle dates, evaluate on later dates."""
     samples=ensemble_samples(rows)
     days=sorted({r[0] for r in samples})
@@ -1217,7 +1234,7 @@ def xgb_backtest(rows):
     test=[r for r in samples if second and r[0]>=second]
     weights=fit_ensemble_weights(train)
     base=lambda r:ensemble_prediction(r[1],weights)
-    model=xgb_fit(train)
+    model=fit_model(train)
     q_tune=xgb_predictions(model,tune)
     q_test=xgb_predictions(model,test)
     blend=lambda p,q,w:tuple((1-w)*a+w*b for a,b in zip(p,q))
@@ -1234,9 +1251,9 @@ def xgb_backtest(rows):
                 logLoss=round(-sum(y*math.log(max(1e-12,p))+(1-y)*math.log(max(1e-12,1-p)) for p,y in pairs)/n,6),
                 accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y in pairs)/n,2))
         metrics[k]=dict(n=len(test),ensemble=score([(base(r)[i],r[2][i]) for r in test]),
-            xgboost=score([(q[i],r[2][i]) for r,q in zip(test,q_test)]),
+            **{model_name:score([(q[i],r[2][i]) for r,q in zip(test,q_test)])},
             blended=score([(blend(base(r),q_test[j],chosen)[i] if model is not None else base(r)[i],r[2][i]) for j,r in enumerate(test)]))
-    return dict(model="xgboost_five_class_stacking",trained=model is not None,trainMatches=len(train),
+    return dict(model=model_name+"_five_class_stacking",trained=model is not None,trainMatches=len(train),
         tuneMatches=len(tune),holdoutMatches=len(test),tuneStart=first,holdoutStart=second,
         selectedBlendWeight=chosen,blendCandidates=list(XGB_BLEND_WEIGHTS),featureCount=len(ENSEMBLE_MODELS)*len(MARKETS),
         trainClassCounts=dict(Counter(score_class(r[2]) for r in train)),baseWeights=dict(zip(ENSEMBLE_MODELS,weights)),
@@ -1267,7 +1284,8 @@ def build(now,reader=read):
     ensemble=ensemble_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     calibration=league_calibration_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     xgb=xgb_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.44",xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    lgb=lightgbm_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.45",lightgbmBacktest=lgb,xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -1278,6 +1296,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("LIGHTGBM_BACKTEST",json.dumps(report["lightgbmBacktest"]))
     print("XGBOOST_BACKTEST",json.dumps(report["xgboostBacktest"]))
     print("LEAGUE_CALIBRATION",json.dumps(report["leagueCalibration"]))
     print("ENSEMBLE_BACKTEST",json.dumps(report["ensembleBacktest"]))
