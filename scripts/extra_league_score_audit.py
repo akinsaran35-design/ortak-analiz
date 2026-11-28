@@ -570,6 +570,83 @@ def bivariate_backtest(rows):
     return dict(model="league_bivariate_poisson",holdoutStart=cutoff,markets=metrics,shrinkageMatches=BIVARIATE_SHRINKAGE,
         sameDayTraining=False,productionModelValidated=False,externalValidation=False)
 
+NB_SHRINKAGE=20
+
+def fit_nb_dispersion(scores,mean):
+    """Regularized method of moments; variance = mean + alpha * mean**2."""
+    n=len(scores)
+    if n<2 or mean<=0:
+        return 0.0
+    variance=sum((x-mean)**2 for x in scores)/(n-1)
+    return max(0,(variance-mean)/mean**2)*n/(n+NB_SHRINKAGE)
+
+def nb_low_mass(mean,alpha):
+    if not all(math.isfinite(x) and x>=0 for x in (mean,alpha)):
+        raise ValueError("invalid negative binomial parameters")
+    if alpha==0:
+        p0=math.exp(-mean)
+        p1=p0*mean
+        return p0,p1,p1*mean/2
+    p0=math.exp(-math.log1p(alpha*mean)/alpha)
+    ratio=mean/(1+alpha*mean)
+    p1=p0*ratio
+    return p0,p1,p1*ratio*(1+alpha)/2
+
+def nb_probabilities(h,a,alpha_h,alpha_a):
+    """Independent overdispersed goal margins; exact low-score convolution."""
+    h0,h1,h2=nb_low_mass(h,alpha_h)
+    a0,a1,a2=nb_low_mass(a,alpha_a)
+    if alpha_h==alpha_a==0:
+        return goal_probabilities(h,a)
+    p0=h0*a0
+    p1=h1*a0+h0*a1
+    p2=h2*a0+h1*a1+h0*a2
+    return tuple(min(1,max(0,p)) for p in (1-p0-p1,1-p0-p1-p2,(1-h0)*(1-a0)))
+
+def negative_binomial_backtest(rows):
+    """Fit dispersion on earlier league dates, then compare on matched samples."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    samples={k:[] for k in MARKETS}
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        fitted={}
+        for r in group:
+            league=r["league"]
+            past=history.get(league,[])
+            n=len(past)
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            if league not in fitted:
+                hs,aw=zip(*past)
+                h=sum(hs)/n
+                a=sum(aw)/n
+                ah,aa=fit_nb_dispersion(hs,h),fit_nb_dispersion(aw,a)
+                fitted[league]=(goal_probabilities(h,a),nb_probabilities(h,a,ah,aa),ah,aa)
+            base,nb,ah,aa=fitted[league]
+            for k,p,q,y in zip(MARKETS,base,nb,labels(*r["csv"])):
+                samples[k].append((day,p,q,y,ah,aa))
+        for r in group:
+            history.setdefault(r["league"],[]).append(r["csv"])
+    days=sorted({s[0] for s in samples[MARKETS[0]]})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    metrics={}
+    for k,items in samples.items():
+        test=[r for r in items if cutoff and r[0]>=cutoff]
+        n=len(test)
+        def score(i):
+            if not n: return dict(brier=None,accuracyPct=None)
+            return dict(brier=round(sum((r[i]-r[3])**2 for r in test)/n,6),
+                accuracyPct=round(100*sum((r[i]>=0.5)==bool(r[3]) for r in test)/n,2))
+        metrics[k]=dict(n=n,poisson=score(1),negativeBinomial=score(2),
+            overdispersedMatches=sum(r[4]>0 or r[5]>0 for r in test),
+            meanHomeDispersion=round(sum(r[4] for r in test)/n,6) if n else None,
+            meanAwayDispersion=round(sum(r[5] for r in test)/n,6) if n else None)
+    return dict(model="league_negative_binomial",holdoutStart=cutoff,markets=metrics,
+        shrinkageMatches=NB_SHRINKAGE,sameDayTraining=False,productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -587,7 +664,8 @@ def build(now,reader=read):
     simulation=simulation_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     bayes=bayesian_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     bivariate=bivariate_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.36",bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    nb=negative_binomial_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.37",negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -598,6 +676,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("NEGATIVE_BINOMIAL_BACKTEST",json.dumps(report["negativeBinomialBacktest"]))
     print("BIVARIATE_BACKTEST",json.dumps(report["bivariateBacktest"]))
     print("BAYESIAN_BACKTEST",json.dumps(report["bayesianBacktest"]))
     print("SIMULATION_AUDIT",json.dumps({k:report["simulationAudit"][k] for k in ("mode","drawsPerCasePerMethod","summary")}))
