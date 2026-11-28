@@ -1,7 +1,7 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-28T14:28:20.983860+03:00",
-  "dailyUpdatedAt": "2026-11-28T14:27:49+03:00",
+  "updatedAt": "2026-11-28T14:53:50.738917+03:00",
+  "dailyUpdatedAt": "2026-11-28T14:53:06+03:00",
   "cutoffExclusive": "2026-11-28",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -9694,7 +9694,7 @@
         {
           "date": "2026-11-28",
           "league": "Türkiye Süper Lig",
-          "match": "gaziantep – amed",
+          "match": "gaziantep – amed sfk",
           "home": {
             "sample": 10,
             "metrics": {
@@ -9731,37 +9731,37 @@
             }
           },
           "away": {
-            "sample": 10,
+            "sample": 0,
             "metrics": {
               "corners": {
-                "sample": 10,
-                "forAverage": 5.3,
-                "againstAverage": 3.9
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
               },
               "yellowCards": {
-                "sample": 10,
-                "forAverage": 3.0,
-                "againstAverage": 3.3
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
               },
               "redCards": {
-                "sample": 10,
-                "forAverage": 0.3,
-                "againstAverage": 0.1
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
               },
               "shots": {
-                "sample": 10,
-                "forAverage": 16.7,
-                "againstAverage": 11.0
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
               },
               "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 5.9,
-                "againstAverage": 4.2
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
               },
               "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.8,
-                "againstAverage": 0.6
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
               }
             }
           }
@@ -10069,6 +10069,81 @@
         {
           "date": "2026-11-30",
           "league": "Türkiye Süper Lig",
+          "match": "besiktas – galatasaray",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.9,
+                "againstAverage": 3.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 2.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 17.0,
+                "againstAverage": 10.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.7,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 7.7,
+                "againstAverage": 4.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 19.8,
+                "againstAverage": 11.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 7.1,
+                "againstAverage": 3.7
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-11-30",
+          "league": "Türkiye Süper Lig",
           "match": "goztepe – trabzonspor",
           "home": {
             "sample": 10,
@@ -10137,6 +10212,231 @@
                 "sample": 10,
                 "forAverage": 1.5,
                 "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-04",
+          "league": "Türkiye Süper Lig",
+          "match": "galatasaray – rizespor",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 7.7,
+                "againstAverage": 4.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 19.8,
+                "againstAverage": 11.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 7.1,
+                "againstAverage": 3.7
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 5.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.5,
+                "againstAverage": 15.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 5.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Türkiye Süper Lig",
+          "match": "amed sfk – alanyaspor",
+          "home": {
+            "sample": 0,
+            "metrics": {
+              "corners": {
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
+              },
+              "yellowCards": {
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
+              },
+              "redCards": {
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
+              },
+              "shots": {
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
+              },
+              "shotsOnTarget": {
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
+              },
+              "halfTimeGoals": {
+                "sample": 0,
+                "forAverage": null,
+                "againstAverage": null
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 4.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.4,
+                "againstAverage": 16.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.4,
+                "againstAverage": 5.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Türkiye Süper Lig",
+          "match": "basaksehir – fenerbahce",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 1.8
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.4,
+                "againstAverage": 13.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 3.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.5
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 5.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.5,
+                "againstAverage": 15.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.9,
+                "againstAverage": 4.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 0.3
               }
             }
           }
@@ -10220,7 +10520,7 @@
     }
   ],
   "respondingLeagues": 9,
-  "fixtureCount": 134,
+  "fixtureCount": 138,
   "predictionsEnabled": false,
   "realBettingEnabled": false,
   "decision": "PAS"

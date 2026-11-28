@@ -4867,5 +4867,95 @@
       }
     },
     "result": null
+  },
+  "[\"2026-11-30\", \"tr.1\", \"besiktas\", \"galatasaray\"]": {
+    "date": "2026-11-30",
+    "league": "tr.1",
+    "home": "besiktas",
+    "away": "galatasaray",
+    "recordedAt": "2026-11-28T14:53:39.993389+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "source_names",
+    "old": 0.6405735336749161,
+    "candidate": 0.6445117994878495,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.841402380174668,
+        "candidate": 0.8437821259052742,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.6405735336749161,
+        "candidate": 0.6445117994878495,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.6353688351688349,
+        "candidate": 0.6551900350922898,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-04\", \"tr.1\", \"galatasaray\", \"rizespor\"]": {
+    "date": "2026-12-04",
+    "league": "tr.1",
+    "home": "galatasaray",
+    "away": "rizespor",
+    "recordedAt": "2026-11-28T14:53:39.993389+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "source_names",
+    "old": 0.6095635590826801,
+    "candidate": 0.6197675255336611,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8221636735017832,
+        "candidate": 0.8285932343505727,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.6095635590826801,
+        "candidate": 0.6197675255336611,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.606778710784215,
+        "candidate": 0.6182135930197415,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"tr.1\", \"basaksehir\", \"fenerbahce\"]": {
+    "date": "2026-12-05",
+    "league": "tr.1",
+    "home": "basaksehir",
+    "away": "fenerbahce",
+    "recordedAt": "2026-11-28T14:53:39.993389+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "canonical_exact",
+    "old": 0.6698056996226208,
+    "candidate": 0.6875720093250479,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.8587319181175976,
+        "candidate": 0.8688915323445587,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.6698056996226208,
+        "candidate": 0.6875720093250479,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.6663414046431245,
+        "candidate": 0.6885478159423694,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
   }
 }

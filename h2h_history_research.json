@@ -1,6 +1,6 @@
 {
   "version": "5.28",
-  "dailyUpdatedAt": "2026-11-28T14:27:49+03:00",
+  "dailyUpdatedAt": "2026-11-28T14:53:06+03:00",
   "cutoffExclusive": "2026-11-28",
   "mode": "descriptive_research",
   "decision": "PAS",
@@ -3026,19 +3026,20 @@
       "extraErrors": [],
       "extraInvalid": 0,
       "crossDivisionFixtures": 0,
-      "fixtures": 7,
+      "fixtures": 11,
       "sampleCounts": {
-        "0": 3,
+        "0": 4,
         "2": 1,
         "4": 1,
+        "10": 3,
         "6": 1,
-        "10": 1
+        "8": 1
       },
-      "formSidesRefreshed": 14,
-      "formSidesNewer": 3,
+      "formSidesRefreshed": 20,
+      "formSidesNewer": 4,
       "rows": [
         {
-          "match": "gaziantep – amed",
+          "match": "gaziantep – amed sfk",
           "date": "2026-11-28",
           "sample": 0,
           "csvMatchesAvailable": 0,
@@ -3046,15 +3047,15 @@
           "source": "original_league_history",
           "formRefreshed": {
             "home": true,
-            "away": true
+            "away": false
           },
           "formOldDates": {
             "home": "2026-11-21",
-            "away": "2026-11-21"
+            "away": null
           },
           "formNewDates": {
             "home": "2026-11-21",
-            "away": "2026-11-21"
+            "away": null
           }
         },
         {
@@ -3138,6 +3139,26 @@
           }
         },
         {
+          "match": "besiktas – galatasaray",
+          "date": "2026-11-30",
+          "sample": 10,
+          "csvMatchesAvailable": 10,
+          "crossDivisionMatches": 0,
+          "source": "football-data.co.uk",
+          "formRefreshed": {
+            "home": true,
+            "away": true
+          },
+          "formOldDates": {
+            "home": "2026-11-22",
+            "away": "2026-11-21"
+          },
+          "formNewDates": {
+            "home": "2026-11-22",
+            "away": "2026-11-21"
+          }
+        },
+        {
           "match": "goztepe – trabzonspor",
           "date": "2026-11-30",
           "sample": 6,
@@ -3155,6 +3176,66 @@
           "formNewDates": {
             "home": "2026-11-22",
             "away": "2026-11-22"
+          }
+        },
+        {
+          "match": "galatasaray – rizespor",
+          "date": "2026-12-04",
+          "sample": 8,
+          "csvMatchesAvailable": 8,
+          "crossDivisionMatches": 0,
+          "source": "football-data.co.uk",
+          "formRefreshed": {
+            "home": true,
+            "away": true
+          },
+          "formOldDates": {
+            "home": "2026-11-21",
+            "away": "2026-11-21"
+          },
+          "formNewDates": {
+            "home": "2026-11-21",
+            "away": "2026-11-21"
+          }
+        },
+        {
+          "match": "amed sfk – alanyaspor",
+          "date": "2026-12-05",
+          "sample": 0,
+          "csvMatchesAvailable": 0,
+          "crossDivisionMatches": 0,
+          "source": "original_league_history",
+          "formRefreshed": {
+            "home": false,
+            "away": true
+          },
+          "formOldDates": {
+            "home": null,
+            "away": "2026-11-22"
+          },
+          "formNewDates": {
+            "home": null,
+            "away": "2026-11-22"
+          }
+        },
+        {
+          "match": "basaksehir – fenerbahce",
+          "date": "2026-12-05",
+          "sample": 10,
+          "csvMatchesAvailable": 10,
+          "crossDivisionMatches": 0,
+          "source": "football-data.co.uk",
+          "formRefreshed": {
+            "home": true,
+            "away": true
+          },
+          "formOldDates": {
+            "home": null,
+            "away": "2026-11-21"
+          },
+          "formNewDates": {
+            "home": "2026-11-23",
+            "away": "2026-11-21"
           }
         },
         {

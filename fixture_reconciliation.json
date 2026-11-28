@@ -1,144 +1,69 @@
 {
   "version": "4.59",
-  "updatedAt": "2026-11-28T11:28:15.572970+00:00",
+  "updatedAt": "2026-11-28T11:53:43.173634+00:00",
   "source": "https://github.com/oladeeayo/open-matchday",
   "sourceUpdatedAt": "2026-11-28T07:07:07+00:00",
   "oddsUpdatedAt": "2026-11-28T11:12:52.256440+00:00",
-  "dailyUpdatedAt": "2026-11-28T14:27:49+03:00",
-  "oddsFresh": true,
+  "dailyUpdatedAt": "2026-11-28T14:53:06+03:00",
+  "oddsFresh": false,
   "status": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "originalMatched": 79,
-  "reconciledMatched": 96,
-  "proposedCorrections": [
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Everton FC – Liverpool FC",
-      "originalDate": "2026-11-28",
-      "corroboratedDate": "2026-11-29",
-      "eventId": "f45e9062c2f755b977c98d496c22697b"
-    },
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Arsenal FC – Manchester City FC",
-      "originalDate": "2026-11-28",
-      "corroboratedDate": "2026-11-29",
-      "eventId": "d20ede55e54ed7b55fdc36ca373727c0"
-    },
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Fulham FC – AFC Bournemouth",
-      "originalDate": "2026-11-28",
-      "corroboratedDate": "2026-11-29",
-      "eventId": "56ea91809ff11d3a67557a21b3371cb9"
-    },
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Brighton & Hove Albion FC – Newcastle United FC",
-      "originalDate": "2026-11-28",
-      "corroboratedDate": "2026-11-29",
-      "eventId": "e9c2b74ecaafd494e3b2d8521b52216a"
-    },
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Sunderland AFC – Tottenham Hotspur FC",
-      "originalDate": "2026-11-28",
-      "corroboratedDate": "2026-11-29",
-      "eventId": "09bb0ba9a9025d64fed410375c0c8f80"
-    },
-    {
-      "league": "İspanya La Liga",
-      "match": "Real Madrid CF – Deportivo Alavés",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "c99772cba1418e72f2eded26e4afeb59"
-    },
-    {
-      "league": "İspanya La Liga",
-      "match": "Elche CF – Club Atlético de Madrid",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "40236ab976955345ebd1edb72abf6b22"
-    },
-    {
-      "league": "İtalya Serie A",
-      "match": "FC Internazionale Milano – Genoa CFC",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "f128c19fa7af43e30dbe3c373e7bc27e"
-    },
-    {
-      "league": "İspanya La Liga",
-      "match": "Málaga CF – Athletic Club",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "33d92dabbd2606dfe9d31058f7b20cc8"
-    },
-    {
-      "league": "İtalya Serie A",
-      "match": "US Lecce – Atalanta BC",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-30",
-      "eventId": "f1d2a6064d1452074570bbc656d36a20"
-    },
-    {
-      "league": "İspanya La Liga",
-      "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "c81520b9a9794749cfdab57f89bdeb16"
-    },
-    {
-      "league": "İtalya Serie A",
-      "match": "Torino FC – SS Lazio",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "aec86b479e922f437ba228b9a9d74da1"
-    },
-    {
-      "league": "İtalya Serie A",
-      "match": "Frosinone Calcio – Parma Calcio 1913",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "af3432ca724da03d38f0ff4e62045e4c"
-    },
-    {
-      "league": "İtalya Serie A",
-      "match": "Cagliari Calcio – AC Milan",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-30",
-      "eventId": "3d57da6bdb20b65145bc2479ee5f2ae7"
-    },
-    {
-      "league": "İspanya La Liga",
-      "match": "RCD Espanyol de Barcelona – Getafe CF",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-30",
-      "eventId": "b648a7246af1d3a839b0fcd212849a7c"
-    },
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Coventry City FC – Ipswich Town FC",
-      "originalDate": "2026-12-02",
-      "corroboratedDate": "2026-12-01",
-      "eventId": "c7aff6bfea3ca1c4b177694977831b85"
-    },
-    {
-      "league": "İngiltere Premier Lig",
-      "match": "Tottenham Hotspur FC – Fulham FC",
-      "originalDate": "2026-12-02",
-      "corroboratedDate": "2026-12-03",
-      "eventId": "0c1ccc010b185ada698661a21316696c"
-    }
-  ],
+  "originalMatched": 78,
+  "reconciledMatched": 78,
+  "proposedCorrections": [],
   "unresolved": [
+    {
+      "match": "Everton FC – Liverpool FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-29"
+      ]
+    },
+    {
+      "match": "Arsenal FC – Manchester City FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-29"
+      ]
+    },
     {
       "match": "Nottingham Forest FC – Chelsea FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
       "reason": "no_exact_match",
       "providerDates": []
+    },
+    {
+      "match": "Fulham FC – AFC Bournemouth",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-29"
+      ]
+    },
+    {
+      "match": "Brighton & Hove Albion FC – Newcastle United FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-29"
+      ]
+    },
+    {
+      "match": "Sunderland AFC – Tottenham Hotspur FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-29"
+      ]
     },
     {
       "match": "Levante UD – Real Racing Club de Santander",
@@ -148,9 +73,131 @@
       "providerDates": []
     },
     {
+      "match": "Real Madrid CF – Deportivo Alavés",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
+      "match": "Elche CF – Club Atlético de Madrid",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
+      "match": "FC Internazionale Milano – Genoa CFC",
+      "league": "İtalya Serie A",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
+      "match": "Málaga CF – Athletic Club",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
       "match": "Venezia FC – Bologna FC 1909",
       "league": "İtalya Serie A",
       "date": "2026-11-29",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "US Lecce – Atalanta BC",
+      "league": "İtalya Serie A",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-30"
+      ]
+    },
+    {
+      "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
+      "match": "Torino FC – SS Lazio",
+      "league": "İtalya Serie A",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
+      "match": "Frosinone Calcio – Parma Calcio 1913",
+      "league": "İtalya Serie A",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-28"
+      ]
+    },
+    {
+      "match": "Cagliari Calcio – AC Milan",
+      "league": "İtalya Serie A",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-30"
+      ]
+    },
+    {
+      "match": "RCD Espanyol de Barcelona – Getafe CF",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-11-30"
+      ]
+    },
+    {
+      "match": "besiktas – galatasaray",
+      "league": "Türkiye Süper Lig",
+      "date": "2026-11-30",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Coventry City FC – Ipswich Town FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-02",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-12-01"
+      ]
+    },
+    {
+      "match": "Tottenham Hotspur FC – Fulham FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-02",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-12-03"
+      ]
+    },
+    {
+      "match": "galatasaray – rizespor",
+      "league": "Türkiye Süper Lig",
+      "date": "2026-12-04",
       "reason": "no_exact_match",
       "providerDates": []
     },
@@ -314,13 +361,11 @@
     }
   ],
   "candidateCountsByDate": {
-    "2026-11-28": 37,
-    "2026-11-29": 30,
-    "2026-11-30": 5,
-    "2026-12-02": 7,
-    "2026-12-01": 1,
-    "2026-12-03": 1,
-    "2026-12-04": 2,
+    "2026-11-28": 34,
+    "2026-11-29": 35,
+    "2026-11-30": 3,
+    "2026-12-02": 9,
+    "2026-12-04": 3,
     "2026-12-05": 38
   }
 }
