@@ -8,20 +8,22 @@ from pathlib import Path
 
 from league_config import ODDS_CODES
 from odds_snapshot_validation import normalize_event,finalize
+from extra_market_budget_plan import optional_refresh_gate
+from odds_continuity import record, valid
 LEAGUES = list(ODDS_CODES.values())
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
 # Reuse only a complete, recent snapshot; never change its original timestamp.
 cache_path = Path("odds.json")
+cached=None
+optional_refresh=os.environ.get("ODDS_OPTIONAL_REFRESH")=="true"
 try:
     cached = json.loads(cache_path.read_text(encoding="utf-8"))
     stamp = datetime.fromisoformat(cached["updatedAt"].replace("Z", "+00:00"))
     age = (now - stamp).total_seconds()
-    if (0 <= age < 1200 and cached.get("source") == "The Odds API"
-            and cached.get("region") == "uk" and cached.get("market") == "totals"
-            and cached.get("configuredLeagues") == LEAGUES
-            and cached.get("errors") == [] and isinstance(cached.get("events"), list)
-            and cached["events"]):
+    # A recent timestamp alone does not establish usable market evidence.
+    if 0 <= age < 1200 and valid(cached, now):
+        record(cached,cached,datetime.now(timezone.utc),"recent_cache")
         print("Reusing recent odds snapshot; no API requests.")
         raise SystemExit(0)
 except (OSError, ValueError, TypeError, KeyError, AttributeError):
@@ -40,16 +42,55 @@ if not key:
     report["errors"].append("missing_key")
 else:
     try:
-        active = {s["key"] for s in request("sports/", {}) if s.get("active")}
+        catalog = request("sports/", {})
+        # Malformed or ambiguous provider data is not evidence of inactive leagues.
+        if not isinstance(catalog,list) or not catalog:
+            raise ValueError("invalid sports catalog")
+        keys=set()
+        active=set()
+        for sport in catalog:
+            if (not isinstance(sport,dict) or not isinstance(sport.get("key"),str)
+                or not sport["key"].strip() or type(sport.get("active")) is not bool
+                or sport["key"] in keys):
+                raise ValueError("invalid sports catalog entry")
+            keys.add(sport["key"])
+            if sport["active"]:
+                active.add(sport["key"])
+    except ValueError:
+        active=set()
+        report["errors"].append("invalid_sports_catalog")
     except HTTPError as exc:
         active = set()
         report["errors"].append(f"HTTP {exc.code}")
     except Exception:
         active = set()
         report["errors"].append("connection_error")
+    if optional_refresh:
+        try:
+            workflow=Path(".github/workflows/daily.yml").read_text()
+            gate=optional_refresh_gate(report["remainingCredits"] if not report["errors"] else None,datetime.now(timezone.utc),workflow,len(LEAGUES))
+        except (OSError,ValueError,TypeError):
+            gate=dict(allowed=False,reason="budget_policy_unavailable")
+        print("OPTIONAL_ODDS_REFRESH_688",json.dumps(gate))
+        if not gate["allowed"]:
+            # Retain the actual older observation, never mark it as fresh.
+            if (isinstance(cached,dict) and cached.get("source")=="The Odds API" and cached.get("region")=="uk"
+                and cached.get("market")=="totals" and isinstance(cached.get("events"),list)
+                and cached.get("eventCount")==len(cached["events"])):
+                try:
+                    stamp=datetime.fromisoformat(cached["updatedAt"].replace("Z","+00:00"))
+                    if stamp.tzinfo is not None and stamp<=now:
+                        record(cached,cached,datetime.now(timezone.utc),"optional_refresh_deferred",report["remainingCredits"],report["errors"])
+                        print("Optional refresh deferred; existing observation timestamp retained.")
+                        raise SystemExit(0)
+                except (ValueError,TypeError,KeyError,AttributeError):
+                    pass
+            report["errors"].append("optional_refresh_deferred")
+            active=set()
     for league in LEAGUES:
         if league not in active:
-            report["inactiveLeagues"].append(league)
+            if not report["errors"]:
+                report["inactiveLeagues"].append(league)
             continue
         if report["remainingCredits"] is None or report["remainingCredits"] <= 20:
             report["errors"].append("quota_guard")
@@ -72,4 +113,6 @@ else:
             report["errors"].append(f"{league}: response_error")
 finalize(report,datetime.now(timezone.utc))
 Path("odds.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+reason="quota_guard" if "quota_guard" in report["errors"] else "source_error" if report["errors"] else "collected" if report["events"] else "no_valid_events"
+record(report,cached,datetime.now(timezone.utc),reason,report["remainingCredits"],report["errors"])
 print("Odds events:", report["eventCount"], "Remaining credits:", report["remainingCredits"], "Errors:", report["errors"])

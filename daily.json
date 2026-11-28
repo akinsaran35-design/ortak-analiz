@@ -3,18 +3,18 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-28T12:21:24+03:00",
+  "updatedAt": "2026-11-28T20:43:41+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
       "results": "https://football-data.co.uk/turkeym.php",
-      "fixtures": "The Odds API UK snapshot; incomplete coverage possible"
+      "fixtures": "The Odds API UK snapshot or independent ESPN scheduled fixtures; incomplete coverage possible"
     }
   },
   "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
   "leaguesChecked": 9,
   "leaguesLoaded": 9,
-  "fixturesToday": 39,
+  "fixturesToday": 37,
   "fixturesNext7Days": 133,
   "leagueDiagnostics": [
     {
@@ -32,7 +32,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "İngiltere Championship",
@@ -49,7 +50,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Almanya Bundesliga",
@@ -66,7 +68,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "İspanya La Liga",
@@ -83,7 +86,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "İtalya Serie A",
@@ -100,7 +104,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Fransa Ligue 1",
@@ -117,7 +122,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Hollanda Eredivisie",
@@ -134,7 +140,8 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Portekiz Primeira Liga",
@@ -151,12 +158,13 @@
         "2026-27",
         "2025-26"
       ],
-      "seasonErrors": {}
+      "seasonErrors": {},
+      "cachedHistoricalSeasons": {}
     },
     {
       "league": "Türkiye Süper Lig",
       "status": "partial",
-      "today": 2,
+      "today": 0,
       "next7": 6,
       "completedMatches": 414,
       "candidates": 3,
@@ -169,6 +177,10 @@
         "2025-26"
       ],
       "seasonErrors": {},
+      "cachedHistoricalSeasons": {},
+      "fixtureSources": [
+        "The Odds API"
+      ],
       "fixtureScope": "fresh_odds_events_only"
     }
   ],
@@ -6063,365 +6075,6 @@
           "limit": 12,
           "sample": 6,
           "csvMatchesAvailable": 6,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "gaziantep – amed",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "genclerbirligi",
-              "gf": 0,
-              "ga": 1,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-06",
-              "opponent": "kasimpasa",
-              "gf": 0,
-              "ga": 2,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "trabzonspor",
-              "gf": 0,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-24",
-              "opponent": "erzurumspor",
-              "gf": 1,
-              "ga": 3,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-18",
-              "opponent": "basaksehir",
-              "gf": 1,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            }
-          ],
-          "wins": 0,
-          "draws": 0,
-          "losses": 5,
-          "goalsFor": 2,
-          "goalsAgainst": 10,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "away": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "rizespor",
-              "gf": 0,
-              "ga": 2,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-07",
-              "opponent": "galatasaray",
-              "gf": 3,
-              "ga": 4,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "eyupspor",
-              "gf": 5,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-24",
-              "opponent": "samsunspor",
-              "gf": 2,
-              "ga": 1,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-17",
-              "opponent": "konyaspor",
-              "gf": 1,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            }
-          ],
-          "wins": 3,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 11,
-          "goalsAgainst": 8,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "h2h": [],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "original_league_history",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "galatasaray",
-              "gf": 1,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-07",
-              "opponent": "konyaspor",
-              "gf": 1,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "basaksehir",
-              "gf": 2,
-              "ga": 5,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-24",
-              "opponent": "amed",
-              "gf": 1,
-              "ga": 2,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-18",
-              "opponent": "kasimpasa",
-              "gf": 1,
-              "ga": 4,
-              "venue": "away",
-              "result": "L"
-            }
-          ],
-          "wins": 1,
-          "draws": 0,
-          "losses": 4,
-          "goalsFor": 6,
-          "goalsAgainst": 13,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "away": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "gaziantep",
-              "gf": 1,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-08",
-              "opponent": "besiktas",
-              "gf": 0,
-              "ga": 3,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-02",
-              "opponent": "alanyaspor",
-              "gf": 5,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-25",
-              "opponent": "konyaspor",
-              "gf": 0,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-17",
-              "opponent": "galatasaray",
-              "gf": 0,
-              "ga": 1,
-              "venue": "home",
-              "result": "L"
-            }
-          ],
-          "wins": 2,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 6,
-          "goalsAgainst": 6,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "h2h": [
-          {
-            "date": "2026-01-18",
-            "home": "genclerbirligi",
-            "away": "samsunspor",
-            "score": [
-              1,
-              1
-            ],
-            "stats": {
-              "corners": [
-                4,
-                6
-              ],
-              "yellowCards": [
-                0,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                8,
-                18
-              ],
-              "shotsOnTarget": [
-                3,
-                4
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-08-09",
-            "home": "samsunspor",
-            "away": "genclerbirligi",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                2,
-                3
-              ],
-              "yellowCards": [
-                1,
-                0
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                9,
-                8
-              ],
-              "shotsOnTarget": [
-                3,
-                1
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          }
-        ],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "football-data.co.uk",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 2,
-          "csvMatchesAvailable": 2,
           "conflictsExcluded": 0,
           "scope": "same_league_only",
           "extraDivision": null,
@@ -42306,6 +41959,628 @@
     },
     {
       "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "amed – alanyaspor",
+      "formResearch": {
+        "version": "5.06",
+        "asOfExclusive": "2026-11-28",
+        "scope": "available_league_history_only",
+        "sourceConflictsExcluded": 0,
+        "home": {
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-21",
+              "opponent": "rizespor",
+              "gf": 0,
+              "ga": 2,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-07",
+              "opponent": "galatasaray",
+              "gf": 3,
+              "ga": 4,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-01",
+              "opponent": "eyupspor",
+              "gf": 5,
+              "ga": 1,
+              "venue": "home",
+              "result": "W"
+            },
+            {
+              "date": "2026-10-24",
+              "opponent": "samsunspor",
+              "gf": 2,
+              "ga": 1,
+              "venue": "away",
+              "result": "W"
+            },
+            {
+              "date": "2026-10-17",
+              "opponent": "konyaspor",
+              "gf": 1,
+              "ga": 0,
+              "venue": "home",
+              "result": "W"
+            }
+          ],
+          "wins": 3,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 11,
+          "goalsAgainst": 8,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-21"
+        },
+        "away": {
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-22",
+              "opponent": "kasimpasa",
+              "gf": 1,
+              "ga": 2,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-08",
+              "opponent": "trabzonspor",
+              "gf": 0,
+              "ga": 2,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-02",
+              "opponent": "genclerbirligi",
+              "gf": 0,
+              "ga": 5,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-23",
+              "opponent": "kocaelispor",
+              "gf": 1,
+              "ga": 2,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-17",
+              "opponent": "fenerbahce",
+              "gf": 0,
+              "ga": 3,
+              "venue": "away",
+              "result": "L"
+            }
+          ],
+          "wins": 0,
+          "draws": 0,
+          "losses": 5,
+          "goalsFor": 2,
+          "goalsAgainst": 14,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-22"
+        },
+        "h2h": [],
+        "injuriesAvailable": false,
+        "lineupsAvailable": false,
+        "advancedStatsAvailable": false,
+        "h2hCoverage": {
+          "version": "5.28",
+          "source": "original_league_history",
+          "requestedSeasons": 6,
+          "loadedSeasons": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021
+          ],
+          "failedSeasons": [],
+          "limit": 12,
+          "sample": 0,
+          "csvMatchesAvailable": 0,
+          "conflictsExcluded": 0,
+          "scope": "same_league_only",
+          "extraDivision": null,
+          "extraLoadedSeasons": [],
+          "extraFailedSeasons": [],
+          "crossDivisionMatches": 0,
+          "predictionsEnabled": false
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "konyaspor – gaziantep",
+      "formResearch": {
+        "version": "5.06",
+        "asOfExclusive": "2026-11-28",
+        "scope": "available_league_history_only",
+        "sourceConflictsExcluded": 0,
+        "home": {
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-22",
+              "opponent": "besiktas",
+              "gf": 2,
+              "ga": 4,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-07",
+              "opponent": "samsunspor",
+              "gf": 0,
+              "ga": 1,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-30",
+              "opponent": "galatasaray",
+              "gf": 0,
+              "ga": 4,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-25",
+              "opponent": "genclerbirligi",
+              "gf": 2,
+              "ga": 0,
+              "venue": "home",
+              "result": "W"
+            },
+            {
+              "date": "2026-10-17",
+              "opponent": "amed",
+              "gf": 0,
+              "ga": 1,
+              "venue": "away",
+              "result": "L"
+            }
+          ],
+          "wins": 1,
+          "draws": 0,
+          "losses": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 10,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-22"
+        },
+        "away": {
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-21",
+              "opponent": "genclerbirligi",
+              "gf": 0,
+              "ga": 1,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-06",
+              "opponent": "kasimpasa",
+              "gf": 0,
+              "ga": 2,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-01",
+              "opponent": "trabzonspor",
+              "gf": 0,
+              "ga": 2,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-24",
+              "opponent": "erzurumspor",
+              "gf": 1,
+              "ga": 3,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-10-18",
+              "opponent": "basaksehir",
+              "gf": 1,
+              "ga": 2,
+              "venue": "away",
+              "result": "L"
+            }
+          ],
+          "wins": 0,
+          "draws": 0,
+          "losses": 5,
+          "goalsFor": 2,
+          "goalsAgainst": 10,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-21"
+        },
+        "h2h": [
+          {
+            "date": "2026-01-25",
+            "home": "gaziantep",
+            "away": "konyaspor",
+            "score": [
+              1,
+              1
+            ],
+            "stats": {
+              "corners": [
+                10,
+                4
+              ],
+              "yellowCards": [
+                6,
+                3
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                15,
+                11
+              ],
+              "shotsOnTarget": [
+                2,
+                6
+              ],
+              "halfTimeGoals": [
+                1,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2025-08-17",
+            "home": "konyaspor",
+            "away": "gaziantep",
+            "score": [
+              3,
+              0
+            ],
+            "stats": {
+              "corners": [
+                2,
+                6
+              ],
+              "yellowCards": [
+                3,
+                3
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                15,
+                17
+              ],
+              "shotsOnTarget": [
+                7,
+                1
+              ],
+              "halfTimeGoals": [
+                1,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2025-03-28",
+            "home": "konyaspor",
+            "away": "gaziantep",
+            "score": [
+              1,
+              0
+            ],
+            "stats": {
+              "corners": [
+                2,
+                2
+              ],
+              "yellowCards": [
+                4,
+                4
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                14,
+                6
+              ],
+              "shotsOnTarget": [
+                4,
+                5
+              ],
+              "halfTimeGoals": [
+                0,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2024-10-27",
+            "home": "gaziantep",
+            "away": "konyaspor",
+            "score": [
+              3,
+              1
+            ],
+            "stats": {
+              "corners": [
+                8,
+                3
+              ],
+              "yellowCards": [
+                2,
+                2
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                14,
+                8
+              ],
+              "shotsOnTarget": [
+                5,
+                2
+              ],
+              "halfTimeGoals": [
+                1,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2024-01-24",
+            "home": "gaziantep",
+            "away": "konyaspor",
+            "score": [
+              1,
+              1
+            ],
+            "stats": {
+              "corners": [
+                3,
+                5
+              ],
+              "yellowCards": [
+                2,
+                2
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                8,
+                7
+              ],
+              "shotsOnTarget": [
+                1,
+                4
+              ],
+              "halfTimeGoals": [
+                1,
+                1
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2023-08-25",
+            "home": "konyaspor",
+            "away": "gaziantep",
+            "score": [
+              2,
+              0
+            ],
+            "stats": {
+              "corners": [
+                10,
+                2
+              ],
+              "yellowCards": [
+                1,
+                2
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                17,
+                8
+              ],
+              "shotsOnTarget": [
+                8,
+                3
+              ],
+              "halfTimeGoals": [
+                0,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2023-04-16",
+            "home": "gaziantep",
+            "away": "konyaspor",
+            "score": [
+              0,
+              3
+            ],
+            "stats": {},
+            "competition": "T1"
+          },
+          {
+            "date": "2022-10-15",
+            "home": "konyaspor",
+            "away": "gaziantep",
+            "score": [
+              0,
+              1
+            ],
+            "stats": {
+              "corners": [
+                8,
+                5
+              ],
+              "yellowCards": [
+                2,
+                5
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                19,
+                6
+              ],
+              "shotsOnTarget": [
+                5,
+                2
+              ],
+              "halfTimeGoals": [
+                0,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2022-04-17",
+            "home": "konyaspor",
+            "away": "gaziantep",
+            "score": [
+              4,
+              1
+            ],
+            "stats": {
+              "corners": [
+                3,
+                7
+              ],
+              "yellowCards": [
+                1,
+                2
+              ],
+              "redCards": [
+                0,
+                1
+              ],
+              "shots": [
+                20,
+                8
+              ],
+              "shotsOnTarget": [
+                9,
+                6
+              ],
+              "halfTimeGoals": [
+                2,
+                0
+              ]
+            },
+            "competition": "T1"
+          },
+          {
+            "date": "2021-11-28",
+            "home": "gaziantep",
+            "away": "konyaspor",
+            "score": [
+              3,
+              2
+            ],
+            "stats": {
+              "corners": [
+                5,
+                6
+              ],
+              "yellowCards": [
+                4,
+                2
+              ],
+              "redCards": [
+                0,
+                0
+              ],
+              "shots": [
+                20,
+                13
+              ],
+              "shotsOnTarget": [
+                5,
+                8
+              ],
+              "halfTimeGoals": [
+                1,
+                1
+              ]
+            },
+            "competition": "T1"
+          }
+        ],
+        "injuriesAvailable": false,
+        "lineupsAvailable": false,
+        "advancedStatsAvailable": false,
+        "h2hCoverage": {
+          "version": "5.28",
+          "source": "football-data.co.uk",
+          "requestedSeasons": 6,
+          "loadedSeasons": [
+            2026,
+            2025,
+            2024,
+            2023,
+            2022,
+            2021
+          ],
+          "failedSeasons": [],
+          "limit": 12,
+          "sample": 10,
+          "csvMatchesAvailable": 10,
+          "conflictsExcluded": 0,
+          "scope": "same_league_only",
+          "extraDivision": null,
+          "extraLoadedSeasons": [],
+          "extraFailedSeasons": [],
+          "crossDivisionMatches": 0,
+          "predictionsEnabled": false
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
       "league": "İngiltere Championship",
       "match": "Bolton Wanderers FC – Blackburn Rovers FC",
       "formResearch": {
@@ -49305,6 +49580,8 @@
         "home": 2.75,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49331,6 +49608,8 @@
         "home": 2.01,
         "away": 1.91
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49357,6 +49636,8 @@
         "home": 1.3,
         "away": 2.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49383,6 +49664,8 @@
         "home": 2.1,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49409,6 +49692,8 @@
         "home": 2.3,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49435,6 +49720,8 @@
         "home": 2.48,
         "away": 1.04
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49461,6 +49748,8 @@
         "home": 2.1,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49487,6 +49776,8 @@
         "home": 1.55,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49513,6 +49804,8 @@
         "home": 1.75,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49539,32 +49832,8 @@
         "home": 1.55,
         "away": 1.7
       },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "gaziantep – amed",
-      "markets": {
-        "1.5 Üst": 82.9,
-        "2.5 Üst": 62.0,
-        "KG Var": 63.5
-      },
-      "historyThrough": "2026-11-23",
-      "sample": {
-        "home": 10,
-        "away": 5
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.5,
-        "away": 1.7
-      },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49591,6 +49860,8 @@
         "home": 1.82,
         "away": 1.34
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49617,6 +49888,8 @@
         "home": 1.25,
         "away": 1.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49643,6 +49916,8 @@
         "home": 1.8,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49669,6 +49944,8 @@
         "home": 1.3,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49695,32 +49972,8 @@
         "home": 1.86,
         "away": 1.11
       },
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "markets": {
-        "1.5 Üst": 79.3,
-        "2.5 Üst": 56.6,
-        "KG Var": 57.0
-      },
-      "historyThrough": "2026-11-23",
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.8,
-        "away": 1.15
-      },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49747,6 +50000,8 @@
         "home": 1.5,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49773,6 +50028,8 @@
         "home": 1.65,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49799,6 +50056,8 @@
         "home": 1.21,
         "away": 1.64
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49825,6 +50084,8 @@
         "home": 1.5,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49851,6 +50112,8 @@
         "home": 1.15,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49877,6 +50140,8 @@
         "home": 1.7,
         "away": 1.1
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49903,6 +50168,8 @@
         "home": 1.45,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49929,6 +50196,8 @@
         "home": 1.75,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49955,6 +50224,8 @@
         "home": 1.45,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -49981,6 +50252,8 @@
         "home": 1.15,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50007,6 +50280,8 @@
         "home": 1.25,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50033,6 +50308,8 @@
         "home": 1.75,
         "away": 0.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50059,6 +50336,8 @@
         "home": 1.7,
         "away": 0.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50085,6 +50364,8 @@
         "home": 1.15,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50111,6 +50392,8 @@
         "home": 1.35,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50137,6 +50420,8 @@
         "home": 1.34,
         "away": 1.14
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50163,6 +50448,8 @@
         "home": 1.4,
         "away": 1.05
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50189,6 +50476,8 @@
         "home": 1.8,
         "away": 0.6
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50215,6 +50504,8 @@
         "home": 2.6,
         "away": 1.39
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50241,6 +50532,8 @@
         "home": 1.65,
         "away": 2.11
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50267,6 +50560,8 @@
         "home": 1.7,
         "away": 2.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50293,6 +50588,8 @@
         "home": 1.95,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50319,6 +50616,8 @@
         "home": 2.45,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50345,6 +50644,8 @@
         "home": 2.3,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50371,6 +50672,8 @@
         "home": 1.8,
         "away": 1.75
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50397,6 +50700,8 @@
         "home": 1.65,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50423,6 +50728,8 @@
         "home": 1.9,
         "away": 1.6
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50449,6 +50756,8 @@
         "home": 2.15,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50475,6 +50784,8 @@
         "home": 1.65,
         "away": 1.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50501,6 +50812,8 @@
         "home": 1.9,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50527,6 +50840,8 @@
         "home": 1.65,
         "away": 1.75
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50553,6 +50868,8 @@
         "home": 2.15,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50579,6 +50896,8 @@
         "home": 2.25,
         "away": 1.05
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50605,6 +50924,8 @@
         "home": 1.85,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50631,6 +50952,8 @@
         "home": 1.8,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50657,6 +50980,8 @@
         "home": 1.35,
         "away": 1.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50683,6 +51008,8 @@
         "home": 1.55,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50709,6 +51036,8 @@
         "home": 1.5,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50735,6 +51064,8 @@
         "home": 1.16,
         "away": 1.82
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50761,6 +51092,8 @@
         "home": 1.5,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50787,6 +51120,8 @@
         "home": 1.25,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50813,6 +51148,8 @@
         "home": 1.85,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50839,6 +51176,8 @@
         "home": 0.95,
         "away": 1.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50865,6 +51204,8 @@
         "home": 1.7,
         "away": 1.12
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50891,6 +51232,8 @@
         "home": 1.2,
         "away": 1.6
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50917,6 +51260,8 @@
         "home": 1.7,
         "away": 0.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50943,6 +51288,8 @@
         "home": 1.3,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50969,6 +51316,8 @@
         "home": 1.35,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -50995,6 +51344,8 @@
         "home": 1.15,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51021,6 +51372,8 @@
         "home": 1.7,
         "away": 0.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51047,6 +51400,8 @@
         "home": 1.5,
         "away": 0.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51073,6 +51428,8 @@
         "home": 1.1,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51099,6 +51456,8 @@
         "home": 1.1,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51125,6 +51484,8 @@
         "home": 2.0,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51151,6 +51512,8 @@
         "home": 1.1,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51177,6 +51540,8 @@
         "home": 2.0,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51203,6 +51568,8 @@
         "home": 1.7,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51229,6 +51596,8 @@
         "home": 1.6,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51255,6 +51624,8 @@
         "home": 2.0,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51281,6 +51652,8 @@
         "home": 1.45,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51307,6 +51680,8 @@
         "home": 1.45,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51333,6 +51708,8 @@
         "home": 1.2,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51359,6 +51736,8 @@
         "home": 1.35,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51385,6 +51764,8 @@
         "home": 1.35,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51411,6 +51792,8 @@
         "home": 1.44,
         "away": 2.42
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51437,6 +51820,8 @@
         "home": 1.8,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51463,6 +51848,8 @@
         "home": 2.55,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51489,6 +51876,8 @@
         "home": 2.15,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51515,6 +51904,8 @@
         "home": 2.05,
         "away": 1.75
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51541,6 +51932,8 @@
         "home": 1.95,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51567,6 +51960,8 @@
         "home": 0.93,
         "away": 2.68
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51593,6 +51988,8 @@
         "home": 2.75,
         "away": 0.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51619,6 +52016,8 @@
         "home": 1.95,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51645,6 +52044,8 @@
         "home": 2.2,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51671,6 +52072,8 @@
         "home": 1.9,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51697,6 +52100,8 @@
         "home": 1.67,
         "away": 1.71
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51723,6 +52128,8 @@
         "home": 1.59,
         "away": 1.72
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51749,6 +52156,8 @@
         "home": 1.8,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51775,6 +52184,8 @@
         "home": 2.0,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51801,6 +52212,8 @@
         "home": 1.3,
         "away": 1.9
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51827,6 +52240,8 @@
         "home": 1.45,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51853,6 +52268,8 @@
         "home": 1.6,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51879,6 +52296,8 @@
         "home": 1.8,
         "away": 1.35
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51905,6 +52324,8 @@
         "home": 1.7,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51931,6 +52352,8 @@
         "home": 1.9,
         "away": 1.2
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51957,6 +52380,8 @@
         "home": 1.8,
         "away": 1.3
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -51983,6 +52408,8 @@
         "home": 2.2,
         "away": 0.8
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52009,6 +52436,8 @@
         "home": 1.75,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52035,6 +52464,8 @@
         "home": 1.9,
         "away": 1.1
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52061,6 +52492,36 @@
         "home": 1.35,
         "away": 1.65
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "amed – alanyaspor",
+      "markets": {
+        "1.5 Üst": 79.9,
+        "2.5 Üst": 57.4,
+        "KG Var": 48.1
+      },
+      "historyThrough": "2026-11-23",
+      "sample": {
+        "home": 7,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.21,
+        "away": 0.78
+      },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52087,6 +52548,8 @@
         "home": 1.55,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52113,6 +52576,8 @@
         "home": 1.55,
         "away": 1.4
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52139,6 +52604,8 @@
         "home": 1.05,
         "away": 1.85
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52165,6 +52632,8 @@
         "home": 1.2,
         "away": 1.7
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52191,6 +52660,8 @@
         "home": 1.9,
         "away": 0.95
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52217,6 +52688,36 @@
         "home": 1.3,
         "away": 1.55
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "konyaspor – gaziantep",
+      "markets": {
+        "1.5 Üst": 76.0,
+        "2.5 Üst": 51.9,
+        "KG Var": 55.0
+      },
+      "historyThrough": "2026-11-23",
+      "sample": {
+        "home": 10,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.2
+      },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52243,6 +52744,8 @@
         "home": 1.7,
         "away": 1.0
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52269,6 +52772,8 @@
         "home": 1.6,
         "away": 1.05
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52295,6 +52800,8 @@
         "home": 1.1,
         "away": 1.5
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52321,6 +52828,8 @@
         "home": 1.1,
         "away": 1.45
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52347,6 +52856,8 @@
         "home": 1.2,
         "away": 1.25
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52373,6 +52884,8 @@
         "home": 1.25,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52399,6 +52912,8 @@
         "home": 1.2,
         "away": 1.15
       },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
       "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
       "odds": null,
       "edge": null
@@ -52408,12 +52923,12 @@
   "fixtureWindowDays": 7,
   "upcomingCount": 133,
   "upcomingCountsByDate": {
-    "2026-11-28": 39,
+    "2026-11-28": 37,
     "2026-11-29": 37,
     "2026-11-30": 3,
     "2026-12-02": 10,
     "2026-12-04": 2,
-    "2026-12-05": 42
+    "2026-12-05": 44
   },
   "dataQuality": {
     "verifiedOdds": false,
@@ -52424,8 +52939,8 @@
   "fixtureCoverageComplete": false,
   "candidateListLimit": null,
   "candidateListComplete": true,
-  "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
+  "reason": "PAS — 9/9 lig okundu; bugün 37, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
   "forecastTimingVersion": "6.82",
   "historyCutoffExclusive": "2026-11-28",
-  "generationCompletedAt": "2026-11-28T12:21:27.090694+03:00"
+  "generationCompletedAt": "2026-11-28T20:43:43.107437+03:00"
 }

@@ -79,7 +79,7 @@ assert.deepEqual(historicalStatsFor(row,statsData,now),statsRow);
 assert.equal(historicalStatsFor(row,statsData,now+86400001),null);
 assert.equal(historicalStatsFor(row,{...statsData,football_statistics_pilot:{...statsData.football_statistics_pilot,dailyUpdatedAt:"wrong"}},now),null);
 
-const {liveRows}=require("../mobile-v487.js");
+const {liveRows,acceptRadarReport}=require("../mobile-v487.js");
 const liveRow={league:"en.1",eventId:"123",home:"A",away:"B",quality:"observation_ready",receivedAt:updatedAt,observation:{state:"in",score:[1,0],clock:"54'",metrics:{corners:[4,1],shots:[8,3],shotsOnTarget:[3,1],yellowCards:[1,0],redCards:[0,0],possession:[60,40]}}};
 const liveReport={version:"5.15",mode:"live_analysis_quality_only",predictionsEnabled:false,sourceTimestampVerified:false,decision:"PAS",updatedAt,rows:[liveRow]};
 assert.equal(liveRows(liveReport,now).length,1);
@@ -88,7 +88,13 @@ assert.equal(liveRows(liveReport,now-1).length,0);
 assert.equal(liveRows({...liveReport,rows:[liveRow,liveRow]},now).length,0);
 assert.equal(liveRows({...liveReport,predictionsEnabled:true},now).length,0);
 assert.equal(liveRows({...liveReport,rows:[{...liveRow,quality:"stale_receipt"}]},now).length,0);
-console.log("Live observation freshness and duplicate guards passed");
+assert.equal(acceptRadarReport(undefined,liveReport,now),liveReport);
+const nextRadar={...liveReport,updatedAt:new Date(now+1000).toISOString(),rows:[]};
+assert.equal(acceptRadarReport(liveReport,nextRadar,now+1000),nextRadar);
+assert.equal(acceptRadarReport(nextRadar,liveReport,now+1000),nextRadar);
+assert.equal(acceptRadarReport(liveReport,nextRadar,now),liveReport);
+assert.equal(acceptRadarReport(liveReport,{...nextRadar,predictionsEnabled:true},now+1000),liveReport);
+console.log("Live observation freshness, monotonic publication and duplicate guards passed");
 
 const {matchOverview,movementFor}=require("../mobile-v487.js");
 const overview={...modelRow,expectedGoals:{home:1.5,away:1},scoreProbabilities:{homeWin:.48,draw:.26,awayWin:.26}};
@@ -211,3 +217,29 @@ assert.equal(marketCoverageSummary({...covData,snapshot_integrity:null},covNow).
 assert.equal(marketCoverageSummary({...covData,odds:{...covData.odds,events:[covEvent,covEvent]}},covNow).markets[2.5].observed,0);
 assert.equal(marketCoverageSummary({...covData,odds:{...covData.odds,region:"tr"}},covNow),null);
 console.log("V6.77 market coverage visibility checks passed");
+
+const {extraMarketCoverage}=require("../mobile-v487.js");
+const xEvent={...covEvent,league:"soccer_epl",home:"A",away:"B",over15:["a","b","c"].map(bookmaker=>({bookmaker,prices:{Over:1.4,Under:3},lastUpdate:covAt})),btts:[]};
+const xReport={source:"The Odds API",region:"uk",mode:"research_only",decision:"PAS",quotaPolicyVersion:"6.89",quotaStatus:"reserve_preserved",paidRequestsAttempted:1,updatedAt:covAt,oddsSnapshotAt:covAt,errors:[],eventCount:1,events:[xEvent]};
+const xData={...covData,odds:{...covData.odds,events:[xEvent]},extra_markets:xReport,extra_market_archive:{mode:"research_only",integrityVersion:"6.85",updatedAt:covAt,quarantine:{}},snapshot_integrity:{...covData.snapshot_integrity,reportTimestamps:{"odds.json":covAt,"extra_markets.json":covAt,"extra_market_archive.json":covAt}}};
+assert.equal(extraMarketCoverage({},covNow).status,"not_published");
+assert.equal(extraMarketCoverage(xData,covNow).markets.over15.currentThree,1);
+assert.equal(extraMarketCoverage(xData,covNow).markets.btts.currentThree,0);
+assert.equal(extraMarketCoverage(xData,covNow+1800000).markets.over15.currentThree,null);
+assert.equal(extraMarketCoverage({...xData,extra_markets:{...xReport,oddsSnapshotAt:"2026-11-27T12:00:00Z"}},covNow).markets.over15.currentThree,null);
+assert.equal(extraMarketCoverage({...xData,extra_market_archive:{...xData.extra_market_archive,quarantine:{cov:{}}}},covNow).markets.over15.currentThree,0);
+assert.equal(extraMarketCoverage({...xData,extra_markets:{...xReport,quotaStatus:"quota_guard",events:[],eventCount:0,paidRequestsAttempted:0}},covNow).status,"quota_guard");
+console.log("V6.90 extra market status, freshness and quarantine checks passed");
+
+const {continuitySummary}=require("../mobile-v487.js");
+const cStatus={version:"6.94",mode:"normal",reason:"collected",updatedAt:covAt,currentOddsAt:covAt,currentOddsUsable:true,archiveUsedForCurrentOdds:false,productionEnabled:false,errors:[],liveRemainingCredits:62,lastGoodAt:covAt,lastGoodEventCount:1};
+const cData={...covData,odds_continuity:cStatus,snapshot_integrity:{...covData.snapshot_integrity,reportTimestamps:{"odds.json":covAt,"odds_continuity.json":covAt}}};
+assert.equal(continuitySummary(cData,covNow).mode,"normal");
+assert.equal(continuitySummary(cData,covNow+1800000).mode,"unknown");
+const cFallback={...cData,odds_continuity:{...cStatus,mode:"fallback",reason:"quota_guard",currentOddsUsable:false,liveRemainingCredits:0}};
+assert.equal(continuitySummary(cFallback,covNow).mode,"fallback");
+assert.equal(continuitySummary(cFallback,covNow).balance,0);
+assert.equal(continuitySummary(cFallback,covNow).current,false);
+assert.equal(continuitySummary({...cData,odds_continuity:{...cStatus,currentOddsAt:"wrong"}},covNow).mode,"unknown");
+assert.equal(continuitySummary({},covNow).mode,"unknown");
+console.log("V6.95 continuity display: normal, fallback, stale and missing passed");
