@@ -11,7 +11,8 @@ class Tests(unittest.TestCase):
         self.assertEqual(r["requestsAttempted"],2)
         self.assertEqual(r["base"]["eligible"],1)
         self.assertEqual(r["xg"]["fieldPresentNonempty"],{"xGFixture":1})
-        self.assertNotIn("private",str(r))
+        self.assertNotIn("do not log",str(r))
+        self.assertNotIn("value",str(r))
         self.assertFalse(r["predictionsEnabled"])
         self.assertEqual(inspect({"data":[row,row]},("scores",))["eligible"],0)
     def test_malformed(self):
