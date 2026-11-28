@@ -1,0 +1,56 @@
+name: V6.48 extra league prospective research
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_league_prospective.py'
+      - 'scripts/test_extra_league_prospective.py'
+      - '.github/workflows/extra-league-prospective.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extra_league_prospective.py'
+      - 'scripts/test_extra_league_prospective.py'
+      - '.github/workflows/extra-league-prospective.yml'
+  schedule:
+    - cron: '40 5,15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: extra-league-prospective-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_extra_league_prospective.py
+  capture:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: python scripts/extra_league_prospective.py
+      - name: Preserve prospective ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- extra_league_prospective_ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record V6.48 prospective research evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extra-league-prospective-report
+          path: extra_league_prospective_report.json
+          if-no-files-found: error
+          retention-days: 90
