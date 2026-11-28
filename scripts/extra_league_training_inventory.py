@@ -12,7 +12,7 @@ START=date(2023,7,1)
 END=date(2026,8,30)  # Exclusive: before the original 90-day pilot.
 SEASONS=range(2023,2027)
 
-def parse_season(raw,league,year,url):
+def parse_season(raw,league,year,url,end=END):
     reader=csv.DictReader(io.StringIO(raw.decode("utf-8-sig")))
     if not {"Date","HomeTeam","AwayTeam","FTHG","FTAG"}.issubset(reader.fieldnames or []):
         raise ValueError("CSV schema")
@@ -30,7 +30,7 @@ def parse_season(raw,league,year,url):
         if d is None:
             counts["invalidDate"]+=1
             continue
-        if not date(year,7,1)<=d<date(year+1,7,1) or not START<=d<END:
+        if not date(year,7,1)<=d<date(year+1,7,1) or not START<=d<end:
             counts["outsideWindow"]+=1
             continue
         try:
@@ -72,28 +72,30 @@ def deduplicate(rows):
         kept.append(items[0])
     return kept,duplicates,conflicts
 
-def fetch_season(job,reader):
+def fetch_season(job,reader,end=END):
     league,code,year=job
     url=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{code}.csv"
     try:
-        rows,counts=parse_season(reader(url),league,year,url)
+        rows,counts=parse_season(reader(url),league,year,url,end=end)
         return rows,dict(league=league,season=year,source=url,counts=counts,error=None)
     except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
         return [],dict(league=league,season=year,source=url,counts={},error=type(exc).__name__)
 
-def build(reader=read):
+def build(reader=read,end=END):
+    if not isinstance(end,date) or not START<end<=date(2027,7,1):
+        raise ValueError('unsupported historical cutoff')
     jobs=[(l,c,y) for l,c in COMPETITIONS for y in SEASONS]
     with ThreadPoolExecutor(max_workers=4) as pool:
-        results=list(pool.map(lambda job:fetch_season(job,reader),jobs))
+        results=list(pool.map(lambda job:fetch_season(job,reader,end=end),jobs))
     rows,duplicates,conflicts=deduplicate([r for rs,_ in results for r in rs])
     sources=[s for _,s in results]
     report=dict(version="6.49",mode="single_source_training_inventory",start=START.isoformat(),
-        endExclusive=END.isoformat(),requestedSources=len(jobs),successfulSources=sum(s["error"] is None for s in sources),
+        endExclusive=end.isoformat(),requestedSources=len(jobs),successfulSources=sum(s["error"] is None for s in sources),
         nonemptySources=sum(bool(rs) for rs,_ in results),uniqueTrainingCandidates=len(rows),
         duplicateIdentitiesExcluded=duplicates,conflictingIdentitiesExcluded=conflicts,
         independentlyVerified=0,leagueCounts=dict(Counter(r["league"] for r in rows)),
         seasonCounts=dict(Counter(str(r["season"]) for r in rows)),sources=sources,
-        overlapsPilotDateWindow=False,existingArchivesModified=False,usedForTraining=False,productionModelValidated=False)
+        overlapsPilotDateWindow=end>END,existingArchivesModified=False,usedForTraining=False,productionModelValidated=False)
     return report,rows
 
 if __name__=="__main__":
