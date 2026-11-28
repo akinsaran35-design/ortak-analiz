@@ -224,3 +224,16 @@ assert.equal(extraMarketCoverage({...xData,extra_markets:{...xReport,oddsSnapsho
 assert.equal(extraMarketCoverage({...xData,extra_market_archive:{...xData.extra_market_archive,quarantine:{cov:{}}}},covNow).markets.over15.currentThree,0);
 assert.equal(extraMarketCoverage({...xData,extra_markets:{...xReport,quotaStatus:"quota_guard",events:[],eventCount:0,paidRequestsAttempted:0}},covNow).status,"quota_guard");
 console.log("V6.90 extra market status, freshness and quarantine checks passed");
+
+const {continuitySummary}=require("../mobile-v487.js");
+const cStatus={version:"6.94",mode:"normal",reason:"collected",updatedAt:covAt,currentOddsAt:covAt,currentOddsUsable:true,archiveUsedForCurrentOdds:false,productionEnabled:false,errors:[],liveRemainingCredits:62,lastGoodAt:covAt,lastGoodEventCount:1};
+const cData={...covData,odds_continuity:cStatus,snapshot_integrity:{...covData.snapshot_integrity,reportTimestamps:{"odds.json":covAt,"odds_continuity.json":covAt}}};
+assert.equal(continuitySummary(cData,covNow).mode,"normal");
+assert.equal(continuitySummary(cData,covNow+1800000).mode,"unknown");
+const cFallback={...cData,odds_continuity:{...cStatus,mode:"fallback",reason:"quota_guard",currentOddsUsable:false,liveRemainingCredits:0}};
+assert.equal(continuitySummary(cFallback,covNow).mode,"fallback");
+assert.equal(continuitySummary(cFallback,covNow).balance,0);
+assert.equal(continuitySummary(cFallback,covNow).current,false);
+assert.equal(continuitySummary({...cData,odds_continuity:{...cStatus,currentOddsAt:"wrong"}},covNow).mode,"unknown");
+assert.equal(continuitySummary({},covNow).mode,"unknown");
+console.log("V6.95 continuity display: normal, fallback, stale and missing passed");
