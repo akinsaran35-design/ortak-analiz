@@ -1,17 +1,17 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-28T21:40:27.182844+03:00",
-  "sourceUpdatedAt": "2026-11-28T21:40:10.959938+03:00",
+  "updatedAt": "2026-11-28T22:35:46.530813+03:00",
+  "sourceUpdatedAt": "2026-11-28T22:35:36.809196+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "accepted": 5,
+  "accepted": 1,
   "archivedEvents": 41,
-  "archivedPoints": 73,
+  "archivedPoints": 74,
   "reasons": {
-    "rejected_observation": 6
+    "rejected_observation": 4
   },
   "windowCounts": {
     "5": 0,
@@ -25,52 +25,8 @@
       "home": "Académico de Viseu",
       "away": "Alverca",
       "kickoff": "2026-11-28T18:00:00+00:00",
-      "receivedAt": "2026-11-28T21:40:10.605096+03:00",
-      "minute": 35,
-      "observations": 1,
-      "windows": {}
-    },
-    {
-      "league": "es.1",
-      "eventId": "401882793",
-      "home": "Elche",
-      "away": "Atlético Madrid",
-      "kickoff": "2026-11-28T17:30:00+00:00",
-      "receivedAt": "2026-11-28T21:40:10.586511+03:00",
-      "minute": 50,
-      "observations": 2,
-      "windows": {}
-    },
-    {
-      "league": "en.1",
-      "eventId": "401878752",
-      "home": "Ipswich Town",
-      "away": "Aston Villa",
-      "kickoff": "2026-11-28T17:30:00+00:00",
-      "receivedAt": "2026-11-28T21:40:10.687034+03:00",
-      "minute": 52,
-      "observations": 2,
-      "windows": {}
-    },
-    {
-      "league": "de.1",
-      "eventId": "401884726",
-      "home": "VfB Stuttgart",
-      "away": "Eintracht Frankfurt",
-      "kickoff": "2026-11-28T17:30:00+00:00",
-      "receivedAt": "2026-11-28T21:40:10.664692+03:00",
-      "minute": 48,
-      "observations": 2,
-      "windows": {}
-    },
-    {
-      "league": "it.1",
-      "eventId": "401874826",
-      "home": "Torino",
-      "away": "Lazio",
-      "kickoff": "2026-11-28T17:00:00+00:00",
-      "receivedAt": "2026-11-28T21:40:10.646955+03:00",
-      "minute": 80,
+      "receivedAt": "2026-11-28T22:35:36.673234+03:00",
+      "minute": 70,
       "observations": 2,
       "windows": {}
     }

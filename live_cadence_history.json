@@ -342,5 +342,13 @@
     "requested": 11,
     "freshAtBuild": 11,
     "sourceIssues": 0
+  },
+  {
+    "startedAt": "2026-11-28T22:35:35.458153+03:00",
+    "endedAt": "2026-11-28T22:35:36.715505+03:00",
+    "detected": 5,
+    "requested": 5,
+    "freshAtBuild": 5,
+    "sourceIssues": 0
   }
 ]
