@@ -1,0 +1,620 @@
+{
+  "forecasts": {
+    "[\"bel.1\",\"2026-11-29\",\"antwerp\",\"anderlecht\"]": {
+      "away": "anderlecht",
+      "candidate": {
+        "btts": 0.5701306123393892,
+        "over15": 0.7837580084628807,
+        "over25": 0.5441322352139968
+      },
+      "catboost": {
+        "btts": 0.5816769244383391,
+        "over15": 0.8001332419827547,
+        "over25": 0.5598692649465686
+      },
+      "date": "2026-11-29",
+      "eventId": "401878928",
+      "featureCount": 119,
+      "featureFingerprint": "ccd967d6aefdccee173d4c5b2afe0ee766fb5f73f50f328c5dee958e0a78b785",
+      "historyThrough": "2026-11-22",
+      "home": "antwerp",
+      "kickoff": "2026-11-29T15:00:00+00:00",
+      "league": "bel.1",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5585843002404393,
+        "over15": 0.7673827749430067,
+        "over25": 0.5283952054814249
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"bel.1\",\"2026-11-29\",\"sint truidense\",\"racing genk\"]": {
+      "away": "racing genk",
+      "candidate": {
+        "btts": 0.5598446237736308,
+        "over15": 0.7770143976853771,
+        "over25": 0.545731880114758
+      },
+      "catboost": {
+        "btts": 0.5611049473068221,
+        "over15": 0.7866460204277474,
+        "over25": 0.5630685547480911
+      },
+      "date": "2026-11-29",
+      "eventId": "401878926",
+      "featureCount": 119,
+      "featureFingerprint": "88368f649d6e061336d0bd1b32c4b9c1535d7e22de7488a8c172006097468c87",
+      "historyThrough": "2026-11-22",
+      "home": "sint truidense",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "bel.1",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5585843002404393,
+        "over15": 0.7673827749430067,
+        "over25": 0.5283952054814249
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-21"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"bel.1\",\"2026-11-29\",\"standard liege\",\"club brugge\"]": {
+      "away": "club brugge",
+      "candidate": {
+        "btts": 0.5738723495533378,
+        "over15": 0.7990517549790521,
+        "over25": 0.5594337571103862
+      },
+      "catboost": {
+        "btts": 0.5891603988662364,
+        "over15": 0.8307207350150977,
+        "over25": 0.5904723087393474
+      },
+      "date": "2026-11-29",
+      "eventId": "401878927",
+      "featureCount": 119,
+      "featureFingerprint": "6d89cac9920d56c12b29c84281dd268079f01819602b5a0149a1347ac7705196",
+      "historyThrough": "2026-11-22",
+      "home": "standard liege",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "league": "bel.1",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5585843002404393,
+        "over15": 0.7673827749430067,
+        "over25": 0.5283952054814249
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-22",
+        "2026-11-21"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"bel.1\",\"2026-11-29\",\"union st gilloise\",\"kaa gent\"]": {
+      "away": "kaa gent",
+      "candidate": {
+        "btts": 0.591268119887534,
+        "over15": 0.8062772371617888,
+        "over25": 0.5722595987369581
+      },
+      "catboost": {
+        "btts": 0.6239519395346289,
+        "over15": 0.8451716993805708,
+        "over25": 0.6161239919924912
+      },
+      "date": "2026-11-29",
+      "eventId": "401878925",
+      "featureCount": 119,
+      "featureFingerprint": "31904ba02dbeb3c8c24be58e59e4f90053ed7d6a1fbdd8aa23a393f09171efaf",
+      "historyThrough": "2026-11-22",
+      "home": "union st gilloise",
+      "kickoff": "2026-11-29T18:15:00+00:00",
+      "league": "bel.1",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5585843002404393,
+        "over15": 0.7673827749430067,
+        "over25": 0.5283952054814249
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-22",
+        "2026-11-22"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"almeria\",\"sporting gijon\"]": {
+      "away": "sporting gijon",
+      "candidate": {
+        "btts": 0.5263552141839943,
+        "over15": 0.7299978556238111,
+        "over25": 0.4864646755565947
+      },
+      "catboost": {
+        "btts": 0.5538173779596212,
+        "over15": 0.7484883846650802,
+        "over25": 0.5182347016019162
+      },
+      "date": "2026-11-29",
+      "eventId": "401883106",
+      "featureCount": 119,
+      "featureFingerprint": "b2933858265deb7ce74f8a56f3704c09eb619d98f41bb91db0071647b2e558a7",
+      "historyThrough": "2026-11-23",
+      "home": "almeria",
+      "kickoff": "2026-11-29T20:00:00+00:00",
+      "league": "esp.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.49889305040836746,
+        "over15": 0.711507326582542,
+        "over25": 0.45469464951127314
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-23",
+        "2026-11-22"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"cadiz\",\"cordoba\"]": {
+      "away": "cordoba",
+      "candidate": {
+        "btts": 0.5038243987516737,
+        "over15": 0.7159657473580426,
+        "over25": 0.4682751600145463
+      },
+      "catboost": {
+        "btts": 0.50875574709498,
+        "over15": 0.7204241681335433,
+        "over25": 0.48185567051781947
+      },
+      "date": "2026-11-29",
+      "eventId": "401883105",
+      "featureCount": 119,
+      "featureFingerprint": "5c4f19e8c9cae228c2049e6a42b6513e47e73a2dded9f2d79a340e1241c083bc",
+      "historyThrough": "2026-11-23",
+      "home": "cadiz",
+      "kickoff": "2026-11-29T17:30:00+00:00",
+      "league": "esp.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.49889305040836746,
+        "over15": 0.711507326582542,
+        "over25": 0.45469464951127314
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"granada\",\"ceuta\"]": {
+      "away": "ceuta",
+      "candidate": {
+        "btts": 0.5366407072685434,
+        "over15": 0.7428375225961149,
+        "over25": 0.49939867378986713
+      },
+      "catboost": {
+        "btts": 0.5743883641287194,
+        "over15": 0.7741677186096878,
+        "over25": 0.5441026980684611
+      },
+      "date": "2026-11-29",
+      "eventId": "401883103",
+      "featureCount": 119,
+      "featureFingerprint": "03f0a78d11a37073562eecb43dd3df913fd467282f3f2f4921b29f121a958b67",
+      "historyThrough": "2026-11-23",
+      "home": "granada",
+      "kickoff": "2026-11-29T13:00:00+00:00",
+      "league": "esp.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.49889305040836746,
+        "over15": 0.711507326582542,
+        "over25": 0.45469464951127314
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-23"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"esp.2\",\"2026-11-29\",\"mallorca\",\"castellon\"]": {
+      "away": "castellon",
+      "candidate": {
+        "btts": 0.5462998372627526,
+        "over15": 0.7577951254195608,
+        "over25": 0.5116815827513624
+      },
+      "catboost": {
+        "btts": 0.5937066241171377,
+        "over15": 0.8040829242565797,
+        "over25": 0.5686685159914517
+      },
+      "date": "2026-11-29",
+      "eventId": "401882295",
+      "featureCount": 119,
+      "featureFingerprint": "d43b748af30c6ef3be873f91b44cf1c47677fb9dcbb018201d14fa1fbc8dd8df",
+      "historyThrough": "2026-11-23",
+      "home": "mallorca",
+      "kickoff": "2026-11-29T15:15:00+00:00",
+      "league": "esp.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.49889305040836746,
+        "over15": 0.711507326582542,
+        "over25": 0.45469464951127314
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-21"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"esp.2\",\"2026-11-30\",\"real oviedo\",\"rc celta fortuna\"]": {
+      "away": "rc celta fortuna",
+      "candidate": {
+        "btts": 0.4876838962146246,
+        "over15": 0.7133484542918926,
+        "over25": 0.4622392486341083
+      },
+      "catboost": {
+        "btts": 0.4764747420208818,
+        "over15": 0.7151895820012432,
+        "over25": 0.4697838477569435
+      },
+      "date": "2026-11-30",
+      "eventId": "401883303",
+      "featureCount": 119,
+      "featureFingerprint": "f4eca197a136db98f5001f9bc9caffb5d6e4de56a2c0296d7edca20153f3550a",
+      "historyThrough": "2026-11-23",
+      "home": "real oviedo",
+      "kickoff": "2026-11-30T19:30:00+00:00",
+      "league": "esp.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.49889305040836746,
+        "over15": 0.711507326582542,
+        "over25": 0.45469464951127314
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-22",
+        "2026-11-22"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ger.2\",\"2026-11-29\",\"1 magdeburg\",\"energie cottbus\"]": {
+      "away": "energie cottbus",
+      "candidate": {
+        "btts": 0.5877892402015821,
+        "over15": 0.7949636065917317,
+        "over25": 0.5726038177996318
+      },
+      "catboost": {
+        "btts": 0.5757828492770617,
+        "over15": 0.7871909718494499,
+        "over25": 0.5655649834638206
+      },
+      "date": "2026-11-29",
+      "eventId": "401885042",
+      "featureCount": 119,
+      "featureFingerprint": "24172fef772498b37588ca686a535c5a1056375fb38de17ddaa319b451b4f9f4",
+      "historyThrough": "2026-11-22",
+      "home": "1 magdeburg",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "ger.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5997956311261025,
+        "over15": 0.8027362413340136,
+        "over25": 0.5796426521354429
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-20",
+        "2026-11-22"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ger.2\",\"2026-11-29\",\"spvgg greuther furth\",\"arminia bielefeld\"]": {
+      "away": "arminia bielefeld",
+      "candidate": {
+        "btts": 0.5622611318877303,
+        "over15": 0.7726342012624249,
+        "over25": 0.5448705671323771
+      },
+      "catboost": {
+        "btts": 0.5247266326493581,
+        "over15": 0.7425321611908362,
+        "over25": 0.5100984821293114
+      },
+      "date": "2026-11-29",
+      "eventId": "401885040",
+      "featureCount": 119,
+      "featureFingerprint": "007d1305234c67821c98f2309950ed635cd7a32587ea3ecf6cf9637af1a87843",
+      "historyThrough": "2026-11-22",
+      "home": "spvgg greuther furth",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "ger.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5997956311261025,
+        "over15": 0.8027362413340136,
+        "over25": 0.5796426521354429
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-20"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ger.2\",\"2026-11-29\",\"tsv eintracht braunschweig\",\"vfl wolfsburg\"]": {
+      "away": "vfl wolfsburg",
+      "candidate": {
+        "btts": 0.560896887951846,
+        "over15": 0.7705173559423855,
+        "over25": 0.5406794261207748
+      },
+      "catboost": {
+        "btts": 0.5219981447775895,
+        "over15": 0.7382984705507574,
+        "over25": 0.5017162001061067
+      },
+      "date": "2026-11-29",
+      "eventId": "401885041",
+      "featureCount": 119,
+      "featureFingerprint": "c3aaa77a9e591e8464424f88d2dd591183e5ec965d3bbf49dc471695c9cc80eb",
+      "historyThrough": "2026-11-22",
+      "home": "tsv eintracht braunschweig",
+      "kickoff": "2026-11-29T12:30:00+00:00",
+      "league": "ger.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5997956311261025,
+        "over15": 0.8027362413340136,
+        "over25": 0.5796426521354429
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-21"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"arezzo\",\"pisa\"]": {
+      "away": "pisa",
+      "candidate": {
+        "btts": 0.49462844831001307,
+        "over15": 0.6981889946931781,
+        "over25": 0.44875826972768373
+      },
+      "catboost": {
+        "btts": 0.47912755493102827,
+        "over15": 0.6775902004538223,
+        "over25": 0.4336776670908777
+      },
+      "date": "2026-11-29",
+      "eventId": "401899529",
+      "featureCount": 119,
+      "featureFingerprint": "bf9d21e8743a59f150dbbe0ff5ff52ccc8069f2cb658e94a61345ee845ebad46",
+      "historyThrough": "2026-11-25",
+      "home": "arezzo",
+      "kickoff": "2026-11-29T18:30:00+00:00",
+      "league": "ita.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5101293416889979,
+        "over15": 0.7187877889325339,
+        "over25": 0.46383887236448984
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-25",
+        "2026-11-25"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"modena\",\"padova\"]": {
+      "away": "padova",
+      "candidate": {
+        "btts": 0.5245772316786739,
+        "over15": 0.7397501778661422,
+        "over25": 0.49323363704762174
+      },
+      "catboost": {
+        "btts": 0.5390251216683499,
+        "over15": 0.7607125667997503,
+        "over25": 0.5226284017307536
+      },
+      "date": "2026-11-29",
+      "eventId": "401899523",
+      "featureCount": 119,
+      "featureFingerprint": "25f6f79ceac4eed257935af73881c5643bbaf9468d8b823a18e5afaae8dbf907",
+      "historyThrough": "2026-11-25",
+      "home": "modena",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "league": "ita.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5101293416889979,
+        "over15": 0.7187877889325339,
+        "over25": 0.46383887236448984
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-25",
+        "2026-11-25"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"sampdoria\",\"cremonese\"]": {
+      "away": "cremonese",
+      "candidate": {
+        "btts": 0.5331875071162275,
+        "over15": 0.73681124426921,
+        "over25": 0.49152796731466386
+      },
+      "catboost": {
+        "btts": 0.556245672543457,
+        "over15": 0.754834699605886,
+        "over25": 0.5192170622648379
+      },
+      "date": "2026-11-29",
+      "eventId": "401899521",
+      "featureCount": 119,
+      "featureFingerprint": "8deae344a63face60e8b53da8e651749eb00e09020b62d24f0346a8c48a67498",
+      "historyThrough": "2026-11-25",
+      "home": "sampdoria",
+      "kickoff": "2026-11-29T16:15:00+00:00",
+      "league": "ita.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5101293416889979,
+        "over15": 0.7187877889325339,
+        "over25": 0.46383887236448984
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-25",
+        "2026-11-25"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ita.2\",\"2026-11-29\",\"sudtirol\",\"mantova\"]": {
+      "away": "mantova",
+      "candidate": {
+        "btts": 0.5147790175406921,
+        "over15": 0.7183136059847937,
+        "over25": 0.4742745850725365
+      },
+      "catboost": {
+        "btts": 0.5194286933923862,
+        "over15": 0.7178394230370535,
+        "over25": 0.4847102977805832
+      },
+      "date": "2026-11-29",
+      "eventId": "401899520",
+      "featureCount": 119,
+      "featureFingerprint": "9f559ad00285747e2b3641625c1e6b1ddddb796b2dee315acf6d143b98d68eca",
+      "historyThrough": "2026-11-25",
+      "home": "sudtirol",
+      "kickoff": "2026-11-29T14:00:00+00:00",
+      "league": "ita.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5101293416889979,
+        "over15": 0.7187877889325339,
+        "over25": 0.46383887236448984
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-24",
+        "2026-11-25"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"ita.2\",\"2026-11-30\",\"catanzaro\",\"us avellino\"]": {
+      "away": "us avellino",
+      "candidate": {
+        "btts": 0.5141859068177026,
+        "over15": 0.7182264595527145,
+        "over25": 0.476781110678717
+      },
+      "catboost": {
+        "btts": 0.5182424719464074,
+        "over15": 0.717665130172895,
+        "over25": 0.4897233489929442
+      },
+      "date": "2026-11-30",
+      "eventId": "401899526",
+      "featureCount": 119,
+      "featureFingerprint": "b703ce90b30673c575780ec87a75196e3f42725351d9a19ba2cadfdb26c0fc8f",
+      "historyThrough": "2026-11-25",
+      "home": "catanzaro",
+      "kickoff": "2026-11-30T19:30:00+00:00",
+      "league": "ita.2",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.5101293416889979,
+        "over15": 0.7187877889325339,
+        "over25": 0.46383887236448984
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-24",
+        "2026-11-25"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    },
+    "[\"sco.1\",\"2026-11-29\",\"heart of midlothian\",\"celtic\"]": {
+      "away": "celtic",
+      "candidate": {
+        "btts": 0.6033990170576219,
+        "over15": 0.8208480833249745,
+        "over25": 0.5896690658385456
+      },
+      "catboost": {
+        "btts": 0.6355829963088778,
+        "over15": 0.8637420911821446,
+        "over25": 0.6360254016674309
+      },
+      "date": "2026-11-29",
+      "eventId": "401878330",
+      "featureCount": 119,
+      "featureFingerprint": "b9ce415e5f041a63537880086e597afa854e409d0e4b5bef3e67ffa2c76a03ef",
+      "historyThrough": "2026-11-24",
+      "home": "heart of midlothian",
+      "kickoff": "2026-11-29T15:00:00+00:00",
+      "league": "sco.1",
+      "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+      "poisson": {
+        "btts": 0.571215037806366,
+        "over15": 0.7779540754678045,
+        "over25": 0.5433127300096603
+      },
+      "policyVersion": "6.59",
+      "recordedAt": "2026-11-28T10:36:56.800786+03:00",
+      "teamHistoryThrough": [
+        "2026-11-21",
+        "2026-11-21"
+      ],
+      "trainingSourceVerification": "single_source_only"
+    }
+  },
+  "modelSha256": "324202ea60b076ea6694007739b8d9312e3944cebf0d9fca5cbba929e1e84a23",
+  "quarantine": {},
+  "settlements": {},
+  "version": "6.59"
+}
