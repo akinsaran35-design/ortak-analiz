@@ -310,7 +310,7 @@ if(typeof module!=="undefined"&&module.exports)module.exports={continuitySummary
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
-function expirySignature(data,now){return liveRows(data.live_analysis_quality,now).length+':'+FILES.map(k=>fresh(data[k]?.updatedAt,now)?1:0).join('')+dateTR(now)+':'+confirmedRows(data,now).length+":"+confirmedRows(data,now,true).length+':'+FILES.map(k=>scheduleBound(data,k,now)?1:0).join('')+':'+rowsFor(data,now).filter(r=>r.lastKnown).length;}
+function expirySignature(data,now){return (extraFixtureRows(data,now)?.length??-1)+":"+liveRows(data.live_analysis_quality,now).length+':'+FILES.map(k=>fresh(data[k]?.updatedAt,now)?1:0).join('')+dateTR(now)+':'+confirmedRows(data,now).length+":"+confirmedRows(data,now,true).length+':'+FILES.map(k=>scheduleBound(data,k,now)?1:0).join('')+':'+rowsFor(data,now).filter(r=>r.lastKnown).length;}
 function expireView(){if(!refreshing&&loadedAt&&expirySignature(data,loadedAt)!==expirySignature(data,Date.now()))render();}
 function metrics(values){const box=node("div",undefined,"metrics");for(const [label,value] of values){const c=node("div",undefined,"metric");c.append(node("b",value),node("small",label));box.append(c);}return box;}
 function displayNumber(v){return typeof v==="number"&&Number.isFinite(v)?v.toLocaleString("tr-TR",{maximumFractionDigits:2}):"—";}
