@@ -5,6 +5,12 @@ on:
       - 'scripts/pitchapi_probe.py'
       - 'scripts/test_pitchapi_probe.py'
       - '.github/workflows/pitchapi-probe.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/pitchapi_probe.py'
+      - 'scripts/test_pitchapi_probe.py'
+      - '.github/workflows/pitchapi-probe.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -15,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: python scripts/test_pitchapi_probe.py
   probe:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: tests
     runs-on: ubuntu-latest
     timeout-minutes: 3
@@ -31,3 +37,6 @@ jobs:
           path: pitchapi_connection_report.json
           if-no-files-found: error
           retention-days: 30
+      - name: Require successful API response
+        run: |
+          python -c 'import json,sys; r=json.load(open("pitchapi_connection_report.json")); sys.exit(0 if r["status"]=="catalog_received" else 1)'
