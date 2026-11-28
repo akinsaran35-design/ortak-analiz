@@ -114,13 +114,14 @@ def match_evidence(ledger,locked,provenance):
         rows.append(row)
     return rows
 
-def over25_evidence_summary(rows):
+def market_evidence_summary(rows,market):
+    outcome_index=MARKETS.index(market)
     matched=[row for row in rows if row["matchedSquaredErrors"] is not None]
     dates=sorted({row["date"] for row in matched})
     counts=Counter(row["resultStatus"] for row in rows)
     models={}
     for model in ("legacy","poisson","candidate"):
-        observations=[(row["probabilities"][model]["over25"],int(sum(row["result"]["score"])>=3))
+        observations=[(row["probabilities"][model][market],labels(*row["result"]["score"])[outcome_index])
             for row in matched]
         metrics=reliability(observations)
         metrics["accuracyAtHalf"]=(sum((p>=.5)==bool(outcome) for p,outcome in observations)/len(observations)
@@ -131,7 +132,7 @@ def over25_evidence_summary(rows):
         blocks=defaultdict(list)
         for row in matched:
             errors=row["matchedSquaredErrors"]
-            blocks[row["date"]].append(errors[baseline]["over25"]-errors["candidate"]["over25"])
+            blocks[row["date"]].append(errors[baseline][market]-errors["candidate"][market])
         improvements[baseline]=paired_date_bootstrap(blocks) if blocks else None
     return dict(
         forecasts=len(rows),pending=counts["pending"],quarantined=counts["quarantined"],
@@ -224,9 +225,10 @@ def run():
     report=build(pairs,ledger,meta,legacy,datetime.now(TR))
     provenance=legacy_provenance(pairs,ledger,legacy)
     report["matchEvidence"]=match_evidence(ledger,pairs["pairs"],provenance["perPair"])
-    report["over25EvidenceSummary"]=over25_evidence_summary(report["matchEvidence"])
+    report["marketEvidenceSummaries"]={market:market_evidence_summary(report["matchEvidence"],market) for market in MARKETS}
+    report["over25EvidenceSummary"]=report["marketEvidenceSummaries"]["over25"]
     write_json(PAIRS,pairs)
     write_json(Path("main_ml_matched_report.json"),report)
     print("MAIN_ML_MATCHED_669",json.dumps({k:v for k,v in report.items()
-        if k not in ("markets","matchEvidence","over25EvidenceSummary")}))
+        if k not in ("markets","matchEvidence","over25EvidenceSummary","marketEvidenceSummaries")}))
 if __name__=="__main__":run()
