@@ -47,6 +47,14 @@ jobs:
           ODDS_OPTIONAL_REFRESH: ${{ github.ref == 'refs/heads/main' && github.event_name == 'schedule' && github.event.schedule == '10 8,11,13,18 * * 6,0' }}
         run: python scripts/fetch_odds.py
 
+      - name: V7.05 quota guarded backup routing
+        if: github.ref == 'refs/heads/main'
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          python scripts/test_backup_source_router.py
+          python scripts/backup_source_router.py
+
       - name: V6.89 quota-protected extra market research
         if: github.ref == 'refs/heads/main' && github.event_name == 'schedule' && github.event.schedule == '0 5,15 * * *'
         env:
