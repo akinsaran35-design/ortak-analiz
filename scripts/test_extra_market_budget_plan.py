@@ -18,6 +18,25 @@ class BudgetTests(unittest.TestCase):
         self.assertEqual(r["reserveShortfall"],48)
         self.assertEqual(r["theoreticalExtraEventCapacity"],0)
         self.assertFalse(r["collectionEnabled"])
+    def test_core_priority_budget(self):
+        r=plan(self.s,self.now,self.workflow)["priorityBudget"]
+        self.assertEqual(r["coreRunsRemaining"],5)
+        self.assertEqual(r["optionalRunsRemaining"],7)
+        self.assertEqual(r["coreCreditsReserved"],45)
+        self.assertEqual(r["coreAndEmergencyReserve"],65)
+        self.assertEqual(r["coreReserveShortfall"],0)
+        self.assertEqual(r["optionalRunsAffordable"],1)
+        self.assertEqual(r["optionalRunsToDefer"],6)
+        self.assertEqual(r["creditsAfterCoreReserveAndAffordableOptionalRuns"],6)
+        self.assertFalse(r["liveAuthorization"])
+        self.assertFalse(r["scheduleChanged"])
+        low=plan(dict(self.s,remainingCredits=40),self.now,self.workflow)["priorityBudget"]
+        self.assertEqual(low["coreReserveShortfall"],25)
+        self.assertEqual(low["optionalRunsAffordable"],0)
+        high=plan(dict(self.s,remainingCredits=500),self.now,self.workflow)["priorityBudget"]
+        self.assertEqual(high["optionalRunsAffordable"],7)
+        self.assertEqual(high["optionalRunsToDefer"],0)
+        self.assertIsNone(plan(self.s,self.now+timedelta(hours=1),self.workflow)["priorityBudget"])
     def test_high_balance_and_stale(self):
         s=dict(self.s,remainingCredits=500)
         self.assertEqual(plan(s,self.now,self.workflow)["theoreticalExtraEventCapacity"],3)
