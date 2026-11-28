@@ -211,3 +211,16 @@ assert.equal(marketCoverageSummary({...covData,snapshot_integrity:null},covNow).
 assert.equal(marketCoverageSummary({...covData,odds:{...covData.odds,events:[covEvent,covEvent]}},covNow).markets[2.5].observed,0);
 assert.equal(marketCoverageSummary({...covData,odds:{...covData.odds,region:"tr"}},covNow),null);
 console.log("V6.77 market coverage visibility checks passed");
+
+const {extraMarketCoverage}=require("../mobile-v487.js");
+const xEvent={...covEvent,league:"soccer_epl",home:"A",away:"B",over15:["a","b","c"].map(bookmaker=>({bookmaker,prices:{Over:1.4,Under:3},lastUpdate:covAt})),btts:[]};
+const xReport={source:"The Odds API",region:"uk",mode:"research_only",decision:"PAS",quotaPolicyVersion:"6.89",quotaStatus:"reserve_preserved",paidRequestsAttempted:1,updatedAt:covAt,oddsSnapshotAt:covAt,errors:[],eventCount:1,events:[xEvent]};
+const xData={...covData,odds:{...covData.odds,events:[xEvent]},extra_markets:xReport,extra_market_archive:{mode:"research_only",integrityVersion:"6.85",updatedAt:covAt,quarantine:{}},snapshot_integrity:{...covData.snapshot_integrity,reportTimestamps:{"odds.json":covAt,"extra_markets.json":covAt,"extra_market_archive.json":covAt}}};
+assert.equal(extraMarketCoverage({},covNow).status,"not_published");
+assert.equal(extraMarketCoverage(xData,covNow).markets.over15.currentThree,1);
+assert.equal(extraMarketCoverage(xData,covNow).markets.btts.currentThree,0);
+assert.equal(extraMarketCoverage(xData,covNow+1800000).markets.over15.currentThree,null);
+assert.equal(extraMarketCoverage({...xData,extra_markets:{...xReport,oddsSnapshotAt:"2026-11-27T12:00:00Z"}},covNow).markets.over15.currentThree,null);
+assert.equal(extraMarketCoverage({...xData,extra_market_archive:{...xData.extra_market_archive,quarantine:{cov:{}}}},covNow).markets.over15.currentThree,0);
+assert.equal(extraMarketCoverage({...xData,extra_markets:{...xReport,quotaStatus:"quota_guard",events:[],eventCount:0,paidRequestsAttempted:0}},covNow).status,"quota_guard");
+console.log("V6.90 extra market status, freshness and quarantine checks passed");
