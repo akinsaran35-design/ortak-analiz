@@ -88,14 +88,15 @@ function confirmedRows(data,now,allowLastKnown=false){
 }
 function filterRows(rows,q,d,l,t){const s=String(q||"").trim().toLocaleLowerCase("tr");return rows.filter(r=>(!s||r.match.toLocaleLowerCase("tr").includes(s))&&(!d||r.date===d)&&(!l||r.league===l)&&(!t||(scheduleFor(r)&&((hourTR(scheduleFor(r))<"17:00")===(t==="day")))));}
 const LIVE_URL="https://raw.githubusercontent.com/akinsaran35-design/ortak-analiz/live-data/live_analysis_quality.json";
-function liveRows(report,now){
- const age=t=>Number.isFinite(Date.parse(t))&&Date.parse(t)<=now&&now-Date.parse(t)<=120000;
- if(report?.version!=="5.15"||report.mode!=="live_analysis_quality_only"||report.predictionsEnabled!==false||report.sourceTimestampVerified!==false||report.decision!=="PAS"||!age(report.updatedAt)||!Array.isArray(report.rows)||report.rows.length>12)return [];
+function liveRows(report,now,maxAge=120000){
+ const age=t=>Number.isFinite(Date.parse(t))&&Date.parse(t)<=now&&now-Date.parse(t)<=maxAge;
+ if(report?.version!=="5.15"||report.mode!=="live_analysis_quality_only"||report.predictionsEnabled!==false||report.sourceTimestampVerified!==false||report.decision!=="PAS"||!age(report.updatedAt)||!Array.isArray(report.rows)||report.rows.length>48)return [];
  const seen=new Map();
  for(const r of report.rows){const k=JSON.stringify([r?.league,r?.eventId]);seen.set(k,(seen.get(k)||0)+1);}
  const pair=x=>Array.isArray(x)&&x.length===2&&x.every(v=>Number.isFinite(v)&&v>=0);
  return report.rows.filter(r=>r&&seen.get(JSON.stringify([r.league,r.eventId]))===1&&r.quality==="observation_ready"&&typeof r.eventId==="string"&&/^[0-9]+$/.test(r.eventId)&&typeof r.home==="string"&&typeof r.away==="string"&&r.home!==r.away&&age(r.receivedAt)&&r.observation?.state==="in"&&pair(r.observation.score)&&typeof r.observation.clock==="string"&&["corners","shots","shotsOnTarget","yellowCards","redCards","possession"].every(k=>pair(r.observation.metrics?.[k])));
 }
+function lastLiveRows(report,now){return liveRows(report,now,20*60*1000).filter(r=>!liveRows(report,now).includes(r));}
 function teamLogo(catalog,league,name){
  if(catalog?.version!==1||catalog.source!=="ESPN team directory"||typeof name!=="string")return null;
  const entry=catalog.leagues?.[league]?.[name];
@@ -306,11 +307,11 @@ function observedTotalsFor(row,data,now,point){
  if(pairs.length>=3){result.comparableCount=pairs.length;result.first=median(pairs.map(b=>b.firstObserved));result.current=median(pairs.map(b=>b.current));result.dropPct=median(pairs.map(b=>b.dropPct));}
  return result;
 }
-if(typeof module!=="undefined"&&module.exports)module.exports={continuitySummary,extraMarketCoverage,marketCoverageSummary,observedTotalsFor,mlResearchSummary,matchedMlSummary,shadowHistory,accuracyCounts,classificationFor,formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
+if(typeof module!=="undefined"&&module.exports)module.exports={continuitySummary,extraMarketCoverage,marketCoverageSummary,observedTotalsFor,mlResearchSummary,matchedMlSummary,shadowHistory,accuracyCounts,classificationFor,formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,lastLiveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
-function expirySignature(data,now){return (extraFixtureRows(data,now)?.length??-1)+":"+liveRows(data.live_analysis_quality,now).length+':'+FILES.map(k=>fresh(data[k]?.updatedAt,now)?1:0).join('')+dateTR(now)+':'+confirmedRows(data,now).length+":"+confirmedRows(data,now,true).length+':'+FILES.map(k=>scheduleBound(data,k,now)?1:0).join('')+':'+rowsFor(data,now).filter(r=>r.lastKnown).length;}
+function expirySignature(data,now){return (extraFixtureRows(data,now)?.length??-1)+":"+liveRows(data.live_analysis_quality,now).length+':'+lastLiveRows(data.live_analysis_quality,now).length+':'+FILES.map(k=>fresh(data[k]?.updatedAt,now)?1:0).join('')+dateTR(now)+':'+confirmedRows(data,now).length+":"+confirmedRows(data,now,true).length+':'+FILES.map(k=>scheduleBound(data,k,now)?1:0).join('')+':'+rowsFor(data,now).filter(r=>r.lastKnown).length;}
 function expireView(){if(!refreshing&&loadedAt&&expirySignature(data,loadedAt)!==expirySignature(data,Date.now()))render();}
 function metrics(values){const box=node("div",undefined,"metrics");for(const [label,value] of values){const c=node("div",undefined,"metric");c.append(node("b",value),node("small",label));box.append(c);}return box;}
 function displayNumber(v){return typeof v==="number"&&Number.isFinite(v)?v.toLocaleString("tr-TR",{maximumFractionDigits:2}):"—";}
@@ -555,10 +556,14 @@ function render(){loadedAt=Date.now();rows=by("fixture-mode").value==="confirmed
  }else leagueDetails.append(node("p","Güncel, doğrulanmış lig raporu bekleniyor.","subtle"));
  root.append(leagueDetails);
  const radar=by("scoreboard-summary");radar.replaceChildren();
- const live=data.live_analysis_quality, recent=liveRows(live,loadedAt);
+ const live=data.live_analysis_quality, recent=liveRows(live,loadedAt), previousLive=lastLiveRows(live,loadedAt);
  panel(radar,"ESPN · periyodik maç istatistikleri",[node("p",Number.isFinite(Date.parse(live?.updatedAt))?"Son sorgu: "+dateTR(live.updatedAt)+" "+hourTR(live.updatedAt)+" TSİ":"Henüz yayımlanmış sorgu yok.","subtle"),node("p","15 dakikalık pilot; veri alım süresi 120 saniye ile sınırlıdır. Kaynağın gerçek zamanlı güncelliği doğrulanmadı.","subtle")]);
  if(!recent.length)radar.append(signalPanel(null),node("p","Gösterilebilir yeni maç gözlemi yok. Bu, devam eden maç olmadığı anlamına gelmez.","subtle"));
  for(const r of recent){const o=r.observation;panel(radar,r.home+" – "+r.away,[node("p",o.score.join(" – ")+" · "+o.clock),metrics([["Korner",o.metrics.corners.join(" – ")],["Şut",o.metrics.shots.join(" – ")],["İsabetli şut",o.metrics.shotsOnTarget.join(" – ")],["Sarı kart",o.metrics.yellowCards.join(" – ")],["Kırmızı kart",o.metrics.redCards.join(" – ")],["Topa sahip olma",o.metrics.possession.join(" – ")+" %"]]),node("p","Alım: "+hourTR(r.receivedAt)+" TSİ · Gözlem, tahmin değil.","subtle"),signalPanel(r)]);}
+ if(previousLive.length){
+   panel(radar,"Son bilinen maç gözlemleri — canlı değil",[node("p","15 dakikalık sorgu aralığında alınmış eski gözlemler. Maçın şu anki durumu doğrulanmadı; sinyal üretilmez.","subtle")]);
+   for(const r of previousLive){const o=r.observation;panel(radar,r.home+" – "+r.away,[node("p","Eski skor: "+o.score.join(" – ")+" · "+o.clock),node("p","Alım: "+hourTR(r.receivedAt)+" TSİ · Güncel değil","subtle"),metrics([["Korner",o.metrics.corners.join(" – ")],["Şut",o.metrics.shots.join(" – ")],["İsabetli şut",o.metrics.shotsOnTarget.join(" – ")]])]);}
+ }
  const board=data.scoreboard_snapshot;
  if(board?.version==="4.90"&&board.mode==="scoreboard_snapshot"&&board.realTime===false&&Array.isArray(board.groups)){
    const isCurrent=bound(data,"scoreboard_snapshot",loadedAt)&&board.date===dateTR(loadedAt);
