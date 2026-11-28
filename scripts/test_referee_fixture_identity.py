@@ -47,6 +47,22 @@ class IdentityTests(unittest.TestCase):
         doc=provider()
         doc["response"][0]["fixture"]["referee"]=None
         self.assertEqual(counts(doc,targets())["matched_missing_referee"],1)
+    def test_alias_shadow_never_promotes(self):
+        doc=provider()
+        groups=targets()
+        doc["response"][0]["teams"]["home"]["name"]="Dortmund"
+        groups[0]["rows"][0]["home"]="Borussia Dortmund"
+        r=match(doc,groups)
+        self.assertEqual(r["matched"],0)
+        self.assertEqual(r["aliasShadow"]["additionalCandidates"],1)
+        self.assertFalse(r["aliasShadow"]["verified"])
+        self.assertEqual(r["rows"],[])
+        doc["response"].append(copy.deepcopy(doc["response"][0]))
+        doc["response"][1]["fixture"]["id"]=43
+        doc["response"][1]["teams"]["home"]["name"]="Borussia Dortmund"
+        doc["results"]=2
+        r=match(doc,groups)
+        self.assertEqual(r["aliasShadow"]["additionalCandidates"],0)
     def test_incomplete(self):
         doc=provider();doc["paging"]["total"]=2
         with self.assertRaises(ValueError):match(doc,targets())
