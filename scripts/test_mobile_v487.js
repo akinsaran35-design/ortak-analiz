@@ -167,3 +167,14 @@ assert.equal(observedTotalsFor(row,wrong,ohNow,2.5).dropPct,null);
 const wrongBook={...ohData,observed_totals_report:{...ohData.observed_totals_report,events:[{...ohData.observed_totals_report.events[0],books:ohData.observed_totals_report.events[0].books.map(b=>({...b,current:1.9}))}]}};
 assert.equal(observedTotalsFor(row,wrongBook,ohNow,2.5).dropPct,null);
 console.log("V6.64 observed totals UI: current, matched history, stale and mismatch guards passed");
+
+const mainMeta={...mlMeta,version:"6.67",trainingMatches:2848};
+const mainF={...mlF,league:"en.1",policyVersion:"6.67"};
+const mainK=JSON.stringify([mainF.league,mainF.date,mainF.home,mainF.away]);
+const mainLedger={...mlLedger,version:"6.67",forecasts:{[mainK]:mainF}};
+assert.equal(mlResearchSummary(mainLedger,mainMeta,mlNow,"main").pending,1);
+assert.equal(mlResearchSummary(mainLedger,mainMeta,mlNow,"main").stats.over15.candidate.brier,null);
+assert.equal(mlResearchSummary(mainLedger,mainMeta,mlNow),null);
+assert.equal(mlResearchSummary(mlLedger,mlMeta,mlNow,"main"),null);
+assert.equal(mlResearchSummary(mainLedger,{...mainMeta,trainingMatches:1791},mlNow,"main"),null);
+console.log("V6.73 separate main research cohort validated");
