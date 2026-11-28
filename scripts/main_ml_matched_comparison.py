@@ -43,6 +43,35 @@ def legacy_prob(row):
         return probs if probabilities(probs) else None
     except (TypeError,KeyError):return None
 
+def locked_legacy_identity(value):
+    try:
+        day,league,match=json.loads(value)
+        code=FIXTURE_CODES[league]
+        h,a=match.split(" – ")
+        return code,day,identity(code,h),identity(code,a)
+    except (ValueError,TypeError,KeyError,AttributeError):
+        return None
+
+def legacy_provenance(pairs,ledger,legacy):
+    """Check immutable forecast fields, not the mutable result field."""
+    groups=legacy_entries(legacy) if isinstance(legacy,dict) else {}
+    counts=Counter()
+    per_pair={}
+    for k,x in pairs["pairs"].items():
+        f=ledger["forecasts"][k]
+        matches=groups.get((f["league"],f["date"],f["home"],f["away"]),[])
+        if not isinstance(legacy,dict):
+            status="source_unavailable"
+        elif len(matches)!=1:
+            status="missing_or_ambiguous"
+        else:
+            lk,old=matches[0]
+            status="verified" if (lk==x["legacyKey"] and old.get("recordedAt")==x["legacyRecordedAt"]
+                and old.get("modelVersion")==x["legacyVersion"] and legacy_prob(old)==x["legacy"]) else "changed"
+        counts[status]+=1
+        per_pair[k]=status
+    return dict(counts=dict(counts),perPair=per_pair,sourceAvailable=isinstance(legacy,dict))
+
 def build(pairs,ledger,meta,legacy,now):
     now=now.astimezone(TR)
     validate(ledger,meta,now,version=VERSION,codes=CODES)
@@ -54,6 +83,7 @@ def build(pairs,ledger,meta,legacy,now):
     added=0
     valid=[]
     pending=0
+    seen_legacy=set()
     for k,f in sorted(ledger["forecasts"].items()):
         matches=groups.get((f["league"],f["date"],f["home"],f["away"]),[])
         if k not in locked:
@@ -76,9 +106,13 @@ def build(pairs,ledger,meta,legacy,now):
         x=locked[k]
         if (x["forecastFingerprint"]!=digest(f) or x["candidate"]!=f["candidate"]
             or x["legacyVersion"]!=LEGACY_VERSION or not probabilities(x["legacy"])
+            or locked_legacy_identity(x["legacyKey"])!=(f["league"],f["date"],f["home"],f["away"])
+            or x["legacyKey"] in seen_legacy
+            or aware(x["legacyRecordedAt"]).date()>=aware(f["kickoff"]).date()
             or not max(aware(f["recordedAt"]),aware(x["legacyRecordedAt"]))<=aware(x["pairedAt"])<=now
             or aware(x["pairedAt"])>=aware(f["kickoff"])):
             raise ValueError("locked pair integrity failure")
+        seen_legacy.add(x["legacyKey"])
         if k in ledger["quarantine"]:
             excluded["quarantined_pair"]+=1;continue
         if k not in ledger["settlements"]:

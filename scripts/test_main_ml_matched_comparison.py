@@ -1,6 +1,6 @@
 import copy,json,unittest
 from datetime import datetime
-from main_ml_matched_comparison import build,identity
+from main_ml_matched_comparison import build,identity,legacy_provenance
 from results_source_pilot import TR
 from extra_league_prospective import key
 class MatchedTests(unittest.TestCase):
@@ -17,6 +17,18 @@ class MatchedTests(unittest.TestCase):
         now=datetime(2026,11,28,12,tzinfo=TR)
         self.assertEqual(build(pairs,ledger,meta,legacy,now)["newPairs"],1)
         frozen=copy.deepcopy(pairs)
+        self.assertEqual(legacy_provenance(pairs,ledger,legacy)["counts"],{"verified":1})
+        edited=copy.deepcopy(legacy)
+        edited[lk]["markets"]["1.5 Üst"]=81
+        self.assertEqual(legacy_provenance(pairs,ledger,edited)["counts"],{"changed":1})
+        self.assertEqual(legacy_provenance(pairs,ledger,{})["counts"],{"missing_or_ambiguous":1})
+        self.assertEqual(legacy_provenance(pairs,ledger,None)["counts"],{"source_unavailable":1})
+        edited=copy.deepcopy(legacy)
+        edited[lk]["result"]=[2,1]
+        self.assertEqual(legacy_provenance(pairs,ledger,edited)["counts"],{"verified":1})
+        broken=copy.deepcopy(pairs)
+        broken["pairs"][k]["legacyKey"]=json.dumps([old["date"],old["league"],"Arsenal – Liverpool"])
+        with self.assertRaises(ValueError):build(broken,ledger,meta,{},now)
         self.assertEqual(build(pairs,ledger,meta,legacy,now)["newPairs"],0)
         self.assertEqual(pairs,frozen)
         end=datetime(2026,12,1,12,tzinfo=TR)

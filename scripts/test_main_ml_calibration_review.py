@@ -11,6 +11,8 @@ class ReviewTests(unittest.TestCase):
         r=evaluate(pairs,ledger,meta,datetime(2026,11,28,12,tzinfo=TR))
         self.assertFalse(r["automaticApproval"])
         self.assertFalse(r["overall"]["reviewScreenReady"])
+        self.assertFalse(r["overall"]["legacyProvenanceReady"])
+        self.assertFalse(r["legacySourceAvailable"])
         self.assertEqual(len(r["leagues"]),9)
         self.assertTrue(all(v["status"]=="collecting_data" for v in r["leagues"].values()))
         self.assertEqual((ledger,pairs),before)
