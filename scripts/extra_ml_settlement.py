@@ -125,11 +125,10 @@ def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=t
                 except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
                     cache[url]=None
                     errors.append(dict(league=l,date=f["date"],source="football-data" if cache is primary else "espn",error=type(exc).__name__))
-        if primary[cu] is None or secondary[eu] is None:
-            note(f,"both_sources_unavailable" if primary[cu] is None and secondary[eu] is None else "csv_source_unavailable" if primary[cu] is None else "espn_source_unavailable")
-            continue
-        entries=primary[cu].get((f["date"],f["home"],f["away"]),[])
-        b,reason=espn_evidence(secondary[eu],f,identity_fn)
+        csv_unavailable=primary[cu] is None
+        espn_unavailable=secondary[eu] is None
+        entries=[] if csv_unavailable else primary[cu].get((f["date"],f["home"],f["away"]),[])
+        b,reason=(None,None) if espn_unavailable else espn_evidence(secondary[eu],f,identity_fn)
         a=entries[0] if len(entries)==1 else None
         prior=ledger["settlements"].get(k)
         if len(entries)>1:
@@ -141,6 +140,9 @@ def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=t
         if reason:
             note(f,reason)
             ledger["quarantine"][k]=dict(reason=reason,detectedAt=now.isoformat())
+        elif csv_unavailable or espn_unavailable:
+            prefix="previously_verified_" if prior else ""
+            note(f,prefix+("both_sources_unavailable" if csv_unavailable and espn_unavailable else "csv_source_unavailable" if csv_unavailable else "espn_source_unavailable"))
         elif not prior and a is not None and a==b:
             ledger["settlements"][k]=dict(score=a,eventId=f["eventId"],settledAt=now.isoformat(),
                 sources=["football-data","espn"],sourceUrls=[cu,eu])
