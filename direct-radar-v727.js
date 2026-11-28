@@ -46,11 +46,15 @@ async function collect(fetcher=fetch,now=()=>Date.now(),codes=CODES){
  }
  return {day,results,updatedAt:now(),sourceTimestampVerified:false,predictionsEnabled:false};
 }
+function retryDelay(report,manual=false){
+ if(report&&report.results.length&&report.results.every(g=>!g.ok))return manual?60000:900000;
+ return manual?30000:INTERVAL;
+}
 function visible(report,now){
  if(!report||report.day!==dateTR(now)||report.predictionsEnabled!==false)return [];
  return report.results.flatMap(g=>g.ok&&now>=g.receivedAt&&now-g.receivedAt<=MAX_AGE?g.rows.map(r=>({...r,league:g.code,receivedAt:g.receivedAt})):[]);
 }
-if(typeof module!=="undefined"&&module.exports)module.exports={parse,collect,visible,CODES};
+if(typeof module!=="undefined"&&module.exports)module.exports={parse,collect,visible,CODES,retryDelay};
 if(typeof document==="undefined")return;
 const host=document.getElementById("direct-radar"),view=document.getElementById("view-live");
 if(!host||!view)return;
@@ -64,10 +68,10 @@ function render(){
  const now=Date.now(),rows=visible(report,now);
  const title=el("h3","Doğrudan skor kaynağı · ESPN");
  const note=el("p","Tarayıcıdan sorgu; sağlayıcı zaman damgası doğrulanmadı. Tahmin ve xG üretmez.","subtle");
- const refresh=el("button",busy?"Sorgulanıyor…":"Skorları yenile");refresh.type="button";refresh.disabled=busy||now-lastAttempt<30000;refresh.onclick=()=>run(true);
+ const refresh=el("button",busy?"Sorgulanıyor…":"Skorları yenile");refresh.type="button";refresh.disabled=busy||now-lastAttempt<retryDelay(report,true);refresh.onclick=()=>run(true);
  const state=el("p",busy?"Kaynak kontrol ediliyor…":report?report.results.filter(g=>g.ok).length+"/"+report.results.length+" lig yanıt verdi · Alım "+time(report.updatedAt)+" TSİ":"Sorgu bekleniyor.","subtle");
  host.replaceChildren(title,note,refresh,state);
- if(report&&!rows.length)host.append(el("p",report.results.some(g=>g.ok)?"Taze maç gözlemi yok; diğer kaynak aşağıda.":"Doğrudan erişim başarısız; yayımlanmış radar aşağıda.","subtle"));
+ if(report&&!rows.length)host.append(el("p",report.results.some(g=>g.ok)?"Taze maç gözlemi yok; diğer kaynak aşağıda.":"Doğrudan erişim başarısız; otomatik sorgu 15 dakika ertelendi. Yayımlanmış radar aşağıda.","subtle"));
  for(const r of rows){
   const item=el("article","","panel");
   item.append(el("h3",r.home+" – "+r.away),el("p",r.score.join(" – ")+" · "+r.clock),el("p",r.league+" · Alım "+time(r.receivedAt)+" TSİ","subtle"));
@@ -75,7 +79,7 @@ function render(){
  }
 }
 async function run(manual=false){
- if(!allowed()||busy||Date.now()-lastAttempt<(manual?30000:INTERVAL))return;
+ if(!allowed()||busy||Date.now()-lastAttempt<retryDelay(report,manual))return;
  lastAttempt=Date.now();busy=true;render();
  try{report=await collect();}finally{busy=false;render();}
 }
