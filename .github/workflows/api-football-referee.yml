@@ -5,6 +5,8 @@ on:
       - 'scripts/api_football_referee_probe.py'
       - 'scripts/test_api_football_referee_probe.py'
       - 'scripts/referee_fixture_identity.py'
+      - 'scripts/referee_team_name_evidence.py'
+      - 'scripts/test_referee_team_name_evidence.py'
       - 'scripts/test_referee_fixture_identity.py'
       - '.github/workflows/api-football-referee.yml'
   workflow_dispatch:
@@ -22,6 +24,7 @@ jobs:
       - run: |
           python3 scripts/test_api_football_referee_probe.py
           python3 scripts/test_referee_fixture_identity.py
+          python3 scripts/test_referee_team_name_evidence.py
       - if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
