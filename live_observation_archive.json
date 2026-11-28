@@ -1,4 +1,43 @@
 {
+  "pt.1:401885393": {
+    "league": "pt.1",
+    "eventId": "401885393",
+    "home": "Académico de Viseu",
+    "away": "Alverca",
+    "kickoff": "2026-11-28T18:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T21:40:10.605096+03:00",
+        "minute": 35,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            3,
+            0
+          ],
+          "shots": [
+            4,
+            6
+          ],
+          "shotsOnTarget": [
+            1,
+            1
+          ],
+          "yellowCards": [
+            2,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
   "nl.1:401875531": {
     "league": "nl.1",
     "eventId": "401875531",
@@ -74,6 +113,36 @@
             0
           ]
         }
+      },
+      {
+        "receivedAt": "2026-11-28T21:40:10.586511+03:00",
+        "minute": 50,
+        "score": [
+          2,
+          3
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            0
+          ],
+          "shots": [
+            4,
+            7
+          ],
+          "shotsOnTarget": [
+            2,
+            4
+          ],
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
       }
     ]
   },
@@ -107,6 +176,36 @@
           "yellowCards": [
             0,
             2
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "receivedAt": "2026-11-28T21:40:10.687034+03:00",
+        "minute": 52,
+        "score": [
+          1,
+          2
+        ],
+        "metrics": {
+          "corners": [
+            2,
+            3
+          ],
+          "shots": [
+            7,
+            13
+          ],
+          "shotsOnTarget": [
+            2,
+            6
+          ],
+          "yellowCards": [
+            0,
+            3
           ],
           "redCards": [
             0,
@@ -152,6 +251,36 @@
             0
           ]
         }
+      },
+      {
+        "receivedAt": "2026-11-28T21:40:10.664692+03:00",
+        "minute": 48,
+        "score": [
+          1,
+          1
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            7
+          ],
+          "shots": [
+            6,
+            12
+          ],
+          "shotsOnTarget": [
+            2,
+            4
+          ],
+          "yellowCards": [
+            1,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
       }
     ]
   },
@@ -181,6 +310,36 @@
           "shotsOnTarget": [
             2,
             0
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "receivedAt": "2026-11-28T21:40:10.646955+03:00",
+        "minute": 80,
+        "score": [
+          1,
+          2
+        ],
+        "metrics": {
+          "corners": [
+            3,
+            7
+          ],
+          "shots": [
+            11,
+            16
+          ],
+          "shotsOnTarget": [
+            7,
+            3
           ],
           "yellowCards": [
             0,
