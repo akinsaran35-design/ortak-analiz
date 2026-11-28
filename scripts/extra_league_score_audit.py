@@ -1,5 +1,5 @@
 """Read-only source audit for six additional competitions; never writes forecast archives."""
-import json,math
+import json,math,random,bisect
 from collections import Counter
 from datetime import datetime,timedelta
 from pathlib import Path
@@ -345,6 +345,101 @@ def dixon_coles_backtest(rows):
     return dict(model="league_mean_dixon_coles",rhoCandidates=list(DC_RHOS),holdoutStart=cutoff,markets=metrics,
         sameDayTraining=False,productionModelValidated=False,externalValidation=False)
 
+SIMULATION_DRAWS=131072
+SIMULATION_METHODS=("monte_carlo","sobol","latin_hypercube")
+
+def poisson_cdf(mean,weight=lambda k:1.0):
+    if not math.isfinite(mean) or not 0<=mean<=20:
+        raise ValueError("mean outside supported range")
+    mass=math.exp(-mean)
+    raw=[mass]
+    k=0
+    while k<100 and (k<mean or 1-math.fsum(raw)>1e-13):
+        k+=1
+        mass*=mean/k
+        raw.append(mass)
+    weighted=[p*weight(i) for i,p in enumerate(raw)]
+    if any(p<0 for p in weighted):
+        raise ValueError("negative score mass")
+    total=math.fsum(weighted)
+    if total<=0:
+        raise ValueError("empty distribution")
+    cdf=[]
+    running=0.0
+    for p in weighted:
+        running+=p/total
+        cdf.append(min(1.0,running))
+    cdf[-1]=1.0
+    return cdf
+
+def simulation_points(method,n,seed):
+    rng=random.Random(seed)
+    if type(n) is not int or not 1<=n<=2**20:
+        raise ValueError("unsupported draw count")
+    if method=="monte_carlo":
+        for _ in range(n):
+            yield rng.random(),rng.random()
+    elif method=="latin_hypercube":
+        order=list(range(n))
+        rng.shuffle(order)
+        for i,j in enumerate(order):
+            yield (i+rng.random())/n,(j+rng.random())/n
+    elif method=="sobol":
+        if n&(n-1):
+            raise ValueError("Sobol draw count must be a power of two")
+        # First two Sobol dimensions, with independent digital XOR shifts.
+        v1=[1<<(31-j) for j in range(32)]
+        v2=[1<<31]
+        for _ in range(1,32):
+            v2.append(v2[-1]^(v2[-1]>>1))
+        x=y=0
+        sx,sy=rng.getrandbits(32),rng.getrandbits(32)
+        for i in range(n):
+            if i:
+                bit=(i&-i).bit_length()-1
+                x^=v1[bit]
+                y^=v2[bit]
+            yield ((x^sx)+0.5)/2**32,((y^sy)+0.5)/2**32
+    else:
+        raise ValueError("unknown simulation method")
+
+def simulate_scores(h,a,rho,method,n=SIMULATION_DRAWS,seed=20261128):
+    """Sample a Poisson or Dixon-Coles joint score distribution."""
+    exact=dc_probabilities(h,a,rho)
+    hc=poisson_cdf(h)
+    away=[poisson_cdf(a,lambda y:dc_tau(h,a,x,y,rho)) for x in (0,1,2)]
+    counts=[0]*3
+    for u,v in simulation_points(method,n,seed):
+        x=bisect.bisect_right(hc,u)
+        y=bisect.bisect_right(away[min(x,2)],v)
+        for i,flag in enumerate(labels(x,y)):
+            counts[i]+=flag
+    rates=[c/n for c in counts]
+    return dict(draws=n,seed=seed,markets={k:dict(simulated=round(p,8),analytic=round(q,8),absoluteError=round(abs(p-q),8)) for k,p,q in zip(MARKETS,rates,exact)})
+
+def simulation_audit(rows,n=SIMULATION_DRAWS):
+    """Numerical checks on observed league averages, not forecast performance."""
+    history={}
+    for r in verified_rows(rows):
+        history.setdefault(r["league"],[]).append(r["csv"])
+    cases=[]
+    for league,past in sorted(history.items()):
+        if len(past)<MIN_TRAIN_MATCHES:
+            continue
+        h=sum(s[0] for s in past)/len(past)
+        a=sum(s[1] for s in past)/len(past)
+        if max(h,a)>20:
+            continue
+        rho=fit_dc_rho(past,h,a)
+        for model,correction in (("poisson",0.0),("dixon_coles",rho)):
+            methods={m:simulate_scores(h,a,correction,m,n) for m in SIMULATION_METHODS}
+            cases.append(dict(league=league,model=model,homeMean=h,awayMean=a,rho=correction,methods=methods))
+    summary={}
+    for method in SIMULATION_METHODS:
+        errors=[v["absoluteError"] for c in cases for v in c["methods"][method]["markets"].values()]
+        summary[method]=dict(meanAbsoluteError=round(sum(errors)/len(errors),8) if errors else None,maxAbsoluteError=max(errors) if errors else None)
+    return dict(mode="numerical_validation_only",drawsPerCasePerMethod=n,cases=cases,summary=summary,productionModelValidated=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -359,7 +454,8 @@ def build(now,reader=read):
     team_replay=team_form_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     hybrid=hybrid_holdout([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     dc=dixon_coles_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.33",dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    simulation=simulation_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.34",simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -370,6 +466,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("SIMULATION_AUDIT",json.dumps({k:report["simulationAudit"][k] for k in ("mode","drawsPerCasePerMethod","summary")}))
     print("DIXON_COLES_BACKTEST",json.dumps(report["dixonColesBacktest"]))
     print("HYBRID_HOLDOUT",json.dumps(report["hybridHoldout"]))
     print("TEAM_FORM_BACKTEST",json.dumps(report["teamFormBacktest"]))
