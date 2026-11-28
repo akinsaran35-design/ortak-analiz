@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest,paired_date_bootstrap,bootstrap_model_comparison,markov_transition,markov_score_probabilities,markov_numerical_audit
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest,paired_date_bootstrap,bootstrap_model_comparison,markov_transition,markov_score_probabilities,markov_numerical_audit,elo_expected,elo_delta,elo_goal_means,elo_backtest
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -226,6 +226,24 @@ class AuditTests(unittest.TestCase):
         report=markov_numerical_audit([])
         self.assertIsNone(report["maxPrematchError"])
         self.assertFalse(report["liveValidation"])
+    def test_elo_strength(self):
+        self.assertAlmostEqual(elo_expected(1500,1500,0),0.5)
+        self.assertGreater(elo_delta(1500,1500,2,0),0)
+        self.assertLess(elo_delta(1500,1500,0,2),0)
+        self.assertEqual(elo_goal_means(1.4,1.1,1600,1400,0),(1.4,1.1))
+        h,a=elo_goal_means(1.4,1.1,1600,1400,1)
+        self.assertGreater(h,1.4)
+        self.assertAlmostEqual(h+a,2.5)
+        for i in (0,1):
+            self.assertAlmostEqual(goal_probabilities(h,a)[i],goal_probabilities(1.4,1.1)[i])
+        start=datetime(2026,8,1)
+        rows=[dict(league="sco.1",date=(start+timedelta(days=d)).date().isoformat(),home=f"a{i}",away=f"b{i}",csv=[i%3,d%3],espn=[i%3,d%3],status="corroborated") for d in range(30) for i in range(10)]
+        result=elo_backtest(rows)
+        self.assertEqual(result,elo_backtest(list(reversed(rows))))
+        self.assertEqual(result["markets"]["over15"]["poisson"],negative_binomial_backtest(rows)["markets"]["over15"]["poisson"])
+        self.assertEqual(result["markets"]["over25"]["poisson"]["brier"],result["markets"]["over25"]["elo"]["brier"])
+        self.assertFalse(result["productionModelValidated"])
+        self.assertIsNone(elo_backtest([])["markets"]["btts"]["elo"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
