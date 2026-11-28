@@ -4,7 +4,7 @@ from collections import Counter,defaultdict
 from datetime import datetime,date,timedelta
 from pathlib import Path
 from urllib.parse import urlparse
-from multi_league_results import APPROVED,source_urls,TR
+from multi_league_results import APPROVED,source_urls,TR,within_window
 from league_config import FIXTURE_CODES
 
 def valid_score(x):
@@ -22,7 +22,7 @@ def comparisons(report,now):
             code,day=g["league"],g["date"]
             if code not in APPROVED or g["errors"] or g["sources"]!=list(source_urls(code,day)):
                 continue
-            if not now.date()-timedelta(days=14)<=date.fromisoformat(day)<now.date(): continue
+            if not within_window(day,now): continue
             for r in g["rows"]:
                 if r["date"]!=day or not r["home"] or not r["away"] or r["home"]==r["away"]: continue
                 if r["status"] not in ("corroborated","archive_conflict","conflict"): continue

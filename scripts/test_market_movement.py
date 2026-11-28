@@ -33,7 +33,13 @@ class MovementTests(unittest.TestCase):
             "marketProbability": 0.70 + change
         }
 
+        for h in (first,latest):
+            p=h["marketProbability"]
+            h["prices"]={"Over":1/p,"Under":1/(1-p)}
+            h["marketProbability"]=round(p,6)
+            h["capturedAt"]=h["lastUpdate"]
         return {
+            "league":"soccer_epl",
             "eventId": "test-event",
             "home": "Team A",
             "away": "Team B",
@@ -50,7 +56,7 @@ class MovementTests(unittest.TestCase):
     def analyse(self, records):
         self.source.write_text(json.dumps({
             "records": {
-                str(i): r
+                ("|".join(r[k] for k in ("eventId","market","bookmaker")) if i==0 or not any(x["bookmaker"]==r["bookmaker"] for x in records[:i]) else "duplicate-"+str(i)): r
                 for i, r in enumerate(records)
             }
         }))
@@ -114,6 +120,13 @@ class MovementTests(unittest.TestCase):
         ])
         self.assertEqual(row["movementBookmakers"], 0)
 
+    def test_tampered_probability_and_duplicate_timestamp(self):
+        a,b,c=[self.record(x,.03) for x in ("a","b","c")]
+        a["history"][1]["marketProbability"]=.99
+        b["history"][1]["lastUpdate"]=b["history"][0]["lastUpdate"]
+        row=self.analyse([a,b,c])
+        self.assertEqual(row["movementBookmakers"],1)
+        self.assertEqual(row["direction"],"INSUFFICIENT_DATA")
     def test_duplicate_bookmakers(self):
         row = self.analyse([
             self.record("a", 0.03),
