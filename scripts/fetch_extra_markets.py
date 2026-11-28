@@ -3,6 +3,7 @@ import json
 import math
 from collections import Counter
 from league_config import ODDS_CODES
+from extra_market_budget_plan import extra_event_gate
 import os
 import urllib.request
 import urllib.parse
@@ -22,6 +23,9 @@ report = {
     "updatedAt": now.isoformat(),
     "startedAt": now.isoformat(),
     "integrityVersion": "6.84",
+    "quotaPolicyVersion": "6.89",
+    "quotaStatus": "not_checked",
+    "paidRequestsAttempted": 0,
     "source": "The Odds API",
     "region": "uk",
     "mode": "research_only",
@@ -120,19 +124,27 @@ def run():
     if (
         snapshot.get("source") != "The Odds API"
         or snapshot.get("region") != "uk"
+        or snapshot.get("market") != "totals"
+        or snapshot.get("configuredLeagues") != list(ODDS_CODES.values())
         or snapshot.get("errors") != []
     ):
         report["errors"].append("invalid_snapshot")
         return
 
-    request("sports/", {})
-
+    try:
+        workflow=Path(".github/workflows/daily.yml").read_text()
+    except OSError:
+        report["errors"].append("budget_policy_unavailable");return
     raw=snapshot.get("events",[])
     if not isinstance(raw,list):
         report["errors"].append("invalid_events");return
     ids=Counter(e.get("id") for e in raw if isinstance(e,dict) and isinstance(e.get("id"),str))
     candidates=sorted((e for e in raw if valid_identity(e) and ids[e["id"]]==1),key=lambda e:parse_time(e["kickoff"]))
 
+    if not candidates:
+        report["quotaStatus"]="no_eligible_events";return
+    # The metadata response supplies the current balance. Archive balance never authorizes spending.
+    request("sports/", {})
     checked = set()
 
     for event in candidates:
@@ -150,13 +162,17 @@ def run():
 
         credits = report["remainingCredits"]
 
-        if credits is None or credits < RESERVE + 2:
-            report["errors"].append("quota_guard")
+        gate=extra_event_gate(credits,datetime.now(timezone.utc),workflow,len(ODDS_CODES))
+        report["quotaGate"]=gate
+        if not gate["allowed"]:
+            report["quotaStatus"]="quota_guard"
             break
+        report["quotaStatus"]="reserve_preserved"
 
         checked.add(event_id)
 
         try:
+            report["paidRequestsAttempted"]+=1
             data = request(
                 f"sports/{league}/events/{event_id}/odds",
                 {
