@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-28T14:19:48+03:00",
+  "updatedAt": "2026-11-28T14:27:49+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -53186,5 +53186,5 @@
   "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 134 fikstür; 121 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
   "forecastTimingVersion": "6.82",
   "historyCutoffExclusive": "2026-11-28",
-  "generationCompletedAt": "2026-11-28T14:19:50.702563+03:00"
+  "generationCompletedAt": "2026-11-28T14:27:51.424176+03:00"
 }
