@@ -29,6 +29,44 @@ def identity(code,h,a,kickoff):
     h,a=norm(h),norm(a)
     if not h or not a or h==a:raise ValueError("teams")
     return code,h,a,instant(kickoff)
+def shadow_alias_candidates(targets,candidates,target_ids,ids,strict_rows):
+    """Measure unique candidates using existing CSV/ESPN aliases; never promote them.
+    API-Football aliases have not been independently verified.
+    """
+    from league_config import LEAGUES as CORE
+    from extra_historical_metric_coverage import LEAGUES as EXTRA
+    from extra_fixture_aliases import fixture_team_key
+    sports={entry[1]:entry[2] for entry in (*CORE,*EXTRA)}
+    def key(k):
+        code,h,a,t=k
+        if code not in sports:return None
+        h,a=(fixture_team_key(name,code,sports[code]) for name in (h,a))
+        if not h or not a or h==a:return None
+        return code,h,a,t
+    left={};right={}
+    for k in targets:
+        ck=key(k)
+        if ck is not None:left.setdefault(ck,[]).append(k)
+    for k in candidates:
+        ck=key(k)
+        if ck is not None:right.setdefault(ck,[]).append(k)
+    used_events={(r["league"],r["eventId"]) for r in strict_rows}
+    used_provider={r["providerId"] for r in strict_rows}
+    counts=Counter();with_referee=Counter()
+    for ck,keys in left.items():
+        other=right.get(ck,[])
+        if len(keys)!=1 or len(other)!=1:continue
+        k,p=keys[0],other[0]
+        events=targets[k];rows=candidates[p]
+        if k==p or len(events)!=1 or len(rows)!=1:continue
+        if target_ids[(k[0],events[0])]!=1 or ids[rows[0][0]]!=1:continue
+        if (k[0],events[0]) in used_events or rows[0][0] in used_provider:continue
+        counts[k[0]]+=1
+        if rows[0][1]:with_referee[k[0]]+=1
+    return dict(mode="candidate_only",verified=False,additionalCandidates=sum(counts.values()),
+                candidatesWithReferee=sum(with_referee.values()),
+                groups=[dict(league=c,candidates=n,withReferee=with_referee[c]) for c,n in sorted(counts.items())])
+
 def match(doc,groups):
     if doc.get("errors") not in ({},[]) or not isinstance(doc.get("response"),list) or doc.get("results")!=len(doc["response"]) or doc.get("paging")!={"current":1,"total":1}:
         raise ValueError("incomplete provider response")
@@ -90,6 +128,7 @@ def match(doc,groups):
                            status="source_observed" if ref else "missing_referee"))
     return dict(eligibleIdentities=len(targets),matched=len(result),
                 withReferee=sum(x["referee"] is not None for x in result),rows=result,
+                aliasShadow=shadow_alias_candidates(targets,candidates,target_ids,ids,result),
                 diagnostics=[dict(league=code,counts=dict(c),providerScheduledRows=scheduled_seen[code],
                                   metadataRejectedRows=metadata_rejected[code],publicSourceUnavailable=code in unavailable)
                              for code,c in sorted(diagnostics.items())],
