@@ -1787,5 +1787,26 @@
       "historyThrough": "2026-11-23",
       "sameSourceDataEstablished": false
     }
+  },
+  "[\"2026-12-05\", \"Türkiye Süper Lig\", \"amed – alanyaspor\"]": {
+    "date": "2026-12-05",
+    "league": "Türkiye Süper Lig",
+    "match": "amed – alanyaspor",
+    "recordedAt": "2026-11-28T18:32:38.162830+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 79.9,
+      "2.5 Üst": 57.4,
+      "KG Var": 48.1
+    },
+    "result": null,
+    "forecastTiming": {
+      "version": "6.82",
+      "generationStartedAt": "2026-11-28T18:32:05+03:00",
+      "generationCompletedAt": "2026-11-28T18:32:08.993098+03:00",
+      "historyCutoffExclusive": "2026-11-28",
+      "historyThrough": "2026-11-23",
+      "sameSourceDataEstablished": false
+    }
   }
 }

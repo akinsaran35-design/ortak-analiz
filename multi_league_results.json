@@ -1,6 +1,6 @@
 {
   "version": "4.69",
-  "updatedAt": "2026-11-28T14:53:34.703981+03:00",
+  "updatedAt": "2026-11-28T18:32:30.867466+03:00",
   "mode": "research_only",
   "approvedLeagues": [
     "de.1",
@@ -216,8 +216,8 @@
     }
   ],
   "archiveCoverage": {
-    "shared": 131,
-    "prospectiveOnly": 87
+    "shared": 133,
+    "prospectiveOnly": 88
   },
   "automaticVerifiedCount": 4
 }
