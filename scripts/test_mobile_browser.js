@@ -27,7 +27,7 @@ const {chromium}=require("playwright");
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
-  await page.getByText("FOOTBALL INTELLIGENCE · UI 661",{exact:true}).waitFor();
+  await page.getByText("FOOTBALL INTELLIGENCE · UI 664",{exact:true}).waitFor();
   for(const width of [320,360,393,412,540,690,980]){
     await page.setViewportSize({width,height:850});
     const sizes=await page.evaluate(()=>({body:document.body.getBoundingClientRect().width,nav:document.querySelector(".bottom-nav").getBoundingClientRect().width,main:document.querySelector("main").getBoundingClientRect().width,viewport:innerWidth,scroll:document.documentElement.scrollWidth}));
@@ -61,6 +61,9 @@ const {chromium}=require("playwright");
   await page.setViewportSize({width:393,height:852});
   await page.waitForFunction(()=>document.querySelectorAll(".detail-hero .team-crest.has-logo img").length===2);
   await page.screenshot({path:"mobile-reference-detail.png",fullPage:true});
+  await page.getByRole("button",{name:"Oranlar",exact:true}).click();
+  await page.getByRole("heading",{name:"2.5 Üst · Oran geçmişi",exact:true}).waitFor();
+  await page.getByRole("heading",{name:"1.5 Üst · Oran geçmişi",exact:true}).waitFor();
   await page.getByRole("button",{name:"İlk yarı",exact:true}).click();
   await page.getByText("İlk yarı · tarihsel gol ortalamaları",{exact:true}).waitFor();
   assert.equal(await page.locator("#detail-content .history-compare-row").count(),2);
