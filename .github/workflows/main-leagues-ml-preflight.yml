@@ -1,0 +1,29 @@
+name: V6.66 main leagues ML input preflight
+on:
+  pull_request:
+    paths:
+      - 'scripts/main_leagues_ml_preflight.py'
+      - 'scripts/test_main_leagues_ml_preflight.py'
+      - 'scripts/extra_ml_preflight.py'
+      - '.github/workflows/main-leagues-ml-preflight.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_extra_ml_preflight.py
+      - run: python scripts/test_main_leagues_ml_preflight.py
+      - run: python scripts/main_leagues_ml_preflight.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: main-leagues-ml-preflight
+          path: main_leagues_ml_preflight.json
+          if-no-files-found: error
+          retention-days: 90

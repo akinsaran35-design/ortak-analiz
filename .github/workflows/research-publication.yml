@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'scripts/football_context_manifest.py'
+      - 'scripts/replay_research_publication.py'
       - 'scripts/test_football_context_manifest.py'
       - '.github/workflows/daily.yml'
       - '.github/workflows/research-publication.yml'
@@ -22,12 +23,8 @@ jobs:
       - run: python scripts/test_football_context_research.py
       - run: python scripts/test_historical_metric_coverage.py
       - run: |
-          python scripts/h2h_history_research.py --apply
-          python scripts/football_context_research.py
-          python scripts/historical_metric_coverage.py
           python scripts/test_chronological_statistics_research.py
-          python scripts/chronological_statistics_research.py
-          python scripts/football_context_manifest.py
+          python scripts/replay_research_publication.py
       - uses: actions/upload-artifact@v4
         with:
           name: football-context-publication

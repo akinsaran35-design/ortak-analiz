@@ -6,6 +6,8 @@ from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
 from urllib.request import urlopen
 from urllib.error import URLError
+from concurrent.futures import ThreadPoolExecutor
+from collections import Counter
 
 SPORT="soccer_turkey_super_league"
 TR=timezone(timedelta(hours=3))
@@ -58,7 +60,7 @@ def fixtures(snapshot,now):
         stamp=datetime.fromisoformat(snapshot["updatedAt"].replace("Z","+00:00"))
         if not timedelta(0)<=now-stamp<=timedelta(minutes=30): return []
         if snapshot.get("source")!="The Odds API" or snapshot.get("region")!="uk": return []
-        if SPORT not in snapshot.get("queriedLeagues",[]): return []
+        if snapshot.get("errors") or SPORT not in snapshot.get("queriedLeagues",[]): return []
     except (KeyError,ValueError,TypeError,AttributeError): return []
     rows={}
     for event in snapshot.get("events",[]):
@@ -73,6 +75,45 @@ def fixtures(snapshot,now):
         except (KeyError,ValueError,TypeError,AttributeError): continue
     return list(rows.values())
 
+def espn_fixtures(payload,day,now):
+    """Scheduled future Turkey fixtures only; never substitute odds or scores."""
+    if not isinstance(payload,dict) or not isinstance(payload.get("events"),list):
+        raise ValueError("invalid ESPN fixtures")
+    rows=[]
+    for e in payload["events"]:
+        try:
+            comp,=e["competitions"]
+            status=comp.get("status",e.get("status",{}))["type"]
+            if status.get("name")!="STATUS_SCHEDULED" or status.get("completed") is not False:continue
+            kickoff=datetime.fromisoformat((comp.get("date") or e["date"]).replace("Z","+00:00"))
+            if kickoff.tzinfo is None or kickoff<=now or kickoff.astimezone(TR).date()!=day:continue
+            competitors=comp["competitors"]
+            teams={c["homeAway"]:c["team"]["displayName"] for c in competitors}
+            if len(competitors)!=2 or set(teams)!={"home","away"}:continue
+            h,a=team_key(teams["home"]),team_key(teams["away"])
+            eid=str(e["id"])
+            if not h or not a or h==a or not eid.isascii() or not eid.isdigit():continue
+            rows.append((eid,dict(date=day.isoformat(),team1=h,team2=a,fixtureSource="ESPN",fixtureKickoff=kickoff.isoformat())))
+        except (KeyError,ValueError,TypeError,AttributeError,OverflowError):continue
+    return rows
+
+def read_espn(day):
+    url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates={day:%Y%m%d}"
+    with urlopen(url,timeout=8) as response:
+        return json.loads(response.read(2_000_000))
+
+def fallback_fixtures(now,reader=None):
+    reader=reader or read_espn
+    days=[now.astimezone(TR).date()+timedelta(days=i) for i in range(8)]
+    def load(day):
+        try:return espn_fixtures(reader(day),day,now)
+        except (OSError,ValueError,TypeError,KeyError,AttributeError):return []
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        rows=[r for batch in pool.map(load,days) for r in batch]
+    ids=Counter(eid for eid,_ in rows)
+    keys=Counter((r["date"],r["team1"],r["team2"]) for _,r in rows)
+    return [r for eid,r in rows if ids[eid]==1 and keys[(r["date"],r["team1"],r["team2"])]==1]
+
 def fetch(season, include_fixtures=True):
     if not re.fullmatch(r"\d{4}-\d{2}",season): raise ValueError("invalid season")
     y=int(season[:4])
@@ -86,7 +127,12 @@ def fetch(season, include_fixtures=True):
         try: snapshot=json.loads((ROOT/"odds.json").read_text())
         except (OSError,ValueError): snapshot={}
         known={(r["date"],r["team1"],r["team2"]) for r in rows}
-        rows.extend(r for r in fixtures(snapshot,now) if (r["date"],r["team1"],r["team2"]) not in known)
+        scheduled=fixtures(snapshot,now)
+        if scheduled:
+            scheduled=[dict(r,fixtureSource="The Odds API") for r in scheduled]
+        else:
+            scheduled=fallback_fixtures(now)
+        rows.extend(r for r in scheduled if (r["date"],r["team1"],r["team2"]) not in known)
     return rows
 
 if __name__=="__main__":

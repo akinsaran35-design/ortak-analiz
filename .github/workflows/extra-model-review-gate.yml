@@ -1,0 +1,32 @@
+name: V6.57 prospective model review gate
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_model_review_gate.py'
+      - 'scripts/test_extra_model_review_gate.py'
+      - '.github/workflows/extra-model-review-gate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'extra_league_prospective_ledger.json'
+      - 'scripts/extra_model_review_gate.py'
+      - 'scripts/test_extra_model_review_gate.py'
+      - '.github/workflows/extra-model-review-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_extra_model_review_gate.py
+      - run: python scripts/extra_model_review_gate.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: extra-model-review-gate
+          path: extra_model_review_gate.json
+          if-no-files-found: ignore
+          retention-days: 90

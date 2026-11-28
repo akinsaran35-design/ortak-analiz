@@ -1,8 +1,8 @@
 {
   "version": "5.31",
   "mode": "historical_metric_coverage_only",
-  "updatedAt": "2026-11-27T22:54:16.625496+03:00",
-  "cutoffExclusive": "2026-11-27",
+  "updatedAt": "2026-11-28T20:44:18.136735+03:00",
+  "cutoffExclusive": "2026-11-28",
   "source": "football-data.co.uk",
   "predictionsEnabled": false,
   "modelCalibrated": false,

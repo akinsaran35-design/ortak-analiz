@@ -33,6 +33,7 @@ def team_name(value):
 
 from fixture_schema import matches_in
 from football_form import form
+import football_history_cache as history_cache
 
 def final_score(match):
     score = match.get("score")
@@ -106,7 +107,7 @@ report = {
     "date": today.isoformat(), "decision": "PAS", "picks": [],
     "version": "1.6", "updatedAt": now.isoformat(timespec="seconds"),
     "source": "https://github.com/openfootball/football.json",
-    "additionalSources": {"tr.1": {"results": "https://football-data.co.uk/turkeym.php", "fixtures": "The Odds API UK snapshot; incomplete coverage possible"}},
+    "additionalSources": {"tr.1": {"results": "https://football-data.co.uk/turkeym.php", "fixtures": "The Odds API UK snapshot or independent ESPN scheduled fixtures; incomplete coverage possible"}},
     "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
     "leaguesChecked": len(LEAGUES), "leaguesLoaded": 0,
     "fixturesToday": 0, "fixturesNext7Days": 0,
@@ -116,23 +117,29 @@ report = {
                     "modelCalibrated": False, "bettingRecommendation": False},
 }
 
+history_archive=history_cache.read()
 for league, code in LEAGUES.items():
     diagnostic = {"league": league, "status": "unavailable", "today": 0,
                   "next7": 0, "completedMatches": 0, "candidates": 0,
                   "excluded": {"alreadyScored": 0, "insufficientHistory": 0},
-                  "seasonsLoaded": [], "seasonErrors": {}}
+                  "seasonsLoaded": [], "seasonErrors": {}, "cachedHistoricalSeasons": {}}
     all_matches = []
     for season in seasons:
         try:
             matches = fetch(season, code)
             all_matches.extend(matches)
             diagnostic["seasonsLoaded"].append(season)
+            history_cache.remember(history_archive,code,season,matches,now)
         except Exception as exc:
             diagnostic["seasonErrors"][season] = f"{type(exc).__name__}: {str(exc)[:90]}"
-    if not diagnostic["seasonsLoaded"]:
+            cached,stamp=history_cache.recover(history_archive,code,season,now)
+            if cached:
+                all_matches.extend(cached)
+                diagnostic["cachedHistoricalSeasons"][season]=stamp
+    if not diagnostic["seasonsLoaded"] and not diagnostic["cachedHistoricalSeasons"]:
         report["leagueDiagnostics"].append(diagnostic)
         continue
-    report["leaguesLoaded"] += 1
+    if diagnostic["seasonsLoaded"]:report["leaguesLoaded"] += 1
     diagnostic["status"] = "ok" if len(diagnostic["seasonsLoaded"]) == len(seasons) else "partial"
     history = []
     form_history = []
@@ -164,9 +171,12 @@ for league, code in LEAGUES.items():
                 diagnostic["today"] += 1
                 report["fixturesToday"] += 1
     if code == "tr.1":
-        diagnostic["fixtureScope"] = "fresh_odds_events_only"
+        sources=sorted({m.get("fixtureSource") for m in all_matches if isinstance(m,dict) and m.get("fixtureSource") in ("ESPN","The Odds API")})
+        diagnostic["fixtureSources"]=sources
+        diagnostic["fixtureScope"]="independent_espn_fallback" if "ESPN" in sources else "fresh_odds_events_only" if sources else "unavailable"
         diagnostic["status"] = "partial"
     diagnostic["completedMatches"] = len(history)
+    history_through = max((r[0] for r in history), default=None)
     for d, home, away, score in fixtures:
         if score is not None:
             diagnostic["excluded"]["alreadyScored"] += 1
@@ -188,10 +198,12 @@ for league, code in LEAGUES.items():
         }
         report["candidates"].append({
             "date": d.isoformat(), "league": league, "match": f"{home} – {away}",
-            "markets": markets, "sample": {"home": home_stats["n"], "away": away_stats["n"]},
+            "markets": markets, "historyThrough": history_through.isoformat() if history_through else None, "sample": {"home": home_stats["n"], "away": away_stats["n"]},
             "sampleMode": {"home": home_stats["mode"], "away": away_stats["mode"]},
             "expectedGoals": {"home": round(home_expected, 2), "away": round(away_expected, 2)},
-            "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+            "historyCacheUsed": bool(diagnostic["cachedHistoricalSeasons"]),
+            "historyCachedSeasons": dict(diagnostic["cachedHistoricalSeasons"]),
+            "status": "Kalibre edilmemiş istatistiksel aday; geçmiş veri yedeği kullanıldı; bahis önerisi değil" if diagnostic["cachedHistoricalSeasons"] else "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
             "odds": None, "edge": None,
         })
         diagnostic["candidates"] += 1
@@ -214,6 +226,10 @@ report["reason"] = (
     "Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından "
     "otomatik bahis seçimi yapılmadı."
 )
+report["forecastTimingVersion"] = "6.82"
+report["historyCutoffExclusive"] = today.isoformat()
+report["generationCompletedAt"] = datetime.now(TR).isoformat()
+history_cache.write(history_archive,now,LEAGUES.values(),seasons)
 Path("daily.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(report["reason"])
 for diagnostic in report["leagueDiagnostics"]:

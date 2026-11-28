@@ -1,0 +1,16 @@
+name: V6.62 publication retry safeguards
+on:
+  pull_request:
+    paths:
+      - 'scripts/publication_retry.py'
+      - 'scripts/test_publication_retry.py'
+      - '.github/workflows/daily.yml'
+      - '.github/workflows/publication-retry-tests.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_publication_retry.py

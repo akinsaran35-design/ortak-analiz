@@ -27,7 +27,11 @@ class TrackingTest(unittest.TestCase):
             archive=root/"prediction_archive.json"
             archive.write_text(json.dumps({k:old}),encoding="utf-8")
             daily=root/"daily.json"
-            daily.write_text(json.dumps({"version":"test","candidates":[candidate(future),candidate(today.isoformat())]}),encoding="utf-8")
+            stamp=datetime.now(timezone(timedelta(hours=3)))-timedelta(seconds=1)
+            timing=dict(forecastTimingVersion="6.82",updatedAt=stamp.isoformat(),generationCompletedAt=stamp.isoformat(),historyCutoffExclusive=today.isoformat())
+            # The synthetic input uses the same date cutoff as the actual job.
+            future_candidate=dict(candidate(future),historyThrough=past)
+            daily.write_text(json.dumps(dict(timing,version="test",candidates=[future_candidate,candidate(today.isoformat())])),encoding="utf-8")
             payload=json.dumps([{"date":past,"team1":"C","team2":"D","score":[1,0]},{"date":past,"team1":"A","team2":"B","score":{"ft":[2,1]}}]).encode()
             with patch("urllib.request.urlopen",side_effect=lambda *a,**kw:BytesIO(payload)):
                 runpy.run_path(str(script))
@@ -37,6 +41,13 @@ class TrackingTest(unittest.TestCase):
                 self.assertEqual(report["overall"]["settled"],0)
                 self.assertEqual(report["overall"]["pending"],2)
                 self.assertIsNone(json.loads(archive.read_text())[k]["result"])
+                initial=json.loads(archive.read_text())
+                self.assertNotIn("forecastTiming",initial[k])
+                new=next(r for r in initial.values() if r["date"]==future)
+                if stamp.date()==today:
+                    self.assertEqual(new["forecastTiming"]["historyCutoffExclusive"],today.isoformat())
+                    self.assertEqual(new["forecastTiming"]["historyThrough"],past)
+                    self.assertFalse(new["forecastTiming"]["sameSourceDataEstablished"])
                 (root/"verified_results.json").write_text(json.dumps({"records":[{"date":past,"league":"en.2","home":"A","away":"B","result":[2,1],"sources":["https://example.org/a","https://example.net/b"]}]}),encoding="utf-8")
                 runpy.run_path(str(script))
                 report=json.loads((root/"performance.json").read_text())
@@ -52,6 +63,7 @@ class TrackingTest(unittest.TestCase):
                 self.assertEqual(len(records),2)
                 self.assertEqual(records[k]["result"],[2,1])
                 self.assertEqual(next(r for r in records.values() if r["date"]==future)["markets"]["1.5 Üst"],80)
+                self.assertEqual(next(r for r in records.values() if r["date"]==future).get("forecastTiming"),new.get("forecastTiming"))
 
 if __name__=="__main__":
     unittest.main()

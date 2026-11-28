@@ -1,6 +1,6 @@
 {
   "version": "4.69",
-  "updatedAt": "2026-11-27T22:54:01.078055+03:00",
+  "updatedAt": "2026-11-28T20:44:01.588857+03:00",
   "mode": "research_only",
   "approvedLeagues": [
     "de.1",
@@ -15,6 +15,28 @@
   ],
   "excludedLeagues": [],
   "groups": [
+    {
+      "league": "de.1",
+      "date": "2026-11-27",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/D1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261127"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-27",
+          "home": "SV Werder Bremen",
+          "away": "Borussia Mönchengladbach",
+          "csv": null,
+          "espn": [
+            3,
+            3
+          ],
+          "status": "incomplete"
+        }
+      ]
+    },
     {
       "league": "en.2",
       "date": "2026-11-25",
@@ -81,7 +103,122 @@
           "status": "corroborated"
         }
       ]
+    },
+    {
+      "league": "en.2",
+      "date": "2026-11-27",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/E1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard?dates=20261127"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-27",
+          "home": "Southampton FC",
+          "away": "Middlesbrough FC",
+          "csv": null,
+          "espn": [
+            2,
+            0
+          ],
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "fr.1",
+      "date": "2026-11-27",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/F1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261127"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-27",
+          "home": "Stade Brestois 29",
+          "away": "Paris FC",
+          "csv": null,
+          "espn": [
+            1,
+            0
+          ],
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "nl.1",
+      "date": "2026-11-27",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/N1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/scoreboard?dates=20261127"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-27",
+          "home": "FC Groningen",
+          "away": "Willem II Tilburg",
+          "csv": null,
+          "espn": [
+            1,
+            1
+          ],
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "pt.1",
+      "date": "2026-11-27",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/P1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/scoreboard?dates=20261127"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-27",
+          "home": "CS Marítimo",
+          "away": "CD Nacional",
+          "csv": null,
+          "espn": [
+            1,
+            2
+          ],
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "tr.1",
+      "date": "2026-11-27",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/T1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261127"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-27",
+          "home": "rizespor",
+          "away": "kasimpasa",
+          "csv": null,
+          "espn": [
+            3,
+            2
+          ],
+          "status": "incomplete"
+        }
+      ]
     }
   ],
+  "retryDays": 30,
+  "archiveCoverage": {
+    "shared": 134,
+    "prospectiveOnly": 88
+  },
   "automaticVerifiedCount": 4
 }

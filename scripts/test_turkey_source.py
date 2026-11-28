@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone, timedelta
-from turkey_source import parse_results, fixtures, team_key, SPORT
+from turkey_source import parse_results, fixtures, team_key, SPORT, fallback_fixtures, espn_fixtures
 from match_odds import canonical
 
 class TurkeySourceTest(unittest.TestCase):
@@ -27,6 +27,21 @@ class TurkeySourceTest(unittest.TestCase):
         self.assertEqual(fixtures(snapshot,now),[dict(date="2026-11-29",team1="galatasaray",team2="fenerbahce")])
         self.assertEqual(fixtures(snapshot,now+timedelta(minutes=31)),[])
         self.assertEqual(fixtures(dict(snapshot,queriedLeagues=[]),now),[])
+    def test_independent_fixtures_and_outage(self):
+        now=datetime(2026,11,26,13,tzinfo=timezone.utc)
+        day=now.astimezone(timezone(timedelta(hours=3))).date()
+        e=dict(id="123",date="2026-11-26T17:00:00Z",competitions=[dict(date="2026-11-26T17:00:00Z",status={"type":{"name":"STATUS_SCHEDULED","completed":False}},competitors=[{"homeAway":"home","team":{"displayName":"Galatasaray"}},{"homeAway":"away","team":{"displayName":"Fenerbahçe"}}])])
+        payload={"events":[e]}
+        rows=fallback_fixtures(now,lambda d:payload if d==day else {"events":[]})
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]["fixtureSource"],"ESPN")
+        self.assertNotIn("score",rows[0])
+        self.assertEqual(fallback_fixtures(now,lambda d:{"events":[e,e]} if d==day else {"events":[]}),[])
+        self.assertEqual(espn_fixtures(payload,day,now+timedelta(hours=5)),[])
+        def fail(d):raise OSError("offline")
+        self.assertEqual(fallback_fixtures(now,fail),[])
+        e["competitions"][0]["status"]["type"]["name"]="STATUS_POSTPONED"
+        self.assertEqual(espn_fixtures(payload,day,now),[])
     def test_conflicting_scores(self):
         data="Date,HomeTeam,AwayTeam,FTHG,FTAG\n15/08/2026,A,B,1,0\n15/08/2026,A,B,2,0\n16/08/2026,C,D,0,0\n"
         self.assertEqual(len(parse_results(data.encode(),"2026-27")),1)

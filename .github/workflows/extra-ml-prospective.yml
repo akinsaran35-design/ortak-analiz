@@ -1,0 +1,121 @@
+name: V6.59 frozen ML prospective research
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_ml_prospective.py'
+      - 'scripts/extra_ml_settlement.py'
+      - 'scripts/check_frozen_cohort.py'
+      - 'scripts/test_check_frozen_cohort.py'
+      - 'scripts/extra_ml_review_gate.py'
+      - 'scripts/test_extra_ml_review_gate.py'
+      - 'scripts/test_extra_ml_settlement.py'
+      - 'scripts/test_extra_ml_prospective.py'
+      - '.github/workflows/extra-ml-prospective.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extra_ml_prospective.py'
+      - 'scripts/extra_ml_settlement.py'
+      - 'scripts/extra_ml_review_gate.py'
+      - 'scripts/test_extra_ml_review_gate.py'
+      - 'scripts/test_extra_ml_settlement.py'
+      - 'scripts/test_extra_ml_prospective.py'
+      - '.github/workflows/extra-ml-prospective.yml'
+  schedule:
+    - cron: '50 5,15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: extra-ml-prospective-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'catboost==1.2.8' 'numpy==2.2.6' 'scipy==1.15.3'
+      - run: python scripts/test_check_frozen_cohort.py
+      - run: python scripts/test_extra_ml_prospective.py
+      - run: python scripts/test_extra_ml_settlement.py
+      - run: python scripts/test_extra_ml_review_gate.py
+      - if: github.event_name == 'pull_request'
+        run: python scripts/extra_ml_prospective.py
+      - if: github.event_name == 'pull_request'
+        run: python scripts/extra_ml_settlement.py
+      - if: github.event_name == 'pull_request'
+        run: python scripts/extra_ml_review_gate.py
+      - if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ml-prospective-preview-report
+          path: |
+            extra_ml_prospective_report.json
+            extra_ml_settlement_report.json
+            extra_ml_review_gate.json
+          if-no-files-found: error
+          retention-days: 30
+  capture:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'catboost==1.2.8' 'numpy==2.2.6' 'scipy==1.15.3'
+      - name: Capture new forecasts
+        id: forecasts
+        continue-on-error: true
+        run: python scripts/extra_ml_prospective.py
+      - name: Validate existing frozen cohort before independent settlement
+        id: cohort
+        run: python scripts/check_frozen_cohort.py extra
+      - name: Verify existing forecast outcomes
+        id: settlement
+        run: python scripts/extra_ml_settlement.py
+      - name: Preserve independent settlement evidence
+        if: steps.settlement.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- extra_ml_frozen.cbm extra_ml_frozen_manifest.json extra_ml_prospective_ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record verified extra ML settlement evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - run: python scripts/extra_ml_review_gate.py
+      - name: Preserve frozen model and research ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- extra_ml_frozen.cbm extra_ml_frozen_manifest.json extra_ml_prospective_ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record V6.59 frozen ML prospective research evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ml-prospective-report
+          path: |
+            extra_ml_prospective_report.json
+            extra_ml_settlement_report.json
+            extra_ml_review_gate.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Surface forecast capture failure after preserving verified evidence
+        if: always() && steps.forecasts.outcome == 'failure'
+        run: exit 1
