@@ -1,14 +1,15 @@
 {
   "version": "4.63",
-  "updatedAt": "2026-11-27T23:45:21.025141+03:00",
+  "updatedAt": "2026-11-28T11:17:07.323150+03:00",
   "mode": "research_only",
   "decision": "PAS",
-  "records": 4,
+  "records": 5,
   "corroborated": 4,
   "errors": [],
   "sources": [
     "https://football-data.co.uk/mmz4281/2627/E1.csv",
-    "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard?dates=20261125"
+    "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard?dates=20261125",
+    "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard?dates=20261127"
   ],
   "rows": [
     {
@@ -82,6 +83,18 @@
         1
       ],
       "status": "corroborated"
+    },
+    {
+      "date": "2026-11-27",
+      "home": "Southampton FC",
+      "away": "Middlesbrough FC",
+      "csv": null,
+      "espn": [
+        2,
+        0
+      ],
+      "archived": null,
+      "status": "incomplete"
     }
   ],
   "automaticVerifiedCount": 4

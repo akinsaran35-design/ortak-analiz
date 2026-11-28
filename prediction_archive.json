@@ -1243,5 +1243,486 @@
       "KG Var": 63.5
     },
     "result": null
+  },
+  "[\"2026-12-05\", \"Almanya Bundesliga\", \"SC Freiburg – TSG 1899 Hoffenheim\"]": {
+    "date": "2026-12-05",
+    "league": "Almanya Bundesliga",
+    "match": "SC Freiburg – TSG 1899 Hoffenheim",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 90.5,
+      "2.5 Üst": 75.4,
+      "KG Var": 69.5
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Hollanda Eredivisie\", \"Fortuna Sittard – PEC Zwolle\"]": {
+    "date": "2026-12-05",
+    "league": "Hollanda Eredivisie",
+    "match": "Fortuna Sittard – PEC Zwolle",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 89.7,
+      "2.5 Üst": 73.9,
+      "KG Var": 72.2
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Hollanda Eredivisie\", \"AZ – PSV\"]": {
+    "date": "2026-12-05",
+    "league": "Hollanda Eredivisie",
+    "match": "AZ – PSV",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 89.3,
+      "2.5 Üst": 73.1,
+      "KG Var": 72.0
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Newcastle United FC – Sunderland AFC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Newcastle United FC – Sunderland AFC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 87.9,
+      "2.5 Üst": 70.6,
+      "KG Var": 70.1
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Hollanda Eredivisie\", \"Willem II Tilburg – Feyenoord Rotterdam\"]": {
+    "date": "2026-12-05",
+    "league": "Hollanda Eredivisie",
+    "match": "Willem II Tilburg – Feyenoord Rotterdam",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 87.5,
+      "2.5 Üst": 69.9,
+      "KG Var": 56.3
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Almanya Bundesliga\", \"Bayer 04 Leverkusen – Borussia Mönchengladbach\"]": {
+    "date": "2026-12-05",
+    "league": "Almanya Bundesliga",
+    "match": "Bayer 04 Leverkusen – Borussia Mönchengladbach",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 87.4,
+      "2.5 Üst": 69.7,
+      "KG Var": 53.6
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"Paris FC – Le Mans FC\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "Paris FC – Le Mans FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 86.4,
+      "2.5 Üst": 67.9,
+      "KG Var": 67.6
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Almanya Bundesliga\", \"FC Augsburg – 1. FC Köln\"]": {
+    "date": "2026-12-05",
+    "league": "Almanya Bundesliga",
+    "match": "FC Augsburg – 1. FC Köln",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.9,
+      "2.5 Üst": 67.0,
+      "KG Var": 63.4
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Almanya Bundesliga\", \"RB Leipzig – 1. FSV Mainz 05\"]": {
+    "date": "2026-12-05",
+    "league": "Almanya Bundesliga",
+    "match": "RB Leipzig – 1. FSV Mainz 05",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.3,
+      "2.5 Üst": 66.0,
+      "KG Var": 66.1
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Wolverhampton Wanderers FC – Southampton FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Wolverhampton Wanderers FC – Southampton FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 85.2,
+      "2.5 Üst": 65.7,
+      "KG Var": 66.6
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Bolton Wanderers FC – Blackburn Rovers FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Bolton Wanderers FC – Blackburn Rovers FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 84.2,
+      "2.5 Üst": 64.2,
+      "KG Var": 65.3
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Almanya Bundesliga\", \"1. FC Union Berlin – Hamburger SV\"]": {
+    "date": "2026-12-05",
+    "league": "Almanya Bundesliga",
+    "match": "1. FC Union Berlin – Hamburger SV",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 84.1,
+      "2.5 Üst": 64.1,
+      "KG Var": 64.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"Olympique de Marseille – OGC Nice\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "Olympique de Marseille – OGC Nice",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.9,
+      "2.5 Üst": 62.0,
+      "KG Var": 60.4
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Hollanda Eredivisie\", \"Sparta Rotterdam – NEC\"]": {
+    "date": "2026-12-05",
+    "league": "Hollanda Eredivisie",
+    "match": "Sparta Rotterdam – NEC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.9,
+      "2.5 Üst": 62.0,
+      "KG Var": 61.9
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Chelsea FC – Liverpool FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Chelsea FC – Liverpool FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.2,
+      "2.5 Üst": 61.0,
+      "KG Var": 62.6
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"RC Strasbourg Alsace – FC Lorient\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "RC Strasbourg Alsace – FC Lorient",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.2,
+      "2.5 Üst": 61.0,
+      "KG Var": 62.9
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Stoke City FC – Queens Park Rangers FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Stoke City FC – Queens Park Rangers FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 82.2,
+      "2.5 Üst": 61.0,
+      "KG Var": 61.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Aston Villa FC – Crystal Palace FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Aston Villa FC – Crystal Palace FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 81.5,
+      "2.5 Üst": 59.9,
+      "KG Var": 61.6
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Leeds United FC – Ipswich Town FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Leeds United FC – Ipswich Town FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 81.5,
+      "2.5 Üst": 59.9,
+      "KG Var": 59.4
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Norwich City FC – Wrexham AFC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Norwich City FC – Wrexham AFC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 81.5,
+      "2.5 Üst": 59.9,
+      "KG Var": 60.7
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Manchester United FC – Coventry City FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Manchester United FC – Coventry City FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 80.1,
+      "2.5 Üst": 57.7,
+      "KG Var": 49.0
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Middlesbrough FC – Derby County FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Middlesbrough FC – Derby County FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 80.1,
+      "2.5 Üst": 57.7,
+      "KG Var": 59.0
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"Racing Club de Lens – Le Havre AC\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "Racing Club de Lens – Le Havre AC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 80.1,
+      "2.5 Üst": 57.7,
+      "KG Var": 56.7
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Watford FC – Millwall FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Watford FC – Millwall FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 80.1,
+      "2.5 Üst": 57.7,
+      "KG Var": 59.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Almanya Bundesliga\", \"Eintracht Frankfurt – SV Werder Bremen\"]": {
+    "date": "2026-12-05",
+    "league": "Almanya Bundesliga",
+    "match": "Eintracht Frankfurt – SV Werder Bremen",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 79.3,
+      "2.5 Üst": 56.6,
+      "KG Var": 59.3
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"Lille OSC – AJ Auxerre\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "Lille OSC – AJ Auxerre",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 79.3,
+      "2.5 Üst": 56.6,
+      "KG Var": 59.3
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Tottenham Hotspur FC – Arsenal FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Tottenham Hotspur FC – Arsenal FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 78.5,
+      "2.5 Üst": 55.4,
+      "KG Var": 54.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"Toulouse FC – Paris Saint-Germain FC\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "Toulouse FC – Paris Saint-Germain FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 78.5,
+      "2.5 Üst": 55.4,
+      "KG Var": 57.1
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"AS Monaco FC – Angers SCO\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "AS Monaco FC – Angers SCO",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 77.7,
+      "2.5 Üst": 54.2,
+      "KG Var": 52.2
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Brentford FC – Manchester City FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Brentford FC – Manchester City FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 77.7,
+      "2.5 Üst": 54.2,
+      "KG Var": 57.3
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"Fransa Ligue 1\", \"Stade Rennais FC 1901 – Stade Brestois 29\"]": {
+    "date": "2026-12-05",
+    "league": "Fransa Ligue 1",
+    "match": "Stade Rennais FC 1901 – Stade Brestois 29",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 75.1,
+      "2.5 Üst": 50.6,
+      "KG Var": 51.7
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Everton FC – Fulham FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Everton FC – Fulham FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 74.2,
+      "2.5 Üst": 49.4,
+      "KG Var": 51.9
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Bristol City FC – Swansea City AFC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Bristol City FC – Swansea City AFC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 73.3,
+      "2.5 Üst": 48.2,
+      "KG Var": 51.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Premier Lig\", \"Nottingham Forest FC – Brighton & Hove Albion FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Premier Lig",
+    "match": "Nottingham Forest FC – Brighton & Hove Albion FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 72.3,
+      "2.5 Üst": 46.9,
+      "KG Var": 51.1
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Cardiff City FC – Lincoln City FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Cardiff City FC – Lincoln City FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 70.2,
+      "2.5 Üst": 44.2,
+      "KG Var": 49.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Portsmouth FC – West Bromwich Albion FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Portsmouth FC – West Bromwich Albion FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 69.2,
+      "2.5 Üst": 43.0,
+      "KG Var": 48.8
+    },
+    "result": null
+  },
+  "[\"2026-12-05\", \"İngiltere Championship\", \"Charlton Athletic FC – Birmingham City FC\"]": {
+    "date": "2026-12-05",
+    "league": "İngiltere Championship",
+    "match": "Charlton Athletic FC – Birmingham City FC",
+    "recordedAt": "2026-11-28T11:17:16.502435+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 68.1,
+      "2.5 Üst": 41.7,
+      "KG Var": 47.8
+    },
+    "result": null
   }
 }

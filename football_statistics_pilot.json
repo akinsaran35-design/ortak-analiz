@@ -1,8 +1,8 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-27T23:45:33.805092+03:00",
-  "dailyUpdatedAt": "2026-11-27T23:44:56+03:00",
-  "cutoffExclusive": "2026-11-27",
+  "updatedAt": "2026-11-28T11:17:24.529640+03:00",
+  "dailyUpdatedAt": "2026-11-28T11:16:39+03:00",
+  "cutoffExclusive": "2026-11-28",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
   "groups": [
@@ -1521,6 +1521,756 @@
               }
             }
           }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "AFC Bournemouth – Hull City AFC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 3.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.6,
+                "againstAverage": 10.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.2,
+                "againstAverage": 2.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 6.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.7,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.6,
+                "againstAverage": 14.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 5.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.5
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Aston Villa FC – Crystal Palace FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 4.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 3.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.2,
+                "againstAverage": 15.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.0,
+                "againstAverage": 4.7
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.3
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 7.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.2,
+                "againstAverage": 18.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 6.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.3
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Brentford FC – Manchester City FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 5.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.3,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.6,
+                "againstAverage": 15.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.5,
+                "againstAverage": 4.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.5
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 4.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 2.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.2,
+                "againstAverage": 10.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 3.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.8
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Chelsea FC – Liverpool FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 4.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 3.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.2,
+                "againstAverage": 13.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 5.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 4.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.5,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.3
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.1,
+                "againstAverage": 12.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 3.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.3
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Everton FC – Fulham FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.5,
+                "againstAverage": 6.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.8,
+                "againstAverage": 15.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 4.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.9,
+                "againstAverage": 4.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.1,
+                "againstAverage": 13.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 3.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.2
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Leeds United FC – Ipswich Town FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 4.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 2.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.1,
+                "againstAverage": 13.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.2,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.1,
+                "againstAverage": 5.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.3
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.0,
+                "againstAverage": 16.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 5.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.0
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Manchester United FC – Coventry City FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.2,
+                "againstAverage": 5.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.2,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 18.2,
+                "againstAverage": 13.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.2,
+                "againstAverage": 5.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 1.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.9,
+                "againstAverage": 16.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Newcastle United FC – Sunderland AFC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 4.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.1,
+                "againstAverage": 15.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 4.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.8
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 4.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 2.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.8,
+                "againstAverage": 14.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 4.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.6
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Nottingham Forest FC – Brighton & Hove Albion FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 1.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.9,
+                "againstAverage": 10.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.5,
+                "againstAverage": 3.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 5.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 1.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.3,
+                "againstAverage": 11.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 3.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.6
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Premier Lig",
+          "match": "Tottenham Hotspur FC – Arsenal FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 8.0,
+                "againstAverage": 4.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.4,
+                "againstAverage": 11.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 3.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.1
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 4.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 3.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.1,
+                "againstAverage": 11.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 2.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.3
+              }
+            }
+          }
         }
       ]
     },
@@ -1540,81 +2290,6 @@
       "invalid": 0,
       "error": null,
       "rows": [
-        {
-          "date": "2026-11-27",
-          "league": "İngiltere Championship",
-          "match": "Southampton FC – Middlesbrough FC",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 5.8,
-                "againstAverage": 5.0
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.9,
-                "againstAverage": 2.4
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.1,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 15.4,
-                "againstAverage": 15.0
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 5.1,
-                "againstAverage": 4.3
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.6,
-                "againstAverage": 0.4
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 5.9,
-                "againstAverage": 4.0
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.2,
-                "againstAverage": 1.5
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.1
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 19.1,
-                "againstAverage": 10.2
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 6.6,
-                "againstAverage": 2.6
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.8,
-                "againstAverage": 0.4
-              }
-            }
-          }
-        },
         {
           "date": "2026-11-28",
           "league": "İngiltere Championship",
@@ -2514,6 +3189,756 @@
               }
             }
           }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Bolton Wanderers FC – Blackburn Rovers FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 5.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.8,
+                "againstAverage": 13.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.9
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.2,
+                "againstAverage": 6.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.8,
+                "againstAverage": 17.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.6,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.7
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Bristol City FC – Swansea City AFC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 6.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.1,
+                "againstAverage": 12.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.1,
+                "againstAverage": 3.7
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 5.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.1,
+                "againstAverage": 13.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.1,
+                "againstAverage": 5.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.2
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Cardiff City FC – Lincoln City FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 5.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.7,
+                "againstAverage": 16.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.8,
+                "againstAverage": 6.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.3,
+                "againstAverage": 0.9
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 6.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.9,
+                "againstAverage": 17.7
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.1,
+                "againstAverage": 6.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.7
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Charlton Athletic FC – Birmingham City FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 5.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 2.3
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.5,
+                "againstAverage": 15.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 5.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.9
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 4.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 2.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.4,
+                "againstAverage": 12.7
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.2,
+                "againstAverage": 3.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 0.2
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Middlesbrough FC – Derby County FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.9,
+                "againstAverage": 4.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 19.1,
+                "againstAverage": 10.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.6,
+                "againstAverage": 2.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.1,
+                "againstAverage": 6.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 1.8
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.2,
+                "againstAverage": 18.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 6.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 1.2
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Norwich City FC – Wrexham AFC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 3.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.4,
+                "againstAverage": 10.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 3.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 4.7
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 2.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.2,
+                "againstAverage": 14.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 3.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Portsmouth FC – West Bromwich Albion FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 4.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.5,
+                "againstAverage": 11.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 2.5,
+                "againstAverage": 3.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.3
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.6,
+                "againstAverage": 4.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.3
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.2,
+                "againstAverage": 11.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.5,
+                "againstAverage": 4.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.6
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Stoke City FC – Queens Park Rangers FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 5.5
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.0,
+                "againstAverage": 13.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 3.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.1
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 3.7
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.3,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.0,
+                "againstAverage": 11.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.5,
+                "againstAverage": 3.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 0.6
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Watford FC – Millwall FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 5.5
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 2.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.7,
+                "againstAverage": 16.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.6,
+                "againstAverage": 5.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 1.1
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 5.5
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.7,
+                "againstAverage": 15.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "İngiltere Championship",
+          "match": "Wolverhampton Wanderers FC – Southampton FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 7.4,
+                "againstAverage": 3.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 2.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 20.0,
+                "againstAverage": 8.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 3.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.8,
+                "againstAverage": 5.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 2.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.4,
+                "againstAverage": 15.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 4.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.4
+              }
+            }
+          }
         }
       ]
     },
@@ -2533,81 +3958,6 @@
       "invalid": 0,
       "error": null,
       "rows": [
-        {
-          "date": "2026-11-27",
-          "league": "Almanya Bundesliga",
-          "match": "SV Werder Bremen – Borussia Mönchengladbach",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.1,
-                "againstAverage": 5.7
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.6,
-                "againstAverage": 1.4
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 16.0,
-                "againstAverage": 15.6
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 6.5,
-                "againstAverage": 5.0
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.3,
-                "againstAverage": 0.8
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 5.5,
-                "againstAverage": 5.8
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 3.0,
-                "againstAverage": 1.8
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.2,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 14.7,
-                "againstAverage": 16.9
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 4.5,
-                "againstAverage": 7.6
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.6,
-                "againstAverage": 1.0
-              }
-            }
-          }
-        },
         {
           "date": "2026-11-28",
           "league": "Almanya Bundesliga",
@@ -3204,6 +4554,681 @@
                 "sample": 10,
                 "forAverage": 0.8,
                 "againstAverage": 0.8
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "1. FC Union Berlin – Hamburger SV",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 5.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.6,
+                "againstAverage": 18.5
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 6.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.9
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.5,
+                "againstAverage": 5.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.3
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.2,
+                "againstAverage": 18.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 6.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "Bayer 04 Leverkusen – Borussia Mönchengladbach",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 7.3,
+                "againstAverage": 3.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.3,
+                "againstAverage": 2.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 18.5,
+                "againstAverage": 12.5
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.4,
+                "againstAverage": 4.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 5.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 3.0,
+                "againstAverage": 1.8
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.7,
+                "againstAverage": 16.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.5,
+                "againstAverage": 7.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.0
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "Eintracht Frankfurt – SV Werder Bremen",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 5.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.8,
+                "againstAverage": 16.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.7,
+                "againstAverage": 5.7
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.8
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.1,
+                "againstAverage": 5.7
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.0,
+                "againstAverage": 15.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.5,
+                "againstAverage": 5.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.8
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "FC Augsburg – 1. FC Köln",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 4.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 1.8
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 17.4,
+                "againstAverage": 17.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.9,
+                "againstAverage": 6.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.8
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 5.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 2.3
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.4,
+                "againstAverage": 13.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 5.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.7
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "FC Bayern München – SC Paderborn 07",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 8.2,
+                "againstAverage": 3.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 2.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 22.9,
+                "againstAverage": 9.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 8.6,
+                "againstAverage": 3.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.3,
+                "againstAverage": 0.2
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 5.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.0,
+                "againstAverage": 16.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 5.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "FC Schalke 04 – Borussia Dortmund",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.4,
+                "againstAverage": 6.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.0,
+                "againstAverage": 15.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.6,
+                "againstAverage": 6.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.7,
+                "againstAverage": 4.7
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.3,
+                "againstAverage": 12.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 3.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.2
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "RB Leipzig – 1. FSV Mainz 05",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 5.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 18.7,
+                "againstAverage": 14.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 7.2,
+                "againstAverage": 6.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 4.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.7,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.1,
+                "againstAverage": 15.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 5.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 1.3
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "SC Freiburg – TSG 1899 Hoffenheim",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 3.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.2,
+                "againstAverage": 10.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 3.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.0,
+                "againstAverage": 5.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 1.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 17.4,
+                "againstAverage": 15.2
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.1,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.7,
+                "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Almanya Bundesliga",
+          "match": "SV 07 Elversberg – VfB Stuttgart",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 7.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.1,
+                "againstAverage": 18.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 4.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.8,
+                "againstAverage": 6.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.4,
+                "againstAverage": 2.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.1,
+                "againstAverage": 19.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.6,
+                "againstAverage": 5.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.4
               }
             }
           }
@@ -4763,81 +6788,6 @@
       "error": null,
       "rows": [
         {
-          "date": "2026-11-27",
-          "league": "Fransa Ligue 1",
-          "match": "Stade Brestois 29 – Paris FC",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 3.1,
-                "againstAverage": 5.8
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.4,
-                "againstAverage": 2.0
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.2
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 15.0,
-                "againstAverage": 12.5
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 5.2,
-                "againstAverage": 3.4
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 1.1,
-                "againstAverage": 0.2
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.4,
-                "againstAverage": 3.0
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 2.2,
-                "againstAverage": 1.8
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 14.3,
-                "againstAverage": 9.3
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 5.7,
-                "againstAverage": 3.1
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.9,
-                "againstAverage": 0.2
-              }
-            }
-          }
-        },
-        {
           "date": "2026-11-28",
           "league": "Fransa Ligue 1",
           "match": "Angers SCO – Racing Club de Lens",
@@ -5436,6 +7386,681 @@
               }
             }
           }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "AS Monaco FC – Angers SCO",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.0,
+                "againstAverage": 4.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.8,
+                "againstAverage": 12.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.5
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.4,
+                "againstAverage": 6.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 1.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.1,
+                "againstAverage": 17.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.2,
+                "againstAverage": 6.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 1.1
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "ES Troyes AC – Olympique Lyonnais",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.8,
+                "againstAverage": 2.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 2.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.1,
+                "againstAverage": 10.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.8
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 5.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.7,
+                "againstAverage": 11.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 5.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "Lille OSC – AJ Auxerre",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.0,
+                "againstAverage": 4.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.4,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.7,
+                "againstAverage": 13.5
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 4.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.4
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.0,
+                "againstAverage": 6.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.7,
+                "againstAverage": 14.7
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 4.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.6
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "Olympique de Marseille – OGC Nice",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 4.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 12.9,
+                "againstAverage": 17.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 6.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 0.5
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.7,
+                "againstAverage": 3.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.4,
+                "againstAverage": 1.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.4,
+                "againstAverage": 13.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 5.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "Paris FC – Le Mans FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.4,
+                "againstAverage": 3.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.2,
+                "againstAverage": 1.8
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.3,
+                "againstAverage": 9.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.7,
+                "againstAverage": 3.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.9,
+                "againstAverage": 0.2
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.4,
+                "againstAverage": 5.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 1.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.8,
+                "againstAverage": 13.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.0,
+                "againstAverage": 5.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "RC Strasbourg Alsace – FC Lorient",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 4.5
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.8,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.6,
+                "againstAverage": 14.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.2,
+                "againstAverage": 5.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.5,
+                "againstAverage": 0.8
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.7,
+                "againstAverage": 4.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 2.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.2,
+                "againstAverage": 13.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 4.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.4
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "Racing Club de Lens – Le Havre AC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.3,
+                "againstAverage": 4.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.9,
+                "againstAverage": 11.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.3,
+                "againstAverage": 4.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.9,
+                "againstAverage": 12.8
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.8,
+                "againstAverage": 5.2
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 0.9
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "Stade Rennais FC 1901 – Stade Brestois 29",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.2,
+                "againstAverage": 5.1
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 2.6
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 16.6,
+                "againstAverage": 13.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.0,
+                "againstAverage": 5.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 1.2
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.1,
+                "againstAverage": 5.8
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.4,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.2
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.0,
+                "againstAverage": 12.5
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.2,
+                "againstAverage": 3.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.1,
+                "againstAverage": 0.2
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Fransa Ligue 1",
+          "match": "Toulouse FC – Paris Saint-Germain FC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 4.2,
+                "againstAverage": 4.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.2,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 11.8,
+                "againstAverage": 14.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 4.3
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.3,
+                "againstAverage": 0.7
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 2.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.0,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 18.8,
+                "againstAverage": 10.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 7.8,
+                "againstAverage": 4.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.4
+              }
+            }
+          }
         }
       ]
     },
@@ -5455,81 +8080,6 @@
       "invalid": 0,
       "error": null,
       "rows": [
-        {
-          "date": "2026-11-27",
-          "league": "Hollanda Eredivisie",
-          "match": "FC Groningen – Willem II Tilburg",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.1,
-                "againstAverage": 5.5
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.6,
-                "againstAverage": 1.6
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.2,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 15.1,
-                "againstAverage": 14.8
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 5.5,
-                "againstAverage": 5.3
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 1.3,
-                "againstAverage": 1.1
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 3.9,
-                "againstAverage": 7.2
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.7,
-                "againstAverage": 0.9
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.1,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 10.1,
-                "againstAverage": 21.3
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 2.6,
-                "againstAverage": 7.1
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.2,
-                "againstAverage": 1.2
-              }
-            }
-          }
-        },
         {
           "date": "2026-11-28",
           "league": "Hollanda Eredivisie",
@@ -6204,6 +8754,306 @@
               }
             }
           }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Hollanda Eredivisie",
+          "match": "AZ – PSV",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 3.4
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.5,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.5
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.8,
+                "againstAverage": 10.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 5.8,
+                "againstAverage": 3.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.9
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 3.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 2.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 18.3,
+                "againstAverage": 11.9
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 6.5,
+                "againstAverage": 4.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.9,
+                "againstAverage": 0.5
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Hollanda Eredivisie",
+          "match": "Fortuna Sittard – PEC Zwolle",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 7.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.0,
+                "againstAverage": 1.7
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.1,
+                "againstAverage": 16.7
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 5.8
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.5,
+                "againstAverage": 6.6
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.4,
+                "againstAverage": 1.2
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.2,
+                "againstAverage": 17.1
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.3,
+                "againstAverage": 6.0
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.1
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Hollanda Eredivisie",
+          "match": "Sparta Rotterdam – NEC",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.2,
+                "againstAverage": 5.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.3,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 13.8,
+                "againstAverage": 17.4
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.9,
+                "againstAverage": 6.9
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.8,
+                "againstAverage": 1.3
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 6.1,
+                "againstAverage": 3.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.6,
+                "againstAverage": 2.4
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 15.3,
+                "againstAverage": 12.7
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 4.6,
+                "againstAverage": 4.5
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.6,
+                "againstAverage": 1.0
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Hollanda Eredivisie",
+          "match": "Willem II Tilburg – Feyenoord Rotterdam",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.9,
+                "againstAverage": 7.2
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.7,
+                "againstAverage": 0.9
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.1,
+                "againstAverage": 21.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 2.6,
+                "againstAverage": 7.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.2,
+                "againstAverage": 1.2
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.9,
+                "againstAverage": 3.9
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 1.2,
+                "againstAverage": 1.8
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 18.3,
+                "againstAverage": 12.3
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 7.7,
+                "againstAverage": 4.4
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 1.3,
+                "againstAverage": 0.7
+              }
+            }
+          }
         }
       ]
     },
@@ -6223,81 +9073,6 @@
       "invalid": 0,
       "error": null,
       "rows": [
-        {
-          "date": "2026-11-27",
-          "league": "Portekiz Primeira Liga",
-          "match": "CS Marítimo – CD Nacional",
-          "home": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 3.3,
-                "againstAverage": 4.4
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 2.0,
-                "againstAverage": 2.5
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.0,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 10.7,
-                "againstAverage": 14.0
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 3.4,
-                "againstAverage": 5.9
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.3,
-                "againstAverage": 1.1
-              }
-            }
-          },
-          "away": {
-            "sample": 10,
-            "metrics": {
-              "corners": {
-                "sample": 10,
-                "forAverage": 4.3,
-                "againstAverage": 5.3
-              },
-              "yellowCards": {
-                "sample": 10,
-                "forAverage": 1.4,
-                "againstAverage": 2.5
-              },
-              "redCards": {
-                "sample": 10,
-                "forAverage": 0.1,
-                "againstAverage": 0.2
-              },
-              "shots": {
-                "sample": 10,
-                "forAverage": 10.9,
-                "againstAverage": 14.1
-              },
-              "shotsOnTarget": {
-                "sample": 10,
-                "forAverage": 3.2,
-                "againstAverage": 5.6
-              },
-              "halfTimeGoals": {
-                "sample": 10,
-                "forAverage": 0.3,
-                "againstAverage": 1.0
-              }
-            }
-          }
-        },
         {
           "date": "2026-11-28",
           "league": "Portekiz Primeira Liga",
@@ -7370,7 +10145,7 @@
     }
   ],
   "respondingLeagues": 9,
-  "fixtureCount": 96,
+  "fixtureCount": 133,
   "predictionsEnabled": false,
   "realBettingEnabled": false,
   "decision": "PAS"

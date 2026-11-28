@@ -1,6 +1,6 @@
 {
   "version": "2.1",
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "modelCalibrated": false,
   "markets": {
     "1.5 Üst": {
@@ -200,7 +200,7 @@
         },
         {
           "start": "2026-10-10",
-          "endExclusive": "2026-11-27",
+          "endExclusive": "2026-11-28",
           "tested": 53,
           "oldBrier": 0.160044,
           "weightedBrier": 0.154493,
@@ -265,7 +265,7 @@
         },
         {
           "start": "2026-10-10",
-          "endExclusive": "2026-11-27",
+          "endExclusive": "2026-11-28",
           "tested": 53,
           "oldBrier": 0.244864,
           "weightedBrier": 0.23853,
@@ -330,7 +330,7 @@
         },
         {
           "start": "2026-10-10",
-          "endExclusive": "2026-11-27",
+          "endExclusive": "2026-11-28",
           "tested": 53,
           "oldBrier": 0.261954,
           "weightedBrier": 0.264453,
