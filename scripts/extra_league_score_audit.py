@@ -80,19 +80,23 @@ def unmatched_names(rows):
     return out
 
 COMPETITIONS=(("sco.1","SC0"),("bel.1","B1"),("ger.2","D2"),("esp.2","SP2"),("ita.2","I2"),("fra.2","F2"))
-HISTORY_WINDOW_DAYS=28
-SAMPLE_DATE_LIMIT=7
+HISTORY_WINDOW_DAYS=90
+SAMPLE_DATE_LIMIT=90
 
 def audit_league(code,csv_code,now,reader=read):
-    year=now.year if now.month>=7 else now.year-1
-    csv_url=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{csv_code}.csv"
-    out=dict(league=code,sourceUrls=[csv_url],errors=[],days=[],rows=[])
+    first=now.date()-timedelta(days=HISTORY_WINDOW_DAYS)
+    last=now.date()-timedelta(days=1)
+    season=lambda d:d.year if d.month>=7 else d.year-1
+    out=dict(league=code,sourceUrls=[],errors=[],days=[],rows=[])
     # Exact normalized names only: no fuzzy identity guesses.
     identity=lambda d,h,a:(d,team_key(code,h),team_key(code,a))
-    try: primary=csv_results(reader(csv_url),identity)
-    except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
-        out["errors"].append(dict(source="csv",type=type(exc).__name__))
-        return out
+    primary={}
+    for year in range(season(first),season(last)+1):
+        csv_url=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{csv_code}.csv"
+        out["sourceUrls"].append(csv_url)
+        try: primary.update(csv_results(reader(csv_url),identity))
+        except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
+            out["errors"].append(dict(source="csv",season=year,type=type(exc).__name__))
     days=sorted({k[0] for k in primary if (now.date()-timedelta(days=HISTORY_WINDOW_DAYS)).isoformat()<=k[0]<now.date().isoformat()},reverse=True)[:SAMPLE_DATE_LIMIT]
     out["days"]=days
     for day in days:
@@ -116,7 +120,7 @@ def build(now,reader=read):
     for g in leagues:
         g["counts"]=dict(Counter(x["status"] for x in g["rows"]))
         g["unmatchedNames"]=unmatched_names(g["rows"])
-    return dict(version="6.27",historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    return dict(version="6.28",historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
