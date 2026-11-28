@@ -71,4 +71,42 @@ class OptionalRefreshTests(unittest.TestCase):
                 record(old,None,now,"source_error",0)
                 self.assertEqual(json.loads(Path("odds_last_good.json").read_text()),new)
             finally:os.chdir(cwd)
+    def test_recent_cache_requires_full_validation(self):
+        cwd=Path.cwd()
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                os.chdir(temp)
+                now=datetime.now(timezone.utc)
+                leagues=list(ODDS_CODES.values())
+                stamp=(now-timedelta(minutes=5)).isoformat()
+                snapshot=dict(source="The Odds API",region="uk",market="totals",errors=[],
+                    configuredLeagues=leagues,queriedLeagues=leagues[:1],inactiveLeagues=leagues[1:],
+                    updatedAt=stamp,eventCount=1,remainingCredits=50,
+                    events=[dict(id="a",home="A",away="B",league=leagues[0],
+                        kickoff=(now+timedelta(hours=2)).isoformat(),
+                        bookmakers=[dict(key="b",lines=[dict(point=2.5,over=1.8,under=2.0,lastUpdate=stamp)])])])
+                with patch.dict(os.environ,{"ODDS_API_KEY":"test","ODDS_OPTIONAL_REFRESH":"false"}):
+                    Path("odds.json").write_text(json.dumps(snapshot))
+                    with patch("urllib.request.urlopen",side_effect=AssertionError("unexpected request")) as mock:
+                        with self.assertRaises(SystemExit) as stop:runpy.run_path(str(MODULE))
+                        self.assertEqual(stop.exception.code,0)
+                        mock.assert_not_called()
+                    self.assertEqual(json.loads(Path("odds_continuity.json").read_text())["mode"],"normal")
+                    # A recent but incomplete snapshot must not short-circuit a safe refresh.
+                    for corruption in ("event_count","invalid_price","missing_coverage"):
+                        with self.subTest(corruption=corruption):
+                            broken=json.loads(json.dumps(snapshot))
+                            if corruption=="event_count":broken["eventCount"]=99
+                            elif corruption=="invalid_price":broken["events"][0]["bookmakers"][0]["lines"][0]["over"]=0
+                            else:broken["inactiveLeagues"]=[]
+                            Path("odds.json").write_text(json.dumps(broken))
+                            with patch("urllib.request.urlopen",return_value=Response([{"key":leagues[0],"active":True}],0)) as mock:
+                                runpy.run_path(str(MODULE))
+                                self.assertEqual(mock.call_count,1)
+                                self.assertIn("/sports/?",mock.call_args.args[0])
+                            status=json.loads(Path("odds_continuity.json").read_text())
+                            self.assertFalse(status["currentOddsUsable"])
+                            self.assertEqual(status["mode"],"fallback")
+                            self.assertEqual(json.loads(Path("odds_last_good.json").read_text()),snapshot)
+            finally:os.chdir(cwd)
 if __name__=="__main__":unittest.main()
