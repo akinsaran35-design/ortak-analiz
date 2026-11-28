@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-28T20:44:12.932799+03:00",
+  "updatedAt": "2026-11-28T21:27:30.594632+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -129,10 +129,13 @@
           "home": "Motherwell",
           "away": "Hibernian",
           "kickoff": "2026-11-28T17:45:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "42'",
+          "score": [
+            1,
+            0
+          ],
           "date": "2026-11-28"
         },
         {
@@ -183,10 +186,10 @@
           "away": "KV Mechelen",
           "kickoff": "2026-11-28T17:15:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "26'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "51'",
           "score": [
-            1,
+            2,
             1
           ],
           "date": "2026-11-28"
@@ -279,12 +282,12 @@
           "home": "Austria Vienna",
           "away": "Wolfsberger",
           "kickoff": "2026-11-28T16:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "88'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+3'",
           "score": [
-            3,
-            0
+            4,
+            1
           ],
           "date": "2026-11-28"
         },
@@ -457,8 +460,8 @@
           "away": "Molde",
           "kickoff": "2026-11-28T17:00:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "41'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "66'",
           "score": [
             1,
             1
@@ -727,9 +730,9 @@
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
           "status": "STATUS_FIRST_HALF",
-          "clock": "4'",
+          "clock": "45'+2'",
           "score": [
-            0,
+            1,
             0
           ],
           "date": "2026-11-28"
@@ -812,11 +815,11 @@
           "away": "Al Taawoun",
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "14'",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+5'",
           "score": [
-            0,
-            0
+            1,
+            1
           ],
           "date": "2026-11-28"
         }

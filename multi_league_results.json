@@ -1,6 +1,6 @@
 {
   "version": "4.69",
-  "updatedAt": "2026-11-28T20:44:01.588857+03:00",
+  "updatedAt": "2026-11-28T21:27:17.335340+03:00",
   "mode": "research_only",
   "approvedLeagues": [
     "de.1",
@@ -215,6 +215,423 @@
       ]
     }
   ],
+  "todayObservations": [
+    {
+      "league": "de.1",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/D1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "1. FSV Mainz 05",
+          "away": "1. FC Union Berlin",
+          "csv": null,
+          "espn": [
+            2,
+            1
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Hamburger SV",
+          "away": "FC Bayern München",
+          "csv": null,
+          "espn": [
+            0,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "VfB Stuttgart",
+          "away": "Eintracht Frankfurt",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "en.1",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/E0.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "Arsenal FC",
+          "away": "Manchester City FC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Brighton & Hove Albion FC",
+          "away": "Newcastle United FC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Everton FC",
+          "away": "Liverpool FC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Fulham FC",
+          "away": "AFC Bournemouth",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Ipswich Town FC",
+          "away": "Aston Villa FC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Leeds United FC",
+          "away": "Coventry City FC",
+          "csv": null,
+          "espn": [
+            3,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Manchester United FC",
+          "away": "Brentford FC",
+          "csv": null,
+          "espn": [
+            0,
+            4
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Nottingham Forest FC",
+          "away": "Chelsea FC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Sunderland AFC",
+          "away": "Tottenham Hotspur FC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "en.2",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/E1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "Birmingham City FC",
+          "away": "Bolton Wanderers FC",
+          "csv": null,
+          "espn": [
+            2,
+            4
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Blackburn Rovers FC",
+          "away": "Charlton Athletic FC",
+          "csv": null,
+          "espn": [
+            1,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Derby County FC",
+          "away": "Watford FC",
+          "csv": null,
+          "espn": [
+            0,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Lincoln City FC",
+          "away": "Wolverhampton Wanderers FC",
+          "csv": null,
+          "espn": [
+            0,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Millwall FC",
+          "away": "Burnley FC",
+          "csv": null,
+          "espn": [
+            0,
+            1
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Preston North End FC",
+          "away": "Norwich City FC",
+          "csv": null,
+          "espn": [
+            1,
+            1
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Queens Park Rangers FC",
+          "away": "Sheffield United FC",
+          "csv": null,
+          "espn": [
+            1,
+            1
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "West Bromwich Albion FC",
+          "away": "Bristol City FC",
+          "csv": null,
+          "espn": [
+            1,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "West Ham United FC",
+          "away": "Stoke City FC",
+          "csv": null,
+          "espn": [
+            1,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Wrexham AFC",
+          "away": "Portsmouth FC",
+          "csv": null,
+          "espn": [
+            1,
+            0
+          ],
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "fr.1",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/F1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "Angers SCO",
+          "away": "Racing Club de Lens",
+          "csv": null,
+          "espn": [
+            2,
+            5
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Le Havre AC",
+          "away": "RC Strasbourg Alsace",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Le Mans FC",
+          "away": "Lille OSC",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Paris Saint-Germain FC",
+          "away": "FC Lorient",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "nl.1",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/N1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "PSV",
+          "away": "Go Ahead Eagles",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "SBV Excelsior",
+          "away": "Telstar 1963",
+          "csv": null,
+          "espn": [
+            1,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "SC Cambuur-Leeuwarden",
+          "away": "Sparta Rotterdam",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "pt.1",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/P1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "Académico de Viseu FC",
+          "away": "FC Alverca",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "FC Arouca",
+          "away": "Rio Ave FC",
+          "csv": null,
+          "espn": [
+            0,
+            0
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Moreirense FC",
+          "away": "CD Santa Clara",
+          "csv": null,
+          "espn": [
+            0,
+            2
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "Vitória Guimarães",
+          "away": "CF Estrela da Amadora",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        }
+      ]
+    },
+    {
+      "league": "tr.1",
+      "date": "2026-11-28",
+      "sources": [
+        "https://football-data.co.uk/mmz4281/2627/T1.csv",
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/scoreboard?dates=20261128"
+      ],
+      "errors": [],
+      "rows": [
+        {
+          "date": "2026-11-28",
+          "home": "samsunspor",
+          "away": "genclerbirligi",
+          "csv": null,
+          "espn": [
+            3,
+            1
+          ],
+          "status": "incomplete"
+        },
+        {
+          "date": "2026-11-28",
+          "home": "gaziantep",
+          "away": "amed",
+          "csv": null,
+          "espn": null,
+          "status": "incomplete"
+        }
+      ]
+    }
+  ],
+  "observationDate": "2026-11-28",
   "retryDays": 30,
   "archiveCoverage": {
     "shared": 134,

@@ -1,12 +1,12 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-28T17:44:46.529321+00:00",
+  "updatedAt": "2026-11-28T18:28:04.370011+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-28T17:43:40.017628+00:00",
+    "snapshotAt": "2026-11-28T18:26:54.969431+00:00",
     "archivedEvents": 118,
-    "freshEvents": 60,
+    "freshEvents": 59,
     "rows": [
       {
         "eventId": "f45e9062c2f755b977c98d496c22697b",
@@ -86,7 +86,7 @@
       {
         "eventId": "d3a7232e9d207b1417c35aa3c1b8cfcd",
         "league": "soccer_efl_champ",
-        "freshBookmakers": 3
+        "freshBookmakers": 4
       },
       {
         "eventId": "e49121e6a96f140ee8b4381766962f61",
@@ -284,11 +284,6 @@
         "freshBookmakers": 3
       },
       {
-        "eventId": "ee7e0fb3eb049d403134cefaf634c7d5",
-        "league": "soccer_portugal_primeira_liga",
-        "freshBookmakers": 3
-      },
-      {
         "eventId": "588984eaf08b356b49055b534cef52e6",
         "league": "soccer_portugal_primeira_liga",
         "freshBookmakers": 4
@@ -310,11 +305,11 @@
       }
     ],
     "region": "uk",
-    "remainingCredits": 35
+    "remainingCredits": 26
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-28T17:44:09.190481+00:00",
+    "reportAt": "2026-11-28T18:27:26.403749+00:00",
     "reportedMarkets": 0
   },
   "volume": {
@@ -328,7 +323,7 @@
   "productionEnabled": false,
   "predictionsEnabled": false,
   "marketCoverage": {
-    "snapshotAt": "2026-11-28T17:43:40.017628+00:00",
+    "snapshotAt": "2026-11-28T18:26:54.969431+00:00",
     "snapshotFresh": true,
     "sourceAccepted": true,
     "archivedEvents": 118,
@@ -343,8 +338,8 @@
       "over25": {
         "sourceScope": "totals",
         "observedEvents": 118,
-        "observedThreeBookEvents": 60,
-        "freshFutureThreeBookEvents": 60,
+        "observedThreeBookEvents": 59,
+        "freshFutureThreeBookEvents": 59,
         "status": "observed"
       },
       "btts": {
@@ -364,7 +359,7 @@
       "recordUnit": "event_market_bookmaker",
       "usedAsCurrentEvidence": false
     },
-    "remainingCreditsAtSnapshot": 35,
+    "remainingCreditsAtSnapshot": 26,
     "additionalApiRequests": 0,
     "extraMarketCollectionEnabled": false,
     "productionEnabled": false

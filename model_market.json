@@ -1,7 +1,7 @@
 {
   "version": "4.12",
   "evidenceVersion": "6.92",
-  "updatedAt": "2026-11-28T17:44:09.281326+00:00",
+  "updatedAt": "2026-11-28T18:27:26.531319+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
@@ -18,9 +18,9 @@
       "modelProbabilityUncalibrated": 0.66,
       "marketProbability": 0.546667,
       "differencePP": 11.3333,
-      "bestBookmaker": "leovegas",
-      "bestOdds": 1.73,
-      "estimatedEV": 0.1418,
+      "bestBookmaker": "grosvenor",
+      "bestOdds": 1.71,
+      "estimatedEV": 0.1286,
       "decision": "PAS",
       "movementDirection": null,
       "movementPP": null,
@@ -35,8 +35,8 @@
       "oddsEvidenceSource": "base_totals",
       "bookCount": 4,
       "modelProbabilityUncalibrated": 0.531,
-      "marketProbability": 0.488003,
-      "differencePP": 4.2997,
+      "marketProbability": 0.490018,
+      "differencePP": 4.0982,
       "bestBookmaker": "grosvenor",
       "bestOdds": 1.93,
       "estimatedEV": 0.02483,
@@ -44,31 +44,12 @@
       "movementDirection": null,
       "movementPP": null,
       "movementBookmakers": 0
-    },
-    {
-      "eventId": "ee7e0fb3eb049d403134cefaf634c7d5",
-      "match": "Académico de Viseu FC – FC Alverca",
-      "kickoff": "2026-11-28T18:00:00+00:00",
-      "market": "over25",
-      "marketLabel": "2.5 Üst",
-      "oddsEvidenceSource": "base_totals",
-      "bookCount": 3,
-      "modelProbabilityUncalibrated": 0.453,
-      "marketProbability": 0.48,
-      "differencePP": -2.7,
-      "bestBookmaker": "matchbook",
-      "bestOdds": 2.12,
-      "estimatedEV": -0.03964,
-      "decision": "PAS",
-      "movementDirection": null,
-      "movementPP": null,
-      "movementBookmakers": 0
     }
   ],
   "rejected": {
-    "insufficient_valid_market_data": 18,
-    "not_today": 60
+    "insufficient_valid_market_data": 13,
+    "not_today": 61
   },
   "errors": [],
-  "comparedCount": 3
+  "comparedCount": 2
 }

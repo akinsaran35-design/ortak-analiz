@@ -1,16 +1,16 @@
 {
   "version": "4.59",
-  "updatedAt": "2026-11-28T17:44:07.918505+00:00",
+  "updatedAt": "2026-11-28T18:27:24.333655+00:00",
   "source": "https://github.com/oladeeayo/open-matchday",
   "sourceUpdatedAt": "2026-11-28T16:57:35+00:00",
-  "oddsUpdatedAt": "2026-11-28T17:43:40.017628+00:00",
-  "dailyUpdatedAt": "2026-11-28T20:43:41+03:00",
+  "oddsUpdatedAt": "2026-11-28T18:26:54.969431+00:00",
+  "dailyUpdatedAt": "2026-11-28T21:26:55+03:00",
   "oddsFresh": true,
   "status": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "originalMatched": 67,
-  "reconciledMatched": 79,
+  "originalMatched": 66,
+  "reconciledMatched": 78,
   "proposedCorrections": [
     {
       "league": "İngiltere Premier Lig",
@@ -98,6 +98,13 @@
     }
   ],
   "unresolved": [
+    {
+      "match": "PSV – Go Ahead Eagles",
+      "league": "Hollanda Eredivisie",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
     {
       "match": "Hamburger SV – FC Bayern München",
       "league": "Almanya Bundesliga",
@@ -226,6 +233,13 @@
     },
     {
       "match": "Moreirense FC – CD Santa Clara",
+      "league": "Portekiz Primeira Liga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Académico de Viseu FC – FC Alverca",
       "league": "Portekiz Primeira Liga",
       "date": "2026-11-28",
       "reason": "no_exact_match",
@@ -378,13 +392,6 @@
     {
       "match": "Nottingham Forest FC – Brighton & Hove Albion FC",
       "league": "İngiltere Premier Lig",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
-      "match": "Cardiff City FC – Lincoln City FC",
-      "league": "İngiltere Championship",
       "date": "2026-12-05",
       "reason": "no_exact_match",
       "providerDates": []
