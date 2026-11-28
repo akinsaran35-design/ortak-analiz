@@ -1,0 +1,26 @@
+name: V7.04 API-Football access probe
+on:
+  pull_request:
+    paths:
+      - 'scripts/api_football_access_probe.py'
+      - 'scripts/test_api_football_access_probe.py'
+      - '.github/workflows/api-football-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: api-football-access-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'v7.04-api-football-access-probe')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline access and quota tests
+        run: python3 scripts/test_api_football_access_probe.py
+      - name: Verify backup access without exposing credentials
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python3 scripts/api_football_access_probe.py
