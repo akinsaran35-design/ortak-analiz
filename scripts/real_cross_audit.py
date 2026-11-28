@@ -82,9 +82,6 @@ for league,cid in MAP.items():
     league_coverage.append(dict(league=league,primaryCount=len(pp),secondaryCount=len(ss),matched=len(pairs),verifiedScores=len(verified),scoreMismatch=sum(pair["scoreAgreement"] is False for pair in pairs),primaryCoverage=len(pairs)/len(pp) if pp else None,secondaryCoverage=len(pairs)/len(ss) if ss else None))
 print("League coverage:",json.dumps(league_coverage))
 print("Verified score count:",len(verified_score_ids))
-# Keep both IDs unique across the audit, not merely within a competition.
-assert len({str(x["primaryId"]) for x in verified_score_ids})==len(verified_score_ids), "Duplicate primary verification ID"
-assert len({str(x["secondaryId"]) for x in verified_score_ids})==len(verified_score_ids), "Duplicate secondary verification ID"
 print("Verified score IDs:",json.dumps(verified_score_ids))
 print("Bidirectional coverage:",json.dumps(scope))
 print("Daily coverage:",json.dumps(daily))
@@ -221,22 +218,39 @@ print("Unresolved fixtures:",json.dumps(unresolved,ensure_ascii=False))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
 r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.99",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
-Path("cross_audit.json").write_text(json.dumps(r,indent=2))
-print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
-assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
-assert r["pairs"], "No independent matches; coverage audit cannot pass"
-assert not any(x["scoreAgreement"] is False for x in r["pairs"])
-if holdout:assert r["scoreCompared"]>0, "No comparable completed scores"
+failures=[]
+if s["status"]!="observed":
+    failures.append(f"Secondary status: {s['status']}")
+if not p:
+    failures.append("No primary fixtures")
+if not r["pairs"]:
+    failures.append("No independent matches")
+if any(pair["scoreAgreement"] is False for pair in r["pairs"]):
+    failures.append("Conflicting scores")
+for provider in ("primary", "secondary"):
+    ids=[str(pair[f"{provider}Id"]) for pair in verified_score_ids]
+    if len(set(ids))!=len(ids):
+        failures.append(f"Duplicate {provider} verification ID")
 if holdout:
-    assert not primary_issues and secondary_rejected==0, "Source health incomplete"
-    failures=[]
+    if primary_issues or secondary_rejected:
+        failures.append("Source health incomplete")
+    if r["scoreCompared"]==0:
+        failures.append("No comparable completed scores")
     if len(verified_score_ids)<100:
-        failures.append(f"at least 100 verified scores required, observed {len(verified_score_ids)}")
+        failures.append(f"At least 100 verified scores required, observed {len(verified_score_ids)}")
     if any(coverage is None or coverage<0.99 for coverage in (scope["primaryCoverage"],scope["secondaryCoverage"])):
         failures.append(
             f"99 percent bidirectional coverage required, matched {scope['matched']} of "
             f"{scope['primaryCount']} primary and {scope['secondaryCount']} secondary fixtures"
         )
-    if failures:
-        raise AssertionError(f"Historical audit {audit_start} to {audit_end}: " + "; ".join(failures))
+r["auditQuality"]=dict(
+    passed=not failures, failures=failures,
+    primaryCoverage=scope["primaryCoverage"], secondaryCoverage=scope["secondaryCoverage"],
+    verifiedScores=len(verified_score_ids), minimumCoverage=0.99 if holdout else None,
+    minimumVerifiedScores=100 if holdout else None,
+)
+Path("cross_audit.json").write_text(json.dumps(r,indent=2))
+print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
+if failures:
+    raise RuntimeError(f"Cross-source audit {audit_start} to {audit_end}: " + "; ".join(failures))
 print("Combined sample coverage:",r["coverage"],"score comparisons:",r["scoreCompared"])
