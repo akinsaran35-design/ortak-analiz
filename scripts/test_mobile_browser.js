@@ -108,7 +108,7 @@ const {chromium}=require("playwright");
   await page.getByText("Filtreye uygun maç bulunamadı.").waitFor();
   await page.locator("#search").fill("");
   await page.locator("#fixture-mode").selectOption("confirmed");
-  await page.getByText(/İki kaynak/).waitFor();
+  await page.locator("#view-matches .match-meta").filter({hasText:"İki kaynak"}).waitFor();
   await page.locator(".match-open").click();
   await page.getByText("Bu görünüm yalnızca fikstür doğrulamasıdır.",{exact:false}).waitFor();
   await page.locator("#detail-back").click();
