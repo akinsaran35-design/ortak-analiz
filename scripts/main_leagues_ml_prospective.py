@@ -6,6 +6,7 @@ from pathlib import Path
 from main_leagues_ml_preflight import collect,identity
 from extra_ml_prospective import load_or_freeze,empty_ledger,capture,read_json,write_json
 from results_source_pilot import TR
+from same_source_venue_reference import reference,summarize as summarize_reference
 VERSION="6.67"
 MODEL=Path("main_ml_frozen.cbm")
 META=Path("main_ml_frozen_manifest.json")
@@ -22,12 +23,13 @@ def run():
     ledger=read_json(LEDGER) if LEDGER.exists() else empty_ledger(meta,version=VERSION)
     now=datetime.now(TR)
     if now.date()!=started.date():raise ValueError("date changed; rerun")
-    added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity)
+    added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity,reference_fn=reference)
+    reference_summary=summarize_reference(ledger)
     write_json(LEDGER,ledger)
     report=dict(version=VERSION,mode="prospective_research_only",sourceSuccessful=source_count,
         trainingMatches=meta["trainingMatches"],featureCount=len(keys),modelSha256=meta["modelSha256"],
         trainingFingerprint=meta["trainingFingerprint"],frozenAt=meta["frozenAt"],
-        fixturesChecked=len(games),newForecasts=added,recorded=len(ledger["forecasts"]),
+        fixturesChecked=len(games),newForecasts=added,sameSourceReferenceRecorded=reference_summary["recorded"],recorded=len(ledger["forecasts"]),
         settled=len(ledger["settlements"]),excluded=excluded,modelFrozen=True,
         productionModelValidated=False,automaticApproval=False,existingOtherArchivesModified=False,
         updatedAt=now.isoformat())
