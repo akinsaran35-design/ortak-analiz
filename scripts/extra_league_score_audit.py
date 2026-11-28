@@ -240,6 +240,49 @@ def team_form_backtest(rows):
         metrics[k]=dict(n=n,team=score(0),leagueMean=score(1))
     return dict(model="venue_team_shrunk_poisson",evaluatedMatches=evaluated,markets=metrics,priorMatches=TEAM_PRIOR_MATCHES,recentVenueMatches=RECENT_MATCHES,sameDayTraining=False,productionModelValidated=False)
 
+HYBRID_WEIGHTS=(0.0,0.1,0.25,0.5,0.75,1.0)
+MIN_VALIDATION_MATCHES=50
+
+def hybrid_holdout(rows):
+    """Select weights on earlier dates; freeze them for later-date evaluation."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    samples={k:[] for k in MARKETS}
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        for r in group:
+            past=history.get(r["league"],[])
+            n=len(past)
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            league=goal_probabilities(sum(x["csv"][0] for x in past)/n,sum(x["csv"][1] for x in past)/n)
+            team=goal_probabilities(*team_goal_means(past,r["home"],r["away"]))
+            for k,p,q,y in zip(MARKETS,league,team,labels(*r["csv"])):
+                samples[k].append((day,min(1,max(0,p)),min(1,max(0,q)),y))
+        for r in group:
+            history.setdefault(r["league"],[]).append(r)
+    days=sorted({r[0] for r in samples[MARKETS[0]]})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    metrics={}
+    for k,items in samples.items():
+        tune=[r for r in items if cutoff and r[0]<cutoff]
+        test=[r for r in items if cutoff and r[0]>=cutoff]
+        def loss(rows,w):
+            return sum(((1-w)*p+w*q-y)**2 for _,p,q,y in rows)/len(rows)
+        w=min(HYBRID_WEIGHTS,key=lambda w:loss(tune,w)) if len(tune)>=MIN_VALIDATION_MATCHES else 0.0
+        def score(rows,w):
+            if not rows:
+                return dict(brier=None,accuracyPct=None,meanProbability=None,observedFrequency=None)
+            probs=[((1-w)*p+w*q,y) for _,p,q,y in rows]
+            return dict(brier=round(loss(rows,w),6),accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y in probs)/len(rows),2),meanProbability=round(sum(p for p,y in probs)/len(rows),6),observedFrequency=round(sum(y for p,y in probs)/len(rows),6))
+        enough=len(tune)>=MIN_VALIDATION_MATCHES and len(test)>=MIN_VALIDATION_MATCHES
+        metrics[k]=dict(teamWeight=w,tuneMatches=len(tune),holdoutMatches=len(test),
+            hybrid=score(test,w),leagueMean=score(test,0),teamOnly=score(test,1),
+            improvementObserved=bool(enough and loss(test,w)<loss(test,0)),enoughForComparison=enough)
+    return dict(model="chronological_frozen_weight_hybrid",holdoutStart=cutoff,markets=metrics,weightCandidates=list(HYBRID_WEIGHTS),minimumMatchesPerSplit=MIN_VALIDATION_MATCHES,productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -252,7 +295,8 @@ def build(now,reader=read):
     baseline=outcome_baseline([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     replay=chronological_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     team_replay=team_form_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.31",teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    hybrid=hybrid_holdout([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.32",hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -263,6 +307,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("HYBRID_HOLDOUT",json.dumps(report["hybridHoldout"]))
     print("TEAM_FORM_BACKTEST",json.dumps(report["teamFormBacktest"]))
     print("CHRONOLOGICAL_BACKTEST",json.dumps(report["chronologicalBacktest"]))
     print("OUTCOME_BASELINE",json.dumps(report["outcomeBaseline"]))
