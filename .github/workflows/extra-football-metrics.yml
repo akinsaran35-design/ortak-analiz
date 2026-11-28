@@ -6,6 +6,8 @@ on:
       - 'scripts/test_extra_historical_metric_coverage.py'
       - 'scripts/extra_team_statistics.py'
       - 'scripts/test_extra_team_statistics.py'
+      - 'scripts/extra_fixture_context.py'
+      - 'scripts/test_extra_fixture_context.py'
       - '.github/workflows/extra-football-metrics.yml'
   workflow_dispatch:
 permissions:
@@ -20,9 +22,14 @@ jobs:
         run: |
           python3 scripts/test_extra_historical_metric_coverage.py
           python3 scripts/test_extra_team_statistics.py
+          python3 scripts/test_extra_fixture_context.py
       - name: Collect historical public-source coverage
-        run: python3 scripts/extra_historical_metric_coverage.py
+        run: |
+          python3 scripts/extra_historical_metric_coverage.py
+          python3 scripts/extra_fixture_context.py
       - uses: actions/upload-artifact@v4
         with:
           name: extra-football-historical-coverage
-          path: extra_historical_metric_coverage.json
+          path: |
+            extra_historical_metric_coverage.json
+            extra_fixture_context.json
