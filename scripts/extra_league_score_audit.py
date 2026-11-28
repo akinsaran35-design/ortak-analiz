@@ -186,6 +186,60 @@ def chronological_backtest(rows):
     return dict(model="league_mean_independent_poisson_benchmark",mode="historical_replay_only",minTrainingMatches=MIN_TRAIN_MATCHES,evaluatedMatches=evaluated,
         warmupMatches=sum(len(g) for g in by_day.values())-evaluated,markets=metrics,sameDayTraining=False,productionModelValidated=False)
 
+TEAM_PRIOR_MATCHES=5
+RECENT_MATCHES=5
+
+def team_goal_means(past,home,away):
+    """Venue-specific attack/defence with league shrinkage and recent form."""
+    n=len(past)
+    lh=sum(r["csv"][0] for r in past)/n
+    la=sum(r["csv"][1] for r in past)/n
+    def mean_for(team,venue,index,prior):
+        games=[r["csv"][index] for r in past if r[venue]==team]
+        recent=games[-RECENT_MATCHES:]
+        return (sum(games)+sum(recent)+TEAM_PRIOR_MATCHES*prior)/(len(games)+len(recent)+TEAM_PRIOR_MATCHES)
+    ha=mean_for(home,"home",0,lh)
+    ad=mean_for(away,"away",0,lh)
+    aa=mean_for(away,"away",1,la)
+    hd=mean_for(home,"home",1,la)
+    return ((ha*ad/lh if lh else 0),(aa*hd/la if la else 0))
+
+def goal_probabilities(h,a):
+    total=h+a
+    return (1-math.exp(-total)*(1+total),1-math.exp(-total)*(1+total+total*total/2),(1-math.exp(-h))*(1-math.exp(-a)))
+
+def team_form_backtest(rows):
+    """Paired chronological comparison, not a production model approval."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    samples={k:[] for k in MARKETS}
+    evaluated=0
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        for r in group:
+            past=history.get(r["league"],[])
+            n=len(past)
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            baseline=goal_probabilities(sum(x["csv"][0] for x in past)/n,sum(x["csv"][1] for x in past)/n)
+            team=goal_probabilities(*team_goal_means(past,r["home"],r["away"]))
+            for k,p,q,y in zip(MARKETS,team,baseline,labels(*r["csv"])):
+                samples[k].append((min(1,max(0,p)),min(1,max(0,q)),y))
+            evaluated+=1
+        for r in group:
+            history.setdefault(r["league"],[]).append(r)
+    metrics={}
+    for k,items in samples.items():
+        n=len(items)
+        def score(index):
+            if not n:
+                return dict(accuracyPct=None,brier=None)
+            return dict(accuracyPct=round(100*sum((r[index]>=0.5)==bool(r[2]) for r in items)/n,2),brier=round(sum((r[index]-r[2])**2 for r in items)/n,6))
+        metrics[k]=dict(n=n,team=score(0),leagueMean=score(1))
+    return dict(model="venue_team_shrunk_poisson",evaluatedMatches=evaluated,markets=metrics,priorMatches=TEAM_PRIOR_MATCHES,recentVenueMatches=RECENT_MATCHES,sameDayTraining=False,productionModelValidated=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -197,7 +251,8 @@ def build(now,reader=read):
         g["outcomeBaseline"]=outcome_baseline([dict(r,league=g["league"]) for r in g["rows"]])
     baseline=outcome_baseline([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     replay=chronological_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.30",chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    team_replay=team_form_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.31",teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -208,6 +263,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("TEAM_FORM_BACKTEST",json.dumps(report["teamFormBacktest"]))
     print("CHRONOLOGICAL_BACKTEST",json.dumps(report["chronologicalBacktest"]))
     print("OUTCOME_BASELINE",json.dumps(report["outcomeBaseline"]))
     print("AUDIT_TOTAL",json.dumps({k:report[k] for k in ("configured","responding","corroborated","archivesModified")}))
