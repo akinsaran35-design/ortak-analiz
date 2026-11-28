@@ -992,7 +992,7 @@ def glicko_backtest(rows):
 ENSEMBLE_MODELS=("poisson","dixonColes","bayesian","bivariate","negativeBinomial","teamForm","elo","glicko2")
 ENSEMBLE_STEPS=10
 
-def ensemble_samples(rows):
+def ensemble_samples(rows,include_league=False):
     """Common past-only forecasts for all candidates, including rating histories."""
     by_day={}
     for r in verified_rows(rows):
@@ -1043,7 +1043,8 @@ def ensemble_samples(rows):
             models=base+(goal_probabilities(*team_goal_means(past,r["home"],r["away"])),
                 goal_probabilities(*elo_goal_means(h,a,rh,ra,0.5)),
                 goal_probabilities(*glicko_goal_means(h,a,gh,ga,0.5)))
-            samples.append((day,tuple(tuple(min(1,max(0,p)) for p in model) for model in models),labels(x,y)))
+            sample=(day,tuple(tuple(min(1,max(0,p)) for p in model) for model in models),labels(x,y))
+            samples.append(sample+(l,) if include_league else sample)
         for key,d in changes.items():
             elo[key]=elo.get(key,ELO_INITIAL)+d
         for key,opponents in updates.items():
@@ -1109,6 +1110,66 @@ def ensemble_backtest(rows):
         ratingCandidateScale=0.5,selectionMetric="mean_brier",sameDayTraining=False,repeatedHoldout=True,
         productionModelValidated=False,externalValidation=False,markets=metrics)
 
+CALIBRATION_MIN_LEAGUE=20
+CALIBRATION_SHRINKAGE=100
+
+def fit_league_calibration(samples):
+    """Frozen empirical targets on calibration dates only; sparse leagues abstain."""
+    grouped={}
+    for day,models,ys,league in samples:
+        grouped.setdefault(league,[]).append(ys)
+    result={}
+    for league,ys in sorted(grouped.items()):
+        n=len(ys)
+        target=tuple((sum(y[i] for y in ys)+1)/(n+2) for i in range(len(MARKETS)))
+        result[league]=dict(n=n,target=target,weight=n/(n+CALIBRATION_SHRINKAGE) if n>=CALIBRATION_MIN_LEAGUE else 0.0)
+    return result
+
+def apply_league_calibration(probs,league,calibration):
+    entry=calibration.get(league)
+    if not entry or not entry["weight"]:
+        return probs
+    w=entry["weight"]
+    return tuple((1-w)*p+w*q for p,q in zip(probs,entry["target"]))
+
+def league_calibration_backtest(rows):
+    """Three chronological phases: ensemble fit, calibration fit, evaluation."""
+    samples=ensemble_samples(rows,include_league=True)
+    days=sorted({r[0] for r in samples})
+    first=days[int(len(days)*0.4)] if len(days)>=3 else None
+    second=days[int(len(days)*0.6)] if len(days)>=3 else None
+    tune=[r[:3] for r in samples if first and r[0]<first]
+    calibration=[r for r in samples if first and second and first<=r[0]<second]
+    test=[r for r in samples if second and r[0]>=second]
+    weights=fit_ensemble_weights(tune)
+    fitted=fit_league_calibration(calibration)
+    predictions=[]
+    for day,models,ys,league in test:
+        base=ensemble_prediction(models,weights)
+        adjusted=apply_league_calibration(base,league,fitted)
+        predictions.append((league,base,adjusted,ys))
+    def metrics(items):
+        out={}
+        for i,k in enumerate(MARKETS):
+            def score(j):
+                n=len(items)
+                if not n:
+                    return dict(brier=None,logLoss=None,meanProbability=None,observedFrequency=None,accuracyPct=None)
+                pairs=[(r[j][i],r[3][i]) for r in items]
+                return dict(brier=round(sum((p-y)**2 for p,y in pairs)/n,6),
+                    logLoss=round(-sum(y*math.log(max(1e-12,p))+(1-y)*math.log(max(1e-12,1-p)) for p,y in pairs)/n,6),
+                    meanProbability=round(sum(p for p,y in pairs)/n,6),observedFrequency=round(sum(y for p,y in pairs)/n,6),
+                    accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y in pairs)/n,2))
+            out[k]=dict(n=len(items),uncalibrated=score(1),calibrated=score(2))
+        return out
+    leagues={l:dict(calibration=fitted.get(l),markets=metrics([r for r in predictions if r[0]==l])) for l in sorted({r[0] for r in predictions}|set(fitted))}
+    return dict(model="league_empirical_shrinkage_calibration",calibrationStart=first,holdoutStart=second,
+        tuneMatches=len(tune),calibrationMatches=len(calibration),holdoutMatches=len(test),
+        calibratedMatches=sum(bool(fitted.get(r[0],{}).get("weight")) for r in predictions),
+        weights=dict(zip(ENSEMBLE_MODELS,weights)),minLeagueCalibrationMatches=CALIBRATION_MIN_LEAGUE,
+        shrinkageMatches=CALIBRATION_SHRINKAGE,markets=metrics(predictions),leagues=leagues,
+        sameDayTraining=False,repeatedHoldout=True,productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -1132,7 +1193,8 @@ def build(now,reader=read):
     elo=elo_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     glicko=glicko_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     ensemble=ensemble_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.42",ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    calibration=league_calibration_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.43",leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -1143,6 +1205,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("LEAGUE_CALIBRATION",json.dumps(report["leagueCalibration"]))
     print("ENSEMBLE_BACKTEST",json.dumps(report["ensembleBacktest"]))
     print("GLICKO_BACKTEST",json.dumps(report["glickoBacktest"]))
     print("ELO_BACKTEST",json.dumps(report["eloBacktest"]))
