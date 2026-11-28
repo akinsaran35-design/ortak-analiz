@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-28T12:53:35.822097+03:00",
+  "updatedAt": "2026-11-28T13:01:12.304194+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -983,8 +983,8 @@
           "away": "Auckland FC",
           "kickoff": "2026-11-28T08:40:00+00:00",
           "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "54'",
+          "status": "STATUS_IN_PROGRESS",
+          "clock": "62'",
           "score": [
             2,
             2
