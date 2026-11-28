@@ -29,7 +29,7 @@ def identity(code,h,a,kickoff):
     h,a=norm(h),norm(a)
     if not h or not a or h==a:raise ValueError("teams")
     return code,h,a,instant(kickoff)
-def shadow_alias_candidates(targets,candidates,target_ids,ids,strict_rows):
+def shadow_alias_candidates(targets,candidates,target_ids,ids,strict_rows,pairs=None):
     """Measure unique candidates using existing CSV/ESPN aliases; never promote them.
     API-Football aliases have not been independently verified.
     """
@@ -61,13 +61,14 @@ def shadow_alias_candidates(targets,candidates,target_ids,ids,strict_rows):
         if k==p or len(events)!=1 or len(rows)!=1:continue
         if target_ids[(k[0],events[0])]!=1 or ids[rows[0][0]]!=1:continue
         if (k[0],events[0]) in used_events or rows[0][0] in used_provider:continue
+        if pairs is not None:pairs[(k[0],events[0],rows[0][0])]=bool(rows[0][1])
         counts[k[0]]+=1
         if rows[0][1]:with_referee[k[0]]+=1
     return dict(mode="candidate_only",verified=False,additionalCandidates=sum(counts.values()),
                 candidatesWithReferee=sum(with_referee.values()),
                 groups=[dict(league=c,candidates=n,withReferee=with_referee[c]) for c,n in sorted(counts.items())])
 
-def source_name_evidence(targets,candidates,target_ids,ids,strict_rows,source_names):
+def source_name_evidence(targets,candidates,target_ids,ids,strict_rows,source_names,pairs=None):
     """Measure ordered names explicitly supplied by ESPN; never promote candidates."""
     used_targets={(r["league"],r["eventId"]) for r in strict_rows}
     used_providers={r["providerId"] for r in strict_rows}
@@ -88,11 +89,27 @@ def source_name_evidence(targets,candidates,target_ids,ids,strict_rows,source_na
         p=keys[0];rows=candidates[p]
         if k==p or reverse[p]!=1 or len(rows)!=1 or ids[rows[0][0]]!=1:continue
         if (k[0],targets[k][0]) in used_targets or rows[0][0] in used_providers:continue
+        if pairs is not None:pairs[(k[0],targets[k][0],rows[0][0])]=bool(rows[0][1])
         counts[k[0]]+=1
         if rows[0][1]:refs[k[0]]+=1
     return dict(mode="source_name_candidate_only",verified=False,
                 additionalCandidates=sum(counts.values()),candidatesWithReferee=sum(refs.values()),
                 groups=[dict(league=c,candidates=n,withReferee=refs[c]) for c,n in sorted(counts.items())])
+
+def combined_evidence(alias,source,eligible,strict_count):
+    """Count distinct candidates; reject disagreements on either identity."""
+    a,b=set(alias),set(source)
+    union=a|b
+    left=Counter(k[:2] for k in union)
+    right=Counter(k[2] for k in union)
+    accepted={k for k in union if left[k[:2]]==right[k[2]]==1}
+    return dict(mode="deduplicated_candidate_only",verified=False,
+                sharedCandidates=len(accepted&a&b),
+                aliasOnly=len((accepted&a)-b),sourceOnly=len((accepted&b)-a),
+                conflictingPairs=len(union-accepted),additionalCandidates=len(accepted),
+                candidatesWithReferee=sum(bool(alias.get(k) or source.get(k)) for k in accepted),
+                remainingIdentities=max(0,eligible-strict_count-len(accepted)),
+                predictionsEnabled=False)
 
 def match(doc,groups):
     if doc.get("errors") not in ({},[]) or not isinstance(doc.get("response"),list) or doc.get("results")!=len(doc["response"]) or doc.get("paging")!={"current":1,"total":1}:
@@ -159,10 +176,13 @@ def match(doc,groups):
         c["matched_with_referee" if ref else "matched_missing_referee"]+=1
         result.append(dict(league=k[0],eventId=events[0],providerId=pid,referee=ref,
                            status="source_observed" if ref else "missing_referee"))
+    alias_pairs={};source_pairs={}
+    alias_report=shadow_alias_candidates(targets,candidates,target_ids,ids,result,alias_pairs)
+    source_report=source_name_evidence(targets,candidates,target_ids,ids,result,source_names,source_pairs)
     return dict(eligibleIdentities=len(targets),matched=len(result),
                 withReferee=sum(x["referee"] is not None for x in result),rows=result,
-                aliasShadow=shadow_alias_candidates(targets,candidates,target_ids,ids,result),
-                sourceNameShadow=source_name_evidence(targets,candidates,target_ids,ids,result,source_names),
+                aliasShadow=alias_report,sourceNameShadow=source_report,
+                combinedShadow=combined_evidence(alias_pairs,source_pairs,len(targets),len(result)),
                 diagnostics=[dict(league=code,counts=dict(c),providerScheduledRows=scheduled_seen[code],
                                   metadataRejectedRows=metadata_rejected[code],publicSourceUnavailable=code in unavailable)
                              for code,c in sorted(diagnostics.items())],
