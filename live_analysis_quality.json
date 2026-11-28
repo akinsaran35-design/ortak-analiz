@@ -1,12 +1,105 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-28T07:33:07.585034+03:00",
-  "sourceUpdatedAt": "2026-11-28T07:33:07.521821+03:00",
+  "updatedAt": "2026-11-28T08:31:56.486732+03:00",
+  "sourceUpdatedAt": "2026-11-28T08:31:56.420005+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "counts": {},
-  "rows": []
+  "counts": {
+    "observation_ready": 2
+  },
+  "rows": [
+    {
+      "league": "jpn.1",
+      "eventId": "401877539",
+      "home": "Shimizu S-Pulse",
+      "away": "Urawa Red Diamonds",
+      "kickoff": "2026-11-28T05:00:00+00:00",
+      "receivedAt": "2026-11-28T08:31:56.417229+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "29'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            5
+          ],
+          "possession": [
+            43.5,
+            56.5
+          ],
+          "shots": [
+            3,
+            4
+          ],
+          "shotsOnTarget": [
+            0,
+            2
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "jpn.1",
+      "eventId": "401877537",
+      "home": "Kyoto Sanga",
+      "away": "Cerezo Osaka",
+      "kickoff": "2026-11-28T05:00:00+00:00",
+      "receivedAt": "2026-11-28T08:31:56.362139+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "29'",
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            39.1,
+            60.9
+          ],
+          "shots": [
+            1,
+            2
+          ],
+          "shotsOnTarget": [
+            1,
+            1
+          ]
+        }
+      },
+      "prediction": null
+    }
+  ]
 }

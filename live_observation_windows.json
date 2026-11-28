@@ -1,8 +1,8 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-28T07:33:21.545055+03:00",
-  "sourceUpdatedAt": "2026-11-28T07:33:07.585034+03:00",
+  "updatedAt": "2026-11-28T08:32:16.518737+03:00",
+  "sourceUpdatedAt": "2026-11-28T08:31:56.486732+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
@@ -10,7 +10,9 @@
   "accepted": 0,
   "archivedEvents": 10,
   "archivedPoints": 19,
-  "reasons": {},
+  "reasons": {
+    "rejected_observation": 2
+  },
   "windowCounts": {
     "5": 0,
     "10": 0,
