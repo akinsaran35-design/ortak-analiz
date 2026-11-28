@@ -1,5 +1,6 @@
 """Exercise daily coverage without any external network or quota use."""
 import io
+import os
 import json
 import runpy
 import tempfile
@@ -26,8 +27,12 @@ class FixtureCoverageTest(unittest.TestCase):
                 original=Path.write_text
                 def write(p, *args, **kwargs):
                     return original(target if p==Path("daily.json") else p,*args,**kwargs)
-                with patch("urllib.request.urlopen", side_effect=fake), patch.object(Path,"write_text",write), patch("turkey_source.fetch",return_value=rows):
-                    runpy.run_path(str(SCRIPT))
+                cwd=Path.cwd()
+                try:
+                    os.chdir(d)
+                    with patch("urllib.request.urlopen", side_effect=fake), patch.object(Path,"write_text",write), patch("turkey_source.fetch",return_value=rows):
+                        runpy.run_path(str(SCRIPT))
+                finally:os.chdir(cwd)
                 report=json.loads(target.read_text())
             self.assertEqual(report["upcomingCount"], 96 if partial else 108)
             self.assertEqual(report["upcomingCount"],len(report["upcoming"]))
@@ -40,4 +45,17 @@ class FixtureCoverageTest(unittest.TestCase):
             self.assertEqual(report["decision"],"PAS")
             self.assertEqual(report["picks"],[])
 
+    def test_history_cache_only_past_scores_and_expiry(self):
+        import football_history_cache as cache
+        now=datetime(2026,11,28,12,tzinfo=timezone.utc)
+        doc={"version":"6.96","seasons":{}}
+        rows=[dict(date="2026-11-27",team1="A",team2="B",score={"ft":[2,0]}),dict(date="2026-11-28",team1="C",team2="D",score={"ft":[1,1]}),dict(date="2026-11-29",team1="E",team2="F")]
+        self.assertTrue(cache.remember(doc,"en.1","2026-27",rows,now))
+        recovered,stamp=cache.recover(doc,"en.1","2026-27",now+timedelta(hours=1))
+        self.assertEqual(len(recovered),1)
+        self.assertEqual(recovered[0]["score"]["ft"],[2,0])
+        self.assertEqual(stamp,now.isoformat())
+        self.assertEqual(cache.recover(doc,"en.1","2026-27",now+timedelta(hours=73)),([],None))
+        self.assertEqual(cache.recover(doc,"de.1","2026-27",now),([],None))
+        self.assertFalse(cache.remember(doc,"en.1","2026-27",rows[1:],now))
 if __name__=="__main__": unittest.main()
