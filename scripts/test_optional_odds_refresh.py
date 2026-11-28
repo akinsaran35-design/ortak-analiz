@@ -30,4 +30,17 @@ class OptionalRefreshTests(unittest.TestCase):
                     self.assertIn("/sports/?",mock.call_args.args[0])
                 self.assertEqual(json.loads(Path("odds.json").read_text()),snapshot)
             finally:os.chdir(cwd)
+    def test_core_zero_credit_no_paid_calls(self):
+        cwd=Path.cwd()
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                os.chdir(temp)
+                with patch.dict(os.environ,{"ODDS_API_KEY":"test","ODDS_OPTIONAL_REFRESH":"false"}),patch("urllib.request.urlopen",return_value=Response([{"key":list(ODDS_CODES.values())[0],"active":True}],0)) as mock:
+                    runpy.run_path(str(MODULE))
+                    self.assertEqual(mock.call_count,1)
+                report=json.loads(Path("odds.json").read_text())
+                self.assertEqual(report["remainingCredits"],0)
+                self.assertEqual(report["events"],[])
+                self.assertIn("quota_guard",report["errors"])
+            finally:os.chdir(cwd)
 if __name__=="__main__":unittest.main()
