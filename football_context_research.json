@@ -1,7 +1,7 @@
 {
   "version": "5.23",
-  "updatedAt": "2026-11-28T13:06:48.318059+03:00",
-  "dailyUpdatedAt": "2026-11-28T13:06:05+03:00",
+  "updatedAt": "2026-11-28T20:44:16.001593+03:00",
+  "dailyUpdatedAt": "2026-11-28T20:43:41+03:00",
   "cutoffExclusive": "2026-11-28",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -20880,314 +20880,6 @@
       "error": null,
       "rows": [
         {
-          "date": "2026-11-28",
-          "match": "gaziantep – amed",
-          "homeVenue": {
-            "sample": 6,
-            "metrics": {
-              "corners": {
-                "sample": 6,
-                "forAverage": 5.833333333333333,
-                "againstAverage": 3.1666666666666665
-              },
-              "yellowCards": {
-                "sample": 6,
-                "forAverage": 2.1666666666666665,
-                "againstAverage": 2.3333333333333335
-              },
-              "redCards": {
-                "sample": 6,
-                "forAverage": 0.0,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 6,
-                "forAverage": 14.833333333333334,
-                "againstAverage": 11.666666666666666
-              },
-              "shotsOnTarget": {
-                "sample": 6,
-                "forAverage": 3.6666666666666665,
-                "againstAverage": 4.166666666666667
-              },
-              "halfTimeGoals": {
-                "sample": 6,
-                "forAverage": 0.0,
-                "againstAverage": 1.0
-              }
-            },
-            "goals": {
-              "sample": 6,
-              "forAverage": 0.5,
-              "againstAverage": 1.8333333333333333
-            },
-            "halves": {
-              "sample": 6,
-              "counts": {
-                "firstOver05": 4,
-                "firstOver15": 2,
-                "firstBtts": 0,
-                "secondBtts": 1,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 0,
-                "halfFull:1/X": 0,
-                "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 1,
-                "halfFull:X/2": 1,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 1,
-                "halfFull:2/2": 3
-              },
-              "observedFrequency": {
-                "firstOver05": 0.6666666666666666,
-                "firstOver15": 0.3333333333333333,
-                "firstBtts": 0.0,
-                "secondBtts": 0.16666666666666666,
-                "bothHalvesBtts": 0.0,
-                "halfFull:1/1": 0.0,
-                "halfFull:1/X": 0.0,
-                "halfFull:1/2": 0.0,
-                "halfFull:X/1": 0.0,
-                "halfFull:X/X": 0.16666666666666666,
-                "halfFull:X/2": 0.16666666666666666,
-                "halfFull:2/1": 0.0,
-                "halfFull:2/X": 0.16666666666666666,
-                "halfFull:2/2": 0.5
-              }
-            }
-          },
-          "awayVenue": {
-            "sample": 5,
-            "metrics": {
-              "corners": {
-                "sample": 5,
-                "forAverage": 6.6,
-                "againstAverage": 3.2
-              },
-              "yellowCards": {
-                "sample": 5,
-                "forAverage": 3.2,
-                "againstAverage": 2.8
-              },
-              "redCards": {
-                "sample": 5,
-                "forAverage": 0.2,
-                "againstAverage": 0.2
-              },
-              "shots": {
-                "sample": 5,
-                "forAverage": 16.2,
-                "againstAverage": 12.6
-              },
-              "shotsOnTarget": {
-                "sample": 5,
-                "forAverage": 4.2,
-                "againstAverage": 4.6
-              },
-              "halfTimeGoals": {
-                "sample": 5,
-                "forAverage": 0.2,
-                "againstAverage": 1.0
-              }
-            },
-            "goals": {
-              "sample": 5,
-              "forAverage": 1.8,
-              "againstAverage": 2.2
-            },
-            "halves": {
-              "sample": 5,
-              "counts": {
-                "firstOver05": 5,
-                "firstOver15": 1,
-                "firstBtts": 0,
-                "secondBtts": 3,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 2,
-                "halfFull:1/X": 1,
-                "halfFull:1/2": 1,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 1,
-                "halfFull:2/2": 0
-              },
-              "observedFrequency": {
-                "firstOver05": 1.0,
-                "firstOver15": 0.2,
-                "firstBtts": 0.0,
-                "secondBtts": 0.6,
-                "bothHalvesBtts": 0.0,
-                "halfFull:1/1": 0.4,
-                "halfFull:1/X": 0.2,
-                "halfFull:1/2": 0.2,
-                "halfFull:X/1": 0.0,
-                "halfFull:X/X": 0.0,
-                "halfFull:X/2": 0.0,
-                "halfFull:2/1": 0.0,
-                "halfFull:2/X": 0.2,
-                "halfFull:2/2": 0.0
-              }
-            }
-          }
-        },
-        {
-          "date": "2026-11-28",
-          "match": "samsunspor – genclerbirligi",
-          "homeVenue": {
-            "sample": 6,
-            "metrics": {
-              "corners": {
-                "sample": 6,
-                "forAverage": 4.333333333333333,
-                "againstAverage": 5.333333333333333
-              },
-              "yellowCards": {
-                "sample": 6,
-                "forAverage": 1.8333333333333333,
-                "againstAverage": 2.3333333333333335
-              },
-              "redCards": {
-                "sample": 6,
-                "forAverage": 0.16666666666666666,
-                "againstAverage": 0.3333333333333333
-              },
-              "shots": {
-                "sample": 6,
-                "forAverage": 14.0,
-                "againstAverage": 14.833333333333334
-              },
-              "shotsOnTarget": {
-                "sample": 6,
-                "forAverage": 3.1666666666666665,
-                "againstAverage": 6.166666666666667
-              },
-              "halfTimeGoals": {
-                "sample": 6,
-                "forAverage": 0.8333333333333334,
-                "againstAverage": 1.3333333333333333
-              }
-            },
-            "goals": {
-              "sample": 6,
-              "forAverage": 1.0,
-              "againstAverage": 2.5
-            },
-            "halves": {
-              "sample": 6,
-              "counts": {
-                "firstOver05": 6,
-                "firstOver15": 3,
-                "firstBtts": 2,
-                "secondBtts": 1,
-                "bothHalvesBtts": 1,
-                "halfFull:1/1": 1,
-                "halfFull:1/X": 1,
-                "halfFull:1/2": 1,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 0,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
-                "halfFull:2/2": 3
-              },
-              "observedFrequency": {
-                "firstOver05": 1.0,
-                "firstOver15": 0.5,
-                "firstBtts": 0.3333333333333333,
-                "secondBtts": 0.16666666666666666,
-                "bothHalvesBtts": 0.16666666666666666,
-                "halfFull:1/1": 0.16666666666666666,
-                "halfFull:1/X": 0.16666666666666666,
-                "halfFull:1/2": 0.16666666666666666,
-                "halfFull:X/1": 0.0,
-                "halfFull:X/X": 0.0,
-                "halfFull:X/2": 0.0,
-                "halfFull:2/1": 0.0,
-                "halfFull:2/X": 0.0,
-                "halfFull:2/2": 0.5
-              }
-            }
-          },
-          "awayVenue": {
-            "sample": 5,
-            "metrics": {
-              "corners": {
-                "sample": 5,
-                "forAverage": 3.8,
-                "againstAverage": 5.6
-              },
-              "yellowCards": {
-                "sample": 5,
-                "forAverage": 2.0,
-                "againstAverage": 2.0
-              },
-              "redCards": {
-                "sample": 5,
-                "forAverage": 0.2,
-                "againstAverage": 0.0
-              },
-              "shots": {
-                "sample": 5,
-                "forAverage": 8.2,
-                "againstAverage": 18.6
-              },
-              "shotsOnTarget": {
-                "sample": 5,
-                "forAverage": 2.2,
-                "againstAverage": 9.4
-              },
-              "halfTimeGoals": {
-                "sample": 5,
-                "forAverage": 0.0,
-                "againstAverage": 1.6
-              }
-            },
-            "goals": {
-              "sample": 5,
-              "forAverage": 0.2,
-              "againstAverage": 2.8
-            },
-            "halves": {
-              "sample": 5,
-              "counts": {
-                "firstOver05": 4,
-                "firstOver15": 3,
-                "firstBtts": 0,
-                "secondBtts": 0,
-                "bothHalvesBtts": 0,
-                "halfFull:1/1": 4,
-                "halfFull:1/X": 0,
-                "halfFull:1/2": 0,
-                "halfFull:X/1": 0,
-                "halfFull:X/X": 0,
-                "halfFull:X/2": 1,
-                "halfFull:2/1": 0,
-                "halfFull:2/X": 0,
-                "halfFull:2/2": 0
-              },
-              "observedFrequency": {
-                "firstOver05": 0.8,
-                "firstOver15": 0.6,
-                "firstBtts": 0.0,
-                "secondBtts": 0.0,
-                "bothHalvesBtts": 0.0,
-                "halfFull:1/1": 0.8,
-                "halfFull:1/X": 0.0,
-                "halfFull:1/2": 0.0,
-                "halfFull:X/1": 0.0,
-                "halfFull:X/X": 0.0,
-                "halfFull:X/2": 0.2,
-                "halfFull:2/1": 0.0,
-                "halfFull:2/X": 0.0,
-                "halfFull:2/2": 0.0
-              }
-            }
-          }
-        },
-        {
           "date": "2026-11-29",
           "match": "corum – kocaelispor",
           "homeVenue": {
@@ -21799,6 +21491,314 @@
                 "halfFull:2/1": 0.0,
                 "halfFull:2/X": 0.16666666666666666,
                 "halfFull:2/2": 0.3333333333333333
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "match": "amed – alanyaspor",
+          "homeVenue": {
+            "sample": 7,
+            "metrics": {
+              "corners": {
+                "sample": 7,
+                "forAverage": 4.428571428571429,
+                "againstAverage": 4.285714285714286
+              },
+              "yellowCards": {
+                "sample": 7,
+                "forAverage": 2.4285714285714284,
+                "againstAverage": 2.7142857142857144
+              },
+              "redCards": {
+                "sample": 7,
+                "forAverage": 0.2857142857142857,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 7,
+                "forAverage": 15.857142857142858,
+                "againstAverage": 9.0
+              },
+              "shotsOnTarget": {
+                "sample": 7,
+                "forAverage": 6.285714285714286,
+                "againstAverage": 3.2857142857142856
+              },
+              "halfTimeGoals": {
+                "sample": 7,
+                "forAverage": 1.0,
+                "againstAverage": 0.2857142857142857
+              }
+            },
+            "goals": {
+              "sample": 7,
+              "forAverage": 2.7142857142857144,
+              "againstAverage": 0.8571428571428571
+            },
+            "halves": {
+              "sample": 7,
+              "counts": {
+                "firstOver05": 5,
+                "firstOver15": 3,
+                "firstBtts": 1,
+                "secondBtts": 2,
+                "bothHalvesBtts": 0,
+                "halfFull:1/1": 3,
+                "halfFull:1/X": 0,
+                "halfFull:1/2": 0,
+                "halfFull:X/1": 3,
+                "halfFull:X/X": 0,
+                "halfFull:X/2": 0,
+                "halfFull:2/1": 0,
+                "halfFull:2/X": 0,
+                "halfFull:2/2": 1
+              },
+              "observedFrequency": {
+                "firstOver05": 0.7142857142857143,
+                "firstOver15": 0.42857142857142855,
+                "firstBtts": 0.14285714285714285,
+                "secondBtts": 0.2857142857142857,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.42857142857142855,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.42857142857142855,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.0,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.14285714285714285
+              }
+            }
+          },
+          "awayVenue": {
+            "sample": 7,
+            "metrics": {
+              "corners": {
+                "sample": 7,
+                "forAverage": 3.0,
+                "againstAverage": 3.2857142857142856
+              },
+              "yellowCards": {
+                "sample": 7,
+                "forAverage": 1.5714285714285714,
+                "againstAverage": 2.7142857142857144
+              },
+              "redCards": {
+                "sample": 7,
+                "forAverage": 0.0,
+                "againstAverage": 0.14285714285714285
+              },
+              "shots": {
+                "sample": 7,
+                "forAverage": 9.285714285714286,
+                "againstAverage": 15.285714285714286
+              },
+              "shotsOnTarget": {
+                "sample": 7,
+                "forAverage": 3.0,
+                "againstAverage": 5.285714285714286
+              },
+              "halfTimeGoals": {
+                "sample": 7,
+                "forAverage": 0.42857142857142855,
+                "againstAverage": 0.5714285714285714
+              }
+            },
+            "goals": {
+              "sample": 7,
+              "forAverage": 0.8571428571428571,
+              "againstAverage": 2.0
+            },
+            "halves": {
+              "sample": 7,
+              "counts": {
+                "firstOver05": 5,
+                "firstOver15": 2,
+                "firstBtts": 2,
+                "secondBtts": 1,
+                "bothHalvesBtts": 0,
+                "halfFull:1/1": 2,
+                "halfFull:1/X": 0,
+                "halfFull:1/2": 0,
+                "halfFull:X/1": 2,
+                "halfFull:X/X": 0,
+                "halfFull:X/2": 2,
+                "halfFull:2/1": 0,
+                "halfFull:2/X": 1,
+                "halfFull:2/2": 0
+              },
+              "observedFrequency": {
+                "firstOver05": 0.7142857142857143,
+                "firstOver15": 0.2857142857142857,
+                "firstBtts": 0.2857142857142857,
+                "secondBtts": 0.14285714285714285,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.2857142857142857,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.2857142857142857,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.2857142857142857,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.14285714285714285,
+                "halfFull:2/2": 0.0
+              }
+            }
+          }
+        },
+        {
+          "date": "2026-12-05",
+          "match": "konyaspor – gaziantep",
+          "homeVenue": {
+            "sample": 7,
+            "metrics": {
+              "corners": {
+                "sample": 7,
+                "forAverage": 3.142857142857143,
+                "againstAverage": 5.428571428571429
+              },
+              "yellowCards": {
+                "sample": 7,
+                "forAverage": 1.2857142857142858,
+                "againstAverage": 2.4285714285714284
+              },
+              "redCards": {
+                "sample": 7,
+                "forAverage": 0.14285714285714285,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 7,
+                "forAverage": 10.285714285714286,
+                "againstAverage": 12.857142857142858
+              },
+              "shotsOnTarget": {
+                "sample": 7,
+                "forAverage": 3.5714285714285716,
+                "againstAverage": 4.714285714285714
+              },
+              "halfTimeGoals": {
+                "sample": 7,
+                "forAverage": 0.5714285714285714,
+                "againstAverage": 0.5714285714285714
+              }
+            },
+            "goals": {
+              "sample": 7,
+              "forAverage": 0.8571428571428571,
+              "againstAverage": 1.5714285714285714
+            },
+            "halves": {
+              "sample": 7,
+              "counts": {
+                "firstOver05": 5,
+                "firstOver15": 2,
+                "firstBtts": 1,
+                "secondBtts": 1,
+                "bothHalvesBtts": 1,
+                "halfFull:1/1": 2,
+                "halfFull:1/X": 0,
+                "halfFull:1/2": 1,
+                "halfFull:X/1": 0,
+                "halfFull:X/X": 1,
+                "halfFull:X/2": 1,
+                "halfFull:2/1": 0,
+                "halfFull:2/X": 0,
+                "halfFull:2/2": 2
+              },
+              "observedFrequency": {
+                "firstOver05": 0.7142857142857143,
+                "firstOver15": 0.2857142857142857,
+                "firstBtts": 0.14285714285714285,
+                "secondBtts": 0.14285714285714285,
+                "bothHalvesBtts": 0.14285714285714285,
+                "halfFull:1/1": 0.2857142857142857,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.14285714285714285,
+                "halfFull:X/1": 0.0,
+                "halfFull:X/X": 0.14285714285714285,
+                "halfFull:X/2": 0.14285714285714285,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.2857142857142857
+              }
+            }
+          },
+          "awayVenue": {
+            "sample": 6,
+            "metrics": {
+              "corners": {
+                "sample": 6,
+                "forAverage": 2.8333333333333335,
+                "againstAverage": 3.6666666666666665
+              },
+              "yellowCards": {
+                "sample": 6,
+                "forAverage": 2.0,
+                "againstAverage": 1.5
+              },
+              "redCards": {
+                "sample": 6,
+                "forAverage": 0.16666666666666666,
+                "againstAverage": 0.16666666666666666
+              },
+              "shots": {
+                "sample": 6,
+                "forAverage": 12.666666666666666,
+                "againstAverage": 14.833333333333334
+              },
+              "shotsOnTarget": {
+                "sample": 6,
+                "forAverage": 3.8333333333333335,
+                "againstAverage": 4.0
+              },
+              "halfTimeGoals": {
+                "sample": 6,
+                "forAverage": 0.6666666666666666,
+                "againstAverage": 0.5
+              }
+            },
+            "goals": {
+              "sample": 6,
+              "forAverage": 1.0,
+              "againstAverage": 1.5
+            },
+            "halves": {
+              "sample": 6,
+              "counts": {
+                "firstOver05": 4,
+                "firstOver15": 1,
+                "firstBtts": 0,
+                "secondBtts": 1,
+                "bothHalvesBtts": 0,
+                "halfFull:1/1": 3,
+                "halfFull:1/X": 0,
+                "halfFull:1/2": 0,
+                "halfFull:X/1": 1,
+                "halfFull:X/X": 0,
+                "halfFull:X/2": 1,
+                "halfFull:2/1": 0,
+                "halfFull:2/X": 0,
+                "halfFull:2/2": 1
+              },
+              "observedFrequency": {
+                "firstOver05": 0.6666666666666666,
+                "firstOver15": 0.16666666666666666,
+                "firstBtts": 0.0,
+                "secondBtts": 0.16666666666666666,
+                "bothHalvesBtts": 0.0,
+                "halfFull:1/1": 0.5,
+                "halfFull:1/X": 0.0,
+                "halfFull:1/2": 0.0,
+                "halfFull:X/1": 0.16666666666666666,
+                "halfFull:X/X": 0.0,
+                "halfFull:X/2": 0.16666666666666666,
+                "halfFull:2/1": 0.0,
+                "halfFull:2/X": 0.0,
+                "halfFull:2/2": 0.16666666666666666
               }
             }
           }

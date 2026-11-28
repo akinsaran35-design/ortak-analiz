@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone, timedelta
-from model_market import compare_market,bound_extra,candidate_matches,unique_events
+from model_market import compare_market,unique_events,identity_matches,extra_bound,quotes_for
 
 class ModelMarketTests(unittest.TestCase):
 
@@ -54,22 +54,30 @@ class ModelMarketTests(unittest.TestCase):
             compare_market(0.80, quotes, self.now)
         )
 
-    def test_conflicting_duplicate_book(self):
-        self.assertIsNone(compare_market(.8,self.quotes+[dict(self.quotes[0],positive=1.6)],self.now))
-    def test_extra_source_binding(self):
+    def test_mixed_duplicate_rejected(self):
+        self.assertIsNone(compare_market(.8,self.quotes+[dict(self.quotes[0])],self.now))
+        self.assertIsNone(compare_market(True,self.quotes,self.now))
+    def test_bound_extra_identity(self):
         stamp=self.now.isoformat()
-        event=dict(id="e",league="soccer_epl",home="A",away="B",kickoff=(self.now+timedelta(hours=1)).isoformat())
-        odds=dict(source="The Odds API",region="uk",market="totals",errors=[],updatedAt=stamp,events=[event])
-        extra=dict(source="The Odds API",region="uk",mode="research_only",quotaPolicyVersion="6.89",oddsSnapshotAt=stamp,errors=[],updatedAt=stamp,events=[event])
-        archive=dict(mode="research_only",integrityVersion="6.85",quarantine={},updatedAt=stamp)
-        self.assertEqual(bound_extra(odds,extra,archive,self.now),{"e":event})
-        self.assertEqual(bound_extra(odds,dict(extra,events=[dict(event,away="C")]),archive,self.now),{})
-        self.assertEqual(bound_extra(odds,dict(extra,oddsSnapshotAt="old"),archive,self.now),{})
-        self.assertEqual(bound_extra(odds,extra,dict(archive,quarantine={"e":{}}),self.now),{})
-        self.assertEqual(unique_events([event,event]),{})
-        c=dict(match="A – B",league="İngiltere Premier Lig",date=(self.now+timedelta(hours=4)).date().isoformat())
-        self.assertTrue(candidate_matches(c,event))
-        self.assertFalse(candidate_matches(dict(c,league="İngiltere Championship"),event))
+        base=dict(id="a",league="soccer_epl",home="A",away="B",kickoff=(self.now+timedelta(hours=1)).isoformat())
+        self.assertTrue(identity_matches(base,dict(base)))
+        self.assertFalse(identity_matches(base,dict(base,away="C")))
+        self.assertEqual(unique_events([base,base]),{})
+        odds=dict(updatedAt=stamp)
+        extra=dict(quotaPolicyVersion="6.89",integrityVersion="6.84",source="The Odds API",region="uk",mode="research_only",decision="PAS",errors=[],updatedAt=stamp,oddsSnapshotAt=stamp)
+        archive=dict(integrityVersion="6.85",mode="research_only",quarantine={},updatedAt=stamp)
+        self.assertTrue(extra_bound(extra,odds,archive,self.now))
+        self.assertFalse(extra_bound(dict(extra,oddsSnapshotAt="wrong"),odds,archive,self.now))
+        self.assertFalse(extra_bound(extra,odds,{},self.now))
+        self.assertFalse(extra_bound(extra,odds,dict(archive,updatedAt=(self.now-timedelta(minutes=31)).isoformat()),self.now))
+        self.assertFalse(extra_bound(extra,odds,dict(archive,updatedAt=(self.now+timedelta(seconds=1)).isoformat()),self.now))
+    def test_base_over15_and_future_quote(self):
+        stamp=self.now.isoformat()
+        event=dict(bookmakers=[dict(key=q["bookmaker"],lines=[dict(point=1.5,over=q["positive"],under=q["negative"],lastUpdate=stamp)]) for q in self.quotes])
+        self.assertEqual(len(quotes_for(event,"over15",stamp)),3)
+        self.assertEqual(quotes_for(event,"over25",stamp),[])
+        event["bookmakers"][0]["lines"][0]["lastUpdate"]=(self.now+timedelta(seconds=1)).isoformat()
+        self.assertEqual(len(quotes_for(event,"over15",stamp)),2)
     def test_stale_odds(self):
         self.quotes[0]["lastUpdate"] = (
             self.now - timedelta(minutes=31)

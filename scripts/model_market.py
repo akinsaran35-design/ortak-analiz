@@ -4,7 +4,8 @@ from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from statistics import median
 from collections import Counter
-from match_odds import canonical,LEAGUES
+from match_odds import canonical
+from league_config import ODDS_CODES
 
 MAX_AGE = 1800
 MIN_BOOKS = 3
@@ -42,6 +43,7 @@ def valid_price(value):
 def compare_market(probability, quotes, now):
     books = {}
     counts=Counter(q.get('bookmaker') for q in quotes if isinstance(q,dict) and isinstance(q.get('bookmaker'),str))
+
     for quote in quotes:
         try:
             key = quote["bookmaker"]
@@ -104,51 +106,56 @@ def compare_market(probability, quotes, now):
         "decision": "PAS"
     }
 
-def unique_events(rows):
-    if not isinstance(rows,list):return {}
-    counts=Counter(e.get("id") for e in rows if isinstance(e,dict) and isinstance(e.get("id"),str))
-    return {e["id"]:e for e in rows if isinstance(e,dict) and isinstance(e.get("id"),str) and e["id"] and counts[e["id"]]==1}
+def objects(rows):
+    return [r for r in rows if isinstance(r,dict)] if isinstance(rows,list) else []
 
-def same_fixture(a,b):
+def unique_events(rows):
+    rows=objects(rows)
+    counts=Counter(e.get("id") for e in rows if isinstance(e.get("id"),str))
+    return {e["id"]:e for e in rows if isinstance(e.get("id"),str) and e["id"] and counts[e["id"]]==1}
+
+def identity_matches(a,b):
     try:
         return all(isinstance(a[k],str) and a[k] and a[k]==b[k] for k in ("id","league","home","away")) and parse_time(a["kickoff"])==parse_time(b["kickoff"])
     except (KeyError,ValueError,TypeError,AttributeError):return False
 
-def bound_extra(odds,extra,archive,now):
-    if (extra.get("source")!="The Odds API" or extra.get("region")!="uk" or extra.get("mode")!="research_only"
-        or extra.get("quotaPolicyVersion")!="6.89" or extra.get("oddsSnapshotAt")!=odds.get("updatedAt")
-        or extra.get("errors")!=[] or not fresh(extra.get("updatedAt"),now)
-        or odds.get("source")!="The Odds API" or odds.get("region")!="uk" or odds.get("market")!="totals"
-        or odds.get("errors")!=[] or not fresh(odds.get("updatedAt"),now)
-        or archive.get("integrityVersion")!="6.85" or archive.get("mode")!="research_only"
-        or not isinstance(archive.get("quarantine"),dict) or not fresh(archive.get("updatedAt"),now)):
-        return {}
-    base=unique_events(odds.get("events"))
-    return {k:e for k,e in unique_events(extra.get("events")).items() if k not in archive["quarantine"] and same_fixture(e,base.get(k,{}))}
+def extra_bound(extra,odds,archive,now):
+    return (isinstance(archive,dict) and archive.get("integrityVersion")=="6.85" and archive.get("mode")=="research_only"
+        and isinstance(archive.get("quarantine"),dict)
+        and fresh(archive.get("updatedAt"),now)
+        and extra.get("quotaPolicyVersion")=="6.89" and extra.get("integrityVersion")=="6.84"
+        and extra.get("source")=="The Odds API" and extra.get("region")=="uk"
+        and extra.get("mode")=="research_only" and extra.get("decision")=="PAS"
+        and extra.get("errors")==[] and fresh(extra.get("updatedAt"),now)
+        and extra.get("oddsSnapshotAt")==odds.get("updatedAt")
+        and fresh(odds.get("updatedAt"),now))
 
-def candidate_matches(c,e):
-    try:
-        h,a=c["match"].split(" – ")
-        league=LEAGUES[c["league"]]
-        return (league==e["league"] and canonical(h,league)==canonical(e["home"],league)
-            and canonical(a,league)==canonical(e["away"],league)
-            and c["date"]==parse_time(e["kickoff"]).astimezone(timezone(timedelta(hours=3))).date().isoformat())
-    except (KeyError,ValueError,TypeError,AttributeError):return False
-
-def totals_quotes(event,point):
-    return [dict(bookmaker=b.get("key"),positive=l.get("over"),negative=l.get("under"),lastUpdate=l.get("lastUpdate"))
-        for b in event.get("bookmakers",[]) for l in b.get("lines",[]) if l.get("point")==point]
-
-def extra_quotes(event,market):
-    names=("Over","Under") if market=="over15" else ("Yes","No")
-    return [dict(bookmaker=b.get("bookmaker"),positive=b.get("prices",{}).get(names[0]),
-        negative=b.get("prices",{}).get(names[1]),lastUpdate=b.get("lastUpdate")) for b in event.get(market,[])]
+def quotes_for(event,market,stamp,extra=False):
+    out=[]
+    if extra:
+        names=("Over","Under") if market=="over15" else ("Yes","No")
+        for b in objects(event.get(market)):
+            p=b.get("prices")
+            if not isinstance(p,dict) or set(p)!=set(names):continue
+            out.append(dict(bookmaker=b.get("bookmaker"),positive=p[names[0]],negative=p[names[1]],lastUpdate=b.get("lastUpdate")))
+    else:
+        point=1.5 if market=="over15" else 2.5
+        books=objects(event.get("bookmakers"))
+        counts=Counter(b.get("key") for b in books if isinstance(b.get("key"),str))
+        for b in books:
+            k=b.get("key")
+            if not isinstance(k,str) or counts[k]!=1:continue
+            lines=[l for l in objects(b.get("lines")) if l.get("point")==point]
+            if len(lines)!=1:continue
+            l=lines[0]
+            out.append(dict(bookmaker=k,positive=l.get("over"),negative=l.get("under"),lastUpdate=l.get("lastUpdate")))
+    return [q for q in out if fresh(q["lastUpdate"],parse_time(stamp))]
 
 def main():
     now = datetime.now(timezone.utc)
     report = {
         "version": "4.12",
-        "sourceBindingVersion":"6.92",
+        "evidenceVersion":"6.92",
         "updatedAt": now.isoformat(),
         "mode": "research_only",
         "modelCalibrated": False,
@@ -172,9 +179,9 @@ def main():
         except (OSError, ValueError):
             extra = {}
             reject("extra_report_unavailable")
+        movement = load("market_movement.json")
         try:archive=load("extra_market_archive.json")
         except (OSError,ValueError):archive={}
-        movement = load("market_movement.json")
 
         candidates = {}
 
@@ -194,12 +201,15 @@ def main():
             and fresh(odds.get("updatedAt"), now)
         ):
             base_events=unique_events(odds.get("events"))
-        extra_events=bound_extra(odds,extra,archive,now)
+
+        if base_events and extra_bound(extra,odds,archive,now):
+            extra_events={k:e for k,e in unique_events(extra.get("events")).items()
+                if k in base_events and identity_matches(e,base_events[k]) and k not in archive["quarantine"]}
 
         moves = {}
 
         if (
-            movement.get("evidenceVersion") == "6.91"
+            movement.get("evidenceVersion")=="6.91"
             and movement.get("errors") == []
             and fresh(movement.get("updatedAt"), now)
         ):
@@ -208,10 +218,16 @@ def main():
                 for m in movement["markets"]
             }
 
-        for match in matching["matched"]:
+        matched=objects(matching.get("matched"))
+        matched_counts=Counter(m.get("eventId") for m in matched if isinstance(m.get("eventId"),str))
+        for match in matched:
             event_id = match["eventId"]
-            base=base_events.get(event_id,{})
-            cs = [c for c in candidates.get(match["match"], []) if candidate_matches(c,base)]
+            if matched_counts[event_id]!=1:
+                reject("ambiguous_matched_event");continue
+            base=base_events.get(event_id)
+            if not base:
+                reject("missing_base_event");continue
+            cs = candidates.get(match["match"], [])
 
             if len(cs) != 1:
                 reject("ambiguous_model_match")
@@ -236,28 +252,45 @@ def main():
                 reject("not_today")
                 continue
 
+            league=ODDS_CODES.get(candidate.get("league"))
+            teams=candidate["match"].split(" – ")
+            if (not league or len(teams)!=2 or base.get("league")!=league
+                or parse_time(base["kickoff"])!=kickoff
+                or canonical(base["home"],league)!=canonical(teams[0],league)
+                or canonical(base["away"],league)!=canonical(teams[1],league)):
+                reject("identity_mismatch");continue
             if candidate.get("date") != str(local_date):
                 reject("date_mismatch")
                 continue
 
             for market, label in MARKETS.items():
-                if not base or parse_time(base["kickoff"])!=kickoff:
-                    reject("missing_or_mismatched_base_event");continue
-                probability=candidate.get("markets",{}).get(label)
-                if type(probability) not in (int,float):
-                    reject("missing_model_probability");continue
-                result=None
-                source=None
+                sources=[]
                 if market in ("over15","over25"):
-                    result=compare_market(probability/100,totals_quotes(base,1.5 if market=="over15" else 2.5),now)
-                    if result is not None:source="totals"
-                if result is None and market in ("over15","btts"):
-                    result=compare_market(probability/100,extra_quotes(extra_events.get(event_id,{}),market),now)
-                    if result is not None:source="bound_extra"
+                    sources.append(("base_totals",quotes_for(base,market,odds["updatedAt"])))
+                if market in ("over15","btts") and event_id in extra_events:
+                    sources.append(("extra_markets",quotes_for(extra_events[event_id],market,extra["updatedAt"],extra=True)))
+
+                probability = candidate.get(
+                    "markets", {}
+                ).get(label)
+
+                if type(probability) not in (int,float):
+                    reject("missing_model_probability")
+                    continue
+
+                # Never mix separately captured snapshots or double-count the same bookmaker.
+                comparisons=[(source,compare_market(probability/100,quotes,now)) for source,quotes in sources]
+                valid=[(source,r) for source,r in comparisons if r is not None]
+                result_source,result=max(valid,key=lambda item:item[1]["bookCount"]) if valid else (None,None)
+
                 if result is None:
-                    reject("insufficient_valid_market_data");continue
+                    reject("insufficient_valid_market_data")
+                    continue
 
                 move = moves.get((event_id, market), {})
+                if (move.get("league")!=league or move.get("home")!=base.get("home") or move.get("away")!=base.get("away") or move.get("kickoff")!=base.get("kickoff") or event_id in archive.get("quarantine",{})):
+                    move={}
+                if move.get("movementBookmakers",0)<3:move={}
 
                 report["rows"].append({
                     "eventId": event_id,
@@ -265,7 +298,7 @@ def main():
                     "kickoff": match["kickoff"],
                     "market": market,
                     "marketLabel": label,
-                    "quoteSource":source,
+                    "oddsEvidenceSource":result_source,
                     **result,
                     "movementDirection": move.get("direction"),
                     "movementPP": move.get("medianChangePP"),

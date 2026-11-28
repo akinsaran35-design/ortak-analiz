@@ -10,6 +10,11 @@ from league_config import LEAGUES, FIXTURE_CODES
 APPROVED=frozenset(("en.1","en.2","de.1","es.1","it.1","fr.1","nl.1","pt.1","tr.1"))
 SPORTS={code:sport for _,code,sport in LEAGUES}
 
+RETRY_DAYS=30
+
+def within_window(day,now):
+    return now.date()-timedelta(days=RETRY_DAYS)<=date.fromisoformat(day)<now.date()
+
 def source_urls(code,day):
     d=date.fromisoformat(day)
     y=d.year if d.month>=7 else d.year-1
@@ -50,8 +55,7 @@ def combined_archive(prospective,performance):
 def build_report(archive,now,reader=read):
     groups=defaultdict(list)
     for r in archive.values():
-        d=date.fromisoformat(r["date"])
-        if r["league"] in APPROVED and now.date()-timedelta(days=14)<=d<now.date():
+        if r["league"] in APPROVED and within_window(r["date"],now):
             groups[(r["league"],r["date"])].append(r)
     reports=[]
     cache={}
@@ -84,7 +88,7 @@ def verified_rows(report,now):
         out=[]
         for group in report["groups"]:
             code,day=group["league"],group["date"]
-            if code not in APPROVED or group["errors"] or not now.date()-timedelta(days=14)<=date.fromisoformat(day)<now.date(): continue
+            if code not in APPROVED or group["errors"] or not within_window(day,now): continue
             urls=source_urls(code,day)
             if group["sources"]!=list(urls): continue
             for r in group["rows"]:
@@ -101,6 +105,7 @@ def main():
     performance=json.loads(Path("prediction_archive.json").read_text())
     combined,coverage=combined_archive(archive,performance)
     report=build_report(combined,now)
+    report["retryDays"]=RETRY_DAYS
     report["archiveCoverage"]=coverage
     report["automaticVerifiedCount"]=len(verified_rows(report,datetime.now(TR)))
     Path("multi_league_results.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")

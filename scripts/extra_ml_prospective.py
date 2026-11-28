@@ -77,7 +77,7 @@ def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,no
 def empty_ledger(meta,version=VERSION):
     return dict(version=version,modelSha256=meta["modelSha256"],forecasts={},settlements={},quarantine={})
 
-def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None):
+def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None,reference_fn=None):
     now=now.astimezone(TR)
     if ledger.get("version")!=version or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
         raise ValueError("cohort mismatch")
@@ -118,21 +118,46 @@ def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=N
             modelSha256=meta["modelSha256"],featureFingerprint=digest(features),featureCount=len(keys),
             historyThrough=info["historyThrough"],teamHistoryThrough=info["teamHistoryThrough"],
             trainingSourceVerification="single_source_only")
+        if reference_fn is not None:
+            ref=reference_fn(history,f,now,info,identity_fn)
+            if ref is not None:
+                ledger["forecasts"][k]["sameSourceVenueReference"]=ref
         existing.add(identity)
         added+=1
     return added,dict(excluded)
 
+def collect_inputs(started,reader=read,allow_partial=False):
+    inventory,history=build(reader=reader,end=started.date())
+    failed=[s for s in inventory["sources"] if s["error"]]
+    blocked={s["league"] for s in failed}
+    if failed and not allow_partial:
+        raise ValueError("incomplete historical inventory")
+    history=[r for r in history if r["league"] not in blocked]
+    fixtures=[]
+    errors=[]
+    requests=0
+    for league,_ in COMPETITIONS:
+        if league in blocked:continue
+        for i in range(1,HORIZON+1):
+            day=started.date()+timedelta(days=i)
+            url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates={day:%Y%m%d}"
+            requests+=1
+            try:
+                payload=json.loads(reader(url))
+                if not isinstance(payload,dict):raise ValueError("fixture schema")
+                fixtures.extend(f for f in scheduled_fixtures(payload,league,started) if f["date"]==day.isoformat())
+            except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
+                errors.append(dict(league=league,date=day.isoformat(),error=type(exc).__name__))
+    if errors and not allow_partial:raise ValueError("fixture source errors")
+    return history,fixtures,dict(historySourceFailures=failed,fixtureSourceFailures=errors,
+        excludedHistoricalLeagues=sorted(blocked),sourceSuccessful=inventory["successfulSources"],
+        sourceRequested=inventory["requestedSources"],fixtureRequests=requests,
+        fixtureSuccessful=requests-len(errors),partial=bool(failed or errors))
+
 def run():
     started=datetime.now(TR)
-    inventory,history=build(end=started.date())
-    if inventory["successfulSources"]!=inventory["requestedSources"]:
-        raise SystemExit("incomplete historical inventory")
-    fixtures=[]
-    for league,_ in COMPETITIONS:
-        for i in range(1,HORIZON+1):
-            day=(started.date()+timedelta(days=i)).strftime("%Y%m%d")
-            url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates={day}"
-            fixtures.extend(scheduled_fixtures(json.loads(read(url)),league,started))
+    frozen=MODEL.exists() and META.exists()
+    history,fixtures,diagnostics=collect_inputs(started,allow_partial=frozen)
     model,meta=load_or_freeze(history)
     ledger=read_json(LEDGER) if LEDGER.exists() else empty_ledger(meta)
     now=datetime.now(TR)
@@ -140,7 +165,7 @@ def run():
         raise SystemExit("date changed during collection; rerun")
     new,excluded=capture(ledger,history,fixtures,model,meta,now)
     write_json(LEDGER,ledger)
-    report=dict(version=VERSION,mode="prospective_research_only",fixturesChecked=len(fixtures),newForecasts=new,
+    report=dict(version=VERSION,mode="prospective_research_only",sourceDiagnostics=diagnostics,fixturesChecked=len(fixtures),newForecasts=new,
         recorded=len(ledger["forecasts"]),settled=len(ledger["settlements"]),excluded=excluded,
         modelFrozen=True,modelSha256=meta["modelSha256"],trainingMatches=meta["trainingMatches"],
         featureCount=len(meta["featureKeys"]),weights=dict(poisson=1-WEIGHT,catboost=WEIGHT),
