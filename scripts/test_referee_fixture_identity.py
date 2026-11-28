@@ -29,6 +29,24 @@ class IdentityTests(unittest.TestCase):
         self.assertEqual(match(doc,targets())["withReferee"],0)
         groups=targets();groups[0]["rows"]*=2
         self.assertEqual(match(provider(),groups)["matched"],0)
+    def test_diagnostic_partition(self):
+        def counts(doc,groups):
+            r=match(doc,groups)
+            c=next(x["counts"] for x in r["diagnostics"] if x["league"]=="de.1")
+            self.assertEqual(c["eligible"],sum(v for k,v in c.items() if k!="eligible"))
+            return c
+        doc=provider()
+        doc["response"][0]["fixture"]["date"]="2026-11-28T15:01:00+03:00"
+        self.assertEqual(counts(doc,targets())["kickoff_difference"],1)
+        doc=provider()
+        doc["response"][0]["teams"]["home"]["name"]="Other"
+        self.assertEqual(counts(doc,targets())["same_time_team_identity_unresolved"],1)
+        doc=provider()
+        doc["response"][0]["league"]["name"]="Other"
+        self.assertEqual(counts(doc,targets())["league_metadata_unverified"],1)
+        doc=provider()
+        doc["response"][0]["fixture"]["referee"]=None
+        self.assertEqual(counts(doc,targets())["matched_missing_referee"],1)
     def test_incomplete(self):
         doc=provider();doc["paging"]["total"]=2
         with self.assertRaises(ValueError):match(doc,targets())
