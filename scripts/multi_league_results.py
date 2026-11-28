@@ -55,9 +55,10 @@ def combined_archive(prospective,performance):
 def build_report(archive,now,reader=read):
     groups=defaultdict(list)
     for r in archive.values():
-        if r["league"] in APPROVED and within_window(r["date"],now):
+        if r["league"] in APPROVED and (within_window(r["date"],now) or r["date"]==now.date().isoformat()):
             groups[(r["league"],r["date"])].append(r)
     reports=[]
+    observations=[]
     cache={}
     for (code,day),records in sorted(groups.items()):
         urls=source_urls(code,day)
@@ -78,8 +79,11 @@ def build_report(archive,now,reader=read):
                 out["rows"].append(dict(date=day,home=r["home"],away=r["away"],csv=a,espn=b,status=status))
         except (OSError,ValueError,KeyError,TypeError,AttributeError) as exc:
             out["errors"].append(type(exc).__name__)
-        reports.append(out)
-    return {"version":"4.69","updatedAt":now.isoformat(),"mode":"research_only","approvedLeagues":sorted(APPROVED),"excludedLeagues":[],"groups":reports}
+        if day==now.date().isoformat():
+            observations.append(out)
+        else:
+            reports.append(out)
+    return {"version":"4.69","updatedAt":now.isoformat(),"mode":"research_only","approvedLeagues":sorted(APPROVED),"excludedLeagues":[],"groups":reports,"todayObservations":observations,"observationDate":now.date().isoformat()}
 
 def verified_rows(report,now):
     try:
