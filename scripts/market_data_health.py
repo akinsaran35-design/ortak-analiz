@@ -61,6 +61,54 @@ def build(snapshot,movement,now):
         volume=dict(status="source_unavailable",matchedAmount=None,currency=None,amountTRY=None,worldwideTotal=None,reason="Odds and price movement do not establish wager volume."),
         productionEnabled=False,predictionsEnabled=False)
 
+def coverage(snapshot,archive,now):
+    """Inventory and freshness are different. No requests or inferred prices."""
+    from collections import Counter
+    snapshot=snapshot if isinstance(snapshot,dict) else {}
+    archive=archive if isinstance(archive,dict) else {}
+    source_ok=(snapshot.get("source")=="The Odds API" and snapshot.get("region")=="uk"
+        and snapshot.get("market")=="totals" and snapshot.get("errors")==[])
+    current=source_ok and fresh(snapshot.get("updatedAt"),now)
+    events=objects(snapshot.get("events"))
+    ids=Counter(e.get("id") for e in events if isinstance(e.get("id"),str))
+    markets={}
+    for point,market in ((1.5,"over15"),(2.5,"over25")):
+        any_count=ready_count=future_fresh=0
+        for e in events if source_ok else []:
+            ident=e.get("id")
+            if not isinstance(ident,str) or not ident or ids[ident]!=1:continue
+            books=objects(e.get("bookmakers"))
+            keys=Counter(b.get("key") for b in books if isinstance(b.get("key"),str))
+            observed=fresh_count=0
+            for b in books:
+                k=b.get("key")
+                if not isinstance(k,str) or not k or keys[k]!=1:continue
+                lines=[l for l in objects(b.get("lines")) if l.get("point")==point]
+                if len(lines)!=1:continue
+                l=lines[0]
+                if not price(l.get("over")) or not price(l.get("under")):continue
+                try:instant(l["lastUpdate"])
+                except (ValueError,TypeError,KeyError,AttributeError,OverflowError):continue
+                observed+=1
+                fresh_count+=int(fresh(l.get("lastUpdate"),now))
+            any_count+=int(observed>=1)
+            ready_count+=int(observed>=3)
+            try:future=instant(e["kickoff"])>now
+            except (ValueError,TypeError,KeyError,AttributeError,OverflowError):future=False
+            future_fresh+=int(current and future and fresh_count>=3)
+        markets[market]=dict(sourceScope="totals",observedEvents=any_count,observedThreeBookEvents=ready_count,
+            freshFutureThreeBookEvents=future_fresh,status="observed" if future_fresh else "stale_or_invalid_snapshot" if not current else "insufficient_coverage")
+    markets["btts"]=dict(sourceScope="not_requested",observedEvents=None,observedThreeBookEvents=None,
+        freshFutureThreeBookEvents=None,status="not_requested")
+    records=archive.get("records",{})
+    archive_ok=archive.get("mode")=="research_only" and isinstance(records,dict)
+    historic=Counter(v.get("market") for v in records.values() if isinstance(v,dict) and v.get("market") in ("over15","btts")) if archive_ok else Counter()
+    return dict(snapshotAt=snapshot.get("updatedAt"),snapshotFresh=current,sourceAccepted=source_ok,archivedEvents=len(events),
+        markets=markets,historicalExtraMarketArchive=dict(updatedAt=archive.get("updatedAt") if archive_ok else None,
+            recordCounts={m:historic[m] for m in ("over15","btts")},recordUnit="event_market_bookmaker",usedAsCurrentEvidence=False),
+        remainingCreditsAtSnapshot=snapshot.get("remainingCredits"),additionalApiRequests=0,extraMarketCollectionEnabled=False,
+        productionEnabled=False)
+
 def self_test():
     now=datetime(2026,11,27,12,tzinfo=timezone.utc)
     stamp=now.isoformat()
@@ -89,6 +137,11 @@ if __name__=="__main__":
         snapshot=json.loads(Path("odds.json").read_text())
         movement=json.loads(Path("market_movement.json").read_text())
         report=build(snapshot,movement,datetime.now(timezone.utc))
+        archive_path=Path("extra_market_archive.json")
+        try:archive=json.loads(archive_path.read_text()) if archive_path.exists() else {}
+        except (OSError,ValueError):archive={}
+        report["marketCoverage"]=coverage(snapshot,archive,datetime.now(timezone.utc))
+        report["coverageVersion"]="6.75"
         Path("market_data_health.json").write_text(json.dumps(report,ensure_ascii=False,indent=2))
         print(json.dumps({k:v for k,v in report.items() if k!="odds"}))
         print("Odds health:",report["odds"]["status"],report["odds"]["freshEvents"])
