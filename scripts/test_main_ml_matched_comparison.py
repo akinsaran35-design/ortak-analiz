@@ -16,6 +16,19 @@ class MatchedTests(unittest.TestCase):
         pairs=dict(version="6.69",modelSha256="x",pairs={})
         now=datetime(2026,11,28,12,tzinfo=TR)
         self.assertEqual(build(pairs,ledger,meta,legacy,now)["newPairs"],1)
+        # New timing evidence is locked only when a new pair is created.
+        timing=dict(version="6.82",generationStartedAt="2026-11-27T11:00:00+03:00",generationCompletedAt="2026-11-27T11:30:00+03:00",historyCutoffExclusive="2026-11-27",historyThrough="2026-11-26",sameSourceDataEstablished=False)
+        timed_legacy=copy.deepcopy(legacy)
+        timed_legacy[lk]["forecastTiming"]=timing
+        timed=dict(version="6.69",modelSha256="x",pairs={})
+        self.assertEqual(build(timed,ledger,meta,timed_legacy,now)["newPairs"],1)
+        self.assertEqual(timed["pairs"][k]["legacyTiming"],timing)
+        self.assertNotIn("legacyTiming",pairs["pairs"][k])
+        self.assertEqual(legacy_provenance(timed,ledger,timed_legacy)["counts"],{"verified":1})
+        self.assertEqual(legacy_provenance(timed,ledger,legacy)["counts"],{"changed":1})
+        tampered=copy.deepcopy(timed)
+        tampered["pairs"][k]["legacyTiming"]["historyThrough"]="2026-11-25"
+        with self.assertRaises(ValueError):build(tampered,ledger,meta,{},now)
         frozen=copy.deepcopy(pairs)
         self.assertEqual(legacy_provenance(pairs,ledger,legacy)["counts"],{"verified":1})
         edited=copy.deepcopy(legacy)
