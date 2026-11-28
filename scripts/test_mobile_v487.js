@@ -79,7 +79,7 @@ assert.deepEqual(historicalStatsFor(row,statsData,now),statsRow);
 assert.equal(historicalStatsFor(row,statsData,now+86400001),null);
 assert.equal(historicalStatsFor(row,{...statsData,football_statistics_pilot:{...statsData.football_statistics_pilot,dailyUpdatedAt:"wrong"}},now),null);
 
-const {liveRows}=require("../mobile-v487.js");
+const {liveRows,acceptRadarReport}=require("../mobile-v487.js");
 const liveRow={league:"en.1",eventId:"123",home:"A",away:"B",quality:"observation_ready",receivedAt:updatedAt,observation:{state:"in",score:[1,0],clock:"54'",metrics:{corners:[4,1],shots:[8,3],shotsOnTarget:[3,1],yellowCards:[1,0],redCards:[0,0],possession:[60,40]}}};
 const liveReport={version:"5.15",mode:"live_analysis_quality_only",predictionsEnabled:false,sourceTimestampVerified:false,decision:"PAS",updatedAt,rows:[liveRow]};
 assert.equal(liveRows(liveReport,now).length,1);
@@ -88,7 +88,13 @@ assert.equal(liveRows(liveReport,now-1).length,0);
 assert.equal(liveRows({...liveReport,rows:[liveRow,liveRow]},now).length,0);
 assert.equal(liveRows({...liveReport,predictionsEnabled:true},now).length,0);
 assert.equal(liveRows({...liveReport,rows:[{...liveRow,quality:"stale_receipt"}]},now).length,0);
-console.log("Live observation freshness and duplicate guards passed");
+assert.equal(acceptRadarReport(undefined,liveReport,now),liveReport);
+const nextRadar={...liveReport,updatedAt:new Date(now+1000).toISOString(),rows:[]};
+assert.equal(acceptRadarReport(liveReport,nextRadar,now+1000),nextRadar);
+assert.equal(acceptRadarReport(nextRadar,liveReport,now+1000),nextRadar);
+assert.equal(acceptRadarReport(liveReport,nextRadar,now),liveReport);
+assert.equal(acceptRadarReport(liveReport,{...nextRadar,predictionsEnabled:true},now+1000),liveReport);
+console.log("Live observation freshness, monotonic publication and duplicate guards passed");
 
 const {matchOverview,movementFor}=require("../mobile-v487.js");
 const overview={...modelRow,expectedGoals:{home:1.5,away:1},scoreProbabilities:{homeWin:.48,draw:.26,awayWin:.26}};
