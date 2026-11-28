@@ -36,7 +36,7 @@ const {chromium}=require("playwright");
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
-  await page.getByText("FOOTBALL INTELLIGENCE · ARAYÜZ V7.13",{exact:true}).waitFor();
+  await page.getByText("FOOTBALL INTELLIGENCE · ARAYÜZ V7.32",{exact:true}).waitFor();
   await page.locator(".extra-fixture-panel > summary").click();
   await page.locator(".extra-fixture-card > summary").click();
   await page.locator(".extra-fixture-card").getByText("Korner · 2 kayıt · Takım / rakip: 4 / 5",{exact:true}).first().waitFor();
