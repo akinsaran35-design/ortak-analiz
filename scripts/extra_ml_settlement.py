@@ -88,7 +88,7 @@ def validate(ledger,meta,now,version=VERSION,codes=CODES):
                 or not aware(r["kickoff"])<aware(s["settledAt"])<=now or aware(s["settledAt"]).date()<=date.fromisoformat(r["date"])):
                 raise ValueError("invalid stored settlement")
 
-def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=team_key,espn_codes=None):
+def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=team_key,espn_codes=None,diagnostics=None):
     now=now.astimezone(TR)
     validate(ledger,meta,now,version=version,codes=codes)
     cutoff=now.date()-timedelta(days=RECHECK_DAYS)
@@ -96,15 +96,29 @@ def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=t
     secondary={}
     errors=[]
     added=0
+    counts=Counter()
+    by_league=defaultdict(Counter)
+    def note(f,reason):
+        counts[reason]+=1
+        by_league[f["league"]][reason]+=1
+    def parse_espn(raw):
+        payload=json.loads(raw)
+        if not isinstance(payload,dict) or not isinstance(payload.get("events"),list):
+            raise ValueError("ESPN schema")
+        return payload
     for k,f in sorted(ledger["forecasts"].items()):
         d=date.fromisoformat(f["date"])
-        if d>=now.date() or k in ledger["quarantine"] or (k in ledger["settlements"] and d<cutoff):
-            continue
+        if k in ledger["quarantine"]:
+            note(f,"already_quarantined");continue
+        if d>=now.date():
+            note(f,"not_yet_eligible");continue
+        if k in ledger["settlements"] and d<cutoff:
+            note(f,"outside_recheck_window");continue
         l=f["league"]
         year=d.year if d.month>=7 else d.year-1
         cu=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{codes[l]}.csv"
         eu=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{espn_codes[l] if espn_codes is not None else l}/scoreboard?dates={d:%Y%m%d}"
-        for cache,url,parse in ((primary,cu,lambda raw:csv_evidence(raw,l,identity_fn)),(secondary,eu,json.loads)):
+        for cache,url,parse in ((primary,cu,lambda raw:csv_evidence(raw,l,identity_fn)),(secondary,eu,parse_espn)):
             if url not in cache:
                 try:
                     cache[url]=parse(reader(url))
@@ -112,6 +126,7 @@ def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=t
                     cache[url]=None
                     errors.append(dict(league=l,date=f["date"],source="football-data" if cache is primary else "espn",error=type(exc).__name__))
         if primary[cu] is None or secondary[eu] is None:
+            note(f,"both_sources_unavailable" if primary[cu] is None and secondary[eu] is None else "csv_source_unavailable" if primary[cu] is None else "espn_source_unavailable")
             continue
         entries=primary[cu].get((f["date"],f["home"],f["away"]),[])
         b,reason=espn_evidence(secondary[eu],f,identity_fn)
@@ -124,11 +139,22 @@ def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=t
         if prior and any(v is not None and v!=prior["score"] for v in (a,b)):
             reason="settled_score_changed"
         if reason:
+            note(f,reason)
             ledger["quarantine"][k]=dict(reason=reason,detectedAt=now.isoformat())
         elif not prior and a is not None and a==b:
             ledger["settlements"][k]=dict(score=a,eventId=f["eventId"],settledAt=now.isoformat(),
                 sources=["football-data","espn"],sourceUrls=[cu,eu])
             added+=1
+            note(f,"newly_verified")
+        elif prior and a is not None and a==b:
+            note(f,"previously_verified_rechecked")
+        else:
+            prefix="previously_verified_" if prior else ""
+            note(f,prefix+("both_scores_missing" if a is None and b is None else "csv_score_missing" if a is None else "espn_final_score_missing"))
+    if diagnostics is not None:
+        diagnostics.update(counts=dict(counts),byLeague={k:dict(v) for k,v in sorted(by_league.items())},
+            classifiedFixtures=sum(counts.values()),uniqueCSVRequests=len(primary),uniqueESPNRequests=len(secondary),
+            missingScoreDoesNotProveDelayCause=True)
     validate(ledger,meta,now,version=version,codes=codes)
     return added,errors
 
