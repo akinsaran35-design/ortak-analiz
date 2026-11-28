@@ -787,6 +787,87 @@ def markov_numerical_audit(rows):
         verifiedEventTimelines=0,stateDependentRatesFitted=False,liveValidation=False,
         stoppageTimeModeled=False,productionModelValidated=False)
 
+ELO_INITIAL=1500.0
+ELO_K=20.0
+ELO_HOME_ADVANTAGE=60.0
+ELO_SCALES=(0.0,0.25,0.5,1.0)
+
+def elo_expected(home,away,advantage=ELO_HOME_ADVANTAGE):
+    """Expected result points, not the probability of an outright win."""
+    return 1/(1+10**(-max(-3000,min(3000,home-away+advantage))/400))
+
+def elo_delta(home,away,hg,ag):
+    actual=1.0 if hg>ag else 0.0 if hg<ag else 0.5
+    return ELO_K*(actual-elo_expected(home,away))
+
+def elo_goal_means(h,a,home_rating,away_rating,scale):
+    """Redistribute league goal total by relative strength; venue already in means."""
+    if not all(math.isfinite(v) for v in (h,a,home_rating,away_rating,scale)) or min(h,a,scale)<0:
+        raise ValueError("invalid Elo goal inputs")
+    if not h or not a or not scale or home_rating==away_rating:
+        return h,a
+    multiplier=10**max(-6,min(6,scale*(home_rating-away_rating)/400))
+    total=h+a
+    home=total*(h*multiplier)/(h*multiplier+a)
+    return home,total-home
+
+def elo_backtest(rows):
+    """Fit strength using past dates only; select goal-share scale before holdout."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    ratings={}
+    games=Counter()
+    samples=[]
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        changes=Counter()
+        for r in group:
+            l=r["league"]
+            hk,ak=(l,r["home"]),(l,r["away"])
+            rh,ra=ratings.get(hk,ELO_INITIAL),ratings.get(ak,ELO_INITIAL)
+            x,y=r["csv"]
+            d=elo_delta(rh,ra,x,y)
+            changes[hk]+=d
+            changes[ak]-=d
+            hs,as_,n=history.get(l,(0,0,0))
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            h,a=hs/n,as_/n
+            probs=[goal_probabilities(*elo_goal_means(h,a,rh,ra,s)) for s in ELO_SCALES]
+            samples.append((day,probs,labels(x,y),min(games[hk],games[ak])))
+        for team,d in changes.items():
+            ratings[team]=ratings.get(team,ELO_INITIAL)+d
+        for r in group:
+            l=r["league"]
+            games[(l,r["home"])]+=1
+            games[(l,r["away"])]+=1
+            h,a,n=history.get(l,(0,0,0))
+            x,y=r["csv"]
+            history[l]=(h+x,a+y,n+1)
+    days=sorted({r[0] for r in samples})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    tune=[r for r in samples if cutoff and r[0]<cutoff]
+    test=[r for r in samples if cutoff and r[0]>=cutoff]
+    def loss(items,j):
+        return sum((r[1][j][2]-r[2][2])**2 for r in items)/len(items)
+    selected=min(range(len(ELO_SCALES)),key=lambda j:loss(tune,j)) if len(tune)>=MIN_VALIDATION_MATCHES else 0
+    metrics={}
+    for i,k in enumerate(MARKETS):
+        def score(j):
+            if not test:
+                return dict(brier=None,accuracyPct=None)
+            return dict(brier=round(sum((r[1][j][i]-r[2][i])**2 for r in test)/len(test),6),
+                accuracyPct=round(100*sum((r[1][j][i]>=0.5)==bool(r[2][i]) for r in test)/len(test),2))
+        metrics[k]=dict(n=len(test),poisson=score(0),elo=score(selected))
+    return dict(model="elo_goal_share",holdoutStart=cutoff,tuneMatches=len(tune),holdoutMatches=len(test),
+        ratingCount=len(ratings),initialRating=ELO_INITIAL,kFactor=ELO_K,homeAdvantage=ELO_HOME_ADVANTAGE,
+        candidateScales=list(ELO_SCALES),selectedScale=ELO_SCALES[selected],selectionMarket="btts",
+        bothTeamsFivePriorMatches=sum(r[3]>=5 for r in test),markets=metrics,
+        preservesExpectedTotal=True,sameDayTraining=False,repeatedHoldout=True,
+        productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -807,7 +888,8 @@ def build(now,reader=read):
     nb=negative_binomial_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     bootstrap=bootstrap_model_comparison([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     markov=markov_numerical_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.39",markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    elo=elo_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.40",eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -818,6 +900,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("ELO_BACKTEST",json.dumps(report["eloBacktest"]))
     print("MARKOV_AUDIT",json.dumps({k:v for k,v in report["markovAudit"].items() if k!="cases"}))
     print("BOOTSTRAP_COMPARISON",json.dumps(report["bootstrapComparison"]))
     print("NEGATIVE_BINOMIAL_BACKTEST",json.dumps(report["negativeBinomialBacktest"]))
