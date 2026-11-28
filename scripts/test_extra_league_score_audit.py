@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest,paired_date_bootstrap,bootstrap_model_comparison,markov_transition,markov_score_probabilities,markov_numerical_audit,elo_expected,elo_delta,elo_goal_means,elo_backtest,glicko_update,glicko_inactive,glicko_goal_means,glicko_backtest,ensemble_samples,ensemble_prediction,fit_ensemble_weights,ensemble_backtest,ENSEMBLE_MODELS,fit_league_calibration,apply_league_calibration,league_calibration_backtest,score_class,xgb_market_probabilities,xgb_fit,xgb_predictions,xgb_backtest,lightgbm_fit,lightgbm_backtest
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest,paired_date_bootstrap,bootstrap_model_comparison,markov_transition,markov_score_probabilities,markov_numerical_audit,elo_expected,elo_delta,elo_goal_means,elo_backtest,glicko_update,glicko_inactive,glicko_goal_means,glicko_backtest,ensemble_samples,ensemble_prediction,fit_ensemble_weights,ensemble_backtest,ENSEMBLE_MODELS,fit_league_calibration,apply_league_calibration,league_calibration_backtest,score_class,xgb_market_probabilities,xgb_fit,xgb_predictions,xgb_backtest,lightgbm_fit,lightgbm_backtest,catboost_fit,catboost_backtest
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -350,6 +350,27 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result["markets"]["btts"]["ensemble"],xgb["markets"]["btts"]["ensemble"])
         self.assertFalse(result["productionModelValidated"])
         self.assertIsNone(lightgbm_backtest([])["markets"]["btts"]["lightgbm"]["brier"])
+    def test_catboost_stacking(self):
+        ys=[(0,0,0),(1,0,0),(1,0,1),(1,1,0),(1,1,1)]
+        train=[("2026-01-01",tuple((0.2+0.1*i,0.1,0.1) for _ in ENSEMBLE_MODELS),ys[i]) for i in range(5) for _ in range(25)]
+        self.assertIsNone(catboost_fit(train[:20]))
+        self.assertIsNone(catboost_fit([train[0]]*120))
+        model=catboost_fit(train)
+        self.assertIsNotNone(model)
+        self.assertEqual(list(model.classes_),list(range(5)))
+        pred=xgb_predictions(model,train)
+        self.assertEqual(len(pred),125)
+        self.assertTrue(all(0<=q<=1 for p in pred for q in p))
+        self.assertTrue(all(p[0]>=max(p[1:])-1e-12 for p in pred))
+        start=datetime(2026,8,1)
+        scores=[(0,0),(2,0),(1,1),(3,0),(2,1)]
+        rows=[dict(league="sco.1",date=(start+timedelta(days=d)).date().isoformat(),home=f"a{i}",away=f"b{i}",csv=list(scores[(i+d)%5]),espn=list(scores[(i+d)%5]),status="corroborated") for d in range(45) for i in range(10)]
+        result=catboost_backtest(rows)
+        self.assertTrue(result["trained"])
+        self.assertEqual(result,catboost_backtest(list(reversed(rows))))
+        self.assertEqual(result["markets"]["btts"]["ensemble"],xgb_backtest(rows)["markets"]["btts"]["ensemble"])
+        self.assertFalse(result["productionModelValidated"])
+        self.assertIsNone(catboost_backtest([])["markets"]["btts"]["catboost"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
