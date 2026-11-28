@@ -1,6 +1,6 @@
 import copy,json,unittest
 from datetime import datetime
-from main_ml_matched_comparison import build,identity,legacy_provenance
+from main_ml_matched_comparison import build,identity,legacy_provenance,match_evidence,market_evidence_summary
 from results_source_pilot import TR
 from extra_league_prospective import key
 class MatchedTests(unittest.TestCase):
@@ -57,4 +57,43 @@ class MatchedTests(unittest.TestCase):
         self.assertEqual(stats["pairedPoissonBootstrap"]["meanImprovement"],0)
         ledger["quarantine"][k]={}
         self.assertEqual(build(pairs,ledger,meta,legacy,end)["validSettled"],0)
+    def test_market_evidence_requires_verified_result_and_legacy_provenance(self):
+        candidate={"over15":.8,"over25":.7,"btts":.6}
+        poisson={"over15":.7,"over25":.4,"btts":.3}
+        legacy={"over15":.6,"over25":.2,"btts":.1}
+        forecast=dict(league="en.1",date="2026-11-29",home="arsenal",away="chelsea",
+            eventId="123",kickoff="2026-11-29T12:00:00+00:00",
+            recordedAt="2026-11-28T11:00:00+03:00",historyThrough="2026-11-27",
+            featureFingerprint="fixture-features",candidate=candidate,poisson=poisson)
+        pair=dict(legacyRecordedAt="2026-11-28T10:00:00+03:00",legacy=legacy)
+        result=dict(score=[2,0],sources=["espn","football-data"],
+            settledAt="2026-11-30T12:00:00+03:00")
+        ledger=dict(forecasts={"match":forecast},settlements={},quarantine={})
+        cases=(
+            ("pending",{}, {}, "verified",0),
+            ("verified",{"match":result}, {}, "changed",0),
+            ("verified",{"match":result}, {}, "verified",1),
+            ("quarantined",{"match":result}, {"match":{"reason":"source_score_conflict"}}, "verified",0),
+        )
+        for status,settlements,quarantine,provenance,expected_count in cases:
+            ledger.update(settlements=settlements,quarantine=quarantine)
+            rows=match_evidence(ledger,{"match":pair},{"match":provenance})
+            self.assertEqual(rows[0]["resultStatus"],status)
+            if status!="verified":
+                self.assertIsNone(rows[0]["result"])
+            for market,outcome in (("over15",1),("over25",0),("btts",0)):
+                with self.subTest(status=status,provenance=provenance,market=market):
+                    summary=market_evidence_summary(rows,market)
+                    self.assertEqual(summary["comparableResults"],expected_count)
+                    self.assertFalse(summary["sampleTargetReached"])
+                    for name,probabilities in (("candidate",candidate),("poisson",poisson),("legacy",legacy)):
+                        metrics=summary["models"][name]
+                        self.assertEqual(metrics["n"],expected_count)
+                        if expected_count:
+                            self.assertAlmostEqual(metrics["brier"],(probabilities[market]-outcome)**2)
+                        else:
+                            self.assertIsNone(metrics["brier"])
+                    if not expected_count:
+                        self.assertEqual(summary["pairedBrierImprovement"],{"legacy":None,"poisson":None})
+
 if __name__=="__main__":unittest.main()
