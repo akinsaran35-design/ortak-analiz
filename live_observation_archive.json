@@ -1,4 +1,277 @@
 {
+  "de.1:401884723": {
+    "league": "de.1",
+    "eventId": "401884723",
+    "home": "Mainz",
+    "away": "1. FC Union Berlin",
+    "kickoff": "2026-11-28T14:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.666379+03:00",
+        "minute": 16,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            0
+          ],
+          "shots": [
+            1,
+            2
+          ],
+          "shotsOnTarget": [
+            0,
+            1
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "de.1:401884722": {
+    "league": "de.1",
+    "eventId": "401884722",
+    "home": "Hamburg SV",
+    "away": "Bayern Munich",
+    "kickoff": "2026-11-28T14:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.754386+03:00",
+        "minute": 16,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            0,
+            2
+          ],
+          "shots": [
+            0,
+            5
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "de.1:401884721": {
+    "league": "de.1",
+    "eventId": "401884721",
+    "home": "FC Cologne",
+    "away": "SV Elversberg",
+    "kickoff": "2026-11-28T14:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.749388+03:00",
+        "minute": 16,
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            1
+          ],
+          "shots": [
+            3,
+            3
+          ],
+          "shotsOnTarget": [
+            1,
+            1
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "de.1:401884719": {
+    "league": "de.1",
+    "eventId": "401884719",
+    "home": "SC Paderborn 07",
+    "away": "Schalke 04",
+    "kickoff": "2026-11-28T14:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.863328+03:00",
+        "minute": 16,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            0,
+            0
+          ],
+          "shots": [
+            0,
+            2
+          ],
+          "shotsOnTarget": [
+            0,
+            1
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "it.1:401875081": {
+    "league": "it.1",
+    "eventId": "401875081",
+    "home": "Frosinone",
+    "away": "Parma",
+    "kickoff": "2026-11-28T14:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.662343+03:00",
+        "minute": 44,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            4,
+            4
+          ],
+          "shots": [
+            9,
+            7
+          ],
+          "shotsOnTarget": [
+            3,
+            1
+          ],
+          "yellowCards": [
+            1,
+            2
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "tr.1:401888236": {
+    "league": "tr.1",
+    "eventId": "401888236",
+    "home": "Samsunspor",
+    "away": "Genclerbirligi",
+    "kickoff": "2026-11-28T13:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.658900+03:00",
+        "minute": 88,
+        "score": [
+          3,
+          1
+        ],
+        "metrics": {
+          "corners": [
+            4,
+            1
+          ],
+          "shots": [
+            11,
+            13
+          ],
+          "shotsOnTarget": [
+            5,
+            2
+          ],
+          "yellowCards": [
+            3,
+            3
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "es.1:401882796": {
+    "league": "es.1",
+    "eventId": "401882796",
+    "home": "Real Betis",
+    "away": "Rayo Vallecano",
+    "kickoff": "2026-11-28T13:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T17:46:30.868373+03:00",
+        "minute": 83,
+        "score": [
+          0,
+          1
+        ],
+        "metrics": {
+          "corners": [
+            6,
+            2
+          ],
+          "shots": [
+            14,
+            11
+          ],
+          "shotsOnTarget": [
+            5,
+            3
+          ],
+          "yellowCards": [
+            3,
+            2
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
   "en.2:401880135": {
     "league": "en.2",
     "eventId": "401880135",

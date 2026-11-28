@@ -1,28 +1,208 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-28T16:59:15.926202+03:00",
-  "sourceUpdatedAt": "2026-11-28T16:59:15.863643+03:00",
+  "updatedAt": "2026-11-28T17:46:30.988968+03:00",
+  "sourceUpdatedAt": "2026-11-28T17:46:30.925308+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
   "counts": {
-    "observation_ready": 12
+    "observation_ready": 14
   },
   "rows": [
+    {
+      "league": "de.1",
+      "eventId": "401884723",
+      "home": "Mainz",
+      "away": "1. FC Union Berlin",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.666379+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "16'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            1,
+            0
+          ],
+          "possession": [
+            64.0,
+            36.0
+          ],
+          "shots": [
+            1,
+            2
+          ],
+          "shotsOnTarget": [
+            0,
+            1
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "ita.2",
+      "eventId": "401899528",
+      "home": "Ascoli",
+      "away": "Virtus Entella",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.651107+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "44'",
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            4,
+            0
+          ],
+          "possession": [
+            73.4,
+            26.6
+          ],
+          "shots": [
+            6,
+            5
+          ],
+          "shotsOnTarget": [
+            2,
+            2
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "it.1",
+      "eventId": "401875081",
+      "home": "Frosinone",
+      "away": "Parma",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.662343+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "44'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            1,
+            2
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            4,
+            4
+          ],
+          "possession": [
+            51.5,
+            48.5
+          ],
+          "shots": [
+            9,
+            7
+          ],
+          "shotsOnTarget": [
+            3,
+            1
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "ind.1",
+      "eventId": "401935553",
+      "home": "Chennaiyin FC",
+      "away": "Mumbai City FC",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.687633+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "45'",
+        "score": [
+          2,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            1,
+            2
+          ],
+          "possession": [
+            48.3,
+            51.7
+          ],
+          "shots": [
+            8,
+            5
+          ],
+          "shotsOnTarget": [
+            5,
+            2
+          ]
+        }
+      },
+      "prediction": null
+    },
     {
       "league": "rsa.1",
       "eventId": "401902006",
       "home": "AmaZulu",
       "away": "Milford FC",
       "kickoff": "2026-11-28T13:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.738671+03:00",
+      "receivedAt": "2026-11-28T17:46:30.737148+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_FIRST_HALF",
-        "clock": "27'",
+        "status": "STATUS_HALFTIME",
+        "clock": "45'+6'",
         "score": [
           0,
           2
@@ -37,20 +217,20 @@
             0
           ],
           "corners": [
-            0,
+            3,
             3
           ],
           "possession": [
-            46.0,
-            54.0
+            42.3,
+            57.7
           ],
           "shots": [
-            3,
-            2
+            4,
+            3
           ],
           "shotsOnTarget": [
             0,
-            2
+            3
           ]
         }
       },
@@ -62,15 +242,15 @@
       "home": "Samsunspor",
       "away": "Genclerbirligi",
       "kickoff": "2026-11-28T13:00:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.706167+03:00",
+      "receivedAt": "2026-11-28T17:46:30.658900+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+2'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "88'",
         "score": [
           3,
-          0
+          1
         ],
         "metrics": {
           "yellowCards": [
@@ -82,20 +262,20 @@
             0
           ],
           "corners": [
-            3,
-            0
+            4,
+            1
           ],
           "possession": [
-            57.8,
-            42.2
+            53.3,
+            46.7
           ],
           "shots": [
-            7,
-            3
+            11,
+            13
           ],
           "shotsOnTarget": [
-            4,
-            0
+            5,
+            2
           ]
         }
       },
@@ -107,40 +287,40 @@
       "home": "Las Palmas",
       "away": "FC Andorra",
       "kickoff": "2026-11-28T13:00:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.690416+03:00",
+      "receivedAt": "2026-11-28T17:46:30.676442+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+2'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "85'",
         "score": [
-          0,
+          4,
           1
         ],
         "metrics": {
           "yellowCards": [
-            1,
-            0
+            2,
+            1
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            1,
-            3
+            3,
+            5
           ],
           "possession": [
-            47.8,
-            52.2
+            49.4,
+            50.6
           ],
           "shots": [
-            2,
-            6
+            12,
+            8
           ],
           "shotsOnTarget": [
-            0,
-            1
+            7,
+            3
           ]
         }
       },
@@ -152,65 +332,20 @@
       "home": "Real Betis",
       "away": "Rayo Vallecano",
       "kickoff": "2026-11-28T13:00:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.713555+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+1'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            1,
-            1
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            3,
-            0
-          ],
-          "possession": [
-            49.1,
-            50.9
-          ],
-          "shots": [
-            10,
-            5
-          ],
-          "shotsOnTarget": [
-            3,
-            0
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "eng.4",
-      "eventId": "401881252",
-      "home": "Bristol Rovers",
-      "away": "Tranmere Rovers",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.786273+03:00",
+      "receivedAt": "2026-11-28T17:46:30.868373+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
         "status": "STATUS_SECOND_HALF",
-        "clock": "72'",
+        "clock": "83'",
         "score": [
-          1,
-          3
+          0,
+          1
         ],
         "metrics": {
           "yellowCards": [
-            2,
-            1
+            3,
+            2
           ],
           "redCards": [
             0,
@@ -218,81 +353,36 @@
           ],
           "corners": [
             6,
-            4
+            2
           ],
           "possession": [
-            64.3,
-            35.7
+            52.7,
+            47.3
           ],
           "shots": [
-            10,
-            14
+            14,
+            11
           ],
           "shotsOnTarget": [
-            3,
-            6
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "eng.3",
-      "eventId": "401880725",
-      "home": "Milton Keynes Dons",
-      "away": "Notts County",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.649764+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "71'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            1
-          ],
-          "redCards": [
-            0,
-            1
-          ],
-          "corners": [
-            2,
+            5,
             3
-          ],
-          "possession": [
-            51.2,
-            48.8
-          ],
-          "shots": [
-            7,
-            5
-          ],
-          "shotsOnTarget": [
-            1,
-            1
           ]
         }
       },
       "prediction": null
     },
     {
-      "league": "en.2",
-      "eventId": "401880135",
-      "home": "Blackburn Rovers",
-      "away": "Charlton Athletic",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.699852+03:00",
+      "league": "de.1",
+      "eventId": "401884722",
+      "home": "Hamburg SV",
+      "away": "Bayern Munich",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.754386+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "70'",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "16'",
         "score": [
           0,
           0
@@ -300,27 +390,72 @@
         "metrics": {
           "yellowCards": [
             0,
-            1
+            0
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            5,
-            3
+            0,
+            2
           ],
           "possession": [
-            59.5,
-            40.5
+            25.5,
+            74.5
           ],
           "shots": [
-            15,
-            4
+            0,
+            5
           ],
           "shotsOnTarget": [
-            4,
-            3
+            0,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "ita.2",
+      "eventId": "401899527",
+      "home": "Carrarese",
+      "away": "Juve Stabia",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.825147+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "45'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            2
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            1
+          ],
+          "possession": [
+            50.9,
+            49.1
+          ],
+          "shots": [
+            9,
+            5
+          ],
+          "shotsOnTarget": [
+            2,
+            1
           ]
         }
       },
@@ -332,14 +467,59 @@
       "home": "Chippa United",
       "away": "Kaizer Chiefs",
       "kickoff": "2026-11-28T13:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.688295+03:00",
+      "receivedAt": "2026-11-28T17:46:30.922660+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "57'",
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            1,
+            3
+          ],
+          "possession": [
+            48.2,
+            51.8
+          ],
+          "shots": [
+            3,
+            5
+          ],
+          "shotsOnTarget": [
+            2,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "de.1",
+      "eventId": "401884721",
+      "home": "FC Cologne",
+      "away": "SV Elversberg",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.749388+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
         "status": "STATUS_FIRST_HALF",
-        "clock": "28'",
+        "clock": "16'",
         "score": [
-          0,
+          1,
           0
         ],
         "metrics": {
@@ -352,64 +532,19 @@
             0
           ],
           "corners": [
-            0,
+            1,
             1
           ],
           "possession": [
-            44.9,
-            55.1
+            56.8,
+            43.2
           ],
           "shots": [
-            0,
+            3,
             3
           ],
           "shotsOnTarget": [
-            0,
-            0
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "eng.4",
-      "eventId": "401881249",
-      "home": "Exeter City",
-      "away": "Crawley Town",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.771071+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "72'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
             1,
-            2
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            9,
-            4
-          ],
-          "possession": [
-            65.7,
-            34.3
-          ],
-          "shots": [
-            21,
-            5
-          ],
-          "shotsOnTarget": [
-            5,
             1
           ]
         }
@@ -417,70 +552,25 @@
       "prediction": null
     },
     {
-      "league": "eng.3",
-      "eventId": "401880724",
-      "home": "Peterborough United",
-      "away": "Cambridge United",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.774869+03:00",
+      "league": "ita.2",
+      "eventId": "401899525",
+      "home": "Empoli",
+      "away": "Hellas Verona",
+      "kickoff": "2026-11-28T14:00:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.884811+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "73'",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "45'",
         "score": [
           1,
           1
         ],
         "metrics": {
           "yellowCards": [
-            2,
+            1,
             1
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            2,
-            1
-          ],
-          "possession": [
-            48.3,
-            51.7
-          ],
-          "shots": [
-            8,
-            6
-          ],
-          "shotsOnTarget": [
-            5,
-            1
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "en.2",
-      "eventId": "401880133",
-      "home": "Lincoln City",
-      "away": "Wolverhampton Wanderers",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.861455+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "69'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            2,
-            2
           ],
           "redCards": [
             0,
@@ -491,41 +581,41 @@
             3
           ],
           "possession": [
-            39.4,
-            60.6
+            45.1,
+            54.9
           ],
           "shots": [
-            4,
-            13
+            1,
+            8
           ],
           "shotsOnTarget": [
-            2,
-            2
+            1,
+            3
           ]
         }
       },
       "prediction": null
     },
     {
-      "league": "en.2",
-      "eventId": "401880131",
-      "home": "Preston North End",
-      "away": "Norwich City",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T16:59:15.783732+03:00",
+      "league": "de.1",
+      "eventId": "401884719",
+      "home": "SC Paderborn 07",
+      "away": "Schalke 04",
+      "kickoff": "2026-11-28T14:30:00+00:00",
+      "receivedAt": "2026-11-28T17:46:30.863328+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "71'",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "16'",
         "score": [
           0,
           0
         ],
         "metrics": {
           "yellowCards": [
-            3,
-            3
+            0,
+            0
           ],
           "redCards": [
             0,
@@ -533,19 +623,19 @@
           ],
           "corners": [
             0,
-            10
+            0
           ],
           "possession": [
-            25.5,
-            74.5
+            52.5,
+            47.5
           ],
           "shots": [
-            4,
-            21
+            0,
+            2
           ],
           "shotsOnTarget": [
-            2,
-            2
+            0,
+            1
           ]
         }
       },
