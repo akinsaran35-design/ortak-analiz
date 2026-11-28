@@ -42,24 +42,36 @@ def fixtures(payload,code,day,now):
             continue
     return out
 
-def collect(now,reader=read):
+def fixture_batch(code,day,now,reader):
+    url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{SOURCES[code][1]}/scoreboard?dates={day:%Y%m%d}"
+    try:
+        return fixtures(json.loads(reader(url)),code,day,now),None
+    except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
+        return [],dict(league=code,date=day.isoformat(),error=type(exc).__name__)
+
+def collect(now,reader=read,allow_partial=False):
     jobs=[(code,SOURCES[code][0],year) for _,code,_ in LEAGUES for year in SEASONS]
     with ThreadPoolExecutor(max_workers=4) as pool:
         res=list(pool.map(lambda j:fetch_season(j,reader,end=now.date()),jobs))
-    if any(s["error"] for _,s in res):raise ValueError("incomplete historical inventory")
-    history,_,_=deduplicate([r for rs,_ in res for r in rs])
+    failed=[s for _,s in res if s["error"]]
+    blocked={s["league"] for s in failed}
+    if failed and not allow_partial:raise ValueError("incomplete historical inventory")
+    history,_,_=deduplicate([r for rs,s in res if s["league"] not in blocked for r in rs])
     training=feature_rows([r for r in history if r["date"]<TUNE_START])
-    if len(training)!=2848:raise ValueError("V6.65 training inventory changed")
-    keys=set(training[0]["features"])
-    if len(keys)!=119 or any(set(r["features"])!=keys for r in training):raise ValueError("feature schema")
-    jobs=[(code,now.date()+timedelta(days=i)) for _,code,_ in LEAGUES for i in (1,2,3)]
-    def load(j):
-        code,day=j
-        url=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{SOURCES[code][1]}/scoreboard?dates={day:%Y%m%d}"
-        return fixtures(json.loads(reader(url)),code,day,now)
+    if not failed and len(training)!=2848:raise ValueError("V6.65 training inventory changed")
+    keys=set(training[0]["features"]) if training else set()
+    if training and (len(keys)!=119 or any(set(r["features"])!=keys for r in training)):raise ValueError("feature schema")
+    jobs=[(code,now.date()+timedelta(days=i)) for _,code,_ in LEAGUES if code not in blocked for i in (1,2,3)]
     with ThreadPoolExecutor(max_workers=4) as pool:
-        games=[f for rs in pool.map(load,jobs) for f in rs]
+        batches=list(pool.map(lambda j:fixture_batch(*j,now,reader),jobs))
+    fixture_errors=[error for _,error in batches if error]
+    if fixture_errors and not allow_partial:raise ValueError("fixture source errors")
+    games=[f for rs,_ in batches for f in rs]
     if datetime.now(TR).date()!=now.date():raise ValueError("date changed; rerun")
+    diagnostics=dict(historySourceFailures=failed,fixtureSourceFailures=fixture_errors,
+        excludedHistoricalLeagues=sorted(blocked),sourceSuccessful=len(res)-len(failed),sourceRequested=len(res),
+        fixtureRequests=len(jobs),fixtureSuccessful=len(jobs)-len(fixture_errors),partial=bool(failed or fixture_errors))
+    if allow_partial:return history,training,keys,games,diagnostics
     return history,training,keys,games,len(res)
 
 def run(reader=read):

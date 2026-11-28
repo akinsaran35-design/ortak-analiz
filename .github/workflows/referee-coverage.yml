@@ -1,0 +1,24 @@
+name: V7.14 football referee research
+on:
+  pull_request:
+    paths:
+      - 'scripts/referee_coverage.py'
+      - 'scripts/test_referee_coverage.py'
+      - '.github/workflows/referee-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  referee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline referee regression
+        run: python3 scripts/test_referee_coverage.py
+      - name: Measure historical referee coverage
+        run: python3 scripts/referee_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: referee-coverage
+          path: referee_coverage.json

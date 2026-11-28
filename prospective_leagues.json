@@ -1,10 +1,10 @@
 {
   "version": "4.88",
-  "updatedAt": "2026-11-28T11:30:02.109854+03:00",
+  "updatedAt": "2026-11-28T20:44:05.698401+03:00",
   "mode": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "recorded": 217,
+  "recorded": 222,
   "calibrationVersion": "5.03",
   "overallCalibration": {
     "1.5 Üst": {
@@ -1198,11 +1198,11 @@
       }
     },
     "tr.1": {
-      "recorded": 7,
+      "recorded": 12,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 4,
+          "pending": 9,
           "legacyWithoutForecast": 3,
           "invalid": 0,
           "scores": {},
@@ -1248,7 +1248,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 7,
+          "pending": 12,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -1294,7 +1294,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 4,
+          "pending": 9,
           "legacyWithoutForecast": 3,
           "invalid": 0,
           "scores": {},

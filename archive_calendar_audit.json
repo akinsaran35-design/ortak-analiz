@@ -1,11 +1,11 @@
 {
   "version": "4.70",
-  "updatedAt": "2026-11-28T08:30:07.558909+00:00",
+  "updatedAt": "2026-11-28T17:44:09.454980+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "prospective": {
     "version": "4.70",
-    "updatedAt": "2026-11-28T08:30:07.558909+00:00",
+    "updatedAt": "2026-11-28T17:44:09.454980+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -76,17 +76,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Elche CF",
-        "away": "Club Atlético de Madrid",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "40236ab976955345ebd1edb72abf6b22",
-        "kickoff": "2026-11-28T17:30:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "FC Internazionale Milano",
         "away": "Genoa CFC",
@@ -98,17 +87,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Málaga CF",
-        "away": "Athletic Club",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "33d92dabbd2606dfe9d31058f7b20cc8",
-        "kickoff": "2026-11-28T15:15:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "US Lecce",
         "away": "Atalanta BC",
@@ -116,39 +94,6 @@
         "corroboratedDate": "2026-11-30",
         "eventId": "f1d2a6064d1452074570bbc656d36a20",
         "kickoff": "2026-11-30T17:30:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "es.1",
-        "home": "Real Betis Balompié",
-        "away": "Rayo Vallecano de Madrid",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "c81520b9a9794749cfdab57f89bdeb16",
-        "kickoff": "2026-11-28T13:00:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
-        "home": "Torino FC",
-        "away": "SS Lazio",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "aec86b479e922f437ba228b9a9d74da1",
-        "kickoff": "2026-11-28T17:00:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
-        "home": "Frosinone Calcio",
-        "away": "Parma Calcio 1913",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "af3432ca724da03d38f0ff4e62045e4c",
-        "kickoff": "2026-11-28T14:00:00+00:00",
         "recordedAt": "2026-11-24T22:36:25.349101+03:00",
         "status": "review_pending"
       },
@@ -198,13 +143,13 @@
       }
     ],
     "counts": {
-      "review_pending": 17
+      "review_pending": 12
     },
     "decision": "PAS"
   },
   "performance": {
     "version": "4.70",
-    "updatedAt": "2026-11-28T08:30:07.558909+00:00",
+    "updatedAt": "2026-11-28T17:44:09.454980+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -275,17 +220,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Elche CF",
-        "away": "Club Atlético de Madrid",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "40236ab976955345ebd1edb72abf6b22",
-        "kickoff": "2026-11-28T17:30:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "FC Internazionale Milano",
         "away": "Genoa CFC",
@@ -297,17 +231,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Málaga CF",
-        "away": "Athletic Club",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "33d92dabbd2606dfe9d31058f7b20cc8",
-        "kickoff": "2026-11-28T15:15:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "US Lecce",
         "away": "Atalanta BC",
@@ -315,39 +238,6 @@
         "corroboratedDate": "2026-11-30",
         "eventId": "f1d2a6064d1452074570bbc656d36a20",
         "kickoff": "2026-11-30T17:30:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "es.1",
-        "home": "Real Betis Balompié",
-        "away": "Rayo Vallecano de Madrid",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "c81520b9a9794749cfdab57f89bdeb16",
-        "kickoff": "2026-11-28T13:00:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
-        "home": "Torino FC",
-        "away": "SS Lazio",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "aec86b479e922f437ba228b9a9d74da1",
-        "kickoff": "2026-11-28T17:00:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
-        "home": "Frosinone Calcio",
-        "away": "Parma Calcio 1913",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "af3432ca724da03d38f0ff4e62045e4c",
-        "kickoff": "2026-11-28T14:00:00+00:00",
         "recordedAt": "2026-11-26T16:53:31.851056+03:00",
         "status": "review_pending"
       },
@@ -397,7 +287,7 @@
       }
     ],
     "counts": {
-      "review_pending": 17
+      "review_pending": 12
     },
     "decision": "PAS"
   }

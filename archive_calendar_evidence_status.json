@@ -1,6 +1,6 @@
 {
   "version": "4.71",
-  "updatedAt": "2026-11-28T08:30:07.591666+00:00",
+  "updatedAt": "2026-11-28T17:44:09.491353+00:00",
   "mode": "research_only",
   "observations": 40,
   "archiveIdentities": 40,
@@ -8,10 +8,10 @@
   "newObservations": 0,
   "auditCounts": {
     "prospective": {
-      "review_pending": 17
+      "review_pending": 12
     },
     "performance": {
-      "review_pending": 17
+      "review_pending": 12
     }
   },
   "decision": "PAS"
