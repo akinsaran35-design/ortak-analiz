@@ -4,6 +4,8 @@ on:
     paths:
       - 'scripts/main_leagues_ml_prospective.py'
       - 'scripts/main_leagues_ml_settlement.py'
+      - 'scripts/check_frozen_cohort.py'
+      - 'scripts/test_check_frozen_cohort.py'
       - 'scripts/main_ml_matched_comparison.py'
       - 'scripts/main_ml_calibration_review.py'
       - 'scripts/main_ml_timing_audit.py'
@@ -49,6 +51,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install 'catboost==1.2.8' 'numpy==2.2.6' 'scipy==1.15.3'
+      - run: python scripts/test_check_frozen_cohort.py
       - run: python scripts/test_extra_ml_prospective.py
       - run: python scripts/test_main_leagues_ml_preflight.py
       - run: python scripts/test_main_leagues_ml_prospective.py
@@ -94,8 +97,27 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install 'catboost==1.2.8' 'numpy==2.2.6' 'scipy==1.15.3'
-      - run: python scripts/main_leagues_ml_prospective.py
-      - run: python scripts/main_leagues_ml_settlement.py
+      - name: Capture new forecasts
+        id: forecasts
+        continue-on-error: true
+        run: python scripts/main_leagues_ml_prospective.py
+      - name: Validate existing frozen cohort before independent settlement
+        id: cohort
+        run: python scripts/check_frozen_cohort.py main
+      - name: Verify existing forecast outcomes
+        id: settlement
+        run: python scripts/main_leagues_ml_settlement.py
+      - name: Preserve independent settlement evidence
+        if: steps.settlement.outcome == 'success'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- main_ml_frozen.cbm main_ml_frozen_manifest.json main_ml_prospective_ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record verified main ML settlement evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
       - run: python scripts/main_ml_matched_comparison.py
       - run: python scripts/main_ml_calibration_review.py
       - run: python scripts/main_ml_timing_audit.py
@@ -109,7 +131,8 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-      - uses: actions/upload-artifact@v4
+      - if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: main-ml-prospective-report
           path: |
@@ -120,3 +143,6 @@ jobs:
             main_ml_timing_audit.json
           if-no-files-found: error
           retention-days: 90
+      - name: Surface forecast capture failure after preserving verified evidence
+        if: always() && steps.forecasts.outcome == 'failure'
+        run: exit 1

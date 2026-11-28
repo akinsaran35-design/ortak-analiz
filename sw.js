@@ -1,6 +1,6 @@
 /* V4.74: dynamic research reports are network-only; static shell may work offline. */
-const CACHE="ortak-analiz-ui-form-715";
-const ASSETS=["./","./index.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./mobile-v487.js?ui=715","./money-v497.js?ui=715","./mobile-v487.css?ui=715","./legacy.html","./direct-radar-v727.js?ui=715"];
+const CACHE="ortak-analiz-ui-form-717";
+const ASSETS=["./","./index.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./mobile-v487.js?ui=717","./money-v497.js?ui=717","./mobile-v487.css?ui=717","./legacy.html","./direct-radar-v727.js?ui=717"];
 function networkOnly(request, origin) {
   const url=new URL(request.url);
   return url.origin===origin && (/\.json$/i.test(url.pathname) || request.cache==="no-store" || url.searchParams.has("ts"));

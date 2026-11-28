@@ -3,7 +3,7 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-28T14:53:06+03:00",
+  "updatedAt": "2026-11-28T20:43:41+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
@@ -14,8 +14,8 @@
   "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
   "leaguesChecked": 9,
   "leaguesLoaded": 9,
-  "fixturesToday": 39,
-  "fixturesNext7Days": 138,
+  "fixturesToday": 37,
+  "fixturesNext7Days": 133,
   "leagueDiagnostics": [
     {
       "league": "İngiltere Premier Lig",
@@ -164,13 +164,13 @@
     {
       "league": "Türkiye Süper Lig",
       "status": "partial",
-      "today": 2,
-      "next7": 11,
+      "today": 0,
+      "next7": 6,
       "completedMatches": 414,
-      "candidates": 5,
+      "candidates": 3,
       "excluded": {
         "alreadyScored": 0,
-        "insufficientHistory": 6
+        "insufficientHistory": 3
       },
       "seasonsLoaded": [
         "2026-27",
@@ -179,9 +179,9 @@
       "seasonErrors": {},
       "cachedHistoricalSeasons": {},
       "fixtureSources": [
-        "ESPN"
+        "The Odds API"
       ],
-      "fixtureScope": "independent_espn_fallback"
+      "fixtureScope": "fresh_odds_events_only"
     }
   ],
   "upcoming": [
@@ -6075,322 +6075,6 @@
           "limit": 12,
           "sample": 6,
           "csvMatchesAvailable": 6,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "gaziantep – amed sfk",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "genclerbirligi",
-              "gf": 0,
-              "ga": 1,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-06",
-              "opponent": "kasimpasa",
-              "gf": 0,
-              "ga": 2,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "trabzonspor",
-              "gf": 0,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-24",
-              "opponent": "erzurumspor",
-              "gf": 1,
-              "ga": 3,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-18",
-              "opponent": "basaksehir",
-              "gf": 1,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            }
-          ],
-          "wins": 0,
-          "draws": 0,
-          "losses": 5,
-          "goalsFor": 2,
-          "goalsAgainst": 10,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "away": {
-          "sample": 0,
-          "rows": [],
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
-        },
-        "h2h": [],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "original_league_history",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "galatasaray",
-              "gf": 1,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-07",
-              "opponent": "konyaspor",
-              "gf": 1,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "basaksehir",
-              "gf": 2,
-              "ga": 5,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-24",
-              "opponent": "amed",
-              "gf": 1,
-              "ga": 2,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-18",
-              "opponent": "kasimpasa",
-              "gf": 1,
-              "ga": 4,
-              "venue": "away",
-              "result": "L"
-            }
-          ],
-          "wins": 1,
-          "draws": 0,
-          "losses": 4,
-          "goalsFor": 6,
-          "goalsAgainst": 13,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "away": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "gaziantep",
-              "gf": 1,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-08",
-              "opponent": "besiktas",
-              "gf": 0,
-              "ga": 3,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-11-02",
-              "opponent": "alanyaspor",
-              "gf": 5,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-25",
-              "opponent": "konyaspor",
-              "gf": 0,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-17",
-              "opponent": "galatasaray",
-              "gf": 0,
-              "ga": 1,
-              "venue": "home",
-              "result": "L"
-            }
-          ],
-          "wins": 2,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 6,
-          "goalsAgainst": 6,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "h2h": [
-          {
-            "date": "2026-01-18",
-            "home": "genclerbirligi",
-            "away": "samsunspor",
-            "score": [
-              1,
-              1
-            ],
-            "stats": {
-              "corners": [
-                4,
-                6
-              ],
-              "yellowCards": [
-                0,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                8,
-                18
-              ],
-              "shotsOnTarget": [
-                3,
-                4
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-08-09",
-            "home": "samsunspor",
-            "away": "genclerbirligi",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                2,
-                3
-              ],
-              "yellowCards": [
-                1,
-                0
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                9,
-                8
-              ],
-              "shotsOnTarget": [
-                3,
-                1
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          }
-        ],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "football-data.co.uk",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 2,
-          "csvMatchesAvailable": 2,
           "conflictsExcluded": 0,
           "scope": "same_league_only",
           "extraDivision": null,
@@ -29044,510 +28728,6 @@
     {
       "date": "2026-11-30",
       "league": "Türkiye Süper Lig",
-      "match": "besiktas – galatasaray",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-22",
-              "opponent": "konyaspor",
-              "gf": 4,
-              "ga": 2,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-08",
-              "opponent": "genclerbirligi",
-              "gf": 3,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "kasimpasa",
-              "gf": 2,
-              "ga": 2,
-              "venue": "away",
-              "result": "D"
-            },
-            {
-              "date": "2026-10-26",
-              "opponent": "basaksehir",
-              "gf": 2,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-19",
-              "opponent": "trabzonspor",
-              "gf": 0,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            }
-          ],
-          "wins": 3,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 11,
-          "goalsAgainst": 6,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-22"
-        },
-        "away": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "samsunspor",
-              "gf": 2,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-07",
-              "opponent": "amed",
-              "gf": 4,
-              "ga": 3,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-30",
-              "opponent": "konyaspor",
-              "gf": 4,
-              "ga": 0,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-26",
-              "opponent": "fenerbahce",
-              "gf": 2,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-17",
-              "opponent": "genclerbirligi",
-              "gf": 1,
-              "ga": 0,
-              "venue": "away",
-              "result": "W"
-            }
-          ],
-          "wins": 5,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 13,
-          "goalsAgainst": 5,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "h2h": [
-          {
-            "date": "2026-03-07",
-            "home": "besiktas",
-            "away": "galatasaray",
-            "score": [
-              0,
-              1
-            ],
-            "stats": {
-              "corners": [
-                8,
-                4
-              ],
-              "yellowCards": [
-                3,
-                7
-              ],
-              "redCards": [
-                0,
-                1
-              ],
-              "shots": [
-                24,
-                12
-              ],
-              "shotsOnTarget": [
-                7,
-                4
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-10-04",
-            "home": "galatasaray",
-            "away": "besiktas",
-            "score": [
-              1,
-              1
-            ],
-            "stats": {
-              "corners": [
-                4,
-                8
-              ],
-              "yellowCards": [
-                1,
-                6
-              ],
-              "redCards": [
-                1,
-                0
-              ],
-              "shots": [
-                14,
-                11
-              ],
-              "shotsOnTarget": [
-                2,
-                5
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-03-29",
-            "home": "besiktas",
-            "away": "galatasaray",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                9,
-                3
-              ],
-              "yellowCards": [
-                3,
-                3
-              ],
-              "redCards": [
-                1,
-                1
-              ],
-              "shots": [
-                20,
-                9
-              ],
-              "shotsOnTarget": [
-                6,
-                3
-              ],
-              "halfTimeGoals": [
-                1,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2024-10-28",
-            "home": "galatasaray",
-            "away": "besiktas",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                8,
-                5
-              ],
-              "yellowCards": [
-                4,
-                3
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                17,
-                8
-              ],
-              "shotsOnTarget": [
-                6,
-                3
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2024-03-03",
-            "home": "besiktas",
-            "away": "galatasaray",
-            "score": [
-              0,
-              1
-            ],
-            "stats": {
-              "corners": [
-                4,
-                11
-              ],
-              "yellowCards": [
-                2,
-                0
-              ],
-              "redCards": [
-                1,
-                0
-              ],
-              "shots": [
-                12,
-                13
-              ],
-              "shotsOnTarget": [
-                3,
-                3
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2023-10-21",
-            "home": "galatasaray",
-            "away": "besiktas",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                6,
-                2
-              ],
-              "yellowCards": [
-                3,
-                5
-              ],
-              "redCards": [
-                0,
-                1
-              ],
-              "shots": [
-                25,
-                2
-              ],
-              "shotsOnTarget": [
-                10,
-                2
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2023-04-30",
-            "home": "besiktas",
-            "away": "galatasaray",
-            "score": [
-              3,
-              1
-            ],
-            "stats": {
-              "corners": [
-                4,
-                1
-              ],
-              "yellowCards": [
-                6,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                13,
-                7
-              ],
-              "shotsOnTarget": [
-                6,
-                1
-              ],
-              "halfTimeGoals": [
-                1,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2022-11-05",
-            "home": "galatasaray",
-            "away": "besiktas",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                10,
-                7
-              ],
-              "yellowCards": [
-                3,
-                4
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                19,
-                12
-              ],
-              "shotsOnTarget": [
-                5,
-                5
-              ],
-              "halfTimeGoals": [
-                1,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2022-03-14",
-            "home": "galatasaray",
-            "away": "besiktas",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                4,
-                5
-              ],
-              "yellowCards": [
-                4,
-                4
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                19,
-                10
-              ],
-              "shotsOnTarget": [
-                7,
-                1
-              ],
-              "halfTimeGoals": [
-                2,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2021-10-25",
-            "home": "besiktas",
-            "away": "galatasaray",
-            "score": [
-              2,
-              1
-            ],
-            "stats": {
-              "corners": [
-                5,
-                5
-              ],
-              "yellowCards": [
-                3,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                10,
-                12
-              ],
-              "shotsOnTarget": [
-                3,
-                4
-              ],
-              "halfTimeGoals": [
-                1,
-                1
-              ]
-            },
-            "competition": "T1"
-          }
-        ],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "football-data.co.uk",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 10,
-          "csvMatchesAvailable": 10,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-11-30",
-      "league": "Türkiye Süper Lig",
       "match": "goztepe – trabzonspor",
       "formResearch": {
         "version": "5.06",
@@ -34141,438 +33321,6 @@
           "limit": 12,
           "sample": 2,
           "csvMatchesAvailable": 2,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-12-04",
-      "league": "Türkiye Süper Lig",
-      "match": "galatasaray – rizespor",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "samsunspor",
-              "gf": 2,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-07",
-              "opponent": "amed",
-              "gf": 4,
-              "ga": 3,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-30",
-              "opponent": "konyaspor",
-              "gf": 4,
-              "ga": 0,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-26",
-              "opponent": "fenerbahce",
-              "gf": 2,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-17",
-              "opponent": "genclerbirligi",
-              "gf": 1,
-              "ga": 0,
-              "venue": "away",
-              "result": "W"
-            }
-          ],
-          "wins": 5,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 13,
-          "goalsAgainst": 5,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "away": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "amed",
-              "gf": 2,
-              "ga": 0,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-08",
-              "opponent": "erzurumspor",
-              "gf": 2,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-31",
-              "opponent": "kocaelispor",
-              "gf": 0,
-              "ga": 0,
-              "venue": "away",
-              "result": "D"
-            },
-            {
-              "date": "2026-10-26",
-              "opponent": "trabzonspor",
-              "gf": 3,
-              "ga": 4,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-16",
-              "opponent": "corum",
-              "gf": 1,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            }
-          ],
-          "wins": 2,
-          "draws": 1,
-          "losses": 2,
-          "goalsFor": 8,
-          "goalsAgainst": 7,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "h2h": [
-          {
-            "date": "2026-02-08",
-            "home": "rizespor",
-            "away": "galatasaray",
-            "score": [
-              0,
-              3
-            ],
-            "stats": {
-              "corners": [
-                3,
-                3
-              ],
-              "yellowCards": [
-                1,
-                1
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                15,
-                19
-              ],
-              "shotsOnTarget": [
-                4,
-                5
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-08-30",
-            "home": "galatasaray",
-            "away": "rizespor",
-            "score": [
-              3,
-              1
-            ],
-            "stats": {
-              "corners": [
-                5,
-                2
-              ],
-              "yellowCards": [
-                1,
-                4
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                16,
-                9
-              ],
-              "shotsOnTarget": [
-                7,
-                4
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-02-17",
-            "home": "rizespor",
-            "away": "galatasaray",
-            "score": [
-              1,
-              2
-            ],
-            "stats": {
-              "corners": [
-                3,
-                7
-              ],
-              "yellowCards": [
-                3,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                16,
-                18
-              ],
-              "shotsOnTarget": [
-                4,
-                3
-              ],
-              "halfTimeGoals": [
-                0,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2024-09-14",
-            "home": "galatasaray",
-            "away": "rizespor",
-            "score": [
-              5,
-              0
-            ],
-            "stats": {
-              "corners": [
-                6,
-                1
-              ],
-              "yellowCards": [
-                0,
-                0
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                23,
-                2
-              ],
-              "shotsOnTarget": [
-                9,
-                1
-              ],
-              "halfTimeGoals": [
-                2,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2024-03-08",
-            "home": "galatasaray",
-            "away": "rizespor",
-            "score": [
-              6,
-              2
-            ],
-            "stats": {
-              "corners": [
-                3,
-                3
-              ],
-              "yellowCards": [
-                1,
-                1
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                14,
-                10
-              ],
-              "shotsOnTarget": [
-                10,
-                4
-              ],
-              "halfTimeGoals": [
-                4,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2023-10-28",
-            "home": "rizespor",
-            "away": "galatasaray",
-            "score": [
-              0,
-              1
-            ],
-            "stats": {
-              "corners": [
-                6,
-                5
-              ],
-              "yellowCards": [
-                2,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                11,
-                20
-              ],
-              "shotsOnTarget": [
-                3,
-                5
-              ],
-              "halfTimeGoals": [
-                0,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2022-02-27",
-            "home": "galatasaray",
-            "away": "rizespor",
-            "score": [
-              4,
-              2
-            ],
-            "stats": {
-              "corners": [
-                9,
-                4
-              ],
-              "yellowCards": [
-                6,
-                5
-              ],
-              "redCards": [
-                0,
-                1
-              ],
-              "shots": [
-                18,
-                7
-              ],
-              "shotsOnTarget": [
-                9,
-                4
-              ],
-              "halfTimeGoals": [
-                1,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2021-10-03",
-            "home": "rizespor",
-            "away": "galatasaray",
-            "score": [
-              2,
-              3
-            ],
-            "stats": {
-              "corners": [
-                6,
-                6
-              ],
-              "yellowCards": [
-                4,
-                4
-              ],
-              "redCards": [
-                0,
-                1
-              ],
-              "shots": [
-                12,
-                21
-              ],
-              "shotsOnTarget": [
-                5,
-                8
-              ],
-              "halfTimeGoals": [
-                2,
-                1
-              ]
-            },
-            "competition": "T1"
-          }
-        ],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "football-data.co.uk",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 8,
-          "csvMatchesAvailable": 8,
           "conflictsExcluded": 0,
           "scope": "same_league_only",
           "extraDivision": null,
@@ -43212,20 +41960,63 @@
     {
       "date": "2026-12-05",
       "league": "Türkiye Süper Lig",
-      "match": "amed sfk – alanyaspor",
+      "match": "amed – alanyaspor",
       "formResearch": {
         "version": "5.06",
         "asOfExclusive": "2026-11-28",
         "scope": "available_league_history_only",
         "sourceConflictsExcluded": 0,
         "home": {
-          "sample": 0,
-          "rows": [],
-          "wins": 0,
+          "sample": 5,
+          "rows": [
+            {
+              "date": "2026-11-21",
+              "opponent": "rizespor",
+              "gf": 0,
+              "ga": 2,
+              "venue": "home",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-07",
+              "opponent": "galatasaray",
+              "gf": 3,
+              "ga": 4,
+              "venue": "away",
+              "result": "L"
+            },
+            {
+              "date": "2026-11-01",
+              "opponent": "eyupspor",
+              "gf": 5,
+              "ga": 1,
+              "venue": "home",
+              "result": "W"
+            },
+            {
+              "date": "2026-10-24",
+              "opponent": "samsunspor",
+              "gf": 2,
+              "ga": 1,
+              "venue": "away",
+              "result": "W"
+            },
+            {
+              "date": "2026-10-17",
+              "opponent": "konyaspor",
+              "gf": 1,
+              "ga": 0,
+              "venue": "home",
+              "result": "W"
+            }
+          ],
+          "wins": 3,
           "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0
+          "losses": 2,
+          "goalsFor": 11,
+          "goalsAgainst": 8,
+          "source": "football-data.co.uk",
+          "latestCompletedDate": "2026-11-21"
         },
         "away": {
           "sample": 5,
@@ -43299,510 +42090,6 @@
           "limit": 12,
           "sample": 0,
           "csvMatchesAvailable": 0,
-          "conflictsExcluded": 0,
-          "scope": "same_league_only",
-          "extraDivision": null,
-          "extraLoadedSeasons": [],
-          "extraFailedSeasons": [],
-          "crossDivisionMatches": 0,
-          "predictionsEnabled": false
-        }
-      }
-    },
-    {
-      "date": "2026-12-05",
-      "league": "Türkiye Süper Lig",
-      "match": "basaksehir – fenerbahce",
-      "formResearch": {
-        "version": "5.06",
-        "asOfExclusive": "2026-11-28",
-        "scope": "available_league_history_only",
-        "sourceConflictsExcluded": 0,
-        "home": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-23",
-              "opponent": "corum",
-              "gf": 4,
-              "ga": 2,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-07",
-              "opponent": "goztepe",
-              "gf": 2,
-              "ga": 1,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-11-01",
-              "opponent": "samsunspor",
-              "gf": 5,
-              "ga": 2,
-              "venue": "home",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-26",
-              "opponent": "besiktas",
-              "gf": 0,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-18",
-              "opponent": "gaziantep",
-              "gf": 2,
-              "ga": 1,
-              "venue": "home",
-              "result": "W"
-            }
-          ],
-          "wins": 4,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 13,
-          "goalsAgainst": 8,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-23"
-        },
-        "away": {
-          "sample": 5,
-          "rows": [
-            {
-              "date": "2026-11-21",
-              "opponent": "kocaelispor",
-              "gf": 2,
-              "ga": 2,
-              "venue": "away",
-              "result": "D"
-            },
-            {
-              "date": "2026-11-08",
-              "opponent": "corum",
-              "gf": 5,
-              "ga": 0,
-              "venue": "away",
-              "result": "W"
-            },
-            {
-              "date": "2026-10-31",
-              "opponent": "goztepe",
-              "gf": 1,
-              "ga": 2,
-              "venue": "home",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-26",
-              "opponent": "galatasaray",
-              "gf": 1,
-              "ga": 2,
-              "venue": "away",
-              "result": "L"
-            },
-            {
-              "date": "2026-10-17",
-              "opponent": "alanyaspor",
-              "gf": 3,
-              "ga": 0,
-              "venue": "home",
-              "result": "W"
-            }
-          ],
-          "wins": 2,
-          "draws": 1,
-          "losses": 2,
-          "goalsFor": 12,
-          "goalsAgainst": 6,
-          "source": "football-data.co.uk",
-          "latestCompletedDate": "2026-11-21"
-        },
-        "h2h": [
-          {
-            "date": "2026-05-02",
-            "home": "fenerbahce",
-            "away": "basaksehir",
-            "score": [
-              3,
-              1
-            ],
-            "stats": {
-              "corners": [
-                10,
-                2
-              ],
-              "yellowCards": [
-                2,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                22,
-                15
-              ],
-              "shotsOnTarget": [
-                9,
-                4
-              ],
-              "halfTimeGoals": [
-                1,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-12-06",
-            "home": "basaksehir",
-            "away": "fenerbahce",
-            "score": [
-              1,
-              1
-            ],
-            "stats": {
-              "corners": [
-                10,
-                8
-              ],
-              "yellowCards": [
-                2,
-                3
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                18,
-                10
-              ],
-              "shotsOnTarget": [
-                4,
-                2
-              ],
-              "halfTimeGoals": [
-                0,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2025-05-09",
-            "home": "basaksehir",
-            "away": "fenerbahce",
-            "score": [
-              1,
-              4
-            ],
-            "stats": {
-              "corners": [
-                5,
-                5
-              ],
-              "yellowCards": [
-                1,
-                4
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                14,
-                19
-              ],
-              "shotsOnTarget": [
-                6,
-                9
-              ],
-              "halfTimeGoals": [
-                0,
-                1
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2024-12-15",
-            "home": "fenerbahce",
-            "away": "basaksehir",
-            "score": [
-              3,
-              1
-            ],
-            "stats": {
-              "corners": [
-                14,
-                0
-              ],
-              "yellowCards": [
-                1,
-                5
-              ],
-              "redCards": [
-                0,
-                1
-              ],
-              "shots": [
-                22,
-                2
-              ],
-              "shotsOnTarget": [
-                7,
-                1
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2024-01-24",
-            "home": "basaksehir",
-            "away": "fenerbahce",
-            "score": [
-              0,
-              1
-            ],
-            "stats": {
-              "corners": [
-                1,
-                7
-              ],
-              "yellowCards": [
-                9,
-                4
-              ],
-              "redCards": [
-                2,
-                0
-              ],
-              "shots": [
-                4,
-                31
-              ],
-              "shotsOnTarget": [
-                1,
-                9
-              ],
-              "halfTimeGoals": [
-                0,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2023-09-28",
-            "home": "fenerbahce",
-            "away": "basaksehir",
-            "score": [
-              4,
-              0
-            ],
-            "stats": {
-              "corners": [
-                14,
-                2
-              ],
-              "yellowCards": [
-                4,
-                1
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                16,
-                6
-              ],
-              "shotsOnTarget": [
-                8,
-                0
-              ],
-              "halfTimeGoals": [
-                3,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2023-04-19",
-            "home": "basaksehir",
-            "away": "fenerbahce",
-            "score": [
-              1,
-              2
-            ],
-            "stats": {
-              "corners": [
-                5,
-                4
-              ],
-              "yellowCards": [
-                9,
-                1
-              ],
-              "redCards": [
-                2,
-                0
-              ],
-              "shots": [
-                6,
-                20
-              ],
-              "shotsOnTarget": [
-                3,
-                5
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2022-10-22",
-            "home": "fenerbahce",
-            "away": "basaksehir",
-            "score": [
-              1,
-              0
-            ],
-            "stats": {
-              "corners": [
-                6,
-                3
-              ],
-              "yellowCards": [
-                1,
-                2
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                14,
-                3
-              ],
-              "shotsOnTarget": [
-                3,
-                1
-              ],
-              "halfTimeGoals": [
-                0,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2022-02-05",
-            "home": "fenerbahce",
-            "away": "basaksehir",
-            "score": [
-              0,
-              1
-            ],
-            "stats": {
-              "corners": [
-                1,
-                6
-              ],
-              "yellowCards": [
-                3,
-                4
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                12,
-                14
-              ],
-              "shotsOnTarget": [
-                2,
-                6
-              ],
-              "halfTimeGoals": [
-                0,
-                0
-              ]
-            },
-            "competition": "T1"
-          },
-          {
-            "date": "2021-09-19",
-            "home": "basaksehir",
-            "away": "fenerbahce",
-            "score": [
-              2,
-              0
-            ],
-            "stats": {
-              "corners": [
-                1,
-                6
-              ],
-              "yellowCards": [
-                0,
-                1
-              ],
-              "redCards": [
-                0,
-                0
-              ],
-              "shots": [
-                6,
-                14
-              ],
-              "shotsOnTarget": [
-                2,
-                5
-              ],
-              "halfTimeGoals": [
-                1,
-                0
-              ]
-            },
-            "competition": "T1"
-          }
-        ],
-        "injuriesAvailable": false,
-        "lineupsAvailable": false,
-        "advancedStatsAvailable": false,
-        "h2hCoverage": {
-          "version": "5.28",
-          "source": "football-data.co.uk",
-          "requestedSeasons": 6,
-          "loadedSeasons": [
-            2026,
-            2025,
-            2024,
-            2023,
-            2022,
-            2021
-          ],
-          "failedSeasons": [],
-          "limit": 12,
-          "sample": 10,
-          "csvMatchesAvailable": 10,
           "conflictsExcluded": 0,
           "scope": "same_league_only",
           "extraDivision": null,
@@ -51693,34 +49980,6 @@
     },
     {
       "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "markets": {
-        "1.5 Üst": 79.3,
-        "2.5 Üst": 56.6,
-        "KG Var": 57.0
-      },
-      "historyThrough": "2026-11-23",
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.8,
-        "away": 1.15
-      },
-      "historyCacheUsed": false,
-      "historyCachedSeasons": {},
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-28",
       "league": "İngiltere Premier Lig",
       "match": "Everton FC – Liverpool FC",
       "markets": {
@@ -53205,34 +51464,6 @@
     },
     {
       "date": "2026-11-30",
-      "league": "Türkiye Süper Lig",
-      "match": "besiktas – galatasaray",
-      "markets": {
-        "1.5 Üst": 84.1,
-        "2.5 Üst": 64.1,
-        "KG Var": 63.5
-      },
-      "historyThrough": "2026-11-23",
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.95,
-        "away": 1.35
-      },
-      "historyCacheUsed": false,
-      "historyCachedSeasons": {},
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-11-30",
       "league": "Portekiz Primeira Liga",
       "match": "Sport Lisboa e Benfica – FC Famalicão",
       "markets": {
@@ -53588,34 +51819,6 @@
       "expectedGoals": {
         "home": 1.8,
         "away": 1.5
-      },
-      "historyCacheUsed": false,
-      "historyCachedSeasons": {},
-      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
-      "odds": null,
-      "edge": null
-    },
-    {
-      "date": "2026-12-04",
-      "league": "Türkiye Süper Lig",
-      "match": "galatasaray – rizespor",
-      "markets": {
-        "1.5 Üst": 82.2,
-        "2.5 Üst": 61.0,
-        "KG Var": 60.7
-      },
-      "historyThrough": "2026-11-23",
-      "sample": {
-        "home": 10,
-        "away": 10
-      },
-      "sampleMode": {
-        "home": "venue_specific",
-        "away": "venue_specific"
-      },
-      "expectedGoals": {
-        "home": 1.9,
-        "away": 1.25
       },
       "historyCacheUsed": false,
       "historyCachedSeasons": {},
@@ -54297,6 +52500,34 @@
     },
     {
       "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "amed – alanyaspor",
+      "markets": {
+        "1.5 Üst": 79.9,
+        "2.5 Üst": 57.4,
+        "KG Var": 48.1
+      },
+      "historyThrough": "2026-11-23",
+      "sample": {
+        "home": 7,
+        "away": 10
+      },
+      "sampleMode": {
+        "home": "venue_specific",
+        "away": "venue_specific"
+      },
+      "expectedGoals": {
+        "home": 2.21,
+        "away": 0.78
+      },
+      "historyCacheUsed": false,
+      "historyCachedSeasons": {},
+      "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
+      "odds": null,
+      "edge": null
+    },
+    {
+      "date": "2026-12-05",
       "league": "Almanya Bundesliga",
       "match": "Eintracht Frankfurt – SV Werder Bremen",
       "markets": {
@@ -54688,16 +52919,16 @@
       "edge": null
     }
   ],
-  "candidateCount": 122,
+  "candidateCount": 120,
   "fixtureWindowDays": 7,
-  "upcomingCount": 138,
+  "upcomingCount": 133,
   "upcomingCountsByDate": {
-    "2026-11-28": 39,
+    "2026-11-28": 37,
     "2026-11-29": 37,
-    "2026-11-30": 4,
+    "2026-11-30": 3,
     "2026-12-02": 10,
-    "2026-12-04": 3,
-    "2026-12-05": 45
+    "2026-12-04": 2,
+    "2026-12-05": 44
   },
   "dataQuality": {
     "verifiedOdds": false,
@@ -54708,8 +52939,8 @@
   "fixtureCoverageComplete": false,
   "candidateListLimit": null,
   "candidateListComplete": true,
-  "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 138 fikstür; 122 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
+  "reason": "PAS — 9/9 lig okundu; bugün 37, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
   "forecastTimingVersion": "6.82",
   "historyCutoffExclusive": "2026-11-28",
-  "generationCompletedAt": "2026-11-28T14:53:09.958982+03:00"
+  "generationCompletedAt": "2026-11-28T20:43:43.107437+03:00"
 }

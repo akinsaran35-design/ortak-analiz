@@ -1,6 +1,6 @@
 {
   "version": "4.13",
-  "updatedAt": "2026-11-28T11:53:44.729499+00:00",
+  "updatedAt": "2026-11-28T17:44:09.370160+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
@@ -10,7 +10,9 @@
   "modelCalibrated": false,
   "researchCandidates": [],
   "selections": [],
-  "rejected": {},
+  "rejected": {
+    "low_probability": 3
+  },
   "reasons": [
     "insufficient_validated_matches",
     "validation_not_approved",

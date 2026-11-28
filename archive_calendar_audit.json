@@ -1,24 +1,294 @@
 {
   "version": "4.70",
-  "updatedAt": "2026-11-28T11:53:44.803229+00:00",
+  "updatedAt": "2026-11-28T17:44:09.454980+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "prospective": {
     "version": "4.70",
-    "updatedAt": "2026-11-28T11:53:44.803229+00:00",
+    "updatedAt": "2026-11-28T17:44:09.454980+00:00",
     "mode": "research_only",
-    "status": "unavailable",
-    "rows": [],
-    "counts": {},
+    "status": "research_only",
+    "rows": [
+      {
+        "league": "en.1",
+        "home": "Everton FC",
+        "away": "Liverpool FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "f45e9062c2f755b977c98d496c22697b",
+        "kickoff": "2026-11-29T12:00:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Arsenal FC",
+        "away": "Manchester City FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "d20ede55e54ed7b55fdc36ca373727c0",
+        "kickoff": "2026-11-29T16:30:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Fulham FC",
+        "away": "AFC Bournemouth",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "56ea91809ff11d3a67557a21b3371cb9",
+        "kickoff": "2026-11-29T14:05:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Brighton & Hove Albion FC",
+        "away": "Newcastle United FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "e9c2b74ecaafd494e3b2d8521b52216a",
+        "kickoff": "2026-11-29T14:05:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Sunderland AFC",
+        "away": "Tottenham Hotspur FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "09bb0ba9a9025d64fed410375c0c8f80",
+        "kickoff": "2026-11-29T14:05:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "es.1",
+        "home": "Real Madrid CF",
+        "away": "Deportivo Alavés",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-28",
+        "eventId": "c99772cba1418e72f2eded26e4afeb59",
+        "kickoff": "2026-11-28T20:00:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "it.1",
+        "home": "FC Internazionale Milano",
+        "away": "Genoa CFC",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-28",
+        "eventId": "f128c19fa7af43e30dbe3c373e7bc27e",
+        "kickoff": "2026-11-28T19:45:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "it.1",
+        "home": "US Lecce",
+        "away": "Atalanta BC",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-30",
+        "eventId": "f1d2a6064d1452074570bbc656d36a20",
+        "kickoff": "2026-11-30T17:30:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "it.1",
+        "home": "Cagliari Calcio",
+        "away": "AC Milan",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-30",
+        "eventId": "3d57da6bdb20b65145bc2479ee5f2ae7",
+        "kickoff": "2026-11-30T19:45:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "es.1",
+        "home": "RCD Espanyol de Barcelona",
+        "away": "Getafe CF",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-30",
+        "eventId": "b648a7246af1d3a839b0fcd212849a7c",
+        "kickoff": "2026-11-30T20:00:00+00:00",
+        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Coventry City FC",
+        "away": "Ipswich Town FC",
+        "archivedDate": "2026-12-02",
+        "corroboratedDate": "2026-12-01",
+        "eventId": "c7aff6bfea3ca1c4b177694977831b85",
+        "kickoff": "2026-12-01T20:00:00+00:00",
+        "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Tottenham Hotspur FC",
+        "away": "Fulham FC",
+        "archivedDate": "2026-12-02",
+        "corroboratedDate": "2026-12-03",
+        "eventId": "0c1ccc010b185ada698661a21316696c",
+        "kickoff": "2026-12-03T20:00:00+00:00",
+        "recordedAt": "2026-11-25T01:37:50.516033+03:00",
+        "status": "review_pending"
+      }
+    ],
+    "counts": {
+      "review_pending": 12
+    },
     "decision": "PAS"
   },
   "performance": {
     "version": "4.70",
-    "updatedAt": "2026-11-28T11:53:44.803229+00:00",
+    "updatedAt": "2026-11-28T17:44:09.454980+00:00",
     "mode": "research_only",
-    "status": "unavailable",
-    "rows": [],
-    "counts": {},
+    "status": "research_only",
+    "rows": [
+      {
+        "league": "en.1",
+        "home": "Everton FC",
+        "away": "Liverpool FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "f45e9062c2f755b977c98d496c22697b",
+        "kickoff": "2026-11-29T12:00:00+00:00",
+        "recordedAt": "2026-11-24T11:27:23.341623+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Arsenal FC",
+        "away": "Manchester City FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "d20ede55e54ed7b55fdc36ca373727c0",
+        "kickoff": "2026-11-29T16:30:00+00:00",
+        "recordedAt": "2026-11-25T01:37:51.359978+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Fulham FC",
+        "away": "AFC Bournemouth",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "56ea91809ff11d3a67557a21b3371cb9",
+        "kickoff": "2026-11-29T14:05:00+00:00",
+        "recordedAt": "2026-11-25T01:37:51.359978+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Brighton & Hove Albion FC",
+        "away": "Newcastle United FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "e9c2b74ecaafd494e3b2d8521b52216a",
+        "kickoff": "2026-11-29T14:05:00+00:00",
+        "recordedAt": "2026-11-25T01:37:51.359978+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Sunderland AFC",
+        "away": "Tottenham Hotspur FC",
+        "archivedDate": "2026-11-28",
+        "corroboratedDate": "2026-11-29",
+        "eventId": "09bb0ba9a9025d64fed410375c0c8f80",
+        "kickoff": "2026-11-29T14:05:00+00:00",
+        "recordedAt": "2026-11-26T08:45:30.559361+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "es.1",
+        "home": "Real Madrid CF",
+        "away": "Deportivo Alavés",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-28",
+        "eventId": "c99772cba1418e72f2eded26e4afeb59",
+        "kickoff": "2026-11-28T20:00:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "it.1",
+        "home": "FC Internazionale Milano",
+        "away": "Genoa CFC",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-28",
+        "eventId": "f128c19fa7af43e30dbe3c373e7bc27e",
+        "kickoff": "2026-11-28T19:45:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "it.1",
+        "home": "US Lecce",
+        "away": "Atalanta BC",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-30",
+        "eventId": "f1d2a6064d1452074570bbc656d36a20",
+        "kickoff": "2026-11-30T17:30:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "it.1",
+        "home": "Cagliari Calcio",
+        "away": "AC Milan",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-30",
+        "eventId": "3d57da6bdb20b65145bc2479ee5f2ae7",
+        "kickoff": "2026-11-30T19:45:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "es.1",
+        "home": "RCD Espanyol de Barcelona",
+        "away": "Getafe CF",
+        "archivedDate": "2026-11-29",
+        "corroboratedDate": "2026-11-30",
+        "eventId": "b648a7246af1d3a839b0fcd212849a7c",
+        "kickoff": "2026-11-30T20:00:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Coventry City FC",
+        "away": "Ipswich Town FC",
+        "archivedDate": "2026-12-02",
+        "corroboratedDate": "2026-12-01",
+        "eventId": "c7aff6bfea3ca1c4b177694977831b85",
+        "kickoff": "2026-12-01T20:00:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      },
+      {
+        "league": "en.1",
+        "home": "Tottenham Hotspur FC",
+        "away": "Fulham FC",
+        "archivedDate": "2026-12-02",
+        "corroboratedDate": "2026-12-03",
+        "eventId": "0c1ccc010b185ada698661a21316696c",
+        "kickoff": "2026-12-03T20:00:00+00:00",
+        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
+        "status": "review_pending"
+      }
+    ],
+    "counts": {
+      "review_pending": 12
+    },
     "decision": "PAS"
   }
 }

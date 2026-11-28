@@ -1,0 +1,20 @@
+name: V6.92 model market source binding
+on:
+  pull_request:
+    paths:
+      - 'scripts/model_market.py'
+      - 'scripts/test_model_market.py'
+      - '.github/workflows/model-market-source-binding.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_model_market.py
+      - run: python scripts/test_unified_decision.py

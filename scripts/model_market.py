@@ -122,6 +122,7 @@ def identity_matches(a,b):
 def extra_bound(extra,odds,archive,now):
     return (isinstance(archive,dict) and archive.get("integrityVersion")=="6.85" and archive.get("mode")=="research_only"
         and isinstance(archive.get("quarantine"),dict)
+        and fresh(archive.get("updatedAt"),now)
         and extra.get("quotaPolicyVersion")=="6.89" and extra.get("integrityVersion")=="6.84"
         and extra.get("source")=="The Odds API" and extra.get("region")=="uk"
         and extra.get("mode")=="research_only" and extra.get("decision")=="PAS"

@@ -65,10 +65,12 @@ class ModelMarketTests(unittest.TestCase):
         self.assertEqual(unique_events([base,base]),{})
         odds=dict(updatedAt=stamp)
         extra=dict(quotaPolicyVersion="6.89",integrityVersion="6.84",source="The Odds API",region="uk",mode="research_only",decision="PAS",errors=[],updatedAt=stamp,oddsSnapshotAt=stamp)
-        archive=dict(integrityVersion="6.85",mode="research_only",quarantine={})
+        archive=dict(integrityVersion="6.85",mode="research_only",quarantine={},updatedAt=stamp)
         self.assertTrue(extra_bound(extra,odds,archive,self.now))
         self.assertFalse(extra_bound(dict(extra,oddsSnapshotAt="wrong"),odds,archive,self.now))
         self.assertFalse(extra_bound(extra,odds,{},self.now))
+        self.assertFalse(extra_bound(extra,odds,dict(archive,updatedAt=(self.now-timedelta(minutes=31)).isoformat()),self.now))
+        self.assertFalse(extra_bound(extra,odds,dict(archive,updatedAt=(self.now+timedelta(seconds=1)).isoformat()),self.now))
     def test_base_over15_and_future_quote(self):
         stamp=self.now.isoformat()
         event=dict(bookmakers=[dict(key=q["bookmaker"],lines=[dict(point=1.5,over=q["positive"],under=q["negative"],lastUpdate=stamp)]) for q in self.quotes])

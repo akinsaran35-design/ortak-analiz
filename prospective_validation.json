@@ -2,16 +2,14 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-28T14:53:39.993389+03:00",
-  "recorded": 221,
+  "updatedAt": "2026-11-28T20:44:05.698401+03:00",
+  "recorded": 222,
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "captureWindowDays": 14,
   "captureCounts": {
-    "already_recorded": 173,
-    "insufficient_history": 11,
-    "new": 3,
-    "recovered_identity": 1
+    "already_recorded": 174,
+    "insufficient_history": 10
   },
   "missingHistory": [
     {
@@ -153,20 +151,6 @@
         "home": 37,
         "away": 4
       }
-    },
-    {
-      "league": "tr.1",
-      "date": "2026-12-05",
-      "home": "amed sfk",
-      "away": "alanyaspor",
-      "sourceSamples": {
-        "home": 0,
-        "away": 46
-      },
-      "canonicalSamples": {
-        "home": 0,
-        "away": 46
-      }
     }
   ],
   "historyIdentityAudit": {
@@ -208,9 +192,9 @@
     }
   },
   "tested": 4,
-  "pending": 217,
+  "pending": 218,
   "pendingDateStatus": {
-    "future": 176,
+    "future": 177,
     "today": 35,
     "past": 6,
     "invalidDate": 0
@@ -225,7 +209,7 @@
   "marketResearch": {
     "1.5 Üst": {
       "tested": 0,
-      "pending": 131,
+      "pending": 132,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},
@@ -260,7 +244,7 @@
     },
     "2.5 Üst": {
       "tested": 4,
-      "pending": 217,
+      "pending": 218,
       "legacyWithoutForecast": 0,
       "invalid": 0,
       "scores": {
@@ -299,7 +283,7 @@
     },
     "KG Var": {
       "tested": 0,
-      "pending": 131,
+      "pending": 132,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},

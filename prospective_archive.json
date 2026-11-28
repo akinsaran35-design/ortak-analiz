@@ -4957,5 +4957,35 @@
       }
     },
     "result": null
+  },
+  "[\"2026-12-05\", \"tr.1\", \"amed\", \"alanyaspor\"]": {
+    "date": "2026-12-05",
+    "league": "tr.1",
+    "home": "amed",
+    "away": "alanyaspor",
+    "recordedAt": "2026-11-28T18:32:35.495659+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "source_names",
+    "old": 0.5736017133772425,
+    "candidate": 0.6270093265159258,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7987078102091477,
+        "candidate": 0.8330971093573083,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.5736017133772425,
+        "candidate": 0.6270093265159258,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.4814275446493539,
+        "candidate": 0.5947515395328016,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
   }
 }

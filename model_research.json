@@ -1,8 +1,8 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-28T11:53:43.785128+00:00",
-  "sourceUpdatedAt": "2026-11-28T14:53:06+03:00",
+  "updatedAt": "2026-11-28T17:44:08.258807+00:00",
+  "sourceUpdatedAt": "2026-11-28T20:43:41+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
@@ -935,68 +935,6 @@
           "btts": {
             "probability": 0.57425,
             "sampling_se": 0.003496333347236788
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "expectedGoals": {
-        "home": 1.8,
-        "away": 1.15
-      },
-      "poisson": {
-        "over15": 0.7932581615036921,
-        "over25": 0.5655150159955756,
-        "btts": 0.5704040483477927
-      },
-      "experimentalDixonColes": {
-        "over15": 0.7986753210693548,
-        "over25": 0.5655150159955756,
-        "btts": 0.5758212079134554
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.11376035087891781
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09750887218192957
-          },
-          {
-            "home": 1,
-            "away": 0,
-            "probability": 0.08879431114151555
-          }
-        ],
-        "topScoresCombined": 0.3000635342023629,
-        "homeWin": 0.5205027298371024,
-        "draw": 0.24229515790858042,
-        "awayWin": 0.23720211225431714,
-        "expectedHome": 1.8,
-        "expectedAway": 1.15
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.80245,
-            "sampling_se": 0.0028153507552345944
-          },
-          "over25": {
-            "probability": 0.57055,
-            "sampling_se": 0.0035001621212452433
-          },
-          "btts": {
-            "probability": 0.57735,
-            "sampling_se": 0.00349297135330366
           }
         }
       }
@@ -4289,68 +4227,6 @@
     },
     {
       "date": "2026-11-30",
-      "league": "Türkiye Süper Lig",
-      "match": "besiktas – galatasaray",
-      "expectedGoals": {
-        "home": 1.95,
-        "away": 1.35
-      },
-      "poisson": {
-        "over15": 0.8414023801746681,
-        "over25": 0.6405735336749162,
-        "btts": 0.635368835168835
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8462571270838563,
-        "over25": 0.6405735336749162,
-        "btts": 0.6402235820780232
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.10194968509295253
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.0946675647291702
-          },
-          {
-            "home": 2,
-            "away": 0,
-            "probability": 0.07012412202160756
-          }
-        ],
-        "topScoresCombined": 0.2667413718437303,
-        "homeWin": 0.5098981471370418,
-        "draw": 0.229703203284146,
-        "awayWin": 0.2603986495788122,
-        "expectedHome": 1.9500000000000002,
-        "expectedAway": 1.35
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.8476,
-            "sampling_se": 0.0025413996143857425
-          },
-          "over25": {
-            "probability": 0.6451,
-            "sampling_se": 0.0033833858041908255
-          },
-          "btts": {
-            "probability": 0.6403,
-            "sampling_se": 0.0033934931118244516
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-30",
       "league": "Portekiz Primeira Liga",
       "match": "Sport Lisboa e Benfica – FC Famalicão",
       "expectedGoals": {
@@ -5151,68 +5027,6 @@
           "btts": {
             "probability": 0.6532,
             "sampling_se": 0.0033654848090579757
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-12-04",
-      "league": "Türkiye Süper Lig",
-      "match": "galatasaray – rizespor",
-      "expectedGoals": {
-        "home": 1.9,
-        "away": 1.25
-      },
-      "poisson": {
-        "over15": 0.8221636735017833,
-        "over25": 0.6095635590826802,
-        "btts": 0.6067787107842151
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8272523635672443,
-        "over25": 0.6095635590826802,
-        "btts": 0.6118674008496761
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.10686249137468147
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09668511124375942
-          },
-          {
-            "home": 2,
-            "away": 0,
-            "probability": 0.07734808899500753
-          }
-        ],
-        "topScoresCombined": 0.2808956916134484,
-        "homeWin": 0.5207450401336973,
-        "draw": 0.23378531491256116,
-        "awayWin": 0.24546964495374168,
-        "expectedHome": 1.9000000000000001,
-        "expectedAway": 1.2500000000000002
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.8298,
-            "sampling_se": 0.002657366741720081
-          },
-          "over25": {
-            "probability": 0.6115,
-            "sampling_se": 0.0034465036631345686
-          },
-          "btts": {
-            "probability": 0.6119,
-            "sampling_se": 0.0034458554090385164
           }
         }
       }
@@ -6701,6 +6515,68 @@
           "btts": {
             "probability": 0.60315,
             "sampling_se": 0.0034594802897256116
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "amed – alanyaspor",
+      "expectedGoals": {
+        "home": 2.21,
+        "away": 0.78
+      },
+      "poisson": {
+        "over15": 0.7993531274728685,
+        "over25": 0.5745657709465766,
+        "btts": 0.48218077690285693
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8036874016440748,
+        "over25": 0.5745657709465766,
+        "btts": 0.48651505107406334
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.12280443485084754
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10680096098793165
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09578745918366108
+          }
+        ],
+        "topScoresCombined": 0.32539285502244025,
+        "homeWin": 0.6955869081659879,
+        "draw": 0.19098037579858984,
+        "awayWin": 0.11343271603542222,
+        "expectedHome": 2.21,
+        "expectedAway": 0.78
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80475,
+            "sampling_se": 0.002802922024423798
+          },
+          "over25": {
+            "probability": 0.57845,
+            "sampling_se": 0.003491744531749137
+          },
+          "btts": {
+            "probability": 0.48515,
+            "sampling_se": 0.0035339742323622003
           }
         }
       }
