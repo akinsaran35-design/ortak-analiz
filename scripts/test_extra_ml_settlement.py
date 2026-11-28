@@ -45,5 +45,21 @@ class SettlementTests(unittest.TestCase):
         self.csv+=b"29/11/2026,Hearts,Celtic,2,1\n"
         settle(self.ledger,self.meta,self.now,self.reader)
         self.assertEqual(summarize(self.ledger)["quarantined"],1)
+    def test_diagnostics_and_malformed_source(self):
+        d={}
+        self.payload["events"][0]["competitions"][0]["status"]["type"]["completed"]=False
+        self.assertEqual(settle(self.ledger,self.meta,self.now,self.reader,diagnostics=d)[0],0)
+        self.assertEqual(d["counts"],{"espn_final_score_missing":1})
+        self.assertEqual(d["classifiedFixtures"],1)
+        self.assertEqual(d["uniqueCSVRequests"],1)
+        self.assertEqual(d["uniqueESPNRequests"],1)
+        self.payload={"unexpected":[]}
+        d={}
+        added,errors=settle(self.ledger,self.meta,self.now,self.reader,diagnostics=d)
+        self.assertEqual(added,0)
+        self.assertEqual(d["counts"],{"espn_source_unavailable":1})
+        self.assertEqual(errors[0]["source"],"espn")
+        self.assertEqual(summarize(self.ledger)["quarantined"],0)
+        self.assertEqual(summarize(self.ledger)["pending"],1)
 if __name__=="__main__":
     unittest.main()
