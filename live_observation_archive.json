@@ -35,6 +35,36 @@
             0
           ]
         }
+      },
+      {
+        "receivedAt": "2026-11-28T15:58:55.830929+03:00",
+        "minute": 28,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            3,
+            1
+          ],
+          "shots": [
+            9,
+            1
+          ],
+          "shotsOnTarget": [
+            3,
+            1
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
       }
     ]
   },
@@ -74,6 +104,36 @@
             0
           ]
         }
+      },
+      {
+        "receivedAt": "2026-11-28T15:58:55.836366+03:00",
+        "minute": 29,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            0,
+            1
+          ],
+          "shots": [
+            1,
+            5
+          ],
+          "shotsOnTarget": [
+            0,
+            1
+          ],
+          "yellowCards": [
+            2,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
       }
     ]
   },
@@ -106,6 +166,36 @@
           ],
           "yellowCards": [
             0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "receivedAt": "2026-11-28T15:58:55.961993+03:00",
+        "minute": 28,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            0,
+            3
+          ],
+          "shots": [
+            0,
+            6
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ],
+          "yellowCards": [
+            1,
             1
           ],
           "redCards": [

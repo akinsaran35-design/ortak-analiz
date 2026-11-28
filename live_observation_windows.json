@@ -1,15 +1,15 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-28T15:46:57.101118+03:00",
-  "sourceUpdatedAt": "2026-11-28T15:46:39.482915+03:00",
+  "updatedAt": "2026-11-28T15:59:12.347284+03:00",
+  "sourceUpdatedAt": "2026-11-28T15:58:56.056991+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
   "accepted": 3,
   "archivedEvents": 13,
-  "archivedPoints": 22,
+  "archivedPoints": 25,
   "reasons": {
     "rejected_observation": 7
   },
@@ -25,9 +25,9 @@
       "home": "Blackburn Rovers",
       "away": "Charlton Athletic",
       "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T15:46:39.005618+03:00",
-      "minute": 16,
-      "observations": 1,
+      "receivedAt": "2026-11-28T15:58:55.830929+03:00",
+      "minute": 28,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -36,9 +36,9 @@
       "home": "Lincoln City",
       "away": "Wolverhampton Wanderers",
       "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T15:46:38.840855+03:00",
-      "minute": 16,
-      "observations": 1,
+      "receivedAt": "2026-11-28T15:58:55.836366+03:00",
+      "minute": 29,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -47,9 +47,9 @@
       "home": "Preston North End",
       "away": "Norwich City",
       "kickoff": "2026-11-28T12:30:00+00:00",
-      "receivedAt": "2026-11-28T15:46:39.017762+03:00",
-      "minute": 15,
-      "observations": 1,
+      "receivedAt": "2026-11-28T15:58:55.961993+03:00",
+      "minute": 28,
+      "observations": 2,
       "windows": {}
     }
   ]
