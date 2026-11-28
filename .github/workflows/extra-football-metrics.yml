@@ -1,0 +1,24 @@
+name: V7.07 extra football historical metrics
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_historical_metric_coverage.py'
+      - 'scripts/test_extra_historical_metric_coverage.py'
+      - '.github/workflows/extra-football-metrics.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline coverage regression
+        run: python3 scripts/test_extra_historical_metric_coverage.py
+      - name: Collect historical public-source coverage
+        run: python3 scripts/extra_historical_metric_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extra-football-historical-coverage
+          path: extra_historical_metric_coverage.json
