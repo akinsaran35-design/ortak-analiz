@@ -34,9 +34,14 @@ const {chromium}=require("playwright");
   d.extra_fixture_context={version:"7.11",updatedAt,historyUpdatedAt:updatedAt,cutoffExclusive:cut,sources:["ESPN","football-data.co.uk"],mode:"descriptive_fixture_context",predictionsEnabled:false,decision:"PAS",fixtureCount:1,matchedCount:1,unmatchedCount:0,groups:Object.entries(extraLeagues).map(([league,leagueName])=>({league,leagueName,errors:[],rows:league==="sco.1"?[{eventId:"123",home:"Alpha",away:"Beta",kickoff:"2026-11-27T18:00:00Z",status:"matched",homeStatistics:home,awayStatistics:away}]:[]}))};
   d.snapshot_integrity={updatedAt,status:"PASS",errors:[],reportTimestamps:Object.fromEntries(Object.keys(d).map(k=>[k+".json",updatedAt]))};
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
+  await page.route("https://site.api.espn.com/apis/site/v2/sports/soccer/**",route=>{
+    const url=route.request().url();
+    const events=url.includes("/eng.1/")?[{id:"991",date:"2026-11-26T14:00:00Z",competitions:[{date:"2026-11-26T14:00:00Z",status:{type:{state:"in"},displayClock:"60'"},competitors:[{homeAway:"home",team:{displayName:"Radar Test A"},score:"1"},{homeAway:"away",team:{displayName:"Radar Test B"},score:"0"}]}]}]:[];
+    return route.fulfill({status:200,headers:{"access-control-allow-origin":"*"},json:{events}});
+  });
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
-  await page.getByText("FOOTBALL INTELLIGENCE · ARAYÜZ V7.13",{exact:true}).waitFor();
+  await page.getByText("FOOTBALL INTELLIGENCE · ARAYÜZ V7.27",{exact:true}).waitFor();
   await page.locator(".extra-fixture-panel > summary").click();
   await page.locator(".extra-fixture-card > summary").click();
   await page.locator(".extra-fixture-card").getByText("Korner · 2 kayıt · Takım / rakip: 4 / 5",{exact:true}).first().waitFor();
@@ -135,9 +140,11 @@ const {chromium}=require("playwright");
   }
   await page.locator("#tab-live").click();
   await page.locator("#view-live").getByText("Kalan sürede gol olmayabilir",{exact:true}).waitFor();
+  await page.locator("#direct-radar").getByText("Radar Test A – Radar Test B",{exact:true}).waitFor();
   await page.screenshot({path:"mobile-reference-radar.png",fullPage:true});
   await page.locator("#view-live [data-sport=basketball]").click();
   assert.equal(await page.locator("#basketball-live").isVisible(),true);
+  assert.equal(await page.locator("#direct-radar").isVisible(),false);
   assert.equal(await page.locator("#scoreboard-summary").isVisible(),false);
   await page.locator("#tab-matches").click();
   assert.equal(await page.locator("#basketball-matches").isVisible(),true);
