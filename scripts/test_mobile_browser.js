@@ -31,7 +31,7 @@ const {chromium}=require("playwright");
   await page.route(/\.json(?:\?|$)/,route=>{const k=new URL(route.request().url()).pathname.split("/").pop().replace(/\.json$/,"");return route.fulfill(d[k]?{status:200,json:d[k]}:{status:404,body:"missing"});});
   await page.goto("http://127.0.0.1:8765/index.html");
   await page.locator("#match-count").filter({hasText:"1 maç"}).waitFor();
-  await page.getByText("FOOTBALL INTELLIGENCE · UI 695",{exact:true}).waitFor();
+  await page.getByText("FOOTBALL INTELLIGENCE · ARAYÜZ V7.02",{exact:true}).waitFor();
   for(const width of [320,360,393,412,540,690,980]){
     await page.setViewportSize({width,height:850});
     const sizes=await page.evaluate(()=>({body:document.body.getBoundingClientRect().width,nav:document.querySelector(".bottom-nav").getBoundingClientRect().width,main:document.querySelector("main").getBoundingClientRect().width,viewport:innerWidth,scroll:document.documentElement.scrollWidth}));
