@@ -113,6 +113,28 @@ def audit_league(code,csv_code,now,reader=read):
             out["rows"].append(dict(date=day,home=k[1],away=k[2],csv=a,espn=b,status=status))
     return out
 
+def outcome_baseline(rows):
+    """Descriptive outcome frequencies, not forecast accuracy."""
+    grouped={}
+    for r in rows:
+        k=(r["league"],r["date"],r["home"],r["away"])
+        grouped.setdefault(k,[]).append(r)
+    counts=Counter()
+    for records in grouped.values():
+        if len(records)!=1:
+            continue
+        r=records[0]
+        s=r.get("csv")
+        if r.get("status")!="corroborated" or s!=r.get("espn") or not isinstance(s,list) or len(s)!=2 or any(type(x) is not int or x<0 for x in s):
+            continue
+        h,a=s
+        counts["matches"]+=1
+        counts["over15"]+=int(h+a>=2)
+        counts["over25"]+=int(h+a>=3)
+        counts["btts"]+=int(h>0 and a>0)
+    n=counts["matches"]
+    return dict(matches=n,excludedRows=len(rows)-n,markets={k:dict(occurred=counts[k],ratePct=round(100*counts[k]/n,2) if n else None) for k in ("over15","over25","btts")},metric="observed_outcome_frequency",predictionAccuracy=None)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -120,7 +142,10 @@ def build(now,reader=read):
     for g in leagues:
         g["counts"]=dict(Counter(x["status"] for x in g["rows"]))
         g["unmatchedNames"]=unmatched_names(g["rows"])
-    return dict(version="6.28",historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    for g in leagues:
+        g["outcomeBaseline"]=outcome_baseline([dict(r,league=g["league"]) for r in g["rows"]])
+    baseline=outcome_baseline([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.29",outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -131,4 +156,5 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("OUTCOME_BASELINE",json.dumps(report["outcomeBaseline"]))
     print("AUDIT_TOTAL",json.dumps({k:report[k] for k in ("configured","responding","corroborated","archivesModified")}))
