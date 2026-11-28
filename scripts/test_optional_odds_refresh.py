@@ -133,4 +133,26 @@ class OptionalRefreshTests(unittest.TestCase):
                         self.assertEqual(report["snapshotFresh"],not errors)
                         self.assertEqual(report["decision"],"PAS")
             finally:os.chdir(cwd)
+    def test_invalid_provider_catalog_stops_paid_requests(self):
+        cwd=Path.cwd()
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                os.chdir(temp)
+                league=list(ODDS_CODES.values())[0]
+                for catalog in ([],{},[{"key":league}], [{"key":league,"active":"false"}],
+                                [{"key":league,"active":True},{"key":league,"active":False}]):
+                    with self.subTest(catalog=catalog):
+                        with patch.dict(os.environ,{"ODDS_API_KEY":"test","ODDS_OPTIONAL_REFRESH":"false"}),patch("urllib.request.urlopen",return_value=Response(catalog,100)) as mock:
+                            runpy.run_path(str(MODULE))
+                            self.assertEqual(mock.call_count,1)
+                            self.assertIn("/sports/?",mock.call_args.args[0])
+                        report=json.loads(Path("odds.json").read_text())
+                        self.assertIn("invalid_sports_catalog",report["errors"])
+                        self.assertEqual(report["inactiveLeagues"],[])
+                        self.assertEqual(report["queriedLeagues"],[])
+                        self.assertEqual(report["events"],[])
+                        status=json.loads(Path("odds_continuity.json").read_text())
+                        self.assertEqual(status["mode"],"fallback")
+                        self.assertFalse(status["currentOddsUsable"])
+            finally:os.chdir(cwd)
 if __name__=="__main__":unittest.main()
