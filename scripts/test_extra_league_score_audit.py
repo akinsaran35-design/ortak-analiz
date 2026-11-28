@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -71,6 +71,20 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result,chronological_backtest(list(reversed(rows))))
         self.assertFalse(result["productionModelValidated"])
         self.assertIsNone(chronological_backtest([])["markets"]["btts"]["brier"])
+    def test_team_form_backtest(self):
+        def row(day,home,away,score,league="sco.1"):
+            return dict(league=league,date=day,home=home,away=away,csv=score,espn=score,status="corroborated")
+        past=[row(f"2026-10-{i:02d}","a",f"b{i}",[4,0]) for i in range(1,11)]
+        past += [row(f"2026-10-{i:02d}","c",f"d{i}",[0,2]) for i in range(11,21)]
+        self.assertGreater(team_goal_means(past,"a","unknown")[0],team_goal_means(past,"c","unknown")[0])
+        self.assertEqual(team_goal_means(past,"unknown","unknown"),(2.0,1.0))
+        rows=past+[row("2026-10-21","a","z",[5,0]),row("2026-10-21","c","y",[0,0])]
+        result=team_form_backtest(rows)
+        self.assertEqual(result["evaluatedMatches"],2)
+        self.assertEqual(result,team_form_backtest(list(reversed(rows))))
+        self.assertEqual(result["markets"]["over15"]["leagueMean"]["brier"],chronological_backtest(rows)["markets"]["over15"]["brier"])
+        self.assertFalse(result["productionModelValidated"])
+        self.assertIsNone(team_form_backtest([])["markets"]["btts"]["team"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
