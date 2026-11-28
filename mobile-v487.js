@@ -1,6 +1,6 @@
 (function(){
 "use strict";
-const FILES=["extra_ml_prospective_ledger","extra_ml_frozen_manifest","shadow_performance","nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
+const FILES=["observed_totals_report","extra_ml_prospective_ledger","extra_ml_frozen_manifest","shadow_performance","nov27_match_review","fixture_evidence_summary","market_movement","team_logos","daily","matching","odds","performance","prospective_validation","data_quality","unified_decision","snapshot_integrity","prospective_leagues","scoreboard_snapshot","fixture_coverage_audit","kickoff_confirmation","model_research","football_statistics_pilot"];
 const MARKETS=["1.5 Üst","2.5 Üst","KG Var"];
 const LEAGUES={"İngiltere Premier Lig":"soccer_epl","İngiltere Championship":"soccer_efl_champ","Almanya Bundesliga":"soccer_germany_bundesliga","İspanya La Liga":"soccer_spain_la_liga","İtalya Serie A":"soccer_italy_serie_a","Fransa Ligue 1":"soccer_france_ligue_one","Hollanda Eredivisie":"soccer_netherlands_eredivisie","Portekiz Primeira Liga":"soccer_portugal_primeira_liga","Türkiye Süper Lig":"soccer_turkey_super_league"};
 const arr=x=>Array.isArray(x)?x:[],num=x=>Number.isInteger(x)&&x>=0?String(x):"—";
@@ -174,7 +174,34 @@ function mlResearchSummary(ledger,manifest,now){
  }
  return {recorded:Object.keys(f).length,settled:n,pending,quarantined:Object.keys(q).length,days:dates.size,stats,lastEvidenceAt:new Date(last).toISOString()};
 }
-if(typeof module!=="undefined"&&module.exports)module.exports={mlResearchSummary,shadowHistory,accuracyCounts,classificationFor,formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
+// V6.64: same-event, same-book observations; no opening-price claim.
+function observedTotalsFor(row,data,now,point){
+ const event=eventFor(row,data,now),report=data.observed_totals_report;
+ const validPrice=x=>typeof x==="number"&&Number.isFinite(x)&&x>1;
+ const median=v=>{const a=[...v].sort((x,y)=>x-y),i=Math.floor(a.length/2);return a.length?(a.length%2?a[i]:(a[i-1]+a[i])/2):null;};
+ if(!event||!Number.isFinite(Date.parse(event.kickoff))||Date.parse(event.kickoff)<=now||![1.5,2.5].includes(point))return null;
+ const books=arr(event.bookmakers),counts=new Map();for(const b of books)counts.set(b.key,(counts.get(b.key)||0)+1);
+ const current=new Map();
+ for(const b of books){
+   if(typeof b.key!=="string"||!b.key||counts.get(b.key)!==1)continue;
+   const lines=arr(b.lines).filter(l=>l.point===point);
+   if(lines.length!==1)continue;
+   const l=lines[0];if(validPrice(l.over)&&validPrice(l.under)&&fresh(l.lastUpdate,now)&&Date.parse(l.lastUpdate)<=Date.parse(data.odds.updatedAt))current.set(b.key,l);
+ }
+ const result={current:median([...current.values()].map(l=>l.over)),currentCount:current.size,first:null,dropPct:null,comparableCount:0};
+ if(data.odds.source!=="The Odds API"||data.odds.region!=="uk"||data.odds.market!=="totals"||!Array.isArray(data.odds.errors)||data.odds.errors.length||report?.version!=="6.63"||report.mode!=="research_only"||report.realBettingEnabled!==false||report.firstObservedIsOpening!==false||report.status!=="observed"||report.oddsUpdatedAt!==data.odds.updatedAt||!fresh(report.updatedAt,now)||Date.parse(report.updatedAt)<Date.parse(report.oddsUpdatedAt))return result;
+ const rows=arr(report.events).filter(x=>x.eventId===event.id&&x.point===point);if(rows.length!==1)return result;
+ const r=rows[0],seen=new Set(),pairs=[];
+ for(const b of arr(r.books)){
+   if(seen.has(b.bookmaker))return result;seen.add(b.bookmaker);
+   const l=current.get(b.bookmaker);
+   if(!l||!validPrice(b.firstObserved)||b.current!==l.over||b.currentLastUpdate!==l.lastUpdate||!Number.isFinite(Date.parse(b.firstObservedAt))||Date.parse(b.firstObservedAt)>=Date.parse(data.odds.updatedAt)||b.dropPct===null||typeof b.dropPct!=="number"||!Number.isFinite(b.dropPct)||Math.abs(b.dropPct-100*(b.firstObserved-b.current)/b.firstObserved)>1e-8)continue;
+   pairs.push(b);
+ }
+ if(pairs.length>=3){result.comparableCount=pairs.length;result.first=median(pairs.map(b=>b.firstObserved));result.current=median(pairs.map(b=>b.current));result.dropPct=median(pairs.map(b=>b.dropPct));}
+ return result;
+}
+if(typeof module!=="undefined"&&module.exports)module.exports={observedTotalsFor,mlResearchSummary,shadowHistory,accuracyCounts,classificationFor,formGoalAverages,statisticalExpectation,matchOverview,movementFor,teamLogo,liveRows,topScores,eventFor,rowsFor,filterRows,bound,leagueReport,fixtureCheck,confirmedRows,lastKnownSchedule,timeLabel,researchFor,historicalStatsFor};
 if(typeof document==="undefined")return;
 const by=id=>document.getElementById(id),node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 let data={},rows=[],loadedAt=0,refreshing=false,opened=null,listScroll=0;
@@ -300,7 +327,7 @@ const views={
  const scores=topScores(c?.expectedGoals?.home,c?.expectedGoals?.away),score=node("article",undefined,"panel score-panel");score.append(node("h3","▥ En olası skorlar"),node("strong",scores.length?scores.map(s=>s.score).join(", "):"—","score-line"),node("p","Poisson model senaryoları","subtle"));
  out.append(overviewPanel(r),probabilities,score,personalPanel(r));},
 "Skor":()=>{const s=topScores(c?.expectedGoals?.home,c?.expectedGoals?.away),box=node("article",undefined,"panel score-scenarios");box.append(node("h3","En olası skor senaryoları"),node("p",s.length?"Bağımsız Poisson modelinin en olası 3 skor senaryosu.":"Skor modeli verisi yok.","subtle"));for(const [i,y] of s.entries()){const card=node("div",undefined,"score-scenario"),top=node("div",undefined,"score-scenario-top"),label=node("span",i===0?"En yüksek model olasılığı":"Senaryo "+(i+1),"score-rank"),score=node("strong",y.score,"score-value"),prob=node("strong",pct(y.p),"score-percent"),track=node("div",undefined,"prob-track"),fill=node("div",undefined,"prob-fill");fill.style.width=Math.max(0,Math.min(100,y.p))+"%";track.append(fill);top.append(score,prob);card.append(label,top,track);box.append(card);}box.append(node("p","Skor senaryoları toplam olasılığın yalnızca bir bölümüdür. Kalibrasyon tamamlanmadı.","subtle"));out.append(box,overviewPanel(r));},
-"Oranlar":()=>{out.append(unavailablePanel("Açılış / güncel oran / düşüş",["Açılış","Güncel","Düşüş %"],"Açılış ve düşüş yüzdesi için eşleşmiş oran geçmişi gerekiyor."));if(!r.event){out.append(node("p","Kesin eşleşen güncel oran kaydı yok.","subtle"));return;}for(const p of [1.5,2.5]){const v=arr(r.event.bookmakers).flatMap(b=>arr(b.lines).filter(l=>l.point===p&&fresh(l.lastUpdate,Date.now())&&typeof l.over==="number"&&l.over>1).map(l=>l.over));out.append(node("p",p+" Üst: "+(v.length?v.length+" kaynak · "+Math.min(...v).toFixed(2)+"–"+Math.max(...v).toFixed(2):"Veri yok")));}const movement=movementFor(r,data,Date.now());for(const m of movement)out.append(node("p",m.market+" · "+m.movementBookmakers+" kaynak · "+displayNumber(m.medianChangePP)+" yüzde puan"));if(!movement.length)out.append(node("p","Doğrulanmış oran hareketi yok.","subtle"));},
+"Oranlar":()=>{const now=Date.now();for(const point of [2.5,1.5]){const h=observedTotalsFor(r,data,now,point);const p=node("article",undefined,"panel");p.append(node("h3",point+" Üst · Oran geçmişi"),metrics([["İlk gözlenen",h?.first!=null?h.first.toFixed(2):"—"],["Güncel",h?.current!=null?h.current.toFixed(2):"—"],["Düşüş %",h?.dropPct!=null?displayNumber(h.dropPct)+"%":"—"]]),node("p",h?.comparableCount>=3?h.comparableCount+" aynı kaynak · medyan değişim; ilk gözlenen gerçek açılış değildir.":(h?.currentCount||0)+" güncel kaynak · değişim için en az üç aynı kaynağın iki ayrı kaydı gerekir. İlk gözlenen gerçek açılış değildir.","subtle"));out.append(p);}if(!r.event){out.append(node("p","Kesin eşleşen güncel oran kaydı yok.","subtle"));return;}for(const p of [1.5,2.5]){const v=arr(r.event.bookmakers).flatMap(b=>arr(b.lines).filter(l=>l.point===p&&fresh(l.lastUpdate,Date.now())&&typeof l.over==="number"&&l.over>1).map(l=>l.over));out.append(node("p",p+" Üst: "+(v.length?v.length+" kaynak · "+Math.min(...v).toFixed(2)+"–"+Math.max(...v).toFixed(2):"Veri yok")));}const movement=movementFor(r,data,Date.now());for(const m of movement)out.append(node("p",m.market+" · "+m.movementBookmakers+" kaynak · "+displayNumber(m.medianChangePP)+" yüzde puan"));if(!movement.length)out.append(node("p","Doğrulanmış oran hareketi yok.","subtle"));},
 "İstatistik":()=>{renderHistoricalStats(out,r);const model=researchFor(r,data,Date.now());out.append(node("h3","Gol modeli karşılaştırması"));if(!model){out.append(node("p","Bütünlüğü kontrol edilmiş model raporu yok.","subtle"));return;}out.append(node("p","Aynı gol beklentisinden üretilen deneysel dağılımlar. Bağımsız tahminler veya doğrulanmış kazanma olasılıkları değildir.","subtle"));for(const [name,k] of [["1.5 Üst","over15"],["2.5 Üst","over25"],["KG Var","btts"]]){out.append(node("h3",name),metrics([["Poisson",pct(100*model.poisson?.[k])],["Dixon-Coles",pct(100*model.experimentalDixonColes?.[k])],["Monte Carlo",pct(100*model.simulation?.markets?.[k]?.probability)]]));}out.append(node("p","Dixon-Coles katsayısı sabit deneysel değerdir; Monte Carlo aynı dağılımın 20.000 örnekli sayısal kontrolüdür. Kadro ve sakatlık verileri henüz bağlı değil.","subtle"));},
 "H2H":()=>out.append(h2hPanel(r)),
 "Form":()=>out.append(formPanels(r)),
