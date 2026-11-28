@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-28T21:27:30.594632+03:00",
+  "updatedAt": "2026-11-28T21:56:06.836979+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -130,10 +130,10 @@
           "away": "Hibernian",
           "kickoff": "2026-11-28T17:45:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "42'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "53'",
           "score": [
-            1,
+            2,
             0
           ],
           "date": "2026-11-28"
@@ -187,9 +187,9 @@
           "kickoff": "2026-11-28T17:15:00+00:00",
           "state": "in",
           "status": "STATUS_SECOND_HALF",
-          "clock": "51'",
+          "clock": "79'",
           "score": [
-            2,
+            3,
             1
           ],
           "date": "2026-11-28"
@@ -296,10 +296,13 @@
           "home": "Austria Lustenau",
           "away": "Rapid Vienna",
           "kickoff": "2026-11-28T18:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "24'",
+          "score": [
+            0,
+            0
+          ],
           "date": "2026-11-28"
         },
         {
@@ -461,9 +464,9 @@
           "kickoff": "2026-11-28T17:00:00+00:00",
           "state": "in",
           "status": "STATUS_SECOND_HALF",
-          "clock": "66'",
+          "clock": "90'+5'",
           "score": [
-            1,
+            2,
             1
           ],
           "date": "2026-11-28"
@@ -729,11 +732,11 @@
           "away": "Chicago Fire FC",
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "45'+2'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "56'",
           "score": [
             1,
-            0
+            1
           ],
           "date": "2026-11-28"
         },
@@ -815,8 +818,8 @@
           "away": "Al Taawoun",
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+5'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "65'",
           "score": [
             1,
             1

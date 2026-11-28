@@ -1,31 +1,12 @@
 {
   "version": "4.12",
   "evidenceVersion": "6.92",
-  "updatedAt": "2026-11-28T18:27:26.531319+00:00",
+  "updatedAt": "2026-11-28T18:56:02.076787+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
   "realBettingEnabled": false,
   "rows": [
-    {
-      "eventId": "f96c1137c9d3f7e2e691275a2988fa1d",
-      "match": "Le Havre AC – RC Strasbourg Alsace",
-      "kickoff": "2026-11-28T19:45:00+00:00",
-      "market": "over25",
-      "marketLabel": "2.5 Üst",
-      "oddsEvidenceSource": "base_totals",
-      "bookCount": 3,
-      "modelProbabilityUncalibrated": 0.66,
-      "marketProbability": 0.546667,
-      "differencePP": 11.3333,
-      "bestBookmaker": "grosvenor",
-      "bestOdds": 1.71,
-      "estimatedEV": 0.1286,
-      "decision": "PAS",
-      "movementDirection": null,
-      "movementPP": null,
-      "movementBookmakers": 0
-    },
     {
       "eventId": "aaa86a483888836242da663a46957894",
       "match": "Le Mans FC – Lille OSC",
@@ -33,10 +14,10 @@
       "market": "over25",
       "marketLabel": "2.5 Üst",
       "oddsEvidenceSource": "base_totals",
-      "bookCount": 4,
+      "bookCount": 3,
       "modelProbabilityUncalibrated": 0.531,
-      "marketProbability": 0.490018,
-      "differencePP": 4.0982,
+      "marketProbability": 0.486702,
+      "differencePP": 4.4298,
       "bestBookmaker": "grosvenor",
       "bestOdds": 1.93,
       "estimatedEV": 0.02483,
@@ -47,9 +28,9 @@
     }
   ],
   "rejected": {
-    "insufficient_valid_market_data": 13,
+    "insufficient_valid_market_data": 14,
     "not_today": 61
   },
   "errors": [],
-  "comparedCount": 2
+  "comparedCount": 1
 }

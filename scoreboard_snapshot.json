@@ -1,6 +1,6 @@
 {
   "version": "4.90",
-  "updatedAt": "2026-11-28T21:27:29.393935+03:00",
+  "updatedAt": "2026-11-28T21:56:05.437605+03:00",
   "date": "2026-11-28",
   "mode": "scoreboard_snapshot",
   "source": "ESPN",
@@ -42,10 +42,10 @@
           "away": "Aston Villa",
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+3'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "68'",
           "score": [
-            1,
+            2,
             2
           ]
         }
@@ -255,11 +255,11 @@
           "away": "Eintracht Frankfurt",
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+4'",
+          "status": "STATUS_IN_PROGRESS",
+          "clock": "65'",
           "score": [
-            1,
-            1
+            2,
+            2
           ]
         }
       ],
@@ -303,10 +303,10 @@
           "away": "Atlético Madrid",
           "kickoff": "2026-11-28T17:30:00+00:00",
           "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+4'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "66'",
           "score": [
-            1,
+            2,
             3
           ]
         },
@@ -347,9 +347,9 @@
           "home": "Torino",
           "away": "Lazio",
           "kickoff": "2026-11-28T17:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "68'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
           "score": [
             1,
             2
@@ -455,8 +455,8 @@
           "away": "Go Ahead Eagles",
           "kickoff": "2026-11-28T17:45:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "41'",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "54'",
           "score": [
             2,
             0
@@ -513,11 +513,11 @@
           "away": "Alverca",
           "kickoff": "2026-11-28T18:00:00+00:00",
           "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "22'",
+          "status": "STATUS_HALFTIME",
+          "clock": "45'+4'",
           "score": [
             0,
-            0
+            1
           ]
         },
         {
@@ -572,7 +572,7 @@
   ],
   "loadedLeagues": 9,
   "eventCount": 39,
-  "inProgress": 6,
+  "inProgress": 5,
   "realTime": false,
   "usedForSettlement": false,
   "usedForPredictions": false
