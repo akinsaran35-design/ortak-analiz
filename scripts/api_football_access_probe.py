@@ -4,6 +4,7 @@ import os
 import urllib.request
 from datetime import datetime, timezone
 from urllib.error import HTTPError
+from api_football_sample_quality import inspect_sample
 
 BASE = "https://v3.football.api-sports.io/"
 def request(key, path):
@@ -43,7 +44,7 @@ def probe(key, reader=request):
         if not isinstance(rows, list):
             raise ValueError("response")
         out["oddsAccess"] = "sample_available" if rows else "empty_sample"
-        out["sampleEventCount"] = len(rows)
+        out.update(inspect_sample(doc, datetime.now(timezone.utc)))
     except HTTPError as exc:
         out["errorType"] = "HTTP_" + str(exc.code)
     except Exception as exc:
