@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -134,6 +134,18 @@ class AuditTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             list(simulation_points("sobol",100,42))
         self.assertIsNone(simulation_audit([])["summary"]["sobol"]["meanAbsoluteError"])
+    def test_bayesian_predictive(self):
+        self.assertEqual(gamma_poisson_probabilities(0,0,0),(0.5,0.3125,0.25))
+        result=bayesian_simulation(30,20,20,8192,42)
+        self.assertTrue(all(m["absoluteError"]<0.01 for m in result["markets"].values()))
+        start=datetime(2026,8,1)
+        rows=[dict(league="sco.1",date=(start+timedelta(days=d)).date().isoformat(),home=f"a{i}",away=f"b{i}",csv=[i%3,d%3],espn=[i%3,d%3],status="corroborated") for d in range(30) for i in range(10)]
+        report=bayesian_backtest(rows)
+        self.assertEqual(report,bayesian_backtest(list(reversed(rows))))
+        self.assertEqual(report["markets"]["over15"]["n"],hybrid_holdout(rows)["markets"]["over15"]["holdoutMatches"])
+        self.assertEqual(report["markets"]["over15"]["poisson"],dixon_coles_backtest(rows)["markets"]["over15"]["poisson"])
+        self.assertFalse(report["productionModelValidated"])
+        self.assertIsNone(bayesian_backtest([])["markets"]["btts"]["bayesian"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
