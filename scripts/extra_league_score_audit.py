@@ -989,6 +989,126 @@ def glicko_backtest(rows):
         preservesExpectedTotal=True,sameDayTraining=False,repeatedHoldout=True,
         productionModelValidated=False,externalValidation=False)
 
+ENSEMBLE_MODELS=("poisson","dixonColes","bayesian","bivariate","negativeBinomial","teamForm","elo","glicko2")
+ENSEMBLE_STEPS=10
+
+def ensemble_samples(rows):
+    """Common past-only forecasts for all candidates, including rating histories."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    elo={}
+    glicko={}
+    last={}
+    samples=[]
+    for day,group in sorted(by_day.items()):
+        current=datetime.fromisoformat(day).date()
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        changes=Counter()
+        prior={}
+        updates={}
+        fitted={}
+        def state(key):
+            if key not in prior:
+                prior[key]=glicko_inactive(glicko.get(key,GLICKO_INITIAL),max(0,(current-last.get(key,current)).days-1))
+            return prior[key]
+        for r in group:
+            l=r["league"]
+            hk,ak=(l,r["home"]),(l,r["away"])
+            rh,ra=elo.get(hk,ELO_INITIAL),elo.get(ak,ELO_INITIAL)
+            gh,ga=state(hk),state(ak)
+            x,y=r["csv"]
+            d=elo_delta(rh,ra,x,y)
+            changes[hk]+=d
+            changes[ak]-=d
+            score=1.0 if x>y else 0.0 if x<y else 0.5
+            updates.setdefault(hk,[]).append((ga[0],ga[1],score,ELO_HOME_ADVANTAGE))
+            updates.setdefault(ak,[]).append((gh[0],gh[1],1-score,-ELO_HOME_ADVANTAGE))
+            past=history.get(l,[])
+            n=len(past)
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            if l not in fitted:
+                scores=[v["csv"] for v in past]
+                hs,aw=zip(*scores)
+                h,a=sum(hs)/n,sum(aw)/n
+                fitted[l]=(h,a,(
+                    goal_probabilities(h,a),
+                    dc_probabilities(h,a,fit_dc_rho(scores,h,a)),
+                    gamma_poisson_probabilities(sum(hs),sum(aw),n),
+                    bivariate_probabilities(h,a,fit_shared_intensity(scores,h,a)),
+                    nb_probabilities(h,a,fit_nb_dispersion(hs,h),fit_nb_dispersion(aw,a))))
+            h,a,base=fitted[l]
+            models=base+(goal_probabilities(*team_goal_means(past,r["home"],r["away"])),
+                goal_probabilities(*elo_goal_means(h,a,rh,ra,0.5)),
+                goal_probabilities(*glicko_goal_means(h,a,gh,ga,0.5)))
+            samples.append((day,tuple(tuple(min(1,max(0,p)) for p in model) for model in models),labels(x,y)))
+        for key,d in changes.items():
+            elo[key]=elo.get(key,ELO_INITIAL)+d
+        for key,opponents in updates.items():
+            glicko[key]=glicko_update(prior[key],opponents)
+            last[key]=current
+        for r in group:
+            history.setdefault(r["league"],[]).append(r)
+    return samples
+
+def ensemble_prediction(models,weights):
+    return tuple(sum(w*p[i] for w,p in zip(weights,models)) for i in range(len(MARKETS)))
+
+def fit_ensemble_weights(tune):
+    """Simplex coordinate search on tuning dates; one weight vector for all markets."""
+    m=len(ENSEMBLE_MODELS)
+    units=[ENSEMBLE_STEPS]+[0]*(m-1)
+    if len(tune)<MIN_VALIDATION_MATCHES:
+        return tuple(v/ENSEMBLE_STEPS for v in units)
+    def loss(u):
+        w=[v/ENSEMBLE_STEPS for v in u]
+        return sum((p-y)**2 for _,models,ys in tune for p,y in zip(ensemble_prediction(models,w),ys))/len(tune)/len(MARKETS)
+    best=loss(units)
+    for _ in range(30):
+        chosen=None
+        for i in range(m):
+            if not units[i]:
+                continue
+            for j in range(m):
+                if j==i:
+                    continue
+                trial=units.copy()
+                trial[i]-=1
+                trial[j]+=1
+                value=loss(trial)
+                if value<best-1e-12:
+                    chosen,best=trial,value
+        if chosen is None:
+            break
+        units=chosen
+    return tuple(v/ENSEMBLE_STEPS for v in units)
+
+def ensemble_backtest(rows):
+    samples=ensemble_samples(rows)
+    days=sorted({r[0] for r in samples})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    tune=[r for r in samples if cutoff and r[0]<cutoff]
+    test=[r for r in samples if cutoff and r[0]>=cutoff]
+    weights=fit_ensemble_weights(tune)
+    metrics={}
+    for i,k in enumerate(MARKETS):
+        def score(values):
+            if not values:
+                return dict(brier=None,logLoss=None,accuracyPct=None)
+            n=len(values)
+            return dict(brier=round(sum((p-y)**2 for p,y in values)/n,6),
+                logLoss=round(-sum(y*math.log(max(1e-12,p))+(1-y)*math.log(max(1e-12,1-p)) for p,y in values)/n,6),
+                accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y in values)/n,2))
+        metrics[k]=dict(n=len(test),poisson=score([(models[0][i],ys[i]) for _,models,ys in test]),
+            ensemble=score([(ensemble_prediction(models,weights)[i],ys[i]) for _,models,ys in test]),
+            candidates={name:score([(models[j][i],ys[i]) for _,models,ys in test]) for j,name in enumerate(ENSEMBLE_MODELS)})
+    return dict(model="convex_weighted_ensemble",holdoutStart=cutoff,tuneMatches=len(tune),holdoutMatches=len(test),
+        weights=dict(zip(ENSEMBLE_MODELS,weights)),weightGrid=1/ENSEMBLE_STEPS,sharedAcrossMarkets=True,
+        ratingCandidateScale=0.5,selectionMetric="mean_brier",sameDayTraining=False,repeatedHoldout=True,
+        productionModelValidated=False,externalValidation=False,markets=metrics)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -1011,7 +1131,8 @@ def build(now,reader=read):
     markov=markov_numerical_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     elo=elo_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     glicko=glicko_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.41",glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    ensemble=ensemble_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.42",ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -1022,6 +1143,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("ENSEMBLE_BACKTEST",json.dumps(report["ensembleBacktest"]))
     print("GLICKO_BACKTEST",json.dumps(report["glickoBacktest"]))
     print("ELO_BACKTEST",json.dumps(report["eloBacktest"]))
     print("MARKOV_AUDIT",json.dumps({k:v for k,v in report["markovAudit"].items() if k!="cases"}))
