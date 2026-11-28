@@ -1,7 +1,7 @@
-import json
+import json,math
 from pathlib import Path
 from datetime import datetime, timezone
-from collections import defaultdict
+from collections import defaultdict,Counter
 from statistics import median
 
 SOURCE = Path("extra_market_archive.json")
@@ -12,9 +12,35 @@ MIN_CHANGE_PP = 1.0
 
 
 def parse_time(value):
-    return datetime.fromisoformat(
-        value.replace("Z", "+00:00")
-    )
+    t=datetime.fromisoformat(value.replace("Z","+00:00"))
+    if t.tzinfo is None:raise ValueError("timezone required")
+    return t
+
+NAMES={"over15":("Over","Under"),"btts":("Yes","No")}
+
+def checked_history(record,now):
+    """Recompute no-vig probabilities from timestamped raw prices."""
+    try:
+        history=record["history"]
+        if not isinstance(history,list) or len(history)<2:return None
+        kickoff=parse_time(record["kickoff"])
+        names=NAMES[record["market"]]
+        seen=set()
+        values=[]
+        for h in history:
+            updated=parse_time(h["lastUpdate"])
+            captured=parse_time(h["capturedAt"])
+            if updated in seen or not updated<=captured<kickoff or captured>now or (captured-updated).total_seconds()>1800:return None
+            seen.add(updated)
+            prices=h["prices"]
+            if not isinstance(prices,dict) or set(prices)!=set(names) or not all(type(v) in (int,float) and math.isfinite(v) and v>1 for v in prices.values()):return None
+            p=round((1/prices[names[0]])/sum(1/prices[k] for k in names),6)
+            if type(h.get("marketProbability")) not in (int,float) or not math.isfinite(h["marketProbability"]) or abs(h["marketProbability"]-p)>0.000001:return None
+            values.append((updated,p))
+        values.sort()
+        if not 0<=(now-values[-1][0]).total_seconds()<=1800:return None
+        return (values[-1][1]-values[0][1])*100
+    except (KeyError,ValueError,TypeError,AttributeError,OverflowError):return None
 
 
 def run():
@@ -22,6 +48,9 @@ def run():
 
     report = {
         "version": "4.11",
+        "evidenceVersion":"6.91",
+        "firstObservedIsOpening":False,
+        "excluded":{},
         "updatedAt": now.isoformat(),
         "mode": "research_only",
         "decision": "PAS",
@@ -31,6 +60,7 @@ def run():
     }
 
     groups = defaultdict(list)
+    excluded=Counter()
 
     if not SOURCE.exists():
         report["errors"].append("missing_archive")
@@ -41,52 +71,37 @@ def run():
 
         quarantine=archive.get("quarantine",{})
         if not isinstance(quarantine,dict):raise ValueError("invalid quarantine")
-        for record in archive["records"].values():
-            if record["eventId"] in quarantine:continue
-            if parse_time(record["kickoff"]) <= now:
-                continue
-
-            key = (
-                record["eventId"],
-                record["market"]
-            )
-
-            groups[key].append(record)
+        identities=defaultdict(set)
+        eligible=[]
+        for key,record in archive["records"].items():
+            try:
+                if record["eventId"] in quarantine:
+                    excluded["quarantined_record"]+=1;continue
+                if not all(isinstance(record[k],str) and record[k].strip() and "|" not in record[k] for k in ("eventId","league","home","away","market","bookmaker")) or record["home"]==record["away"] or record["market"] not in NAMES:
+                    raise ValueError("identity")
+                if key!="|".join(record[k] for k in ("eventId","market","bookmaker")):
+                    raise ValueError("key")
+                kickoff=parse_time(record["kickoff"])
+                identities[record["eventId"]].add((record["league"],record["home"],record["away"],kickoff))
+                if kickoff<=now:continue
+                eligible.append(record)
+            except (KeyError,ValueError,TypeError,AttributeError,OverflowError):
+                excluded["invalid_record_identity"]+=1
+        for record in eligible:
+            if len(identities[record["eventId"]])!=1:
+                excluded["conflicting_event_identity"]+=1;continue
+            groups[(record["eventId"],record["market"])].append(record)
 
     for (event_id, market), records in groups.items():
-        ready = {}
-
+        ready={}
+        counts=Counter(r["bookmaker"] for r in records)
         for record in records:
-            history = record.get("history", [])
-
-            if len(history) < 2:
-                continue
-
-            history = sorted(
-                history,
-                key=lambda h: parse_time(h["lastUpdate"])
-            )
-
-            first = history[0]
-            latest = history[-1]
-
-            first_time = parse_time(first["lastUpdate"])
-            last_time = parse_time(latest["lastUpdate"])
-
-            if last_time <= first_time:
-                continue
-
-            age = (now - last_time).total_seconds()
-
-            if not 0 <= age <= 1800:
-                continue
-
-            change = (
-                latest["marketProbability"]
-                - first["marketProbability"]
-            ) * 100
-
-            ready[record["bookmaker"]] = change
+            if counts[record["bookmaker"]]!=1:
+                excluded["duplicate_bookmaker"]+=1;continue
+            change=checked_history(record,now)
+            if change is None:
+                excluded["unusable_history"]+=1;continue
+            ready[record["bookmaker"]]=change
 
         changes = list(ready.values())
 
@@ -134,6 +149,7 @@ def run():
     })
 
     report["marketCount"] = len(report["markets"])
+    report["excluded"]=dict(excluded)
 
     temp = OUTPUT.with_suffix(".tmp")
 
