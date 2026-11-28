@@ -3,7 +3,7 @@ import copy,json
 from datetime import datetime,timedelta,date
 from pathlib import Path
 from statistics import median
-from main_ml_matched_comparison import build,PAIRS,LEDGER,META,VERSION
+from main_ml_matched_comparison import build,PAIRS,LEDGER,META,VERSION,OLD,legacy_provenance
 from extra_ml_prospective import read_json,write_json
 from extra_model_review_gate import market_gate,STALE_DAYS,MAX_STALE_SHARE,MIN_BRIER_GAIN,MAX_ECE,MAX_LOGLOSS_DEGRADATION
 from extra_prospective_reliability import MIN_BIN,aware
@@ -26,12 +26,13 @@ def dual_gate(metrics,ready):
     return dict(status="eligible_for_manual_review" if all(checks.values()) else "retain_baseline",
         checks=checks,versusLegacy=legacy,versusPoisson=poisson)
 
-def evaluate(pairs,ledger,meta,now):
+def evaluate(pairs,ledger,meta,now,legacy=None):
     now=now.astimezone(TR)
     # Recompute from locked forecasts and verified outcomes, not a mutable summary.
     checked=copy.deepcopy(pairs)
     overall=build(checked,ledger,meta,{},now)
     if checked!=pairs:raise ValueError("unexpected pair mutation")
+    provenance=legacy_provenance(pairs,ledger,legacy)
     cutoff=now.date()-timedelta(days=STALE_DAYS)
     def group_report(keys,report,min_n,min_days):
         locked=set(pairs["pairs"])&keys
@@ -42,7 +43,9 @@ def evaluate(pairs,ledger,meta,now):
         stale=len(unavailable)/len(mature_pairs) if mature_pairs else None
         sample=report["validSettled"]>=min_n and report["dateBlocks"]>=min_days
         complete=coverage is not None and coverage>=MIN_PAIR_COVERAGE and stale is not None and stale<=MAX_STALE_SHARE
-        ready=sample and complete
+        verified=sum(provenance["perPair"][k]=="verified" for k in locked)
+        provenance_ready=provenance["sourceAvailable"] and bool(locked) and verified==len(locked)
+        ready=sample and complete and provenance_ready
         timing=[abs((aware(ledger["forecasts"][k]["recordedAt"])-aware(pairs["pairs"][k]["legacyRecordedAt"])).total_seconds())/3600 for k in locked]
         markets={}
         for m in MARKETS:
@@ -55,6 +58,7 @@ def evaluate(pairs,ledger,meta,now):
         return dict(recorded=len(keys),paired=len(locked),validSettled=report["validSettled"],pending=report["pending"],
             dateBlocks=report["dateBlocks"],matureFixtures=len(mature),maturePairs=len(mature_pairs),maturePairCoverage=coverage,
             staleOrQuarantinedShare=stale,sampleTargetReached=sample,completenessReady=complete,
+            legacyProvenanceReady=provenance_ready,legacyProvenanceVerified=verified,
             reviewScreenReady=ready,status="manual_review_screen" if ready else "collecting_data",
             medianAbsoluteForecastTimeGapHours=median(timing) if timing else None,markets=markets)
     result=group_report(set(ledger["forecasts"]),overall,MIN_SETTLED,MIN_DATES)
@@ -65,7 +69,7 @@ def evaluate(pairs,ledger,meta,now):
         subpairs={**pairs,"pairs":{k:v for k,v in pairs["pairs"].items() if k in keys}}
         report=build(copy.deepcopy(subpairs),sub,meta,{},now)
         leagues[l]=group_report(keys,report,LEAGUE_MIN_SETTLED,LEAGUE_MIN_DATES)
-    return dict(version="6.70",reviewPolicyVersion="6.80",requiresBothBaselineScreens=True,mode="manual_review_screen_only",cohortVersion=VERSION,
+    return dict(version="6.70",reviewPolicyVersion="6.81",requiresBothBaselineScreens=True,legacyProvenanceCounts=provenance["counts"],legacySourceAvailable=provenance["sourceAvailable"],mode="manual_review_screen_only",cohortVersion=VERSION,
         modelSha256=meta["modelSha256"],overall=result,leagues=leagues,
         thresholds=dict(minimumSettled=MIN_SETTLED,minimumDates=MIN_DATES,leagueMinimumSettled=LEAGUE_MIN_SETTLED,
             leagueMinimumDates=LEAGUE_MIN_DATES,minimumMaturePairCoverage=MIN_PAIR_COVERAGE,staleDays=STALE_DAYS,
@@ -75,7 +79,9 @@ def evaluate(pairs,ledger,meta,now):
         automaticApproval=False,productionModelValidated=False,existingArchivesModified=False,updatedAt=now.isoformat())
 
 def run():
-    report=evaluate(read_json(PAIRS),read_json(LEDGER),read_json(META),datetime.now(TR))
+    try:legacy=read_json(OLD)
+    except (OSError,ValueError):legacy=None
+    report=evaluate(read_json(PAIRS),read_json(LEDGER),read_json(META),datetime.now(TR),legacy=legacy)
     write_json(Path("main_ml_calibration_review.json"),report)
     print("MAIN_ML_REVIEW_670",json.dumps({k:v for k,v in report.items() if k!="leagues"}))
 if __name__=="__main__":run()
