@@ -9,6 +9,7 @@ from pathlib import Path
 from league_config import ODDS_CODES
 from odds_snapshot_validation import normalize_event,finalize
 from extra_market_budget_plan import optional_refresh_gate
+from odds_continuity import record
 LEAGUES = list(ODDS_CODES.values())
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
@@ -25,6 +26,7 @@ try:
             and cached.get("configuredLeagues") == LEAGUES
             and cached.get("errors") == [] and isinstance(cached.get("events"), list)
             and cached["events"]):
+        record(cached,cached,datetime.now(timezone.utc),"recent_cache")
         print("Reusing recent odds snapshot; no API requests.")
         raise SystemExit(0)
 except (OSError, ValueError, TypeError, KeyError, AttributeError):
@@ -65,6 +67,7 @@ else:
                 try:
                     stamp=datetime.fromisoformat(cached["updatedAt"].replace("Z","+00:00"))
                     if stamp.tzinfo is not None and stamp<=now:
+                        record(cached,cached,datetime.now(timezone.utc),"optional_refresh_deferred",report["remainingCredits"],report["errors"])
                         print("Optional refresh deferred; existing observation timestamp retained.")
                         raise SystemExit(0)
                 except (ValueError,TypeError,KeyError,AttributeError):
@@ -96,4 +99,6 @@ else:
             report["errors"].append(f"{league}: response_error")
 finalize(report,datetime.now(timezone.utc))
 Path("odds.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+reason="quota_guard" if "quota_guard" in report["errors"] else "source_error" if report["errors"] else "collected" if report["events"] else "no_valid_events"
+record(report,cached,datetime.now(timezone.utc),reason,report["remainingCredits"],report["errors"])
 print("Odds events:", report["eventCount"], "Remaining credits:", report["remainingCredits"], "Errors:", report["errors"])
