@@ -70,6 +70,17 @@ def optional_refresh_gate(balance,now,workflow,league_count):
         liveBalance=balance,requiredCredits=required,futureCoreRuns=future_core,
         maximumCurrentRefreshCost=league_count,calendarMonthEstimateOnly=True)
 
+def extra_event_gate(balance,now,workflow,league_count):
+    """Protect all remaining scheduled base runs, not just core runs."""
+    if not schedule_matches(workflow) or now.tzinfo is None or now.utcoffset() is None:
+        return dict(allowed=False,reason="invalid_schedule_or_clock")
+    if type(balance) is not int or balance<0 or type(league_count) is not int or league_count<=0:
+        return dict(allowed=False,reason="unknown_balance")
+    runs=len(scheduled_slots(now.astimezone(timezone.utc)))
+    reserve=RESERVE+runs*league_count
+    return dict(allowed=balance>=reserve+EXTRA_COST_CAP,reason="reserve_preserved" if balance>=reserve+EXTRA_COST_CAP else "base_reserve_protection",
+        remainingScheduledRuns=runs,protectedCredits=reserve,maximumEventCost=EXTRA_COST_CAP,calendarMonthEstimateOnly=True)
+
 def plan(snapshot,now,workflow):
     now=now.astimezone(timezone.utc)
     report=dict(version="6.86",priorityPolicyVersion="6.87",mode="read_only_budget_planning",updatedAt=now.isoformat(),

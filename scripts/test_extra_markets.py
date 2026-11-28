@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from unittest.mock import patch
+from league_config import ODDS_CODES
 
 MODULE = Path(__file__).resolve().with_name(
     "fetch_extra_markets.py"
@@ -121,12 +122,16 @@ class ExtraMarketsTests(unittest.TestCase):
         run = self.module["run"]
         scope = run.__globals__
 
+        Path(".github/workflows").mkdir(parents=True)
+        Path(".github/workflows/daily.yml").write_text("    - cron: '0 5,15 * * *'\n    - cron: '10 8,11,13,18 * * 6,0'\n")
         snapshot = {
             "updatedAt": (
                 scope["now"] - timedelta(seconds=1)
             ).isoformat(),
             "source": "The Odds API",
             "region": "uk",
+            "market": "totals",
+            "configuredLeagues": list(ODDS_CODES.values()),
             "errors": [],
             "events": [{
                 "id": "test",
@@ -159,9 +164,23 @@ class ExtraMarketsTests(unittest.TestCase):
             run()
 
         self.assertEqual(calls, ["sports/"])
-        self.assertIn(
-            "quota_guard", scope["report"]["errors"]
-        )
+        self.assertEqual(scope["report"]["quotaStatus"],"quota_guard")
+        self.assertEqual(scope["report"]["paidRequestsAttempted"],0)
+        self.assertEqual(scope["report"]["errors"],[])
+        # A sufficient balance permits collection; recheck balance after every request.
+        scope["report"]["events"]=[]
+        scope["report"]["paidRequestsAttempted"]=0
+        calls.clear()
+        def abundant(path,params):
+            calls.append(path)
+            scope["report"]["remainingCredits"]=5000 if path=="sports/" else 21
+            if path=="sports/":return []
+            e=snapshot["events"][0]
+            return dict(id=e["id"],sport_key=e["league"],home_team=e["home"],away_team=e["away"],commence_time=e["kickoff"],bookmakers=[self.book("a")])
+        with patch.dict(scope,{"key":"fake-test-key","request":abundant}):run()
+        self.assertEqual(scope["report"]["paidRequestsAttempted"],1)
+        self.assertEqual(len(scope["report"]["events"]),1)
+        self.assertEqual(len(calls),2)
 
 
 if __name__ == "__main__":
