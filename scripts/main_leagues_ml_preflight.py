@@ -42,8 +42,7 @@ def fixtures(payload,code,day,now):
             continue
     return out
 
-def run(reader=read):
-    now=datetime.now(TR)
+def collect(now,reader=read):
     jobs=[(code,SOURCES[code][0],year) for _,code,_ in LEAGUES for year in SEASONS]
     with ThreadPoolExecutor(max_workers=4) as pool:
         res=list(pool.map(lambda j:fetch_season(j,reader,end=now.date()),jobs))
@@ -61,9 +60,14 @@ def run(reader=read):
     with ThreadPoolExecutor(max_workers=4) as pool:
         games=[f for rs in pool.map(load,jobs) for f in rs]
     if datetime.now(TR).date()!=now.date():raise ValueError("date changed; rerun")
+    return history,training,keys,games,len(res)
+
+def run(reader=read):
+    now=datetime.now(TR)
+    history,training,keys,games,source_count=collect(now,reader)
     r=preflight(history,games,now,keys,identity_fn=identity)
     r.update(version="6.66",mode="main_league_prospective_input_preflight",historyMatches=len(history),trainingMatches=len(training),
-        sourceSuccessful=len(res),configuredLeagues=len(LEAGUES),eligibleByLeague=dict(Counter(x["league"] for x in r["entries"])),
+        sourceSuccessful=source_count,configuredLeagues=len(LEAGUES),eligibleByLeague=dict(Counter(x["league"] for x in r["entries"])),
         productionModelValidated=False,updatedAt=datetime.now(TR).isoformat())
     Path("main_leagues_ml_preflight.json").write_text(json.dumps(r,indent=2)+"\n")
     print("MAIN_ML_PREFLIGHT_666",json.dumps({k:v for k,v in r.items() if k!="entries"}))
