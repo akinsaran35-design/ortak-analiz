@@ -41,4 +41,5 @@ if __name__=="__main__":
         print(json.dumps(dict(league=g["league"],matches=g["aggregate"]["matches"],
             seasons=len(g["seasons"]),samples={k:v["sample"] for k,v in g["aggregate"]["metrics"].items()},
             sourceErrors=g["sourceErrors"]),ensure_ascii=False))
-    if not r["respondingLeagues"]:raise SystemExit("No historical source data")
+    if not r["respondingLeagues"] and "--allow-empty" not in __import__("sys").argv:
+        raise SystemExit("No historical source data")
