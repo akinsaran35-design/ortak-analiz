@@ -87,6 +87,61 @@ def legacy_provenance(pairs,ledger,legacy):
         per_pair[k]=status
     return dict(counts=dict(counts),perPair=per_pair,sourceAvailable=isinstance(legacy,dict))
 
+def match_evidence(ledger,locked,provenance):
+    rows=[]
+    for key,forecast in sorted(ledger["forecasts"].items()):
+        pair=locked.get(key)
+        settlement=ledger["settlements"].get(key)
+        quarantine=ledger["quarantine"].get(key)
+        row={field:forecast[field] for field in ("league","date","home","away","eventId","kickoff","recordedAt","historyThrough","featureFingerprint")}
+        row.update(resultStatus="pending",legacyProvenance=provenance.get(key),
+            legacyRecordedAt=pair["legacyRecordedAt"] if pair else None,
+            probabilities=dict(candidate=forecast["candidate"],poisson=forecast["poisson"],
+                legacy=pair["legacy"] if pair else None),
+            result=None,matchedSquaredErrors=None)
+        if quarantine is not None:
+            row.update(resultStatus="quarantined",quarantineReason=quarantine["reason"])
+        elif settlement is not None:
+            row["resultStatus"]="verified"
+            row["result"]={field:settlement[field] for field in ("score","settledAt","sources")}
+            row["result"]["sourceUrls"]=settlement.get("sourceUrls")
+            if pair is not None and provenance.get(key)=="verified":
+                outcomes=dict(zip(MARKETS,labels(*settlement["score"])))
+                row["matchedSquaredErrors"]={
+                    model:{market:(probabilities[market]-outcome)**2 for market,outcome in outcomes.items()}
+                    for model,probabilities in row["probabilities"].items()
+                }
+        rows.append(row)
+    return rows
+
+def over25_evidence_summary(rows):
+    matched=[row for row in rows if row["matchedSquaredErrors"] is not None]
+    dates=sorted({row["date"] for row in matched})
+    counts=Counter(row["resultStatus"] for row in rows)
+    models={}
+    for model in ("legacy","poisson","candidate"):
+        observations=[(row["probabilities"][model]["over25"],int(sum(row["result"]["score"])>=3))
+            for row in matched]
+        metrics=reliability(observations)
+        metrics["accuracyAtHalf"]=(sum((p>=.5)==bool(outcome) for p,outcome in observations)/len(observations)
+            if observations else None)
+        models[model]=metrics
+    improvements={}
+    for baseline in ("legacy","poisson"):
+        blocks=defaultdict(list)
+        for row in matched:
+            errors=row["matchedSquaredErrors"]
+            blocks[row["date"]].append(errors[baseline]["over25"]-errors["candidate"]["over25"])
+        improvements[baseline]=paired_date_bootstrap(blocks) if blocks else None
+    return dict(
+        forecasts=len(rows),pending=counts["pending"],quarantined=counts["quarantined"],
+        verifiedResults=counts["verified"],comparableResults=len(matched),matchDays=len(dates),
+        firstMatchDate=dates[0] if dates else None,lastMatchDate=dates[-1] if dates else None,
+        minimumSettled=MIN_SETTLED,minimumDates=MIN_DATES,
+        sampleTargetReached=len(matched)>=MIN_SETTLED and len(dates)>=MIN_DATES,
+        forecastTimingMayDiffer=True,automaticApproval=False,models=models,
+        pairedBrierImprovement=improvements)
+
 def build(pairs,ledger,meta,legacy,now):
     now=now.astimezone(TR)
     validate(ledger,meta,now,version=VERSION,codes=CODES)
@@ -165,8 +220,13 @@ def build(pairs,ledger,meta,legacy,now):
 def run():
     ledger,meta=read_json(LEDGER),read_json(META)
     pairs=read_json(PAIRS) if PAIRS.exists() else dict(version="6.69",modelSha256=meta["modelSha256"],pairs={})
-    report=build(pairs,ledger,meta,read_json(OLD),datetime.now(TR))
+    legacy=read_json(OLD)
+    report=build(pairs,ledger,meta,legacy,datetime.now(TR))
+    provenance=legacy_provenance(pairs,ledger,legacy)
+    report["matchEvidence"]=match_evidence(ledger,pairs["pairs"],provenance["perPair"])
+    report["over25EvidenceSummary"]=over25_evidence_summary(report["matchEvidence"])
     write_json(PAIRS,pairs)
     write_json(Path("main_ml_matched_report.json"),report)
-    print("MAIN_ML_MATCHED_669",json.dumps({k:v for k,v in report.items() if k!="markets"}))
+    print("MAIN_ML_MATCHED_669",json.dumps({k:v for k,v in report.items()
+        if k not in ("markets","matchEvidence","over25EvidenceSummary")}))
 if __name__=="__main__":run()
