@@ -1,4 +1,43 @@
 {
+  "it.1:401874826": {
+    "league": "it.1",
+    "eventId": "401874826",
+    "home": "Torino",
+    "away": "Lazio",
+    "kickoff": "2026-11-28T17:00:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T20:14:08.106965+03:00",
+        "minute": 12,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            0
+          ],
+          "shots": [
+            2,
+            0
+          ],
+          "shotsOnTarget": [
+            2,
+            0
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
   "fr.1:401876394": {
     "league": "fr.1",
     "eventId": "401876394",
@@ -64,6 +103,153 @@
           "shotsOnTarget": [
             1,
             1
+          ],
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "receivedAt": "2026-11-28T20:14:08.076841+03:00",
+        "minute": 58,
+        "score": [
+          0,
+          2
+        ],
+        "metrics": {
+          "corners": [
+            1,
+            5
+          ],
+          "shots": [
+            9,
+            6
+          ],
+          "shotsOnTarget": [
+            1,
+            5
+          ],
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "pt.1:401885392": {
+    "league": "pt.1",
+    "eventId": "401885392",
+    "home": "Arouca",
+    "away": "Rio Ave",
+    "kickoff": "2026-11-28T15:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T20:14:08.122672+03:00",
+        "minute": 84,
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            5,
+            4
+          ],
+          "shots": [
+            12,
+            9
+          ],
+          "shotsOnTarget": [
+            2,
+            3
+          ],
+          "yellowCards": [
+            2,
+            3
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "nl.1:401875537": {
+    "league": "nl.1",
+    "eventId": "401875537",
+    "home": "Excelsior",
+    "away": "Telstar",
+    "kickoff": "2026-11-28T15:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T20:14:08.095013+03:00",
+        "minute": 84,
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "corners": [
+            10,
+            4
+          ],
+          "shots": [
+            16,
+            6
+          ],
+          "shotsOnTarget": [
+            3,
+            2
+          ],
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "pt.1:401885388": {
+    "league": "pt.1",
+    "eventId": "401885388",
+    "home": "Moreirense",
+    "away": "Santa Clara",
+    "kickoff": "2026-11-28T15:30:00+00:00",
+    "points": [
+      {
+        "receivedAt": "2026-11-28T20:14:08.204994+03:00",
+        "minute": 86,
+        "score": [
+          0,
+          2
+        ],
+        "metrics": {
+          "corners": [
+            6,
+            6
+          ],
+          "shots": [
+            12,
+            9
+          ],
+          "shotsOnTarget": [
+            2,
+            3
           ],
           "yellowCards": [
             0,
