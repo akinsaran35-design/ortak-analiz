@@ -1,8 +1,8 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-28T12:32:17.823403+03:00",
-  "sourceUpdatedAt": "2026-11-28T12:32:17.759878+03:00",
+  "updatedAt": "2026-11-28T13:26:24.204807+03:00",
+  "sourceUpdatedAt": "2026-11-28T13:26:24.110147+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
@@ -17,12 +17,12 @@
       "home": "Central Coast Mariners FC",
       "away": "Auckland FC",
       "kickoff": "2026-11-28T08:40:00+00:00",
-      "receivedAt": "2026-11-28T12:32:17.756596+03:00",
+      "receivedAt": "2026-11-28T13:26:24.105148+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+3'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "86'",
         "score": [
           2,
           2
@@ -30,27 +30,27 @@
         "metrics": {
           "yellowCards": [
             1,
-            1
+            2
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            2,
+            3,
             1
           ],
           "possession": [
-            61.5,
-            38.5
+            63.2,
+            36.8
           ],
           "shots": [
-            11,
-            9
+            16,
+            18
           ],
           "shotsOnTarget": [
             3,
-            4
+            6
           ]
         }
       },
