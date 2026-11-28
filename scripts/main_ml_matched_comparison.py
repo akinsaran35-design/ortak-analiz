@@ -114,6 +114,34 @@ def match_evidence(ledger,locked,provenance):
         rows.append(row)
     return rows
 
+def over25_evidence_summary(rows):
+    matched=[row for row in rows if row["matchedSquaredErrors"] is not None]
+    dates=sorted({row["date"] for row in matched})
+    counts=Counter(row["resultStatus"] for row in rows)
+    models={}
+    for model in ("legacy","poisson","candidate"):
+        observations=[(row["probabilities"][model]["over25"],int(sum(row["result"]["score"])>=3))
+            for row in matched]
+        metrics=reliability(observations)
+        metrics["accuracyAtHalf"]=(sum((p>=.5)==bool(outcome) for p,outcome in observations)/len(observations)
+            if observations else None)
+        models[model]=metrics
+    improvements={}
+    for baseline in ("legacy","poisson"):
+        blocks=defaultdict(list)
+        for row in matched:
+            errors=row["matchedSquaredErrors"]
+            blocks[row["date"]].append(errors[baseline]["over25"]-errors["candidate"]["over25"])
+        improvements[baseline]=paired_date_bootstrap(blocks) if blocks else None
+    return dict(
+        forecasts=len(rows),pending=counts["pending"],quarantined=counts["quarantined"],
+        verifiedResults=counts["verified"],comparableResults=len(matched),matchDays=len(dates),
+        firstMatchDate=dates[0] if dates else None,lastMatchDate=dates[-1] if dates else None,
+        minimumSettled=MIN_SETTLED,minimumDates=MIN_DATES,
+        sampleTargetReached=len(matched)>=MIN_SETTLED and len(dates)>=MIN_DATES,
+        forecastTimingMayDiffer=True,automaticApproval=False,models=models,
+        pairedBrierImprovement=improvements)
+
 def build(pairs,ledger,meta,legacy,now):
     now=now.astimezone(TR)
     validate(ledger,meta,now,version=VERSION,codes=CODES)
@@ -196,7 +224,9 @@ def run():
     report=build(pairs,ledger,meta,legacy,datetime.now(TR))
     provenance=legacy_provenance(pairs,ledger,legacy)
     report["matchEvidence"]=match_evidence(ledger,pairs["pairs"],provenance["perPair"])
+    report["over25EvidenceSummary"]=over25_evidence_summary(report["matchEvidence"])
     write_json(PAIRS,pairs)
     write_json(Path("main_ml_matched_report.json"),report)
-    print("MAIN_ML_MATCHED_669",json.dumps({k:v for k,v in report.items() if k not in ("markets","matchEvidence")}))
+    print("MAIN_ML_MATCHED_669",json.dumps({k:v for k,v in report.items()
+        if k not in ("markets","matchEvidence","over25EvidenceSummary")}))
 if __name__=="__main__":run()
