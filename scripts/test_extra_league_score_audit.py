@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest,paired_date_bootstrap,bootstrap_model_comparison
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest,paired_date_bootstrap,bootstrap_model_comparison,markov_transition,markov_score_probabilities,markov_numerical_audit
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -204,6 +204,28 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(comparison["matches"],baseline["n"])
         self.assertAlmostEqual(comparison["meanImprovement"],baseline["poisson"]["brier"]-baseline["negativeBinomial"]["brier"],places=5)
         self.assertFalse(report["productionModelValidated"])
+    def test_markov_score_states(self):
+        for row in markov_transition(0.05):
+            self.assertAlmostEqual(sum(row),1.0)
+            self.assertTrue(all(p>=0 for p in row))
+        for h,a in ((0,0),(1.4,1.1),(3.0,0.8)):
+            result=markov_score_probabilities(h,a)
+            for actual,expected in zip(result["markets"].values(),goal_probabilities(h,a)):
+                self.assertAlmostEqual(actual,expected,places=11)
+            self.assertLess(result["massError"],1e-11)
+        half=markov_score_probabilities(1.4,1.1,45)
+        for actual,expected in zip(half["markets"].values(),goal_probabilities(0.7,0.55)):
+            self.assertAlmostEqual(actual,expected,places=11)
+        self.assertEqual(markov_score_probabilities(1,1,90,2,1)["markets"],dict(over15=1,over25=1,btts=1))
+        self.assertEqual(markov_score_probabilities(1,1,90,0,0)["markets"],dict(over15=0,over25=0,btts=0))
+        self.assertEqual(markov_score_probabilities(1,1,60,5,1)["markets"],dict(over15=1,over25=1,btts=1))
+        with self.assertRaises(ValueError):
+            markov_score_probabilities(1,1,91)
+        with self.assertRaises(ValueError):
+            markov_score_probabilities(1,1,30,-1,0)
+        report=markov_numerical_audit([])
+        self.assertIsNone(report["maxPrematchError"])
+        self.assertFalse(report["liveValidation"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
