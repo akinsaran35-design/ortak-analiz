@@ -1,17 +1,17 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-28T18:30:38.604938+03:00",
-  "sourceUpdatedAt": "2026-11-28T18:30:27.389442+03:00",
+  "updatedAt": "2026-11-28T19:23:48.144561+03:00",
+  "sourceUpdatedAt": "2026-11-28T19:23:31.031493+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "accepted": 11,
-  "archivedEvents": 30,
-  "archivedPoints": 46,
+  "accepted": 12,
+  "archivedEvents": 32,
+  "archivedPoints": 58,
   "reasons": {
-    "rejected_observation": 36
+    "rejected_observation": 35
   },
   "windowCounts": {
     "5": 0,
@@ -20,14 +20,36 @@
   },
   "rows": [
     {
+      "league": "fr.1",
+      "eventId": "401876394",
+      "home": "Angers",
+      "away": "Lens",
+      "kickoff": "2026-11-28T16:15:00+00:00",
+      "receivedAt": "2026-11-28T19:23:29.861520+03:00",
+      "minute": 8,
+      "observations": 1,
+      "windows": {}
+    },
+    {
+      "league": "tr.1",
+      "eventId": "401888368",
+      "home": "Gaziantep FK",
+      "away": "Amed SFK",
+      "kickoff": "2026-11-28T16:00:00+00:00",
+      "receivedAt": "2026-11-28T19:23:29.857103+03:00",
+      "minute": 24,
+      "observations": 1,
+      "windows": {}
+    },
+    {
       "league": "es.1",
       "eventId": "401882790",
       "home": "Málaga",
       "away": "Athletic Club",
       "kickoff": "2026-11-28T15:15:00+00:00",
-      "receivedAt": "2026-11-28T18:30:26.888285+03:00",
-      "minute": 14,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:29.815200+03:00",
+      "minute": 47,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -36,9 +58,9 @@
       "home": "Birmingham City",
       "away": "Bolton Wanderers",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:26.926476+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.033401+03:00",
+      "minute": 62,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -47,19 +69,8 @@
       "home": "Leeds United",
       "away": "Coventry City",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:26.919715+03:00",
-      "minute": 30,
-      "observations": 1,
-      "windows": {}
-    },
-    {
-      "league": "it.1",
-      "eventId": "401875081",
-      "home": "Frosinone",
-      "away": "Parma",
-      "kickoff": "2026-11-28T14:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:26.936273+03:00",
-      "minute": 71,
+      "receivedAt": "2026-11-28T19:23:30.159755+03:00",
+      "minute": 66,
       "observations": 2,
       "windows": {}
     },
@@ -69,9 +80,9 @@
       "home": "Derby County",
       "away": "Watford",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:26.990711+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.320953+03:00",
+      "minute": 64,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -80,9 +91,9 @@
       "home": "Manchester United",
       "away": "Brentford",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:27.012795+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.325332+03:00",
+      "minute": 65,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -91,9 +102,9 @@
       "home": "Millwall",
       "away": "Burnley",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:27.071253+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.460896+03:00",
+      "minute": 67,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -102,9 +113,9 @@
       "home": "Queens Park Rangers",
       "away": "Sheffield United",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:27.160109+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.544592+03:00",
+      "minute": 65,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -113,9 +124,9 @@
       "home": "West Bromwich Albion",
       "away": "Bristol City",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:27.203490+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.592959+03:00",
+      "minute": 62,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -124,9 +135,9 @@
       "home": "West Ham United",
       "away": "Stoke City",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:27.191446+03:00",
-      "minute": 23,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.676912+03:00",
+      "minute": 56,
+      "observations": 2,
       "windows": {}
     },
     {
@@ -135,9 +146,9 @@
       "home": "Wrexham",
       "away": "Portsmouth",
       "kickoff": "2026-11-28T15:00:00+00:00",
-      "receivedAt": "2026-11-28T18:30:27.229645+03:00",
-      "minute": 30,
-      "observations": 1,
+      "receivedAt": "2026-11-28T19:23:30.769362+03:00",
+      "minute": 61,
+      "observations": 2,
       "windows": {}
     }
   ]
