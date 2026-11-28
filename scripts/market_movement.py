@@ -39,7 +39,10 @@ def run():
             SOURCE.read_text(encoding="utf-8")
         )
 
+        quarantine=archive.get("quarantine",{})
+        if not isinstance(quarantine,dict):raise ValueError("invalid quarantine")
         for record in archive["records"].values():
+            if record["eventId"] in quarantine:continue
             if parse_time(record["kickoff"]) <= now:
                 continue
 
