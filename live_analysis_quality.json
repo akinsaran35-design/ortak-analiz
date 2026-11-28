@@ -1,12 +1,117 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-28T14:15:49.106418+03:00",
-  "sourceUpdatedAt": "2026-11-28T14:15:49.036117+03:00",
+  "updatedAt": "2026-11-28T15:03:01.256487+03:00",
+  "sourceUpdatedAt": "2026-11-28T15:03:01.167204+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "counts": {},
-  "rows": []
+  "counts": {
+    "conflicting_metrics": 1,
+    "observation_ready": 2
+  },
+  "rows": [
+    {
+      "league": "ger.2",
+      "eventId": "401885046",
+      "home": "Hertha Berlin",
+      "away": "Karlsruher SC",
+      "kickoff": "2026-11-28T12:00:00+00:00",
+      "receivedAt": "2026-11-28T15:03:01.145416+03:00",
+      "quality": "conflicting_metrics",
+      "observation": null,
+      "prediction": null
+    },
+    {
+      "league": "ger.2",
+      "eventId": "401885044",
+      "home": "Dynamo Dresden",
+      "away": "St. Pauli",
+      "kickoff": "2026-11-28T12:00:00+00:00",
+      "receivedAt": "2026-11-28T15:03:01.161345+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "2'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            100.0,
+            0.0
+          ],
+          "shots": [
+            0,
+            0
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "ger.2",
+      "eventId": "401885043",
+      "home": "Holstein Kiel",
+      "away": "Kaiserslautern",
+      "kickoff": "2026-11-28T12:00:00+00:00",
+      "receivedAt": "2026-11-28T15:03:01.164369+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "2'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            0.0,
+            100.0
+          ],
+          "shots": [
+            0,
+            0
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    }
+  ]
 }
