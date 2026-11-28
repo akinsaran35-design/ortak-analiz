@@ -8,11 +8,14 @@ from pathlib import Path
 
 from league_config import ODDS_CODES
 from odds_snapshot_validation import normalize_event,finalize
+from extra_market_budget_plan import optional_refresh_gate
 LEAGUES = list(ODDS_CODES.values())
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
 # Reuse only a complete, recent snapshot; never change its original timestamp.
 cache_path = Path("odds.json")
+cached=None
+optional_refresh=os.environ.get("ODDS_OPTIONAL_REFRESH")=="true"
 try:
     cached = json.loads(cache_path.read_text(encoding="utf-8"))
     stamp = datetime.fromisoformat(cached["updatedAt"].replace("Z", "+00:00"))
@@ -47,6 +50,27 @@ else:
     except Exception:
         active = set()
         report["errors"].append("connection_error")
+    if optional_refresh:
+        try:
+            workflow=Path(".github/workflows/daily.yml").read_text()
+            gate=optional_refresh_gate(report["remainingCredits"] if not report["errors"] else None,datetime.now(timezone.utc),workflow,len(LEAGUES))
+        except (OSError,ValueError,TypeError):
+            gate=dict(allowed=False,reason="budget_policy_unavailable")
+        print("OPTIONAL_ODDS_REFRESH_688",json.dumps(gate))
+        if not gate["allowed"]:
+            # Retain the actual older observation, never mark it as fresh.
+            if (isinstance(cached,dict) and cached.get("source")=="The Odds API" and cached.get("region")=="uk"
+                and cached.get("market")=="totals" and isinstance(cached.get("events"),list)
+                and cached.get("eventCount")==len(cached["events"])):
+                try:
+                    stamp=datetime.fromisoformat(cached["updatedAt"].replace("Z","+00:00"))
+                    if stamp.tzinfo is not None and stamp<=now:
+                        print("Optional refresh deferred; existing observation timestamp retained.")
+                        raise SystemExit(0)
+                except (ValueError,TypeError,KeyError,AttributeError):
+                    pass
+            report["errors"].append("optional_refresh_deferred")
+            active=set()
     for league in LEAGUES:
         if league not in active:
             report["inactiveLeagues"].append(league)

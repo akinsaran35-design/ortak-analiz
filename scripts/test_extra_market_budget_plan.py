@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime,timezone,timedelta
-from extra_market_budget_plan import plan,scheduled_slots
+from extra_market_budget_plan import plan,scheduled_slots,optional_refresh_gate
 from league_config import ODDS_CODES
 
 class BudgetTests(unittest.TestCase):
@@ -46,6 +46,11 @@ class BudgetTests(unittest.TestCase):
                   dict(self.s,updatedAt="2026-11-28T09:21:00"),dict(self.s,region="tr")):
             self.assertEqual(plan(s,self.now,self.workflow)["status"],"invalid_snapshot")
         self.assertEqual(plan(self.s,self.now,self.workflow+"    - cron: '0 12 * * *'\n")["status"],"schedule_changed")
+    def test_optional_refresh_gate_live_balance(self):
+        for balance,expected in ((None,False),(True,False),(73,False),(74,True),(80,True)):
+            self.assertEqual(optional_refresh_gate(balance,self.now,self.workflow,9)["allowed"],expected)
+        self.assertFalse(optional_refresh_gate(500,self.now,self.workflow+"    - cron: '0 12 * * *'\n",9)["allowed"])
+        self.assertFalse(optional_refresh_gate(500,self.now.replace(tzinfo=None),self.workflow,9)["allowed"])
     def test_month_end(self):
         self.assertEqual(scheduled_slots(datetime(2026,12,31,16,tzinfo=timezone.utc)),[])
         self.assertEqual(len(scheduled_slots(datetime(2026,11,29,16,tzinfo=timezone.utc))),3)
