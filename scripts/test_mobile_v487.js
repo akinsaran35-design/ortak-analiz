@@ -149,4 +149,6 @@ assert.equal(mlResearchSummary(mlSettled,mlMeta,mlNow).settled,1);
 assert.equal(mlResearchSummary(mlSettled,mlMeta,mlNow).stats.over25.candidate.accuracyPct,100);
 assert.equal(mlResearchSummary({...mlSettled,quarantine:{[mlK]:{}}},mlMeta,mlNow).settled,0);
 assert.equal(mlResearchSummary({...mlLedger,forecasts:{[mlK]:{...mlF,candidate:{...mlF.candidate,btts:.9}}}},mlMeta,mlNow),null);
+assert.equal(mlResearchSummary({...mlLedger,forecasts:{[mlK]:{...mlF,recordedAt:"2026-11-28T11:00:00+03:00"}}},{...mlMeta,frozenAt:"2026-11-28T10:00:00+03:00"},mlNow).pending,1);
+assert.equal(mlResearchSummary({...mlLedger,forecasts:{[mlK]:{...mlF,eventId:"abc"}}},mlMeta,mlNow),null);
 console.log("V6.61 separate ML research panel: cohort, chronology, empty metrics and quarantine tests passed");
