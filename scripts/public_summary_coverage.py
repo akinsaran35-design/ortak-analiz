@@ -40,7 +40,7 @@ def probe(now,reader=read,fixture_reader=public_fixtures):
     today=now.astimezone(TR).date()
     for offset,state in ((0,"pre"),(-1,"post")):
         day=(today+timedelta(days=offset)).isoformat()
-        groups=fixture_reader(day,reader=reader)
+        groups=fixture_reader(day,reader=reader,codes=PILOT)
         for code in PILOT:
             result=dict(league=code,day=day,state=state,status="no_eligible_fixture")
             group=next((g for g in groups if g["league"]==code),None)
