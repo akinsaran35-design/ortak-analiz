@@ -52,7 +52,8 @@ def record(current,previous,now,reason,live_balance=None,errors=None):
     best=max(candidates,key=lambda s:instant(s["updatedAt"])) if candidates else None
     if best is not None and best!=old:write(ARCHIVE,best)
     fresh=valid(current,now) and now-instant(current["updatedAt"])<=timedelta(minutes=30)
-    normal=fresh and reason in ("collected","recent_cache")
+    # A fresh snapshot must still contain at least one not-yet-started event.
+    normal=fresh and reason in ("collected","recent_cache") and any(instant(e["kickoff"])>now for e in current["events"])
     balance=live_balance if type(live_balance) is int and live_balance>=0 else None
     status=dict(version="6.94",updatedAt=now.isoformat(),mode="normal" if normal else "fallback",
         reason=reason,currentOddsAt=current.get("updatedAt") if isinstance(current,dict) else None,
