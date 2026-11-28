@@ -868,6 +868,127 @@ def elo_backtest(rows):
         preservesExpectedTotal=True,sameDayTraining=False,repeatedHoldout=True,
         productionModelValidated=False,externalValidation=False)
 
+GLICKO_SCALE=173.7178
+GLICKO_INITIAL=(1500.0,350.0,0.06)
+GLICKO_TAU=0.5
+
+def glicko_g(phi):
+    return 1/math.sqrt(1+3*phi*phi/math.pi**2)
+
+def glicko_inactive(state,periods):
+    rating,rd,sigma=state
+    return rating,min(350.0,GLICKO_SCALE*math.hypot(rd/GLICKO_SCALE,sigma*math.sqrt(periods))),sigma
+
+def glicko_update(state,opponents):
+    """Glicko-2 rating-period update; offsets are rating-point venue adjustments."""
+    rating,rd,sigma=state
+    if not opponents:
+        return glicko_inactive(state,1)
+    mu=(rating-1500)/GLICKO_SCALE
+    phi=rd/GLICKO_SCALE
+    terms=[]
+    for other,other_rd,score,offset in opponents:
+        g=glicko_g(other_rd/GLICKO_SCALE)
+        z=g*(mu-(other-1500)/GLICKO_SCALE+offset/GLICKO_SCALE)
+        e=1/(1+math.exp(-max(-30,min(30,z))))
+        terms.append((g,e,score))
+    v=1/sum(g*g*e*(1-e) for g,e,s in terms)
+    residual=sum(g*(s-e) for g,e,s in terms)
+    delta=v*residual
+    alpha=math.log(sigma*sigma)
+    def f(x):
+        ex=math.exp(x)
+        return ex*(delta*delta-phi*phi-v-ex)/(2*(phi*phi+v+ex)**2)-(x-alpha)/GLICKO_TAU**2
+    lo=alpha
+    if delta*delta>phi*phi+v:
+        hi=math.log(delta*delta-phi*phi-v)
+    else:
+        k=1
+        while f(alpha-k*GLICKO_TAU)<0 and k<100:
+            k+=1
+        hi=alpha-k*GLICKO_TAU
+    # Bracketed bisection is deterministic and avoids unstable secant steps.
+    lo,hi=sorted((lo,hi))
+    flo=f(lo)
+    for _ in range(100):
+        mid=(lo+hi)/2
+        fm=f(mid)
+        if abs(hi-lo)<1e-10:
+            break
+        if flo*fm<=0:
+            hi=mid
+        else:
+            lo=mid
+            flo=fm
+    new_sigma=math.exp((lo+hi)/4)
+    phi_star=math.hypot(phi,new_sigma)
+    new_phi=1/math.sqrt(1/(phi_star*phi_star)+1/v)
+    new_mu=mu+new_phi*new_phi*residual
+    return 1500+GLICKO_SCALE*new_mu,min(350.0,GLICKO_SCALE*new_phi),new_sigma
+
+def glicko_goal_means(h,a,home,away,scale):
+    """Attenuate goal-share strength by joint rating uncertainty."""
+    attenuation=glicko_g(math.hypot(home[1],away[1])/GLICKO_SCALE)
+    return elo_goal_means(h,a,home[0],away[0],scale*attenuation)
+
+def glicko_backtest(rows):
+    """Daily rating periods, league-scoped states, frozen earlier-date scale."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    ratings={}
+    last={}
+    history={}
+    samples=[]
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        current=datetime.fromisoformat(day).date()
+        prior={}
+        updates={}
+        def state(key):
+            if key not in prior:
+                prior[key]=glicko_inactive(ratings.get(key,GLICKO_INITIAL),max(0,(current-last.get(key,current)).days-1))
+            return prior[key]
+        for r in group:
+            l=r["league"]
+            hk,ak=(l,r["home"]),(l,r["away"])
+            home,away=state(hk),state(ak)
+            x,y=r["csv"]
+            score=1.0 if x>y else 0.0 if x<y else 0.5
+            updates.setdefault(hk,[]).append((away[0],away[1],score,ELO_HOME_ADVANTAGE))
+            updates.setdefault(ak,[]).append((home[0],home[1],1-score,-ELO_HOME_ADVANTAGE))
+            hs,as_,n=history.get(l,(0,0,0))
+            if n>=MIN_TRAIN_MATCHES:
+                probs=[goal_probabilities(*glicko_goal_means(hs/n,as_/n,home,away,s)) for s in ELO_SCALES]
+                samples.append((day,probs,labels(x,y),(home[1]+away[1])/2))
+        for key,opponents in updates.items():
+            ratings[key]=glicko_update(prior[key],opponents)
+            last[key]=current
+        for r in group:
+            l=r["league"]
+            h,a,n=history.get(l,(0,0,0))
+            x,y=r["csv"]
+            history[l]=(h+x,a+y,n+1)
+    days=sorted({r[0] for r in samples})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    tune=[r for r in samples if cutoff and r[0]<cutoff]
+    test=[r for r in samples if cutoff and r[0]>=cutoff]
+    selected=min(range(len(ELO_SCALES)),key=lambda j:sum((r[1][j][2]-r[2][2])**2 for r in tune)) if len(tune)>=MIN_VALIDATION_MATCHES else 0
+    metrics={}
+    for i,k in enumerate(MARKETS):
+        def score(j):
+            if not test:
+                return dict(brier=None,accuracyPct=None)
+            return dict(brier=round(sum((r[1][j][i]-r[2][i])**2 for r in test)/len(test),6),
+                accuracyPct=round(100*sum((r[1][j][i]>=0.5)==bool(r[2][i]) for r in test)/len(test),2))
+        metrics[k]=dict(n=len(test),poisson=score(0),glicko2=score(selected))
+    return dict(model="glicko2_uncertainty_goal_share",holdoutStart=cutoff,tuneMatches=len(tune),holdoutMatches=len(test),
+        ratingCount=len(ratings),initialRating=GLICKO_INITIAL[0],initialRD=GLICKO_INITIAL[1],initialVolatility=GLICKO_INITIAL[2],
+        tau=GLICKO_TAU,ratingPeriod="day",candidateScales=list(ELO_SCALES),selectedScale=ELO_SCALES[selected],
+        meanHoldoutRD=round(sum(r[3] for r in test)/len(test),3) if test else None,selectionMarket="btts",markets=metrics,
+        preservesExpectedTotal=True,sameDayTraining=False,repeatedHoldout=True,
+        productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -889,7 +1010,8 @@ def build(now,reader=read):
     bootstrap=bootstrap_model_comparison([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     markov=markov_numerical_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     elo=elo_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.40",eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    glicko=glicko_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.41",glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -900,6 +1022,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("GLICKO_BACKTEST",json.dumps(report["glickoBacktest"]))
     print("ELO_BACKTEST",json.dumps(report["eloBacktest"]))
     print("MARKOV_AUDIT",json.dumps({k:v for k,v in report["markovAudit"].items() if k!="cases"}))
     print("BOOTSTRAP_COMPARISON",json.dumps(report["bootstrapComparison"]))
