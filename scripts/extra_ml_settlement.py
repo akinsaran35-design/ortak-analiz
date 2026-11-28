@@ -13,7 +13,7 @@ CODES=dict(COMPETITIONS)
 MODELS=("poisson","catboost","candidate")
 RECHECK_DAYS=14
 
-def csv_evidence(raw,league):
+def csv_evidence(raw,league,identity_fn=team_key):
     reader=csv.DictReader(io.StringIO(raw.decode("utf-8-sig")))
     if not {"Date","HomeTeam","AwayTeam","FTHG","FTAG"}.issubset(reader.fieldnames or []):
         raise ValueError("CSV schema")
@@ -28,7 +28,7 @@ def csv_evidence(raw,league):
                 pass
         if not day or not r["HomeTeam"] or not r["AwayTeam"]:
             continue
-        k=(day,team_key(league,r["HomeTeam"]),team_key(league,r["AwayTeam"]))
+        k=(day,identity_fn(league,r["HomeTeam"]),identity_fn(league,r["AwayTeam"]))
         try:
             result=score(r["FTHG"],r["FTAG"])
         except ValueError:
@@ -36,7 +36,7 @@ def csv_evidence(raw,league):
         out[k].append(result)
     return out
 
-def espn_evidence(payload,fixture):
+def espn_evidence(payload,fixture,identity_fn=team_key):
     if not isinstance(payload.get("events"),list):
         raise ValueError("ESPN schema")
     events=[e for e in payload["events"] if isinstance(e,dict) and str(e.get("id"))==fixture["eventId"]]
@@ -56,15 +56,15 @@ def espn_evidence(payload,fixture):
             return None,"event_identity_mismatch"
         h,a=teams["home"],teams["away"]
         if (t.date().isoformat()!=fixture["date"] or t<=aware(fixture["recordedAt"])
-            or team_key(fixture["league"],h["team"]["displayName"])!=fixture["home"]
-            or team_key(fixture["league"],a["team"]["displayName"])!=fixture["away"]):
+            or identity_fn(fixture["league"],h["team"]["displayName"])!=fixture["home"]
+            or identity_fn(fixture["league"],a["team"]["displayName"])!=fixture["away"]):
             return None,"event_identity_mismatch"
         return score(h["score"],a["score"]),None
     except (KeyError,TypeError,ValueError,AttributeError):
         return None,"malformed_final_event"
 
-def validate(ledger,meta,now):
-    if ledger.get("version")!=VERSION or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
+def validate(ledger,meta,now,version=VERSION,codes=CODES):
+    if ledger.get("version")!=version or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
         raise ValueError("cohort mismatch")
     f=ledger["forecasts"]
     if set(ledger["settlements"])-set(f) or set(ledger["quarantine"])-set(f):
@@ -72,7 +72,7 @@ def validate(ledger,meta,now):
     seen=set()
     for k,r in f.items():
         ident=(r["league"],r["eventId"])
-        if (k!=key(r) or ident in seen or r["league"] not in CODES or r["policyVersion"]!=VERSION
+        if (k!=key(r) or ident in seen or r["league"] not in codes or r["policyVersion"]!=version
             or r["modelSha256"]!=meta["modelSha256"] or not aware(meta["frozenAt"])<=aware(r["recordedAt"])<=now
             or not aware(r["recordedAt"]).date()<aware(r["kickoff"]).date()
             or aware(r["kickoff"]).date().isoformat()!=r["date"]
@@ -88,9 +88,9 @@ def validate(ledger,meta,now):
                 or not aware(r["kickoff"])<aware(s["settledAt"])<=now or aware(s["settledAt"]).date()<=date.fromisoformat(r["date"])):
                 raise ValueError("invalid stored settlement")
 
-def settle(ledger,meta,now,reader=read):
+def settle(ledger,meta,now,reader=read,version=VERSION,codes=CODES,identity_fn=team_key,espn_codes=None):
     now=now.astimezone(TR)
-    validate(ledger,meta,now)
+    validate(ledger,meta,now,version=version,codes=codes)
     cutoff=now.date()-timedelta(days=RECHECK_DAYS)
     primary={}
     secondary={}
@@ -102,9 +102,9 @@ def settle(ledger,meta,now,reader=read):
             continue
         l=f["league"]
         year=d.year if d.month>=7 else d.year-1
-        cu=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{CODES[l]}.csv"
-        eu=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{l}/scoreboard?dates={d:%Y%m%d}"
-        for cache,url,parse in ((primary,cu,lambda raw:csv_evidence(raw,l)),(secondary,eu,json.loads)):
+        cu=f"https://football-data.co.uk/mmz4281/{year%100:02d}{(year+1)%100:02d}/{codes[l]}.csv"
+        eu=f"https://site.api.espn.com/apis/site/v2/sports/soccer/{espn_codes[l] if espn_codes is not None else l}/scoreboard?dates={d:%Y%m%d}"
+        for cache,url,parse in ((primary,cu,lambda raw:csv_evidence(raw,l,identity_fn)),(secondary,eu,json.loads)):
             if url not in cache:
                 try:
                     cache[url]=parse(reader(url))
@@ -114,7 +114,7 @@ def settle(ledger,meta,now,reader=read):
         if primary[cu] is None or secondary[eu] is None:
             continue
         entries=primary[cu].get((f["date"],f["home"],f["away"]),[])
-        b,reason=espn_evidence(secondary[eu],f)
+        b,reason=espn_evidence(secondary[eu],f,identity_fn)
         a=entries[0] if len(entries)==1 else None
         prior=ledger["settlements"].get(k)
         if len(entries)>1:
@@ -129,10 +129,10 @@ def settle(ledger,meta,now,reader=read):
             ledger["settlements"][k]=dict(score=a,eventId=f["eventId"],settledAt=now.isoformat(),
                 sources=["football-data","espn"],sourceUrls=[cu,eu])
             added+=1
-    validate(ledger,meta,now)
+    validate(ledger,meta,now,version=version,codes=codes)
     return added,errors
 
-def summarize(ledger):
+def summarize(ledger,version=VERSION):
     valid=[(r,ledger["settlements"][k]["score"]) for k,r in ledger["forecasts"].items() if k in ledger["settlements"] and k not in ledger["quarantine"]]
     n=len(valid)
     days=len({r["date"] for r,_ in valid})
@@ -148,7 +148,7 @@ def summarize(ledger):
         for r,y in pairs:
             blocks[r["date"]].append((r["poisson"][m]-y)**2-(r["candidate"][m]-y)**2)
         markets[m]=dict(models=metrics,pairedBootstrap=paired_date_bootstrap(blocks))
-    return dict(version="6.60",cohortVersion=VERSION,mode="prospective_research_only",
+    return dict(version="6.60",cohortVersion=version,mode="prospective_research_only",
         recorded=len(ledger["forecasts"]),validSettled=n,quarantined=len(ledger["quarantine"]),
         pending=sum(k not in ledger["settlements"] and k not in ledger["quarantine"] for k in ledger["forecasts"]),
         dateBlocks=days,minimumSettled=MIN_SETTLED,minimumDates=MIN_DATES,
