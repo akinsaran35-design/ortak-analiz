@@ -1,0 +1,28 @@
+name: V6.55 historical probability calibration
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_league_historical_calibration.py'
+      - 'scripts/test_extra_league_historical_calibration.py'
+      - '.github/workflows/extra-league-historical-calibration.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'xgboost==2.1.4' 'lightgbm==4.6.0' 'catboost==1.2.8' 'numpy==2.2.6' 'scipy==1.15.3' 'scikit-learn==1.6.1' 'joblib==1.4.2' 'threadpoolctl==3.6.0'
+      - run: python scripts/test_extra_league_historical_calibration.py
+      - run: python scripts/extra_league_historical_calibration.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extra-historical-calibration
+          path: extra_calibration_655.json
+          if-no-files-found: error
+          retention-days: 30
