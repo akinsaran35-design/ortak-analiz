@@ -178,3 +178,18 @@ assert.equal(mlResearchSummary(mainLedger,mainMeta,mlNow),null);
 assert.equal(mlResearchSummary(mlLedger,mlMeta,mlNow,"main"),null);
 assert.equal(mlResearchSummary(mainLedger,{...mainMeta,trainingMatches:1791},mlNow,"main"),null);
 console.log("V6.73 separate main research cohort validated");
+
+const {matchedMlSummary}=require("../mobile-v487.js");
+const pairRow={legacyVersion:"1.6",legacyKey:JSON.stringify([mainF.date,"İngiltere Premier Lig","A – B"]),legacyRecordedAt:"2026-11-27T08:00:00Z",pairedAt:"2026-11-28T09:00:00Z",forecastFingerprint:"a".repeat(64),legacy:{over15:.7,over25:.4,btts:.3},candidate:mainF.candidate};
+const pairDoc={version:"6.69",modelSha256:mlHash,pairs:{[mainK]:pairRow}};
+assert.equal(matchedMlSummary(pairDoc,mainLedger,mainMeta,mlNow).pending,1);
+assert.equal(matchedMlSummary(pairDoc,mainLedger,mainMeta,mlNow).stats.over25.legacy.brier,null);
+const mainDone={...mainLedger,settlements:{[mainK]:mlSettled.settlements[mlK]}};
+const pairResult=matchedMlSummary(pairDoc,mainDone,mainMeta,mlNow);
+assert.equal(pairResult.settled,1);
+assert.equal(pairResult.stats.over25.legacy.accuracyPct,0);
+assert.equal(pairResult.stats.over25.candidate.accuracyPct,100);
+assert.equal(matchedMlSummary(pairDoc,{...mainDone,quarantine:{[mainK]:{}}},mainMeta,mlNow).settled,0);
+assert.equal(matchedMlSummary({...pairDoc,pairs:{[mainK]:{...pairRow,pairedAt:"2026-11-30T08:00:00Z"}}},mainLedger,mainMeta,mlNow),null);
+assert.equal(matchedMlSummary({...pairDoc,pairs:{[mainK]:{...pairRow,candidate:{...mainF.candidate,over25:.1}}}},mainLedger,mainMeta,mlNow),null);
+console.log("V6.74 matched comparison checks passed");

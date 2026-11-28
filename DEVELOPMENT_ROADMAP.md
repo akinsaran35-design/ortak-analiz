@@ -1,6 +1,6 @@
 # Ortak Analiz PRO — geliştirme sırası
 
-2026-11-28: V6.72 ana sürümde; %50/%50 ağırlık korundu. 24 eşleşmenin tümünde yeni model 24–48 saat daha geç üretildi. 24 eşleşmenin kalıcı kaydı doğrulandı. Tahmin zaman farkı medyanı yaklaşık 43 saat. 38 yeni tahminin kalıcı kaydı doğrulandı. Ana 9 ligde 39 gelecek maçın 38'i için 119 değişkenli girdi kontrolü başarılı; 1 kimlik uyuşmazlığı dışlandı. V6.65: 3292 geçmiş test maçı; 2.5 Üst/Alt sınıflandırmasında iyileşme sınırlı, KG Var/Yok için iyileşme kanıtlanmadı. Geçmiş test gerçek maç öncesi bağımsız doğrulama değildir.
+2026-11-28: V6.73 ana sürümde; ana lig araştırma paneli test/merge tamamlandı. %50/%50 ağırlık korundu. 24 eşleşmenin tümünde yeni model 24–48 saat daha geç üretildi. 24 eşleşmenin kalıcı kaydı doğrulandı. Tahmin zaman farkı medyanı yaklaşık 43 saat. 38 yeni tahminin kalıcı kaydı doğrulandı. Ana 9 ligde 39 gelecek maçın 38'i için 119 değişkenli girdi kontrolü başarılı; 1 kimlik uyuşmazlığı dışlandı. V6.65: 3292 geçmiş test maçı; 2.5 Üst/Alt sınıflandırmasında iyileşme sınırlı, KG Var/Yok için iyileşme kanıtlanmadı. Geçmiş test gerçek maç öncesi bağımsız doğrulama değildir.
 
 ## Ana öncelik — araştırmadan mevcut maç analiz motoruna
 
@@ -13,7 +13,9 @@
 
 - [x] Sabit %50/%50 ağırlık ile ayrı geçmiş ayarlama diliminde seçilen ortak ağırlığın karşılaştırması (V6.72 test/merge tamamlandı; eşik karşılanmadı); tekrar kullanılan test kümesi bağımsız onay sayılmaz, dondurulmuş model değiştirilmez.
 
-- [ ] Ana 9 lig araştırma performansını mevcut Performans ekranında ayrı göster (V6.73 PR); maç kartlarını değiştirme.
+- [x] Ana 9 lig araştırma performansını mevcut Performans ekranında ayrı göster (V6.73 test/merge); maç kartlarını değiştirme.
+
+- [ ] Eski/yeni ortak maç karşılaştırmasını Performans ekranında ayrı göster (V6.74 PR); tahmin zaman farkı ve doğrulanmış sonuç eksikliği açıkça belirtilir.
 
 ## Açık veri işleri
 
