@@ -89,8 +89,24 @@ class ExtraMarketsTests(unittest.TestCase):
             ]
         }
         rows = self.extract(event, "btts", ("Yes", "No"))
-        self.assertEqual(len(rows), 3)
+        self.assertEqual(len(rows), 2)
+        self.assertEqual({r['bookmaker'] for r in rows},{'b','c'})
 
+    def test_invalid_prices_and_duplicate_outcomes(self):
+        for price in (True,float("inf"),float("nan"),1):
+            b=self.book("a")
+            b["markets"][1]["outcomes"][0]["price"]=price
+            self.assertEqual(self.extract({"bookmakers":[b]},"btts",("Yes","No")),[])
+        b=self.book("a")
+        b["markets"][1]["outcomes"].append(dict(b["markets"][1]["outcomes"][0]))
+        self.assertEqual(self.extract({"bookmakers":[b]},"btts",("Yes","No")),[])
+    def test_exact_response_identity(self):
+        e=dict(id="abc",league="soccer_epl",home="A",away="B",kickoff=(self.now+timedelta(hours=1)).isoformat())
+        d=dict(id="abc",sport_key=e["league"],home_team="A",away_team="B",commence_time=e["kickoff"])
+        check=self.module["response_matches"]
+        self.assertTrue(check(d,e,self.now))
+        for k in ("id","sport_key","home_team","away_team","commence_time"):
+            self.assertFalse(check(dict(d,**{k:"wrong"}),e,self.now))
     def test_missing_outcome(self):
         book = self.book("a")
         book["markets"][1]["outcomes"].pop()
