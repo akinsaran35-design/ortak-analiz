@@ -7,7 +7,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from collections import Counter
 from extra_historical_metric_coverage import LEAGUES
-from nine_league_results_pilot import result_key
+from extra_fixture_aliases import fixture_team_key
 from scoreboard_snapshot import parse
 from results_source_pilot import TR,read
 
@@ -39,7 +39,7 @@ def build(history,now,reader=read):
                 continue
             for row in events:
                 if row["state"]!="pre" or row["status"]!="STATUS_SCHEDULED" or datetime.fromisoformat(row["kickoff"])<=now:continue
-                keys=[result_key(row[s],code,sport) for s in ("home","away")]
+                keys=[fixture_team_key(row[s],code,sport) for s in ("home","away")]
                 matches=[index.get(k,[]) for k in keys]
                 ok=keys[0]!=keys[1] and all(len(m)==1 and m[0]["recent"]["sample"]>0 for m in matches)
                 rows.append(dict(eventId=row["eventId"],kickoff=row["kickoff"],home=row["home"],away=row["away"],
@@ -50,7 +50,7 @@ def build(history,now,reader=read):
         return dict(league=code,leagueName=label,errors=errors,invalid=invalid+sum(n-1 for n in ids.values()),
             rows=rows,matched=sum(r["status"]=="matched" for r in rows),unmatched=sum(r["status"]!="matched" for r in rows))
     with ThreadPoolExecutor(max_workers=4) as pool:groups=list(pool.map(group,LEAGUES))
-    return dict(version="7.10",updatedAt=now.isoformat(),historyUpdatedAt=history["updatedAt"],cutoffExclusive=cutoff,
+    return dict(version="7.11",updatedAt=now.isoformat(),historyUpdatedAt=history["updatedAt"],cutoffExclusive=cutoff,
         mode="descriptive_fixture_context",sources=["ESPN","football-data.co.uk"],decision="PAS",predictionsEnabled=False,
         fixtureCount=sum(len(g["rows"]) for g in groups),matchedCount=sum(g["matched"] for g in groups),
         unmatchedCount=sum(g["unmatched"] for g in groups),groups=groups)
