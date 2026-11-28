@@ -283,6 +283,68 @@ def hybrid_holdout(rows):
             improvementObserved=bool(enough and loss(test,w)<loss(test,0)),enoughForComparison=enough)
     return dict(model="chronological_frozen_weight_hybrid",holdoutStart=cutoff,markets=metrics,weightCandidates=list(HYBRID_WEIGHTS),minimumMatchesPerSplit=MIN_VALIDATION_MATCHES,productionModelValidated=False,externalValidation=False)
 
+DC_RHOS=tuple(i/100 for i in range(-20,21,5))
+
+def dc_tau(h,a,x,y,rho):
+    if (x,y)==(0,0): return 1-h*a*rho
+    if (x,y)==(0,1): return 1+h*rho
+    if (x,y)==(1,0): return 1+a*rho
+    if (x,y)==(1,1): return 1-rho
+    return 1.0
+
+def fit_dc_rho(past,h,a):
+    """Grid likelihood fit conditional on past league goal means."""
+    candidates=[rho for rho in DC_RHOS if all(dc_tau(h,a,x,y,rho)>0 for x,y in ((0,0),(0,1),(1,0),(1,1)))]
+    return max(candidates,key=lambda rho:(sum(math.log(dc_tau(h,a,*s,rho)) for s in past),-abs(rho)))
+
+def dc_probabilities(h,a,rho):
+    if any(dc_tau(h,a,x,y,rho)<=0 for x,y in ((0,0),(0,1),(1,0),(1,1))):
+        raise ValueError("invalid Dixon-Coles correction")
+    p15,p25,pb=goal_probabilities(h,a)
+    delta=math.exp(-h-a)*h*a*rho
+    return tuple(min(1,max(0,p)) for p in (p15-delta,p25,pb-delta))
+
+def dixon_coles_backtest(rows):
+    """Past-only league-level Dixon-Coles correction, paired with Poisson."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    samples={k:[] for k in MARKETS}
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        fitted={}
+        for r in group:
+            league=r["league"]
+            past=history.get(league,[])
+            n=len(past)
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            if league not in fitted:
+                h=sum(s[0] for s in past)/n
+                a=sum(s[1] for s in past)/n
+                rho=fit_dc_rho(past,h,a)
+                fitted[league]=(goal_probabilities(h,a),dc_probabilities(h,a,rho))
+            baseline,dc=fitted[league]
+            for k,p,q,y in zip(MARKETS,baseline,dc,labels(*r["csv"])):
+                samples[k].append((day,p,q,y))
+        for r in group:
+            history.setdefault(r["league"],[]).append(r["csv"])
+    days=sorted({r[0] for r in samples[MARKETS[0]]})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    metrics={}
+    for k,items in samples.items():
+        test=[r for r in items if cutoff and r[0]>=cutoff]
+        n=len(test)
+        def score(index):
+            if not n: return dict(brier=None,accuracyPct=None)
+            return dict(brier=round(sum((r[index]-r[3])**2 for r in test)/n,6),
+                accuracyPct=round(100*sum((r[index]>=0.5)==bool(r[3]) for r in test)/n,2))
+        metrics[k]=dict(n=n,poisson=score(1),dixonColes=score(2),
+            improvementObserved=bool(n>=MIN_VALIDATION_MATCHES and sum((r[2]-r[3])**2-(r[1]-r[3])**2 for r in test)<-1e-10))
+    return dict(model="league_mean_dixon_coles",rhoCandidates=list(DC_RHOS),holdoutStart=cutoff,markets=metrics,
+        sameDayTraining=False,productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -296,7 +358,8 @@ def build(now,reader=read):
     replay=chronological_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     team_replay=team_form_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     hybrid=hybrid_holdout([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.32",hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    dc=dixon_coles_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.33",dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -307,6 +370,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("DIXON_COLES_BACKTEST",json.dumps(report["dixonColesBacktest"]))
     print("HYBRID_HOLDOUT",json.dumps(report["hybridHoldout"]))
     print("TEAM_FORM_BACKTEST",json.dumps(report["teamFormBacktest"]))
     print("CHRONOLOGICAL_BACKTEST",json.dumps(report["chronologicalBacktest"]))

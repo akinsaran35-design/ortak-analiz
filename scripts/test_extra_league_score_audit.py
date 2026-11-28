@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -102,6 +102,21 @@ class AuditTests(unittest.TestCase):
         empty=hybrid_holdout([])
         self.assertIsNone(empty["markets"]["btts"]["hybrid"]["brier"])
         self.assertFalse(empty["markets"]["btts"]["enoughForComparison"])
+    def test_dixon_coles(self):
+        self.assertEqual(dc_probabilities(1.4,1.1,0),goal_probabilities(1.4,1.1))
+        self.assertEqual(dc_probabilities(1.4,1.1,-0.1)[1],goal_probabilities(1.4,1.1)[1])
+        self.assertGreater(dc_probabilities(1.4,1.1,-0.1)[2],goal_probabilities(1.4,1.1)[2])
+        self.assertLess(fit_dc_rho([[0,0],[1,1]]*15,1,1),0)
+        with self.assertRaises(ValueError):
+            dc_probabilities(3,3,1)
+        start=datetime(2026,8,1)
+        rows=[dict(league="sco.1",date=(start+timedelta(days=d)).date().isoformat(),home=f"a{i}",away=f"b{i}",csv=[i%3,d%3],espn=[i%3,d%3],status="corroborated") for d in range(30) for i in range(10)]
+        result=dixon_coles_backtest(rows)
+        self.assertEqual(result,dixon_coles_backtest(list(reversed(rows))))
+        self.assertEqual(result["markets"]["over25"]["poisson"],result["markets"]["over25"]["dixonColes"])
+        self.assertEqual(result["markets"]["over15"]["n"],hybrid_holdout(rows)["markets"]["over15"]["holdoutMatches"])
+        self.assertFalse(result["productionModelValidated"])
+        self.assertIsNone(dixon_coles_backtest([])["markets"]["btts"]["dixonColes"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
