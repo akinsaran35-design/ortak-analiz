@@ -28,7 +28,7 @@ def run():
     ledger=read_json(LEDGER) if LEDGER.exists() else empty_ledger(meta,version=VERSION)
     now=datetime.now(TR)
     if now.date()!=started.date():raise ValueError("date changed; rerun")
-    added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity,reference_fn=reference)
+    added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity,reference_fn=reference,shared_reference=True)
     reference_summary=summarize_reference(ledger)
     write_json(LEDGER,ledger)
     report=dict(version=VERSION,mode="prospective_research_only",sourceSuccessful=diagnostics["sourceSuccessful"],sourceDiagnostics=diagnostics,
@@ -36,6 +36,7 @@ def run():
         trainingFingerprint=meta["trainingFingerprint"],frozenAt=meta["frozenAt"],
         fixturesChecked=len(games),newForecasts=added,sameSourceReferenceRecorded=reference_summary["recorded"],recorded=len(ledger["forecasts"]),
         settled=len(ledger["settlements"]),excluded=excluded,modelFrozen=True,
+        sharedInputReferenceRecords=sum("sharedInputReference" in f for f in ledger["forecasts"].values()),
         productionModelValidated=False,automaticApproval=False,existingOtherArchivesModified=False,
         updatedAt=now.isoformat())
     write_json(Path("main_ml_prospective_report.json"),report)

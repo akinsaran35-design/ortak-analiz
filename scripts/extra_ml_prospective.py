@@ -1,5 +1,5 @@
 """V6.59 prospective research cohort; frozen model, append-only forecasts, no production use."""
-import json,hashlib
+import json,hashlib,math
 from collections import Counter
 from datetime import datetime,timedelta
 from pathlib import Path
@@ -87,7 +87,29 @@ def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,no
 def empty_ledger(meta,version=VERSION):
     return dict(version=version,modelSha256=meta["modelSha256"],forecasts={},settlements={},quarantine={})
 
-def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None,reference_fn=None):
+def venue_form_reference(features):
+    """V1.6 formula adapted to the same feature vector, not a published V1.6 forecast."""
+    rates=[]
+    for side in ("home","away"):
+        venue=side+"Venue_last10"
+        all_venues=side+"_last10"
+        prefix=venue if features[venue+"_matches"]>=5 else all_venues
+        if features[prefix+"_matches"]<5:
+            return None
+        gf,ga=(features[prefix+"_goals_"+x] for x in ("for","against"))
+        if any(type(x) not in (int,float) or not math.isfinite(x) or x<0 for x in (gf,ga)):
+            return None
+        rates.append((gf,ga))
+    h=max(.15,min(4.,(rates[0][0]+rates[1][1])/2))
+    a=max(.15,min(4.,(rates[1][0]+rates[0][1])/2))
+    total=h+a
+    def over(n):
+        return 1-sum(math.exp(-total)*total**k/math.factorial(k) for k in range(n+1))
+    def rounded(x):return round(100*min(1,max(0,x)),1)/100
+    return dict(over15=rounded(over(1)),over25=rounded(over(2)),
+        btts=rounded((1-math.exp(-h))*(1-math.exp(-a))))
+
+def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None,reference_fn=None,shared_reference=False):
     now=now.astimezone(TR)
     if ledger.get("version")!=version or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
         raise ValueError("cohort mismatch")
@@ -132,6 +154,12 @@ def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=N
             ref=reference_fn(history,f,now,info,identity_fn)
             if ref is not None:
                 ledger["forecasts"][k]["sameSourceVenueReference"]=ref
+        if shared_reference:
+            ref=venue_form_reference(features)
+            if ref is not None:
+                if not probabilities(ref):raise ValueError("incoherent shared-input reference")
+                ledger["forecasts"][k]["sharedInputReference"]=dict(version="6.84",method="adapted_v1.6_venue_form",
+                    featureFingerprint=digest(features),historyCutoffExclusive=now.date().isoformat(),probabilities=ref)
         existing.add(identity)
         added+=1
     return added,dict(excluded)
