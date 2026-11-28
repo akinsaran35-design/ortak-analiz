@@ -1,0 +1,18 @@
+name: V7.29 OpenLigaDB current round evidence
+on:
+  pull_request:
+    paths:
+      - 'scripts/openliga_radar_evidence.py'
+      - 'scripts/test_openliga_radar_evidence.py'
+      - '.github/workflows/openliga-radar-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test_openliga_radar_evidence.py
+      - run: python3 scripts/openliga_radar_evidence.py

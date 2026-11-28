@@ -4,6 +4,9 @@ on:
     paths:
       - 'index.html'
       - 'mobile-v487.js'
+      - 'direct-radar-v727.js'
+      - 'scripts/test_direct_radar.js'
+      - 'scripts/probe_direct_radar_browser.js'
       - 'mobile-v487.css'
       - 'money-v497.js'
       - 'scripts/test_mobile_browser.js'
@@ -22,6 +25,8 @@ jobs:
       - run: python3 scripts/team_logo_catalog.py
       - run: npm install --no-save --package-lock=false playwright@1.58.2
       - run: npx playwright install --with-deps chromium
+      - run: node --check direct-radar-v727.js && node scripts/test_direct_radar.js
+      - run: node scripts/probe_direct_radar_browser.js
       - run: |
           python3 -m http.server 8765 > /tmp/oa-browser-server.log 2>&1 &
           for i in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8765/index.html >/dev/null && break; sleep 1; done

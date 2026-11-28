@@ -1,0 +1,26 @@
+name: V7.31 Sportmonks fixture coverage
+on:
+  pull_request:
+    paths:
+      - 'scripts/sportmonks_fixture_coverage.py'
+      - 'scripts/test_sportmonks_fixture_coverage.py'
+      - '.github/workflows/sportmonks-fixture-coverage.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sportmonks_fixture_coverage.py'
+      - '.github/workflows/sportmonks-fixture-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test_sportmonks_fixture_coverage.py
+      - if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS_API_TOKEN }}
+        run: python3 scripts/sportmonks_fixture_coverage.py

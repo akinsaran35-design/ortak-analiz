@@ -47,6 +47,14 @@ jobs:
           ODDS_OPTIONAL_REFRESH: ${{ github.ref == 'refs/heads/main' && github.event_name == 'schedule' && github.event.schedule == '10 8,11,13,18 * * 6,0' }}
         run: python scripts/fetch_odds.py
 
+      - name: V7.05 quota guarded backup routing
+        if: github.ref == 'refs/heads/main'
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          python scripts/test_backup_source_router.py
+          python scripts/backup_source_router.py
+
       - name: V6.89 quota-protected extra market research
         if: github.ref == 'refs/heads/main' && github.event_name == 'schedule' && github.event.schedule == '0 5,15 * * *'
         env:
@@ -259,6 +267,15 @@ jobs:
           python scripts/football_context_manifest.py
           python scripts/test_fixture_data_quality.py
           python scripts/fixture_data_quality.py
+      - name: V7.08 additional football historical statistics
+        if: github.ref == 'refs/heads/main'
+        run: |
+          python scripts/test_extra_historical_metric_coverage.py
+          python scripts/test_extra_team_statistics.py
+          python scripts/test_extra_fixture_aliases.py
+          python scripts/test_extra_fixture_context.py
+          python scripts/extra_historical_metric_coverage.py --allow-empty
+          python scripts/extra_fixture_context.py
       - name: V4.93 20-file release and source integrity
         if: github.ref == 'refs/heads/main'
         run: |
@@ -291,7 +308,9 @@ jobs:
             if [ -f extra_market_archive.json ]; then git add extra_market_archive.json; fi
             if [ -f extra_markets.json ]; then git add extra_markets.json; fi
             if [ -f odds_last_good.json ]; then git add odds_last_good.json; fi
-            if [ -f odds_source_status.json ]; then git add odds_source_status.json; fi
+            if [ -f odds_continuity.json ]; then git add odds_continuity.json; fi
+            if [ -f football_history_cache.json ]; then git add football_history_cache.json; fi
+            git add extra_historical_metric_coverage.json extra_fixture_context.json
             git add observed_totals_history.json observed_totals_report.json market_data_health.json fixture_data_quality.json chronological_statistics_research.json football_context_research.json historical_metric_coverage.json h2h_history_research.json football_context_manifest.json daily.json odds.json matching.json market_analysis.json market_analysis_15.json shadow_coupon.json shadow_archive.json shadow_verified_results.json shadow_results_status.json shadow_performance.json fixture_reconciliation.json archive_calendar_audit.json archive_calendar_evidence.json archive_calendar_evidence_status.json archive_calendar_result_replay.json archive_calendar_outcomes.json archive_calendar_outcome_status.json snapshot_integrity.json score_provenance.json results_source_pilot.json multi_league_results.json backtest.json prediction_archive.json performance.json market_archive.json validation.json prospective_archive.json prospective_validation.json prospective_leagues.json scoreboard_snapshot.json fixture_coverage_audit.json kickoff_confirmation.json data_quality.json decision.json calibration.json model_research.json football_coverage_pilot.json football_statistics_pilot.json
           fi
           git add market_movement.json model_market.json unified_decision.json

@@ -408,6 +408,32 @@
       "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
       "legacyVersion": "1.6",
       "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"tr.1\",\"2026-11-30\",\"besiktas\",\"galatasaray\"]": {
+      "candidate": {
+        "btts": 0.5782126089398795,
+        "over15": 0.809125809997375,
+        "over25": 0.5982231099910922
+      },
+      "forecastFingerprint": "1cc1d35a7b7baf668d567e820fed0926a7cdd5184bd316dae5b36f1ed83b799c",
+      "legacy": {
+        "btts": 0.635,
+        "over15": 0.841,
+        "over25": 0.6409999999999999
+      },
+      "legacyKey": "[\"2026-11-30\", \"Türkiye Süper Lig\", \"besiktas – galatasaray\"]",
+      "legacyRecordedAt": "2026-11-28T14:53:42.786207+03:00",
+      "legacyTiming": {
+        "generationCompletedAt": "2026-11-28T14:53:09.958982+03:00",
+        "generationStartedAt": "2026-11-28T14:53:06+03:00",
+        "historyCutoffExclusive": "2026-11-28",
+        "historyThrough": "2026-11-23",
+        "sameSourceDataEstablished": false,
+        "version": "6.82"
+      },
+      "legacyTimingFingerprint": "cf8d803a8501cd47de20e64850182dbf605a33a57aed3e8184bd5132bc1b20bd",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T19:33:50.757231+03:00"
     }
   },
   "version": "6.69"
