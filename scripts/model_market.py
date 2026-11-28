@@ -3,6 +3,8 @@ import math
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from statistics import median
+from collections import Counter
+from match_odds import canonical,LEAGUES
 
 MAX_AGE = 1800
 MIN_BOOKS = 3
@@ -19,9 +21,9 @@ def load(name):
     )
 
 def parse_time(value):
-    return datetime.fromisoformat(
-        value.replace("Z", "+00:00")
-    )
+    t=datetime.fromisoformat(value.replace("Z","+00:00"))
+    if t.tzinfo is None:raise ValueError("timezone required")
+    return t
 
 def fresh(value, now):
     try:
@@ -32,21 +34,21 @@ def fresh(value, now):
 
 def valid_price(value):
     return (
-        isinstance(value, (int, float))
+        type(value) in (int, float)
         and math.isfinite(value)
         and value > 1
     )
 
 def compare_market(probability, quotes, now):
     books = {}
-
+    counts=Counter(q.get('bookmaker') for q in quotes if isinstance(q,dict) and isinstance(q.get('bookmaker'),str))
     for quote in quotes:
         try:
             key = quote["bookmaker"]
             a = quote["positive"]
             b = quote["negative"]
 
-            if not key or not fresh(
+            if not isinstance(key,str) or not key or counts[key]!=1 or not fresh(
                 quote["lastUpdate"], now
             ):
                 continue
@@ -71,7 +73,7 @@ def compare_market(probability, quotes, now):
     if len(books) < MIN_BOOKS:
         return None
 
-    if not math.isfinite(probability):
+    if type(probability) not in (int,float) or not math.isfinite(probability):
         return None
 
     if not 0 <= probability <= 1:
@@ -102,10 +104,51 @@ def compare_market(probability, quotes, now):
         "decision": "PAS"
     }
 
+def unique_events(rows):
+    if not isinstance(rows,list):return {}
+    counts=Counter(e.get("id") for e in rows if isinstance(e,dict) and isinstance(e.get("id"),str))
+    return {e["id"]:e for e in rows if isinstance(e,dict) and isinstance(e.get("id"),str) and e["id"] and counts[e["id"]]==1}
+
+def same_fixture(a,b):
+    try:
+        return all(isinstance(a[k],str) and a[k] and a[k]==b[k] for k in ("id","league","home","away")) and parse_time(a["kickoff"])==parse_time(b["kickoff"])
+    except (KeyError,ValueError,TypeError,AttributeError):return False
+
+def bound_extra(odds,extra,archive,now):
+    if (extra.get("source")!="The Odds API" or extra.get("region")!="uk" or extra.get("mode")!="research_only"
+        or extra.get("quotaPolicyVersion")!="6.89" or extra.get("oddsSnapshotAt")!=odds.get("updatedAt")
+        or extra.get("errors")!=[] or not fresh(extra.get("updatedAt"),now)
+        or odds.get("source")!="The Odds API" or odds.get("region")!="uk" or odds.get("market")!="totals"
+        or odds.get("errors")!=[] or not fresh(odds.get("updatedAt"),now)
+        or archive.get("integrityVersion")!="6.85" or archive.get("mode")!="research_only"
+        or not isinstance(archive.get("quarantine"),dict) or not fresh(archive.get("updatedAt"),now)):
+        return {}
+    base=unique_events(odds.get("events"))
+    return {k:e for k,e in unique_events(extra.get("events")).items() if k not in archive["quarantine"] and same_fixture(e,base.get(k,{}))}
+
+def candidate_matches(c,e):
+    try:
+        h,a=c["match"].split(" – ")
+        league=LEAGUES[c["league"]]
+        return (league==e["league"] and canonical(h,league)==canonical(e["home"],league)
+            and canonical(a,league)==canonical(e["away"],league)
+            and c["date"]==parse_time(e["kickoff"]).astimezone(timezone(timedelta(hours=3))).date().isoformat())
+    except (KeyError,ValueError,TypeError,AttributeError):return False
+
+def totals_quotes(event,point):
+    return [dict(bookmaker=b.get("key"),positive=l.get("over"),negative=l.get("under"),lastUpdate=l.get("lastUpdate"))
+        for b in event.get("bookmakers",[]) for l in b.get("lines",[]) if l.get("point")==point]
+
+def extra_quotes(event,market):
+    names=("Over","Under") if market=="over15" else ("Yes","No")
+    return [dict(bookmaker=b.get("bookmaker"),positive=b.get("prices",{}).get(names[0]),
+        negative=b.get("prices",{}).get(names[1]),lastUpdate=b.get("lastUpdate")) for b in event.get(market,[])]
+
 def main():
     now = datetime.now(timezone.utc)
     report = {
         "version": "4.12",
+        "sourceBindingVersion":"6.92",
         "updatedAt": now.isoformat(),
         "mode": "research_only",
         "modelCalibrated": False,
@@ -129,6 +172,8 @@ def main():
         except (OSError, ValueError):
             extra = {}
             reject("extra_report_unavailable")
+        try:archive=load("extra_market_archive.json")
+        except (OSError,ValueError):archive={}
         movement = load("market_movement.json")
 
         candidates = {}
@@ -144,27 +189,18 @@ def main():
         if (
             odds.get("source") == "The Odds API"
             and odds.get("region") == "uk"
+            and odds.get("market") == "totals"
             and odds.get("errors") == []
             and fresh(odds.get("updatedAt"), now)
         ):
-            base_events = {
-                e["id"]: e for e in odds["events"]
-            }
-
-        if (
-            extra.get("source") == "The Odds API"
-            and extra.get("region") == "uk"
-            and extra.get("errors") == []
-            and fresh(extra.get("updatedAt"), now)
-        ):
-            extra_events = {
-                e["id"]: e for e in extra["events"]
-            }
+            base_events=unique_events(odds.get("events"))
+        extra_events=bound_extra(odds,extra,archive,now)
 
         moves = {}
 
         if (
-            movement.get("errors") == []
+            movement.get("evidenceVersion") == "6.91"
+            and movement.get("errors") == []
             and fresh(movement.get("updatedAt"), now)
         ):
             moves = {
@@ -174,7 +210,8 @@ def main():
 
         for match in matching["matched"]:
             event_id = match["eventId"]
-            cs = candidates.get(match["match"], [])
+            base=base_events.get(event_id,{})
+            cs = [c for c in candidates.get(match["match"], []) if candidate_matches(c,base)]
 
             if len(cs) != 1:
                 reject("ambiguous_model_match")
@@ -204,62 +241,21 @@ def main():
                 continue
 
             for market, label in MARKETS.items():
-                quotes = []
-
-                if market == "over25":
-                    event = base_events.get(event_id, {})
-
-                    if event.get("kickoff") != match["kickoff"]:
-                        reject("missing_or_mismatched_base_event")
-                        continue
-
-                    for book in event.get("bookmakers", []):
-                        for line in book.get("lines", []):
-                            if line.get("point") == 2.5:
-                                quotes.append({
-                                    "bookmaker": book.get("key"),
-                                    "positive": line.get("over"),
-                                    "negative": line.get("under"),
-                                    "lastUpdate": line.get("lastUpdate")
-                                })
-                else:
-                    event = extra_events.get(event_id, {})
-
-                    if event.get("kickoff") != match["kickoff"]:
-                        reject("missing_or_mismatched_extra_event")
-                        continue
-
-                    names = (
-                        ("Over", "Under")
-                        if market == "over15"
-                        else ("Yes", "No")
-                    )
-
-                    for book in event.get(market, []):
-                        prices = book.get("prices", {})
-
-                        quotes.append({
-                            "bookmaker": book.get("bookmaker"),
-                            "positive": prices.get(names[0]),
-                            "negative": prices.get(names[1]),
-                            "lastUpdate": book.get("lastUpdate")
-                        })
-
-                probability = candidate.get(
-                    "markets", {}
-                ).get(label)
-
-                if not isinstance(probability, (int, float)):
-                    reject("missing_model_probability")
-                    continue
-
-                result = compare_market(
-                    probability / 100, quotes, now
-                )
-
+                if not base or parse_time(base["kickoff"])!=kickoff:
+                    reject("missing_or_mismatched_base_event");continue
+                probability=candidate.get("markets",{}).get(label)
+                if type(probability) not in (int,float):
+                    reject("missing_model_probability");continue
+                result=None
+                source=None
+                if market in ("over15","over25"):
+                    result=compare_market(probability/100,totals_quotes(base,1.5 if market=="over15" else 2.5),now)
+                    if result is not None:source="totals"
+                if result is None and market in ("over15","btts"):
+                    result=compare_market(probability/100,extra_quotes(extra_events.get(event_id,{}),market),now)
+                    if result is not None:source="bound_extra"
                 if result is None:
-                    reject("insufficient_valid_market_data")
-                    continue
+                    reject("insufficient_valid_market_data");continue
 
                 move = moves.get((event_id, market), {})
 
@@ -269,6 +265,7 @@ def main():
                     "kickoff": match["kickoff"],
                     "market": market,
                     "marketLabel": label,
+                    "quoteSource":source,
                     **result,
                     "movementDirection": move.get("direction"),
                     "movementPP": move.get("medianChangePP"),
