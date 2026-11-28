@@ -1,6 +1,6 @@
 # Ortak Analiz PRO — geliştirme sırası
 
-2026-11-28: V6.70 ana sürümde; 24 eşleşmenin kalıcı kaydı doğrulandı. Tahmin zaman farkı medyanı yaklaşık 43 saat. 38 yeni tahminin kalıcı kaydı doğrulandı. Ana 9 ligde 39 gelecek maçın 38'i için 119 değişkenli girdi kontrolü başarılı; 1 kimlik uyuşmazlığı dışlandı. V6.65: 3292 geçmiş test maçı; 2.5 Üst/Alt sınıflandırmasında iyileşme sınırlı, KG Var/Yok için iyileşme kanıtlanmadı. Geçmiş test gerçek maç öncesi bağımsız doğrulama değildir.
+2026-11-28: V6.71 ana sürümde; 24 eşleşmenin tümünde yeni model 24–48 saat daha geç üretildi. 24 eşleşmenin kalıcı kaydı doğrulandı. Tahmin zaman farkı medyanı yaklaşık 43 saat. 38 yeni tahminin kalıcı kaydı doğrulandı. Ana 9 ligde 39 gelecek maçın 38'i için 119 değişkenli girdi kontrolü başarılı; 1 kimlik uyuşmazlığı dışlandı. V6.65: 3292 geçmiş test maçı; 2.5 Üst/Alt sınıflandırmasında iyileşme sınırlı, KG Var/Yok için iyileşme kanıtlanmadı. Geçmiş test gerçek maç öncesi bağımsız doğrulama değildir.
 
 ## Ana öncelik — araştırmadan mevcut maç analiz motoruna
 
@@ -8,8 +8,10 @@
 - [x] Ana liglerde ayrı sabit model ve maç öncesi arşiv (V6.67, 38 kayıt doğrulandı).
 - [x] Ana ligler için iki bağımsız kaynakla sonuç eşleştirmesi, çelişki karantinası ve otomatik ölçüm (V6.68 test/merge tamamlandı; gerçek sonuç bekleniyor).
 - [x] Mevcut maç kartı motoruyla eşleştirilmiş karşılaştırma; maç öncesi zaman damgaları (V6.69, 24 kalıcı eşleşme doğrulandı).
-- [ ] Kalibrasyon, Brier/log loss, tarih blokları, yeterli örneklem, lig ve market bazında güvenilirlik (V6.70 test/merge tamamlandı, sonuç bekleniyor; V6.71 zaman farkı duyarlılık analizi PR); bağımsız onay.
+- [ ] Kalibrasyon, Brier/log loss, tarih blokları, yeterli örneklem, lig ve market bazında güvenilirlik (V6.70 test/merge tamamlandı, sonuç bekleniyor; V6.71 zaman farkı duyarlılık analizi test/merge tamamlandı); bağımsız onay.
 - [ ] Onaylanan modelleri yalnızca uygun lig/market için mevcut tasarımı koruyarak ana analiz motoruna bağla; eski tahmin arşivlerini değiştirme. Onaylanmayanlar araştırma olarak kalır.
+
+- [ ] Sabit %50/%50 ağırlık ile ayrı geçmiş ayarlama diliminde seçilen ortak ağırlığın karşılaştırması (V6.72 PR); tekrar kullanılan test kümesi bağımsız onay sayılmaz, dondurulmuş model değiştirilmez.
 
 ## Açık veri işleri
 
