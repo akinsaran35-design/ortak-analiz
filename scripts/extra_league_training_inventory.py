@@ -41,7 +41,15 @@ def parse_season(raw,league,year,url):
         except (ValueError,TypeError,KeyError,AttributeError):
             counts["invalidScoreOrIdentity"]+=1
             continue
-        rows.append(dict(league=league,date=d.isoformat(),home=h,away=a,score=s,source=url,
+        stats={}
+        for name,columns in {"shots":("HS","AS"),"shotsOnTarget":("HST","AST"),"corners":("HC","AC")}.items():
+            try:
+                stats[name]=score(*(r.get(c) for c in columns))
+            except (ValueError,TypeError,KeyError):
+                continue
+        if "shots" in stats and "shotsOnTarget" in stats and any(t>v for t,v in zip(stats["shotsOnTarget"],stats["shots"])):
+            del stats["shotsOnTarget"]
+        rows.append(dict(league=league,date=d.isoformat(),home=h,away=a,score=s,stats=stats,source=url,
             season=year,verification="single_source_only"))
         counts["eligibleRows"]+=1
     return rows,dict(counts)
