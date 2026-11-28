@@ -5,6 +5,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from h2h_history_research import collect
 from historical_metric_coverage import summarize
+from extra_team_statistics import build_team_statistics
 from results_source_pilot import TR,read
 
 LEAGUES=(
@@ -26,9 +27,10 @@ def build(now,reader=read):
             return d.year-(d.month<7)
         return dict(league=code,leagueName=label,csvCode=csv_code,sources=sources,
                     sourceErrors=errors,sourceInvalid=invalid,aggregate=summarize(rows),
+                    teamStatistics=build_team_statistics(rows,cutoff),
                     seasons=[dict(season=s["season"],**summarize([r for r in rows if season(r)==s["season"]])) for s in sources])
     with ThreadPoolExecutor(max_workers=4) as pool:groups=list(pool.map(group,LEAGUES))
-    return dict(version="7.07",mode="historical_metric_coverage_only",updatedAt=now.isoformat(),
+    return dict(version="7.09",mode="historical_metric_coverage_only",updatedAt=now.isoformat(),
                 cutoffExclusive=cutoff.isoformat(),source="football-data.co.uk",
                 predictionsEnabled=False,modelCalibrated=False,decision="PAS",
                 configuredLeagues=len(groups),respondingLeagues=sum(bool(g["sources"]) for g in groups),
@@ -39,7 +41,7 @@ if __name__=="__main__":
     Path("extra_historical_metric_coverage.json").write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     for g in r["groups"]:
         print(json.dumps(dict(league=g["league"],matches=g["aggregate"]["matches"],
-            seasons=len(g["seasons"]),samples={k:v["sample"] for k,v in g["aggregate"]["metrics"].items()},
+            seasons=len(g["seasons"]),teams=g["teamStatistics"]["teamCount"],samples={k:v["sample"] for k,v in g["aggregate"]["metrics"].items()},
             sourceErrors=g["sourceErrors"]),ensure_ascii=False))
     if not r["respondingLeagues"] and "--allow-empty" not in __import__("sys").argv:
         raise SystemExit("No historical source data")
