@@ -25,8 +25,8 @@ def inspect(doc,day):
         if isinstance(ref,str) and ref.strip().casefold() not in ("","unknown","n/a","na","-","tbd"):c["withReferee"]+=1
     return [{"providerLeagueId":k[0],"scheduled":k[1],"fixtures":v["fixtures"],"withReferee":v["withReferee"]} for k,v in sorted(counts.items())]
 
-def probe(key,now,reader=request):
-    out=dict(version="7.15",decision="PAS",mode="private_coverage_probe",status="missing_secret",requestsAttempted=0,days=[],predictionsEnabled=False)
+def probe(key,now,reader=request,fixture_reader=None):
+    out=dict(version="7.17",decision="PAS",mode="private_coverage_probe",status="missing_secret",requestsAttempted=0,days=[],predictionsEnabled=False)
     if not key:return out
     try:
         status=reader(key,"status")
@@ -43,7 +43,17 @@ def probe(key,now,reader=request):
             try:
                 doc=reader(key,"fixtures?date="+day+"&timezone=Europe%2FIstanbul")
                 groups=inspect(doc,day)
-                out["days"].append(dict(date=day,groups=groups))
+                entry=dict(date=day,groups=groups)
+                if offset==0 and fixture_reader is not None:
+                    try:
+                        from referee_fixture_identity import match
+                        fixtures=fixture_reader(day)
+                        result=match(doc,fixtures)
+                        entry["fixtureJoin"]={k:result[k] for k in ("eligibleIdentities","matched","withReferee")}
+                        entry["fixtureJoin"]["status"]="checked"
+                    except Exception as exc:
+                        entry["fixtureJoin"]=dict(status="unverified",error=type(exc).__name__)
+                out["days"].append(entry)
             except Exception as exc:
                 out["status"]="incomplete"
                 out["days"].append(dict(date=day,error=type(exc).__name__))
@@ -52,7 +62,12 @@ def probe(key,now,reader=request):
         out.update(status="unverified",error=type(exc).__name__)
     return out
 
+def public_fixtures(day):
+    from scoreboard_snapshot import build
+    from extra_historical_metric_coverage import LEAGUES
+    return build(datetime.now(TR),query_date=day,extra_codes=tuple(code for _,code,_,_ in LEAGUES))["groups"]
+
 if __name__=="__main__":
-    r=probe(os.environ.get("API_FOOTBALL_KEY","").strip(),datetime.now(TR))
+    r=probe(os.environ.get("API_FOOTBALL_KEY","").strip(),datetime.now(TR),fixture_reader=public_fixtures)
     print(json.dumps(r,ensure_ascii=False))
     if r["status"]!="checked":raise SystemExit(1)
