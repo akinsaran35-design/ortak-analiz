@@ -42,7 +42,23 @@ if not key:
     report["errors"].append("missing_key")
 else:
     try:
-        active = {s["key"] for s in request("sports/", {}) if s.get("active")}
+        catalog = request("sports/", {})
+        # Malformed or ambiguous provider data is not evidence of inactive leagues.
+        if not isinstance(catalog,list) or not catalog:
+            raise ValueError("invalid sports catalog")
+        keys=set()
+        active=set()
+        for sport in catalog:
+            if (not isinstance(sport,dict) or not isinstance(sport.get("key"),str)
+                or not sport["key"].strip() or type(sport.get("active")) is not bool
+                or sport["key"] in keys):
+                raise ValueError("invalid sports catalog entry")
+            keys.add(sport["key"])
+            if sport["active"]:
+                active.add(sport["key"])
+    except ValueError:
+        active=set()
+        report["errors"].append("invalid_sports_catalog")
     except HTTPError as exc:
         active = set()
         report["errors"].append(f"HTTP {exc.code}")
@@ -73,7 +89,8 @@ else:
             active=set()
     for league in LEAGUES:
         if league not in active:
-            report["inactiveLeagues"].append(league)
+            if not report["errors"]:
+                report["inactiveLeagues"].append(league)
             continue
         if report["remainingCredits"] is None or report["remainingCredits"] <= 20:
             report["errors"].append("quota_guard")
