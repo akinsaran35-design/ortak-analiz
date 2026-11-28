@@ -4,6 +4,8 @@ on:
     paths:
       - 'scripts/extra_historical_metric_coverage.py'
       - 'scripts/test_extra_historical_metric_coverage.py'
+      - 'scripts/extra_team_statistics.py'
+      - 'scripts/test_extra_team_statistics.py'
       - '.github/workflows/extra-football-metrics.yml'
   workflow_dispatch:
 permissions:
@@ -15,7 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Offline coverage regression
-        run: python3 scripts/test_extra_historical_metric_coverage.py
+        run: |
+          python3 scripts/test_extra_historical_metric_coverage.py
+          python3 scripts/test_extra_team_statistics.py
       - name: Collect historical public-source coverage
         run: python3 scripts/extra_historical_metric_coverage.py
       - uses: actions/upload-artifact@v4
