@@ -714,6 +714,79 @@ def bootstrap_model_comparison(rows,draws=BOOTSTRAP_DRAWS):
         repeatedHoldout=True,adjustedForMultipleComparisons=False,crossDateDependenceAccountedFor=False,
         productionModelValidated=False,externalValidation=False)
 
+MARKOV_MINUTES=90
+MARKOV_SCORE_CAP=3
+
+def markov_transition(mean):
+    """One-minute Poisson increment, with an absorbing 3+ goal bucket."""
+    p0=math.exp(-mean)
+    p1=p0*mean
+    p2=p1*mean/2
+    mass=(p0,p1,p2)
+    matrix=[]
+    for start in range(MARKOV_SCORE_CAP+1):
+        room=MARKOV_SCORE_CAP-start
+        row=[0.0]*start+list(mass[:room])
+        row.append(max(0,1-math.fsum(row)))
+        matrix.append(row)
+    return matrix
+
+def markov_score_probabilities(h,a,elapsed=0,home_score=0,away_score=0):
+    """Fixed-rate score-state propagation; not a fitted live-match model."""
+    if not all(math.isfinite(x) and 0<=x<=20 for x in (h,a)):
+        raise ValueError("invalid goal intensity")
+    if type(elapsed) is not int or not 0<=elapsed<=MARKOV_MINUTES:
+        raise ValueError("invalid elapsed minutes")
+    if any(type(s) is not int or s<0 for s in (home_score,away_score)):
+        raise ValueError("invalid score")
+    ht,at=markov_transition(h/MARKOV_MINUTES),markov_transition(a/MARKOV_MINUTES)
+    states=[[0.0]*4 for _ in range(4)]
+    states[min(home_score,3)][min(away_score,3)]=1.0
+    for _ in range(MARKOV_MINUTES-elapsed):
+        nxt=[[0.0]*4 for _ in range(4)]
+        for x in range(4):
+            for y in range(4):
+                if not states[x][y]:
+                    continue
+                for u in range(x,4):
+                    for v in range(y,4):
+                        nxt[u][v]+=states[x][y]*ht[x][u]*at[y][v]
+        states=nxt
+    total=math.fsum(p for row in states for p in row)
+    probs=[0.0]*3
+    for x in range(4):
+        for y in range(4):
+            for i,flag in enumerate(labels(x,y)):
+                probs[i]+=states[x][y]*flag
+    return dict(markets=dict(zip(MARKETS,(min(1,max(0,p/total)) for p in probs))),massError=abs(total-1))
+
+def markov_numerical_audit(rows):
+    """Full-time score data supports numerical checks, not live validation."""
+    history={}
+    for r in verified_rows(rows):
+        history.setdefault(r["league"],[]).append(r["csv"])
+    cases=[]
+    for league,past in sorted(history.items()):
+        n=len(past)
+        if n<MIN_TRAIN_MATCHES:
+            continue
+        h=sum(x[0] for x in past)/n
+        a=sum(x[1] for x in past)/n
+        if max(h,a)>20:
+            continue
+        exact=goal_probabilities(h,a)
+        start=markov_score_probabilities(h,a)
+        error=max(abs(start["markets"][k]-p) for k,p in zip(MARKETS,exact))
+        cases.append(dict(league=league,observedMatches=n,homeMean=h,awayMean=a,
+            maxPrematchError=error,massError=start["massError"],
+            illustrativeStates=[dict(elapsed=m,homeScore=x,awayScore=y,**markov_score_probabilities(h,a,m,x,y))
+                for m,x,y in ((45,0,0),(60,1,0),(75,1,1),(90,2,1))]))
+    return dict(mode="fixed_rate_markov_numerical_only",minutes=MARKOV_MINUTES,scoreCap=MARKOV_SCORE_CAP,
+        cases=cases,maxPrematchError=max((c["maxPrematchError"] for c in cases),default=None),
+        maxMassError=max((c["massError"] for c in cases),default=None),
+        verifiedEventTimelines=0,stateDependentRatesFitted=False,liveValidation=False,
+        stoppageTimeModeled=False,productionModelValidated=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -733,7 +806,8 @@ def build(now,reader=read):
     bivariate=bivariate_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     nb=negative_binomial_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     bootstrap=bootstrap_model_comparison([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.38",bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    markov=markov_numerical_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.39",markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -744,6 +818,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("MARKOV_AUDIT",json.dumps({k:v for k,v in report["markovAudit"].items() if k!="cases"}))
     print("BOOTSTRAP_COMPARISON",json.dumps(report["bootstrapComparison"]))
     print("NEGATIVE_BINOMIAL_BACKTEST",json.dumps(report["negativeBinomialBacktest"]))
     print("BIVARIATE_BACKTEST",json.dumps(report["bivariateBacktest"]))
