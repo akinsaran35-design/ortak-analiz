@@ -440,6 +440,74 @@ def simulation_audit(rows,n=SIMULATION_DRAWS):
         summary[method]=dict(meanAbsoluteError=round(sum(errors)/len(errors),8) if errors else None,maxAbsoluteError=max(errors) if errors else None)
     return dict(mode="numerical_validation_only",drawsPerCasePerMethod=n,cases=cases,summary=summary,productionModelValidated=False)
 
+BAYES_PRIOR_SHAPE=1.0
+BAYES_PRIOR_RATE=1.0
+BAYES_DRAWS=4096
+
+def gamma_poisson_probabilities(hs,ha,n):
+    """Independent Gamma-Poisson posterior predictive; rate parameterization."""
+    if type(n) is not int or n<0 or min(hs,ha)<0:
+        raise ValueError("invalid sufficient statistics")
+    shape_h=BAYES_PRIOR_SHAPE+hs
+    shape_a=BAYES_PRIOR_SHAPE+ha
+    rate=BAYES_PRIOR_RATE+n
+    z=rate/(rate+1)
+    ph0=z**shape_h
+    pa0=z**shape_a
+    shape=shape_h+shape_a
+    p0=z**shape
+    p1=p0*shape/(rate+1)
+    p2=p1*(shape+1)/(2*(rate+1))
+    return (max(0,1-p0-p1),max(0,1-p0-p1-p2),(1-ph0)*(1-pa0))
+
+def bayesian_simulation(hs,ha,n,draws=BAYES_DRAWS,seed=20261128):
+    """Integrate uncertain goal intensities by posterior sampling."""
+    if type(draws) is not int or not 1<=draws<=2**20:
+        raise ValueError("invalid draws")
+    exact=gamma_poisson_probabilities(hs,ha,n)
+    rng=random.Random(seed)
+    totals=[0.0]*3
+    for _ in range(draws):
+        h=rng.gammavariate(BAYES_PRIOR_SHAPE+hs,1/(BAYES_PRIOR_RATE+n))
+        a=rng.gammavariate(BAYES_PRIOR_SHAPE+ha,1/(BAYES_PRIOR_RATE+n))
+        for i,p in enumerate(goal_probabilities(h,a)):
+            totals[i]+=p
+    return dict(draws=draws,markets={k:dict(analytic=q,simulated=s/draws,absoluteError=abs(q-s/draws)) for k,q,s in zip(MARKETS,exact,totals)})
+
+def bayesian_backtest(rows):
+    """Strictly prior-date posterior predictive comparison with Poisson."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    samples={k:[] for k in MARKETS}
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        for r in group:
+            h,a,n=history.get(r["league"],(0,0,0))
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            base=goal_probabilities(h/n,a/n)
+            bayes=gamma_poisson_probabilities(h,a,n)
+            for k,p,q,y in zip(MARKETS,base,bayes,labels(*r["csv"])):
+                samples[k].append((day,p,q,y))
+        for r in group:
+            h,a,n=history.get(r["league"],(0,0,0))
+            x,y=r["csv"]
+            history[r["league"]]=(h+x,a+y,n+1)
+    days=sorted({s[0] for s in samples[MARKETS[0]]})
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    metrics={}
+    for k,items in samples.items():
+        test=[r for r in items if cutoff and r[0]>=cutoff]
+        n=len(test)
+        def score(i):
+            if not n: return dict(brier=None,accuracyPct=None)
+            return dict(brier=round(sum((r[i]-r[3])**2 for r in test)/n,6),accuracyPct=round(100*sum((r[i]>=0.5)==bool(r[3]) for r in test)/n,2))
+        metrics[k]=dict(n=n,poisson=score(1),bayesian=score(2))
+    checks={l:bayesian_simulation(h,a,n) for l,(h,a,n) in sorted(history.items()) if n>=MIN_TRAIN_MATCHES}
+    return dict(model="league_gamma_poisson",holdoutStart=cutoff,markets=metrics,numericalChecks=checks,priorShape=BAYES_PRIOR_SHAPE,priorRate=BAYES_PRIOR_RATE,sameDayTraining=False,productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -455,7 +523,8 @@ def build(now,reader=read):
     hybrid=hybrid_holdout([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     dc=dixon_coles_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     simulation=simulation_audit([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.34",simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    bayes=bayesian_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.35",bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -466,6 +535,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("BAYESIAN_BACKTEST",json.dumps(report["bayesianBacktest"]))
     print("SIMULATION_AUDIT",json.dumps({k:report["simulationAudit"][k] for k in ("mode","drawsPerCasePerMethod","summary")}))
     print("DIXON_COLES_BACKTEST",json.dumps(report["dixonColesBacktest"]))
     print("HYBRID_HOLDOUT",json.dumps(report["hybridHoldout"]))
