@@ -1,6 +1,6 @@
 {
   "version": "4.90",
-  "updatedAt": "2026-11-28T18:32:44.299560+03:00",
+  "updatedAt": "2026-11-28T20:44:11.839723+03:00",
   "date": "2026-11-28",
   "mode": "scoreboard_snapshot",
   "source": "ESPN",
@@ -15,11 +15,11 @@
           "home": "Leeds United",
           "away": "Coventry City",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "32'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+3'",
           "score": [
-            0,
+            3,
             0
           ]
         },
@@ -28,12 +28,12 @@
           "home": "Manchester United",
           "away": "Brentford",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "33'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
           "score": [
             0,
-            2
+            4
           ]
         },
         {
@@ -41,10 +41,13 @@
           "home": "Ipswich Town",
           "away": "Aston Villa",
           "kickoff": "2026-11-28T17:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "14'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -99,12 +102,12 @@
           "home": "Birmingham City",
           "away": "Bolton Wanderers",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "32'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+6'",
           "score": [
-            1,
-            0
+            2,
+            4
           ]
         },
         {
@@ -112,9 +115,9 @@
           "home": "Derby County",
           "away": "Watford",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "33'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+7'",
           "score": [
             0,
             0
@@ -125,12 +128,12 @@
           "home": "Millwall",
           "away": "Burnley",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "33'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+3'",
           "score": [
             0,
-            0
+            1
           ]
         },
         {
@@ -138,11 +141,11 @@
           "home": "Queens Park Rangers",
           "away": "Sheffield United",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "33'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+6'",
           "score": [
-            0,
+            1,
             1
           ]
         },
@@ -151,11 +154,11 @@
           "home": "West Bromwich Albion",
           "away": "Bristol City",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "33'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+4'",
           "score": [
-            0,
+            1,
             0
           ]
         },
@@ -164,11 +167,11 @@
           "home": "West Ham United",
           "away": "Stoke City",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "26'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
           "score": [
-            0,
+            1,
             0
           ]
         },
@@ -177,9 +180,9 @@
           "home": "Wrexham",
           "away": "Portsmouth",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "32'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
           "score": [
             1,
             0
@@ -199,11 +202,11 @@
           "home": "FC Cologne",
           "away": "SV Elversberg",
           "kickoff": "2026-11-28T14:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+2'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+2'",
           "score": [
-            3,
+            5,
             0
           ]
         },
@@ -212,9 +215,9 @@
           "home": "Hamburg SV",
           "away": "Bayern Munich",
           "kickoff": "2026-11-28T14:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+2'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+4'",
           "score": [
             0,
             0
@@ -225,11 +228,11 @@
           "home": "Mainz",
           "away": "1. FC Union Berlin",
           "kickoff": "2026-11-28T14:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+2'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+4'",
           "score": [
-            0,
+            2,
             1
           ]
         },
@@ -238,12 +241,12 @@
           "home": "SC Paderborn 07",
           "away": "Schalke 04",
           "kickoff": "2026-11-28T14:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_HALFTIME",
-          "clock": "45'+5'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+7'",
           "score": [
-            3,
-            0
+            8,
+            1
           ]
         },
         {
@@ -251,10 +254,13 @@
           "home": "VfB Stuttgart",
           "away": "Eintracht Frankfurt",
           "kickoff": "2026-11-28T17:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "14'",
+          "score": [
+            0,
+            0
+          ]
         }
       ],
       "invalid": 0,
@@ -283,12 +289,12 @@
           "home": "Málaga",
           "away": "Athletic Club",
           "kickoff": "2026-11-28T15:15:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "16'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+6'",
           "score": [
-            0,
-            0
+            3,
+            4
           ]
         },
         {
@@ -296,10 +302,13 @@
           "home": "Elche",
           "away": "Atlético Madrid",
           "kickoff": "2026-11-28T17:30:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "13'",
+          "score": [
+            0,
+            2
+          ]
         },
         {
           "eventId": "401882789",
@@ -325,11 +334,11 @@
           "home": "Frosinone",
           "away": "Parma",
           "kickoff": "2026-11-28T14:00:00+00:00",
-          "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "74'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+5'",
           "score": [
-            2,
+            3,
             0
           ]
         },
@@ -338,10 +347,13 @@
           "home": "Torino",
           "away": "Lazio",
           "kickoff": "2026-11-28T17:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "43'",
+          "score": [
+            0,
+            1
+          ]
         },
         {
           "eventId": "401874977",
@@ -367,10 +379,13 @@
           "home": "Angers",
           "away": "Lens",
           "kickoff": "2026-11-28T16:15:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "69'",
+          "score": [
+            2,
+            2
+          ]
         },
         {
           "eventId": "401876391",
@@ -426,11 +441,11 @@
           "home": "Excelsior",
           "away": "Telstar",
           "kickoff": "2026-11-28T15:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "2'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+3'",
           "score": [
-            0,
+            1,
             0
           ]
         },
@@ -468,9 +483,9 @@
           "home": "Arouca",
           "away": "Rio Ave",
           "kickoff": "2026-11-28T15:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "1'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+4'",
           "score": [
             0,
             0
@@ -481,12 +496,12 @@
           "home": "Moreirense",
           "away": "Santa Clara",
           "kickoff": "2026-11-28T15:30:00+00:00",
-          "state": "in",
-          "status": "STATUS_FIRST_HALF",
-          "clock": "2'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+6'",
           "score": [
             0,
-            0
+            2
           ]
         },
         {
@@ -536,10 +551,13 @@
           "home": "Gaziantep FK",
           "away": "Amed SFK",
           "kickoff": "2026-11-28T16:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null
+          "state": "in",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "88'",
+          "score": [
+            0,
+            2
+          ]
         }
       ],
       "invalid": 0,
@@ -548,7 +566,7 @@
   ],
   "loadedLeagues": 9,
   "eventCount": 39,
-  "inProgress": 18,
+  "inProgress": 6,
   "realTime": false,
   "usedForSettlement": false,
   "usedForPredictions": false

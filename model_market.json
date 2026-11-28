@@ -1,31 +1,12 @@
 {
   "version": "4.12",
   "evidenceVersion": "6.92",
-  "updatedAt": "2026-11-28T15:32:41.225943+00:00",
+  "updatedAt": "2026-11-28T17:44:09.281326+00:00",
   "mode": "research_only",
   "modelCalibrated": false,
   "decision": "PAS",
   "realBettingEnabled": false,
   "rows": [
-    {
-      "eventId": "4001fed3da6baa90d8b6278f43a77af1",
-      "match": "gaziantep – amed",
-      "kickoff": "2026-11-28T16:00:00+00:00",
-      "market": "over25",
-      "marketLabel": "2.5 Üst",
-      "oddsEvidenceSource": "base_totals",
-      "bookCount": 3,
-      "modelProbabilityUncalibrated": 0.62,
-      "marketProbability": 0.513854,
-      "differencePP": 10.6146,
-      "bestBookmaker": "matchbook",
-      "bestOdds": 1.93,
-      "estimatedEV": 0.1966,
-      "decision": "PAS",
-      "movementDirection": null,
-      "movementPP": null,
-      "movementBookmakers": 0
-    },
     {
       "eventId": "f96c1137c9d3f7e2e691275a2988fa1d",
       "match": "Le Havre AC – RC Strasbourg Alsace",
@@ -54,11 +35,11 @@
       "oddsEvidenceSource": "base_totals",
       "bookCount": 4,
       "modelProbabilityUncalibrated": 0.531,
-      "marketProbability": 0.484,
-      "differencePP": 4.7,
+      "marketProbability": 0.488003,
+      "differencePP": 4.2997,
       "bestBookmaker": "grosvenor",
-      "bestOdds": 1.97,
-      "estimatedEV": 0.04607,
+      "bestOdds": 1.93,
+      "estimatedEV": 0.02483,
       "decision": "PAS",
       "movementDirection": null,
       "movementPP": null,
@@ -76,27 +57,8 @@
       "marketProbability": 0.48,
       "differencePP": -2.7,
       "bestBookmaker": "matchbook",
-      "bestOdds": 2.1,
-      "estimatedEV": -0.0487,
-      "decision": "PAS",
-      "movementDirection": null,
-      "movementPP": null,
-      "movementBookmakers": 0
-    },
-    {
-      "eventId": "24b99950496c624f7124922fc1bda8bd",
-      "match": "Angers SCO – Racing Club de Lens",
-      "kickoff": "2026-11-28T16:15:00+00:00",
-      "market": "over25",
-      "marketLabel": "2.5 Üst",
-      "oddsEvidenceSource": "base_totals",
-      "bookCount": 3,
-      "modelProbabilityUncalibrated": 0.506,
-      "marketProbability": 0.546667,
-      "differencePP": -4.0667,
-      "bestBookmaker": "leovegas",
-      "bestOdds": 1.73,
-      "estimatedEV": -0.12462,
+      "bestOdds": 2.12,
+      "estimatedEV": -0.03964,
       "decision": "PAS",
       "movementDirection": null,
       "movementPP": null,
@@ -104,9 +66,9 @@
     }
   ],
   "rejected": {
-    "insufficient_valid_market_data": 28,
-    "not_today": 59
+    "insufficient_valid_market_data": 18,
+    "not_today": 60
   },
   "errors": [],
-  "comparedCount": 5
+  "comparedCount": 3
 }

@@ -1,7 +1,7 @@
 {
   "version": "5.37",
   "mode": "fixture_data_quality_only",
-  "dailyUpdatedAt": "2026-11-28T18:32:05+03:00",
+  "dailyUpdatedAt": "2026-11-28T20:43:41+03:00",
   "cutoffExclusive": "2026-11-28",
   "predictionsEnabled": false,
   "decision": "PAS",
@@ -7501,71 +7501,12 @@
       "league": "tr.1",
       "leagueName": "Türkiye Süper Lig",
       "latestLeagueResultAgeDays": 5,
-      "fixtures": 7,
+      "fixtures": 6,
       "flags": {
-        "h2h:missing": 4,
+        "h2h:missing": 3,
         "h2h:partial": 1
       },
       "rows": [
-        {
-          "date": "2026-11-28",
-          "match": "gaziantep – amed",
-          "form": {
-            "home": {
-              "status": "available",
-              "sample": 5,
-              "latestAgeDays": 7
-            },
-            "away": {
-              "status": "available",
-              "sample": 5,
-              "latestAgeDays": 7
-            }
-          },
-          "h2h": {
-            "sample": 0,
-            "status": "missing"
-          },
-          "metricSamples": {
-            "home": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            },
-            "away": {
-              "halfTimeGoals": 10,
-              "corners": 10,
-              "yellowCards": 10,
-              "redCards": 10,
-              "shots": 10,
-              "shotsOnTarget": 10
-            }
-          },
-          "venueMetricSamples": {
-            "home": {
-              "halfTimeGoals": 6,
-              "corners": 6,
-              "yellowCards": 6,
-              "redCards": 6,
-              "shots": 6,
-              "shotsOnTarget": 6
-            },
-            "away": {
-              "halfTimeGoals": 5,
-              "corners": 5,
-              "yellowCards": 5,
-              "redCards": 5,
-              "shots": 5,
-              "shotsOnTarget": 5
-            }
-          },
-          "flags": [
-            "h2h:missing"
-          ]
-        },
         {
           "date": "2026-11-29",
           "match": "corum – kocaelispor",
