@@ -167,6 +167,7 @@ for league, code in LEAGUES.items():
         diagnostic["fixtureScope"] = "fresh_odds_events_only"
         diagnostic["status"] = "partial"
     diagnostic["completedMatches"] = len(history)
+    history_through = max((r[0] for r in history), default=None)
     for d, home, away, score in fixtures:
         if score is not None:
             diagnostic["excluded"]["alreadyScored"] += 1
@@ -188,7 +189,7 @@ for league, code in LEAGUES.items():
         }
         report["candidates"].append({
             "date": d.isoformat(), "league": league, "match": f"{home} – {away}",
-            "markets": markets, "sample": {"home": home_stats["n"], "away": away_stats["n"]},
+            "markets": markets, "historyThrough": history_through.isoformat() if history_through else None, "sample": {"home": home_stats["n"], "away": away_stats["n"]},
             "sampleMode": {"home": home_stats["mode"], "away": away_stats["mode"]},
             "expectedGoals": {"home": round(home_expected, 2), "away": round(away_expected, 2)},
             "status": "Kalibre edilmemiş istatistiksel aday; bahis önerisi değil",
@@ -214,6 +215,9 @@ report["reason"] = (
     "Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından "
     "otomatik bahis seçimi yapılmadı."
 )
+report["forecastTimingVersion"] = "6.82"
+report["historyCutoffExclusive"] = today.isoformat()
+report["generationCompletedAt"] = datetime.now(TR).isoformat()
 Path("daily.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(report["reason"])
 for diagnostic in report["leagueDiagnostics"]:
