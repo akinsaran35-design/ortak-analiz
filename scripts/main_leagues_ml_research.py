@@ -25,7 +25,7 @@ def evaluate(rows,fit=alternative_fit):
     if len(pred)!=len(test):raise ValueError("prediction count")
     return dict(trainingMatches=len(train),tuningMatches=len(tune),testMatches=len(test),featureCount=len(keys),
         testLeagueCounts=dict(Counter(r["league"] for r in test)),trainingThrough=train[-1]["date"],testStart=test[0]["date"],testThrough=test[-1]["date"],
-        markets=metrics(test,pred,.5))
+        markets=metrics(test,pred,.5,model_name="catboost"))
 
 def run(reader=read):
     jobs=[(code,SOURCES[code][0],year) for _,code,_ in LEAGUES for year in SEASONS]

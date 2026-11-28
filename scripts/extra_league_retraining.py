@@ -54,7 +54,7 @@ def tune_weight(rows,pred):
     selected=min(WEIGHTS,key=loss)
     return selected if loss(0)-loss(selected)>=.001 else 0
 
-def metrics(rows,pred,w):
+def metrics(rows,pred,w,*,model_name="xgboost"):
     result={}
     for i,k in enumerate(MARKETS):
         pairs=[(r["date"],baseline(r)[i],q[i],blend(baseline(r),q,w)[i],label(r)[i]) for r,q in zip(rows,pred)]
@@ -66,7 +66,8 @@ def metrics(rows,pred,w):
         by_day={}
         for d,p,q,v,y in pairs:
             by_day.setdefault(d,[]).append((p-y)**2-(v-y)**2)
-        result[k]=dict(n=len(pairs),poisson=score(1),xgboost=score(2),blended=score(3),descriptiveBootstrap=paired_date_bootstrap(by_day))
+        result[k]=dict(n=len(pairs),poisson=score(1),blended=score(3),descriptiveBootstrap=paired_date_bootstrap(by_day))
+        result[k][model_name]=score(2)
     return result
 
 def evaluate(rows,fit=fit_predict):
