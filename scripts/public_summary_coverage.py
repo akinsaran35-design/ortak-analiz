@@ -13,6 +13,34 @@ def presence(value):
     if not isinstance(value,list):return "unexpected_shape"
     return "nonempty" if value else "empty"
 
+def lineup_quality(rosters,competitors):
+    """Count explicitly flagged starters only, never infer lineup from squad size."""
+    empty=dict(status="unverified",teamsMatched=0,teamsWithEleven=0,starterCounts=[])
+    if not isinstance(rosters,list) or len(rosters)!=2:return empty
+    try:
+        expected={str(c["team"]["id"]):c["homeAway"] for c in competitors}
+        if len(expected)!=2 or set(expected.values())!={"home","away"}:return empty
+        seen=set();counts={};matched=0
+        for roster in rosters:
+            tid=str(roster["team"]["id"])
+            if tid not in expected or tid in seen:return empty
+            seen.add(tid);matched+=1
+            players=roster.get("roster")
+            if not isinstance(players,list) or not players:continue
+            ids=set();starters=0;valid=True
+            for player in players:
+                pid=str(player["athlete"]["id"])
+                if not pid.isascii() or not pid.isdigit() or pid in ids or type(player.get("starter")) is not bool:
+                    valid=False;break
+                ids.add(pid)
+                starters+=int(player["starter"])
+            if valid:counts[expected[tid]]=starters
+        eleven=sum(v==11 for v in counts.values())
+        return dict(status="source_reported_eleven" if eleven==2 else "incomplete_or_unverified",
+                    teamsMatched=matched,teamsWithEleven=eleven,
+                    starterCounts=[counts.get(side) for side in ("home","away")])
+    except (KeyError,ValueError,TypeError,AttributeError):return empty
+
 def inspect(doc,event):
     if not isinstance(doc,dict):raise ValueError("summary schema")
     header=doc["header"]
@@ -32,10 +60,11 @@ def inspect(doc,event):
             items=team.get("statistics")
             if isinstance(items,list) and any(isinstance(v,dict) and v.get("name") in ("expectedGoals","expectedGoalsFor","xG") for v in items):xg+=1
     return dict(rosters=presence(doc.get("rosters")),injuries=presence(doc.get("injuries")),
-                teamStatistics=presence(stats),explicitXgFieldTeams=xg)
+                teamStatistics=presence(stats),explicitXgFieldTeams=xg,
+                lineupQuality=lineup_quality(doc.get("rosters"),teams))
 
 def probe(now,reader=read,fixture_reader=public_fixtures):
-    output=dict(version="7.22",mode="public_summary_schema_probe",requestsAttempted=0,groups=[],
+    output=dict(version="7.23",mode="public_summary_schema_probe",requestsAttempted=0,groups=[],
                 predictionsEnabled=False,decision="PAS")
     today=now.astimezone(TR).date()
     for offset,state in ((0,"pre"),(-1,"post")):
