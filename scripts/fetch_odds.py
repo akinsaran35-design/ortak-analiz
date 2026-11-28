@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from league_config import ODDS_CODES
+from odds_snapshot_validation import normalize_event,finalize
 LEAGUES = list(ODDS_CODES.values())
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
@@ -25,7 +26,7 @@ try:
         raise SystemExit(0)
 except (OSError, ValueError, TypeError, KeyError, AttributeError):
     pass
-report = {"version": "3.7", "updatedAt": now.isoformat(), "source": "The Odds API",
+report = {"version": "3.7", "updatedAt": now.isoformat(), "startedAt": now.isoformat(), "source": "The Odds API",
           "region": "uk", "market": "totals", "events": [], "errors": [],
           "remainingCredits": None, "decision": "PAS",
           "configuredLeagues": LEAGUES, "queriedLeagues": [], "inactiveLeagues": []}
@@ -56,31 +57,19 @@ else:
         try:
             events = request(f"sports/{league}/odds/", {"regions": "uk", "markets": "totals", "oddsFormat": "decimal"})
             report["queriedLeagues"].append(league)
+            received=datetime.now(timezone.utc)
+            if not isinstance(events,list):
+                raise ValueError("invalid events schema")
             for event in events:
-                kickoff = datetime.fromisoformat(event["commence_time"].replace("Z", "+00:00"))
-                if kickoff <= now:
-                    continue
-                books = []
-                for book in event.get("bookmakers", []):
-                    lines = []
-                    for market in book.get("markets", []):
-                        if market.get("key") != "totals":
-                            continue
-                        for point in (1.5, 2.5):
-                            prices = {o["name"]: o["price"] for o in market.get("outcomes", []) if o.get("point") == point and o.get("name") in ("Over", "Under") and isinstance(o.get("price"), (int, float)) and o["price"] > 1}
-                            if len(prices) == 2:
-                                total = 1/prices["Over"] + 1/prices["Under"]
-                                lines.append({"point": point, "over": prices["Over"], "under": prices["Under"], "marketOverProbability": round((1/prices["Over"])/total, 6), "lastUpdate": market.get("last_update") or book.get("last_update")})
-                    if lines:
-                        books.append({"key": book["key"], "name": book["title"], "lines": lines})
-                if books:
-                    report["events"].append({"id": event["id"], "league": league, "home": event["home_team"], "away": event["away_team"], "kickoff": kickoff.isoformat(), "bookmakers": books})
+                normalized=normalize_event(event,league,received)
+                if normalized is not None:
+                    report["events"].append(normalized)
         except HTTPError as exc:
             report["errors"].append(f"{league}: HTTP {exc.code}")
             if exc.code in (401, 403, 429):
                 break
         except Exception:
             report["errors"].append(f"{league}: response_error")
-report["eventCount"] = len(report["events"])
+finalize(report,datetime.now(timezone.utc))
 Path("odds.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 print("Odds events:", report["eventCount"], "Remaining credits:", report["remainingCredits"], "Errors:", report["errors"])
