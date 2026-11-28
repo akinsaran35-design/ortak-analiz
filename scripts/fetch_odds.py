@@ -9,7 +9,7 @@ from pathlib import Path
 from league_config import ODDS_CODES
 from odds_snapshot_validation import normalize_event,finalize
 from extra_market_budget_plan import optional_refresh_gate
-from odds_continuity import record
+from odds_continuity import record, valid
 LEAGUES = list(ODDS_CODES.values())
 key = os.environ.get("ODDS_API_KEY", "").strip()
 now = datetime.now(timezone.utc)
@@ -21,11 +21,8 @@ try:
     cached = json.loads(cache_path.read_text(encoding="utf-8"))
     stamp = datetime.fromisoformat(cached["updatedAt"].replace("Z", "+00:00"))
     age = (now - stamp).total_seconds()
-    if (0 <= age < 1200 and cached.get("source") == "The Odds API"
-            and cached.get("region") == "uk" and cached.get("market") == "totals"
-            and cached.get("configuredLeagues") == LEAGUES
-            and cached.get("errors") == [] and isinstance(cached.get("events"), list)
-            and cached["events"]):
+    # A recent timestamp alone does not establish usable market evidence.
+    if 0 <= age < 1200 and valid(cached, now):
         record(cached,cached,datetime.now(timezone.utc),"recent_cache")
         print("Reusing recent odds snapshot; no API requests.")
         raise SystemExit(0)
