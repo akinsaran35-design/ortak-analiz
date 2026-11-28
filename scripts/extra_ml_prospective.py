@@ -77,7 +77,7 @@ def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,no
 def empty_ledger(meta,version=VERSION):
     return dict(version=version,modelSha256=meta["modelSha256"],forecasts={},settlements={},quarantine={})
 
-def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None):
+def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=None,reference_fn=None):
     now=now.astimezone(TR)
     if ledger.get("version")!=version or ledger.get("modelSha256")!=meta["modelSha256"] or any(not isinstance(ledger.get(k),dict) for k in ("forecasts","settlements","quarantine")):
         raise ValueError("cohort mismatch")
@@ -118,6 +118,10 @@ def capture(ledger,history,fixtures,model,meta,now,version=VERSION,identity_fn=N
             modelSha256=meta["modelSha256"],featureFingerprint=digest(features),featureCount=len(keys),
             historyThrough=info["historyThrough"],teamHistoryThrough=info["teamHistoryThrough"],
             trainingSourceVerification="single_source_only")
+        if reference_fn is not None:
+            ref=reference_fn(history,f,now,info,identity_fn)
+            if ref is not None:
+                ledger["forecasts"][k]["sameSourceVenueReference"]=ref
         existing.add(identity)
         added+=1
     return added,dict(excluded)
