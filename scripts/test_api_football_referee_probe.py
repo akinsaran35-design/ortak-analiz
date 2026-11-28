@@ -38,7 +38,9 @@ class ProbeTests(unittest.TestCase):
             return [dict(league="de.1",rows=[dict(eventId="321",home="Alpha",away="Beta",kickoff=day+"T12:00:00+03:00",state="pre",status="STATUS_SCHEDULED")])]
         r=probe("test",NOW,reader,fixture_reader=fixtures)
         self.assertEqual(len(paths),3)
-        self.assertEqual(r["days"][1]["fixtureJoin"],dict(eligibleIdentities=1,matched=1,withReferee=1,status="checked"))
+        join=r["days"][1]["fixtureJoin"]
+        self.assertEqual({k:join[k] for k in ("eligibleIdentities","matched","withReferee","status")},dict(eligibleIdentities=1,matched=1,withReferee=1,status="checked"))
+        self.assertEqual(next(x for x in join["diagnostics"] if x["league"]=="de.1")["counts"],dict(eligible=1,matched_with_referee=1))
         self.assertNotIn("Example",str(r))
         def fail(day):raise OSError("unavailable")
         r=probe("test",NOW,reader,fixture_reader=fail)
