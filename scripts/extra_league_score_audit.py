@@ -1273,6 +1273,81 @@ def stacking_backtest(rows,fit_model,model_name):
         trainClassCounts=dict(Counter(score_class(r[2]) for r in train)),baseWeights=dict(zip(ENSEMBLE_MODELS,weights)),
         markets=metrics,sameDayTraining=False,repeatedHoldout=True,productionModelValidated=False,externalValidation=False)
 
+JOINT_MODELS=("ensemble","xgboost","lightgbm","catboost")
+JOINT_STEPS=4
+JOINT_MIN_IMPROVEMENT=0.001
+
+def optimize_joint_weights(tune,available):
+    """Enumerate the complete quarter-step simplex on tuning dates only."""
+    fallback=(1.0,0.0,0.0,0.0)
+    if len(tune)<XGB_MIN_TUNE:
+        return fallback
+    def loss(weights):
+        return sum((p-y)**2 for _,models,ys in tune
+            for p,y in zip(ensemble_prediction(models,weights),ys))/(len(tune)*len(MARKETS))
+    baseline=loss(fallback)
+    best,selected=baseline,fallback
+    for a in range(JOINT_STEPS+1):
+        for b in range(JOINT_STEPS-a+1):
+            for c in range(JOINT_STEPS-a-b+1):
+                d=JOINT_STEPS-a-b-c
+                weights=tuple(v/JOINT_STEPS for v in (d,a,b,c))
+                if any(w and not ok for w,ok in zip(weights,available)):
+                    continue
+                value=loss(weights)
+                if value<best-1e-12:
+                    best,selected=value,weights
+    return selected if baseline-best>=JOINT_MIN_IMPROVEMENT else fallback
+
+def joint_optimizer_backtest(rows):
+    """Train once, tune convex blend once, and evaluate the frozen blend."""
+    samples=ensemble_samples(rows)
+    days=sorted({r[0] for r in samples})
+    first=days[int(len(days)*0.4)] if len(days)>=3 else None
+    second=days[int(len(days)*0.6)] if len(days)>=3 else None
+    train=[r for r in samples if first and r[0]<first]
+    tune=[r for r in samples if first and second and first<=r[0]<second]
+    test=[r for r in samples if second and r[0]>=second]
+    base_weights=fit_ensemble_weights(train)
+    models=[fit(train) for fit in (xgb_fit,lightgbm_fit,catboost_fit)]
+    available=(True,)+tuple(m is not None for m in models)
+    def predictions(group):
+        alternatives=[xgb_predictions(m,group) for m in models]
+        result=[]
+        for j,(day,features,ys) in enumerate(group):
+            baseline=ensemble_prediction(features,base_weights)
+            candidate=(baseline,)+tuple(v[j] if v else baseline for v in alternatives)
+            result.append((day,candidate,ys))
+        return result
+    tune_preds=predictions(tune)
+    weights=optimize_joint_weights(tune_preds,available)
+    test_preds=predictions(test)
+    metrics={}
+    for i,k in enumerate(MARKETS):
+        paired=[]
+        by_day={}
+        for day,ps,ys in test_preds:
+            p,q,y=ps[0][i],ensemble_prediction(ps,weights)[i],ys[i]
+            paired.append((p,q,y))
+            by_day.setdefault(day,[]).append((p-y)**2-(q-y)**2)
+        def score(j):
+            if not paired:
+                return dict(brier=None,logLoss=None,accuracyPct=None)
+            pairs=[(r[j],r[2]) for r in paired]
+            n=len(pairs)
+            return dict(brier=round(sum((p-y)**2 for p,y in pairs)/n,6),
+                logLoss=round(-sum(y*math.log(max(1e-12,p))+(1-y)*math.log(max(1e-12,1-p)) for p,y in pairs)/n,6),
+                accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y in pairs)/n,2))
+        metrics[k]=dict(n=len(paired),ensemble=score(0),optimized=score(1),
+            descriptiveBootstrap=paired_date_bootstrap(by_day))
+    return dict(model="joint_ml_convex_optimizer",trainMatches=len(train),tuneMatches=len(tune),holdoutMatches=len(test),
+        tuneStart=first,holdoutStart=second,weights=dict(zip(JOINT_MODELS,weights)),
+        available=dict(zip(JOINT_MODELS,available)),baseWeights=dict(zip(ENSEMBLE_MODELS,base_weights)),
+        gridCandidates=math.comb(JOINT_STEPS+len(JOINT_MODELS)-1,len(JOINT_MODELS)-1),
+        weightStep=1/JOINT_STEPS,minimumTuneImprovement=JOINT_MIN_IMPROVEMENT,
+        selectionMetric="mean_brier",markets=metrics,sameDayTraining=False,
+        repeatedHoldout=True,externalValidation=False,productionModelValidated=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -1300,7 +1375,8 @@ def build(now,reader=read):
     xgb=xgb_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     lgb=lightgbm_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     cat=catboost_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.46",catboostBacktest=cat,lightgbmBacktest=lgb,xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    optimizer=joint_optimizer_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.47",jointOptimizer=optimizer,catboostBacktest=cat,lightgbmBacktest=lgb,xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -1311,6 +1387,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("JOINT_OPTIMIZER",json.dumps(report["jointOptimizer"]))
     print("CATBOOST_BACKTEST",json.dumps(report["catboostBacktest"]))
     print("LIGHTGBM_BACKTEST",json.dumps(report["lightgbmBacktest"]))
     print("XGBOOST_BACKTEST",json.dumps(report["xgboostBacktest"]))
