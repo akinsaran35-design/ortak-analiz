@@ -541,7 +541,7 @@ const buttons=[...document.querySelectorAll("[data-tab]")];for(const b of button
 function theme(value){const resolved=value==="system"?(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark"):value;document.documentElement.dataset.theme=resolved;try{localStorage.setItem("oa_theme",value);}catch(_){}}
 let pref="dark";try{pref=localStorage.getItem("oa_theme")||"dark";}catch(_){}if(!["dark","light","system"].includes(pref))pref="dark";by("theme").value=pref;theme(pref);by("theme").onchange=e=>theme(e.target.value);
 setInterval(expireView,15000);setInterval(()=>{if(!document.hidden)refresh();},120000);document.addEventListener("visibilitychange",()=>{if(!document.hidden){expireView();refresh();}});
-by("refresh").onclick=refresh;if("serviceWorker"in navigator){
+by("refresh").onclick=()=>{if("serviceWorker"in navigator)navigator.serviceWorker.getRegistration().then(reg=>reg?.update()).catch(()=>{});refresh();};if("serviceWorker"in navigator){
  let reloaded=false,hadController=Boolean(navigator.serviceWorker.controller);
  navigator.serviceWorker.addEventListener("controllerchange",()=>{if(hadController&&!reloaded){reloaded=true;location.reload();}});
  navigator.serviceWorker.register("./sw.js",{updateViaCache:"none"}).then(reg=>reg.update()).catch(()=>{});
