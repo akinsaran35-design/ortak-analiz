@@ -1,17 +1,17 @@
 {
   "version": "5.29",
   "mode": "observed_deltas_only",
-  "updatedAt": "2026-11-28T20:14:25.254337+03:00",
-  "sourceUpdatedAt": "2026-11-28T20:14:08.300179+03:00",
+  "updatedAt": "2026-11-28T20:57:34.499288+03:00",
+  "sourceUpdatedAt": "2026-11-28T20:57:17.054128+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
   "accepted": 5,
-  "archivedEvents": 36,
-  "archivedPoints": 63,
+  "archivedEvents": 40,
+  "archivedPoints": 68,
   "reasons": {
-    "rejected_observation": 5
+    "rejected_observation": 6
   },
   "windowCounts": {
     "5": 0,
@@ -20,58 +20,58 @@
   },
   "rows": [
     {
-      "league": "it.1",
-      "eventId": "401874826",
-      "home": "Torino",
-      "away": "Lazio",
-      "kickoff": "2026-11-28T17:00:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.106965+03:00",
-      "minute": 12,
-      "observations": 1,
-      "windows": {}
-    },
-    {
-      "league": "tr.1",
-      "eventId": "401888368",
-      "home": "Gaziantep FK",
-      "away": "Amed SFK",
-      "kickoff": "2026-11-28T16:00:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.076841+03:00",
-      "minute": 58,
-      "observations": 2,
-      "windows": {}
-    },
-    {
-      "league": "pt.1",
-      "eventId": "401885392",
-      "home": "Arouca",
-      "away": "Rio Ave",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.122672+03:00",
-      "minute": 84,
-      "observations": 1,
-      "windows": {}
-    },
-    {
       "league": "nl.1",
-      "eventId": "401875537",
-      "home": "Excelsior",
-      "away": "Telstar",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.095013+03:00",
-      "minute": 84,
+      "eventId": "401875531",
+      "home": "PSV Eindhoven",
+      "away": "Go Ahead Eagles",
+      "kickoff": "2026-11-28T17:45:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.820482+03:00",
+      "minute": 10,
       "observations": 1,
       "windows": {}
     },
     {
-      "league": "pt.1",
-      "eventId": "401885388",
-      "home": "Moreirense",
-      "away": "Santa Clara",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.204994+03:00",
-      "minute": 86,
+      "league": "es.1",
+      "eventId": "401882793",
+      "home": "Elche",
+      "away": "Atlético Madrid",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.763038+03:00",
+      "minute": 26,
       "observations": 1,
+      "windows": {}
+    },
+    {
+      "league": "en.1",
+      "eventId": "401878752",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.760240+03:00",
+      "minute": 27,
+      "observations": 1,
+      "windows": {}
+    },
+    {
+      "league": "de.1",
+      "eventId": "401884726",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.778021+03:00",
+      "minute": 27,
+      "observations": 1,
+      "windows": {}
+    },
+    {
+      "league": "fr.1",
+      "eventId": "401876394",
+      "home": "Angers",
+      "away": "Lens",
+      "kickoff": "2026-11-28T16:15:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.803331+03:00",
+      "minute": 82,
+      "observations": 2,
       "windows": {}
     }
   ]

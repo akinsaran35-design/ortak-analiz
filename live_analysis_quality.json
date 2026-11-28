@@ -1,68 +1,23 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-28T20:14:08.300179+03:00",
-  "sourceUpdatedAt": "2026-11-28T20:14:08.210802+03:00",
+  "updatedAt": "2026-11-28T20:57:17.054128+03:00",
+  "sourceUpdatedAt": "2026-11-28T20:57:16.995886+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
   "counts": {
-    "observation_ready": 10
+    "observation_ready": 11
   },
   "rows": [
     {
-      "league": "nor.1",
-      "eventId": "401843497",
-      "home": "Rosenborg",
-      "away": "Molde",
-      "kickoff": "2026-11-28T17:00:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.103521+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_FIRST_HALF",
-        "clock": "11'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            0
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            1,
-            0
-          ],
-          "possession": [
-            47.1,
-            52.9
-          ],
-          "shots": [
-            2,
-            2
-          ],
-          "shotsOnTarget": [
-            0,
-            0
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "it.1",
-      "eventId": "401874826",
-      "home": "Torino",
-      "away": "Lazio",
-      "kickoff": "2026-11-28T17:00:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.106965+03:00",
+      "league": "sco.1",
+      "eventId": "401878329",
+      "home": "Motherwell",
+      "away": "Hibernian",
+      "kickoff": "2026-11-28T17:45:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.775103+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
@@ -82,20 +37,335 @@
             0
           ],
           "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            35.1,
+            64.9
+          ],
+          "shots": [
+            0,
+            0
+          ],
+          "shotsOnTarget": [
+            0,
+            0
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "nl.1",
+      "eventId": "401875531",
+      "home": "PSV Eindhoven",
+      "away": "Go Ahead Eagles",
+      "kickoff": "2026-11-28T17:45:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.820482+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "10'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            0
+          ],
+          "possession": [
+            78.2,
+            21.8
+          ],
+          "shots": [
+            0,
+            1
+          ],
+          "shotsOnTarget": [
+            0,
+            1
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "esp.2",
+      "eventId": "401883104",
+      "home": "Eibar",
+      "away": "Burgos",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.813189+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "27'",
+        "score": [
+          1,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            1,
+            3
+          ],
+          "possession": [
+            53.9,
+            46.1
+          ],
+          "shots": [
+            3,
+            3
+          ],
+          "shotsOnTarget": [
+            2,
+            1
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "es.1",
+      "eventId": "401882793",
+      "home": "Elche",
+      "away": "Atlético Madrid",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.763038+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "26'",
+        "score": [
+          0,
+          2
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
             1,
             0
           ],
           "possession": [
-            56.0,
-            44.0
+            50.6,
+            49.4
           ],
           "shots": [
-            2,
-            0
+            0,
+            5
           ],
           "shotsOnTarget": [
-            2,
+            0,
+            3
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "en.1",
+      "eventId": "401878752",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.760240+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_IN_PROGRESS",
+        "clock": "27'",
+        "score": [
+          1,
+          1
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            2
+          ],
+          "redCards": [
+            0,
             0
+          ],
+          "corners": [
+            1,
+            2
+          ],
+          "possession": [
+            29.9,
+            70.1
+          ],
+          "shots": [
+            4,
+            7
+          ],
+          "shotsOnTarget": [
+            1,
+            2
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "de.1",
+      "eventId": "401884726",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "kickoff": "2026-11-28T17:30:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.778021+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_FIRST_HALF",
+        "clock": "27'",
+        "score": [
+          0,
+          0
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            0,
+            3
+          ],
+          "possession": [
+            50.0,
+            50.0
+          ],
+          "shots": [
+            1,
+            4
+          ],
+          "shotsOnTarget": [
+            0,
+            1
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "nor.1",
+      "eventId": "401843497",
+      "home": "Rosenborg",
+      "away": "Molde",
+      "kickoff": "2026-11-28T17:00:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.818514+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_HALFTIME",
+        "clock": "45'+3'",
+        "score": [
+          1,
+          1
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            1
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            7,
+            0
+          ],
+          "possession": [
+            46.4,
+            53.6
+          ],
+          "shots": [
+            13,
+            5
+          ],
+          "shotsOnTarget": [
+            3,
+            3
+          ]
+        }
+      },
+      "prediction": null
+    },
+    {
+      "league": "it.1",
+      "eventId": "401874826",
+      "home": "Torino",
+      "away": "Lazio",
+      "kickoff": "2026-11-28T17:00:00+00:00",
+      "receivedAt": "2026-11-28T20:57:16.785084+03:00",
+      "quality": "observation_ready",
+      "observation": {
+        "state": "in",
+        "status": "STATUS_HALFTIME",
+        "clock": "45'+3'",
+        "score": [
+          0,
+          2
+        ],
+        "metrics": {
+          "yellowCards": [
+            0,
+            0
+          ],
+          "redCards": [
+            0,
+            0
+          ],
+          "corners": [
+            2,
+            4
+          ],
+          "possession": [
+            38.8,
+            61.2
+          ],
+          "shots": [
+            7,
+            6
+          ],
+          "shotsOnTarget": [
+            4,
+            3
           ]
         }
       },
@@ -107,39 +377,39 @@
       "home": "Vicenza",
       "away": "Cesena",
       "kickoff": "2026-11-28T16:15:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.087178+03:00",
+      "receivedAt": "2026-11-28T20:57:16.993583+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+1'",
+        "status": "STATUS_SECOND_HALF",
+        "clock": "87'",
         "score": [
-          0,
+          1,
           1
         ],
         "metrics": {
           "yellowCards": [
-            1,
-            1
+            2,
+            2
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            0,
-            4
+            1,
+            7
           ],
           "possession": [
-            26.4,
-            73.6
+            33.9,
+            66.1
           ],
           "shots": [
-            3,
-            9
+            14,
+            13
           ],
           "shotsOnTarget": [
-            0,
+            3,
             5
           ]
         }
@@ -152,64 +422,19 @@
       "home": "Angers",
       "away": "Lens",
       "kickoff": "2026-11-28T16:15:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.070068+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_HALFTIME",
-        "clock": "45'+5'",
-        "score": [
-          1,
-          1
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            1
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            1,
-            1
-          ],
-          "possession": [
-            39.9,
-            60.1
-          ],
-          "shots": [
-            6,
-            10
-          ],
-          "shotsOnTarget": [
-            2,
-            2
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "tr.1",
-      "eventId": "401888368",
-      "home": "Gaziantep FK",
-      "away": "Amed SFK",
-      "kickoff": "2026-11-28T16:00:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.076841+03:00",
+      "receivedAt": "2026-11-28T20:57:16.803331+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
         "status": "STATUS_SECOND_HALF",
-        "clock": "58'",
+        "clock": "82'",
         "score": [
-          0,
-          2
+          2,
+          5
         ],
         "metrics": {
           "yellowCards": [
-            0,
+            1,
             1
           ],
           "redCards": [
@@ -217,20 +442,20 @@
             0
           ],
           "corners": [
-            1,
-            5
+            3,
+            2
           ],
           "possession": [
-            54.5,
-            45.5
+            41.6,
+            58.4
           ],
           "shots": [
-            9,
-            6
+            11,
+            21
           ],
           "shotsOnTarget": [
-            1,
-            5
+            4,
+            8
           ]
         }
       },
@@ -242,220 +467,40 @@
       "home": "Kruger United",
       "away": "Mamelodi Sundowns",
       "kickoff": "2026-11-28T16:00:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.099671+03:00",
+      "receivedAt": "2026-11-28T20:57:16.860037+03:00",
       "quality": "observation_ready",
       "observation": {
         "state": "in",
         "status": "STATUS_SECOND_HALF",
-        "clock": "48'",
+        "clock": "90'+1'",
         "score": [
-          0,
-          1
+          1,
+          5
         ],
         "metrics": {
           "yellowCards": [
-            0,
-            0
+            1,
+            1
           ],
           "redCards": [
             0,
             0
           ],
           "corners": [
-            4,
-            7
-          ],
-          "possession": [
-            37.5,
-            62.5
-          ],
-          "shots": [
-            6,
-            11
-          ],
-          "shotsOnTarget": [
-            3,
-            3
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "pt.1",
-      "eventId": "401885392",
-      "home": "Arouca",
-      "away": "Rio Ave",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.122672+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "84'",
-        "score": [
-          0,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            2,
-            3
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            5,
-            4
+            8,
+            9
           ],
           "possession": [
             44.7,
             55.3
           ],
           "shots": [
-            12,
-            9
-          ],
-          "shotsOnTarget": [
-            2,
-            3
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "nl.1",
-      "eventId": "401875537",
-      "home": "Excelsior",
-      "away": "Telstar",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.095013+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "84'",
-        "score": [
-          1,
-          0
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            1
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            10,
-            4
-          ],
-          "possession": [
-            53.6,
-            46.4
-          ],
-          "shots": [
-            16,
-            6
-          ],
-          "shotsOnTarget": [
-            3,
-            2
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "esp.2",
-      "eventId": "401882296",
-      "home": "Eldense",
-      "away": "Girona",
-      "kickoff": "2026-11-28T15:15:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.136449+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "90'+4'",
-        "score": [
-          3,
-          2
-        ],
-        "metrics": {
-          "yellowCards": [
-            4,
-            0
-          ],
-          "redCards": [
-            0,
-            1
-          ],
-          "corners": [
-            8,
-            3
-          ],
-          "possession": [
-            66.5,
-            33.5
-          ],
-          "shots": [
-            29,
-            11
-          ],
-          "shotsOnTarget": [
             13,
-            2
-          ]
-        }
-      },
-      "prediction": null
-    },
-    {
-      "league": "pt.1",
-      "eventId": "401885388",
-      "home": "Moreirense",
-      "away": "Santa Clara",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "receivedAt": "2026-11-28T20:14:08.204994+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "86'",
-        "score": [
-          0,
-          2
-        ],
-        "metrics": {
-          "yellowCards": [
-            0,
-            0
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            6,
-            6
-          ],
-          "possession": [
-            66.2,
-            33.8
-          ],
-          "shots": [
-            12,
-            9
+            21
           ],
           "shotsOnTarget": [
-            2,
-            3
+            5,
+            8
           ]
         }
       },
