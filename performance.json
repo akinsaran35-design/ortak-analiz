@@ -1,14 +1,14 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-28T13:06:36.976204+03:00",
+  "updatedAt": "2026-11-28T18:32:38.162830+03:00",
   "method": "First recorded future-date candidates; new scores require corroborated sources; kickoff unverified; no profit measurement.",
   "errors": [],
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "overall": {
-    "recorded": 130,
+    "recorded": 134,
     "settled": 4,
-    "pending": 126,
+    "pending": 130,
     "markets": {
       "1.5 Üst": {
         "tested": 4,
@@ -205,9 +205,9 @@
       }
     },
     "Türkiye Süper Lig": {
-      "recorded": 4,
+      "recorded": 8,
       "settled": 0,
-      "pending": 4,
+      "pending": 8,
       "markets": {
         "1.5 Üst": {
           "tested": 0,

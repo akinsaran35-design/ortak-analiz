@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-28T13:06:43.974459+03:00",
+  "updatedAt": "2026-11-28T18:32:46.140521+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -73,10 +73,13 @@
           "home": "Aberdeen",
           "away": "Dundee",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "34'",
+          "score": [
+            0,
+            0
+          ],
           "date": "2026-11-28"
         },
         {
@@ -84,10 +87,13 @@
           "home": "Dundee United",
           "away": "St Johnstone",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "31'",
+          "score": [
+            1,
+            2
+          ],
           "date": "2026-11-28"
         },
         {
@@ -95,10 +101,13 @@
           "home": "Rangers",
           "away": "Falkirk",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "31'",
+          "score": [
+            0,
+            0
+          ],
           "date": "2026-11-28"
         },
         {
@@ -106,10 +115,13 @@
           "home": "St Mirren",
           "away": "Kilmarnock",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "31'",
+          "score": [
+            0,
+            1
+          ],
           "date": "2026-11-28"
         },
         {
@@ -156,10 +168,13 @@
           "home": "KVC Westerlo",
           "away": "RAAL La Louvière",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "31'",
+          "score": [
+            0,
+            0
+          ],
           "date": "2026-11-28"
         },
         {
@@ -421,10 +436,13 @@
           "home": "Bodo/Glimt",
           "away": "KFUM Oslo",
           "kickoff": "2026-11-28T15:00:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_FIRST_HALF",
+          "clock": "32'",
+          "score": [
+            2,
+            0
+          ],
           "date": "2026-11-28"
         },
         {
@@ -753,10 +771,13 @@
           "home": "Al Hazem",
           "away": "Al Nassr",
           "kickoff": "2026-11-28T12:15:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+6'",
+          "score": [
+            0,
+            1
+          ],
           "date": "2026-11-28"
         },
         {
@@ -764,10 +785,13 @@
           "home": "Al Ettifaq",
           "away": "Al Hilal",
           "kickoff": "2026-11-28T14:20:00+00:00",
-          "state": "pre",
-          "status": "STATUS_SCHEDULED",
-          "clock": "0'",
-          "score": null,
+          "state": "in",
+          "status": "STATUS_SECOND_HALF",
+          "clock": "54'",
+          "score": [
+            1,
+            1
+          ],
           "date": "2026-11-28"
         },
         {
@@ -982,12 +1006,12 @@
           "home": "Central Coast Mariners FC",
           "away": "Auckland FC",
           "kickoff": "2026-11-28T08:40:00+00:00",
-          "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "67'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+7'",
           "score": [
             2,
-            2
+            3
           ],
           "date": "2026-11-28"
         }

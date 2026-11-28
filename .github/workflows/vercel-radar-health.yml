@@ -1,0 +1,16 @@
+name: V7.28 Vercel radar health
+on:
+  pull_request:
+    paths:
+      - 'api/radar-health.js'
+      - 'scripts/test_radar_health.js'
+      - '.github/workflows/vercel-radar-health.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node --check api/radar-health.js
+      - run: node scripts/test_radar_health.js

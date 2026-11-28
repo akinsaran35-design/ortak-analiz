@@ -23,8 +23,6 @@ on:
     paths:
       - 'scripts/main_leagues_ml_prospective.py'
       - 'scripts/main_leagues_ml_settlement.py'
-      - 'scripts/check_frozen_cohort.py'
-      - 'scripts/test_check_frozen_cohort.py'
       - 'scripts/main_ml_matched_comparison.py'
       - 'scripts/main_ml_calibration_review.py'
       - 'scripts/main_ml_timing_audit.py'

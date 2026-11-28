@@ -126,6 +126,7 @@ def run():
 
         report["markets"].append({
             "eventId": event_id,
+            "league": records[0]["league"],
             "home": records[0]["home"],
             "away": records[0]["away"],
             "kickoff": records[0]["kickoff"],

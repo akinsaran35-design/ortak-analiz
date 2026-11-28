@@ -1,16 +1,16 @@
 {
   "version": "4.59",
-  "updatedAt": "2026-11-28T10:06:37.411185+00:00",
+  "updatedAt": "2026-11-28T15:32:38.736376+00:00",
   "source": "https://github.com/oladeeayo/open-matchday",
   "sourceUpdatedAt": "2026-11-28T07:07:07+00:00",
-  "oddsUpdatedAt": "2026-11-28T09:53:05.374700+00:00",
-  "dailyUpdatedAt": "2026-11-28T13:06:05+03:00",
+  "oddsUpdatedAt": "2026-11-28T15:32:04.682329+00:00",
+  "dailyUpdatedAt": "2026-11-28T18:32:05+03:00",
   "oddsFresh": true,
   "status": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "originalMatched": 78,
-  "reconciledMatched": 95,
+  "originalMatched": 70,
+  "reconciledMatched": 84,
   "proposedCorrections": [
     {
       "league": "İngiltere Premier Lig",
@@ -69,13 +69,6 @@
       "eventId": "f128c19fa7af43e30dbe3c373e7bc27e"
     },
     {
-      "league": "İspanya La Liga",
-      "match": "Málaga CF – Athletic Club",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "33d92dabbd2606dfe9d31058f7b20cc8"
-    },
-    {
       "league": "İtalya Serie A",
       "match": "US Lecce – Atalanta BC",
       "originalDate": "2026-11-29",
@@ -83,25 +76,11 @@
       "eventId": "f1d2a6064d1452074570bbc656d36a20"
     },
     {
-      "league": "İspanya La Liga",
-      "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "c81520b9a9794749cfdab57f89bdeb16"
-    },
-    {
       "league": "İtalya Serie A",
       "match": "Torino FC – SS Lazio",
       "originalDate": "2026-11-29",
       "corroboratedDate": "2026-11-28",
       "eventId": "aec86b479e922f437ba228b9a9d74da1"
-    },
-    {
-      "league": "İtalya Serie A",
-      "match": "Frosinone Calcio – Parma Calcio 1913",
-      "originalDate": "2026-11-29",
-      "corroboratedDate": "2026-11-28",
-      "eventId": "af3432ca724da03d38f0ff4e62045e4c"
     },
     {
       "league": "İtalya Serie A",
@@ -134,7 +113,126 @@
   ],
   "unresolved": [
     {
+      "match": "Hamburger SV – FC Bayern München",
+      "league": "Almanya Bundesliga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Manchester United FC – Brentford FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
+      "league": "Almanya Bundesliga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "West Ham United FC – Stoke City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Wrexham AFC – Portsmouth FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Birmingham City FC – Bolton Wanderers FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Preston North End FC – Norwich City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Queens Park Rangers FC – Sheffield United FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Millwall FC – Burnley FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "West Bromwich Albion FC – Bristol City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Lincoln City FC – Wolverhampton Wanderers FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "SBV Excelsior – Telstar 1963",
+      "league": "Hollanda Eredivisie",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "FC Arouca – Rio Ave FC",
+      "league": "Portekiz Primeira Liga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Nottingham Forest FC – Chelsea FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Derby County FC – Watford FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Moreirense FC – CD Santa Clara",
+      "league": "Portekiz Primeira Liga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Blackburn Rovers FC – Charlton Athletic FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Leeds United FC – Coventry City FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
       "reason": "no_exact_match",
@@ -148,7 +246,28 @@
       "providerDates": []
     },
     {
+      "match": "Málaga CF – Athletic Club",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Venezia FC – Bologna FC 1909",
+      "league": "İtalya Serie A",
+      "date": "2026-11-29",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
+      "league": "İspanya La Liga",
+      "date": "2026-11-29",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Frosinone Calcio – Parma Calcio 1913",
       "league": "İtalya Serie A",
       "date": "2026-11-29",
       "reason": "no_exact_match",
@@ -157,20 +276,6 @@
     {
       "match": "Newcastle United FC – Sunderland AFC",
       "league": "İngiltere Premier Lig",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
-      "match": "Wolverhampton Wanderers FC – Southampton FC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
-      "match": "Bolton Wanderers FC – Blackburn Rovers FC",
-      "league": "İngiltere Championship",
       "date": "2026-12-05",
       "reason": "no_exact_match",
       "providerDates": []
@@ -190,13 +295,6 @@
       "providerDates": []
     },
     {
-      "match": "Stoke City FC – Queens Park Rangers FC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
       "match": "Aston Villa FC – Crystal Palace FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-12-05",
@@ -211,13 +309,6 @@
       "providerDates": []
     },
     {
-      "match": "Norwich City FC – Wrexham AFC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
       "match": "Manchester United FC – Coventry City FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-12-05",
@@ -226,13 +317,6 @@
     },
     {
       "match": "Middlesbrough FC – Derby County FC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
-      "match": "Watford FC – Millwall FC",
       "league": "İngiltere Championship",
       "date": "2026-12-05",
       "reason": "no_exact_match",
@@ -278,13 +362,6 @@
       "providerDates": []
     },
     {
-      "match": "Bristol City FC – Swansea City AFC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
       "match": "Nottingham Forest FC – Brighton & Hove Albion FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-12-05",
@@ -297,30 +374,16 @@
       "date": "2026-12-05",
       "reason": "no_exact_match",
       "providerDates": []
-    },
-    {
-      "match": "Portsmouth FC – West Bromwich Albion FC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
-      "match": "Charlton Athletic FC – Birmingham City FC",
-      "league": "İngiltere Championship",
-      "date": "2026-12-05",
-      "reason": "no_exact_match",
-      "providerDates": []
     }
   ],
   "candidateCountsByDate": {
-    "2026-11-28": 37,
-    "2026-11-29": 30,
+    "2026-11-28": 33,
+    "2026-11-29": 33,
     "2026-11-30": 5,
     "2026-12-02": 7,
     "2026-12-01": 1,
     "2026-12-03": 1,
     "2026-12-04": 2,
-    "2026-12-05": 37
+    "2026-12-05": 39
   }
 }

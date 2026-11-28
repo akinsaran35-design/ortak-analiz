@@ -16,8 +16,6 @@ on:
     paths:
       - 'scripts/extra_ml_prospective.py'
       - 'scripts/extra_ml_settlement.py'
-      - 'scripts/check_frozen_cohort.py'
-      - 'scripts/test_check_frozen_cohort.py'
       - 'scripts/extra_ml_review_gate.py'
       - 'scripts/test_extra_ml_review_gate.py'
       - 'scripts/test_extra_ml_settlement.py'

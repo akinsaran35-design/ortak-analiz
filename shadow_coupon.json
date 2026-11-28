@@ -2,14 +2,14 @@
   "version": "4.8",
   "mode": "shadow",
   "liveEnabled": false,
-  "updatedAt": "2026-11-28T10:06:37.176109+00:00",
+  "updatedAt": "2026-11-28T15:32:38.431594+00:00",
   "decision": "PAS",
   "selections": [],
   "diagnostics": {
-    "rows": 39,
+    "rows": 27,
     "rejected": {
-      "probability_below_threshold_or_invalid": 19,
-      "outside_research_window": 20
+      "probability_below_threshold_or_invalid": 10,
+      "outside_research_window": 17
     },
     "eligible": 0,
     "researchHorizonHours": 24
