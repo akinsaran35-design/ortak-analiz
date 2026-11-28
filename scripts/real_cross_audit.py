@@ -8,9 +8,15 @@ MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
 # Expanded historical audit. Prior research may overlap; do not add totals without ID deduplication.
-start=date(2026,8,1)
-days=31
-offsets=tuple((start-now.date()).days+i for i in range(days)) if holdout else (-1,0,1)
+if holdout:
+    start=date.fromisoformat(os.environ.get("CROSS_START","2026-07-01"))
+    days=int(os.environ.get("CROSS_DAYS","31"))
+    if not 1<=days<=31 or days>(now.date()-start).days:
+        raise ValueError("Historical window must contain 1-31 completed local dates")
+    first=(start-now.date()).days
+    offsets=tuple(range(first,first+days))
+else:
+    offsets=(-1,0,1)
 token=os.environ.get("FOOTBALL_DATA_TOKEN")
 def secondary_windowed():
     # Overlap boundaries so either inclusive or exclusive dateTo is safe.
@@ -69,13 +75,13 @@ for league,cid in MAP.items():
     ss=[a for a in s["rows"] if a["competitionId"]==cid and audit_start<=datetime.fromisoformat(a["kickoff"].replace("Z","+00:00")).astimezone(TR).date()<=audit_end]
     pairs=match(pp,ss,MAP)["pairs"]
     verified=[pair for pair in pairs if pair["scoreAgreement"] is True]
-    verified_score_ids.extend(dict(league=league,primaryId=pair["primaryId"],secondaryId=pair["secondaryId"]) for pair in verified)
+    primary_by_id={str(a["eventId"]):a for a in pp}
+    for pair in verified:
+        observed=primary_by_id[str(pair["primaryId"])]
+        verified_score_ids.append(dict(league=league,primaryId=pair["primaryId"],secondaryId=pair["secondaryId"],kickoff=observed["kickoff"],score=observed["score"]))
     league_coverage.append(dict(league=league,primaryCount=len(pp),secondaryCount=len(ss),matched=len(pairs),verifiedScores=len(verified),scoreMismatch=sum(pair["scoreAgreement"] is False for pair in pairs),primaryCoverage=len(pairs)/len(pp) if pp else None,secondaryCoverage=len(pairs)/len(ss) if ss else None))
 print("League coverage:",json.dumps(league_coverage))
 print("Verified score count:",len(verified_score_ids))
-# Keep both IDs unique across the audit, not merely within a competition.
-assert len({str(x["primaryId"]) for x in verified_score_ids})==len(verified_score_ids), "Duplicate primary verification ID"
-assert len({str(x["secondaryId"]) for x in verified_score_ids})==len(verified_score_ids), "Duplicate secondary verification ID"
 print("Verified score IDs:",json.dumps(verified_score_ids))
 print("Bidirectional coverage:",json.dumps(scope))
 print("Daily coverage:",json.dumps(daily))
@@ -195,17 +201,56 @@ champions=dict(primaryCount=len(champions_primary),secondaryCount=len(champions_
 champions["completeCoverage"]=bool(champions_secondary and champions["matched"]==len(champions_primary)==len(champions_secondary)==champions["scoreCompared"] and not champions["scoreMismatch"])
 print("Champions League holdout:",json.dumps(champions))
 r["championsHoldout"]=champions
+# Distinguish fixture identity failures from matched fixtures lacking a final score.
+paired_primary={str(pair["primaryId"]):pair for pair in r["pairs"]}
+unresolved=[]
+for item in diagnostics:
+    pair=paired_primary.get(str(item["primaryId"]))
+    if pair is not None and pair["scoreAgreement"] is True:continue
+    if pair is not None:
+        reason="score_conflict" if pair["scoreAgreement"] is False else "score_not_comparable"
+    else:
+        same_teams=[b for b in item["candidates"] if norm(item["home"])==secondary_name(item["league"],b["home"]) and norm(item["away"])==secondary_name(item["league"],b["away"])]
+        reason=("identity_or_duplicate" if any(b["deltaMinutes"]==0 for b in same_teams) else "kickoff_difference" if same_teams else "no_nearby_source_fixture" if not item["candidates"] else "team_identity_unresolved")
+    unresolved.append(dict(item,reason=reason))
+r["unresolvedFixtures"]=unresolved
+print("Unresolved fixtures:",json.dumps(unresolved,ensure_ascii=False))
 r["diagnostics"]=diagnostics
 print("Candidate diagnostics:",json.dumps(diagnostics,ensure_ascii=False))
-r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.98",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+r.update(primaryCount=len(p),secondaryCount=len(s["rows"]),secondaryStatus=s["status"],version="5.99",leagueCoverage=league_coverage,verifiedScoreIds=verified_score_ids,brazilCandidate=brazil,competitionInventory=competition_inventory,unmappedCompetitions=unmapped_competitions,scopeCoverage=scope,dailyCoverage=daily,scopeHealth=health,fullCoverageVerified=health["allDatesVerified"],sampleRole="expanded_historical_observation_may_overlap_prior" if holdout else "current",primaryDays=primary_days,samples=samples,coverage=len(r["pairs"])/len(p) if p else None,scoreCompared=sum(x["scoreAgreement"] is not None for x in r["pairs"]),secondaryWindows=s.get("windows",[]),holdout=holdout,dates=[str(now.date()+timedelta(days=x)) for x in offsets])
+failures=[]
+if s["status"]!="observed":
+    failures.append(f"Secondary status: {s['status']}")
+if not p:
+    failures.append("No primary fixtures")
+if not r["pairs"]:
+    failures.append("No independent matches")
+if any(pair["scoreAgreement"] is False for pair in r["pairs"]):
+    failures.append("Conflicting scores")
+for provider in ("primary", "secondary"):
+    ids=[str(pair[f"{provider}Id"]) for pair in verified_score_ids]
+    if len(set(ids))!=len(ids):
+        failures.append(f"Duplicate {provider} verification ID")
+if holdout:
+    if primary_issues or secondary_rejected:
+        failures.append("Source health incomplete")
+    if r["scoreCompared"]==0:
+        failures.append("No comparable completed scores")
+    if len(verified_score_ids)<100:
+        failures.append(f"At least 100 verified scores required, observed {len(verified_score_ids)}")
+    if any(coverage is None or coverage<0.99 for coverage in (scope["primaryCoverage"],scope["secondaryCoverage"])):
+        failures.append(
+            f"99 percent bidirectional coverage required, matched {scope['matched']} of "
+            f"{scope['primaryCount']} primary and {scope['secondaryCount']} secondary fixtures"
+        )
+r["auditQuality"]=dict(
+    passed=not failures, failures=failures,
+    primaryCoverage=scope["primaryCoverage"], secondaryCoverage=scope["secondaryCoverage"],
+    verifiedScores=len(verified_score_ids), minimumCoverage=0.99 if holdout else None,
+    minimumVerifiedScores=100 if holdout else None,
+)
 Path("cross_audit.json").write_text(json.dumps(r,indent=2))
 print("Cross audit:",len(p),len(s["rows"]),len(r["pairs"]),sum(x["scoreAgreement"] is True for x in r["pairs"]),sum(x["scoreAgreement"] is False for x in r["pairs"]))
-assert s["status"]=="observed" and p, f"Secondary status: {s['status']}; windows: {s.get('windows', [])}"
-assert r["pairs"], "No independent matches; coverage audit cannot pass"
-assert not any(x["scoreAgreement"] is False for x in r["pairs"])
-if holdout:assert r["scoreCompared"]>0, "No comparable completed scores"
-if holdout:
-    assert not primary_issues and secondary_rejected==0, "Source health incomplete"
-    assert len(verified_score_ids)>=100, "Expanded historical audit needs at least 100 verified scores"
-    assert scope["primaryCoverage"] is not None and scope["secondaryCoverage"] is not None and min(scope["primaryCoverage"],scope["secondaryCoverage"])>=0.99, "Expanded historical audit below 99 percent bidirectional coverage"
+if failures:
+    raise RuntimeError(f"Cross-source audit {audit_start} to {audit_end}: " + "; ".join(failures))
 print("Combined sample coverage:",r["coverage"],"score comparisons:",r["scoreCompared"])
