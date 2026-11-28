@@ -25,6 +25,11 @@ class MatchedTests(unittest.TestCase):
         empty=dict(version="6.69",modelSha256="x",pairs={})
         self.assertEqual(build(empty,ledger,meta,legacy,end)["paired"],0)
         self.assertEqual(build(pairs,ledger,meta,legacy,end)["markets"]["over15"]["candidate"]["n"],1)
+        stats=build(pairs,ledger,meta,legacy,end)["markets"]["over15"]
+        self.assertEqual(stats["poisson"]["n"],stats["legacy"]["n"])
+        self.assertEqual(stats["poisson"]["n"],stats["candidate"]["n"])
+        self.assertTrue(stats["identicalEvaluationSample"])
+        self.assertEqual(stats["pairedPoissonBootstrap"]["meanImprovement"],0)
         ledger["quarantine"][k]={}
         self.assertEqual(build(pairs,ledger,meta,legacy,end)["validSettled"],0)
 if __name__=="__main__":unittest.main()

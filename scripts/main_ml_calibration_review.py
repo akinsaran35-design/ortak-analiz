@@ -16,6 +16,16 @@ MIN_PAIR_COVERAGE=.8
 LEAGUE_MIN_SETTLED=100
 LEAGUE_MIN_DATES=15
 
+def dual_gate(metrics,ready):
+    if not ready:
+        return dict(status="not_evaluated",checks={},versusLegacy=None,versusPoisson=None)
+    legacy=market_gate(metrics["legacy"],metrics["candidate"],metrics["pairedBootstrap"])
+    poisson=market_gate(metrics["poisson"],metrics["candidate"],metrics["pairedPoissonBootstrap"])
+    checks=dict(legacyPass=legacy["status"]=="eligible_for_manual_review",
+        poissonPass=poisson["status"]=="eligible_for_manual_review")
+    return dict(status="eligible_for_manual_review" if all(checks.values()) else "retain_baseline",
+        checks=checks,versusLegacy=legacy,versusPoisson=poisson)
+
 def evaluate(pairs,ledger,meta,now):
     now=now.astimezone(TR)
     # Recompute from locked forecasts and verified outcomes, not a mutable summary.
@@ -40,7 +50,8 @@ def evaluate(pairs,ledger,meta,now):
             markets[m]=dict(legacyBrier=v["legacy"]["brier"],candidateBrier=v["candidate"]["brier"],
                 legacyLogLoss=v["legacy"]["logLoss"],candidateLogLoss=v["candidate"]["logLoss"],
                 legacyECE=v["legacy"]["ece10"],candidateECE=v["candidate"]["ece10"],
-                gate=market_gate(v["legacy"],v["candidate"],v["pairedBootstrap"]) if ready else dict(status="not_evaluated",checks={}))
+                poissonBrier=v["poisson"]["brier"],poissonLogLoss=v["poisson"]["logLoss"],poissonECE=v["poisson"]["ece10"],
+                gate=dual_gate(v,ready))
         return dict(recorded=len(keys),paired=len(locked),validSettled=report["validSettled"],pending=report["pending"],
             dateBlocks=report["dateBlocks"],matureFixtures=len(mature),maturePairs=len(mature_pairs),maturePairCoverage=coverage,
             staleOrQuarantinedShare=stale,sampleTargetReached=sample,completenessReady=complete,
@@ -54,7 +65,7 @@ def evaluate(pairs,ledger,meta,now):
         subpairs={**pairs,"pairs":{k:v for k,v in pairs["pairs"].items() if k in keys}}
         report=build(copy.deepcopy(subpairs),sub,meta,{},now)
         leagues[l]=group_report(keys,report,LEAGUE_MIN_SETTLED,LEAGUE_MIN_DATES)
-    return dict(version="6.70",mode="manual_review_screen_only",cohortVersion=VERSION,
+    return dict(version="6.70",reviewPolicyVersion="6.80",requiresBothBaselineScreens=True,mode="manual_review_screen_only",cohortVersion=VERSION,
         modelSha256=meta["modelSha256"],overall=result,leagues=leagues,
         thresholds=dict(minimumSettled=MIN_SETTLED,minimumDates=MIN_DATES,leagueMinimumSettled=LEAGUE_MIN_SETTLED,
             leagueMinimumDates=LEAGUE_MIN_DATES,minimumMaturePairCoverage=MIN_PAIR_COVERAGE,staleDays=STALE_DAYS,
