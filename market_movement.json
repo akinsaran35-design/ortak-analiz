@@ -1,6 +1,9 @@
 {
   "version": "4.11",
-  "updatedAt": "2026-11-28T09:22:01.099792+00:00",
+  "evidenceVersion": "6.91",
+  "firstObservedIsOpening": false,
+  "excluded": {},
+  "updatedAt": "2026-11-28T17:44:09.190481+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "eventCount": 0,

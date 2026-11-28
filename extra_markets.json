@@ -1,0 +1,26 @@
+{
+  "version": "4.9-pilot",
+  "updatedAt": "2026-11-28T15:32:05.560070+00:00",
+  "startedAt": "2026-11-28T15:32:05.459252+00:00",
+  "integrityVersion": "6.84",
+  "quotaPolicyVersion": "6.89",
+  "oddsSnapshotAt": "2026-11-28T15:32:04.682329+00:00",
+  "quotaStatus": "quota_guard",
+  "paidRequestsAttempted": 0,
+  "source": "The Odds API",
+  "region": "uk",
+  "mode": "research_only",
+  "decision": "PAS",
+  "remainingCredits": 44,
+  "events": [],
+  "errors": [],
+  "quotaGate": {
+    "allowed": false,
+    "reason": "base_reserve_protection",
+    "remainingScheduledRuns": 9,
+    "protectedCredits": 101,
+    "maximumEventCost": 2,
+    "calendarMonthEstimateOnly": true
+  },
+  "eventCount": 0
+}

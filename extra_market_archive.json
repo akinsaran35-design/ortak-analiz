@@ -2668,8 +2668,11 @@
       "movementReady": true
     }
   },
-  "updatedAt": "2026-11-25T19:05:45.847494+00:00",
+  "updatedAt": "2026-11-28T15:32:05.595838+00:00",
   "mode": "research_only",
   "decision": "PAS",
-  "recordCount": 40
+  "recordCount": 40,
+  "quarantine": {},
+  "integrityVersion": "6.85",
+  "quarantinedEvents": 0
 }

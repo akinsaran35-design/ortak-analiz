@@ -1,0 +1,21 @@
+name: V6.85 extra archive integrity
+on:
+  pull_request:
+    paths:
+      - 'scripts/archive_extra_markets.py'
+      - 'scripts/test_archive_extra_markets.py'
+      - 'scripts/market_movement.py'
+      - '.github/workflows/extra-archive-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/test_archive_extra_markets.py
+      - run: python scripts/test_market_movement.py

@@ -6,7 +6,7 @@ from pathlib import Path
 from main_leagues_ml_preflight import collect,identity
 from extra_ml_prospective import load_or_freeze,empty_ledger,capture,read_json,write_json
 from results_source_pilot import TR
-from main_ml_common_input_reference import reference
+from same_source_venue_reference import reference,summarize as summarize_reference
 VERSION="6.67"
 MODEL=Path("main_ml_frozen.cbm")
 META=Path("main_ml_frozen_manifest.json")
@@ -15,23 +15,28 @@ EXPECTED_TRAIN=2848
 
 def run():
     started=datetime.now(TR)
-    history,training,keys,games,source_count=collect(started)
+    frozen=MODEL.exists() and META.exists()
+    if frozen:
+        history,training,keys,games,diagnostics=collect(started,allow_partial=True)
+    else:
+        history,training,keys,games,source_count=collect(started)
+        diagnostics=dict(sourceSuccessful=source_count,sourceRequested=source_count,historySourceFailures=[],fixtureSourceFailures=[],excludedHistoricalLeagues=[],partial=False)
     model,meta=load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,
-        version=VERSION,expected_train=EXPECTED_TRAIN)
-    if meta["version"]!=VERSION or set(meta["featureKeys"])!=keys:
+        version=VERSION,expected_train=EXPECTED_TRAIN,verify_history=not diagnostics['historySourceFailures'])
+    if meta["version"]!=VERSION or (keys and set(meta["featureKeys"])!=keys):
         raise ValueError("frozen main cohort mismatch")
     ledger=read_json(LEDGER) if LEDGER.exists() else empty_ledger(meta,version=VERSION)
     now=datetime.now(TR)
     if now.date()!=started.date():raise ValueError("date changed; rerun")
-    added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity,research_reference=reference)
+    added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity,reference_fn=reference,shared_reference=True)
+    reference_summary=summarize_reference(ledger)
     write_json(LEDGER,ledger)
-    report=dict(version=VERSION,mode="prospective_research_only",sourceSuccessful=source_count,
-        trainingMatches=meta["trainingMatches"],featureCount=len(keys),modelSha256=meta["modelSha256"],
+    report=dict(version=VERSION,mode="prospective_research_only",sourceSuccessful=diagnostics["sourceSuccessful"],sourceDiagnostics=diagnostics,
+        trainingMatches=meta["trainingMatches"],featureCount=len(meta["featureKeys"]),modelSha256=meta["modelSha256"],
         trainingFingerprint=meta["trainingFingerprint"],frozenAt=meta["frozenAt"],
-        fixturesChecked=len(games),newForecasts=added,recorded=len(ledger["forecasts"]),
+        fixturesChecked=len(games),newForecasts=added,sameSourceReferenceRecorded=reference_summary["recorded"],recorded=len(ledger["forecasts"]),
         settled=len(ledger["settlements"]),excluded=excluded,modelFrozen=True,
-        commonInputReferenceRecorded=sum("commonInputReference" in f for f in ledger["forecasts"].values()),
-        commonInputReferenceVersion="6.84",publishedLegacyReproduction=False,
+        sharedInputReferenceRecords=sum("sharedInputReference" in f for f in ledger["forecasts"].values()),
         productionModelValidated=False,automaticApproval=False,existingOtherArchivesModified=False,
         updatedAt=now.isoformat())
     write_json(Path("main_ml_prospective_report.json"),report)

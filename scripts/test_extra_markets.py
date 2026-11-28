@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from unittest.mock import patch
+from league_config import ODDS_CODES
 
 MODULE = Path(__file__).resolve().with_name(
     "fetch_extra_markets.py"
@@ -89,8 +90,24 @@ class ExtraMarketsTests(unittest.TestCase):
             ]
         }
         rows = self.extract(event, "btts", ("Yes", "No"))
-        self.assertEqual(len(rows), 3)
+        self.assertEqual(len(rows), 2)
+        self.assertEqual({r['bookmaker'] for r in rows},{'b','c'})
 
+    def test_invalid_prices_and_duplicate_outcomes(self):
+        for price in (True,float("inf"),float("nan"),1):
+            b=self.book("a")
+            b["markets"][1]["outcomes"][0]["price"]=price
+            self.assertEqual(self.extract({"bookmakers":[b]},"btts",("Yes","No")),[])
+        b=self.book("a")
+        b["markets"][1]["outcomes"].append(dict(b["markets"][1]["outcomes"][0]))
+        self.assertEqual(self.extract({"bookmakers":[b]},"btts",("Yes","No")),[])
+    def test_exact_response_identity(self):
+        e=dict(id="abc",league="soccer_epl",home="A",away="B",kickoff=(self.now+timedelta(hours=1)).isoformat())
+        d=dict(id="abc",sport_key=e["league"],home_team="A",away_team="B",commence_time=e["kickoff"])
+        check=self.module["response_matches"]
+        self.assertTrue(check(d,e,self.now))
+        for k in ("id","sport_key","home_team","away_team","commence_time"):
+            self.assertFalse(check(dict(d,**{k:"wrong"}),e,self.now))
     def test_missing_outcome(self):
         book = self.book("a")
         book["markets"][1]["outcomes"].pop()
@@ -105,12 +122,16 @@ class ExtraMarketsTests(unittest.TestCase):
         run = self.module["run"]
         scope = run.__globals__
 
+        Path(".github/workflows").mkdir(parents=True)
+        Path(".github/workflows/daily.yml").write_text("    - cron: '0 5,15 * * *'\n    - cron: '10 8,11,13,18 * * 6,0'\n")
         snapshot = {
             "updatedAt": (
                 scope["now"] - timedelta(seconds=1)
             ).isoformat(),
             "source": "The Odds API",
             "region": "uk",
+            "market": "totals",
+            "configuredLeagues": list(ODDS_CODES.values()),
             "errors": [],
             "events": [{
                 "id": "test",
@@ -143,9 +164,23 @@ class ExtraMarketsTests(unittest.TestCase):
             run()
 
         self.assertEqual(calls, ["sports/"])
-        self.assertIn(
-            "quota_guard", scope["report"]["errors"]
-        )
+        self.assertEqual(scope["report"]["quotaStatus"],"quota_guard")
+        self.assertEqual(scope["report"]["paidRequestsAttempted"],0)
+        self.assertEqual(scope["report"]["errors"],[])
+        # A sufficient balance permits collection; recheck balance after every request.
+        scope["report"]["events"]=[]
+        scope["report"]["paidRequestsAttempted"]=0
+        calls.clear()
+        def abundant(path,params):
+            calls.append(path)
+            scope["report"]["remainingCredits"]=5000 if path=="sports/" else 21
+            if path=="sports/":return []
+            e=snapshot["events"][0]
+            return dict(id=e["id"],sport_key=e["league"],home_team=e["home"],away_team=e["away"],commence_time=e["kickoff"],bookmakers=[self.book("a")])
+        with patch.dict(scope,{"key":"fake-test-key","request":abundant}):run()
+        self.assertEqual(scope["report"]["paidRequestsAttempted"],1)
+        self.assertEqual(len(scope["report"]["events"]),1)
+        self.assertEqual(len(calls),2)
 
 
 if __name__ == "__main__":
