@@ -1,10 +1,10 @@
 {
   "version": "4.88",
-  "updatedAt": "2026-11-27T22:54:02.229101+03:00",
+  "updatedAt": "2026-11-28T18:32:35.495659+03:00",
   "mode": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "recorded": 180,
+  "recorded": 222,
   "calibrationVersion": "5.03",
   "overallCalibration": {
     "1.5 Üst": {
@@ -42,11 +42,11 @@
   },
   "leagues": {
     "de.1": {
-      "recorded": 13,
+      "recorded": 20,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 6,
+          "pending": 13,
           "legacyWithoutForecast": 7,
           "invalid": 0,
           "scores": {},
@@ -92,7 +92,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 13,
+          "pending": 20,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -138,7 +138,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 6,
+          "pending": 13,
           "legacyWithoutForecast": 7,
           "invalid": 0,
           "scores": {},
@@ -185,11 +185,11 @@
       }
     },
     "en.1": {
-      "recorded": 27,
+      "recorded": 36,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 9,
+          "pending": 18,
           "legacyWithoutForecast": 18,
           "invalid": 0,
           "scores": {},
@@ -235,7 +235,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 27,
+          "pending": 36,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -281,7 +281,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 9,
+          "pending": 18,
           "legacyWithoutForecast": 18,
           "invalid": 0,
           "scores": {},
@@ -328,11 +328,11 @@
       }
     },
     "en.2": {
-      "recorded": 41,
+      "recorded": 52,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 25,
+          "pending": 36,
           "legacyWithoutForecast": 16,
           "invalid": 0,
           "scores": {},
@@ -378,7 +378,7 @@
         },
         "2.5 Üst": {
           "tested": 4,
-          "pending": 37,
+          "pending": 48,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {
@@ -436,7 +436,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 25,
+          "pending": 36,
           "legacyWithoutForecast": 16,
           "invalid": 0,
           "scores": {},
@@ -626,11 +626,11 @@
       }
     },
     "fr.1": {
-      "recorded": 16,
+      "recorded": 23,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 8,
+          "pending": 15,
           "legacyWithoutForecast": 8,
           "invalid": 0,
           "scores": {},
@@ -676,7 +676,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 16,
+          "pending": 23,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -722,7 +722,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 8,
+          "pending": 15,
           "legacyWithoutForecast": 8,
           "invalid": 0,
           "scores": {},
@@ -912,11 +912,11 @@
       }
     },
     "nl.1": {
-      "recorded": 18,
+      "recorded": 21,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 9,
+          "pending": 12,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},
@@ -962,7 +962,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 18,
+          "pending": 21,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -1008,7 +1008,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 9,
+          "pending": 12,
           "legacyWithoutForecast": 9,
           "invalid": 0,
           "scores": {},
@@ -1198,11 +1198,11 @@
       }
     },
     "tr.1": {
-      "recorded": 7,
+      "recorded": 12,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
-          "pending": 4,
+          "pending": 9,
           "legacyWithoutForecast": 3,
           "invalid": 0,
           "scores": {},
@@ -1248,7 +1248,7 @@
         },
         "2.5 Üst": {
           "tested": 0,
-          "pending": 7,
+          "pending": 12,
           "legacyWithoutForecast": 0,
           "invalid": 0,
           "scores": {},
@@ -1294,7 +1294,7 @@
         },
         "KG Var": {
           "tested": 0,
-          "pending": 4,
+          "pending": 9,
           "legacyWithoutForecast": 3,
           "invalid": 0,
           "scores": {},

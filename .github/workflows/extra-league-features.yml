@@ -1,0 +1,28 @@
+name: V6.52 historical feature research
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_league_training_inventory.py'
+      - 'scripts/extra_league_features.py'
+      - 'scripts/test_extra_league_features.py'
+      - '.github/workflows/extra-league-features.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_extra_league_training_inventory.py
+      - run: python scripts/test_extra_league_features.py
+      - run: python scripts/extra_league_features.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extra-feature-research
+          path: |
+            extra_feature_report.json
+            extra_feature_candidates.json
+          if-no-files-found: error
+          retention-days: 30

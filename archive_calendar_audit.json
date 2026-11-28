@@ -1,11 +1,11 @@
 {
   "version": "4.70",
-  "updatedAt": "2026-11-27T19:54:06.894368+00:00",
+  "updatedAt": "2026-11-28T15:32:41.496213+00:00",
   "mode": "research_only",
   "decision": "PAS",
   "prospective": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T19:54:06.894368+00:00",
+    "updatedAt": "2026-11-28T15:32:41.496213+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -28,17 +28,6 @@
         "corroboratedDate": "2026-11-29",
         "eventId": "d20ede55e54ed7b55fdc36ca373727c0",
         "kickoff": "2026-11-29T16:30:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "en.1",
-        "home": "Nottingham Forest FC",
-        "away": "Chelsea FC",
-        "archivedDate": "2026-11-28",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "40d95e660c301c2d8a5a7a6317017b65",
-        "kickoff": "2026-11-27T20:00:00+00:00",
         "recordedAt": "2026-11-24T22:36:25.349101+03:00",
         "status": "review_pending"
       },
@@ -77,17 +66,6 @@
       },
       {
         "league": "es.1",
-        "home": "Levante UD",
-        "away": "Real Racing Club de Santander",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "80c92a163a81b69fef76530221e2edd0",
-        "kickoff": "2026-11-27T20:00:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "es.1",
         "home": "Real Madrid CF",
         "away": "Deportivo Alavés",
         "archivedDate": "2026-11-29",
@@ -120,17 +98,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Málaga CF",
-        "away": "Athletic Club",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "33d92dabbd2606dfe9d31058f7b20cc8",
-        "kickoff": "2026-11-28T15:15:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "US Lecce",
         "away": "Atalanta BC",
@@ -142,17 +109,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Real Betis Balompié",
-        "away": "Rayo Vallecano de Madrid",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "c81520b9a9794749cfdab57f89bdeb16",
-        "kickoff": "2026-11-28T13:00:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "Torino FC",
         "away": "SS Lazio",
@@ -160,17 +116,6 @@
         "corroboratedDate": "2026-11-28",
         "eventId": "aec86b479e922f437ba228b9a9d74da1",
         "kickoff": "2026-11-28T17:00:00+00:00",
-        "recordedAt": "2026-11-24T22:36:25.349101+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
-        "home": "Frosinone Calcio",
-        "away": "Parma Calcio 1913",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "af3432ca724da03d38f0ff4e62045e4c",
-        "kickoff": "2026-11-28T14:00:00+00:00",
         "recordedAt": "2026-11-24T22:36:25.349101+03:00",
         "status": "review_pending"
       },
@@ -220,13 +165,13 @@
       }
     ],
     "counts": {
-      "review_pending": 19
+      "review_pending": 14
     },
     "decision": "PAS"
   },
   "performance": {
     "version": "4.70",
-    "updatedAt": "2026-11-27T19:54:06.894368+00:00",
+    "updatedAt": "2026-11-28T15:32:41.496213+00:00",
     "mode": "research_only",
     "status": "research_only",
     "rows": [
@@ -254,17 +199,6 @@
       },
       {
         "league": "en.1",
-        "home": "Nottingham Forest FC",
-        "away": "Chelsea FC",
-        "archivedDate": "2026-11-28",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "40d95e660c301c2d8a5a7a6317017b65",
-        "kickoff": "2026-11-27T20:00:00+00:00",
-        "recordedAt": "2026-11-25T01:37:51.359978+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "en.1",
         "home": "Fulham FC",
         "away": "AFC Bournemouth",
         "archivedDate": "2026-11-28",
@@ -293,17 +227,6 @@
         "corroboratedDate": "2026-11-29",
         "eventId": "09bb0ba9a9025d64fed410375c0c8f80",
         "kickoff": "2026-11-29T14:05:00+00:00",
-        "recordedAt": "2026-11-26T08:45:30.559361+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "es.1",
-        "home": "Levante UD",
-        "away": "Real Racing Club de Santander",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-27",
-        "eventId": "80c92a163a81b69fef76530221e2edd0",
-        "kickoff": "2026-11-27T20:00:00+00:00",
         "recordedAt": "2026-11-26T08:45:30.559361+03:00",
         "status": "review_pending"
       },
@@ -341,17 +264,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Málaga CF",
-        "away": "Athletic Club",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "33d92dabbd2606dfe9d31058f7b20cc8",
-        "kickoff": "2026-11-28T15:15:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "US Lecce",
         "away": "Atalanta BC",
@@ -363,17 +275,6 @@
         "status": "review_pending"
       },
       {
-        "league": "es.1",
-        "home": "Real Betis Balompié",
-        "away": "Rayo Vallecano de Madrid",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "c81520b9a9794749cfdab57f89bdeb16",
-        "kickoff": "2026-11-28T13:00:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
         "league": "it.1",
         "home": "Torino FC",
         "away": "SS Lazio",
@@ -381,17 +282,6 @@
         "corroboratedDate": "2026-11-28",
         "eventId": "aec86b479e922f437ba228b9a9d74da1",
         "kickoff": "2026-11-28T17:00:00+00:00",
-        "recordedAt": "2026-11-26T16:53:31.851056+03:00",
-        "status": "review_pending"
-      },
-      {
-        "league": "it.1",
-        "home": "Frosinone Calcio",
-        "away": "Parma Calcio 1913",
-        "archivedDate": "2026-11-29",
-        "corroboratedDate": "2026-11-28",
-        "eventId": "af3432ca724da03d38f0ff4e62045e4c",
-        "kickoff": "2026-11-28T14:00:00+00:00",
         "recordedAt": "2026-11-26T16:53:31.851056+03:00",
         "status": "review_pending"
       },
@@ -441,7 +331,7 @@
       }
     ],
     "counts": {
-      "review_pending": 19
+      "review_pending": 14
     },
     "decision": "PAS"
   }

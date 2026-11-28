@@ -14,6 +14,21 @@ from league_config import FIXTURE_CODES as leagues
 markets = ["1.5 Üst","2.5 Üst","KG Var"]
 def key(d,l,m):
     return json.dumps([d,l,m],ensure_ascii=False)
+def forecast_timing(report,candidate,recorded):
+    """New captures only; date cutoff is not proof of identical source data."""
+    try:
+        if report.get("forecastTimingVersion")!="6.82":return None
+        start=datetime.fromisoformat(report["updatedAt"])
+        end=datetime.fromisoformat(report["generationCompletedAt"])
+        cutoff=date.fromisoformat(report["historyCutoffExclusive"])
+        latest=date.fromisoformat(candidate["historyThrough"])
+        fixture=date.fromisoformat(candidate["date"])
+        if start.tzinfo is None or end.tzinfo is None:return None
+        if not start<=end<=recorded:return None
+        if not latest<cutoff<fixture or cutoff!=start.astimezone(recorded.tzinfo).date() or cutoff!=end.astimezone(recorded.tzinfo).date():return None
+        return dict(version="6.82",generationStartedAt=report["updatedAt"],generationCompletedAt=report["generationCompletedAt"],
+            historyCutoffExclusive=cutoff.isoformat(),historyThrough=latest.isoformat(),sameSourceDataEstablished=False)
+    except (KeyError,TypeError,ValueError,AttributeError):return None
 from calendar_duplicate_guard import load_guard
 blocked=load_guard(root,records,"performance",now)
 calendar_duplicate_prevented=0
@@ -29,6 +44,8 @@ for c in daily.get("candidates",[]):
         records[k] = {"date":c["date"],"league":c["league"],"match":c["match"],
                       "recordedAt":now.isoformat(),"modelVersion":daily.get("version"),
                       "markets":c["markets"],"result":None}
+        timing=forecast_timing(daily,c,now)
+        if timing is not None:records[k]["forecastTiming"]=timing
 def team(x):
     return str(x.get("name") or x.get("code") or "").strip() if isinstance(x,dict) else str(x or "").strip()
 errors = []

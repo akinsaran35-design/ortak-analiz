@@ -1,324 +1,14 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-27T19:54:05.969784+00:00",
-  "sourceUpdatedAt": "2026-11-27T22:53:31+03:00",
+  "updatedAt": "2026-11-28T15:32:39.674556+00:00",
+  "sourceUpdatedAt": "2026-11-28T18:32:05+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
   "realBettingEnabled": false,
   "rejected": 0,
   "rows": [
-    {
-      "date": "2026-11-27",
-      "league": "Hollanda Eredivisie",
-      "match": "FC Groningen – Willem II Tilburg",
-      "expectedGoals": {
-        "home": 2.48,
-        "away": 1.18
-      },
-      "poisson": {
-        "over15": 0.8800864906951626,
-        "over25": 0.707735266956549,
-        "btts": 0.6347105485330328
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8838516719572836,
-        "over25": 0.707735266956549,
-        "btts": 0.6384757297951538
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09337649530060048
-          },
-          {
-            "home": 2,
-            "away": 0,
-            "probability": 0.07913262313610211
-          },
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.07906880650454075
-          }
-        ],
-        "topScoresCombined": 0.2515779249412433,
-        "homeWin": 0.6541231524368611,
-        "draw": 0.18526517332685394,
-        "awayWin": 0.16061167423628495,
-        "expectedHome": 2.479999999999999,
-        "expectedAway": 1.18
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.8823,
-            "sampling_se": 0.0022786696776847673
-          },
-          "over25": {
-            "probability": 0.70485,
-            "sampling_se": 0.0032251858667369853
-          },
-          "btts": {
-            "probability": 0.6356,
-            "sampling_se": 0.0034030327650494347
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-27",
-      "league": "Almanya Bundesliga",
-      "match": "SV Werder Bremen – Borussia Mönchengladbach",
-      "expectedGoals": {
-        "home": 2.2,
-        "away": 1.25
-      },
-      "poisson": {
-        "over15": 0.8587319181175977,
-        "over25": 0.6698056996226208,
-        "btts": 0.634437681155544
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8630969431195821,
-        "over25": 0.6698056996226208,
-        "btts": 0.6388027061575283
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09603055004365552
-          },
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.09166552504167119
-          },
-          {
-            "home": 2,
-            "away": 0,
-            "probability": 0.07682444003492442
-          }
-        ],
-        "topScoresCombined": 0.2645205151202511,
-        "homeWin": 0.5851453280087365,
-        "draw": 0.2096612555344995,
-        "awayWin": 0.2051934164567641,
-        "expectedHome": 2.2,
-        "expectedAway": 1.25
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.8627,
-            "sampling_se": 0.0024336054528209783
-          },
-          "over25": {
-            "probability": 0.6738,
-            "sampling_se": 0.003315068325087735
-          },
-          "btts": {
-            "probability": 0.6386,
-            "sampling_se": 0.0033969842507730295
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-27",
-      "league": "İngiltere Championship",
-      "match": "Southampton FC – Middlesbrough FC",
-      "expectedGoals": {
-        "home": 1.9,
-        "away": 1.2
-      },
-      "poisson": {
-        "over15": 0.815298270186413,
-        "over25": 0.5988368526853677,
-        "btts": 0.5942863712587206
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8204338792592786,
-        "over25": 0.5988368526853677,
-        "btts": 0.5994219803315862
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.1078477905301774
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09757657238444621
-          },
-          {
-            "home": 2,
-            "away": 0,
-            "probability": 0.08131381032037185
-          }
-        ],
-        "topScoresCombined": 0.28673817323499545,
-        "homeWin": 0.532025387176963,
-        "draw": 0.233729241440592,
-        "awayWin": 0.23424537138244494,
-        "expectedHome": 1.9,
-        "expectedAway": 1.2
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.82265,
-            "sampling_se": 0.002700897790550394
-          },
-          "over25": {
-            "probability": 0.60165,
-            "sampling_se": 0.003461699564520295
-          },
-          "btts": {
-            "probability": 0.60025,
-            "sampling_se": 0.0034637403013216797
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-27",
-      "league": "Fransa Ligue 1",
-      "match": "Stade Brestois 29 – Paris FC",
-      "expectedGoals": {
-        "home": 1.55,
-        "away": 1.55
-      },
-      "poisson": {
-        "over15": 0.815298270186413,
-        "over25": 0.5988368526853678,
-        "btts": 0.6205532547400717
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8207098056239391,
-        "over25": 0.5988368526853678,
-        "btts": 0.6259647901775979
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.11364224418804875
-          },
-          {
-            "home": 1,
-            "away": 2,
-            "probability": 0.08387879928165504
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.08387879928165504
-          }
-        ],
-        "topScoresCombined": 0.2813998427513588,
-        "homeWin": 0.37533215521779095,
-        "draw": 0.249335689564418,
-        "awayWin": 0.37533215521779095,
-        "expectedHome": 1.55,
-        "expectedAway": 1.55
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.82515,
-            "sampling_se": 0.002685865572771653
-          },
-          "over25": {
-            "probability": 0.59975,
-            "sampling_se": 0.003464461989256052
-          },
-          "btts": {
-            "probability": 0.6251,
-            "sampling_se": 0.0034230833323189783
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-27",
-      "league": "Portekiz Primeira Liga",
-      "match": "CS Marítimo – CD Nacional",
-      "expectedGoals": {
-        "home": 1.37,
-        "away": 1.16
-      },
-      "poisson": {
-        "over15": 0.71880365839078,
-        "over25": 0.46385894691677765,
-        "btts": 0.5120658798504925
-      },
-      "experimentalDixonColes": {
-        "over15": 0.7251333641426975,
-        "over25": 0.46385894691677765,
-        "btts": 0.5183955856024098
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.1329238207902666
-          },
-          {
-            "home": 1,
-            "away": 0,
-            "probability": 0.10280315203976284
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.08671696880126917
-          }
-        ],
-        "topScoresCombined": 0.32244394163129864,
-        "homeWin": 0.4101778950499252,
-        "draw": 0.27903026693841676,
-        "awayWin": 0.31079183801165805,
-        "expectedHome": 1.37,
-        "expectedAway": 1.16
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.7241,
-            "sampling_se": 0.0031605315217538964
-          },
-          "over25": {
-            "probability": 0.4649,
-            "sampling_se": 0.003526811520339583
-          },
-          "btts": {
-            "probability": 0.5198,
-            "sampling_se": 0.003532760676864483
-          }
-        }
-      }
-    },
     {
       "date": "2026-11-28",
       "league": "Hollanda Eredivisie",
@@ -1307,68 +997,6 @@
           "btts": {
             "probability": 0.57425,
             "sampling_se": 0.003496333347236788
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "expectedGoals": {
-        "home": 1.8,
-        "away": 1.15
-      },
-      "poisson": {
-        "over15": 0.7932581615036921,
-        "over25": 0.5655150159955756,
-        "btts": 0.5704040483477927
-      },
-      "experimentalDixonColes": {
-        "over15": 0.7986753210693548,
-        "over25": 0.5655150159955756,
-        "btts": 0.5758212079134554
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.11376035087891781
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09750887218192957
-          },
-          {
-            "home": 1,
-            "away": 0,
-            "probability": 0.08879431114151555
-          }
-        ],
-        "topScoresCombined": 0.3000635342023629,
-        "homeWin": 0.5205027298371024,
-        "draw": 0.24229515790858042,
-        "awayWin": 0.23720211225431714,
-        "expectedHome": 1.8,
-        "expectedAway": 1.15
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.80245,
-            "sampling_se": 0.0028153507552345944
-          },
-          "over25": {
-            "probability": 0.57055,
-            "sampling_se": 0.0035001621212452433
-          },
-          "btts": {
-            "probability": 0.57735,
-            "sampling_se": 0.00349297135330366
           }
         }
       }
@@ -5461,6 +5089,2424 @@
           "btts": {
             "probability": 0.6532,
             "sampling_se": 0.0033654848090579757
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Almanya Bundesliga",
+      "match": "SC Freiburg – TSG 1899 Hoffenheim",
+      "expectedGoals": {
+        "home": 2.55,
+        "away": 1.4
+      },
+      "poisson": {
+        "over15": 0.9046892262118348,
+        "over25": 0.7544784839865974,
+        "btts": 0.6945760718326273
+      },
+      "experimentalDixonColes": {
+        "over15": 0.9081261904787413,
+        "over25": 0.7544784839865974,
+        "btts": 0.6980130360995338
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08764258880611746
+          },
+          {
+            "home": 3,
+            "away": 1,
+            "probability": 0.07449620048519982
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.07217624960503789
+          }
+        ],
+        "topScoresCombined": 0.2343150388963552,
+        "homeWin": 0.6204324713308662,
+        "draw": 0.18684119742108926,
+        "awayWin": 0.19272633124804459,
+        "expectedHome": 2.549999999999998,
+        "expectedAway": 1.4
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.90715,
+            "sampling_se": 0.002052180273514001
+          },
+          "over25": {
+            "probability": 0.74955,
+            "sampling_se": 0.0030636970925664304
+          },
+          "btts": {
+            "probability": 0.69605,
+            "sampling_se": 0.0032524175431515555
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Hollanda Eredivisie",
+      "match": "Fortuna Sittard – PEC Zwolle",
+      "expectedGoals": {
+        "home": 2.15,
+        "away": 1.7
+      },
+      "poisson": {
+        "over15": 0.8967932782738707,
+        "over25": 0.7390838315949478,
+        "btts": 0.7221120546121454
+      },
+      "experimentalDixonColes": {
+        "over15": 0.900682150107984,
+        "over25": 0.7390838315949478,
+        "btts": 0.7260009264462589
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.0836107444334387
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.08166630851638199
+          },
+          {
+            "home": 2,
+            "away": 2,
+            "probability": 0.07106913276842289
+          }
+        ],
+        "topScoresCombined": 0.23634618571824356,
+        "homeWin": 0.4805420553059304,
+        "draw": 0.2144286891962433,
+        "awayWin": 0.3050292554978262,
+        "expectedHome": 2.1499999999999995,
+        "expectedAway": 1.6999999999999997
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.9004,
+            "sampling_se": 0.0021175438602305265
+          },
+          "over25": {
+            "probability": 0.7418,
+            "sampling_se": 0.003094614354002773
+          },
+          "btts": {
+            "probability": 0.72205,
+            "sampling_se": 0.0031677578624320388
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Hollanda Eredivisie",
+      "match": "AZ – PSV",
+      "expectedGoals": {
+        "home": 2.05,
+        "away": 1.75
+      },
+      "poisson": {
+        "over15": 0.8926202950904052,
+        "over25": 0.7311033222888896,
+        "btts": 0.7198619248179163
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8966330522921049,
+        "over25": 0.7311033222888896,
+        "btts": 0.723874682019616
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.08426790123569379
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08226152263484394
+          },
+          {
+            "home": 2,
+            "away": 2,
+            "probability": 0.07197883230548845
+          }
+        ],
+        "topScoresCombined": 0.23850825617602617,
+        "homeWin": 0.44968574155536795,
+        "draw": 0.21877729935412638,
+        "awayWin": 0.3315369590905058,
+        "expectedHome": 2.05,
+        "expectedAway": 1.7500000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8973,
+            "sampling_se": 0.0021465403560147664
+          },
+          "over25": {
+            "probability": 0.7351,
+            "sampling_se": 0.0031203204162393323
+          },
+          "btts": {
+            "probability": 0.72305,
+            "sampling_se": 0.0031642431757056854
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Newcastle United FC – Sunderland AFC",
+      "expectedGoals": {
+        "home": 1.95,
+        "away": 1.7
+      },
+      "poisson": {
+        "over15": 0.8791412511787877,
+        "over25": 0.7060078446013036,
+        "btts": 0.7010335331395071
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8834492807738664,
+        "over25": 0.7060078446013036,
+        "btts": 0.7053415627345858
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.09046862149665268
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08400657710403463
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.07323650311633786
+          }
+        ],
+        "topScoresCombined": 0.24771170171702517,
+        "homeWin": 0.437833264981167,
+        "draw": 0.2247175320847153,
+        "awayWin": 0.3374492029341178,
+        "expectedHome": 1.95,
+        "expectedAway": 1.7
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8831,
+            "sampling_se": 0.002271941790627568
+          },
+          "over25": {
+            "probability": 0.7114,
+            "sampling_se": 0.0032039822096884374
+          },
+          "btts": {
+            "probability": 0.70445,
+            "sampling_se": 0.0032264546912981746
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Hollanda Eredivisie",
+      "match": "Willem II Tilburg – Feyenoord Rotterdam",
+      "expectedGoals": {
+        "home": 0.93,
+        "away": 2.68
+      },
+      "poisson": {
+        "over15": 0.8752909859461246,
+        "over25": 0.699019799172642,
+        "btts": 0.5639349823404713
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8786621871026092,
+        "over25": 0.699019799172642,
+        "btts": 0.5673061834969559
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 0,
+            "away": 2,
+            "probability": 0.0971485924664376
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09034819099378699
+          },
+          {
+            "home": 0,
+            "away": 3,
+            "probability": 0.08678607593668428
+          }
+        ],
+        "topScoresCombined": 0.2742828593969089,
+        "homeWin": 0.10241089850368025,
+        "draw": 0.1568708997327514,
+        "awayWin": 0.7407182017635684,
+        "expectedHome": 0.93,
+        "expectedAway": 2.6799999999999944
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.88045,
+            "sampling_se": 0.0022940989244145515
+          },
+          "over25": {
+            "probability": 0.6968,
+            "sampling_se": 0.0032501519964457048
+          },
+          "btts": {
+            "probability": 0.568,
+            "sampling_se": 0.003502684684638342
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Almanya Bundesliga",
+      "match": "Bayer 04 Leverkusen – Borussia Mönchengladbach",
+      "expectedGoals": {
+        "home": 2.75,
+        "away": 0.85
+      },
+      "poisson": {
+        "over15": 0.8743108767424542,
+        "over25": 0.6972531552839983,
+        "btts": 0.5359809292918584
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8775043368034815,
+        "over25": 0.6972531552839983,
+        "btts": 0.5391743893528856
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.10331782550382504
+          },
+          {
+            "home": 3,
+            "away": 0,
+            "probability": 0.09470800671183964
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08782015167825129
+          }
+        ],
+        "topScoresCombined": 0.28584598389391597,
+        "homeWin": 0.7676081969164674,
+        "draw": 0.14615480276896406,
+        "awayWin": 0.0862370003145686,
+        "expectedHome": 2.7499999999999902,
+        "expectedAway": 0.85
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8769,
+            "sampling_se": 0.002323213184363415
+          },
+          "over25": {
+            "probability": 0.69495,
+            "sampling_se": 0.0032557218669597683
+          },
+          "btts": {
+            "probability": 0.53835,
+            "sampling_se": 0.0035251189873534766
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "Paris FC – Le Mans FC",
+      "expectedGoals": {
+        "home": 1.95,
+        "away": 1.55
+      },
+      "poisson": {
+        "over15": 0.8641117745995668,
+        "over25": 0.6791528011378659,
+        "btts": 0.6756753380090619
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8686753541692647,
+        "over25": 0.6791528011378659,
+        "btts": 0.6802389175787598
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.09583517096365556
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08898980160910873
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.0707354833303172
+          }
+        ],
+        "topScoresCombined": 0.2555604559030815,
+        "homeWin": 0.4677422280459294,
+        "draw": 0.22767628763098313,
+        "awayWin": 0.3045814843230875,
+        "expectedHome": 1.95,
+        "expectedAway": 1.55
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.86965,
+            "sampling_se": 0.0023807443951419896
+          },
+          "over25": {
+            "probability": 0.6838,
+            "sampling_se": 0.0032879899634883315
+          },
+          "btts": {
+            "probability": 0.6787,
+            "sampling_se": 0.00330201688366368
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Almanya Bundesliga",
+      "match": "FC Augsburg – 1. FC Köln",
+      "expectedGoals": {
+        "home": 2.2,
+        "away": 1.25
+      },
+      "poisson": {
+        "over15": 0.8587319181175977,
+        "over25": 0.6698056996226208,
+        "btts": 0.634437681155544
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8630969431195821,
+        "over25": 0.6698056996226208,
+        "btts": 0.6388027061575283
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09603055004365552
+          },
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.09166552504167119
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.07682444003492442
+          }
+        ],
+        "topScoresCombined": 0.2645205151202511,
+        "homeWin": 0.5851453280087365,
+        "draw": 0.2096612555344995,
+        "awayWin": 0.2051934164567641,
+        "expectedHome": 2.2,
+        "expectedAway": 1.25
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8627,
+            "sampling_se": 0.0024336054528209783
+          },
+          "over25": {
+            "probability": 0.6738,
+            "sampling_se": 0.003315068325087735
+          },
+          "btts": {
+            "probability": 0.6386,
+            "sampling_se": 0.0033969842507730295
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Almanya Bundesliga",
+      "match": "RB Leipzig – 1. FSV Mainz 05",
+      "expectedGoals": {
+        "home": 1.9,
+        "away": 1.5
+      },
+      "poisson": {
+        "over15": 0.8531576121745652,
+        "over25": 0.6602601118038804,
+        "btts": 0.6606744905892612
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8579133031439117,
+        "over25": 0.6602601118038804,
+        "btts": 0.6654301815586077
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.09986951035627581
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09035812841758285
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.071335364540197
+          }
+        ],
+        "topScoresCombined": 0.2615630033140557,
+        "homeWin": 0.4668956718367015,
+        "draw": 0.2315220666000684,
+        "awayWin": 0.3015822615632301,
+        "expectedHome": 1.9,
+        "expectedAway": 1.5
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8599,
+            "sampling_se": 0.002454302243001053
+          },
+          "over25": {
+            "probability": 0.6637,
+            "sampling_se": 0.0033406759046636057
+          },
+          "btts": {
+            "probability": 0.66465,
+            "sampling_se": 0.0033383407368032404
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Wolverhampton Wanderers FC – Southampton FC",
+      "expectedGoals": {
+        "home": 1.67,
+        "away": 1.71
+      },
+      "poisson": {
+        "over15": 0.8508721482624549,
+        "over25": 0.6563862773274766,
+        "btts": 0.6649345964787305
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8557336140867348,
+        "over25": 0.6563862773274766,
+        "btts": 0.6697960623030103
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10209078230987512
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.08313106559518402
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08118647926547212
+          }
+        ],
+        "topScoresCombined": 0.26640832717053126,
+        "homeWin": 0.37323627467015075,
+        "draw": 0.23685726197283263,
+        "awayWin": 0.3899064633570167,
+        "expectedHome": 1.6700000000000002,
+        "expectedAway": 1.7100000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8625,
+            "sampling_se": 0.002435094967347269
+          },
+          "over25": {
+            "probability": 0.66095,
+            "sampling_se": 0.003347350426083292
+          },
+          "btts": {
+            "probability": 0.67085,
+            "sampling_se": 0.0033227268733677165
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Bolton Wanderers FC – Blackburn Rovers FC",
+      "expectedGoals": {
+        "home": 1.59,
+        "away": 1.72
+      },
+      "poisson": {
+        "over15": 0.8426152911213789,
+        "over25": 0.6425778654897013,
+        "btts": 0.6535244141080337
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8476085127204653,
+        "over25": 0.6425778654897013,
+        "btts": 0.6585176357071202
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10485765358081572
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.08588341150428715
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.07939222342547476
+          }
+        ],
+        "topScoresCombined": 0.2701332885105776,
+        "homeWin": 0.3529890243214887,
+        "draw": 0.2393568899648194,
+        "awayWin": 0.40765408571369194,
+        "expectedHome": 1.59,
+        "expectedAway": 1.72
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.85365,
+            "sampling_se": 0.002499316681615197
+          },
+          "over25": {
+            "probability": 0.64325,
+            "sampling_se": 0.0033873251799908435
+          },
+          "btts": {
+            "probability": 0.65645,
+            "sampling_se": 0.003358000874776539
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Almanya Bundesliga",
+      "match": "1. FC Union Berlin – Hamburger SV",
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.5
+      },
+      "poisson": {
+        "over15": 0.8414023801746681,
+        "over25": 0.6405735336749162,
+        "btts": 0.6484541190312237
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8463816077738354,
+        "over25": 0.6405735336749162,
+        "btts": 0.6534333466303911
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10456377958251542
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08962609678501322
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.07468841398751101
+          }
+        ],
+        "topScoresCombined": 0.26887829035503963,
+        "homeWin": 0.4441872340116136,
+        "draw": 0.2376112821659695,
+        "awayWin": 0.318201483822417,
+        "expectedHome": 1.8000000000000003,
+        "expectedAway": 1.5000000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8498,
+            "sampling_se": 0.0025262616649903867
+          },
+          "over25": {
+            "probability": 0.64445,
+            "sampling_se": 0.0033847761927489387
+          },
+          "btts": {
+            "probability": 0.6532,
+            "sampling_se": 0.0033654848090579757
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "Olympique de Marseille – OGC Nice",
+      "expectedGoals": {
+        "home": 2.0,
+        "away": 1.2
+      },
+      "poisson": {
+        "over15": 0.8287987432908619,
+        "over25": 0.6200962589216269,
+        "btts": 0.6042327088295514
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8336902077682659,
+        "over25": 0.6200962589216269,
+        "btts": 0.6091241733069553
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10272075402548286
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09782928954807892
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.08152440795673244
+          }
+        ],
+        "topScoresCombined": 0.2820744515302942,
+        "homeWin": 0.5542187885725669,
+        "draw": 0.2253137751822744,
+        "awayWin": 0.22046743624515866,
+        "expectedHome": 2.0,
+        "expectedAway": 1.2
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8342,
+            "sampling_se": 0.002629737249232326
+          },
+          "over25": {
+            "probability": 0.6233,
+            "sampling_se": 0.003426347253271332
+          },
+          "btts": {
+            "probability": 0.6081,
+            "sampling_se": 0.0034519153378957603
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Hollanda Eredivisie",
+      "match": "Sparta Rotterdam – NEC",
+      "expectedGoals": {
+        "home": 1.3,
+        "away": 1.9
+      },
+      "poisson": {
+        "over15": 0.8287987432908619,
+        "over25": 0.6200962589216269,
+        "btts": 0.6186617917217185
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8338328754821901,
+        "over25": 0.6200962589216269,
+        "btts": 0.6236959239130467
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10571677601789278
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09564851163523633
+          },
+          {
+            "home": 0,
+            "away": 2,
+            "probability": 0.07357577818095103
+          }
+        ],
+        "topScoresCombined": 0.2749410658340801,
+        "homeWin": 0.25670487923385893,
+        "draw": 0.23366035524868095,
+        "awayWin": 0.5096347655174601,
+        "expectedHome": 1.3,
+        "expectedAway": 1.9
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.833,
+            "sampling_se": 0.002637337672729831
+          },
+          "over25": {
+            "probability": 0.61565,
+            "sampling_se": 0.00343965897655567
+          },
+          "btts": {
+            "probability": 0.6212,
+            "sampling_se": 0.0034300915439678865
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Chelsea FC – Liverpool FC",
+      "expectedGoals": {
+        "home": 1.45,
+        "away": 1.7
+      },
+      "poisson": {
+        "over15": 0.8221636735017833,
+        "over25": 0.6095635590826802,
+        "btts": 0.625598314720508
+      },
+      "experimentalDixonColes": {
+        "over15": 0.827445198138146,
+        "over25": 0.6095635590826802,
+        "btts": 0.6308798393568706
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.11091201736361676
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.08978591881816594
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.0765821072272592
+          }
+        ],
+        "topScoresCombined": 0.2772800434090419,
+        "homeWin": 0.3238368670660689,
+        "draw": 0.24500628305321204,
+        "awayWin": 0.4311568498807192,
+        "expectedHome": 1.4500000000000002,
+        "expectedAway": 1.7000000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8307,
+            "sampling_se": 0.0026517683722376657
+          },
+          "over25": {
+            "probability": 0.6087,
+            "sampling_se": 0.0034509731236275947
+          },
+          "btts": {
+            "probability": 0.632,
+            "sampling_se": 0.003410102637751538
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "RC Strasbourg Alsace – FC Lorient",
+      "expectedGoals": {
+        "home": 1.6,
+        "away": 1.55
+      },
+      "poisson": {
+        "over15": 0.8221636735017833,
+        "over25": 0.6095635590826802,
+        "btts": 0.6287076350456418
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8274773372332963,
+        "over25": 0.6095635590826802,
+        "btts": 0.6340212987771547
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.11158693836177262
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08501861970420772
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.08236178783845122
+          }
+        ],
+        "topScoresCombined": 0.27896734590443156,
+        "homeWin": 0.3873003450339006,
+        "draw": 0.24691198223288305,
+        "awayWin": 0.3657876727332164,
+        "expectedHome": 1.6,
+        "expectedAway": 1.55
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8322,
+            "sampling_se": 0.002642377338685752
+          },
+          "over25": {
+            "probability": 0.60965,
+            "sampling_se": 0.0034494700861146775
+          },
+          "btts": {
+            "probability": 0.63155,
+            "sampling_se": 0.0034109719839072266
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Stoke City FC – Queens Park Rangers FC",
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.35
+      },
+      "poisson": {
+        "over15": 0.8221636735017833,
+        "over25": 0.6095635590826802,
+        "btts": 0.6183129779995622
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8273702069161287,
+        "over25": 0.6095635590826802,
+        "btts": 0.6235195114139076
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10933720170125302
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09371760145821688
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.07192729494632694
+          }
+        ],
+        "topScoresCombined": 0.2749820981057968,
+        "homeWin": 0.47577980071651665,
+        "draw": 0.24059934202676533,
+        "awayWin": 0.28362085725671804,
+        "expectedHome": 1.8,
+        "expectedAway": 1.35
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8305,
+            "sampling_se": 0.0026530147945309315
+          },
+          "over25": {
+            "probability": 0.61405,
+            "sampling_se": 0.003442329135193205
+          },
+          "btts": {
+            "probability": 0.6246,
+            "sampling_se": 0.003423995035043129
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Aston Villa FC – Crystal Palace FC",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.4
+      },
+      "poisson": {
+        "over15": 0.815298270186413,
+        "over25": 0.5988368526853677,
+        "btts": 0.6157687143992167
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8206591252712464,
+        "over25": 0.5988368526853677,
+        "btts": 0.6211295694840501
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.11257795678150098
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09113453644216744
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.07505197118766731
+          }
+        ],
+        "topScoresCombined": 0.27876446441133573,
+        "homeWin": 0.4415793637254116,
+        "draw": 0.24641710634098457,
+        "awayWin": 0.31200352993360386,
+        "expectedHome": 1.7,
+        "expectedAway": 1.4
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8253,
+            "sampling_se": 0.0026849572622296984
+          },
+          "over25": {
+            "probability": 0.60365,
+            "sampling_se": 0.0034587329869476767
+          },
+          "btts": {
+            "probability": 0.62265,
+            "sampling_se": 0.003427513512008377
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Leeds United FC – Ipswich Town FC",
+      "expectedGoals": {
+        "home": 1.9,
+        "away": 1.2
+      },
+      "poisson": {
+        "over15": 0.815298270186413,
+        "over25": 0.5988368526853677,
+        "btts": 0.5942863712587206
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8204338792592786,
+        "over25": 0.5988368526853677,
+        "btts": 0.5994219803315862
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1078477905301774
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09757657238444621
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.08131381032037185
+          }
+        ],
+        "topScoresCombined": 0.28673817323499545,
+        "homeWin": 0.532025387176963,
+        "draw": 0.233729241440592,
+        "awayWin": 0.23424537138244494,
+        "expectedHome": 1.9,
+        "expectedAway": 1.2
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.82265,
+            "sampling_se": 0.002700897790550394
+          },
+          "over25": {
+            "probability": 0.60165,
+            "sampling_se": 0.003461699564520295
+          },
+          "btts": {
+            "probability": 0.60025,
+            "sampling_se": 0.0034637403013216797
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Norwich City FC – Wrexham AFC",
+      "expectedGoals": {
+        "home": 1.8,
+        "away": 1.3
+      },
+      "poisson": {
+        "over15": 0.8152982701864131,
+        "over25": 0.5988368526853678,
+        "btts": 0.6072185211379587
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8205690268664593,
+        "over25": 0.5988368526853677,
+        "btts": 0.6124892778180049
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.11068589028097153
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09487362024083273
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.07581780762835778
+          }
+        ],
+        "topScoresCombined": 0.28137731815016204,
+        "homeWin": 0.4866805610683367,
+        "draw": 0.24128672240958685,
+        "awayWin": 0.2720327165220764,
+        "expectedHome": 1.7999999999999998,
+        "expectedAway": 1.3
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.82405,
+            "sampling_se": 0.0026925043871830557
+          },
+          "over25": {
+            "probability": 0.60395,
+            "sampling_se": 0.003458282792803388
+          },
+          "btts": {
+            "probability": 0.6141,
+            "sampling_se": 0.003442246286946941
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Manchester United FC – Coventry City FC",
+      "expectedGoals": {
+        "home": 2.2,
+        "away": 0.8
+      },
+      "poisson": {
+        "over15": 0.8008517265285443,
+        "over25": 0.5768099188731566,
+        "btts": 0.48965494588830855
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8052329885449163,
+        "over25": 0.5768099188731566,
+        "btts": 0.49403620790468056
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.12048470545023074
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10515028839292863
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09638776436018459
+          }
+        ],
+        "topScoresCombined": 0.322022758203344,
+        "homeWin": 0.6889314009527151,
+        "draw": 0.1931603138196733,
+        "awayWin": 0.11790828522761171,
+        "expectedHome": 2.2,
+        "expectedAway": 0.8000000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.806,
+            "sampling_se": 0.0027961044329566803
+          },
+          "over25": {
+            "probability": 0.58055,
+            "sampling_se": 0.0034893530739952354
+          },
+          "btts": {
+            "probability": 0.4918,
+            "sampling_se": 0.0035350584153589315
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Middlesbrough FC – Derby County FC",
+      "expectedGoals": {
+        "home": 1.75,
+        "away": 1.25
+      },
+      "poisson": {
+        "over15": 0.8008517265285443,
+        "over25": 0.5768099188731565,
+        "btts": 0.5895083280572287
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8062971871312794,
+        "over25": 0.5768099188731565,
+        "btts": 0.5949537886599638
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1143546726574375
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09529556054786459
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.08168190904102678
+          }
+        ],
+        "topScoresCombined": 0.29133214224632886,
+        "homeWin": 0.48599879419960923,
+        "draw": 0.2457866217131254,
+        "awayWin": 0.2682145840872654,
+        "expectedHome": 1.75,
+        "expectedAway": 1.25
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.8093,
+            "sampling_se": 0.0027778904766027042
+          },
+          "over25": {
+            "probability": 0.5794,
+            "sampling_se": 0.0034906707091904273
+          },
+          "btts": {
+            "probability": 0.5969,
+            "sampling_se": 0.003468503928208818
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "Racing Club de Lens – Le Havre AC",
+      "expectedGoals": {
+        "home": 1.9,
+        "away": 1.1
+      },
+      "poisson": {
+        "over15": 0.8008517265285443,
+        "over25": 0.5768099188731565,
+        "btts": 0.5673473654471494
+      },
+      "experimentalDixonColes": {
+        "over15": 0.806054475172986,
+        "over25": 0.5768099188731565,
+        "btts": 0.5725501140915912
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.10925772153327742
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09885222424439387
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.08986565840399442
+          }
+        ],
+        "topScoresCombined": 0.2979756041816657,
+        "homeWin": 0.5550949318263588,
+        "draw": 0.23303734225031272,
+        "awayWin": 0.21186772592332853,
+        "expectedHome": 1.9,
+        "expectedAway": 1.1
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80905,
+            "sampling_se": 0.0027792813594524754
+          },
+          "over25": {
+            "probability": 0.58085,
+            "sampling_se": 0.0034890061443052806
+          },
+          "btts": {
+            "probability": 0.57545,
+            "sampling_se": 0.003495048622694683
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Watford FC – Millwall FC",
+      "expectedGoals": {
+        "home": 1.35,
+        "away": 1.65
+      },
+      "poisson": {
+        "over15": 0.8008517265285442,
+        "over25": 0.5768099188731565,
+        "btts": 0.5984968991012183
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8063967612680151,
+        "over25": 0.5768099188731565,
+        "btts": 0.6040419338406892
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.11644572952888779
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09149307320126897
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.07660362806750465
+          }
+        ],
+        "topScoresCombined": 0.2845424307976614,
+        "homeWin": 0.3086815732441164,
+        "draw": 0.25115057163371296,
+        "awayWin": 0.44016785512217066,
+        "expectedHome": 1.35,
+        "expectedAway": 1.65
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80495,
+            "sampling_se": 0.0028018341983422216
+          },
+          "over25": {
+            "probability": 0.57475,
+            "sampling_se": 0.0034958006057268197
+          },
+          "btts": {
+            "probability": 0.60315,
+            "sampling_se": 0.0034594802897256116
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "amed – alanyaspor",
+      "expectedGoals": {
+        "home": 2.21,
+        "away": 0.78
+      },
+      "poisson": {
+        "over15": 0.7993531274728685,
+        "over25": 0.5745657709465766,
+        "btts": 0.48218077690285693
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8036874016440748,
+        "over25": 0.5745657709465766,
+        "btts": 0.48651505107406334
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.12280443485084754
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10680096098793165
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09578745918366108
+          }
+        ],
+        "topScoresCombined": 0.32539285502244025,
+        "homeWin": 0.6955869081659879,
+        "draw": 0.19098037579858984,
+        "awayWin": 0.11343271603542222,
+        "expectedHome": 2.21,
+        "expectedAway": 0.78
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80475,
+            "sampling_se": 0.002802922024423798
+          },
+          "over25": {
+            "probability": 0.57845,
+            "sampling_se": 0.003491744531749137
+          },
+          "btts": {
+            "probability": 0.48515,
+            "sampling_se": 0.0035339742323622003
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Almanya Bundesliga",
+      "match": "Eintracht Frankfurt – SV Werder Bremen",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.4
+      },
+      "poisson": {
+        "over15": 0.793258161503692,
+        "over25": 0.5655150159955755,
+        "btts": 0.5934947681800828
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7989370195990969,
+        "over25": 0.5655150159955755,
+        "btts": 0.5991736262754878
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1192560200035032
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08802230047877617
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.0795040133356688
+          }
+        ],
+        "topScoresCombined": 0.28678233381794815,
+        "homeWin": 0.4052327093200355,
+        "draw": 0.25594719206204136,
+        "awayWin": 0.33882009861792306,
+        "expectedHome": 1.55,
+        "expectedAway": 1.4
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80465,
+            "sampling_se": 0.002803465511648039
+          },
+          "over25": {
+            "probability": 0.5674,
+            "sampling_se": 0.003503264477598002
+          },
+          "btts": {
+            "probability": 0.60015,
+            "sampling_se": 0.003463884939630646
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "Lille OSC – AJ Auxerre",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.4
+      },
+      "poisson": {
+        "over15": 0.793258161503692,
+        "over25": 0.5655150159955755,
+        "btts": 0.5934947681800828
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7989370195990969,
+        "over25": 0.5655150159955755,
+        "btts": 0.5991736262754878
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1192560200035032
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.08802230047877617
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.0795040133356688
+          }
+        ],
+        "topScoresCombined": 0.28678233381794815,
+        "homeWin": 0.4052327093200355,
+        "draw": 0.25594719206204136,
+        "awayWin": 0.33882009861792306,
+        "expectedHome": 1.55,
+        "expectedAway": 1.4
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80465,
+            "sampling_se": 0.002803465511648039
+          },
+          "over25": {
+            "probability": 0.5674,
+            "sampling_se": 0.003503264477598002
+          },
+          "btts": {
+            "probability": 0.60015,
+            "sampling_se": 0.003463884939630646
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Tottenham Hotspur FC – Arsenal FC",
+      "expectedGoals": {
+        "home": 1.05,
+        "away": 1.85
+      },
+      "poisson": {
+        "over15": 0.7854094417800118,
+        "over25": 0.5540368014428194,
+        "btts": 0.5478483046316243
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7907535720279903,
+        "over25": 0.5540368014428194,
+        "btts": 0.5531924348796028
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1122267352075496
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09886640958760322
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.09644882685637483
+          }
+        ],
+        "topScoresCombined": 0.30754197165152763,
+        "homeWin": 0.20727723731375614,
+        "draw": 0.23717345485715471,
+        "awayWin": 0.5555493078290892,
+        "expectedHome": 1.05,
+        "expectedAway": 1.85
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.7888,
+            "sampling_se": 0.0028861268163405435
+          },
+          "over25": {
+            "probability": 0.5575,
+            "sampling_se": 0.003512077376710257
+          },
+          "btts": {
+            "probability": 0.555,
+            "sampling_se": 0.0035140788266628284
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "Toulouse FC – Paris Saint-Germain FC",
+      "expectedGoals": {
+        "home": 1.2,
+        "away": 1.7
+      },
+      "poisson": {
+        "over15": 0.7854094417800118,
+        "over25": 0.5540368014428194,
+        "btts": 0.5711454840914705
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7910218102257653,
+        "over25": 0.5540368014428194,
+        "btts": 0.576757852537224
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1178597373608243
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09541026357781013
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.08792710565013875
+          }
+        ],
+        "topScoresCombined": 0.3011971065887732,
+        "homeWin": 0.26421366974812166,
+        "draw": 0.2505146729199579,
+        "awayWin": 0.4852716573319204,
+        "expectedHome": 1.2,
+        "expectedAway": 1.6999999999999997
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.78965,
+            "sampling_se": 0.0028818646524429283
+          },
+          "over25": {
+            "probability": 0.554,
+            "sampling_se": 0.0035148541932774396
+          },
+          "btts": {
+            "probability": 0.5796,
+            "sampling_se": 0.0034904429518329044
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "AS Monaco FC – Angers SCO",
+      "expectedGoals": {
+        "home": 1.9,
+        "away": 0.95
+      },
+      "poisson": {
+        "over15": 0.7772993646318719,
+        "over25": 0.5423791164789342,
+        "btts": 0.5215346781977022
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7825198145908261,
+        "over25": 0.5423791164789342,
+        "btts": 0.5267551281566564
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.1096294491380376
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10468375970323891
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.10440899917908343
+          }
+        ],
+        "topScoresCombined": 0.31872220802035994,
+        "homeWin": 0.590962283140952,
+        "draw": 0.2304048114138017,
+        "awayWin": 0.1786329054452463,
+        "expectedHome": 1.9,
+        "expectedAway": 0.95
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.78565,
+            "sampling_se": 0.0029017587554791666
+          },
+          "over25": {
+            "probability": 0.5468,
+            "sampling_se": 0.0035200124999778056
+          },
+          "btts": {
+            "probability": 0.5298,
+            "sampling_se": 0.0035292489285965647
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Brentford FC – Manchester City FC",
+      "expectedGoals": {
+        "home": 1.3,
+        "away": 1.55
+      },
+      "poisson": {
+        "over15": 0.7772993646318719,
+        "over25": 0.5423791164789342,
+        "btts": 0.5730645540140828
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7831271799600119,
+        "over25": 0.5423791164789342,
+        "btts": 0.5788923693422228
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.12238412189093946
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09033113758616962
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.08383088202785964
+          }
+        ],
+        "topScoresCombined": 0.2965461415049687,
+        "homeWin": 0.31403451259182075,
+        "draw": 0.2597139444506633,
+        "awayWin": 0.42625154295751594,
+        "expectedHome": 1.3,
+        "expectedAway": 1.55
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.78035,
+            "sampling_se": 0.002927489346692828
+          },
+          "over25": {
+            "probability": 0.5417,
+            "sampling_se": 0.0035232166410824072
+          },
+          "btts": {
+            "probability": 0.5786,
+            "sampling_se": 0.0034915758619855305
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "konyaspor – gaziantep",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.2
+      },
+      "poisson": {
+        "over15": 0.7602705204748466,
+        "over25": 0.5185432952869836,
+        "btts": 0.5504856754677624
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7662158115670704,
+        "over25": 0.5185432952869836,
+        "btts": 0.5564309665599863
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.12485111293669988
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.09314289377817293
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09215201192946897
+          }
+        ],
+        "topScoresCombined": 0.31014601864434177,
+        "homeWin": 0.4481650760624625,
+        "draw": 0.2628748297991609,
+        "awayWin": 0.28896009413837664,
+        "expectedHome": 1.55,
+        "expectedAway": 1.2
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.76975,
+            "sampling_se": 0.0029768686358319536
+          },
+          "over25": {
+            "probability": 0.5185,
+            "sampling_se": 0.0035331130041367205
+          },
+          "btts": {
+            "probability": 0.55405,
+            "sampling_se": 0.003514815766864602
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Fransa Ligue 1",
+      "match": "Stade Rennais FC 1901 – Stade Brestois 29",
+      "expectedGoals": {
+        "home": 1.7,
+        "away": 1.0
+      },
+      "poisson": {
+        "over15": 0.7513396028629259,
+        "over25": 0.5063755089265379,
+        "btts": 0.5166425475155728
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7570520714458047,
+        "over25": 0.5063755089265379,
+        "btts": 0.5223550160984516
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.11996184024045334
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10853690307469588
+          },
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.09711196590893842
+          }
+        ],
+        "topScoresCombined": 0.32561070922408764,
+        "homeWin": 0.5322355137144327,
+        "draw": 0.25165148792826075,
+        "awayWin": 0.21611299835730655,
+        "expectedHome": 1.7,
+        "expectedAway": 1.0
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.7625,
+            "sampling_se": 0.0030091007793026808
+          },
+          "over25": {
+            "probability": 0.51025,
+            "sampling_se": 0.0035347909238029906
+          },
+          "btts": {
+            "probability": 0.5237,
+            "sampling_se": 0.003531559924452649
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Everton FC – Fulham FC",
+      "expectedGoals": {
+        "home": 1.6,
+        "away": 1.05
+      },
+      "poisson": {
+        "over15": 0.7421230723294321,
+        "over25": 0.49404900047099864,
+        "btts": 0.5188169459546188
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7480577742265081,
+        "over25": 0.49404900047099864,
+        "btts": 0.5247516478516949
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.12462873983859779
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10710723899961125
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09495523035321737
+          }
+        ],
+        "topScoresCombined": 0.3266912091914264,
+        "homeWin": 0.4954637741313896,
+        "draw": 0.2614176850534801,
+        "awayWin": 0.24311854081513035,
+        "expectedHome": 1.6,
+        "expectedAway": 1.05
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.75115,
+            "sampling_se": 0.003057152903438099
+          },
+          "over25": {
+            "probability": 0.49485,
+            "sampling_se": 0.0035353463585623404
+          },
+          "btts": {
+            "probability": 0.52115,
+            "sampling_se": 0.0035323694420317927
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Bristol City FC – Swansea City AFC",
+      "expectedGoals": {
+        "home": 1.1,
+        "away": 1.5
+      },
+      "poisson": {
+        "over15": 0.732615118428398,
+        "over25": 0.4815704240639495,
+        "btts": 0.5182723343678245
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7387426886310806,
+        "over25": 0.4815704240639495,
+        "btts": 0.524399904570507
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.12867897425633343
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.10528279711881826
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.09191355304023817
+          }
+        ],
+        "topScoresCombined": 0.32587532441538986,
+        "homeWin": 0.27196102923447635,
+        "draw": 0.2699223551814157,
+        "awayWin": 0.45811661558410793,
+        "expectedHome": 1.1,
+        "expectedAway": 1.5
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.73755,
+            "sampling_se": 0.0031110287486617668
+          },
+          "over25": {
+            "probability": 0.4887,
+            "sampling_se": 0.0035346308859624934
+          },
+          "btts": {
+            "probability": 0.5278,
+            "sampling_se": 0.003530064871925161
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Premier Lig",
+      "match": "Nottingham Forest FC – Brighton & Hove Albion FC",
+      "expectedGoals": {
+        "home": 1.1,
+        "away": 1.45
+      },
+      "poisson": {
+        "over15": 0.7228100856959064,
+        "over25": 0.46894706910965717,
+        "btts": 0.510640294209276
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7290370985594984,
+        "over25": 0.46894706910965717,
+        "btts": 0.516867307072868
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.13076727013543127
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.1069914028380801
+          },
+          {
+            "home": 1,
+            "away": 2,
+            "probability": 0.0902916865220835
+          }
+        ],
+        "topScoresCombined": 0.32805035949559486,
+        "homeWin": 0.2805018936240151,
+        "draw": 0.2744731879945885,
+        "awayWin": 0.4450249183813965,
+        "expectedHome": 1.1,
+        "expectedAway": 1.4500000000000002
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.7282,
+            "sampling_se": 0.0031458286666632054
+          },
+          "over25": {
+            "probability": 0.4764,
+            "sampling_se": 0.0035315934080808343
+          },
+          "btts": {
+            "probability": 0.5212,
+            "sampling_se": 0.0035323544556004004
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Cardiff City FC – Lincoln City FC",
+      "expectedGoals": {
+        "home": 1.2,
+        "away": 1.25
+      },
+      "poisson": {
+        "over15": 0.7022871265771717,
+        "over25": 0.44329850009593597,
+        "btts": 0.4985945777269783
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7087591455646245,
+        "over25": 0.44329850009593597,
+        "btts": 0.5050665967144311
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.13591239873650854
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.10139496413676034
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.09708028481179183
+          }
+        ],
+        "topScoresCombined": 0.3343876476850607,
+        "homeWin": 0.34492392926218896,
+        "draw": 0.2861140720012888,
+        "awayWin": 0.3689619987365222,
+        "expectedHome": 1.2,
+        "expectedAway": 1.25
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.7048,
+            "sampling_se": 0.003225344632748569
+          },
+          "over25": {
+            "probability": 0.44885,
+            "sampling_se": 0.003516985054702394
+          },
+          "btts": {
+            "probability": 0.5086,
+            "sampling_se": 0.0035350108910723317
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Portsmouth FC – West Bromwich Albion FC",
+      "expectedGoals": {
+        "home": 1.25,
+        "away": 1.15
+      },
+      "poisson": {
+        "over15": 0.6915589588159975,
+        "over25": 0.43029125334248947,
+        "btts": 0.48757638705016915
+      },
+      "experimentalDixonColes": {
+        "over15": 0.698079311708674,
+        "over25": 0.43029125334248947,
+        "btts": 0.4940967399428457
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.136927410746207
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10687708871908912
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.09780529339014786
+          }
+        ],
+        "topScoresCombined": 0.341609792855444,
+        "homeWin": 0.37962990395478313,
+        "draw": 0.2892289164765262,
+        "awayWin": 0.33114117956869066,
+        "expectedHome": 1.25,
+        "expectedAway": 1.15
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.69365,
+            "sampling_se": 0.003259598729138297
+          },
+          "over25": {
+            "probability": 0.4335,
+            "sampling_se": 0.003504124355670044
+          },
+          "btts": {
+            "probability": 0.49725,
+            "sampling_se": 0.0035354804305780005
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "İngiltere Championship",
+      "match": "Charlton Athletic FC – Birmingham City FC",
+      "expectedGoals": {
+        "home": 1.2,
+        "away": 1.15
+      },
+      "poisson": {
+        "over15": 0.6805133065779088,
+        "over25": 0.41717520741022235,
+        "btts": 0.4775381809242943
+      },
+      "experimentalDixonColes": {
+        "over15": 0.6870937787707817,
+        "over25": 0.41717520741022235,
+        "btts": 0.48411865311716723
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.13818991605033143
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10786252246578662
+          },
+          {
+            "home": 0,
+            "away": 1,
+            "probability": 0.10309406435500913
+          }
+        ],
+        "topScoresCombined": 0.3491465028711272,
+        "homeWin": 0.3656652392308247,
+        "draw": 0.2931418866501412,
+        "awayWin": 0.3411928741190341,
+        "expectedHome": 1.2,
+        "expectedAway": 1.15
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.6837,
+            "sampling_se": 0.0032882693776514114
+          },
+          "over25": {
+            "probability": 0.422,
+            "sampling_se": 0.0034922485593096033
+          },
+          "btts": {
+            "probability": 0.4881,
+            "sampling_se": 0.0035345324301808293
           }
         }
       }

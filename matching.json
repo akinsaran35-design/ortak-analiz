@@ -1,22 +1,10 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-27T19:53:54.022161+00:00",
+  "updatedAt": "2026-11-28T15:32:23.395158+00:00",
   "decision": "PAS",
-  "matchedCount": 64,
-  "unmatchedCount": 24,
+  "matchedCount": 70,
+  "unmatchedCount": 51,
   "matched": [
-    {
-      "match": "Southampton FC – Middlesbrough FC",
-      "eventId": "32b8e3ea76d9d8b2b36577063d40862e",
-      "kickoff": "2026-11-27T20:00:00+00:00",
-      "freshLineCount": 2
-    },
-    {
-      "match": "CS Marítimo – CD Nacional",
-      "eventId": "abfc6851b152aecbb4bf84a348967f69",
-      "kickoff": "2026-11-27T20:15:00+00:00",
-      "freshLineCount": 3
-    },
     {
       "match": "PSV – Go Ahead Eagles",
       "eventId": "8031222f3f3e8384a69c0ca5e1166458",
@@ -28,30 +16,6 @@
       "eventId": "708641646f92ec14288beaaf1154e996",
       "kickoff": "2026-11-28T20:00:00+00:00",
       "freshLineCount": 1
-    },
-    {
-      "match": "Hamburger SV – FC Bayern München",
-      "eventId": "3b025a029f51fbeb9580a178d0612f50",
-      "kickoff": "2026-11-28T14:30:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "Manchester United FC – Brentford FC",
-      "eventId": "ab87184803a63f7b679f1d12b01c3271",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 2
-    },
-    {
-      "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
-      "eventId": "365e1a00908ab1cd5a51a53ede2b86b2",
-      "kickoff": "2026-11-28T14:30:00+00:00",
-      "freshLineCount": 1
-    },
-    {
-      "match": "West Ham United FC – Stoke City FC",
-      "eventId": "c836236766f7859e3c1d61caa581abe1",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
     },
     {
       "match": "VfB Stuttgart – Eintracht Frankfurt",
@@ -66,12 +30,6 @@
       "freshLineCount": 3
     },
     {
-      "match": "Wrexham AFC – Portsmouth FC",
-      "eventId": "9cd8c682c6864b59a7f1a58964083e08",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
-    },
-    {
       "match": "Ipswich Town FC – Aston Villa FC",
       "eventId": "9d23f6ad21946dd258869ebc22236cf0",
       "kickoff": "2026-11-28T17:30:00+00:00",
@@ -81,19 +39,7 @@
       "match": "gaziantep – amed",
       "eventId": "4001fed3da6baa90d8b6278f43a77af1",
       "kickoff": "2026-11-28T16:00:00+00:00",
-      "freshLineCount": 2
-    },
-    {
-      "match": "Birmingham City FC – Bolton Wanderers FC",
-      "eventId": "15fc58a442321c2a85f7a814466c0ab9",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 2
-    },
-    {
-      "match": "Preston North End FC – Norwich City FC",
-      "eventId": "d47bc722be164b3a733434e89f224654",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "Paris Saint-Germain FC – FC Lorient",
@@ -102,75 +48,21 @@
       "freshLineCount": 1
     },
     {
-      "match": "Queens Park Rangers FC – Sheffield United FC",
-      "eventId": "dc42f49649c5329c2c47f94fc4ca0c89",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
-    },
-    {
-      "match": "Millwall FC – Burnley FC",
-      "eventId": "3f93526d7c8e0ca84734aea60c13900a",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 3
-    },
-    {
-      "match": "samsunspor – genclerbirligi",
-      "eventId": "f0f0492939c4f06ff9a4f1b9334d510f",
-      "kickoff": "2026-11-28T13:00:00+00:00",
-      "freshLineCount": 3
-    },
-    {
-      "match": "West Bromwich Albion FC – Bristol City FC",
-      "eventId": "b67372e7107fdd259a978e614711e657",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 5
-    },
-    {
-      "match": "Lincoln City FC – Wolverhampton Wanderers FC",
-      "eventId": "d2bc2d3b4a81177cb6b86f4add6ff81f",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 5
-    },
-    {
-      "match": "SBV Excelsior – Telstar 1963",
-      "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "freshLineCount": 3
-    },
-    {
       "match": "Le Mans FC – Lille OSC",
       "eventId": "aaa86a483888836242da663a46957894",
       "kickoff": "2026-11-28T19:45:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "Vitória Guimarães – CF Estrela da Amadora",
       "eventId": "3348c02fd713356ec319779bd5edc561",
       "kickoff": "2026-11-28T20:30:00+00:00",
-      "freshLineCount": 4
-    },
-    {
-      "match": "FC Arouca – Rio Ave FC",
-      "eventId": "d583b1676d961c26794a3ccedf7edffb",
-      "kickoff": "2026-11-28T15:30:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 2
     },
     {
       "match": "Angers SCO – Racing Club de Lens",
       "eventId": "24b99950496c624f7124922fc1bda8bd",
       "kickoff": "2026-11-28T16:15:00+00:00",
-      "freshLineCount": 3
-    },
-    {
-      "match": "Derby County FC – Watford FC",
-      "eventId": "82ef491ed2f8399e4ccec9f5d8315cee",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 5
-    },
-    {
-      "match": "Moreirense FC – CD Santa Clara",
-      "eventId": "4adcfcfea85a2d5dbbd487aa2a9fd9c3",
-      "kickoff": "2026-11-28T15:30:00+00:00",
       "freshLineCount": 3
     },
     {
@@ -180,22 +72,10 @@
       "freshLineCount": 3
     },
     {
-      "match": "Blackburn Rovers FC – Charlton Athletic FC",
-      "eventId": "a1d96ec37a8b7022ef39a7755a655243",
-      "kickoff": "2026-11-28T12:30:00+00:00",
-      "freshLineCount": 5
-    },
-    {
-      "match": "Leeds United FC – Coventry City FC",
-      "eventId": "0bc17a3c7d8153e72b94688960cc603a",
-      "kickoff": "2026-11-28T15:00:00+00:00",
-      "freshLineCount": 4
-    },
-    {
       "match": "ADO Den Haag – FC Utrecht",
       "eventId": "d77c244bd9dd91534c40b863e44cf905",
       "kickoff": "2026-11-29T11:15:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "Fortuna Sittard – SC Heerenveen",
@@ -243,7 +123,7 @@
       "match": "Como 1907 – Juventus FC",
       "eventId": "3876ad367184af2f8fc04a544fc894aa",
       "kickoff": "2026-11-29T19:45:00+00:00",
-      "freshLineCount": 4
+      "freshLineCount": 5
     },
     {
       "match": "Feyenoord Rotterdam – AFC Ajax",
@@ -321,7 +201,7 @@
       "match": "corum – kocaelispor",
       "eventId": "3e9a89fc7f5bd95d70e6fd3faaccf5d2",
       "kickoff": "2026-11-29T10:30:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "Gil Vicente FC – GD Estoril Praia",
@@ -339,7 +219,7 @@
       "match": "Casa Pia AC – Sporting Clube de Braga",
       "eventId": "61b7d270b965f9804d2d2ed500f41214",
       "kickoff": "2026-11-30T20:15:00+00:00",
-      "freshLineCount": 3
+      "freshLineCount": 4
     },
     {
       "match": "Liverpool FC – Sunderland AFC",
@@ -384,31 +264,229 @@
       "freshLineCount": 4
     },
     {
+      "match": "Sheffield United FC – West Ham United FC",
+      "eventId": "bb7e0cbeb7030e0c954aa0aeb5d1e8ee",
+      "kickoff": "2026-12-04T20:00:00+00:00",
+      "freshLineCount": 2
+    },
+    {
       "match": "Telstar 1963 – FC Groningen",
       "eventId": "992217cc628328f9d2cd16b8e670ddb1",
       "kickoff": "2026-12-04T19:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "SC Freiburg – TSG 1899 Hoffenheim",
+      "eventId": "2d1c66b6eb335336d2dd0739e090ed37",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Fortuna Sittard – PEC Zwolle",
+      "eventId": "fa3db722f03c13fb73e6042d689e9c23",
+      "kickoff": "2026-12-05T20:00:00+00:00",
+      "freshLineCount": 2
+    },
+    {
+      "match": "AZ – PSV",
+      "eventId": "ecfbbd9537f81d25746539e719d015a0",
+      "kickoff": "2026-12-05T19:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Willem II Tilburg – Feyenoord Rotterdam",
+      "eventId": "69aa141b233fae9be6e462098250a8ad",
+      "kickoff": "2026-12-05T15:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Bayer 04 Leverkusen – Borussia Mönchengladbach",
+      "eventId": "a7ef7acc0225e0ff03816f515299f248",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Paris FC – Le Mans FC",
+      "eventId": "ebe354c9e9e99226e30939d97baeca99",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "freshLineCount": 3
+    },
+    {
+      "match": "FC Augsburg – 1. FC Köln",
+      "eventId": "5089643216359c9456d425930e6c57d9",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "RB Leipzig – 1. FSV Mainz 05",
+      "eventId": "cd71180a378c01105112f52d2764b922",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Wolverhampton Wanderers FC – Southampton FC",
+      "eventId": "63464fd06ff621c032eee43679a0acc7",
+      "kickoff": "2026-12-05T15:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Bolton Wanderers FC – Blackburn Rovers FC",
+      "eventId": "9473461a334be2eeb784cd2bf45636ca",
+      "kickoff": "2026-12-05T12:30:00+00:00",
+      "freshLineCount": 2
+    },
+    {
+      "match": "1. FC Union Berlin – Hamburger SV",
+      "eventId": "08bc048e18105e5b3e41fae5d67a0500",
+      "kickoff": "2026-12-05T14:30:00+00:00",
+      "freshLineCount": 4
+    },
+    {
+      "match": "Sparta Rotterdam – NEC",
+      "eventId": "eec20b5e9fc4a8160b3e5833d4c7674f",
+      "kickoff": "2026-12-05T17:45:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "RC Strasbourg Alsace – FC Lorient",
+      "eventId": "219b1f7a6a968c14cb9777d7b994cdb9",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "freshLineCount": 4
+    },
+    {
+      "match": "Stoke City FC – Queens Park Rangers FC",
+      "eventId": "79bd0d859c55622d70299089ee2d8d78",
+      "kickoff": "2026-12-05T15:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Norwich City FC – Wrexham AFC",
+      "eventId": "4fe42abedc03cbb553ba2ed8d9983b29",
+      "kickoff": "2026-12-05T15:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Racing Club de Lens – Le Havre AC",
+      "eventId": "162927041eba2297840966c6f7955053",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "freshLineCount": 2
+    },
+    {
+      "match": "Watford FC – Millwall FC",
+      "eventId": "e49121e6a96f140ee8b4381766962f61",
+      "kickoff": "2026-12-05T12:30:00+00:00",
+      "freshLineCount": 2
+    },
+    {
+      "match": "amed – alanyaspor",
+      "eventId": "9db945fb9b6d02d00118e0556979887d",
+      "kickoff": "2026-12-05T13:00:00+00:00",
+      "freshLineCount": 2
+    },
+    {
+      "match": "Eintracht Frankfurt – SV Werder Bremen",
+      "eventId": "550c0c298df8a95f8c64eba817ec8f55",
+      "kickoff": "2026-12-05T17:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Lille OSC – AJ Auxerre",
+      "eventId": "0664eb46841c1e73a465bfca504b9b54",
+      "kickoff": "2026-12-05T16:15:00+00:00",
+      "freshLineCount": 3
+    },
+    {
+      "match": "AS Monaco FC – Angers SCO",
+      "eventId": "2d7cee4a6e6a6632dd46f252c9e379f2",
+      "kickoff": "2026-12-05T19:45:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "konyaspor – gaziantep",
+      "eventId": "56c8e2a62c106a6753d1216205dfe5c9",
+      "kickoff": "2026-12-05T10:30:00+00:00",
+      "freshLineCount": 2
+    },
+    {
+      "match": "Bristol City FC – Swansea City AFC",
+      "eventId": "d3a7232e9d207b1417c35aa3c1b8cfcd",
+      "kickoff": "2026-12-05T12:30:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Portsmouth FC – West Bromwich Albion FC",
+      "eventId": "3b10815af0b27dcbff9406abab23e683",
+      "kickoff": "2026-12-05T15:00:00+00:00",
+      "freshLineCount": 1
+    },
+    {
+      "match": "Charlton Athletic FC – Birmingham City FC",
+      "eventId": "7a1cb61ea8f8e0a94c96605c8e4cd82e",
+      "kickoff": "2026-12-05T15:00:00+00:00",
       "freshLineCount": 1
     }
   ],
   "unmatched": [
     {
-      "match": "FC Groningen – Willem II Tilburg",
-      "league": "Hollanda Eredivisie",
-      "date": "2026-11-27",
-      "reason": "no_exact_match",
-      "providerDates": []
-    },
-    {
-      "match": "SV Werder Bremen – Borussia Mönchengladbach",
+      "match": "Hamburger SV – FC Bayern München",
       "league": "Almanya Bundesliga",
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "reason": "no_exact_match",
       "providerDates": []
     },
     {
-      "match": "Stade Brestois 29 – Paris FC",
-      "league": "Fransa Ligue 1",
-      "date": "2026-11-27",
+      "match": "Manchester United FC – Brentford FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "1. FSV Mainz 05 – 1. FC Union Berlin",
+      "league": "Almanya Bundesliga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "West Ham United FC – Stoke City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Wrexham AFC – Portsmouth FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Birmingham City FC – Bolton Wanderers FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Preston North End FC – Norwich City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Queens Park Rangers FC – Sheffield United FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Millwall FC – Burnley FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
       "reason": "no_exact_match",
       "providerDates": []
     },
@@ -422,6 +500,27 @@
       ]
     },
     {
+      "match": "West Bromwich Albion FC – Bristol City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Lincoln City FC – Wolverhampton Wanderers FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "SBV Excelsior – Telstar 1963",
+      "league": "Hollanda Eredivisie",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Arsenal FC – Manchester City FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
@@ -431,13 +530,18 @@
       ]
     },
     {
+      "match": "FC Arouca – Rio Ave FC",
+      "league": "Portekiz Primeira Liga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Nottingham Forest FC – Chelsea FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-27"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Fulham FC – AFC Bournemouth",
@@ -458,6 +562,20 @@
       ]
     },
     {
+      "match": "Derby County FC – Watford FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Moreirense FC – CD Santa Clara",
+      "league": "Portekiz Primeira Liga",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Sunderland AFC – Tottenham Hotspur FC",
       "league": "İngiltere Premier Lig",
       "date": "2026-11-28",
@@ -467,13 +585,25 @@
       ]
     },
     {
+      "match": "Blackburn Rovers FC – Charlton Athletic FC",
+      "league": "İngiltere Championship",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Leeds United FC – Coventry City FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-11-28",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
       "match": "Levante UD – Real Racing Club de Santander",
       "league": "İspanya La Liga",
       "date": "2026-11-29",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-27"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Real Madrid CF – Deportivo Alavés",
@@ -506,10 +636,8 @@
       "match": "Málaga CF – Athletic Club",
       "league": "İspanya La Liga",
       "date": "2026-11-29",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-28"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Venezia FC – Bologna FC 1909",
@@ -531,10 +659,8 @@
       "match": "Real Betis Balompié – Rayo Vallecano de Madrid",
       "league": "İspanya La Liga",
       "date": "2026-11-29",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-28"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Torino FC – SS Lazio",
@@ -549,10 +675,8 @@
       "match": "Frosinone Calcio – Parma Calcio 1913",
       "league": "İtalya Serie A",
       "date": "2026-11-29",
-      "reason": "date_mismatch",
-      "providerDates": [
-        "2026-11-28"
-      ]
+      "reason": "no_exact_match",
+      "providerDates": []
     },
     {
       "match": "Cagliari Calcio – AC Milan",
@@ -591,9 +715,104 @@
       ]
     },
     {
-      "match": "Sheffield United FC – West Ham United FC",
+      "match": "Newcastle United FC – Sunderland AFC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Olympique de Marseille – OGC Nice",
+      "league": "Fransa Ligue 1",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Chelsea FC – Liverpool FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Aston Villa FC – Crystal Palace FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Leeds United FC – Ipswich Town FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Manchester United FC – Coventry City FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Middlesbrough FC – Derby County FC",
       "league": "İngiltere Championship",
-      "date": "2026-12-04",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Tottenham Hotspur FC – Arsenal FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Toulouse FC – Paris Saint-Germain FC",
+      "league": "Fransa Ligue 1",
+      "date": "2026-12-05",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-12-04"
+      ]
+    },
+    {
+      "match": "Brentford FC – Manchester City FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Stade Rennais FC 1901 – Stade Brestois 29",
+      "league": "Fransa Ligue 1",
+      "date": "2026-12-05",
+      "reason": "date_mismatch",
+      "providerDates": [
+        "2026-12-06"
+      ]
+    },
+    {
+      "match": "Everton FC – Fulham FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Nottingham Forest FC – Brighton & Hove Albion FC",
+      "league": "İngiltere Premier Lig",
+      "date": "2026-12-05",
+      "reason": "no_exact_match",
+      "providerDates": []
+    },
+    {
+      "match": "Cardiff City FC – Lincoln City FC",
+      "league": "İngiltere Championship",
+      "date": "2026-12-05",
       "reason": "no_exact_match",
       "providerDates": []
     }

@@ -1,0 +1,15 @@
+{
+  "version": "6.94",
+  "updatedAt": "2026-11-28T15:32:04.687844+00:00",
+  "mode": "normal",
+  "reason": "collected",
+  "currentOddsAt": "2026-11-28T15:32:04.682329+00:00",
+  "currentOddsUsable": true,
+  "liveRemainingCredits": 44,
+  "errors": [],
+  "lastGoodAt": "2026-11-28T15:32:04.682329+00:00",
+  "lastGoodEventCount": 123,
+  "archiveUsedForCurrentOdds": false,
+  "independentAnalysisMayContinue": true,
+  "productionEnabled": false
+}

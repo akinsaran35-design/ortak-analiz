@@ -1,0 +1,440 @@
+{
+  "modelSha256": "a5811af043f2b9bea344e2c0d43f7ad4eb47638dfbc8204496284cc899050f53",
+  "pairs": {
+    "[\"de.1\",\"2026-11-29\",\"borussia dortmund\",\"bayer leverkusen\"]": {
+      "candidate": {
+        "btts": 0.6074059712473112,
+        "over15": 0.8390763451737175,
+        "over25": 0.6339079210663513
+      },
+      "forecastFingerprint": "cdb52ba81a23a2af29d6f815d7608d7a73b6e6aa963faaffd36432261373e759",
+      "legacy": {
+        "btts": 0.643,
+        "over15": 0.8590000000000001,
+        "over25": 0.67
+      },
+      "legacyKey": "[\"2026-11-29\", \"Almanya Bundesliga\", \"Borussia Dortmund – Bayer 04 Leverkusen\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"de.1\",\"2026-11-29\",\"freiburg\",\"rb leipzig\"]": {
+      "candidate": {
+        "btts": 0.59078719119107,
+        "over15": 0.829955142680938,
+        "over25": 0.6174342439832405
+      },
+      "forecastFingerprint": "d679e78f9823d1401518e1706b15c883de48923d088c872e7b92237f2c6d74b3",
+      "legacy": {
+        "btts": 0.63,
+        "over15": 0.853,
+        "over25": 0.66
+      },
+      "legacyKey": "[\"2026-11-29\", \"Almanya Bundesliga\", \"SC Freiburg – RB Leipzig\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"de.1\",\"2026-11-29\",\"tsg hoffenheim\",\"augsburg\"]": {
+      "candidate": {
+        "btts": 0.6362644927148232,
+        "over15": 0.8529388936718924,
+        "over25": 0.6466701898287037
+      },
+      "forecastFingerprint": "59fa35dfb497c377d058e7c6616d868eef010dcdefcb604cb0a46ac0ac7d6777",
+      "legacy": {
+        "btts": 0.645,
+        "over15": 0.841,
+        "over25": 0.6409999999999999
+      },
+      "legacyKey": "[\"2026-11-29\", \"Almanya Bundesliga\", \"TSG 1899 Hoffenheim – FC Augsburg\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"en.2\",\"2026-11-29\",\"swansea city\",\"cardiff city\"]": {
+      "candidate": {
+        "btts": 0.5715728168303417,
+        "over15": 0.7805863384023126,
+        "over25": 0.5507482206660257
+      },
+      "forecastFingerprint": "e172bd7c25e67dd736e507a54cf7a5f1182d04d392853376058b6de2ce2260c4",
+      "legacy": {
+        "btts": 0.552,
+        "over15": 0.773,
+        "over25": 0.536
+      },
+      "legacyKey": "[\"2026-11-29\", \"İngiltere Championship\", \"Swansea City AFC – Cardiff City FC\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"es.1\",\"2026-11-29\",\"celta vigo\",\"villarreal\"]": {
+      "candidate": {
+        "btts": 0.5404750809475567,
+        "over15": 0.7483270135395552,
+        "over25": 0.5140603874502732
+      },
+      "forecastFingerprint": "35285893d19a6fa2e8de050d05deabef69271bb95bad14f04da68c62c163a0ac",
+      "legacy": {
+        "btts": 0.604,
+        "over15": 0.8009999999999999,
+        "over25": 0.5770000000000001
+      },
+      "legacyKey": "[\"2026-11-29\", \"İspanya La Liga\", \"RC Celta de Vigo – Villarreal CF\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"es.1\",\"2026-11-29\",\"real sociedad\",\"sevilla\"]": {
+      "candidate": {
+        "btts": 0.5141380721518167,
+        "over15": 0.7397489626025354,
+        "over25": 0.49241116695242926
+      },
+      "forecastFingerprint": "504be364d6c21e7da1e33c2ec22426dae8fa5674e0ae1dd07bacf375830f5d6f",
+      "legacy": {
+        "btts": 0.679,
+        "over15": 0.8640000000000001,
+        "over25": 0.679
+      },
+      "legacyKey": "[\"2026-11-29\", \"İspanya La Liga\", \"Real Sociedad de Fútbol – Sevilla FC\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"es.1\",\"2026-11-29\",\"valencia\",\"osasuna\"]": {
+      "candidate": {
+        "btts": 0.54060972049252,
+        "over15": 0.7353071039516683,
+        "over25": 0.5001147360857685
+      },
+      "forecastFingerprint": "ac6d277abf8c3271d27ccb7f804e2769e01d4d30fecdf521d392ba81ea703ec5",
+      "legacy": {
+        "btts": 0.648,
+        "over15": 0.841,
+        "over25": 0.6409999999999999
+      },
+      "legacyKey": "[\"2026-11-29\", \"İspanya La Liga\", \"Valencia CF – CA Osasuna\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"fr.1\",\"2026-11-29\",\"auxerre\",\"marseille\"]": {
+      "candidate": {
+        "btts": 0.5729642683919901,
+        "over15": 0.7857382131540628,
+        "over25": 0.5530263215119029
+      },
+      "forecastFingerprint": "3c707a75e886550f818e35afeb068dbaf6b49b2f48b80e5b52e487e1c0774f61",
+      "legacy": {
+        "btts": 0.5329999999999999,
+        "over15": 0.777,
+        "over25": 0.542
+      },
+      "legacyKey": "[\"2026-11-29\", \"Fransa Ligue 1\", \"AJ Auxerre – Olympique de Marseille\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"fr.1\",\"2026-11-29\",\"lyon\",\"monaco\"]": {
+      "candidate": {
+        "btts": 0.5531558451841045,
+        "over15": 0.7818381801003743,
+        "over25": 0.5469089833753538
+      },
+      "forecastFingerprint": "b06af92bf5ad3b6681cb2978725764e40d8d7a371606e96b4ef910647fabe0a7",
+      "legacy": {
+        "btts": 0.701,
+        "over15": 0.879,
+        "over25": 0.706
+      },
+      "legacyKey": "[\"2026-11-29\", \"Fransa Ligue 1\", \"Olympique Lyonnais – AS Monaco FC\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"fr.1\",\"2026-11-29\",\"toulouse\",\"rennes\"]": {
+      "candidate": {
+        "btts": 0.5452865677544059,
+        "over15": 0.7684200851590839,
+        "over25": 0.5350640248885745
+      },
+      "forecastFingerprint": "705034aa2cf85c75530164f143f11b285aa01c62465b9f5d3c25cd3af882e9d5",
+      "legacy": {
+        "btts": 0.69,
+        "over15": 0.8690000000000001,
+        "over25": 0.688
+      },
+      "legacyKey": "[\"2026-11-29\", \"Fransa Ligue 1\", \"Toulouse FC – Stade Rennais FC 1901\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"it.1\",\"2026-11-29\",\"como\",\"juventus\"]": {
+      "candidate": {
+        "btts": 0.5379330075147999,
+        "over15": 0.7725922643130791,
+        "over25": 0.5357252371647898
+      },
+      "forecastFingerprint": "11716f06beb6d54cb2c36a3ce51e541a494868e4a0db143e51b45d82941a5979",
+      "legacy": {
+        "btts": 0.6609999999999999,
+        "over15": 0.853,
+        "over25": 0.66
+      },
+      "legacyKey": "[\"2026-11-29\", \"İtalya Serie A\", \"Como 1907 – Juventus FC\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"it.1\",\"2026-11-29\",\"roma\",\"monza\"]": {
+      "candidate": {
+        "btts": 0.5376079072287112,
+        "over15": 0.7696791199472319,
+        "over25": 0.5331849500545485
+      },
+      "forecastFingerprint": "509eba1baf74755061de45b9e71cfab495656b62d3f3856d81a654b0bb33507c",
+      "legacy": {
+        "btts": 0.624,
+        "over15": 0.8740000000000001,
+        "over25": 0.6970000000000001
+      },
+      "legacyKey": "[\"2026-11-29\", \"İtalya Serie A\", \"AS Roma – AC Monza\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"it.1\",\"2026-11-29\",\"sassuolo\",\"napoli\"]": {
+      "candidate": {
+        "btts": 0.5667961618358306,
+        "over15": 0.7769641220727157,
+        "over25": 0.5402406741486735
+      },
+      "forecastFingerprint": "45dbf0bff00c01602acdc9d7ba284cdfc65de23bfcbed2d9e977f2a2c48bf9db",
+      "legacy": {
+        "btts": 0.621,
+        "over15": 0.815,
+        "over25": 0.599
+      },
+      "legacyKey": "[\"2026-11-29\", \"İtalya Serie A\", \"US Sassuolo Calcio – SSC Napoli\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"it.1\",\"2026-11-29\",\"udinese\",\"fiorentina\"]": {
+      "candidate": {
+        "btts": 0.5506259545803668,
+        "over15": 0.7549632373899301,
+        "over25": 0.5182340345317318
+      },
+      "forecastFingerprint": "81fae2de16ae2346345f2965ca9c2d0666970481656881f05dec7a0a6b92f34c",
+      "legacy": {
+        "btts": 0.518,
+        "over15": 0.723,
+        "over25": 0.469
+      },
+      "legacyKey": "[\"2026-11-29\", \"İtalya Serie A\", \"Udinese Calcio – ACF Fiorentina\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"nl.1\",\"2026-11-29\",\"ado den haag\",\"utrecht\"]": {
+      "candidate": {
+        "btts": 0.6425393981550327,
+        "over15": 0.8470361251544498,
+        "over25": 0.6387833416570867
+      },
+      "forecastFingerprint": "bc972d27a3fd04c0ac2f7fe7721f73ab8936c7cea6a8d516dc0ad7a3a743c5d5",
+      "legacy": {
+        "btts": 0.71,
+        "over15": 0.89,
+        "over25": 0.725
+      },
+      "legacyKey": "[\"2026-11-29\", \"Hollanda Eredivisie\", \"ADO Den Haag – FC Utrecht\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"nl.1\",\"2026-11-29\",\"feyenoord\",\"ajax\"]": {
+      "candidate": {
+        "btts": 0.6069225487422019,
+        "over15": 0.837663263538797,
+        "over25": 0.6328921694035703
+      },
+      "forecastFingerprint": "331e8dc8eaaf7a65a7f0eab6f215037df706a059773060fd206494bc52e37f20",
+      "legacy": {
+        "btts": 0.6679999999999999,
+        "over15": 0.853,
+        "over25": 0.66
+      },
+      "legacyKey": "[\"2026-11-29\", \"Hollanda Eredivisie\", \"Feyenoord Rotterdam – AFC Ajax\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"nl.1\",\"2026-11-29\",\"fortuna sittard\",\"heerenveen\"]": {
+      "candidate": {
+        "btts": 0.6245741547049124,
+        "over15": 0.8273459091351946,
+        "over25": 0.6179406209249809
+      },
+      "forecastFingerprint": "7dfef8150c6a713853e4fbc62d89f3cb0b1e8010f0e9e5698f8f7988e2f48f23",
+      "legacy": {
+        "btts": 0.7070000000000001,
+        "over15": 0.884,
+        "over25": 0.715
+      },
+      "legacyKey": "[\"2026-11-29\", \"Hollanda Eredivisie\", \"Fortuna Sittard – SC Heerenveen\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"nl.1\",\"2026-11-29\",\"nec nijmegen\",\"twente enschede\"]": {
+      "candidate": {
+        "btts": 0.6062571401645709,
+        "over15": 0.8336400625810566,
+        "over25": 0.6266221563787526
+      },
+      "forecastFingerprint": "4185e318da9b474f57032e645b6cc3a709c4dec8163dd455336730d1cbb32258",
+      "legacy": {
+        "btts": 0.674,
+        "over15": 0.8590000000000001,
+        "over25": 0.67
+      },
+      "legacyKey": "[\"2026-11-29\", \"Hollanda Eredivisie\", \"NEC – FC Twente '65\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"nl.1\",\"2026-11-29\",\"zwolle\",\"az alkmaar\"]": {
+      "candidate": {
+        "btts": 0.6325650613341707,
+        "over15": 0.8315045750693915,
+        "over25": 0.6278614484334993
+      },
+      "forecastFingerprint": "a35d36705299b2c3a2854c5c2267a311df3d45670187321f8db1e53f9cc441f2",
+      "legacy": {
+        "btts": 0.618,
+        "over15": 0.8220000000000001,
+        "over25": 0.61
+      },
+      "legacyKey": "[\"2026-11-29\", \"Hollanda Eredivisie\", \"PEC Zwolle – AZ\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"pt.1\",\"2026-11-29\",\"gil vicente\",\"estoril\"]": {
+      "candidate": {
+        "btts": 0.5126687448536116,
+        "over15": 0.7348361140246735,
+        "over25": 0.48717933650651046
+      },
+      "forecastFingerprint": "73bf7024c9165f5f70f1f755f33c047458a89ca7ea18b97b89a11cc1146afe5d",
+      "legacy": {
+        "btts": 0.445,
+        "over15": 0.6809999999999999,
+        "over25": 0.41700000000000004
+      },
+      "legacyKey": "[\"2026-11-29\", \"Portekiz Primeira Liga\", \"Gil Vicente FC – GD Estoril Praia\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"pt.1\",\"2026-11-29\",\"porto\",\"sporting lisbon\"]": {
+      "candidate": {
+        "btts": 0.5630255219141495,
+        "over15": 0.7948272091752153,
+        "over25": 0.5798145930228389
+      },
+      "forecastFingerprint": "3f60b223c5451a1285fd0c6c29031e6c7002bf9801494dda2b349d62942308fd",
+      "legacy": {
+        "btts": 0.585,
+        "over15": 0.785,
+        "over25": 0.5539999999999999
+      },
+      "legacyKey": "[\"2026-11-29\", \"Portekiz Primeira Liga\", \"FC Porto – Sporting Clube de Portugal\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"pt.1\",\"2026-11-30\",\"benfica\",\"famalicao\"]": {
+      "candidate": {
+        "btts": 0.5535386184495528,
+        "over15": 0.7928151511447926,
+        "over25": 0.5745301707758824
+      },
+      "forecastFingerprint": "e3c79e71ef8c087809f0ee9c275812d144c473fac6b77e1d4652f57da175ff36",
+      "legacy": {
+        "btts": 0.604,
+        "over15": 0.8290000000000001,
+        "over25": 0.62
+      },
+      "legacyKey": "[\"2026-11-30\", \"Portekiz Primeira Liga\", \"Sport Lisboa e Benfica – FC Famalicão\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"pt.1\",\"2026-11-30\",\"casa pia\",\"braga\"]": {
+      "candidate": {
+        "btts": 0.5333984896377264,
+        "over15": 0.7301495107839402,
+        "over25": 0.49376793271311914
+      },
+      "forecastFingerprint": "b24543f8f1d12c2500d2c3b652a6f147e2ebf4b5a8b692419d66883ab4fe407d",
+      "legacy": {
+        "btts": 0.562,
+        "over15": 0.7929999999999999,
+        "over25": 0.5660000000000001
+      },
+      "legacyKey": "[\"2026-11-30\", \"Portekiz Primeira Liga\", \"Casa Pia AC – Sporting Clube de Braga\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"tr.1\",\"2026-11-29\",\"corum\",\"kocaelispor\"]": {
+      "candidate": {
+        "btts": 0.5678717806235465,
+        "over15": 0.7803741622841184,
+        "over25": 0.5507016685307622
+      },
+      "forecastFingerprint": "34b7f195751f7e0c4afeec2f318ac81e7bcc101464aae92ecc85253d65dc24e9",
+      "legacy": {
+        "btts": 0.506,
+        "over15": 0.713,
+        "over25": 0.456
+      },
+      "legacyKey": "[\"2026-11-29\", \"Türkiye Süper Lig\", \"corum – kocaelispor\"]",
+      "legacyRecordedAt": "2026-11-26T16:53:31.851056+03:00",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T11:44:40.775237+03:00"
+    },
+    "[\"tr.1\",\"2026-11-30\",\"besiktas\",\"galatasaray\"]": {
+      "candidate": {
+        "btts": 0.5782126089398795,
+        "over15": 0.809125809997375,
+        "over25": 0.5982231099910922
+      },
+      "forecastFingerprint": "1cc1d35a7b7baf668d567e820fed0926a7cdd5184bd316dae5b36f1ed83b799c",
+      "legacy": {
+        "btts": 0.635,
+        "over15": 0.841,
+        "over25": 0.6409999999999999
+      },
+      "legacyKey": "[\"2026-11-30\", \"Türkiye Süper Lig\", \"besiktas – galatasaray\"]",
+      "legacyRecordedAt": "2026-11-28T14:53:42.786207+03:00",
+      "legacyTiming": {
+        "generationCompletedAt": "2026-11-28T14:53:09.958982+03:00",
+        "generationStartedAt": "2026-11-28T14:53:06+03:00",
+        "historyCutoffExclusive": "2026-11-28",
+        "historyThrough": "2026-11-23",
+        "sameSourceDataEstablished": false,
+        "version": "6.82"
+      },
+      "legacyTimingFingerprint": "cf8d803a8501cd47de20e64850182dbf605a33a57aed3e8184bd5132bc1b20bd",
+      "legacyVersion": "1.6",
+      "pairedAt": "2026-11-28T19:33:50.757231+03:00"
+    }
+  },
+  "version": "6.69"
+}

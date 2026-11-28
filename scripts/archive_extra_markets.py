@@ -1,6 +1,7 @@
 
 import json
 import math
+from collections import Counter
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -9,9 +10,9 @@ ARCHIVE = Path("extra_market_archive.json")
 
 
 def parse_time(value):
-    return datetime.fromisoformat(
-        value.replace("Z", "+00:00")
-    )
+    t=datetime.fromisoformat(value.replace("Z","+00:00"))
+    if t.tzinfo is None:raise ValueError("timezone required")
+    return t
 
 
 def run():
@@ -47,9 +48,26 @@ def run():
 
     records = archive["records"]
     added = 0
-
-    for event in report["events"]:
-        kickoff = parse_time(event["kickoff"])
+    quarantine=archive.setdefault("quarantine",{})
+    raw=report["events"]
+    if not isinstance(raw,list) or not isinstance(records,dict) or not isinstance(quarantine,dict):
+        raise ValueError("archive schema")
+    counts=Counter(e.get("id") for e in raw if isinstance(e,dict) and isinstance(e.get("id"),str))
+    for event in raw:
+        if not isinstance(event,dict):continue
+        if not all(isinstance(event.get(k),str) and event[k].strip() and "|" not in event[k] for k in ("id","league","home","away")) or event["home"]==event["away"]:continue
+        if counts[event["id"]]!=1 or event["id"] in quarantine:continue
+        try:kickoff=parse_time(event["kickoff"])
+        except (KeyError,ValueError,TypeError,AttributeError):continue
+        # One event ID cannot be reused across teams, leagues or kickoff times.
+        try:
+            conflict=any(r["eventId"]==event["id"] and (
+                (r["league"],r["home"],r["away"])!=(event["league"],event["home"],event["away"])
+                or parse_time(r["kickoff"])!=kickoff) for r in records.values())
+        except (KeyError,ValueError,TypeError,AttributeError):raise ValueError("invalid existing archive identity")
+        if conflict:
+            quarantine[event["id"]]=dict(reason="event_identity_conflict",detectedAt=stamp)
+            continue
 
         if captured >= kickoff:
             continue
@@ -58,18 +76,26 @@ def run():
             ("over15", ("Over", "Under")),
             ("btts", ("Yes", "No"))
         ):
-            for book in event.get(market, []):
-                prices = book["prices"]
+            books=event.get(market,[])
+            if not isinstance(books,list):continue
+            counts_books=Counter(b.get("bookmaker") for b in books if isinstance(b,dict) and isinstance(b.get("bookmaker"),str))
+            for book in books:
+                if not isinstance(book,dict):continue
+                key=book.get("bookmaker")
+                if not isinstance(key,str) or not key or "|" in key or counts_books[key]!=1:continue
+                prices=book.get("prices")
+                if not isinstance(prices,dict) or set(prices)!=set(names):continue
 
                 if not all(
-                    isinstance(prices.get(n), (int, float))
+                    type(prices.get(n)) in (int, float)
                     and math.isfinite(prices[n])
                     and prices[n] > 1
                     for n in names
                 ):
                     continue
 
-                updated = parse_time(book["lastUpdate"])
+                try:updated=parse_time(book["lastUpdate"])
+                except (KeyError,ValueError,TypeError,AttributeError):continue
 
                 if not 0 <= (
                     captured - updated
@@ -97,11 +123,12 @@ def run():
 
                 history = record["history"]
 
-                if any(
-                    h["lastUpdate"] == book["lastUpdate"]
-                    for h in history
-                ):
+                same=[h for h in history if parse_time(h["lastUpdate"])==updated]
+                if same:
+                    if len(same)!=1 or same[0]["prices"]!=prices:
+                        quarantine[event["id"]]=dict(reason="same_timestamp_price_conflict",detectedAt=stamp)
                     continue
+                if event["id"] in quarantine:continue
 
                 probability = (
                     1 / prices[names[0]]
@@ -150,6 +177,8 @@ def run():
     archive["mode"] = "research_only"
     archive["decision"] = "PAS"
     archive["recordCount"] = len(records)
+    archive["integrityVersion"]="6.85"
+    archive["quarantinedEvents"]=len(quarantine)
 
     temp = ARCHIVE.with_suffix(".tmp")
     temp.write_text(

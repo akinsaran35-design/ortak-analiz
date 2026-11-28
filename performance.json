@@ -1,14 +1,14 @@
 {
   "version": "2.4",
-  "updatedAt": "2026-11-27T22:54:04.952709+03:00",
+  "updatedAt": "2026-11-28T18:32:38.162830+03:00",
   "method": "First recorded future-date candidates; new scores require corroborated sources; kickoff unverified; no profit measurement.",
   "errors": [],
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "overall": {
-    "recorded": 93,
+    "recorded": 134,
     "settled": 4,
-    "pending": 89,
+    "pending": 130,
     "markets": {
       "1.5 Üst": {
         "tested": 4,
@@ -29,9 +29,9 @@
   },
   "leagues": {
     "İngiltere Premier Lig": {
-      "recorded": 18,
+      "recorded": 27,
       "settled": 0,
-      "pending": 18,
+      "pending": 27,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -51,9 +51,9 @@
       }
     },
     "İngiltere Championship": {
-      "recorded": 17,
+      "recorded": 27,
       "settled": 4,
-      "pending": 13,
+      "pending": 23,
       "markets": {
         "1.5 Üst": {
           "tested": 4,
@@ -73,9 +73,9 @@
       }
     },
     "Almanya Bundesliga": {
-      "recorded": 7,
+      "recorded": 13,
       "settled": 0,
-      "pending": 7,
+      "pending": 13,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -139,9 +139,9 @@
       }
     },
     "Fransa Ligue 1": {
-      "recorded": 8,
+      "recorded": 16,
       "settled": 0,
-      "pending": 8,
+      "pending": 16,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -161,9 +161,9 @@
       }
     },
     "Hollanda Eredivisie": {
-      "recorded": 10,
+      "recorded": 14,
       "settled": 0,
-      "pending": 10,
+      "pending": 14,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -205,9 +205,9 @@
       }
     },
     "Türkiye Süper Lig": {
-      "recorded": 4,
+      "recorded": 8,
       "settled": 0,
-      "pending": 4,
+      "pending": 8,
       "markets": {
         "1.5 Üst": {
           "tested": 0,
@@ -229,9 +229,9 @@
   },
   "periods": {
     "30": {
-      "recorded": 4,
+      "recorded": 10,
       "settled": 4,
-      "pending": 0,
+      "pending": 6,
       "markets": {
         "1.5 Üst": {
           "tested": 4,
@@ -251,9 +251,9 @@
       }
     },
     "90": {
-      "recorded": 4,
+      "recorded": 10,
       "settled": 4,
-      "pending": 0,
+      "pending": 6,
       "markets": {
         "1.5 Üst": {
           "tested": 4,

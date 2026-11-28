@@ -15,7 +15,8 @@ def main():
     daily, odds, matching = [json.loads(Path(p).read_text(encoding="utf-8")) for p in ("daily.json","odds.json","matching.json")]
     try:
         snapshot_age = now - datetime.fromisoformat(odds["updatedAt"].replace("Z","+00:00"))
-        fresh = timedelta(0) <= snapshot_age <= timedelta(minutes=30)
+        # A partial provider response is not a complete current market snapshot.
+        fresh = not odds.get("errors") and timedelta(0) <= snapshot_age <= timedelta(minutes=30)
     except (KeyError, ValueError, TypeError):
         fresh = False
     events = {e["id"]: e for e in odds["events"]} if fresh else {}

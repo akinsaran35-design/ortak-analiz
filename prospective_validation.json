@@ -2,32 +2,17 @@
   "version": "4.4",
   "market": "2.5 Ust",
   "candidate": "weightedBrier",
-  "updatedAt": "2026-11-27T22:54:02.229101+03:00",
-  "recorded": 180,
+  "updatedAt": "2026-11-28T18:32:35.495659+03:00",
+  "recorded": 222,
   "verifiedFallbackSettled": 0,
   "calendarDuplicatePrevented": 0,
   "captureWindowDays": 14,
   "captureCounts": {
-    "already_recorded": 169,
+    "already_recorded": 173,
     "insufficient_history": 10,
-    "new": 1,
-    "recovered_identity": 1
+    "new": 1
   },
   "missingHistory": [
-    {
-      "league": "en.1",
-      "date": "2026-11-28",
-      "home": "Crystal Palace FC",
-      "away": "Hull City AFC",
-      "sourceSamples": {
-        "home": 36,
-        "away": 4
-      },
-      "canonicalSamples": {
-        "home": 36,
-        "away": 4
-      }
-    },
     {
       "league": "en.1",
       "date": "2026-12-02",
@@ -57,31 +42,17 @@
       }
     },
     {
-      "league": "de.1",
-      "date": "2026-11-28",
-      "home": "1. FC Köln",
-      "away": "SV 07 Elversberg",
+      "league": "en.1",
+      "date": "2026-12-12",
+      "home": "Hull City AFC",
+      "away": "Tottenham Hotspur FC",
       "sourceSamples": {
-        "home": 38,
-        "away": 3
+        "home": 4,
+        "away": 40
       },
       "canonicalSamples": {
-        "home": 38,
-        "away": 3
-      }
-    },
-    {
-      "league": "de.1",
-      "date": "2026-11-28",
-      "home": "SC Paderborn 07",
-      "away": "FC Schalke 04",
-      "sourceSamples": {
-        "home": 3,
-        "away": 2
-      },
-      "canonicalSamples": {
-        "home": 3,
-        "away": 2
+        "home": 4,
+        "away": 40
       }
     },
     {
@@ -127,17 +98,31 @@
       }
     },
     {
-      "league": "fr.1",
-      "date": "2026-11-28",
-      "home": "OGC Nice",
-      "away": "ES Troyes AC",
+      "league": "de.1",
+      "date": "2026-12-12",
+      "home": "Hamburger SV",
+      "away": "FC Schalke 04",
       "sourceSamples": {
-        "home": 35,
-        "away": 4
+        "home": 34,
+        "away": 2
       },
       "canonicalSamples": {
-        "home": 35,
-        "away": 4
+        "home": 34,
+        "away": 2
+      }
+    },
+    {
+      "league": "de.1",
+      "date": "2026-12-12",
+      "home": "SC Paderborn 07",
+      "away": "SV 07 Elversberg",
+      "sourceSamples": {
+        "home": 3,
+        "away": 3
+      },
+      "canonicalSamples": {
+        "home": 3,
+        "away": 3
       }
     },
     {
@@ -152,6 +137,20 @@
       "canonicalSamples": {
         "home": 4,
         "away": 34
+      }
+    },
+    {
+      "league": "fr.1",
+      "date": "2026-12-12",
+      "home": "Stade Brestois 29",
+      "away": "ES Troyes AC",
+      "sourceSamples": {
+        "home": 37,
+        "away": 4
+      },
+      "canonicalSamples": {
+        "home": 37,
+        "away": 4
       }
     }
   ],
@@ -194,14 +193,14 @@
     }
   },
   "tested": 4,
-  "pending": 176,
+  "pending": 218,
   "pendingDateStatus": {
-    "future": 170,
-    "today": 6,
-    "past": 0,
+    "future": 177,
+    "today": 35,
+    "past": 6,
     "invalidDate": 0
   },
-  "pendingDateStatusAsOf": "2026-11-27",
+  "pendingDateStatusAsOf": "2026-11-28",
   "minimumMatches": 500,
   "liveEnabled": false,
   "status": "collecting_data",
@@ -211,7 +210,7 @@
   "marketResearch": {
     "1.5 Üst": {
       "tested": 0,
-      "pending": 90,
+      "pending": 132,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},
@@ -246,7 +245,7 @@
     },
     "2.5 Üst": {
       "tested": 4,
-      "pending": 176,
+      "pending": 218,
       "legacyWithoutForecast": 0,
       "invalid": 0,
       "scores": {
@@ -285,7 +284,7 @@
     },
     "KG Var": {
       "tested": 0,
-      "pending": 90,
+      "pending": 132,
       "legacyWithoutForecast": 90,
       "invalid": 0,
       "scores": {},

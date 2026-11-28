@@ -1,0 +1,30 @@
+name: V6.51 xT source readiness audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_xt_source_audit.py'
+      - 'scripts/test_extra_xt_source_audit.py'
+      - '.github/workflows/extra-xt-source-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extra_xt_source_audit.py'
+      - 'scripts/test_extra_xt_source_audit.py'
+      - '.github/workflows/extra-xt-source-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_extra_xt_source_audit.py
+      - run: python scripts/extra_xt_source_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extra-xt-source-audit
+          path: extra_xt_source_audit.json
+          if-no-files-found: error
+          retention-days: 30

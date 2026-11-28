@@ -1,6 +1,6 @@
 {
   "version": "4.5",
-  "updatedAt": "2026-11-27T19:54:04.996422+00:00",
+  "updatedAt": "2026-11-28T15:32:38.231248+00:00",
   "status": "healthy",
   "qualityGate": "PASS",
   "dataAgeHours": {
@@ -8,14 +8,14 @@
     "odds": 0.01,
     "validation": 0.0
   },
-  "archiveRecords": 180,
+  "archiveRecords": 222,
   "settled": 4,
-  "pending": 176,
+  "pending": 218,
   "duplicates": 0,
   "invalidRecords": 0,
   "incoherentMarketRecords": 0,
   "overdueResults": 0,
-  "validOddsEvents": 139,
+  "validOddsEvents": 123,
   "minimumMatches": 500,
   "validationProgress": 0.8,
   "liveEnabled": false,

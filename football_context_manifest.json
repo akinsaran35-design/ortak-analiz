@@ -1,14 +1,14 @@
 {
   "version": "5.35",
   "mode": "descriptive_research_manifest",
-  "dailyUpdatedAt": "2026-11-27T22:53:31+03:00",
-  "cutoffExclusive": "2026-11-27",
+  "dailyUpdatedAt": "2026-11-28T18:32:05+03:00",
+  "cutoffExclusive": "2026-11-28",
   "predictionsEnabled": false,
   "decision": "PAS",
   "status": "PASS",
   "coverageMatches": 17553,
   "contextLeagues": 9,
-  "h2hFixtures": 96,
+  "h2hFixtures": 134,
   "validationSamples": {
     "firstHalfGoal": 15724,
     "secondHalfGoal": 15724,
@@ -17,10 +17,10 @@
     "totalYellowCardsAtLeast5": 15724
   },
   "sha256": {
-    "daily.json": "935d0a667148e45192a002a382267c866943e77fd6c4b00b0172e4b36298d13e",
-    "football_context_research.json": "b56c577574c2b379e207834ac4a862f1aa8d9b0aafe9e834156748f6718d2f33",
-    "historical_metric_coverage.json": "b92b51b1109374bfebcac248b204dbdcc345d8d650730ac12f2a97692f6143bf",
-    "h2h_history_research.json": "607d8b19f6628c0fd6709d0ff2c8a0457eea4c493194f961a9d6620da6fc0522",
-    "chronological_statistics_research.json": "7358f1a0c0cdbafe6dad3a3305c92477961dd0b9b2935be99b7e327e62efc8da"
+    "daily.json": "346b3456722533ab5e8e5a3225799baccf20b7a717fbbfe4ffbc3dcd50f0cd20",
+    "football_context_research.json": "9ea0ab63ff62ca66e5bfe712ce27bd371c3d66cea6eeb5fc8119a0bc56eaaa1f",
+    "historical_metric_coverage.json": "2c964b98687af0b5cc297d0597460f0d66eb8674929084bce27d183b95e485d9",
+    "h2h_history_research.json": "ec26294b4dc34fe70cff0fca283ae17d79be66ac341844510a8270ca8e068ab4",
+    "chronological_statistics_research.json": "fa4c3eb8df024a5496169243b7355ec5eb6097f4df4bec188be30b446034fcbc"
   }
 }
