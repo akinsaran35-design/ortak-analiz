@@ -1217,6 +1217,20 @@ def lightgbm_fit(train):
     model.fit(np.asarray([xgb_features(r[1]) for r in train]),np.asarray([score_class(r[2]) for r in train]))
     return model
 
+def catboost_fit(train):
+    if len(train)<XGB_MIN_TRAIN or {score_class(r[2]) for r in train}!=set(range(5)):
+        return None
+    import numpy as np
+    from catboost import CatBoostClassifier
+    model=CatBoostClassifier(loss_function="MultiClass",iterations=40,depth=2,
+        learning_rate=0.05,l2_leaf_reg=5,random_seed=20261128,thread_count=1,
+        bootstrap_type="No",random_strength=0,allow_writing_files=False,verbose=False)
+    model.fit(np.asarray([xgb_features(r[1]) for r in train]),np.asarray([score_class(r[2]) for r in train]))
+    return model
+
+def catboost_backtest(rows):
+    return stacking_backtest(rows,catboost_fit,"catboost")
+
 def lightgbm_backtest(rows):
     return stacking_backtest(rows,lightgbm_fit,"lightgbm")
 
@@ -1285,7 +1299,8 @@ def build(now,reader=read):
     calibration=league_calibration_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     xgb=xgb_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     lgb=lightgbm_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.45",lightgbmBacktest=lgb,xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    cat=catboost_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.46",catboostBacktest=cat,lightgbmBacktest=lgb,xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -1296,6 +1311,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("CATBOOST_BACKTEST",json.dumps(report["catboostBacktest"]))
     print("LIGHTGBM_BACKTEST",json.dumps(report["lightgbmBacktest"]))
     print("XGBOOST_BACKTEST",json.dumps(report["xgboostBacktest"]))
     print("LEAGUE_CALIBRATION",json.dumps(report["leagueCalibration"]))
