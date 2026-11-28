@@ -63,6 +63,17 @@ class IdentityTests(unittest.TestCase):
         doc["results"]=2
         r=match(doc,groups)
         self.assertEqual(r["aliasShadow"]["additionalCandidates"],0)
+    def test_explicit_source_name_shadow(self):
+        doc=provider(); groups=targets()
+        row=groups[0]["rows"][0]
+        row["home"]="Test Athletic"
+        row["sourceTeamNames"]={"home":["Test Athletic","Test A"],"away":["Test B"]}
+        r=match(doc,groups)
+        self.assertEqual(r["matched"],0)
+        self.assertEqual(r["sourceNameShadow"]["additionalCandidates"],1)
+        self.assertFalse(r["sourceNameShadow"]["verified"])
+        row["sourceTeamNames"]["away"].append("Test A")
+        self.assertEqual(match(doc,groups)["sourceNameShadow"]["additionalCandidates"],0)
     def test_incomplete(self):
         doc=provider();doc["paging"]["total"]=2
         with self.assertRaises(ValueError):match(doc,targets())
