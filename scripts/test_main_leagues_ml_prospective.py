@@ -55,4 +55,16 @@ class MainCohortTests(unittest.TestCase):
         self.assertAlmostEqual(ref["over15"],.801)
         self.assertAlmostEqual(ref["over25"],.577)
         self.assertAlmostEqual(ref["btts"],.604)
+    def test_venue_reference_fallback_and_invalid_history(self):
+        features={}
+        for side in ("home","away"):
+            features.update({side+"Venue_last10_matches":4,side+"_last10_matches":10,side+"_last10_goals_for":1.5,side+"_last10_goals_against":1.5})
+        ref=venue_form_reference(features)
+        for market,expected in dict(over15=.801,over25=.577,btts=.604).items():
+            self.assertAlmostEqual(ref[market],expected,places=12)
+        for key,invalid in (("homeVenue_last10_matches",True),("homeVenue_last10_matches",11),("away_last10_matches",11),("away_last10_matches",4),("away_last10_matches",5.5),("home_last10_goals_for",float("nan")),("home_last10_goals_against",-1)):
+            with self.subTest(key=key,invalid=invalid):
+                self.assertIsNone(venue_form_reference(dict(features,**{key:invalid})))
+        del features["home_last10_goals_for"]
+        self.assertIsNone(venue_form_reference(features))
 if __name__=="__main__":unittest.main()

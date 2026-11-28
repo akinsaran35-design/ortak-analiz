@@ -93,10 +93,14 @@ def venue_form_reference(features):
     for side in ("home","away"):
         venue=side+"Venue_last10"
         all_venues=side+"_last10"
-        prefix=venue if features[venue+"_matches"]>=5 else all_venues
-        if features[prefix+"_matches"]<5:
+        venue_n=features.get(venue+"_matches")
+        if type(venue_n) is not int or not 0<=venue_n<=10:
             return None
-        gf,ga=(features[prefix+"_goals_"+x] for x in ("for","against"))
+        prefix=venue if venue_n>=5 else all_venues
+        n=features.get(prefix+"_matches")
+        if type(n) is not int or not 5<=n<=10:
+            return None
+        gf,ga=(features.get(prefix+"_goals_"+x) for x in ("for","against"))
         if any(type(x) not in (int,float) or not math.isfinite(x) or x<0 for x in (gf,ga)):
             return None
         rates.append((gf,ga))
