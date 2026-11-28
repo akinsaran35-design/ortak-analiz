@@ -1,7 +1,7 @@
 {
   "version": "5.37",
   "mode": "fixture_data_quality_only",
-  "dailyUpdatedAt": "2026-11-28T13:34:03+03:00",
+  "dailyUpdatedAt": "2026-11-28T14:12:53+03:00",
   "cutoffExclusive": "2026-11-28",
   "predictionsEnabled": false,
   "decision": "PAS",
@@ -7501,7 +7501,7 @@
       "league": "tr.1",
       "leagueName": "Türkiye Süper Lig",
       "latestLeagueResultAgeDays": 5,
-      "fixtures": 6,
+      "fixtures": 7,
       "flags": {
         "h2h:missing": 3,
         "h2h:partial": 2
@@ -7847,6 +7847,63 @@
               "redCards": 5,
               "shots": 5,
               "shotsOnTarget": 5
+            },
+            "away": {
+              "halfTimeGoals": 6,
+              "corners": 6,
+              "yellowCards": 6,
+              "redCards": 6,
+              "shots": 6,
+              "shotsOnTarget": 6
+            }
+          },
+          "flags": []
+        },
+        {
+          "date": "2026-12-05",
+          "match": "konyaspor – gaziantep",
+          "form": {
+            "home": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 6
+            },
+            "away": {
+              "status": "available",
+              "sample": 5,
+              "latestAgeDays": 7
+            }
+          },
+          "h2h": {
+            "sample": 10,
+            "status": "available"
+          },
+          "metricSamples": {
+            "home": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            },
+            "away": {
+              "halfTimeGoals": 10,
+              "corners": 10,
+              "yellowCards": 10,
+              "redCards": 10,
+              "shots": 10,
+              "shotsOnTarget": 10
+            }
+          },
+          "venueMetricSamples": {
+            "home": {
+              "halfTimeGoals": 7,
+              "corners": 7,
+              "yellowCards": 7,
+              "redCards": 7,
+              "shots": 7,
+              "shotsOnTarget": 7
             },
             "away": {
               "halfTimeGoals": 6,

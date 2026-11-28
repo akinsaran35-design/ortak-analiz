@@ -1,16 +1,16 @@
 {
   "version": "4.59",
-  "updatedAt": "2026-11-28T10:34:28.708903+00:00",
+  "updatedAt": "2026-11-28T11:13:18.398088+00:00",
   "source": "https://github.com/oladeeayo/open-matchday",
   "sourceUpdatedAt": "2026-11-28T07:07:07+00:00",
-  "oddsUpdatedAt": "2026-11-28T10:23:40.978874+00:00",
-  "dailyUpdatedAt": "2026-11-28T13:34:03+03:00",
+  "oddsUpdatedAt": "2026-11-28T11:12:52.256440+00:00",
+  "dailyUpdatedAt": "2026-11-28T14:12:53+03:00",
   "oddsFresh": true,
   "status": "research_only",
   "decision": "PAS",
   "realBettingEnabled": false,
-  "originalMatched": 78,
-  "reconciledMatched": 95,
+  "originalMatched": 79,
+  "reconciledMatched": 96,
   "proposedCorrections": [
     {
       "league": "İngiltere Premier Lig",
@@ -321,6 +321,6 @@
     "2026-12-01": 1,
     "2026-12-03": 1,
     "2026-12-04": 2,
-    "2026-12-05": 37
+    "2026-12-05": 38
   }
 }

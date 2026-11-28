@@ -1724,5 +1724,26 @@
       "KG Var": 47.8
     },
     "result": null
+  },
+  "[\"2026-12-05\", \"Türkiye Süper Lig\", \"konyaspor – gaziantep\"]": {
+    "date": "2026-12-05",
+    "league": "Türkiye Süper Lig",
+    "match": "konyaspor – gaziantep",
+    "recordedAt": "2026-11-28T14:13:17.824072+03:00",
+    "modelVersion": "1.6",
+    "markets": {
+      "1.5 Üst": 76.0,
+      "2.5 Üst": 51.9,
+      "KG Var": 55.0
+    },
+    "result": null,
+    "forecastTiming": {
+      "version": "6.82",
+      "generationStartedAt": "2026-11-28T14:12:53+03:00",
+      "generationCompletedAt": "2026-11-28T14:12:55.038602+03:00",
+      "historyCutoffExclusive": "2026-11-28",
+      "historyThrough": "2026-11-23",
+      "sameSourceDataEstablished": false
+    }
   }
 }

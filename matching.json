@@ -1,8 +1,8 @@
 {
   "version": "2.8",
-  "updatedAt": "2026-11-28T10:34:17.772899+00:00",
+  "updatedAt": "2026-11-28T11:13:07.111414+00:00",
   "decision": "PAS",
-  "matchedCount": 78,
+  "matchedCount": 79,
   "unmatchedCount": 42,
   "matched": [
     {
@@ -309,7 +309,7 @@
       "match": "corum – kocaelispor",
       "eventId": "3e9a89fc7f5bd95d70e6fd3faaccf5d2",
       "kickoff": "2026-11-29T10:30:00+00:00",
-      "freshLineCount": 2
+      "freshLineCount": 3
     },
     {
       "match": "Gil Vicente FC – GD Estoril Praia",
@@ -472,6 +472,12 @@
       "eventId": "2d7cee4a6e6a6632dd46f252c9e379f2",
       "kickoff": "2026-12-05T19:45:00+00:00",
       "freshLineCount": 1
+    },
+    {
+      "match": "konyaspor – gaziantep",
+      "eventId": "56c8e2a62c106a6753d1216205dfe5c9",
+      "kickoff": "2026-12-05T10:30:00+00:00",
+      "freshLineCount": 2
     }
   ],
   "unmatched": [

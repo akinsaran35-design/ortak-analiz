@@ -1,6 +1,6 @@
 {
   "version": "5.28",
-  "dailyUpdatedAt": "2026-11-28T13:34:03+03:00",
+  "dailyUpdatedAt": "2026-11-28T14:12:53+03:00",
   "cutoffExclusive": "2026-11-28",
   "mode": "descriptive_research",
   "decision": "PAS",
@@ -3026,14 +3026,15 @@
       "extraErrors": [],
       "extraInvalid": 0,
       "crossDivisionFixtures": 0,
-      "fixtures": 6,
+      "fixtures": 7,
       "sampleCounts": {
         "0": 3,
         "2": 1,
         "4": 1,
-        "6": 1
+        "6": 1,
+        "10": 1
       },
-      "formSidesRefreshed": 12,
+      "formSidesRefreshed": 14,
       "formSidesNewer": 3,
       "rows": [
         {
@@ -3154,6 +3155,26 @@
           "formNewDates": {
             "home": "2026-11-22",
             "away": "2026-11-22"
+          }
+        },
+        {
+          "match": "konyaspor – gaziantep",
+          "date": "2026-12-05",
+          "sample": 10,
+          "csvMatchesAvailable": 10,
+          "crossDivisionMatches": 0,
+          "source": "football-data.co.uk",
+          "formRefreshed": {
+            "home": true,
+            "away": true
+          },
+          "formOldDates": {
+            "home": "2026-11-22",
+            "away": "2026-11-21"
+          },
+          "formNewDates": {
+            "home": "2026-11-22",
+            "away": "2026-11-21"
           }
         }
       ]

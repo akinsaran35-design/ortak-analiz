@@ -1,6 +1,6 @@
 {
   "status": "observed",
-  "added": 0,
+  "added": 344,
   "events": [
     {
       "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
@@ -11,7 +11,7 @@
           "firstObserved": 1.72,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:02Z",
           "dropPct": -1.7441860465116295
         },
         {
@@ -19,16 +19,16 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.85,
-          "current": 1.8,
+          "current": 1.79,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
-          "dropPct": 2.702702702702705
+          "currentLastUpdate": "2026-11-28T11:12:33Z",
+          "dropPct": 3.243243243243246
         }
       ],
       "currentBookCount": 3,
@@ -46,7 +46,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -54,7 +54,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         },
         {
@@ -62,7 +62,7 @@
           "firstObserved": 1.79,
           "current": 1.79,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         }
       ],
@@ -81,7 +81,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:44Z",
+          "currentLastUpdate": "2026-11-28T11:12:11Z",
           "dropPct": 0.0
         },
         {
@@ -89,7 +89,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         },
         {
@@ -97,7 +97,7 @@
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:42Z",
+          "currentLastUpdate": "2026-11-28T11:12:42Z",
           "dropPct": 0.0
         }
       ],
@@ -116,7 +116,7 @@
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -124,7 +124,7 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:03Z",
           "dropPct": 0.0
         },
         {
@@ -132,7 +132,7 @@
           "firstObserved": 1.96,
           "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -140,7 +140,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -148,7 +148,7 @@
           "firstObserved": 2.1,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -167,7 +167,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -175,7 +175,7 @@
           "firstObserved": 1.67,
           "current": 1.66,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.5988023952095815
         },
         {
@@ -183,16 +183,16 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.72,
-          "current": 1.72,
+          "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
+          "dropPct": -0.5813953488372098
         }
       ],
       "currentBookCount": 4,
@@ -210,7 +210,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -218,7 +218,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -226,7 +226,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -234,7 +234,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -253,7 +253,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -272,7 +272,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -280,7 +280,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -288,7 +288,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -296,7 +296,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -315,7 +315,7 @@
           "firstObserved": 1.22,
           "current": 1.22,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -334,7 +334,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -353,7 +353,7 @@
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -361,7 +361,7 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -369,7 +369,7 @@
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T09:21:23.302175+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
           "dropPct": 0.0
         }
       ],
@@ -388,7 +388,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         },
         {
@@ -396,7 +396,7 @@
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         }
       ],
@@ -415,7 +415,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -423,7 +423,7 @@
           "firstObserved": 1.73,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 1.7341040462427761
         },
         {
@@ -431,7 +431,7 @@
           "firstObserved": 1.65,
           "current": 1.65,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -450,7 +450,7 @@
           "firstObserved": 2.1,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -458,7 +458,7 @@
           "firstObserved": 2.18,
           "current": 2.18,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -466,7 +466,7 @@
           "firstObserved": 2.14,
           "current": 2.14,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -474,7 +474,7 @@
           "firstObserved": 2.4,
           "current": 2.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:14Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -493,7 +493,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -501,7 +501,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -509,7 +509,7 @@
           "firstObserved": 1.81,
           "current": 1.81,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -517,7 +517,7 @@
           "firstObserved": 1.81,
           "current": 1.81,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:14Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -536,7 +536,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -544,7 +544,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -552,7 +552,7 @@
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -560,7 +560,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -579,7 +579,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -587,7 +587,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -595,7 +595,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         },
         {
@@ -603,7 +603,7 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         }
       ],
@@ -622,7 +622,7 @@
           "firstObserved": 1.68,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.5952380952380958
         },
         {
@@ -630,7 +630,7 @@
           "firstObserved": 1.61,
           "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -638,7 +638,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -657,7 +657,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -676,7 +676,7 @@
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -684,7 +684,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -692,7 +692,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -700,7 +700,7 @@
           "firstObserved": 1.76,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 1.7045454545454561
         }
       ],
@@ -719,7 +719,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -738,7 +738,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -757,7 +757,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -765,7 +765,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -784,7 +784,7 @@
           "firstObserved": 1.58,
           "current": 1.58,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:44Z",
+          "currentLastUpdate": "2026-11-28T11:12:11Z",
           "dropPct": 0.0
         },
         {
@@ -792,7 +792,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -811,7 +811,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -830,7 +830,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -849,7 +849,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -868,7 +868,7 @@
           "firstObserved": 1.64,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -876,7 +876,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         },
         {
@@ -884,7 +884,7 @@
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         }
       ],
@@ -903,7 +903,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -911,7 +911,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         }
       ],
@@ -930,7 +930,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -938,7 +938,7 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -946,24 +946,24 @@
           "firstObserved": 1.83,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:42Z",
+          "currentLastUpdate": "2026-11-28T11:12:08Z",
           "dropPct": 1.6393442622950833
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.87,
-          "current": 1.87,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
+          "dropPct": 1.069518716577541
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.87,
-          "current": 1.87,
+          "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:14Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
+          "dropPct": -1.6042780748662997
         }
       ],
       "currentBookCount": 5,
@@ -981,7 +981,7 @@
           "firstObserved": 1.5,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 4.0000000000000036
         }
       ],
@@ -1000,7 +1000,7 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -1019,7 +1019,7 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1027,7 +1027,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:26Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1035,7 +1035,7 @@
           "firstObserved": 1.74,
           "current": 1.74,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         },
         {
@@ -1043,7 +1043,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -1062,7 +1062,7 @@
           "firstObserved": 2.05,
           "current": 2.05,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -1070,7 +1070,7 @@
           "firstObserved": 2.1,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1078,7 +1078,7 @@
           "firstObserved": 2.2,
           "current": 2.2,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -1097,7 +1097,7 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -1116,7 +1116,7 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1124,7 +1124,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:26Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1132,7 +1132,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         },
         {
@@ -1140,7 +1140,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -1148,7 +1148,7 @@
           "firstObserved": 1.94,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:26Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 1.0309278350515474
         }
       ],
@@ -1167,19 +1167,27 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:31Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.85,
-          "current": 1.85,
+          "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:53Z",
+          "dropPct": -3.243243243243234
+        },
+        {
+          "bookmaker": "matchbook",
+          "firstObserved": 1.97,
+          "current": 1.97,
+          "firstObservedAt": "2026-11-28T11:12:52.256440+00:00",
+          "currentLastUpdate": "2026-11-28T11:12:24Z",
+          "dropPct": null
         }
       ],
-      "currentBookCount": 2,
+      "currentBookCount": 3,
       "comparableBookCount": 2,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
@@ -1192,17 +1200,17 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.71,
-          "current": 1.71,
+          "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
+          "dropPct": 0.5847953216374274
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.67,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 1.7964071856287442
         },
         {
@@ -1210,7 +1218,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         }
       ],
@@ -1218,7 +1226,7 @@
       "comparableBookCount": 3,
       "firstObservedMedian": 1.67,
       "currentComparableMedian": 1.64,
-      "medianDropPct": 0.0
+      "medianDropPct": 0.5847953216374274
     },
     {
       "eventId": "4001fed3da6baa90d8b6278f43a77af1",
@@ -1227,33 +1235,33 @@
         {
           "bookmaker": "casumo",
           "firstObserved": 1.8,
-          "current": 1.8,
+          "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:53Z",
+          "dropPct": -6.111111111111104
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.67,
-          "current": 1.67,
+          "current": 1.79,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:31Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
+          "dropPct": -7.185628742514977
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.94,
-          "current": 1.94,
+          "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:24Z",
+          "dropPct": -1.0309278350515474
         }
       ],
       "currentBookCount": 3,
       "comparableBookCount": 3,
       "firstObservedMedian": 1.8,
-      "currentComparableMedian": 1.8,
-      "medianDropPct": 0.0
+      "currentComparableMedian": 1.91,
+      "medianDropPct": -6.111111111111104
     },
     {
       "eventId": "40236ab976955345ebd1edb72abf6b22",
@@ -1262,41 +1270,41 @@
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.53,
-          "current": 1.53,
+          "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
+          "dropPct": -4.575163398692815
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.58,
-          "current": 1.58,
+          "current": 1.64,
           "firstObservedAt": "2026-11-28T09:53:05.374700+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
+          "dropPct": -3.797468354430369
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.55,
-          "current": 1.55,
+          "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
+          "dropPct": -0.6451612903225812
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.62,
-          "current": 1.72,
+          "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:14Z",
-          "dropPct": -6.1728395061728305
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
+          "dropPct": -8.024691358024684
         }
       ],
       "currentBookCount": 4,
       "comparableBookCount": 4,
       "firstObservedMedian": 1.565,
-      "currentComparableMedian": 1.565,
-      "medianDropPct": 0.0
+      "currentComparableMedian": 1.62,
+      "medianDropPct": -4.186315876561592
     },
     {
       "eventId": "4535d59d6670cc8342d5e6b40ce76fb4",
@@ -1307,7 +1315,7 @@
           "firstObserved": 1.15,
           "current": 1.15,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         },
         {
@@ -1315,7 +1323,7 @@
           "firstObserved": 1.18,
           "current": 1.18,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:17Z",
+          "currentLastUpdate": "2026-11-28T11:12:44Z",
           "dropPct": 0.0
         }
       ],
@@ -1334,7 +1342,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -1342,7 +1350,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -1361,7 +1369,7 @@
           "firstObserved": 2.28,
           "current": 2.28,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -1369,7 +1377,7 @@
           "firstObserved": 2.25,
           "current": 2.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -1377,7 +1385,7 @@
           "firstObserved": 2.48,
           "current": 2.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:40Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": -0.8064516129032265
         }
       ],
@@ -1396,7 +1404,7 @@
           "firstObserved": 1.9,
           "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -1404,7 +1412,7 @@
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:03Z",
           "dropPct": 0.0
         },
         {
@@ -1412,7 +1420,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -1420,16 +1428,16 @@
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.0,
-          "current": 2.0,
+          "current": 2.02,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
+          "dropPct": -1.0000000000000009
         }
       ],
       "currentBookCount": 5,
@@ -1447,7 +1455,7 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -1466,7 +1474,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -1485,7 +1493,7 @@
           "firstObserved": 1.66,
           "current": 1.66,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:02Z",
           "dropPct": 0.0
         },
         {
@@ -1493,7 +1501,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -1512,12 +1520,39 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
       "currentBookCount": 1,
       "comparableBookCount": 1,
+      "firstObservedMedian": null,
+      "currentComparableMedian": null,
+      "medianDropPct": null
+    },
+    {
+      "eventId": "56c8e2a62c106a6753d1216205dfe5c9",
+      "point": 2.5,
+      "books": [
+        {
+          "bookmaker": "grosvenor",
+          "firstObserved": 1.77,
+          "current": 1.77,
+          "firstObservedAt": "2026-11-28T11:12:52.256440+00:00",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
+          "dropPct": null
+        },
+        {
+          "bookmaker": "casumo",
+          "firstObserved": 1.75,
+          "current": 1.75,
+          "firstObservedAt": "2026-11-28T11:12:52.256440+00:00",
+          "currentLastUpdate": "2026-11-28T11:11:53Z",
+          "dropPct": null
+        }
+      ],
+      "currentBookCount": 2,
+      "comparableBookCount": 0,
       "firstObservedMedian": null,
       "currentComparableMedian": null,
       "medianDropPct": null
@@ -1531,7 +1566,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -1539,7 +1574,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:03Z",
           "dropPct": 0.0
         },
         {
@@ -1547,7 +1582,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -1555,16 +1590,16 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.88,
-          "current": 1.87,
+          "current": 1.88,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
-          "dropPct": 0.5319148936170099
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
@@ -1582,7 +1617,7 @@
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:10Z",
+          "currentLastUpdate": "2026-11-28T11:12:05Z",
           "dropPct": 0.0
         },
         {
@@ -1590,7 +1625,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -1598,7 +1633,7 @@
           "firstObserved": 1.97,
           "current": 1.97,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -1606,7 +1641,7 @@
           "firstObserved": 1.96,
           "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:40Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         }
       ],
@@ -1625,7 +1660,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -1644,7 +1679,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -1663,7 +1698,7 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -1671,7 +1706,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -1679,7 +1714,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -1687,7 +1722,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -1706,7 +1741,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:10Z",
+          "currentLastUpdate": "2026-11-28T11:12:05Z",
           "dropPct": 0.0
         },
         {
@@ -1714,7 +1749,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -1722,7 +1757,7 @@
           "firstObserved": 1.82,
           "current": 1.82,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -1730,7 +1765,7 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:40Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         }
       ],
@@ -1749,7 +1784,7 @@
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:31Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         }
       ],
@@ -1768,7 +1803,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -1787,7 +1822,7 @@
           "firstObserved": 1.2,
           "current": 1.2,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -1806,7 +1841,7 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -1825,7 +1860,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -1833,7 +1868,7 @@
           "firstObserved": 1.61,
           "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -1841,7 +1876,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -1860,7 +1895,7 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -1879,7 +1914,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1887,7 +1922,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -1895,7 +1930,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         },
         {
@@ -1903,7 +1938,7 @@
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:26Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -1922,7 +1957,7 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -1930,7 +1965,7 @@
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -1949,7 +1984,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1957,7 +1992,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -1965,7 +2000,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -1984,7 +2019,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -1992,7 +2027,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -2000,7 +2035,7 @@
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -2019,7 +2054,7 @@
           "firstObserved": 1.2,
           "current": 1.2,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -2038,7 +2073,7 @@
           "firstObserved": 1.82,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": -1.6483516483516498
         },
         {
@@ -2046,7 +2081,7 @@
           "firstObserved": 2.0,
           "current": 2.0,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 0.0
         },
         {
@@ -2054,7 +2089,7 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -2062,16 +2097,16 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.08,
-          "current": 2.08,
+          "current": 2.06,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
+          "dropPct": 0.9615384615384623
         }
       ],
       "currentBookCount": 5,
@@ -2089,7 +2124,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -2106,10 +2141,10 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.43,
-          "current": 1.43,
+          "current": 1.41,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:31Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
+          "dropPct": 1.3986013986013999
         }
       ],
       "currentBookCount": 1,
@@ -2127,7 +2162,7 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -2146,7 +2181,7 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -2154,7 +2189,7 @@
           "firstObserved": 1.49,
           "current": 1.49,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -2173,7 +2208,7 @@
           "firstObserved": 2.38,
           "current": 2.38,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -2192,7 +2227,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -2200,7 +2235,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:37Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -2208,7 +2243,7 @@
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -2216,7 +2251,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -2235,7 +2270,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -2254,7 +2289,7 @@
           "firstObserved": 1.29,
           "current": 1.29,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -2273,7 +2308,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -2292,7 +2327,7 @@
           "firstObserved": 2.12,
           "current": 2.12,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -2300,7 +2335,7 @@
           "firstObserved": 2.3,
           "current": 2.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 0.0
         },
         {
@@ -2308,16 +2343,16 @@
           "firstObserved": 2.25,
           "current": 2.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.46,
-          "current": 2.46,
+          "current": 2.48,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
+          "dropPct": -0.8130081300813016
         }
       ],
       "currentBookCount": 4,
@@ -2335,16 +2370,16 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T09:21:23.302175+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
-          "current": 1.5,
+          "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
+          "dropPct": -2.0000000000000018
         }
       ],
       "currentBookCount": 2,
@@ -2362,7 +2397,7 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -2381,23 +2416,23 @@
           "firstObserved": 1.89,
           "current": 1.89,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.9,
-          "current": 1.88,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
-          "dropPct": 1.0526315789473695
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
+          "dropPct": 2.631578947368412
         },
         {
           "bookmaker": "casumo",
           "firstObserved": 1.91,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 3.141361256544494
         },
         {
@@ -2405,7 +2440,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -2413,7 +2448,7 @@
           "firstObserved": 1.97,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
           "dropPct": 1.01522842639594
         }
       ],
@@ -2432,7 +2467,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -2440,7 +2475,7 @@
           "firstObserved": 1.56,
           "current": 1.56,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -2448,7 +2483,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -2467,7 +2502,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -2486,7 +2521,7 @@
           "firstObserved": 1.17,
           "current": 1.17,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -2505,7 +2540,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -2524,7 +2559,7 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -2541,17 +2576,17 @@
         {
           "bookmaker": "leovegas",
           "firstObserved": 2.05,
-          "current": 2.12,
+          "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
-          "dropPct": -3.4146341463414775
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
+          "dropPct": -2.4390243902439157
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 2.02,
           "current": 2.02,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -2559,7 +2594,7 @@
           "firstObserved": 1.95,
           "current": 2.0,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": -2.5641025641025665
         }
       ],
@@ -2567,7 +2602,7 @@
       "comparableBookCount": 3,
       "firstObservedMedian": 2.02,
       "currentComparableMedian": 2.02,
-      "medianDropPct": -2.5641025641025665
+      "medianDropPct": -2.4390243902439157
     },
     {
       "eventId": "ab69b4103cc49d598c7608d48c77ce26",
@@ -2578,7 +2613,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -2595,17 +2630,17 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.57,
-          "current": 1.57,
+          "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
+          "dropPct": 1.2738853503184724
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -2624,7 +2659,7 @@
           "firstObserved": 2.02,
           "current": 2.02,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -2632,7 +2667,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -2640,16 +2675,16 @@
           "firstObserved": 1.97,
           "current": 1.97,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 2.08,
-          "current": 2.08,
+          "current": 2.12,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:14Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
+          "dropPct": -1.9230769230769247
         }
       ],
       "currentBookCount": 4,
@@ -2667,7 +2702,7 @@
           "firstObserved": 1.85,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 1.081081081081082
         },
         {
@@ -2675,7 +2710,7 @@
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:26Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -2683,7 +2718,7 @@
           "firstObserved": 1.88,
           "current": 1.88,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         },
         {
@@ -2691,7 +2726,7 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -2699,7 +2734,7 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:26Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -2718,7 +2753,7 @@
           "firstObserved": 1.33,
           "current": 1.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 2.2556390977443628
         }
       ],
@@ -2737,7 +2772,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -2745,7 +2780,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -2753,7 +2788,7 @@
           "firstObserved": 1.65,
           "current": 1.65,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -2772,7 +2807,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:42Z",
+          "currentLastUpdate": "2026-11-28T11:12:08Z",
           "dropPct": 0.0
         },
         {
@@ -2780,7 +2815,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -2788,7 +2823,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -2796,7 +2831,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -2815,7 +2850,7 @@
           "firstObserved": 2.3,
           "current": 2.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -2823,7 +2858,7 @@
           "firstObserved": 2.38,
           "current": 2.38,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -2831,7 +2866,7 @@
           "firstObserved": 2.32,
           "current": 2.32,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -2850,7 +2885,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -2858,7 +2893,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 0.0
         },
         {
@@ -2866,7 +2901,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -2874,16 +2909,16 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.94,
-          "current": 1.92,
+          "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
-          "dropPct": 1.0309278350515474
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
+          "dropPct": 1.546391752577321
         }
       ],
       "currentBookCount": 5,
@@ -2901,7 +2936,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -2920,7 +2955,7 @@
           "firstObserved": 1.61,
           "current": 1.61,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         }
       ],
@@ -2939,7 +2974,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         }
       ],
@@ -2958,7 +2993,7 @@
           "firstObserved": 1.58,
           "current": 1.58,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -2966,7 +3001,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -2974,7 +3009,7 @@
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -2993,7 +3028,7 @@
           "firstObserved": 1.64,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -3001,7 +3036,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         },
         {
@@ -3009,7 +3044,7 @@
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -3017,7 +3052,7 @@
           "firstObserved": 1.74,
           "current": 1.74,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:07Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         }
       ],
@@ -3036,7 +3071,7 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -3044,7 +3079,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -3052,7 +3087,7 @@
           "firstObserved": 1.64,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T09:21:23.302175+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:14Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -3069,17 +3104,17 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.76,
-          "current": 1.76,
+          "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
+          "dropPct": -0.5681818181818187
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 0.0
         },
         {
@@ -3087,7 +3122,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -3095,22 +3130,22 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.87,
-          "current": 1.89,
+          "current": 1.87,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
-          "dropPct": -1.069518716577529
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 5,
       "comparableBookCount": 5,
       "firstObservedMedian": 1.76,
-      "currentComparableMedian": 1.76,
+      "currentComparableMedian": 1.77,
       "medianDropPct": 0.0
     },
     {
@@ -3122,7 +3157,7 @@
           "firstObserved": 1.54,
           "current": 1.54,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:31Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         }
       ],
@@ -3141,7 +3176,7 @@
           "firstObserved": 1.29,
           "current": 1.29,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -3160,7 +3195,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -3179,7 +3214,7 @@
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -3187,7 +3222,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -3195,7 +3230,7 @@
           "firstObserved": 1.85,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -3203,7 +3238,7 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
@@ -3222,7 +3257,7 @@
           "firstObserved": 1.36,
           "current": 1.36,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -3241,7 +3276,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:44Z",
+          "currentLastUpdate": "2026-11-28T11:12:11Z",
           "dropPct": 0.0
         },
         {
@@ -3249,7 +3284,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         },
         {
@@ -3257,7 +3292,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:42Z",
+          "currentLastUpdate": "2026-11-28T11:12:42Z",
           "dropPct": 0.0
         }
       ],
@@ -3276,7 +3311,7 @@
           "firstObserved": 1.3,
           "current": 1.3,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -3295,23 +3330,23 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.7,
-          "current": 1.7,
+          "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
+          "dropPct": -0.5882352941176476
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -3328,17 +3363,17 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.81,
-          "current": 1.81,
+          "current": 1.79,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
+          "dropPct": 1.1049723756906087
         },
         {
           "bookmaker": "leovegas",
           "firstObserved": 1.88,
           "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 1.5957446808510536
         },
         {
@@ -3346,7 +3381,7 @@
           "firstObserved": 1.83,
           "current": 1.83,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -3354,23 +3389,23 @@
           "firstObserved": 1.91,
           "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.98,
-          "current": 1.95,
+          "current": 1.91,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
-          "dropPct": 1.5151515151515165
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
+          "dropPct": 3.5353535353535386
         }
       ],
       "currentBookCount": 5,
       "comparableBookCount": 5,
       "firstObservedMedian": 1.88,
       "currentComparableMedian": 1.85,
-      "medianDropPct": 0.0
+      "medianDropPct": 1.1049723756906087
     },
     {
       "eventId": "d3d47b94324eb7cde85bd93993437d1c",
@@ -3381,7 +3416,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -3389,7 +3424,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         },
         {
@@ -3397,7 +3432,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -3416,7 +3451,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -3424,7 +3459,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 0.0
         },
         {
@@ -3432,7 +3467,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         }
       ],
@@ -3451,7 +3486,7 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:10Z",
+          "currentLastUpdate": "2026-11-28T11:12:05Z",
           "dropPct": 0.0
         },
         {
@@ -3459,7 +3494,7 @@
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -3467,7 +3502,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -3475,7 +3510,7 @@
           "firstObserved": 1.94,
           "current": 1.96,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:40Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": -1.0309278350515474
         }
       ],
@@ -3494,7 +3529,7 @@
           "firstObserved": 1.63,
           "current": 1.64,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:02Z",
           "dropPct": -0.613496932515338
         },
         {
@@ -3502,7 +3537,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -3521,7 +3556,7 @@
           "firstObserved": 1.29,
           "current": 1.29,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         }
       ],
@@ -3540,7 +3575,7 @@
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:29Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -3548,7 +3583,7 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:30Z",
+          "currentLastUpdate": "2026-11-28T11:11:54Z",
           "dropPct": 0.0
         },
         {
@@ -3556,7 +3591,7 @@
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
@@ -3564,16 +3599,16 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:21:50Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.91,
-          "current": 1.91,
+          "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:23Z",
+          "dropPct": 0.5235602094240842
         }
       ],
       "currentBookCount": 5,
@@ -3591,7 +3626,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -3599,7 +3634,7 @@
           "firstObserved": 1.5,
           "current": 1.5,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -3618,7 +3653,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -3626,7 +3661,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -3634,7 +3669,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -3653,7 +3688,7 @@
           "firstObserved": 1.7,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": -1.764705882352943
         },
         {
@@ -3661,7 +3696,7 @@
           "firstObserved": 1.71,
           "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -3669,7 +3704,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -3688,7 +3723,7 @@
           "firstObserved": 1.67,
           "current": 1.67,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -3696,7 +3731,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         },
         {
@@ -3704,7 +3739,7 @@
           "firstObserved": 1.68,
           "current": 1.68,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         }
       ],
@@ -3723,7 +3758,7 @@
           "firstObserved": 1.33,
           "current": 1.33,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -3740,17 +3775,17 @@
         {
           "bookmaker": "casumo",
           "firstObserved": 1.83,
-          "current": 1.83,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:10Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:05Z",
+          "dropPct": -1.092896174863389
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.8,
           "current": 1.8,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -3758,7 +3793,7 @@
           "firstObserved": 1.92,
           "current": 1.92,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -3766,15 +3801,15 @@
           "firstObserved": 1.88,
           "current": 1.9,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:40Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": -1.0638297872340436
         }
       ],
       "currentBookCount": 4,
       "comparableBookCount": 4,
       "firstObservedMedian": 1.855,
-      "currentComparableMedian": 1.865,
-      "medianDropPct": 0.0
+      "currentComparableMedian": 1.875,
+      "medianDropPct": -0.5319148936170218
     },
     {
       "eventId": "e9a1243fbfbc6f58d0e0522eb07ea9a1",
@@ -3785,7 +3820,7 @@
           "firstObserved": 1.73,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 1.7341040462427761
         },
         {
@@ -3793,7 +3828,7 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -3801,7 +3836,7 @@
           "firstObserved": 1.73,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 1.7341040462427761
         }
       ],
@@ -3820,7 +3855,7 @@
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -3839,7 +3874,7 @@
           "firstObserved": 1.55,
           "current": 1.55,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -3847,7 +3882,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         },
         {
@@ -3855,7 +3890,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         }
       ],
@@ -3874,7 +3909,7 @@
           "firstObserved": 1.25,
           "current": 1.25,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -3893,7 +3928,7 @@
           "firstObserved": 1.89,
           "current": 1.89,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -3901,7 +3936,7 @@
           "firstObserved": 1.95,
           "current": 1.95,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:35Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         },
         {
@@ -3909,7 +3944,7 @@
           "firstObserved": 2.08,
           "current": 2.1,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:40Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": -0.9615384615384623
         }
       ],
@@ -3928,7 +3963,7 @@
           "firstObserved": 1.4,
           "current": 1.4,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -3947,16 +3982,16 @@
           "firstObserved": 1.76,
           "current": 1.76,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:31Z",
+          "currentLastUpdate": "2026-11-28T11:11:52Z",
           "dropPct": 0.0
         },
         {
           "bookmaker": "matchbook",
           "firstObserved": 1.85,
-          "current": 1.84,
+          "current": 1.85,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:28Z",
-          "dropPct": 0.540540540540541
+          "currentLastUpdate": "2026-11-28T11:12:24Z",
+          "dropPct": 0.0
         }
       ],
       "currentBookCount": 2,
@@ -3972,17 +4007,17 @@
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.51,
-          "current": 1.51,
+          "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
+          "dropPct": -1.3245033112582794
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.44,
           "current": 1.44,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -4001,7 +4036,7 @@
           "firstObserved": 1.58,
           "current": 1.58,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:11:51Z",
           "dropPct": 0.0
         },
         {
@@ -4009,7 +4044,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:53Z",
+          "currentLastUpdate": "2026-11-28T11:12:21Z",
           "dropPct": 0.0
         },
         {
@@ -4017,7 +4052,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:27Z",
+          "currentLastUpdate": "2026-11-28T11:12:22Z",
           "dropPct": 0.0
         }
       ],
@@ -4036,7 +4071,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:36Z",
+          "currentLastUpdate": "2026-11-28T11:12:35Z",
           "dropPct": 0.0
         },
         {
@@ -4044,7 +4079,7 @@
           "firstObserved": 1.63,
           "current": 1.63,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:34Z",
+          "currentLastUpdate": "2026-11-28T11:12:34Z",
           "dropPct": 0.0
         },
         {
@@ -4052,7 +4087,7 @@
           "firstObserved": 1.6,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:12Z",
+          "currentLastUpdate": "2026-11-28T11:12:36Z",
           "dropPct": 0.0
         }
       ],
@@ -4071,7 +4106,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": 0.0
         },
         {
@@ -4079,7 +4114,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         },
         {
@@ -4087,7 +4122,7 @@
           "firstObserved": 1.73,
           "current": 1.73,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         },
         {
@@ -4095,7 +4130,7 @@
           "firstObserved": 1.78,
           "current": 1.78,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
           "dropPct": 0.0
         }
       ],
@@ -4114,7 +4149,7 @@
           "firstObserved": 1.62,
           "current": 1.6,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:44Z",
+          "currentLastUpdate": "2026-11-28T11:12:11Z",
           "dropPct": 1.234567901234569
         },
         {
@@ -4122,7 +4157,7 @@
           "firstObserved": 1.7,
           "current": 1.66,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:22:42Z",
+          "currentLastUpdate": "2026-11-28T11:12:42Z",
           "dropPct": 2.3529411764705905
         },
         {
@@ -4130,7 +4165,7 @@
           "firstObserved": 1.62,
           "current": 1.62,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:18Z",
+          "currentLastUpdate": "2026-11-28T11:12:41Z",
           "dropPct": 0.0
         }
       ],
@@ -4149,7 +4184,7 @@
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:10:29Z",
           "dropPct": 0.0
         },
         {
@@ -4157,7 +4192,7 @@
           "firstObserved": 1.75,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:15Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         },
         {
@@ -4165,7 +4200,7 @@
           "firstObserved": 1.77,
           "current": 1.77,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:13Z",
+          "currentLastUpdate": "2026-11-28T11:12:39Z",
           "dropPct": 0.0
         }
       ],
@@ -4184,31 +4219,31 @@
           "firstObserved": 1.73,
           "current": 1.75,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:03Z",
+          "currentLastUpdate": "2026-11-28T11:12:30Z",
           "dropPct": -1.1560693641618507
         },
         {
           "bookmaker": "grosvenor",
           "firstObserved": 1.65,
-          "current": 1.65,
+          "current": 1.71,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:02Z",
-          "dropPct": 0.0
+          "currentLastUpdate": "2026-11-28T11:12:29Z",
+          "dropPct": -3.63636363636364
         },
         {
           "bookmaker": "williamhill",
           "firstObserved": 1.7,
           "current": 1.7,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:00Z",
+          "currentLastUpdate": "2026-11-28T11:11:56Z",
           "dropPct": 0.0
         }
       ],
       "currentBookCount": 3,
       "comparableBookCount": 3,
       "firstObservedMedian": 1.7,
-      "currentComparableMedian": 1.7,
-      "medianDropPct": 0.0
+      "currentComparableMedian": 1.71,
+      "medianDropPct": -1.1560693641618507
     },
     {
       "eventId": "fa3db722f03c13fb73e6042d689e9c23",
@@ -4219,7 +4254,7 @@
           "firstObserved": 1.57,
           "current": 1.57,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:02Z",
           "dropPct": 0.0
         },
         {
@@ -4227,7 +4262,7 @@
           "firstObserved": 1.53,
           "current": 1.53,
           "firstObservedAt": "2026-11-28T08:16:37.164097+00:00",
-          "currentLastUpdate": "2026-11-28T10:23:38Z",
+          "currentLastUpdate": "2026-11-28T11:12:38Z",
           "dropPct": 0.0
         }
       ],
@@ -4240,8 +4275,8 @@
   ],
   "version": "6.63",
   "mode": "research_only",
-  "oddsUpdatedAt": "2026-11-28T10:23:40.978874+00:00",
-  "updatedAt": "2026-11-28T10:34:56.920210+00:00",
+  "oddsUpdatedAt": "2026-11-28T11:12:52.256440+00:00",
+  "updatedAt": "2026-11-28T11:13:50.041833+00:00",
   "firstObservedIsOpening": false,
   "realBettingEnabled": false
 }

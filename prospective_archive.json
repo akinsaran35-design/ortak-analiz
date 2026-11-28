@@ -4837,5 +4837,35 @@
       }
     },
     "result": null
+  },
+  "[\"2026-12-05\", \"tr.1\", \"konyaspor\", \"gaziantep\"]": {
+    "date": "2026-12-05",
+    "league": "tr.1",
+    "home": "konyaspor",
+    "away": "gaziantep",
+    "recordedAt": "2026-11-28T14:13:16.025042+03:00",
+    "modelVersion": "4.4",
+    "historyNormalization": "source_names",
+    "old": 0.5185432952869836,
+    "candidate": 0.46643322985034175,
+    "baseline": 0.5458937198067633,
+    "prospectiveMarkets": {
+      "1.5 Üst": {
+        "old": 0.7602705204748466,
+        "candidate": 0.7208346116451039,
+        "baseline": 0.7681159420289855
+      },
+      "2.5 Üst": {
+        "old": 0.5185432952869836,
+        "candidate": 0.46643322985034175,
+        "baseline": 0.5458937198067633
+      },
+      "KG Var": {
+        "old": 0.5504856754677623,
+        "candidate": 0.5142567149386699,
+        "baseline": 0.5241545893719807
+      }
+    },
+    "result": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-28T10:34:29.224614+00:00",
-  "sourceUpdatedAt": "2026-11-28T13:34:03+03:00",
+  "updatedAt": "2026-11-28T11:13:18.940711+00:00",
+  "sourceUpdatedAt": "2026-11-28T14:12:53+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
@@ -7011,6 +7011,68 @@
           "btts": {
             "probability": 0.5786,
             "sampling_se": 0.0034915758619855305
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "konyaspor – gaziantep",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.2
+      },
+      "poisson": {
+        "over15": 0.7602705204748466,
+        "over25": 0.5185432952869836,
+        "btts": 0.5504856754677624
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7662158115670704,
+        "over25": 0.5185432952869836,
+        "btts": 0.5564309665599863
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.12485111293669988
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.09314289377817293
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09215201192946897
+          }
+        ],
+        "topScoresCombined": 0.31014601864434177,
+        "homeWin": 0.4481650760624625,
+        "draw": 0.2628748297991609,
+        "awayWin": 0.28896009413837664,
+        "expectedHome": 1.55,
+        "expectedAway": 1.2
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.76975,
+            "sampling_se": 0.0029768686358319536
+          },
+          "over25": {
+            "probability": 0.5185,
+            "sampling_se": 0.0035331130041367205
+          },
+          "btts": {
+            "probability": 0.55405,
+            "sampling_se": 0.003514815766864602
           }
         }
       }

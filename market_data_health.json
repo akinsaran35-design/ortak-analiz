@@ -1,12 +1,12 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-28T10:34:57.014089+00:00",
+  "updatedAt": "2026-11-28T11:13:50.135653+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-28T10:23:40.978874+00:00",
-    "archivedEvents": 136,
-    "freshEvents": 70,
+    "snapshotAt": "2026-11-28T11:12:52.256440+00:00",
+    "archivedEvents": 137,
+    "freshEvents": 71,
     "rows": [
       {
         "eventId": "0bc17a3c7d8153e72b94688960cc603a",
@@ -357,14 +357,19 @@
         "eventId": "4001fed3da6baa90d8b6278f43a77af1",
         "league": "soccer_turkey_super_league",
         "freshBookmakers": 3
+      },
+      {
+        "eventId": "3e9a89fc7f5bd95d70e6fd3faaccf5d2",
+        "league": "soccer_turkey_super_league",
+        "freshBookmakers": 3
       }
     ],
     "region": "uk",
-    "remainingCredits": 62
+    "remainingCredits": 53
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-28T10:34:30.641089+00:00",
+    "reportAt": "2026-11-28T11:13:20.335462+00:00",
     "reportedMarkets": 0
   },
   "volume": {
@@ -378,10 +383,10 @@
   "productionEnabled": false,
   "predictionsEnabled": false,
   "marketCoverage": {
-    "snapshotAt": "2026-11-28T10:23:40.978874+00:00",
+    "snapshotAt": "2026-11-28T11:12:52.256440+00:00",
     "snapshotFresh": true,
     "sourceAccepted": true,
-    "archivedEvents": 136,
+    "archivedEvents": 137,
     "markets": {
       "over15": {
         "sourceScope": "totals",
@@ -392,9 +397,9 @@
       },
       "over25": {
         "sourceScope": "totals",
-        "observedEvents": 136,
-        "observedThreeBookEvents": 70,
-        "freshFutureThreeBookEvents": 70,
+        "observedEvents": 137,
+        "observedThreeBookEvents": 71,
+        "freshFutureThreeBookEvents": 71,
         "status": "observed"
       },
       "btts": {
@@ -414,7 +419,7 @@
       "recordUnit": "event_market_bookmaker",
       "usedAsCurrentEvidence": false
     },
-    "remainingCreditsAtSnapshot": 62,
+    "remainingCreditsAtSnapshot": 53,
     "additionalApiRequests": 0,
     "extraMarketCollectionEnabled": false,
     "productionEnabled": false

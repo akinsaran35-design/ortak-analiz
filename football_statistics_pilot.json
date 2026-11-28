@@ -1,7 +1,7 @@
 {
   "version": "5.09",
-  "updatedAt": "2026-11-28T13:34:35.686069+03:00",
-  "dailyUpdatedAt": "2026-11-28T13:34:03+03:00",
+  "updatedAt": "2026-11-28T14:13:26.047442+03:00",
+  "dailyUpdatedAt": "2026-11-28T14:12:53+03:00",
   "cutoffExclusive": "2026-11-28",
   "source": "football-data.co.uk",
   "mode": "descriptive_research",
@@ -10140,12 +10140,87 @@
               }
             }
           }
+        },
+        {
+          "date": "2026-12-05",
+          "league": "Türkiye Süper Lig",
+          "match": "konyaspor – gaziantep",
+          "home": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 3.3,
+                "againstAverage": 5.0
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 2.1
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.1,
+                "againstAverage": 0.0
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 10.1,
+                "againstAverage": 12.0
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 2.9,
+                "againstAverage": 4.1
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.6
+              }
+            }
+          },
+          "away": {
+            "sample": 10,
+            "metrics": {
+              "corners": {
+                "sample": 10,
+                "forAverage": 5.0,
+                "againstAverage": 3.3
+              },
+              "yellowCards": {
+                "sample": 10,
+                "forAverage": 2.1,
+                "againstAverage": 2.0
+              },
+              "redCards": {
+                "sample": 10,
+                "forAverage": 0.0,
+                "againstAverage": 0.1
+              },
+              "shots": {
+                "sample": 10,
+                "forAverage": 14.3,
+                "againstAverage": 13.6
+              },
+              "shotsOnTarget": {
+                "sample": 10,
+                "forAverage": 3.8,
+                "againstAverage": 4.6
+              },
+              "halfTimeGoals": {
+                "sample": 10,
+                "forAverage": 0.4,
+                "againstAverage": 0.8
+              }
+            }
+          }
         }
       ]
     }
   ],
   "respondingLeagues": 9,
-  "fixtureCount": 133,
+  "fixtureCount": 134,
   "predictionsEnabled": false,
   "realBettingEnabled": false,
   "decision": "PAS"

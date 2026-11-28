@@ -1,6 +1,6 @@
 {
   "version": "5.08",
-  "updatedAt": "2026-11-28T13:34:34.756389+03:00",
+  "updatedAt": "2026-11-28T14:13:24.502588+03:00",
   "mode": "fixture_discovery_only",
   "source": "ESPN",
   "dates": [
@@ -982,9 +982,9 @@
           "home": "Central Coast Mariners FC",
           "away": "Auckland FC",
           "kickoff": "2026-11-28T08:40:00+00:00",
-          "state": "in",
-          "status": "STATUS_SECOND_HALF",
-          "clock": "90'+4'",
+          "state": "post",
+          "status": "STATUS_FULL_TIME",
+          "clock": "90'+7'",
           "score": [
             2,
             3
