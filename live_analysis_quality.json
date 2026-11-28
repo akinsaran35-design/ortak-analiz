@@ -1,60 +1,12 @@
 {
   "version": "5.15",
   "mode": "live_analysis_quality_only",
-  "updatedAt": "2026-11-28T13:26:24.204807+03:00",
-  "sourceUpdatedAt": "2026-11-28T13:26:24.110147+03:00",
+  "updatedAt": "2026-11-28T14:15:49.106418+03:00",
+  "sourceUpdatedAt": "2026-11-28T14:15:49.036117+03:00",
   "sourceTimestampVerified": false,
   "modelCalibrated": false,
   "predictionsEnabled": false,
   "decision": "PAS",
-  "counts": {
-    "observation_ready": 1
-  },
-  "rows": [
-    {
-      "league": "aus.1",
-      "eventId": "401892132",
-      "home": "Central Coast Mariners FC",
-      "away": "Auckland FC",
-      "kickoff": "2026-11-28T08:40:00+00:00",
-      "receivedAt": "2026-11-28T13:26:24.105148+03:00",
-      "quality": "observation_ready",
-      "observation": {
-        "state": "in",
-        "status": "STATUS_SECOND_HALF",
-        "clock": "86'",
-        "score": [
-          2,
-          2
-        ],
-        "metrics": {
-          "yellowCards": [
-            1,
-            2
-          ],
-          "redCards": [
-            0,
-            0
-          ],
-          "corners": [
-            3,
-            1
-          ],
-          "possession": [
-            63.2,
-            36.8
-          ],
-          "shots": [
-            16,
-            18
-          ],
-          "shotsOnTarget": [
-            3,
-            6
-          ]
-        }
-      },
-      "prediction": null
-    }
-  ]
+  "counts": {},
+  "rows": []
 }
