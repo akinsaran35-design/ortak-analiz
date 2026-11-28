@@ -4,7 +4,8 @@ from datetime import datetime,timezone,timedelta
 from pathlib import Path
 
 ALLOWED={"extra_league_prospective_ledger.json","extra_ml_prospective_ledger.json",
-         "extra_ml_frozen_manifest.json","extra_ml_frozen.cbm"}
+         "extra_ml_frozen_manifest.json","extra_ml_frozen.cbm",
+         "main_ml_frozen_manifest.json","main_ml_frozen.cbm","main_ml_prospective_ledger.json","main_ml_matched_pairs.json"}
 MAX_AGE=timedelta(minutes=30)
 
 def git(*args):
