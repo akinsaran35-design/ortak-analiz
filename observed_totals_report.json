@@ -1,6 +1,6 @@
 {
   "status": "observed",
-  "added": 341,
+  "added": 0,
   "events": [
     {
       "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
@@ -4241,7 +4241,7 @@
   "version": "6.63",
   "mode": "research_only",
   "oddsUpdatedAt": "2026-11-28T10:23:40.978874+00:00",
-  "updatedAt": "2026-11-28T10:24:58.416393+00:00",
+  "updatedAt": "2026-11-28T10:30:14.896040+00:00",
   "firstObservedIsOpening": false,
   "realBettingEnabled": false
 }
