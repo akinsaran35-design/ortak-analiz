@@ -647,6 +647,73 @@ def negative_binomial_backtest(rows):
     return dict(model="league_negative_binomial",holdoutStart=cutoff,markets=metrics,
         shrinkageMatches=NB_SHRINKAGE,sameDayTraining=False,productionModelValidated=False,externalValidation=False)
 
+BOOTSTRAP_DRAWS=4096
+BOOTSTRAP_MIN_DATES=8
+
+def paired_date_bootstrap(by_day,draws=BOOTSTRAP_DRAWS,seed=20261128):
+    """Resample whole dates; positive loss difference favors candidate.
+    Descriptive percentile intervals, not independent confirmation.
+    """
+    if type(draws) is not int or not 1<=draws<=2**20:
+        raise ValueError("invalid bootstrap draws")
+    blocks=[(sum(v),len(v)) for _,v in sorted(by_day.items()) if v]
+    n=sum(c for _,c in blocks)
+    k=len(blocks)
+    point=sum(s for s,_ in blocks)/n if n else None
+    result=dict(matches=n,dateBlocks=k,meanImprovement=point,interval95=None,draws=draws)
+    if k<BOOTSTRAP_MIN_DATES:
+        return result
+    rng=random.Random(seed)
+    estimates=[]
+    for _ in range(draws):
+        chosen=rng.choices(blocks,k=k)
+        estimates.append(sum(s for s,_ in chosen)/sum(c for _,c in chosen))
+    estimates.sort()
+    lo=estimates[int(0.025*(draws-1))]
+    hi=estimates[math.ceil(0.975*(draws-1))]
+    result["interval95"]=[lo,hi]
+    return result
+
+def bootstrap_model_comparison(rows,draws=BOOTSTRAP_DRAWS):
+    """Paired date-cluster Brier differences on the common late-date sample."""
+    by_day={}
+    for r in verified_rows(rows):
+        by_day.setdefault(r["date"],[]).append(r)
+    history={}
+    candidates=("dixonColes","bayesian","bivariate","negativeBinomial")
+    samples={m:{c:{} for c in candidates} for m in MARKETS}
+    for day,group in sorted(by_day.items()):
+        group=sorted(group,key=lambda r:(r["league"],r["home"],r["away"]))
+        fitted={}
+        for r in group:
+            league=r["league"]
+            past=history.get(league,[])
+            n=len(past)
+            if n<MIN_TRAIN_MATCHES:
+                continue
+            if league not in fitted:
+                hs,aw=zip(*past)
+                h,a=sum(hs)/n,sum(aw)/n
+                fitted[league]=(goal_probabilities(h,a),(
+                    dc_probabilities(h,a,fit_dc_rho(past,h,a)),
+                    gamma_poisson_probabilities(sum(hs),sum(aw),n),
+                    bivariate_probabilities(h,a,fit_shared_intensity(past,h,a)),
+                    nb_probabilities(h,a,fit_nb_dispersion(hs,h),fit_nb_dispersion(aw,a))))
+            base,models=fitted[league]
+            for i,(m,y) in enumerate(zip(MARKETS,labels(*r["csv"]))):
+                for name,probs in zip(candidates,models):
+                    samples[m][name].setdefault(day,[]).append((base[i]-y)**2-(probs[i]-y)**2)
+        for r in group:
+            history.setdefault(r["league"],[]).append(r["csv"])
+    days=sorted(samples[MARKETS[0]][candidates[0]])
+    cutoff=days[int(len(days)*0.6)] if len(days)>=2 else None
+    metrics={m:{c:paired_date_bootstrap({d:v for d,v in values.items() if cutoff and d>=cutoff},draws)
+                for c,values in models.items()} for m,models in samples.items()}
+    return dict(mode="descriptive_paired_date_bootstrap",holdoutStart=cutoff,markets=metrics,
+        minimumDateBlocks=BOOTSTRAP_MIN_DATES,reference="poisson",sameDayTraining=False,
+        repeatedHoldout=True,adjustedForMultipleComparisons=False,crossDateDependenceAccountedFor=False,
+        productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -665,7 +732,8 @@ def build(now,reader=read):
     bayes=bayesian_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     bivariate=bivariate_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     nb=negative_binomial_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.37",negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    bootstrap=bootstrap_model_comparison([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.38",bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -676,6 +744,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("BOOTSTRAP_COMPARISON",json.dumps(report["bootstrapComparison"]))
     print("NEGATIVE_BINOMIAL_BACKTEST",json.dumps(report["negativeBinomialBacktest"]))
     print("BIVARIATE_BACKTEST",json.dumps(report["bivariateBacktest"]))
     print("BAYESIAN_BACKTEST",json.dumps(report["bayesianBacktest"]))
