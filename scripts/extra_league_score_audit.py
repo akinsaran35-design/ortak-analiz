@@ -1170,6 +1170,78 @@ def league_calibration_backtest(rows):
         shrinkageMatches=CALIBRATION_SHRINKAGE,markets=metrics(predictions),leagues=leagues,
         sameDayTraining=False,repeatedHoldout=True,productionModelValidated=False,externalValidation=False)
 
+XGB_BLEND_WEIGHTS=(0.0,0.25,0.5,0.75,1.0)
+XGB_MIN_TRAIN=100
+XGB_MIN_TUNE=50
+
+def score_class(ys):
+    """Five mutually exclusive goal categories compatible with all three labels."""
+    over15,over25,btts=ys
+    if not over15:
+        return 0
+    return (3 if over25 else 1)+btts
+
+def xgb_market_probabilities(classes):
+    """Map the five-class probability vector to coherent market probabilities."""
+    p0,p1,p2,p3,p4=map(float,classes)
+    return tuple(min(1,max(0,p)) for p in (p1+p2+p3+p4,p3+p4,p2+p4))
+
+def xgb_features(models):
+    return [p for model in models for p in model]
+
+def xgb_fit(train):
+    if len(train)<XGB_MIN_TRAIN or {score_class(r[2]) for r in train}!=set(range(5)):
+        return None
+    import numpy as np
+    from xgboost import XGBClassifier
+    model=XGBClassifier(objective="multi:softprob",num_class=5,n_estimators=40,max_depth=2,
+        learning_rate=0.05,min_child_weight=5,reg_lambda=5,subsample=1,colsample_bytree=1,
+        random_state=20261128,n_jobs=1,tree_method="hist",eval_metric="mlogloss")
+    model.fit(np.asarray([xgb_features(r[1]) for r in train]),np.asarray([score_class(r[2]) for r in train]))
+    return model
+
+def xgb_predictions(model,rows):
+    if model is None or not rows:
+        return []
+    import numpy as np
+    return [xgb_market_probabilities(p) for p in model.predict_proba(np.asarray([xgb_features(r[1]) for r in rows]))]
+
+def xgb_backtest(rows):
+    """Fit on early dates, select blend on middle dates, evaluate on later dates."""
+    samples=ensemble_samples(rows)
+    days=sorted({r[0] for r in samples})
+    first=days[int(len(days)*0.4)] if len(days)>=3 else None
+    second=days[int(len(days)*0.6)] if len(days)>=3 else None
+    train=[r for r in samples if first and r[0]<first]
+    tune=[r for r in samples if first and second and first<=r[0]<second]
+    test=[r for r in samples if second and r[0]>=second]
+    weights=fit_ensemble_weights(train)
+    base=lambda r:ensemble_prediction(r[1],weights)
+    model=xgb_fit(train)
+    q_tune=xgb_predictions(model,tune)
+    q_test=xgb_predictions(model,test)
+    blend=lambda p,q,w:tuple((1-w)*a+w*b for a,b in zip(p,q))
+    def loss(w):
+        return sum((p-y)**2 for r,q in zip(tune,q_tune) for p,y in zip(blend(base(r),q,w),r[2]))/(len(tune)*len(MARKETS))
+    chosen=min(XGB_BLEND_WEIGHTS,key=loss) if model is not None and len(tune)>=XGB_MIN_TUNE else 0.0
+    metrics={}
+    for i,k in enumerate(MARKETS):
+        def score(pairs):
+            if not pairs:
+                return dict(brier=None,logLoss=None,accuracyPct=None)
+            n=len(pairs)
+            return dict(brier=round(sum((p-y)**2 for p,y in pairs)/n,6),
+                logLoss=round(-sum(y*math.log(max(1e-12,p))+(1-y)*math.log(max(1e-12,1-p)) for p,y in pairs)/n,6),
+                accuracyPct=round(100*sum((p>=0.5)==bool(y) for p,y in pairs)/n,2))
+        metrics[k]=dict(n=len(test),ensemble=score([(base(r)[i],r[2][i]) for r in test]),
+            xgboost=score([(q[i],r[2][i]) for r,q in zip(test,q_test)]),
+            blended=score([(blend(base(r),q_test[j],chosen)[i] if model is not None else base(r)[i],r[2][i]) for j,r in enumerate(test)]))
+    return dict(model="xgboost_five_class_stacking",trained=model is not None,trainMatches=len(train),
+        tuneMatches=len(tune),holdoutMatches=len(test),tuneStart=first,holdoutStart=second,
+        selectedBlendWeight=chosen,blendCandidates=list(XGB_BLEND_WEIGHTS),featureCount=len(ENSEMBLE_MODELS)*len(MARKETS),
+        trainClassCounts=dict(Counter(score_class(r[2]) for r in train)),baseWeights=dict(zip(ENSEMBLE_MODELS,weights)),
+        markets=metrics,sameDayTraining=False,repeatedHoldout=True,productionModelValidated=False,externalValidation=False)
+
 def build(now,reader=read):
     now=now.astimezone(TR)
     with ThreadPoolExecutor(max_workers=3) as pool:
@@ -1194,7 +1266,8 @@ def build(now,reader=read):
     glicko=glicko_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     ensemble=ensemble_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
     calibration=league_calibration_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
-    return dict(version="6.43",leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
+    xgb=xgb_backtest([dict(r,league=g["league"]) for g in leagues for r in g["rows"]])
+    return dict(version="6.44",xgboostBacktest=xgb,leagueCalibration=calibration,ensembleBacktest=ensemble,glickoBacktest=glicko,eloBacktest=elo,markovAudit=markov,bootstrapComparison=bootstrap,negativeBinomialBacktest=nb,bivariateBacktest=bivariate,bayesianBacktest=bayes,simulationAudit=simulation,dixonColesBacktest=dc,hybridHoldout=hybrid,teamFormBacktest=team_replay,chronologicalBacktest=replay,outcomeBaseline=baseline,historyWindowDays=HISTORY_WINDOW_DAYS,sampleDateLimit=SAMPLE_DATE_LIMIT,mode="source_audit_only",updatedAt=now.isoformat(),leagues=leagues,
         configured=len(COMPETITIONS),responding=sum(bool(g["days"]) and not g["errors"] for g in leagues),
         corroborated=sum(g["counts"].get("corroborated",0) for g in leagues),
         archivesModified=False,predictionsEnabled=False,realBettingEnabled=False,decision="PAS")
@@ -1205,6 +1278,7 @@ if __name__=="__main__":
     for g in report["leagues"]:
         print("LEAGUE_AUDIT",json.dumps({k:g[k] for k in ("league","days","counts","errors")},ensure_ascii=False))
         print("NAME_EVIDENCE",json.dumps({"league":g["league"],"names":g["unmatchedNames"],"rows":[r for r in g["rows"] if r["status"] in ("csv_only","espn_only")]},ensure_ascii=False))
+    print("XGBOOST_BACKTEST",json.dumps(report["xgboostBacktest"]))
     print("LEAGUE_CALIBRATION",json.dumps(report["leagueCalibration"]))
     print("ENSEMBLE_BACKTEST",json.dumps(report["ensembleBacktest"]))
     print("GLICKO_BACKTEST",json.dumps(report["glickoBacktest"]))
