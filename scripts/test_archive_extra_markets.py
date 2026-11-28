@@ -110,6 +110,34 @@ class ArchiveTests(unittest.TestCase):
             record["oddsChangePct"], -7.1429
         )
 
+    def test_identity_conflict(self):
+        self.snapshot()
+        self.run()
+        before=self.archive()["records"]
+        self.snapshot(offset=-20)
+        p=Path("extra_markets.json")
+        r=json.loads(p.read_text())
+        r["events"][0]["away"]="Other Team"
+        p.write_text(json.dumps(r))
+        self.run()
+        self.assertEqual(self.archive()["records"],before)
+        self.assertEqual(self.archive()["quarantine"]["test-event"]["reason"],"event_identity_conflict")
+    def test_same_timestamp_conflict(self):
+        self.snapshot()
+        self.run()
+        before=self.archive()["records"]
+        self.snapshot(price=1.6)
+        self.run()
+        self.assertEqual(self.archive()["records"],before)
+        self.assertEqual(self.archive()["quarantine"]["test-event"]["reason"],"same_timestamp_price_conflict")
+    def test_duplicate_books_ignored(self):
+        self.snapshot()
+        p=Path("extra_markets.json")
+        r=json.loads(p.read_text())
+        r["events"][0]["over15"]*=2
+        p.write_text(json.dumps(r))
+        self.run()
+        self.assertEqual(self.archive()["recordCount"],0)
     def test_stale_report(self):
         self.snapshot(stale=True)
         self.run()
