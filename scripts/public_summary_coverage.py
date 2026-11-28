@@ -1,5 +1,5 @@
 """Bounded public match-summary field availability; not a forecast input."""
-import json
+import json,math
 from datetime import datetime,timedelta
 from collections import Counter
 from results_source_pilot import TR,read
@@ -41,6 +41,46 @@ def lineup_quality(rosters,competitors):
                     starterCounts=[counts.get(side) for side in ("home","away")])
     except (KeyError,ValueError,TypeError,AttributeError):return empty
 
+STAT_FIELDS=("totalShots","shotsOnTarget","wonCorners","foulsCommitted","yellowCards","redCards","offsides","saves","possessionPct","expectedGoals","expectedGoalsFor","xG")
+
+def statistic_quality(stats,competitors,comp,event):
+    """Count valid completed-match statistic fields, never treat pre-match placeholders as observations."""
+    empty=dict(status="unverified",teamsMatched=0,fieldsWithTwoTeams=[],fieldCounts={})
+    if event.get("state")!="post" or event.get("status")!="STATUS_FULL_TIME":
+        return dict(empty,status="not_completed")
+    kind=comp.get("status",{}).get("type",{})
+    if kind.get("state")!="post" or kind.get("completed") is not True or kind.get("name")!="STATUS_FULL_TIME":
+        return empty
+    if not isinstance(stats,list) or len(stats)!=2:return empty
+    try:
+        expected={str(c["team"]["id"]) for c in competitors}
+        if len(expected)!=2:return empty
+        seen=set(); counts=Counter()
+        for row in stats:
+            tid=str(row["team"]["id"])
+            if tid not in expected or tid in seen:return empty
+            seen.add(tid)
+            items=row.get("statistics")
+            if not isinstance(items,list):continue
+            names=Counter(x.get("name") for x in items if isinstance(x,dict) and isinstance(x.get("name"),str))
+            for x in items:
+                if not isinstance(x,dict):continue
+                name=x.get("name")
+                if not isinstance(name,str) or name not in STAT_FIELDS or names[name]!=1:continue
+                raw=x.get("displayValue")
+                if isinstance(raw,bool) or not isinstance(raw,(str,int,float)):continue
+                try:
+                    value=float(str(raw).strip().rstrip("%") if name=="possessionPct" else raw)
+                except (ValueError,TypeError,OverflowError):continue
+                if not math.isfinite(value) or value<0:continue
+                if name=="possessionPct" and value>100:continue
+                if name not in ("possessionPct","expectedGoals","expectedGoalsFor","xG") and not value.is_integer():continue
+                counts[name]+=1
+        return dict(status="source_observed" if counts else "no_valid_fields",teamsMatched=len(seen),
+                    fieldsWithTwoTeams=sorted(k for k,v in counts.items() if v==2),
+                    fieldCounts=dict(sorted(counts.items())))
+    except (KeyError,ValueError,TypeError,AttributeError):return empty
+
 def inspect(doc,event):
     if not isinstance(doc,dict):raise ValueError("summary schema")
     header=doc["header"]
@@ -61,10 +101,11 @@ def inspect(doc,event):
             if isinstance(items,list) and any(isinstance(v,dict) and v.get("name") in ("expectedGoals","expectedGoalsFor","xG") for v in items):xg+=1
     return dict(rosters=presence(doc.get("rosters")),injuries=presence(doc.get("injuries")),
                 teamStatistics=presence(stats),explicitXgFieldTeams=xg,
-                lineupQuality=lineup_quality(doc.get("rosters"),teams))
+                lineupQuality=lineup_quality(doc.get("rosters"),teams),
+                statisticQuality=statistic_quality(stats,teams,comp,event))
 
 def probe(now,reader=read,fixture_reader=public_fixtures):
-    output=dict(version="7.23",mode="public_summary_schema_probe",requestsAttempted=0,groups=[],
+    output=dict(version="7.24",mode="public_summary_schema_probe",requestsAttempted=0,groups=[],
                 predictionsEnabled=False,decision="PAS")
     today=now.astimezone(TR).date()
     for offset,state in ((0,"pre"),(-1,"post")):
