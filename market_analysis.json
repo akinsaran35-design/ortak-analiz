@@ -1,7 +1,7 @@
 {
   "version": "3.4",
   "snapshotFresh": true,
-  "updatedAt": "2026-11-28T10:06:22.510635+00:00",
+  "updatedAt": "2026-11-28T10:24:02.846902+00:00",
   "decision": "PAS",
   "modelCalibrated": false,
   "market": "2.5",
@@ -65,13 +65,13 @@
       "bookProbabilities": {
         "casumo": 0.506849,
         "grosvenor": 0.552279,
-        "matchbook": 0.510101
+        "matchbook": 0.512563
       },
-      "marketProbability": 0.5101,
+      "marketProbability": 0.5126,
       "modelProbabilityUncalibrated": 0.62,
-      "difference": 0.1099,
+      "difference": 0.1074,
       "bookProbabilitySpread": 0.0454,
-      "marketFairOdds": 1.9604,
+      "marketFairOdds": 1.951,
       "medianMargin": 0.0842
     },
     {
@@ -81,13 +81,13 @@
       "bookProbabilities": {
         "grosvenor": 0.595855,
         "williamhill": 0.625,
-        "matchbook": 0.602941
+        "matchbook": 0.601467
       },
-      "marketProbability": 0.6029,
+      "marketProbability": 0.6015,
       "modelProbabilityUncalibrated": 0.611,
-      "difference": 0.0081,
+      "difference": 0.0095,
       "bookProbabilitySpread": 0.0291,
-      "marketFairOdds": 1.6585,
+      "marketFairOdds": 1.6626,
       "medianMargin": 0.0667
     },
     {
@@ -149,7 +149,7 @@
         "leovegas": 0.515873,
         "casumo": 0.502717,
         "williamhill": 0.536193,
-        "matchbook": 0.508906
+        "matchbook": 0.510204
       },
       "marketProbability": 0.5159,
       "modelProbabilityUncalibrated": 0.5539999999999999,
@@ -181,16 +181,16 @@
       "eventId": "0617a45f4dae394d0fd75e3dc4d5cae4",
       "bookCount": 3,
       "bookProbabilities": {
-        "grosvenor": 0.546174,
+        "grosvenor": 0.538259,
         "williamhill": 0.546667,
-        "matchbook": 0.554455
+        "matchbook": 0.552239
       },
       "marketProbability": 0.5467,
       "modelProbabilityUncalibrated": 0.542,
       "difference": -0.0047,
-      "bookProbabilitySpread": 0.0083,
+      "bookProbabilitySpread": 0.014,
       "marketFairOdds": 1.8293,
-      "medianMargin": 0.0645
+      "medianMargin": 0.0616
     },
     {
       "match": "Le Mans FC – Lille OSC",
@@ -216,12 +216,12 @@
         "casumo": 0.514825,
         "grosvenor": 0.526882,
         "williamhill": 0.536193,
-        "matchbook": 0.510101
+        "matchbook": 0.507538
       },
       "marketProbability": 0.5209,
       "modelProbabilityUncalibrated": 0.519,
       "difference": -0.0019,
-      "bookProbabilitySpread": 0.0261,
+      "bookProbabilitySpread": 0.0287,
       "marketFairOdds": 1.9199,
       "medianMargin": 0.0782
     },
@@ -266,12 +266,12 @@
       "bookProbabilities": {
         "grosvenor": 0.40625,
         "williamhill": 0.415584,
-        "matchbook": 0.398058
+        "matchbook": 0.396135
       },
       "marketProbability": 0.4063,
       "modelProbabilityUncalibrated": 0.469,
       "difference": 0.0627,
-      "bookProbabilitySpread": 0.0175,
+      "bookProbabilitySpread": 0.0194,
       "marketFairOdds": 2.4615,
       "medianMargin": 0.0694
     },
@@ -551,13 +551,13 @@
         "leovegas": 0.555556,
         "williamhill": 0.575916,
         "grosvenor": 0.554974,
-        "matchbook": 0.553299
+        "matchbook": 0.557545
       },
-      "marketProbability": 0.5553,
+      "marketProbability": 0.5566,
       "modelProbabilityUncalibrated": 0.5660000000000001,
-      "difference": 0.0107,
-      "bookProbabilitySpread": 0.0226,
-      "marketFairOdds": 1.8009,
+      "difference": 0.0094,
+      "bookProbabilitySpread": 0.0209,
+      "marketFairOdds": 1.7968,
       "medianMargin": 0.0657
     },
     {

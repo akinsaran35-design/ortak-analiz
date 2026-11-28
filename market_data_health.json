@@ -1,10 +1,10 @@
 {
   "version": "6.4",
-  "updatedAt": "2026-11-28T10:07:09.946095+00:00",
+  "updatedAt": "2026-11-28T10:24:58.496814+00:00",
   "mode": "research_only",
   "odds": {
     "status": "observed",
-    "snapshotAt": "2026-11-28T09:53:05.374700+00:00",
+    "snapshotAt": "2026-11-28T10:23:40.978874+00:00",
     "archivedEvents": 136,
     "freshEvents": 70,
     "rows": [
@@ -360,11 +360,11 @@
       }
     ],
     "region": "uk",
-    "remainingCredits": 71
+    "remainingCredits": 62
   },
   "movement": {
     "status": "no_fresh_evidence",
-    "reportAt": "2026-11-28T10:06:39.124084+00:00",
+    "reportAt": "2026-11-28T10:24:20.267369+00:00",
     "reportedMarkets": 0
   },
   "volume": {
@@ -378,7 +378,7 @@
   "productionEnabled": false,
   "predictionsEnabled": false,
   "marketCoverage": {
-    "snapshotAt": "2026-11-28T09:53:05.374700+00:00",
+    "snapshotAt": "2026-11-28T10:23:40.978874+00:00",
     "snapshotFresh": true,
     "sourceAccepted": true,
     "archivedEvents": 136,
@@ -414,7 +414,7 @@
       "recordUnit": "event_market_bookmaker",
       "usedAsCurrentEvidence": false
     },
-    "remainingCreditsAtSnapshot": 71,
+    "remainingCreditsAtSnapshot": 62,
     "additionalApiRequests": 0,
     "extraMarketCollectionEnabled": false,
     "productionEnabled": false

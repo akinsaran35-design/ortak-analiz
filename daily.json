@@ -3,12 +3,12 @@
   "decision": "PAS",
   "picks": [],
   "version": "1.6",
-  "updatedAt": "2026-11-28T13:06:05+03:00",
+  "updatedAt": "2026-11-28T13:23:41+03:00",
   "source": "https://github.com/openfootball/football.json",
   "additionalSources": {
     "tr.1": {
       "results": "https://football-data.co.uk/turkeym.php",
-      "fixtures": "The Odds API UK snapshot; incomplete coverage possible"
+      "fixtures": "The Odds API UK snapshot or independent ESPN scheduled fixtures; incomplete coverage possible"
     }
   },
   "method": "Son 10 maç; önce iç/dış saha, eksikse tüm sahalar; basit Poisson. Kalibrasyon yok.",
@@ -169,6 +169,9 @@
         "2025-26"
       ],
       "seasonErrors": {},
+      "fixtureSources": [
+        "The Odds API"
+      ],
       "fixtureScope": "fresh_odds_events_only"
     }
   ],
@@ -52427,5 +52430,5 @@
   "reason": "PAS — 9/9 lig okundu; bugün 39, 7 günde 133 fikstür; 120 istatistiksel aday. Güncel oranlar, maç başlama saatleri ve model kalibrasyonu doğrulanmadığından otomatik bahis seçimi yapılmadı.",
   "forecastTimingVersion": "6.82",
   "historyCutoffExclusive": "2026-11-28",
-  "generationCompletedAt": "2026-11-28T13:06:08.186164+03:00"
+  "generationCompletedAt": "2026-11-28T13:23:44.985892+03:00"
 }
