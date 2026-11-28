@@ -11,7 +11,7 @@ from results_source_pilot import TR,read
 
 MAX_TEAM_AGE=45
 
-def input_features(history,fixture,now):
+def input_features(history,fixture,now,identity_fn=team_key):
     now=now.astimezone(TR)
     day=fixture["date"]
     kickoff=datetime.fromisoformat(fixture["kickoff"])
@@ -23,7 +23,7 @@ def input_features(history,fixture,now):
     names={r[s] for r in past for s in ("home","away")}
     mapped=[]
     for s in ("home","away"):
-        matches={n for n in names if team_key(l,n)==fixture[s]}
+        matches={n for n in names if identity_fn(l,n)==fixture[s]}
         if len(matches)!=1:
             return None,"unmatched_or_ambiguous_identity"
         mapped.append(next(iter(matches)))
@@ -57,7 +57,7 @@ def input_features(history,fixture,now):
         leagueAwayGoals=sum(r["score"][1] for r in past)/len(past),leagueMatches=len(past))
     return dict(features=features,teamHistoryThrough=last,historyThrough=max(r["date"] for r in past)),None
 
-def preflight(history,fixtures,now,expected_keys):
+def preflight(history,fixtures,now,expected_keys,identity_fn=team_key):
     entries=[]
     excluded=Counter()
     identities=Counter((r["league"],r["eventId"]) for r in fixtures)
@@ -66,7 +66,7 @@ def preflight(history,fixtures,now,expected_keys):
         if identities[(f["league"],f["eventId"])]!=1 or keys[key(f)]!=1:
             excluded["duplicate_fixture"]+=1
             continue
-        r,reason=input_features(history,f,now)
+        r,reason=input_features(history,f,now,identity_fn=identity_fn)
         if reason:
             excluded[reason]+=1
             continue
