@@ -56,6 +56,20 @@ def priority_budget(balance,after,league_count):
         creditsAfterCoreReserveAndAffordableOptionalRuns=max(0,surplus-optional_affordable*league_count),
         scheduleChanged=False,liveAuthorization=False)
 
+def optional_refresh_gate(balance,now,workflow,league_count):
+    """Use a newly received provider balance; never authorize on archived credits."""
+    if not schedule_matches(workflow):
+        return dict(allowed=False,reason="schedule_changed")
+    if type(balance) is not int or balance<0 or type(league_count) is not int or league_count<=0:
+        return dict(allowed=False,reason="unknown_balance")
+    if now.tzinfo is None or now.utcoffset() is None:
+        return dict(allowed=False,reason="invalid_clock")
+    future_core=len(core_slots(now.astimezone(timezone.utc)))
+    required=RESERVE+(future_core+1)*league_count
+    return dict(allowed=balance>=required,reason="reserve_preserved" if balance>=required else "core_reserve_protection",
+        liveBalance=balance,requiredCredits=required,futureCoreRuns=future_core,
+        maximumCurrentRefreshCost=league_count,calendarMonthEstimateOnly=True)
+
 def plan(snapshot,now,workflow):
     now=now.astimezone(timezone.utc)
     report=dict(version="6.86",priorityPolicyVersion="6.87",mode="read_only_budget_planning",updatedAt=now.isoformat(),
