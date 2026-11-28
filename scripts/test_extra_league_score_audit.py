@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -146,6 +146,26 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(report["markets"]["over15"]["poisson"],dixon_coles_backtest(rows)["markets"]["over15"]["poisson"])
         self.assertFalse(report["productionModelValidated"])
         self.assertIsNone(bayesian_backtest([])["markets"]["btts"]["bayesian"]["brier"])
+    def test_bivariate_poisson(self):
+        import math
+        self.assertEqual(bivariate_probabilities(1.4,1.1,0),goal_probabilities(1.4,1.1))
+        self.assertEqual(bivariate_probabilities(0,0,0),(0,0,0))
+        p=bivariate_probabilities(1,1,1)
+        self.assertAlmostEqual(p[0],1-math.exp(-1))
+        self.assertAlmostEqual(p[1],1-2*math.exp(-1))
+        self.assertAlmostEqual(p[2],p[0])
+        self.assertGreater(fit_shared_intensity([[0,0],[2,2]]*10,1,1),0)
+        self.assertEqual(fit_shared_intensity([[0,2],[2,0]]*10,1,1),0)
+        with self.assertRaises(ValueError):
+            bivariate_probabilities(1,2,1.1)
+        start=datetime(2026,8,1)
+        rows=[dict(league="sco.1",date=(start+timedelta(days=d)).date().isoformat(),home=f"a{i}",away=f"b{i}",csv=[i%3,i%3],espn=[i%3,i%3],status="corroborated") for d in range(30) for i in range(10)]
+        result=bivariate_backtest(rows)
+        self.assertEqual(result,bivariate_backtest(list(reversed(rows))))
+        self.assertEqual(result["markets"]["over15"]["poisson"],bayesian_backtest(rows)["markets"]["over15"]["poisson"])
+        self.assertEqual(result["markets"]["btts"]["nonzeroSharedMatches"],result["markets"]["btts"]["n"])
+        self.assertFalse(result["productionModelValidated"])
+        self.assertIsNone(bivariate_backtest([])["markets"]["btts"]["bivariate"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
