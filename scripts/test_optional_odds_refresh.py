@@ -43,4 +43,32 @@ class OptionalRefreshTests(unittest.TestCase):
                 self.assertEqual(report["events"],[])
                 self.assertIn("quota_guard",report["errors"])
             finally:os.chdir(cwd)
+    def test_archive_survives_outage_and_recovery(self):
+        from odds_continuity import record,valid
+        cwd=Path.cwd()
+        with tempfile.TemporaryDirectory() as temp:
+            try:
+                os.chdir(temp)
+                now=datetime.now(timezone.utc)
+                league=list(ODDS_CODES.values())[0]
+                stamp=(now-timedelta(hours=2)).isoformat()
+                def snapshot(at):
+                    return dict(source="The Odds API",region="uk",market="totals",errors=[],configuredLeagues=list(ODDS_CODES.values()),queriedLeagues=[league],inactiveLeagues=list(ODDS_CODES.values())[1:],updatedAt=at,eventCount=1,events=[dict(id="a",home="A",away="B",league=league,kickoff=(now+timedelta(hours=2)).isoformat(),bookmakers=[dict(key="b",lines=[dict(point=2.5,over=1.8,under=2.0,lastUpdate=at)])])])
+                old=snapshot(stamp)
+                self.assertTrue(valid(old,now))
+                Path("odds.json").write_text(json.dumps(old))
+                with patch.dict(os.environ,{"ODDS_API_KEY":"test","ODDS_OPTIONAL_REFRESH":"false"}),patch("urllib.request.urlopen",side_effect=OSError("offline")):
+                    runpy.run_path(str(MODULE))
+                self.assertEqual(json.loads(Path("odds_last_good.json").read_text()),old)
+                self.assertEqual(json.loads(Path("odds.json").read_text())["events"],[])
+                status=json.loads(Path("odds_continuity.json").read_text())
+                self.assertEqual(status["mode"],"fallback")
+                self.assertFalse(status["currentOddsUsable"])
+                self.assertEqual(status["lastGoodAt"],stamp)
+                new=snapshot(now.isoformat())
+                self.assertEqual(record(new,old,now,"collected",100)["mode"],"normal")
+                self.assertEqual(json.loads(Path("odds_last_good.json").read_text()),new)
+                record(old,None,now,"source_error",0)
+                self.assertEqual(json.loads(Path("odds_last_good.json").read_text()),new)
+            finally:os.chdir(cwd)
 if __name__=="__main__":unittest.main()
