@@ -193,3 +193,21 @@ assert.equal(matchedMlSummary(pairDoc,{...mainDone,quarantine:{[mainK]:{}}},main
 assert.equal(matchedMlSummary({...pairDoc,pairs:{[mainK]:{...pairRow,pairedAt:"2026-11-30T08:00:00Z"}}},mainLedger,mainMeta,mlNow),null);
 assert.equal(matchedMlSummary({...pairDoc,pairs:{[mainK]:{...pairRow,candidate:{...mainF.candidate,over25:.1}}}},mainLedger,mainMeta,mlNow),null);
 console.log("V6.74 matched comparison checks passed");
+
+const {marketCoverageSummary}=require("../mobile-v487.js");
+const covAt="2026-11-28T12:00:00Z",covNow=Date.parse(covAt)+60000;
+const covEvent={id:"cov",kickoff:"2026-11-28T15:00:00Z",bookmakers:["a","b","c"].map(key=>({key,lines:[{point:2.5,over:1.9,under:2,lastUpdate:covAt}]}))};
+covEvent.bookmakers[0].lines.push({point:1.5,over:1.3,under:3,lastUpdate:covAt});
+const covData={odds:{source:"The Odds API",region:"uk",market:"totals",errors:[],updatedAt:covAt,events:[covEvent]},snapshot_integrity:{status:"PASS",errors:[],updatedAt:covAt,reportTimestamps:{"odds.json":covAt}}};
+const cov=marketCoverageSummary(covData,covNow);
+assert.equal(cov.markets[1.5].observed,1);
+assert.equal(cov.markets[1.5].currentThree,0);
+assert.equal(cov.markets[2.5].currentThree,1);
+assert.equal(cov.bttsRequested,false);
+const staleCov=marketCoverageSummary(covData,covNow+1800000);
+assert.equal(staleCov.markets[2.5].observed,1);
+assert.equal(staleCov.markets[2.5].currentThree,null);
+assert.equal(marketCoverageSummary({...covData,snapshot_integrity:null},covNow).markets[2.5].currentThree,null);
+assert.equal(marketCoverageSummary({...covData,odds:{...covData.odds,events:[covEvent,covEvent]}},covNow).markets[2.5].observed,0);
+assert.equal(marketCoverageSummary({...covData,odds:{...covData.odds,region:"tr"}},covNow),null);
+console.log("V6.77 market coverage visibility checks passed");
