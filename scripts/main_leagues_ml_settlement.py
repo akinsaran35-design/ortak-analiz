@@ -15,9 +15,12 @@ def run(reader=read):
     now=datetime.now(TR)
     ledger,meta=read_json(LEDGER),read_json(META)
     if meta.get("version")!=VERSION:raise ValueError("manifest version mismatch")
-    added,errors=settle(ledger,meta,now,reader=reader,version=VERSION,codes=CODES,identity_fn=identity,espn_codes=ESPN)
+    diagnostics={}
+    added,errors=settle(ledger,meta,now,reader=reader,version=VERSION,codes=CODES,identity_fn=identity,espn_codes=ESPN,diagnostics=diagnostics)
     report=dict(summarize(ledger,version=VERSION),newSettlements=added,sourceErrors=errors,updatedAt=now.isoformat())
     report["version"]="6.68"
+    report["diagnosticsVersion"]="6.78"
+    report["sourceDiagnostics"]=diagnostics
     write_json(LEDGER,ledger)
     write_json(Path("main_ml_settlement_report.json"),report)
     print("MAIN_ML_SETTLEMENT_668",json.dumps({k:v for k,v in report.items() if k!="markets"}))
