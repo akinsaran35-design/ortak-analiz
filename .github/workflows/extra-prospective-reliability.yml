@@ -1,0 +1,32 @@
+name: V6.56 prospective reliability audit
+on:
+  pull_request:
+    paths:
+      - 'scripts/extra_prospective_reliability.py'
+      - 'scripts/test_extra_prospective_reliability.py'
+      - '.github/workflows/extra-prospective-reliability.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extra_prospective_reliability.py'
+      - 'scripts/test_extra_prospective_reliability.py'
+      - '.github/workflows/extra-prospective-reliability.yml'
+      - 'extra_league_prospective_ledger.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/test_extra_prospective_reliability.py
+      - run: python scripts/extra_prospective_reliability.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: extra-prospective-reliability
+          path: extra_prospective_reliability.json
+          if-no-files-found: ignore
+          retention-days: 90
