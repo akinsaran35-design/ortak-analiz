@@ -22,7 +22,7 @@ def run():
         history,training,keys,games,source_count=collect(started)
         diagnostics=dict(sourceSuccessful=source_count,sourceRequested=source_count,historySourceFailures=[],fixtureSourceFailures=[],excludedHistoricalLeagues=[],partial=False)
     model,meta=load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,
-        version=VERSION,expected_train=EXPECTED_TRAIN)
+        version=VERSION,expected_train=EXPECTED_TRAIN,verify_history=not diagnostics['historySourceFailures'])
     if meta["version"]!=VERSION or (keys and set(meta["featureKeys"])!=keys):
         raise ValueError("frozen main cohort mismatch")
     ledger=read_json(LEDGER) if LEDGER.exists() else empty_ledger(meta,version=VERSION)
