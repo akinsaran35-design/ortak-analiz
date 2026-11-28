@@ -61,5 +61,44 @@ class SettlementTests(unittest.TestCase):
         self.assertEqual(errors[0]["source"],"espn")
         self.assertEqual(summarize(self.ledger)["quarantined"],0)
         self.assertEqual(summarize(self.ledger)["pending"],1)
+    def test_revised_score_when_other_source_unavailable(self):
+        for unavailable in ("csv","espn"):
+            with self.subTest(unavailable=unavailable):
+                self.setUp()
+                self.assertEqual(settle(self.ledger,self.meta,self.now,self.reader)[0],1)
+                original=copy.deepcopy(self.ledger["settlements"])
+                forecasts=copy.deepcopy(self.ledger["forecasts"])
+                if unavailable=="csv":
+                    self.payload["events"][0]["competitions"][0]["competitors"][0]["score"]="3"
+                else:
+                    self.csv=self.csv.replace(b",2,1",b",3,1")
+                def partial(url):
+                    if ("football-data" in url)==(unavailable=="csv"):
+                        raise OSError("source offline")
+                    return self.reader(url)
+                d={}
+                added,errors=settle(self.ledger,self.meta,self.now,partial,diagnostics=d)
+                self.assertEqual(added,0)
+                self.assertEqual(len(errors),1)
+                self.assertEqual(d["counts"],{"settled_score_changed":1})
+                self.assertEqual(summarize(self.ledger)["validSettled"],0)
+                self.assertEqual(summarize(self.ledger)["quarantined"],1)
+                self.assertEqual(self.ledger["settlements"],original)
+                self.assertEqual(self.ledger["forecasts"],forecasts)
+    def test_partial_source_does_not_settle_or_quarantine_unchanged_score(self):
+        def partial(url):
+            if "football-data" in url:
+                raise OSError("source offline")
+            return self.reader(url)
+        d={}
+        self.assertEqual(settle(self.ledger,self.meta,self.now,partial,diagnostics=d)[0],0)
+        self.assertEqual(d["counts"],{"csv_source_unavailable":1})
+        self.assertEqual(summarize(self.ledger)["pending"],1)
+        self.assertEqual(settle(self.ledger,self.meta,self.now,self.reader)[0],1)
+        d={}
+        self.assertEqual(settle(self.ledger,self.meta,self.now,partial,diagnostics=d)[0],0)
+        self.assertEqual(d["counts"],{"previously_verified_csv_source_unavailable":1})
+        self.assertEqual(summarize(self.ledger)["validSettled"],1)
+        self.assertEqual(summarize(self.ledger)["quarantined"],0)
 if __name__=="__main__":
     unittest.main()
