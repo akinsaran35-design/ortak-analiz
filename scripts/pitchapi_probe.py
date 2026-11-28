@@ -48,8 +48,32 @@ def catalog(data):
             v.update(status="duplicate_provider_id",providerId=None)
     return out
 
+SAFE_CODES={"UNAUTHORIZED","INVALID_PARAMETER","RESOURCE_NOT_FOUND","ANALYTICS_UNAVAILABLE",
+    "HALVES_UNAVAILABLE","INTERNAL_SERVER_ERROR","RATE_LIMIT_EXCEEDED","DAILY_QUOTA_EXCEEDED",
+    "FORBIDDEN","ACCESS_DENIED","IP_NOT_ALLOWED"}
+
+def safe_http_diagnostics(exc):
+    result=dict(httpStatus=exc.code,responseFormat="unknown",providerErrorCode=None)
+    try:
+        content_type=exc.headers.get_content_type() if exc.headers else ""
+        raw=exc.read(8192)
+        if content_type=="application/json":
+            result["responseFormat"]="json"
+            payload=json.loads(raw)
+            error=payload.get("error") if isinstance(payload,dict) else None
+            code=error.get("code") if isinstance(error,dict) else None
+            if isinstance(code,str) and code in SAFE_CODES:
+                result["providerErrorCode"]=code
+        elif content_type=="text/html":
+            result["responseFormat"]="html"
+        elif content_type.startswith("text/"):
+            result["responseFormat"]="text"
+    except (OSError,ValueError,TypeError,AttributeError):
+        pass
+    return result
+
 def run(key,reader=get):
-    report=dict(version="6.51a",source="PitchAPI",mode="connection_catalog_probe",
+    report=dict(version="6.51b",source="PitchAPI",mode="connection_catalog_probe",
         status="missing_key",leagues=[],matched=0,xgValidated=False,xtValidated=False,
         usedForTraining=False,existingArchivesModified=False,productionModelValidated=False)
     if not key:
@@ -60,7 +84,7 @@ def run(key,reader=get):
         report["matched"]=sum(v["status"]=="matched" for v in report["leagues"])
         report["status"]="catalog_received"
     except HTTPError as exc:
-        report.update(status="http_error",httpStatus=exc.code)
+        report.update(status="http_error",**safe_http_diagnostics(exc))
     except (URLError,OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
         report.update(status="connection_or_schema_error",errorType=type(exc).__name__)
     return report
