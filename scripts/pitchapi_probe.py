@@ -53,9 +53,13 @@ SAFE_CODES={"UNAUTHORIZED","INVALID_PARAMETER","RESOURCE_NOT_FOUND","ANALYTICS_U
     "FORBIDDEN","ACCESS_DENIED","IP_NOT_ALLOWED"}
 
 def safe_http_diagnostics(exc):
-    result=dict(httpStatus=exc.code,responseFormat="unknown",providerErrorCode=None)
+    result=dict(httpStatus=exc.code,responseFormat="unknown",providerErrorCode=None,requestId=None)
     try:
         content_type=exc.headers.get_content_type() if exc.headers else ""
+        request_id=exc.headers.get("X-Request-ID","") if exc.headers else ""
+        # Only conventional UUID-shaped request IDs are safe to log.
+        if re.fullmatch(r"[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}",request_id):
+            result["requestId"]=request_id
         raw=exc.read(8192)
         if content_type=="application/json":
             result["responseFormat"]="json"
@@ -73,11 +77,15 @@ def safe_http_diagnostics(exc):
     return result
 
 def run(key,reader=get):
-    report=dict(version="6.51b",source="PitchAPI",mode="connection_catalog_probe",
-        status="missing_key",leagues=[],matched=0,xgValidated=False,xtValidated=False,
+    report=dict(version="6.51c",source="PitchAPI",mode="connection_catalog_probe",
+        status="missing_key",keyFormatValid=False,leagues=[],matched=0,xgValidated=False,xtValidated=False,
         usedForTraining=False,existingArchivesModified=False,productionModelValidated=False)
     if not key:
         return report
+    if not re.fullmatch(r"pk_(?:live|test)_[A-Za-z0-9_-]+",key):
+        report["status"]="invalid_key_format"
+        return report
+    report["keyFormatValid"]=True
     # Report only safe diagnostics, never raw response or exception text.
     try:
         report["leagues"]=catalog(reader("leagues",key))
