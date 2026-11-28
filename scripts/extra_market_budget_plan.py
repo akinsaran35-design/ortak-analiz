@@ -35,15 +35,36 @@ def scheduled_slots(after):
             if stamp>after:slots.append(stamp)
     return slots
 
+def core_slots(after):
+    return [t for t in scheduled_slots(after) if (t.hour,t.minute) in BASE_SLOTS]
+
+def priority_budget(balance,after,league_count):
+    """Read-only estimate: reserve core runs first, then optional refreshes."""
+    if type(balance) is not int or balance<0 or type(league_count) is not int or league_count<=0:
+        raise ValueError("invalid budget inputs")
+    core=len(core_slots(after))
+    optional=len(scheduled_slots(after))-core
+    core_cost=core*league_count
+    core_reserve=core_cost+RESERVE
+    surplus=max(0,balance-core_reserve)
+    optional_affordable=min(optional,surplus//league_count)
+    return dict(coreRunsRemaining=core,optionalRunsRemaining=optional,
+        coreCreditsReserved=core_cost,coreAndEmergencyReserve=core_reserve,
+        coreReserveShortfall=max(0,core_reserve-balance),
+        optionalRunsAffordable=optional_affordable,
+        optionalRunsToDefer=optional-optional_affordable,
+        creditsAfterCoreReserveAndAffordableOptionalRuns=max(0,surplus-optional_affordable*league_count),
+        scheduleChanged=False,liveAuthorization=False)
+
 def plan(snapshot,now,workflow):
     now=now.astimezone(timezone.utc)
-    report=dict(version="6.86",mode="read_only_budget_planning",updatedAt=now.isoformat(),
+    report=dict(version="6.86",priorityPolicyVersion="6.87",mode="read_only_budget_planning",updatedAt=now.isoformat(),
         additionalApiRequests=0,collectionEnabled=False,liveQuotaVerificationRequired=True,
         scheduledRunsOnly=True,unscheduledRunsNotReserved=True,resetNotAssumedVerified=True,
         emergencyReserve=RESERVE,maximumCostPerExtraEvent=EXTRA_COST_CAP,
         remainingCreditsAtSnapshot=None,snapshotAt=None,snapshotFresh=False,
         scheduledRunsRemaining=None,baseCreditsReserved=None,totalCreditsReserved=None,
-        reserveShortfall=None,theoreticalExtraEventCapacity=None,status="invalid_snapshot")
+        reserveShortfall=None,theoreticalExtraEventCapacity=None,priorityBudget=None,status="invalid_snapshot")
     if not schedule_matches(workflow):
         report["status"]="schedule_changed";return report
     if not isinstance(snapshot,dict):return report
@@ -63,6 +84,7 @@ def plan(snapshot,now,workflow):
     report.update(remainingCreditsAtSnapshot=balance,snapshotAt=stamp.isoformat(),snapshotFresh=fresh,
         scheduledRunsRemaining=len(slots),baseCreditsReserved=base,totalCreditsReserved=total,
         reserveShortfall=max(0,total-balance),
+        priorityBudget=priority_budget(balance,stamp,len(leagues)) if fresh else None,
         theoreticalExtraEventCapacity=min(MAX_EXTRA_EVENTS,max(0,balance-total)//EXTRA_COST_CAP) if fresh else None,
         status="stale_balance" if not fresh else "reserve_shortfall" if balance<total else "planning_only")
     return report
