@@ -40,12 +40,27 @@ def fit_frozen(train,keys):
     model.fit(vector(train,keys),y)
     return model
 
+def training_snapshot(history,expected_train):
+    train=sorted(feature_rows([r for r in history if r["date"]<TUNE_START]),
+        key=lambda r:(r["date"],r["league"],r["home"],r["away"]))
+    if len(train)!=expected_train:
+        raise ValueError("historical training count changed; review required")
+    keys=sorted(train[0]["features"])
+    if len(keys)!=EXPECTED_FEATURES or any(set(r["features"])!=set(keys) for r in train):
+        raise ValueError("training schema changed")
+    return train,keys,digest(train)
+
+def verify_training(meta,keys,fingerprint):
+    if meta.get("featureKeys")!=keys or meta.get("trainingFingerprint")!=fingerprint:
+        raise ValueError("frozen training provenance changed; review required")
+
 def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,now=None,version=VERSION,expected_train=EXPECTED_TRAIN):
     from catboost import CatBoostClassifier,__version__
     now=(now or datetime.now(TR)).astimezone(TR)
     existing=(model_path.exists(),meta_path.exists())
     if any(existing) and not all(existing) or ledger_path.exists() and not all(existing):
         raise ValueError("partial frozen cohort; refuse replacement")
+    train,keys,fingerprint=training_snapshot(history,expected_train)
     if all(existing):
         meta=read_json(meta_path)
         if (meta["version"]!=version or meta["weight"]!=WEIGHT or meta["catboostVersion"]!=__version__
@@ -53,20 +68,14 @@ def load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,no
             or len(meta["featureKeys"])!=EXPECTED_FEATURES or len(set(meta["featureKeys"]))!=EXPECTED_FEATURES
             or meta["trainingMatches"]!=expected_train or meta["trainingCutoff"]!=TUNE_START):
             raise ValueError("frozen model mismatch")
+        verify_training(meta,keys,fingerprint)
         model=CatBoostClassifier()
         model.load_model(str(model_path))
     else:
-        train=sorted(feature_rows([r for r in history if r["date"]<TUNE_START]),
-            key=lambda r:(r["date"],r["league"],r["home"],r["away"]))
-        if len(train)!=expected_train:
-            raise ValueError("historical training count changed; review required")
-        keys=sorted(train[0]["features"])
-        if len(keys)!=EXPECTED_FEATURES or any(set(r["features"])!=set(keys) for r in train):
-            raise ValueError("training schema changed")
         model=fit_frozen(train,keys)
         model.save_model(str(model_path))
         meta=dict(version=version,model="catboost",weight=WEIGHT,catboostVersion=__version__,
-            modelSha256=hashlib.sha256(model_path.read_bytes()).hexdigest(),trainingFingerprint=digest(train),
+            modelSha256=hashlib.sha256(model_path.read_bytes()).hexdigest(),trainingFingerprint=fingerprint,
             trainingMatches=len(train),trainingCutoff=TUNE_START,featureKeys=keys,
             frozenAt=now.isoformat(),trainingSourceVerification="single_source_only")
         write_json(meta_path,meta)
