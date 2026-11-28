@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -57,6 +57,20 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result["markets"]["btts"]["ratePct"],25.0)
         self.assertIsNone(result["predictionAccuracy"])
         self.assertIsNone(outcome_baseline([])["markets"]["btts"]["ratePct"])
+    def test_chronological_backtest(self):
+        def row(day,home,score,league="sco.1",status="corroborated"):
+            return dict(league=league,date=day,home=home,away="z",csv=score,espn=score,status=status)
+        rows=[row("2026-11-01",str(i),[0,0]) for i in range(19)]
+        rows.extend([row("2026-11-02","a",[0,0]),row("2026-11-02","b",[0,0]),row("2026-11-03","c",[3,2]),row("2026-11-03","d",[0,0]),row("2026-11-03","e",[5,5],league="bel.1"),row("2026-11-03","f",[5,5],status="conflict")])
+        result=chronological_backtest(rows)
+        self.assertEqual(result["evaluatedMatches"],2)
+        self.assertEqual(result["warmupMatches"],22)
+        self.assertEqual(result["markets"]["over15"]["accuracyPct"],50.0)
+        self.assertEqual(result["markets"]["over15"]["brier"],0.5)
+        self.assertEqual(result["markets"]["btts"]["calibrationBins"][0]["meanProbability"],0.0)
+        self.assertEqual(result,chronological_backtest(list(reversed(rows))))
+        self.assertFalse(result["productionModelValidated"])
+        self.assertIsNone(chronological_backtest([])["markets"]["btts"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
