@@ -30,7 +30,7 @@ def attach_names(payload,day):
             r["sourceTeamNames"]=info
     return rows,bad
 
-def public_fixtures(day,reader=read):
+def public_fixtures(day,reader=read,codes=None):
     def group(entry):
         label,code,sport=entry[:3]
         source_code=SOURCES[code][1] if code in SOURCES else code
@@ -41,4 +41,5 @@ def public_fixtures(day,reader=read):
         except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
             result["error"]=type(exc).__name__
         return result
-    with ThreadPoolExecutor(max_workers=4) as pool:return list(pool.map(group,(*LEAGUES,*EXTRA)))
+    entries=[e for e in (*LEAGUES,*EXTRA) if codes is None or e[1] in codes]
+    with ThreadPoolExecutor(max_workers=4) as pool:return list(pool.map(group,entries))
