@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS,gamma_poisson_probabilities,bayesian_simulation,bayesian_backtest,bivariate_probabilities,fit_shared_intensity,bivariate_backtest,fit_nb_dispersion,nb_low_mass,nb_probabilities,negative_binomial_backtest
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -166,6 +166,25 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result["markets"]["btts"]["nonzeroSharedMatches"],result["markets"]["btts"]["n"])
         self.assertFalse(result["productionModelValidated"])
         self.assertIsNone(bivariate_backtest([])["markets"]["btts"]["bivariate"]["brier"])
+    def test_negative_binomial(self):
+        self.assertEqual(nb_probabilities(1.4,1.1,0,0),goal_probabilities(1.4,1.1))
+        self.assertEqual(nb_low_mass(1,1),(0.5,0.25,0.125))
+        p=nb_probabilities(1,1,1,1)
+        for actual,expected in zip(p,(0.5,0.3125,0.25)):
+            self.assertAlmostEqual(actual,expected)
+        self.assertEqual(nb_probabilities(0,0,1,1),(0,0,0))
+        self.assertGreater(fit_nb_dispersion([0,4]*10,2),0)
+        self.assertEqual(fit_nb_dispersion([2]*20,2),0)
+        with self.assertRaises(ValueError):
+            nb_probabilities(1,2,-1,0)
+        start=datetime(2026,8,1)
+        rows=[dict(league="sco.1",date=(start+timedelta(days=d)).date().isoformat(),home=f"a{i}",away=f"b{i}",csv=[4*(i%2),4*(d%2)],espn=[4*(i%2),4*(d%2)],status="corroborated") for d in range(30) for i in range(10)]
+        report=negative_binomial_backtest(rows)
+        self.assertEqual(report,negative_binomial_backtest(list(reversed(rows))))
+        self.assertEqual(report["markets"]["over15"]["poisson"],bivariate_backtest(rows)["markets"]["over15"]["poisson"])
+        self.assertEqual(report["markets"]["btts"]["overdispersedMatches"],report["markets"]["btts"]["n"])
+        self.assertFalse(report["productionModelValidated"])
+        self.assertIsNone(negative_binomial_backtest([])["markets"]["btts"]["negativeBinomial"]["brier"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
