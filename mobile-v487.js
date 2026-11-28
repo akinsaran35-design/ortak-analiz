@@ -509,11 +509,11 @@ function panel(root,title,body){const p=node("article",undefined,"panel");p.appe
 function renderRadar(now=Date.now()){
  const radar=by("scoreboard-summary");radar.replaceChildren();
  const live=data.live_analysis_quality, recent=liveRows(live,now), previousLive=lastLiveRows(live,now);
- panel(radar,"ESPN · periyodik maç istatistikleri",[node("p",Number.isFinite(Date.parse(live?.updatedAt))?"Son sorgu: "+dateTR(live.updatedAt)+" "+hourTR(live.updatedAt)+" TSİ":"Henüz yayımlanmış sorgu yok.","subtle"),node("p","15 dakikalık pilot; veri alım süresi 120 saniye ile sınırlıdır. Kaynağın gerçek zamanlı güncelliği doğrulanmadı.","subtle")]);
+ panel(radar,"ESPN · periyodik maç istatistikleri",[node("p",Number.isFinite(Date.parse(live?.updatedAt))?"Son sorgu: "+dateTR(live.updatedAt)+" "+hourTR(live.updatedAt)+" TSİ":"Henüz yayımlanmış sorgu yok.","subtle"),node("p","GitHub yenileme hedefi 5 dakika; gerçek aralık değişebilir. Yeni gözlemler 120 saniye ile sınırlıdır. Kaynağın gerçek zamanlı güncelliği doğrulanmadı.","subtle")]);
  if(!recent.length)radar.append(signalPanel(null),node("p","Gösterilebilir yeni maç gözlemi yok. Bu, devam eden maç olmadığı anlamına gelmez.","subtle"));
  for(const r of recent){const o=r.observation;panel(radar,r.home+" – "+r.away,[node("p",o.score.join(" – ")+" · "+o.clock),metrics([["Korner",o.metrics.corners.join(" – ")],["Şut",o.metrics.shots.join(" – ")],["İsabetli şut",o.metrics.shotsOnTarget.join(" – ")],["Sarı kart",o.metrics.yellowCards.join(" – ")],["Kırmızı kart",o.metrics.redCards.join(" – ")],["Topa sahip olma",o.metrics.possession.join(" – ")+" %"]]),node("p","Alım: "+hourTR(r.receivedAt)+" TSİ · Gözlem, tahmin değil.","subtle"),signalPanel(r)]);}
  if(previousLive.length){
-   panel(radar,"Son bilinen maç gözlemleri — canlı değil",[node("p","15 dakikalık sorgu aralığında alınmış eski gözlemler. Maçın şu anki durumu doğrulanmadı; sinyal üretilmez.","subtle")]);
+   panel(radar,"Son bilinen maç gözlemleri — canlı değil",[node("p","Önceki sorguda alınmış eski gözlemler. Maçın şu anki durumu doğrulanmadı; sinyal üretilmez.","subtle")]);
    for(const r of previousLive){const o=r.observation;panel(radar,r.home+" – "+r.away,[node("p","Eski skor: "+o.score.join(" – ")+" · "+o.clock),node("p","Alım: "+hourTR(r.receivedAt)+" TSİ · Güncel değil","subtle"),metrics([["Korner",o.metrics.corners.join(" – ")],["Şut",o.metrics.shots.join(" – ")],["İsabetli şut",o.metrics.shotsOnTarget.join(" – ")]])]);}
  }
  const board=data.scoreboard_snapshot;
