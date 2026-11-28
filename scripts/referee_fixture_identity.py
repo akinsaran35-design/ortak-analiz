@@ -33,8 +33,11 @@ def match(doc,groups):
     if doc.get("errors") not in ({},[]) or not isinstance(doc.get("response"),list) or doc.get("results")!=len(doc["response"]) or doc.get("paging")!={"current":1,"total":1}:
         raise ValueError("incomplete provider response")
     candidates={};ids=Counter();targets={};target_ids=Counter()
+    metadata_rejected=Counter();scheduled_seen=Counter();diagnostics={}
+    unavailable=[]
     for group in groups:
-        if group.get("error") or group.get("errors"):continue
+        if group.get("error") or group.get("errors"):
+            unavailable.append(group["league"]);continue
         for r in group["rows"]:
             if r.get("state")!="pre" or r.get("status")!="STATUS_SCHEDULED":continue
             try:
@@ -49,20 +52,45 @@ def match(doc,groups):
             if type(i) is not int or i<=0:continue
             ids[i]+=1
             meta=LEAGUES.get(l["id"])
-            if not meta or norm(l["country"])!=norm(meta[1]) or norm(l["name"])!=norm(meta[2]) or f["status"]["short"]!="NS":continue
+            if not meta:continue
+            if norm(l["country"])!=norm(meta[1]) or norm(l["name"])!=norm(meta[2]):
+                metadata_rejected[meta[0]]+=1;continue
+            if f["status"]["short"]!="NS":continue
+            scheduled_seen[meta[0]]+=1
             k=identity(meta[0],row["teams"]["home"]["name"],row["teams"]["away"]["name"],f["date"])
             name=f.get("referee")
             if not isinstance(name,str) or norm(name) in ("","unknown","n a","na","tbd","none"):name=None
             candidates.setdefault(k,[]).append((i,name))
         except (ValueError,TypeError,KeyError,AttributeError):continue
     result=[]
+    for code,_,_ in LEAGUES.values():
+        diagnostics[code]=Counter()
     for k,events in targets.items():
         matches=candidates.get(k,[])
-        if len(events)!=1 or target_ids[(k[0],events[0])]!=1 or len(matches)!=1 or ids[matches[0][0]]!=1:
-            continue
+        c=diagnostics.setdefault(k[0],Counter())
+        c["eligible"]+=1
+        if len(events)!=1 or target_ids[(k[0],events[0])]!=1:
+            c["ambiguous_target"]+=1;continue
+        if len(matches)>1 or (matches and ids[matches[0][0]]!=1):
+            c["ambiguous_provider"]+=1;continue
+        if not matches:
+            if any(x[:3]==k[:3] for x in candidates):
+                reason="kickoff_difference"
+            elif any(x[0]==k[0] and x[3]==k[3] for x in candidates):
+                reason="same_time_team_identity_unresolved"
+            elif scheduled_seen[k[0]]:
+                reason="no_exact_fixture"
+            elif metadata_rejected[k[0]]:
+                reason="league_metadata_unverified"
+            else:reason="no_scheduled_provider_rows"
+            c[reason]+=1;continue
         pid,ref=matches[0]
+        c["matched_with_referee" if ref else "matched_missing_referee"]+=1
         result.append(dict(league=k[0],eventId=events[0],providerId=pid,referee=ref,
                            status="source_observed" if ref else "missing_referee"))
     return dict(eligibleIdentities=len(targets),matched=len(result),
                 withReferee=sum(x["referee"] is not None for x in result),rows=result,
+                diagnostics=[dict(league=code,counts=dict(c),providerScheduledRows=scheduled_seen[code],
+                                  metadataRejectedRows=metadata_rejected[code],publicSourceUnavailable=code in unavailable)
+                             for code,c in sorted(diagnostics.items())],
                 predictionsEnabled=False,decision="PAS",publicationAllowed=False)
