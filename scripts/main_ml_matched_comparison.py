@@ -1,7 +1,7 @@
 """V6.69 read-only paired comparison of frozen main ML and archived match-card v1.6.
 Pairs are locked before kickoff, never created after outcomes are available."""
-import json
-from datetime import datetime
+import json,copy
+from datetime import datetime,date
 from pathlib import Path
 from collections import defaultdict,Counter
 from league_config import FIXTURE_CODES
@@ -52,6 +52,20 @@ def locked_legacy_identity(value):
     except (ValueError,TypeError,KeyError,AttributeError):
         return None
 
+def valid_legacy_timing(t,recorded_at,fixture_date):
+    if not isinstance(t,dict) or t.get("version")!="6.82" or t.get("sameSourceDataEstablished") is not False:
+        return False
+    try:
+        start=aware(t["generationStartedAt"])
+        end=aware(t["generationCompletedAt"])
+        recorded=aware(recorded_at)
+        cutoff=date.fromisoformat(t["historyCutoffExclusive"])
+        latest=date.fromisoformat(t["historyThrough"])
+        return (start<=end<=recorded and latest<cutoff<date.fromisoformat(fixture_date)
+            and start.date()==end.date()==cutoff)
+    except (KeyError,TypeError,ValueError,AttributeError,OverflowError):
+        return False
+
 def legacy_provenance(pairs,ledger,legacy):
     """Check immutable forecast fields, not the mutable result field."""
     groups=legacy_entries(legacy) if isinstance(legacy,dict) else {}
@@ -67,7 +81,8 @@ def legacy_provenance(pairs,ledger,legacy):
         else:
             lk,old=matches[0]
             status="verified" if (lk==x["legacyKey"] and old.get("recordedAt")==x["legacyRecordedAt"]
-                and old.get("modelVersion")==x["legacyVersion"] and legacy_prob(old)==x["legacy"]) else "changed"
+                and old.get("modelVersion")==x["legacyVersion"] and legacy_prob(old)==x["legacy"]
+                and ("legacyTiming" not in x or old.get("forecastTiming")==x["legacyTiming"])) else "changed"
         counts[status]+=1
         per_pair[k]=status
     return dict(counts=dict(counts),perPair=per_pair,sourceAvailable=isinstance(legacy,dict))
@@ -102,6 +117,10 @@ def build(pairs,ledger,meta,legacy,now):
                 excluded["ineligible_legacy"]+=1;continue
             locked[k]=dict(legacyKey=lk,legacyVersion=LEGACY_VERSION,legacyRecordedAt=old["recordedAt"],legacy=prob,
                 candidate=f["candidate"],forecastFingerprint=digest(f),pairedAt=now.isoformat())
+            timing=old.get("forecastTiming")
+            if valid_legacy_timing(timing,old["recordedAt"],f["date"]):
+                locked[k]["legacyTiming"]=copy.deepcopy(timing)
+                locked[k]["legacyTimingFingerprint"]=digest(timing)
             added+=1
         x=locked[k]
         if (x["forecastFingerprint"]!=digest(f) or x["candidate"]!=f["candidate"]
@@ -112,6 +131,10 @@ def build(pairs,ledger,meta,legacy,now):
             or not max(aware(f["recordedAt"]),aware(x["legacyRecordedAt"]))<=aware(x["pairedAt"])<=now
             or aware(x["pairedAt"])>=aware(f["kickoff"])):
             raise ValueError("locked pair integrity failure")
+        if ("legacyTiming" in x or "legacyTimingFingerprint" in x) and (
+            not valid_legacy_timing(x.get("legacyTiming"),x["legacyRecordedAt"],f["date"])
+            or x.get("legacyTimingFingerprint")!=digest(x["legacyTiming"])):
+            raise ValueError("locked legacy timing integrity failure")
         seen_legacy.add(x["legacyKey"])
         if k in ledger["quarantine"]:
             excluded["quarantined_pair"]+=1;continue
