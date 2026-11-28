@@ -1,12 +1,12 @@
 # Ortak Analiz PRO — geliştirme sırası
 
-2026-11-28: V6.66 ana sürümde. Ana 9 ligde 39 gelecek maçın 38'i için 119 değişkenli girdi kontrolü başarılı; 1 kimlik uyuşmazlığı dışlandı. V6.65: 3292 geçmiş test maçı; 2.5 Üst/Alt sınıflandırmasında iyileşme sınırlı, KG Var/Yok için iyileşme kanıtlanmadı. Geçmiş test gerçek maç öncesi bağımsız doğrulama değildir.
+2026-11-28: V6.67 ana sürümde; önizlemede 38 yeni tahmin üretildi. Kalıcı kayıt doğrulanacak. Ana 9 ligde 39 gelecek maçın 38'i için 119 değişkenli girdi kontrolü başarılı; 1 kimlik uyuşmazlığı dışlandı. V6.65: 3292 geçmiş test maçı; 2.5 Üst/Alt sınıflandırmasında iyileşme sınırlı, KG Var/Yok için iyileşme kanıtlanmadı. Geçmiş test gerçek maç öncesi bağımsız doğrulama değildir.
 
 ## Ana öncelik — araştırmadan mevcut maç analiz motoruna
 
 - [x] Ana 9 lig geçmiş test ve girdi kontrolü (V6.65–66).
-- [ ] Ana liglerde ayrı sabit model ve maç öncesi arşiv (V6.67 PR; test/merge ve kalıcı kayıt doğrulaması).
-- [ ] Ana ligler için iki bağımsız kaynakla sonuç eşleştirmesi, çelişki karantinası ve otomatik ölçüm.
+- [ ] Ana liglerde ayrı sabit model ve maç öncesi arşiv (V6.67 test/merge tamamlandı; kalıcı kayıt doğrulaması).
+- [ ] Ana ligler için iki bağımsız kaynakla sonuç eşleştirmesi, çelişki karantinası ve otomatik ölçüm (V6.68 PR).
 - [ ] Mevcut maç kartı motoruyla eşleştirilmiş karşılaştırma; gerçek maç öncesi zaman damgaları, geçmiş veriye bakma sızıntısı yok.
 - [ ] Kalibrasyon, Brier/log loss, tarih blokları, yeterli örneklem, lig ve market bazında güvenilirlik; bağımsız onay.
 - [ ] Onaylanan modelleri yalnızca uygun lig/market için mevcut tasarımı koruyarak ana analiz motoruna bağla; eski tahmin arşivlerini değiştirme. Onaylanmayanlar araştırma olarak kalır.
