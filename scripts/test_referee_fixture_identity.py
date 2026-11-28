@@ -1,5 +1,5 @@
 import copy,unittest
-from referee_fixture_identity import match
+from referee_fixture_identity import match,combined_evidence
 def provider():
     return dict(errors=[],results=1,paging=dict(current=1,total=1),response=[dict(
         fixture=dict(id=42,date="2026-11-28T15:00:00+03:00",status=dict(short="NS"),referee="Test Ref"),
@@ -74,6 +74,19 @@ class IdentityTests(unittest.TestCase):
         self.assertFalse(r["sourceNameShadow"]["verified"])
         row["sourceTeamNames"]["away"].append("Test A")
         self.assertEqual(match(doc,groups)["sourceNameShadow"]["additionalCandidates"],0)
+    def test_combined_evidence_dedup_and_conflict(self):
+        a=("de.1","100",42)
+        b=("de.1","101",43)
+        c=("de.1","102",44)
+        r=combined_evidence({a:True,b:False},{a:True,c:True},5,1)
+        self.assertEqual((r["sharedCandidates"],r["aliasOnly"],r["sourceOnly"]),(1,1,1))
+        self.assertEqual((r["additionalCandidates"],r["candidatesWithReferee"],r["remainingIdentities"]),(3,2,1))
+        r=combined_evidence({a:True,b:False},{("de.1","100",44):True,("de.1","102",43):True},5,1)
+        self.assertEqual(r["conflictingPairs"],4)
+        self.assertEqual(r["additionalCandidates"],0)
+        self.assertFalse(r["verified"])
+        self.assertFalse(r["predictionsEnabled"])
+        self.assertNotIn("100",str(r))
     def test_incomplete(self):
         doc=provider();doc["paging"]["total"]=2
         with self.assertRaises(ValueError):match(doc,targets())
