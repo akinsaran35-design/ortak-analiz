@@ -4,6 +4,8 @@ on:
     paths:
       - 'scripts/fetch_extra_markets.py'
       - 'scripts/test_extra_markets.py'
+      - 'scripts/extra_market_budget_plan.py'
+      - '.github/workflows/daily.yml'
       - '.github/workflows/extra-market-integrity.yml'
   workflow_dispatch:
 permissions:
