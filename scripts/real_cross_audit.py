@@ -8,11 +8,15 @@ MAP={"en.1":2021,"en.2":2016,"de.1":2002,"es.1":2014,"it.1":2019,"fr.1":2015,"nl
 now=datetime.now(TR)
 holdout=os.environ.get("CROSS_HOLDOUT")=="1"
 # Expanded historical audit. Prior research may overlap; do not add totals without ID deduplication.
-start=date.fromisoformat(os.environ.get("CROSS_START","2026-05-01"))
-days=int(os.environ.get("CROSS_DAYS","31"))
-if holdout and (not 1<=days<=31 or start+timedelta(days=days-1)>=now.date()):
-    raise ValueError("Historical window must contain 1-31 completed local dates")
-offsets=tuple((start-now.date()).days+i for i in range(days)) if holdout else (-1,0,1)
+if holdout:
+    start=date.fromisoformat(os.environ.get("CROSS_START","2026-07-01"))
+    days=int(os.environ.get("CROSS_DAYS","31"))
+    if not 1<=days<=31 or days>(now.date()-start).days:
+        raise ValueError("Historical window must contain 1-31 completed local dates")
+    first=(start-now.date()).days
+    offsets=tuple(range(first,first+days))
+else:
+    offsets=(-1,0,1)
 token=os.environ.get("FOOTBALL_DATA_TOKEN")
 def secondary_windowed():
     # Overlap boundaries so either inclusive or exclusive dateTo is safe.
@@ -225,6 +229,14 @@ assert not any(x["scoreAgreement"] is False for x in r["pairs"])
 if holdout:assert r["scoreCompared"]>0, "No comparable completed scores"
 if holdout:
     assert not primary_issues and secondary_rejected==0, "Source health incomplete"
-    assert len(verified_score_ids)>=100, "Expanded historical audit needs at least 100 verified scores"
-    assert scope["primaryCoverage"] is not None and scope["secondaryCoverage"] is not None and min(scope["primaryCoverage"],scope["secondaryCoverage"])>=0.99, "Expanded historical audit below 99 percent bidirectional coverage"
+    failures=[]
+    if len(verified_score_ids)<100:
+        failures.append(f"at least 100 verified scores required, observed {len(verified_score_ids)}")
+    if any(coverage is None or coverage<0.99 for coverage in (scope["primaryCoverage"],scope["secondaryCoverage"])):
+        failures.append(
+            f"99 percent bidirectional coverage required, matched {scope['matched']} of "
+            f"{scope['primaryCount']} primary and {scope['secondaryCount']} secondary fixtures"
+        )
+    if failures:
+        raise AssertionError(f"Historical audit {audit_start} to {audit_end}: " + "; ".join(failures))
 print("Combined sample coverage:",r["coverage"],"score comparisons:",r["scoreCompared"])
