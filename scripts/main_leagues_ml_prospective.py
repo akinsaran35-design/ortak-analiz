@@ -14,18 +14,23 @@ EXPECTED_TRAIN=2848
 
 def run():
     started=datetime.now(TR)
-    history,training,keys,games,source_count=collect(started)
+    frozen=MODEL.exists() and META.exists()
+    if frozen:
+        history,training,keys,games,diagnostics=collect(started,allow_partial=True)
+    else:
+        history,training,keys,games,source_count=collect(started)
+        diagnostics=dict(sourceSuccessful=source_count,sourceRequested=source_count,historySourceFailures=[],fixtureSourceFailures=[],excludedHistoricalLeagues=[],partial=False)
     model,meta=load_or_freeze(history,model_path=MODEL,meta_path=META,ledger_path=LEDGER,
         version=VERSION,expected_train=EXPECTED_TRAIN)
-    if meta["version"]!=VERSION or set(meta["featureKeys"])!=keys:
+    if meta["version"]!=VERSION or (keys and set(meta["featureKeys"])!=keys):
         raise ValueError("frozen main cohort mismatch")
     ledger=read_json(LEDGER) if LEDGER.exists() else empty_ledger(meta,version=VERSION)
     now=datetime.now(TR)
     if now.date()!=started.date():raise ValueError("date changed; rerun")
     added,excluded=capture(ledger,history,games,model,meta,now,version=VERSION,identity_fn=identity)
     write_json(LEDGER,ledger)
-    report=dict(version=VERSION,mode="prospective_research_only",sourceSuccessful=source_count,
-        trainingMatches=meta["trainingMatches"],featureCount=len(keys),modelSha256=meta["modelSha256"],
+    report=dict(version=VERSION,mode="prospective_research_only",sourceSuccessful=diagnostics["sourceSuccessful"],sourceDiagnostics=diagnostics,
+        trainingMatches=meta["trainingMatches"],featureCount=len(meta["featureKeys"]),modelSha256=meta["modelSha256"],
         trainingFingerprint=meta["trainingFingerprint"],frozenAt=meta["frozenAt"],
         fixturesChecked=len(games),newForecasts=added,recorded=len(ledger["forecasts"]),
         settled=len(ledger["settlements"]),excluded=excluded,modelFrozen=True,
