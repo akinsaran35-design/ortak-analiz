@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone, timedelta
-from model_market import compare_market
+from model_market import compare_market,bound_extra,candidate_matches,unique_events
 
 class ModelMarketTests(unittest.TestCase):
 
@@ -54,6 +54,22 @@ class ModelMarketTests(unittest.TestCase):
             compare_market(0.80, quotes, self.now)
         )
 
+    def test_conflicting_duplicate_book(self):
+        self.assertIsNone(compare_market(.8,self.quotes+[dict(self.quotes[0],positive=1.6)],self.now))
+    def test_extra_source_binding(self):
+        stamp=self.now.isoformat()
+        event=dict(id="e",league="soccer_epl",home="A",away="B",kickoff=(self.now+timedelta(hours=1)).isoformat())
+        odds=dict(source="The Odds API",region="uk",market="totals",errors=[],updatedAt=stamp,events=[event])
+        extra=dict(source="The Odds API",region="uk",mode="research_only",quotaPolicyVersion="6.89",oddsSnapshotAt=stamp,errors=[],updatedAt=stamp,events=[event])
+        archive=dict(mode="research_only",integrityVersion="6.85",quarantine={},updatedAt=stamp)
+        self.assertEqual(bound_extra(odds,extra,archive,self.now),{"e":event})
+        self.assertEqual(bound_extra(odds,dict(extra,events=[dict(event,away="C")]),archive,self.now),{})
+        self.assertEqual(bound_extra(odds,dict(extra,oddsSnapshotAt="old"),archive,self.now),{})
+        self.assertEqual(bound_extra(odds,extra,dict(archive,quarantine={"e":{}}),self.now),{})
+        self.assertEqual(unique_events([event,event]),{})
+        c=dict(match="A – B",league="İngiltere Premier Lig",date=(self.now+timedelta(hours=4)).date().isoformat())
+        self.assertTrue(candidate_matches(c,event))
+        self.assertFalse(candidate_matches(dict(c,league="İngiltere Championship"),event))
     def test_stale_odds(self):
         self.quotes[0]["lastUpdate"] = (
             self.now - timedelta(minutes=31)
