@@ -1,5 +1,5 @@
 const assert=require("node:assert/strict");
-const {parse,collect,visible,CODES}=require("../direct-radar-v727.js");
+const {parse,collect,visible,CODES,retryDelay}=require("../direct-radar-v727.js");
 const now=Date.parse("2026-11-28T12:00:00Z"),day="2026-11-28";
 function event(id="1"){
  return {id,date:"2026-11-28T11:00:00Z",competitions:[{date:"2026-11-28T11:00:00Z",status:{type:{state:"in"},displayClock:"60'"},competitors:[{homeAway:"home",team:{displayName:"A"},score:"1"},{homeAway:"away",team:{displayName:"B"},score:"0"}]}]};
@@ -21,5 +21,8 @@ function event(id="1"){
  assert.equal(urls.length,2);assert.equal(report.results[1].ok,false);assert.equal(visible(report,now).length,1);
  assert.equal(visible(report,now+120001).length,0);assert.equal(visible(report,now-1).length,0);
  assert.equal(report.predictionsEnabled,false);
+ assert.equal(retryDelay(report),120000);
+ assert.equal(retryDelay({results:[{ok:false}]}),900000);
+ assert.equal(retryDelay({results:[{ok:false}]},true),60000);
  console.log("Direct scoreboard tests passed");
 })().catch(e=>{console.error(e);process.exitCode=1;});
