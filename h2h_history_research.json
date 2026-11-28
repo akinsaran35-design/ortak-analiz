@@ -1,6 +1,6 @@
 {
   "version": "5.28",
-  "dailyUpdatedAt": "2026-11-28T12:21:24+03:00",
+  "dailyUpdatedAt": "2026-11-28T20:43:41+03:00",
   "cutoffExclusive": "2026-11-28",
   "mode": "descriptive_research",
   "decision": "PAS",
@@ -3029,53 +3029,13 @@
       "fixtures": 6,
       "sampleCounts": {
         "0": 3,
-        "2": 1,
         "4": 1,
-        "6": 1
+        "6": 1,
+        "10": 1
       },
       "formSidesRefreshed": 12,
       "formSidesNewer": 3,
       "rows": [
-        {
-          "match": "gaziantep – amed",
-          "date": "2026-11-28",
-          "sample": 0,
-          "csvMatchesAvailable": 0,
-          "crossDivisionMatches": 0,
-          "source": "original_league_history",
-          "formRefreshed": {
-            "home": true,
-            "away": true
-          },
-          "formOldDates": {
-            "home": "2026-11-21",
-            "away": "2026-11-21"
-          },
-          "formNewDates": {
-            "home": "2026-11-21",
-            "away": "2026-11-21"
-          }
-        },
-        {
-          "match": "samsunspor – genclerbirligi",
-          "date": "2026-11-28",
-          "sample": 2,
-          "csvMatchesAvailable": 2,
-          "crossDivisionMatches": 0,
-          "source": "football-data.co.uk",
-          "formRefreshed": {
-            "home": true,
-            "away": true
-          },
-          "formOldDates": {
-            "home": "2026-11-21",
-            "away": "2026-11-21"
-          },
-          "formNewDates": {
-            "home": "2026-11-21",
-            "away": "2026-11-21"
-          }
-        },
         {
           "match": "corum – kocaelispor",
           "date": "2026-11-29",
@@ -3154,6 +3114,46 @@
           "formNewDates": {
             "home": "2026-11-22",
             "away": "2026-11-22"
+          }
+        },
+        {
+          "match": "amed – alanyaspor",
+          "date": "2026-12-05",
+          "sample": 0,
+          "csvMatchesAvailable": 0,
+          "crossDivisionMatches": 0,
+          "source": "original_league_history",
+          "formRefreshed": {
+            "home": true,
+            "away": true
+          },
+          "formOldDates": {
+            "home": "2026-11-21",
+            "away": "2026-11-22"
+          },
+          "formNewDates": {
+            "home": "2026-11-21",
+            "away": "2026-11-22"
+          }
+        },
+        {
+          "match": "konyaspor – gaziantep",
+          "date": "2026-12-05",
+          "sample": 10,
+          "csvMatchesAvailable": 10,
+          "crossDivisionMatches": 0,
+          "source": "football-data.co.uk",
+          "formRefreshed": {
+            "home": true,
+            "away": true
+          },
+          "formOldDates": {
+            "home": "2026-11-22",
+            "away": "2026-11-21"
+          },
+          "formNewDates": {
+            "home": "2026-11-22",
+            "away": "2026-11-21"
           }
         }
       ]

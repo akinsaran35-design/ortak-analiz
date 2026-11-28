@@ -1,8 +1,8 @@
 {
   "version": "4.21",
   "mode": "research_only",
-  "updatedAt": "2026-11-28T09:21:59.901141+00:00",
-  "sourceUpdatedAt": "2026-11-28T12:21:24+03:00",
+  "updatedAt": "2026-11-28T17:44:08.258807+00:00",
+  "sourceUpdatedAt": "2026-11-28T20:43:41+03:00",
   "rho": -0.05,
   "rhoFitted": false,
   "modelCalibrated": false,
@@ -631,68 +631,6 @@
     },
     {
       "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "gaziantep – amed",
-      "expectedGoals": {
-        "home": 1.5,
-        "away": 1.7
-      },
-      "poisson": {
-        "over15": 0.8287987432908619,
-        "over25": 0.6200962589216269,
-        "btts": 0.6349485197772018
-      },
-      "experimentalDixonColes": {
-        "over15": 0.8339959242981035,
-        "over25": 0.6200962589216269,
-        "btts": 0.6401457007844434
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.10914080115207554
-          },
-          {
-            "home": 1,
-            "away": 2,
-            "probability": 0.08835207712310876
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.0779577151086254
-          }
-        ],
-        "topScoresCombined": 0.2754505933838097,
-        "homeWin": 0.33560942521377096,
-        "draw": 0.24345929508766304,
-        "awayWin": 0.420931279698566,
-        "expectedHome": 1.5,
-        "expectedAway": 1.7
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.8379,
-            "sampling_se": 0.002605989159609073
-          },
-          "over25": {
-            "probability": 0.62065,
-            "sampling_se": 0.003431060896428392
-          },
-          "btts": {
-            "probability": 0.64035,
-            "sampling_se": 0.003393389732258881
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
       "league": "İngiltere Championship",
       "match": "Birmingham City FC – Bolton Wanderers FC",
       "expectedGoals": {
@@ -997,68 +935,6 @@
           "btts": {
             "probability": 0.57425,
             "sampling_se": 0.003496333347236788
-          }
-        }
-      }
-    },
-    {
-      "date": "2026-11-28",
-      "league": "Türkiye Süper Lig",
-      "match": "samsunspor – genclerbirligi",
-      "expectedGoals": {
-        "home": 1.8,
-        "away": 1.15
-      },
-      "poisson": {
-        "over15": 0.7932581615036921,
-        "over25": 0.5655150159955756,
-        "btts": 0.5704040483477927
-      },
-      "experimentalDixonColes": {
-        "over15": 0.7986753210693548,
-        "over25": 0.5655150159955756,
-        "btts": 0.5758212079134554
-      },
-      "scoreProbabilities": {
-        "topScores": [
-          {
-            "home": 1,
-            "away": 1,
-            "probability": 0.11376035087891781
-          },
-          {
-            "home": 2,
-            "away": 1,
-            "probability": 0.09750887218192957
-          },
-          {
-            "home": 1,
-            "away": 0,
-            "probability": 0.08879431114151555
-          }
-        ],
-        "topScoresCombined": 0.3000635342023629,
-        "homeWin": 0.5205027298371024,
-        "draw": 0.24229515790858042,
-        "awayWin": 0.23720211225431714,
-        "expectedHome": 1.8,
-        "expectedAway": 1.15
-      },
-      "simulation": {
-        "trials": 20000,
-        "seed": 42,
-        "markets": {
-          "over15": {
-            "probability": 0.80245,
-            "sampling_se": 0.0028153507552345944
-          },
-          "over25": {
-            "probability": 0.57055,
-            "sampling_se": 0.0035001621212452433
-          },
-          "btts": {
-            "probability": 0.57735,
-            "sampling_se": 0.00349297135330366
           }
         }
       }
@@ -6645,6 +6521,68 @@
     },
     {
       "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "amed – alanyaspor",
+      "expectedGoals": {
+        "home": 2.21,
+        "away": 0.78
+      },
+      "poisson": {
+        "over15": 0.7993531274728685,
+        "over25": 0.5745657709465766,
+        "btts": 0.48218077690285693
+      },
+      "experimentalDixonColes": {
+        "over15": 0.8036874016440748,
+        "over25": 0.5745657709465766,
+        "btts": 0.48651505107406334
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 2,
+            "away": 0,
+            "probability": 0.12280443485084754
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.10680096098793165
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09578745918366108
+          }
+        ],
+        "topScoresCombined": 0.32539285502244025,
+        "homeWin": 0.6955869081659879,
+        "draw": 0.19098037579858984,
+        "awayWin": 0.11343271603542222,
+        "expectedHome": 2.21,
+        "expectedAway": 0.78
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.80475,
+            "sampling_se": 0.002802922024423798
+          },
+          "over25": {
+            "probability": 0.57845,
+            "sampling_se": 0.003491744531749137
+          },
+          "btts": {
+            "probability": 0.48515,
+            "sampling_se": 0.0035339742323622003
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
       "league": "Almanya Bundesliga",
       "match": "Eintracht Frankfurt – SV Werder Bremen",
       "expectedGoals": {
@@ -7011,6 +6949,68 @@
           "btts": {
             "probability": 0.5786,
             "sampling_se": 0.0034915758619855305
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "league": "Türkiye Süper Lig",
+      "match": "konyaspor – gaziantep",
+      "expectedGoals": {
+        "home": 1.55,
+        "away": 1.2
+      },
+      "poisson": {
+        "over15": 0.7602705204748466,
+        "over25": 0.5185432952869836,
+        "btts": 0.5504856754677624
+      },
+      "experimentalDixonColes": {
+        "over15": 0.7662158115670704,
+        "over25": 0.5185432952869836,
+        "btts": 0.5564309665599863
+      },
+      "scoreProbabilities": {
+        "topScores": [
+          {
+            "home": 1,
+            "away": 1,
+            "probability": 0.12485111293669988
+          },
+          {
+            "home": 1,
+            "away": 0,
+            "probability": 0.09314289377817293
+          },
+          {
+            "home": 2,
+            "away": 1,
+            "probability": 0.09215201192946897
+          }
+        ],
+        "topScoresCombined": 0.31014601864434177,
+        "homeWin": 0.4481650760624625,
+        "draw": 0.2628748297991609,
+        "awayWin": 0.28896009413837664,
+        "expectedHome": 1.55,
+        "expectedAway": 1.2
+      },
+      "simulation": {
+        "trials": 20000,
+        "seed": 42,
+        "markets": {
+          "over15": {
+            "probability": 0.76975,
+            "sampling_se": 0.0029768686358319536
+          },
+          "over25": {
+            "probability": 0.5185,
+            "sampling_se": 0.0035331130041367205
+          },
+          "btts": {
+            "probability": 0.55405,
+            "sampling_se": 0.003514815766864602
           }
         }
       }

@@ -9,6 +9,7 @@ from nine_league_results_pilot import SOURCES
 from extra_ml_prospective import read_json,write_json
 from extra_ml_settlement import settle,summarize
 from results_source_pilot import TR,read
+from same_source_venue_reference import summarize as summarize_reference
 from extra_prospective_reliability import aware,probabilities,reliability
 from extra_league_score_audit import MARKETS,labels,paired_date_bootstrap
 CODES={k:v[0] for k,v in SOURCES.items()}
@@ -53,8 +54,9 @@ def run(reader=read):
     report["version"]="6.68"
     report["diagnosticsVersion"]="6.78"
     report["sourceDiagnostics"]=diagnostics
+    report["sameSourceVenueReference"]=summarize_reference(ledger)
     report["sharedInputReference"]=shared_input_summary(ledger)
     write_json(LEDGER,ledger)
     write_json(Path("main_ml_settlement_report.json"),report)
-    print("MAIN_ML_SETTLEMENT_668",json.dumps({k:v for k,v in report.items() if k!="markets"}))
+    print("MAIN_ML_SETTLEMENT_668",json.dumps({k:v for k,v in report.items() if k not in ("markets","sameSourceVenueReference")}))
 if __name__=="__main__":run()

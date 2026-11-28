@@ -76,6 +76,9 @@ def audit(data):
     except (KeyError,TypeError,ValueError,AttributeError) as exc:
         errors.append("invalid_schema:"+type(exc).__name__)
     timestamps={name+".json":data[name]["updatedAt"] for name in FILES if isinstance(data.get(name),dict) and isinstance(data[name].get("updatedAt"),str)}
+    for name in ("extra_markets","extra_market_archive","odds_continuity"):
+        if isinstance(data.get(name),dict) and isinstance(data[name].get("updatedAt"),str):
+            timestamps[name+".json"]=data[name]["updatedAt"]
     return {"version":"4.81","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"PASS" if not errors else "FAIL","errors":errors,"mode":"research_only","reportTimestamps":timestamps}
 
 def main():
@@ -83,6 +86,9 @@ def main():
     try:
         for k in FILES:
             data[k]=json.loads(Path(k+".json").read_text(encoding="utf-8"))
+        for k in ("extra_markets","extra_market_archive","odds_continuity"):
+            try:data[k]=json.loads(Path(k+".json").read_text(encoding="utf-8"))
+            except (OSError,ValueError):pass
         report=audit(data)
     except (OSError,ValueError) as exc:
         report={"version":"4.81","updatedAt":datetime.now(timezone.utc).isoformat(),"status":"FAIL","errors":[type(exc).__name__],"mode":"research_only"}

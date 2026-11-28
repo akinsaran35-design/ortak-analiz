@@ -1,7 +1,7 @@
 import json
 import unittest
 from datetime import datetime,timedelta
-from multi_league_results import build_report,verified_rows,source_urls,TR,APPROVED,combined_archive
+from multi_league_results import build_report,verified_rows,source_urls,TR,APPROVED,combined_archive,within_window,RETRY_DAYS
 from verified_results import settle_verified
 
 class MultiLeagueTests(unittest.TestCase):
@@ -52,5 +52,15 @@ class MultiLeagueTests(unittest.TestCase):
         now=datetime(2026,11,26,17,tzinfo=TR)
         report=build_report(conflicting,now,lambda url: b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n" if url.endswith(".csv") else b'{"events":[]}')
         self.assertEqual(sum(r["status"]=="ambiguous" for g in report["groups"] for r in g["rows"]),2)
+        self.assertEqual(verified_rows(report,now),[])
+    def test_retry_window(self):
+        now=datetime(2026,11,26,17,tzinfo=TR)
+        self.assertEqual(RETRY_DAYS,30)
+        self.assertTrue(within_window("2026-10-27",now))
+        self.assertFalse(within_window("2026-10-26",now))
+        self.assertFalse(within_window("2026-11-26",now))
+        row=dict(date="2026-11-05",league="de.1",home="A",away="B",result=None)
+        report=build_report({"a":row},now,lambda url: b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n05/11/26,A,B,2,1\n" if url.endswith(".csv") else b'{"events":[]}')
+        self.assertEqual(len(report["groups"]),1)
         self.assertEqual(verified_rows(report,now),[])
 if __name__=="__main__": unittest.main()
