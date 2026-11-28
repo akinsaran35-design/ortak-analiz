@@ -67,12 +67,39 @@ def shadow_alias_candidates(targets,candidates,target_ids,ids,strict_rows):
                 candidatesWithReferee=sum(with_referee.values()),
                 groups=[dict(league=c,candidates=n,withReferee=with_referee[c]) for c,n in sorted(counts.items())])
 
+def source_name_evidence(targets,candidates,target_ids,ids,strict_rows,source_names):
+    """Measure ordered names explicitly supplied by ESPN; never promote candidates."""
+    used_targets={(r["league"],r["eventId"]) for r in strict_rows}
+    used_providers={r["providerId"] for r in strict_rows}
+    possible={}; reverse=Counter()
+    for k,events in targets.items():
+        if len(events)!=1 or target_ids[(k[0],events[0])]!=1:continue
+        names=source_names.get(k)
+        if not names:continue
+        h,a=names
+        if h & a:continue
+        for p in candidates:
+            if p[0]!=k[0] or p[3]!=k[3] or p[1] not in h or p[2] not in a:continue
+            possible.setdefault(k,[]).append(p)
+            reverse[p]+=1
+    counts=Counter();refs=Counter()
+    for k,keys in possible.items():
+        if len(keys)!=1:continue
+        p=keys[0];rows=candidates[p]
+        if k==p or reverse[p]!=1 or len(rows)!=1 or ids[rows[0][0]]!=1:continue
+        if (k[0],targets[k][0]) in used_targets or rows[0][0] in used_providers:continue
+        counts[k[0]]+=1
+        if rows[0][1]:refs[k[0]]+=1
+    return dict(mode="source_name_candidate_only",verified=False,
+                additionalCandidates=sum(counts.values()),candidatesWithReferee=sum(refs.values()),
+                groups=[dict(league=c,candidates=n,withReferee=refs[c]) for c,n in sorted(counts.items())])
+
 def match(doc,groups):
     if doc.get("errors") not in ({},[]) or not isinstance(doc.get("response"),list) or doc.get("results")!=len(doc["response"]) or doc.get("paging")!={"current":1,"total":1}:
         raise ValueError("incomplete provider response")
     candidates={};ids=Counter();targets={};target_ids=Counter()
     metadata_rejected=Counter();scheduled_seen=Counter();diagnostics={}
-    unavailable=[]
+    unavailable=[];source_names={}
     for group in groups:
         if group.get("error") or group.get("errors"):
             unavailable.append(group["league"]);continue
@@ -83,6 +110,12 @@ def match(doc,groups):
                 event_id=r["eventId"]
                 if not isinstance(event_id,str) or not event_id.isdigit():continue
                 targets.setdefault(k,[]).append(event_id);target_ids[(group["league"],event_id)]+=1
+                info=r.get("sourceTeamNames")
+                if isinstance(info,dict) and all(isinstance(info.get(s),list) for s in ("home","away")):
+                    h={norm(n) for n in info["home"] if isinstance(n,str) and norm(n)}
+                    a={norm(n) for n in info["away"] if isinstance(n,str) and norm(n)}
+                    if k[1] in h and k[2] in a:
+                        source_names[k]=(h,a)
             except (ValueError,TypeError,KeyError,AttributeError):continue
     for row in doc["response"]:
         try:
@@ -129,6 +162,7 @@ def match(doc,groups):
     return dict(eligibleIdentities=len(targets),matched=len(result),
                 withReferee=sum(x["referee"] is not None for x in result),rows=result,
                 aliasShadow=shadow_alias_candidates(targets,candidates,target_ids,ids,result),
+                sourceNameShadow=source_name_evidence(targets,candidates,target_ids,ids,result,source_names),
                 diagnostics=[dict(league=code,counts=dict(c),providerScheduledRows=scheduled_seen[code],
                                   metadataRejectedRows=metadata_rejected[code],publicSourceUnavailable=code in unavailable)
                              for code,c in sorted(diagnostics.items())],
