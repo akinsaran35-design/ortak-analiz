@@ -152,3 +152,18 @@ assert.equal(mlResearchSummary({...mlLedger,forecasts:{[mlK]:{...mlF,candidate:{
 assert.equal(mlResearchSummary({...mlLedger,forecasts:{[mlK]:{...mlF,recordedAt:"2026-11-28T11:00:00+03:00"}}},{...mlMeta,frozenAt:"2026-11-28T10:00:00+03:00"},mlNow).pending,1);
 assert.equal(mlResearchSummary({...mlLedger,forecasts:{[mlK]:{...mlF,eventId:"abc"}}},mlMeta,mlNow),null);
 console.log("V6.61 separate ML research panel: cohort, chronology, empty metrics and quarantine tests passed");
+
+const {observedTotalsFor}=require("../mobile-v487.js");
+const ohNow=now,ohOld=new Date(now-3600000).toISOString();
+const ohBook=Array.from({length:3},(_,i)=>({key:"b"+i,lines:[{point:2.5,over:1.8,under:2.1,lastUpdate:updatedAt}]}));
+const ohData={...d,odds:{...d.odds,source:"The Odds API",region:"uk",market:"totals",errors:[],events:[{...event,bookmakers:ohBook}]}};
+assert.equal(observedTotalsFor(row,ohData,ohNow,2.5).current,1.8);
+assert.equal(observedTotalsFor(row,ohData,ohNow,2.5).dropPct,null);
+ohData.observed_totals_report={version:"6.63",mode:"research_only",realBettingEnabled:false,firstObservedIsOpening:false,status:"observed",updatedAt,oddsUpdatedAt:updatedAt,events:[{eventId:event.id,point:2.5,books:ohBook.map(b=>({bookmaker:b.key,firstObserved:2,current:1.8,firstObservedAt:ohOld,currentLastUpdate:updatedAt,dropPct:10}))}]};
+assert.ok(Math.abs(observedTotalsFor(row,ohData,ohNow,2.5).dropPct-10)<1e-9);
+assert.equal(observedTotalsFor(row,ohData,ohNow+1800001,2.5),null);
+const wrong={...ohData,observed_totals_report:{...ohData.observed_totals_report,oddsUpdatedAt:ohOld}};
+assert.equal(observedTotalsFor(row,wrong,ohNow,2.5).dropPct,null);
+const wrongBook={...ohData,observed_totals_report:{...ohData.observed_totals_report,events:[{...ohData.observed_totals_report.events[0],books:ohData.observed_totals_report.events[0].books.map(b=>({...b,current:1.9}))}]}};
+assert.equal(observedTotalsFor(row,wrongBook,ohNow,2.5).dropPct,null);
+console.log("V6.64 observed totals UI: current, matched history, stale and mismatch guards passed");
