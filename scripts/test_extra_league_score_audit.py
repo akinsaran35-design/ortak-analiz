@@ -1,6 +1,6 @@
 import unittest,json
 from datetime import datetime,timedelta
-from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities
+from extra_league_score_audit import audit_league,build,TR,team_key,unmatched_names,REVIEWED_ALIASES,HISTORY_WINDOW_DAYS,SAMPLE_DATE_LIMIT,outcome_baseline,chronological_backtest,team_form_backtest,team_goal_means,hybrid_holdout,dc_tau,dc_probabilities,fit_dc_rho,dixon_coles_backtest,goal_probabilities,simulation_points,simulate_scores,simulation_audit,SIMULATION_METHODS
 class AuditTests(unittest.TestCase):
     def test_names_require_explicit_review_and_league_scope(self):
         from unittest.mock import patch
@@ -117,6 +117,23 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(result["markets"]["over15"]["n"],hybrid_holdout(rows)["markets"]["over15"]["holdoutMatches"])
         self.assertFalse(result["productionModelValidated"])
         self.assertIsNone(dixon_coles_backtest([])["markets"]["btts"]["dixonColes"]["brier"])
+    def test_simulation_methods(self):
+        for method in SIMULATION_METHODS:
+            points=list(simulation_points(method,1024,42))
+            self.assertEqual(points,list(simulation_points(method,1024,42)))
+            self.assertTrue(all(0<=u<1 and 0<=v<1 for u,v in points))
+            for rho in (0,-0.1):
+                result=simulate_scores(1.4,1.1,rho,method,16384,42)
+                self.assertTrue(all(v["absoluteError"]<0.025 for v in result["markets"].values()))
+            zero=simulate_scores(0,0,0,method,32,42)
+            self.assertTrue(all(v["simulated"]==0 for v in zero["markets"].values()))
+        for method in ("sobol","latin_hypercube"):
+            points=list(simulation_points(method,1024,42))
+            self.assertEqual(len({int(u*1024) for u,v in points}),1024)
+            self.assertEqual(len({int(v*1024) for u,v in points}),1024)
+        with self.assertRaises(ValueError):
+            list(simulation_points("sobol",100,42))
+        self.assertIsNone(simulation_audit([])["summary"]["sobol"]["meanAbsoluteError"])
     def test_scope_and_score_comparison(self):
         now=datetime(2026,11,27,22,tzinfo=TR)
         csv=b"Date,HomeTeam,AwayTeam,FTHG,FTAG\n25/11/26,A,B,2,1\n25/11/26,C,D,0,0\n25/11/26,E,F,1,0\n27/11/26,G,H,1,0\n"
